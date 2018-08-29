@@ -51,7 +51,7 @@ namespace EarlyDocs
 			output.Append(String.Format("{0} {1} {2}\n\n", new String('#', indent), DataTypeName, Name));
 			if(!String.IsNullOrEmpty(Summary))
 			{
-				output.Append(String.Format("{0}\n\n", Summary));
+				output.Append(String.Format("{0}\n\n", MarkdownSummary));
 			}
 
 			return output.ToString();

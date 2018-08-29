@@ -127,7 +127,7 @@ namespace EarlyDocs
 
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
 			output.Append(PreSummary());
-			output.Append(String.Format("{0}\n\n", Summary));
+			output.Append(String.Format("{0}\n\n", MarkdownSummary));
 
 			if(Enums.Count > 0)
 			{

@@ -61,7 +61,7 @@ namespace EarlyDocs
 			StringBuilder output = new StringBuilder();
 
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), ShortSignature));
-			output.Append(String.Format("{0}\n\n", Summary));
+			output.Append(String.Format("{0}\n\n", MarkdownSummary));
 
 			return output.ToString();
 		}
