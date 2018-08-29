@@ -11,11 +11,13 @@ namespace EarlyDocs
 	class XmlType : XmlMember
 	{
 		private readonly TypeAttributes STATIC_TYPEATTRIBUTES = TypeAttributes.Abstract | TypeAttributes.Sealed;
+		private readonly TypeAttributes INTERFACE_TYPEATTRIBUTES = TypeAttributes.Abstract | TypeAttributes.ClassSemanticsMask;
 
 		public string TypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
 		public bool IsStatic { get; protected set; }
+		public bool IsInterface { get; protected set; }
 
 		public List<XmlField> Fields = new List<XmlField>();
 		public List<XmlField> ConstantFields {
@@ -52,10 +54,6 @@ namespace EarlyDocs
 			if(element.Descendants().Any(d => d.Name == "enum"))
 			{
 				return new XmlEnum(element);
-			}
-			if(element.Descendants().Any(d => d.Name == "interface"))
-			{
-				return new XmlInterface(element);
 			}
 			return new XmlType(element);
 		}
@@ -95,12 +93,15 @@ namespace EarlyDocs
 		public void Apply(TypeInfo typeInfo)
 		{
 			IsStatic = ((typeInfo.Attributes & STATIC_TYPEATTRIBUTES) == STATIC_TYPEATTRIBUTES);
+			IsInterface = ((typeInfo.Attributes & INTERFACE_TYPEATTRIBUTES) == INTERFACE_TYPEATTRIBUTES);
 		}
 
 		public virtual string PreSummary()
 		{
 			if(IsStatic)
 				return "Static type.\n\n";
+			if(IsInterface)
+				return "Interface type.\n\n";
 			return null;
 		}
 

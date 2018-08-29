@@ -14,17 +14,17 @@ namespace EarlyDocs
 		private Dictionary<string, XmlType> typeNameToType = new Dictionary<string, XmlType>();
 		private List<XmlType> NormalTypes {
 			get {
-				return typeNameToType.Values.Where(t => !t.IsStatic && !(t is XmlInterface)).ToList();
+				return typeNameToType.Values.Where(t => !t.IsStatic && !t.IsInterface).ToList();
 			}
 		}
 		private List<XmlType> StaticTypes {
 			get {
-				return typeNameToType.Values.Where(t => t.IsStatic && !(t is XmlInterface)).ToList();
+				return typeNameToType.Values.Where(t => t.IsStatic && !t.IsInterface).ToList();
 			}
 		}
 		private List<XmlType> InterfaceTypes {
 			get {
-				return typeNameToType.Values.Where(t => (t is XmlInterface)).ToList();
+				return typeNameToType.Values.Where(t => t.IsInterface).ToList();
 			}
 		}
 
