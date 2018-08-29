@@ -13,6 +13,9 @@ namespace EarlyDocs
 		private readonly TypeAttributes STATIC_TYPEATTRIBUTES = TypeAttributes.Abstract | TypeAttributes.Sealed;
 		private readonly TypeAttributes INTERFACE_TYPEATTRIBUTES = TypeAttributes.Abstract | TypeAttributes.ClassSemanticsMask;
 
+		public string BaseNamespace { get; protected set; }
+		public string BaseTypeName { get; protected set; }
+
 		public string TypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
@@ -109,6 +112,8 @@ namespace EarlyDocs
 
 		public void Apply(TypeInfo typeInfo)
 		{
+			BaseNamespace = typeInfo.BaseType?.Namespace;
+			BaseTypeName = typeInfo.BaseType?.Name;
 			IsStatic = ((typeInfo.Attributes & STATIC_TYPEATTRIBUTES) == STATIC_TYPEATTRIBUTES);
 			IsInterface = ((typeInfo.Attributes & INTERFACE_TYPEATTRIBUTES) == INTERFACE_TYPEATTRIBUTES);
 			IsEnum = (typeInfo.BaseType != null && typeInfo.BaseType.Name == "Enum");
@@ -167,6 +172,17 @@ namespace EarlyDocs
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
 			output.Append(PreSummary());
 			output.Append(String.Format("{0}\n\n", MarkdownSummary));
+			if(!String.IsNullOrEmpty(BaseTypeName))
+			{
+				if(BaseNamespace == Assembly)
+				{
+					output.Append(String.Format("Base Type: [{0}]({0}.md)\n\n", BaseTypeName));
+				}
+				else
+				{
+					output.Append(String.Format("Base Type: {0}.{1}\n\n", BaseNamespace, BaseTypeName));
+				}
+			}
 
 			if(Enums.Count > 0)
 			{
