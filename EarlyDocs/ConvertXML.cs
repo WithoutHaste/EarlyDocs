@@ -125,7 +125,13 @@ namespace EarlyDocs
 			StringBuilder output = new StringBuilder();
 
 			output.Append("# Contents\n\n");
-			foreach(XmlType type in typeNameToType.Values.OrderBy(t => t.Name))
+			output.Append("## Types\n\n");
+			foreach(XmlType type in typeNameToType.Values.Where(t => !t.IsStatic).OrderBy(t => t.Name))
+			{
+				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
+			}
+			output.Append("## Static Types\n\n");
+			foreach(XmlType type in typeNameToType.Values.Where(t => t.IsStatic).OrderBy(t => t.Name))
 			{
 				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
 			}

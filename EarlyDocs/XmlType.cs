@@ -28,6 +28,7 @@ namespace EarlyDocs
 			TypeName = element.Attribute("name")?.Value.Substring(2);
 			ParseAssembly(TypeName);
 			ParseName(TypeName);
+			IsStatic = element.Descendants().Any(d => d.Name == "static");
 		}
 
 		public static XmlType Factory(XElement element)
