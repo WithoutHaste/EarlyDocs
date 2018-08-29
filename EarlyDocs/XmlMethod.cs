@@ -72,6 +72,10 @@ namespace EarlyDocs
 			{
 				output.Append(String.Format("{0}\n\n", MarkdownSummary));
 			}
+			if(!String.IsNullOrEmpty(Returns))
+			{
+				output.Append(String.Format("Returns: {0}\n\n", Returns));
+			}
 
 			return output.ToString();
 		}

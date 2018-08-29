@@ -12,7 +12,6 @@ namespace EarlyDocs
 		private XElement xml;
 
 		public string Summary { get; protected set; }
-
 		public string MarkdownSummary {
 			get {
 				StringBuilder output = new StringBuilder();
@@ -37,20 +36,26 @@ namespace EarlyDocs
 			}
 		}
 
+		public string Returns { get; protected set; }
+
 		public XmlMember(XElement element)
 		{
 			xml = element;
 
-			ParseSummary(element);
+			Parse(element);
 		}
 
-		public void ParseSummary(XElement element)
+		public void Parse(XElement element)
 		{
 			foreach(XElement child in element.Elements())
 			{
 				if(child.Name == "summary")
 				{
 					Summary = child.ToString().Replace("<summary>", "").Replace("</summary>", "").Trim();
+				}
+				if(child.Name == "returns")
+				{
+					Returns = child.ToString().Replace("<returns>", "").Replace("</returns>", "").Trim();
 				}
 			}
 		}
