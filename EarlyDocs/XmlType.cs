@@ -12,15 +12,31 @@ namespace EarlyDocs
 		public string TypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
+		public bool IsStatic { get; protected set; }
 
-		public List<XmlMethod> Methods = new List<XmlMethod>();
 		public List<XmlField> Fields = new List<XmlField>();
+		public List<XmlMethod> Methods = new List<XmlMethod>();
+		public List<XmlType> Types = new List<XmlType>();
+		public List<XmlEnum> Enums {
+			get {
+				return Types.OfType<XmlEnum>().ToList();
+			}
+		}
 
 		public XmlType(XElement element) : base(element)
 		{
 			TypeName = element.Attribute("name")?.Value.Substring(2);
 			ParseAssembly(TypeName);
 			ParseName(TypeName);
+		}
+
+		public static XmlType Factory(XElement element)
+		{
+			if(element.Descendants().Any(d => d.Name == "enum"))
+			{
+				return new XmlEnum(element);
+			}
+			return new XmlType(element);
 		}
 
 		private void ParseAssembly(string fullName)
@@ -35,22 +51,36 @@ namespace EarlyDocs
 			Name = fields.Last();
 		}
 
-		public void Add(XmlMethod method)
-		{
-			Methods.Add(method);
-		}
-
 		public void Add(XmlField field)
 		{
 			Fields.Add(field);
 		}
 
-		public string ToMarkdown()
+		public void Add(XmlMethod method)
+		{
+			Methods.Add(method);
+		}
+
+		public void Add(XmlType type)
+		{
+			Types.Add(type);
+		}
+
+		public virtual string ToMarkdown()
 		{
 			StringBuilder output = new StringBuilder();
 
 			output.Append(String.Format("# {0}\n\n", Name));
 			output.Append(String.Format("{0}\n\n", Summary));
+
+			if(Enums.Count > 0)
+			{
+				output.Append(String.Format("## Enums\n\n"));
+				foreach(XmlEnum e in Enums.OrderBy(m => m.Name))
+				{
+					output.Append(e.ToMarkdown());
+				}
+			}
 
 			if(Fields.Count > 0)
 			{

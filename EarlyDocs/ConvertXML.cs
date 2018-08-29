@@ -66,24 +66,49 @@ namespace EarlyDocs
 
 		private void LoadType(XElement element)
 		{
-			XmlType type = new XmlType(element);
+			XmlType type = XmlType.Factory(element);
+			if(type is XmlEnum)
+			{
+				if(typeNameToType.ContainsKey(type.Assembly))
+				{
+					typeNameToType[type.Assembly].Add(type);
+					return;
+				}
+			}
 			typeNameToType[type.TypeName] = type;
 		}
 
 		private void LoadMethod(XElement element)
 		{
 			XmlMethod member = new XmlMethod(element);
-			if(!typeNameToType.ContainsKey(member.TypeName))
+			XmlType parent = FindType(member.TypeName);
+			if(parent == null)
 				throw new Exception("Missing documenation for Type: " + member.TypeName);
-			typeNameToType[member.TypeName].Add(member);
+			parent.Add(member);
 		}
 
 		private void LoadField(XElement element)
 		{
 			XmlField field = new XmlField(element);
-			if(!typeNameToType.ContainsKey(field.TypeName))
+			XmlType parent = FindType(field.TypeName);
+			if(parent == null)
 				throw new Exception("Missing documenation for Type: " + field.TypeName);
-			typeNameToType[field.TypeName].Add(field);
+			parent.Add(field);
+		}
+
+		private XmlType FindType(string name)
+		{
+			foreach(XmlType type in typeNameToType.Values)
+			{
+				if(type.TypeName == name)
+					return type;
+				foreach(XmlType subType in type.Types)
+				{
+					if(subType.TypeName == name)
+						return subType;
+				}
+			}
+			return null;
 		}
 
 		private void Save(string text, string directory, string filename)
