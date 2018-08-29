@@ -14,25 +14,7 @@ namespace EarlyDocs
 		public string Summary { get; protected set; }
 		public string MarkdownSummary {
 			get {
-				StringBuilder output = new StringBuilder();
-
-				int index = 0;
-				while(index < Summary.Length)
-				{
-					if(AtTag(Summary, index, "see"))
-					{
-						string tag = GetTag(Summary, index);
-						output.Append(TagToTypeLink(tag));
-						index += tag.Length;
-					}
-					else
-					{
-						output.Append(Summary[index]);
-						index++;
-					}
-				}
-
-				return output.ToString();
+				return ToMarkdown(Summary);
 			}
 		}
 
@@ -60,6 +42,40 @@ namespace EarlyDocs
 			}
 		}
 
+		private string ToMarkdown(string text, int index = 0)
+		{
+			StringBuilder output = new StringBuilder();
+
+			while(index < text.Length)
+			{
+				if(AtTag(text, index, "see"))
+				{
+					string tag = GetSingleTag(text, index);
+					output.Append(TagToTypeLink(tag));
+					index += tag.Length;
+				}
+				if(AtTag(text, index, "para"))
+				{
+					string tag = GetDoubleTag(text, index, "para");
+					index += tag.Length + 1;
+					tag = tag.Replace("<para>", "").Replace("</para>", "").Trim();
+					output.Append(ToMarkdown(tag));
+					output.Append("\n\n");
+					if(AllWhiteSpaceToNextTag(text, index, "para"))
+					{
+						index = SkipWhitespace(text, index);
+					}
+				}
+				else
+				{
+					output.Append(text[index]);
+					index++;
+				}
+			}
+
+			return output.ToString().Trim('\n');
+		}
+
 		private bool AtTag(string text, int index, string tagName)
 		{
 			if(text.Length <= index + tagName.Length)
@@ -67,10 +83,17 @@ namespace EarlyDocs
 			return (text.Substring(index, tagName.Length + 1) == "<" + tagName);
 		}
 
-		private string GetTag(string text, int index)
+		private string GetSingleTag(string text, int index)
 		{
 			int endIndex = text.IndexOf("/>", index) + 1;
 			return text.Substring(index, endIndex - index + 1);
+		}
+
+		private string GetDoubleTag(string text, int index, string tagName)
+		{
+			string tag = "</" + tagName + ">";
+			int endIndex = text.IndexOf(tag, index) + tag.Length;
+			return text.Substring(index, endIndex - index);
 		}
 
 		private string TagToTypeLink(string tag)
@@ -79,6 +102,31 @@ namespace EarlyDocs
 			string cref = xml.Attribute("cref").Value;
 			string typeName = cref.Substring(cref.LastIndexOf('.') + 1);
 			return String.Format("[{0}]({0}.md)", typeName);
+		}
+
+		private bool AllWhiteSpaceToNextTag(string text, int index, string tagName)
+		{
+			if(index >= text.Length)
+				return false;
+			int tagIndex = text.IndexOf("<" + tagName, index);
+			if(tagIndex == -1)
+				return false;
+			string between = text.Substring(index, tagIndex - index);
+			return (String.IsNullOrEmpty(between.Trim()));
+		}
+
+		private int SkipWhitespace(string text, int index)
+		{
+			while(index < text.Length && IsWhitespace(text[index]))
+			{
+				index++;
+			}
+			return index;
+		}
+
+		private bool IsWhitespace(char c)
+		{
+			return (c == ' ' || c == '\n' || c == '\r' || c == '\t');
 		}
 	}
 }
