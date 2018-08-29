@@ -50,6 +50,7 @@
     <Compile Include="XmlMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlParam.cs" />
     <Compile Include="XmlProperty.cs" />
     <Compile Include="XmlType.cs" />
   </ItemGroup>

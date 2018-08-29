@@ -67,12 +67,15 @@ op_OnesComplement
 		public bool IsStatic { get; protected set; }
 		public bool IsOperator { get; protected set; }
 
+		public List<XmlParam> Params = new List<XmlParam>();
+		public List<XElement> ParamsXml = new List<XElement>();
+
 		public XmlMethod(XElement element) : base(element)
 		{
 			Signature = element.Attribute("name")?.Value.Substring(2);
 			ParseTypeNameAndAssembly(Signature);
 			ParseMemberName(Signature);
-			ParseParameters(Signature); //after TypeName
+			ParseParameters(element, Signature); //after TypeName
 
 			IsConstructor = (Name == "#ctor");
 			if(IsConstructor)
@@ -82,7 +85,7 @@ op_OnesComplement
 			IsOperator = Name.StartsWith("op_");
 		}
 
-		private void ParseParameters(string signature)
+		private void ParseParameters(XElement element, string signature)
 		{
 			if(!signature.Contains("("))
 			{
@@ -95,6 +98,7 @@ op_OnesComplement
 			for(int i = 0; i < fields.Length; i++)
 			{
 				string f = fields[i];
+				Params.Add(new XmlParam(f, Assembly));
 				if(f.StartsWith(Assembly))
 				{
 					f = f.Substring(Assembly.Length + 1);
@@ -102,6 +106,8 @@ op_OnesComplement
 				fields[i] = f;
 			}
 			Parameters = String.Format("({0})", String.Join(", ", fields));
+
+			ParamsXml.AddRange(element.Descendants().Where(c => c.Name == "param"));
 		}
 
 		private void ParseTypeNameAndAssembly(string signature)
@@ -160,6 +166,20 @@ op_OnesComplement
 		{
 			IsStatic = ((methodInfo.Attributes & STATIC_METHODATTRIBUTES) == STATIC_METHODATTRIBUTES);
 			ReturnTypeName = methodInfo.ReturnType?.Name;
+
+			int index = 0;
+			foreach(ParameterInfo parameterInfo in methodInfo.GetParameters())
+			{
+				Params[index].Apply(parameterInfo);
+				index++;
+			}
+			foreach(XElement element in ParamsXml)
+			{
+				XmlParam x = Params.FirstOrDefault(p => p.Name == element.Attribute("name").Value);
+				if(x == null) continue;
+
+				x.Apply(element);
+			}
 		}
 
 		public string ToMarkdown(int indent)
@@ -173,12 +193,16 @@ op_OnesComplement
 			}
 			else
 			{
-				output.Append(String.Format("{0} {1}{2}\n\n", new String('#', indent), ((ReturnTypeName != null) ? ReturnTypeName + " " : ""), ShortSignature));
+				output.Append(String.Format("{0} {1}{2}{3}\n\n", new String('#', indent), ((ReturnTypeName != null) ? ReturnTypeName + " " : ""), Name, FormatParameters()));
 			}
 
 			if(!String.IsNullOrEmpty(Summary))
 			{
 				output.Append(String.Format("{0}\n\n", MarkdownSummary));
+			}
+			foreach(XmlParam p in Params.Where(p => !String.IsNullOrEmpty(p.Description)))
+			{
+				output.Append(String.Format("Parameter {0}: {1}\n\n", p.Name, p.Description));
 			}
 			if(!String.IsNullOrEmpty(Returns))
 			{
@@ -186,6 +210,11 @@ op_OnesComplement
 			}
 
 			return output.ToString();
+		}
+
+		private string FormatParameters()
+		{
+			return String.Format("({0})", String.Join(", ", Params.Select(p => p.ToString())));
 		}
 	}
 }
