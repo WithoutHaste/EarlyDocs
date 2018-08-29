@@ -92,6 +92,22 @@ namespace EarlyDocs
 			IsStatic = ((typeInfo.Attributes & STATIC_TYPEATTRIBUTES) == STATIC_TYPEATTRIBUTES);
 			IsInterface = ((typeInfo.Attributes & INTERFACE_TYPEATTRIBUTES) == INTERFACE_TYPEATTRIBUTES);
 			IsEnum = (typeInfo.BaseType != null && typeInfo.BaseType.Name == "Enum");
+
+			foreach(FieldInfo fieldInfo in typeInfo.DeclaredFields)
+			{
+				XmlField field = Fields.FirstOrDefault(f => fieldInfo.Name == f.Name);
+				if(field == null) continue;
+
+				field.Apply(fieldInfo);
+			}
+
+			foreach(PropertyInfo propertyInfo in typeInfo.DeclaredProperties)
+			{
+				XmlProperty property = Properties.FirstOrDefault(p => propertyInfo.Name == p.Name);
+				if(property == null) continue;
+
+				property.Apply(propertyInfo);
+			}
 		}
 
 		public virtual string PreSummary()

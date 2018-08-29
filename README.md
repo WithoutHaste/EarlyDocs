@@ -10,21 +10,6 @@ The goal is to make this into a tool that will run when a project is built, and 
 
 This library is under active development. Report bugs and request features on Github, or to wohaste@gmail.com.
 
-## Custom Tags
-
-### constant
-
-Add `<constant/>` tag to comments before a Field to help organize documentation.
-
-```
-/// <summary>Description</summary>
-/// <constant/>
-public const int MyFieldA...
-/// <summary>Description</summary>
-/// <constant/>
-public readonly int MyFieldB...
-```
-
 ## Examples
 
 Other projects with EarlyDocs-generated documentation.

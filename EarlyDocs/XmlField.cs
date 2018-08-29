@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,23 +10,25 @@ namespace EarlyDocs
 {
 	class XmlField : XmlMember
 	{
-		public string TypeName { get; protected set; }
+		private readonly FieldAttributes CONSTANT_FIELDATTRIBUTES = FieldAttributes.Static | FieldAttributes.InitOnly;
+
+		public string ParentTypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
 		public bool IsConstant { get; protected set; }
+		public string DataTypeName { get; protected set; }		
 
 		public XmlField(XElement element) : base(element)
 		{
 			string name = element.Attribute("name").Value.Substring(2);
 			ParseTypeNameAndAssembly(name);
 			ParseMemberName(name);
-			IsConstant = element.Descendants().Any(d => d.Name == "constant");
 		}
 
 		private void ParseTypeNameAndAssembly(string name)
 		{
 			string[] fields = name.Split('.');
-			TypeName = String.Join(".", fields.Take(fields.Length - 1).ToArray());
+			ParentTypeName = String.Join(".", fields.Take(fields.Length - 1).ToArray());
 			Assembly = String.Join(".", fields.Take(fields.Length - 2).ToArray());
 		}
 
@@ -35,11 +38,17 @@ namespace EarlyDocs
 			Name = fields.Last();
 		}
 
+		public void Apply(FieldInfo fieldInfo)
+		{
+			IsConstant = ((fieldInfo.Attributes & CONSTANT_FIELDATTRIBUTES) == CONSTANT_FIELDATTRIBUTES);
+			DataTypeName = fieldInfo.FieldType.Name;
+		}
+
 		public string ToMarkdown(int indent)
 		{
 			StringBuilder output = new StringBuilder();
 
-			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
+			output.Append(String.Format("{0} {1} {2}\n\n", new String('#', indent), DataTypeName, Name));
 			if(!String.IsNullOrEmpty(Summary))
 			{
 				output.Append(String.Format("{0}\n\n", Summary));

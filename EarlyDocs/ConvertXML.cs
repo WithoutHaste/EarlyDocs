@@ -121,18 +121,18 @@ namespace EarlyDocs
 		private void LoadField(XElement element)
 		{
 			XmlField field = new XmlField(element);
-			XmlType parent = FindType(field.TypeName);
+			XmlType parent = FindType(field.ParentTypeName);
 			if(parent == null)
-				throw new Exception("Missing documenation for Type: " + field.TypeName);
+				throw new Exception("Missing documenation for Type: " + field.ParentTypeName);
 			parent.Add(field);
 		}
 
 		private void LoadProperty(XElement element)
 		{
 			XmlProperty property = new XmlProperty(element);
-			XmlType parent = FindType(property.TypeName);
+			XmlType parent = FindType(property.ParentTypeName);
 			if(parent == null)
-				throw new Exception("Missing documenation for Type: " + property.TypeName);
+				throw new Exception("Missing documenation for Type: " + property.ParentTypeName);
 			parent.Add(property);
 		}
 
