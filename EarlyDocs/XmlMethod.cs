@@ -12,6 +12,50 @@ namespace EarlyDocs
 	{
 		private readonly MethodAttributes STATIC_METHODATTRIBUTES = MethodAttributes.Static;
 
+		private readonly Dictionary<string, string> operatorToSymbol = new Dictionary<string, string>() {
+			{ "op_Addition", "+" },
+			{ "op_Substraction", "-" },
+			{ "op_Multiply", "*" },
+			{ "op_Division", "/" },
+			{ "op_BitwiseAnd", "&" },
+			{ "op_BitwiseOr", "|" },
+			{ "op_LogicalAnd", "&&" },
+			{ "op_LogicalOr", "||" },
+			{ "op_Equality", "==" },
+			{ "op_GreaterThan", ">" },
+			{ "op_LessThan", "<" },
+			{ "op_Inequality", "!=" },
+			{ "op_GreaterThanOrEqual", ">=" },
+			{ "op_LessThanOrEqual", "<=" },
+			{ "op_AdditionAssignment", "+=" },
+			{ "op_SubstractionAssignment", "-=" },
+			{ "op_MultiplyAssignment", "*=" },
+			{ "op_DivisionAssignment", "/=" },
+			{ "op_BitwiseAndAssignment", "&=" },
+			{ "op_BitwiseOrAssignment", "|=" },
+			{ "op_Decrement", "--" },
+			{ "op_Increment", "++" },
+			/*
+todo:
+op_Implicit
+op_Explicit
+op_Modulus
+op_ExclusiveOr
+op_Assign
+op_LeftShift
+op_RightShift
+op_SignedRightShift
+op_UnsignedRightShift
+op_ExclusiveOrAssignment
+op_LeftShiftAssignment
+op_ModulusAssignment
+op_Comma
+op_UnaryNegation
+op_UnaryPlus
+op_OnesComplement
+*/
+		};
+
 		public string Signature { get; protected set; }
 		public string Parameters { get; protected set; }
 		public string ShortSignature { get { return Name + Parameters; } }
@@ -20,6 +64,7 @@ namespace EarlyDocs
 		public string Name { get; protected set; }
 		public bool IsConstructor { get; protected set; }
 		public bool IsStatic { get; protected set; }
+		public bool IsOperator { get; protected set; }
 
 		public XmlMethod(XElement element) : base(element)
 		{
@@ -33,6 +78,7 @@ namespace EarlyDocs
 			{
 				Name = TypeName.Substring(TypeName.LastIndexOf('.') + 1);
 			}
+			IsOperator = Name.StartsWith("op_");
 		}
 
 		private void ParseParameters(string signature)
@@ -76,7 +122,16 @@ namespace EarlyDocs
 		{
 			StringBuilder output = new StringBuilder();
 
-			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), ShortSignature));
+			if(IsOperator && operatorToSymbol.ContainsKey(Name))
+			{
+				string[] types = Parameters.Replace("(", "").Replace(")", "").Split(',');
+				output.Append(String.Format("{0} {1} {2} {3}\n\n", new String('#', indent), types[0].Trim(), operatorToSymbol[Name], types[1].Trim()));
+			}
+			else
+			{
+				output.Append(String.Format("{0} {1}\n\n", new String('#', indent), ShortSignature));
+			}
+
 			if(!String.IsNullOrEmpty(Summary))
 			{
 				output.Append(String.Format("{0}\n\n", MarkdownSummary));

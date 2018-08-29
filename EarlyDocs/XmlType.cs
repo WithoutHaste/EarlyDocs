@@ -47,7 +47,12 @@ namespace EarlyDocs
 		}
 		public List<XmlMethod> StaticMethods {
 			get {
-				return Methods.Where(t => t.IsStatic).ToList();
+				return Methods.Where(t => t.IsStatic && !t.IsOperator).ToList();
+			}
+		}
+		public List<XmlMethod> Operators {
+			get {
+				return Methods.Where(t => t.IsOperator).ToList();
 			}
 		}
 
@@ -216,6 +221,15 @@ namespace EarlyDocs
 			{
 				output.Append(String.Format("{0} Methods\n\n", new String('#', indent + 1)));
 				foreach(XmlMethod method in NormalMethods.OrderBy(m => m.Name))
+				{
+					output.Append(method.ToMarkdown(indent + 2));
+				}
+			}
+
+			if(Operators.Count > 0)
+			{
+				output.Append(String.Format("{0} Operators\n\n", new String('#', indent + 1)));
+				foreach(XmlMethod method in Operators.OrderBy(m => m.Name))
 				{
 					output.Append(method.ToMarkdown(indent + 2));
 				}
