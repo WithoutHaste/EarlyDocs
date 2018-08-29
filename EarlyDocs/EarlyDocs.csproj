@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ConvertXML.cs" />
     <Compile Include="StringExtensions.cs" />
+    <Compile Include="XmlException.cs" />
     <Compile Include="XmlField.cs" />
     <Compile Include="XmlMember.cs" />
     <Compile Include="XmlMethod.cs" />

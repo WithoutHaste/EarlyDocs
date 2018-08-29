@@ -70,6 +70,8 @@ op_OnesComplement
 		public List<XmlParam> Params = new List<XmlParam>();
 		public List<XElement> ParamsXml = new List<XElement>();
 
+		public List<XmlException> Exceptions = new List<XmlException>();
+
 		public XmlMethod(XElement element) : base(element)
 		{
 			Signature = element.Attribute("name")?.Value.Substring(2);
@@ -83,6 +85,14 @@ op_OnesComplement
 				Name = TypeName.Substring(TypeName.LastIndexOf('.') + 1);
 			}
 			IsOperator = Name.StartsWith("op_");
+
+			foreach(XElement child in element.Descendants())
+			{
+				if(child.Name == "exception")
+				{
+					Exceptions.Add(new XmlException(child));
+				}
+			}
 		}
 
 		private void ParseParameters(XElement element, string signature)
@@ -217,13 +227,32 @@ op_OnesComplement
 			{
 				output.Append(String.Format("{0}\n\n", MarkdownSummary));
 			}
+
+			bool displayedParameter = false;
 			foreach(XmlParam p in Params.Where(p => !String.IsNullOrEmpty(p.Description)))
 			{
-				output.Append(String.Format("Parameter {0}: {1}\n\n", p.Name, p.Description));
+				output.Append(String.Format("Parameter {0}: {1}\n", p.Name, p.Description));
+				displayedParameter = true;
 			}
+			if(displayedParameter)
+			{
+				output.Append("\n");
+			}
+
 			if(!String.IsNullOrEmpty(Returns))
 			{
 				output.Append(String.Format("Returns: {0}\n\n", Returns));
+			}
+
+			bool displayedException = false;
+			foreach(XmlException e in Exceptions)
+			{
+				output.Append(String.Format("{0}: {1}\n", e.ExceptionType, e.Description));
+				displayedException = true;
+			}
+			if(displayedException)
+			{
+				output.Append("\n");
 			}
 
 			return output.ToString();
