@@ -131,7 +131,7 @@ namespace EarlyDocs
 
 			foreach(MethodInfo methodInfo in typeInfo.DeclaredMethods)
 			{
-				XmlMethod method = Methods.FirstOrDefault(m => methodInfo.Name == m.Name);
+				XmlMethod method = Methods.FirstOrDefault(m => m.MatchesSignature(methodInfo));
 				if(method == null) continue;
 
 				method.Apply(methodInfo);

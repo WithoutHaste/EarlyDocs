@@ -62,6 +62,7 @@ op_OnesComplement
 		public string TypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
+		public string ReturnTypeName { get; protected set; }
 		public bool IsConstructor { get; protected set; }
 		public bool IsStatic { get; protected set; }
 		public bool IsOperator { get; protected set; }
@@ -113,9 +114,33 @@ op_OnesComplement
 			Name = fields.Last();
 		}
 
+		public bool MatchesSignature(MethodInfo methodInfo)
+		{
+			if(methodInfo.Name != Name)
+				return false;
+			return MatchesArguments(methodInfo.GetParameters());
+		}
+
+		public bool MatchesArguments(ParameterInfo[] parameterInfos)
+		{
+			string[] parameters = Parameters.Replace("(", "").Replace(")", "").Split(',');
+			if(parameters.Length != parameterInfos.Length)
+				return false;
+
+			for(int i = 0; i < parameters.Length; i++)
+			{
+				if(parameters[i].LastTerm() != parameterInfos[i].ParameterType.Name)
+				{
+					return false;
+				}
+			}
+			return true;
+		}
+
 		public void Apply(MethodInfo methodInfo)
 		{
 			IsStatic = ((methodInfo.Attributes & STATIC_METHODATTRIBUTES) == STATIC_METHODATTRIBUTES);
+			ReturnTypeName = methodInfo.ReturnType?.Name;
 		}
 
 		public string ToMarkdown(int indent)
@@ -125,11 +150,11 @@ op_OnesComplement
 			if(IsOperator && operatorToSymbol.ContainsKey(Name))
 			{
 				string[] types = Parameters.Replace("(", "").Replace(")", "").Split(',');
-				output.Append(String.Format("{0} {1} {2} {3}\n\n", new String('#', indent), types[0].Trim(), operatorToSymbol[Name], types[1].Trim()));
+				output.Append(String.Format("{0} {1} = {2} {3} {4}\n\n", new String('#', indent), ReturnTypeName, types[0].Trim(), operatorToSymbol[Name], types[1].Trim()));
 			}
 			else
 			{
-				output.Append(String.Format("{0} {1}\n\n", new String('#', indent), ShortSignature));
+				output.Append(String.Format("{0} {1}{2}\n\n", new String('#', indent), ((ReturnTypeName != null) ? ReturnTypeName + " " : ""), ShortSignature));
 			}
 
 			if(!String.IsNullOrEmpty(Summary))
