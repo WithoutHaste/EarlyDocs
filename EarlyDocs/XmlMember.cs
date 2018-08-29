@@ -54,7 +54,7 @@ namespace EarlyDocs
 					output.Append(TagToTypeLink(tag));
 					index += tag.Length;
 				}
-				if(AtTag(text, index, "para"))
+				else if(AtTag(text, index, "para"))
 				{
 					string tag = GetDoubleTag(text, index, "para");
 					index += tag.Length + 1;
@@ -65,6 +65,12 @@ namespace EarlyDocs
 					{
 						index = SkipWhitespace(text, index);
 					}
+				}
+				else if(AtTag(text, index, "list"))
+				{
+					string tag = GetDoubleTag(text, index, "list");
+					index += tag.Length + 1;
+					output.Append(TagToList(tag));
 				}
 				else
 				{
@@ -102,6 +108,25 @@ namespace EarlyDocs
 			string cref = xml.Attribute("cref").Value;
 			string typeName = cref.Substring(cref.LastIndexOf('.') + 1);
 			return String.Format("[{0}]({0}.md)", typeName);
+		}
+
+		//todo: support "term" and "description" tags in "listheader" and "item"
+		//todo: ? support multiple "listheader" ?
+		//todo: support numbered lists and table
+		private string TagToList(string tag)
+		{
+			StringBuilder output = new StringBuilder();
+			XElement element = XElement.Parse(tag);
+			XElement header = element.Descendants().FirstOrDefault(d => d.Name == "listheader");
+			if(header != null)
+			{
+				output.Append(header.Value.Trim() + "  \n");
+			}
+			foreach(XElement item in element.Descendants().Where(d => d.Name == "item"))
+			{
+				output.Append(String.Format("* {0}  \n", item.Value.Trim()));
+			}
+			return output.ToString();
 		}
 
 		private bool AllWhiteSpaceToNextTag(string text, int index, string tagName)
