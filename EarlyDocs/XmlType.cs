@@ -282,7 +282,14 @@ namespace EarlyDocs
 			{
 				foreach(XmlField field in Fields)
 				{
-					output.Append(String.Format("* {0}: {1}  \n", field.Name, field.Summary));
+					if(String.IsNullOrEmpty(field.Summary))
+					{
+						output.Append(String.Format("* {0}  \n", field.Name));
+					}
+					else
+					{
+						output.Append(String.Format("* {0}: {1}  \n", field.Name, field.Summary));
+					}
 				}
 			}
 

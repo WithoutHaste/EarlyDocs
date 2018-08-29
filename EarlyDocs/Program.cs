@@ -20,4 +20,6 @@ namespace EarlyDocs
 			Console.ReadLine();
 		}
 	}
+
+	//todo: separate abstract classes in table of contents
 }
