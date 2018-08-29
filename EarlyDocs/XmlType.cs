@@ -35,6 +35,16 @@ namespace EarlyDocs
 		public List<XmlProperty> Properties = new List<XmlProperty>();
 		
 		public List<XmlMethod> Methods = new List<XmlMethod>();
+		public List<XmlMethod> NormalMethods{
+			get {
+				return Methods.Where(t => !t.IsConstructor).ToList();
+			}
+		}
+		public List<XmlMethod> Constructors {
+			get {
+				return Methods.Where(t => t.IsConstructor).ToList();
+			}
+		}
 
 		public List<XmlType> Types = new List<XmlType>();
 		public List<XmlType> NestedTypes {
@@ -168,10 +178,19 @@ namespace EarlyDocs
 				}
 			}
 
-			if(Methods.Count > 0)
+			if(Constructors.Count > 0)
+			{
+				output.Append(String.Format("{0} Constructors\n\n", new String('#', indent + 1)));
+				foreach(XmlMethod method in Constructors.OrderBy(m => m.Name))
+				{
+					output.Append(method.ToMarkdown(indent + 2));
+				}
+			}
+
+			if(NormalMethods.Count > 0)
 			{
 				output.Append(String.Format("{0} Methods\n\n", new String('#', indent + 1)));
-				foreach(XmlMethod method in Methods.OrderBy(m => m.Name))
+				foreach(XmlMethod method in NormalMethods.OrderBy(m => m.Name))
 				{
 					output.Append(method.ToMarkdown(indent + 2));
 				}

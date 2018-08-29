@@ -15,6 +15,7 @@ namespace EarlyDocs
 		public string TypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
+		public bool IsConstructor { get; protected set; }
 
 		public XmlMethod(XElement element) : base(element)
 		{
@@ -22,6 +23,12 @@ namespace EarlyDocs
 			ParseTypeNameAndAssembly(Signature);
 			ParseMemberName(Signature);
 			ParseParameters(Signature); //after TypeName
+
+			IsConstructor = (Name == "#ctor");
+			if(IsConstructor)
+			{
+				Name = TypeName.Substring(TypeName.LastIndexOf('.') + 1);
+			}
 		}
 
 		private void ParseParameters(string signature)
@@ -61,7 +68,10 @@ namespace EarlyDocs
 			StringBuilder output = new StringBuilder();
 
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), ShortSignature));
-			output.Append(String.Format("{0}\n\n", MarkdownSummary));
+			if(!String.IsNullOrEmpty(Summary))
+			{
+				output.Append(String.Format("{0}\n\n", MarkdownSummary));
+			}
 
 			return output.ToString();
 		}
