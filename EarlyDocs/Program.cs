@@ -11,6 +11,7 @@ namespace EarlyDocs
 		static void Main(string[] args)
 		{
 			new ConvertXML(
+				"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.dll",
 				"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.XML",
 				"E:/Github/WithoutHaste.Drawing.Shapes/documentation"
 			);

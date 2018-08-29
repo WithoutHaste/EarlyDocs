@@ -51,6 +51,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlInterface.cs" />
+    <Compile Include="XmlProperty.cs" />
     <Compile Include="XmlType.cs" />
   </ItemGroup>
   <ItemGroup>

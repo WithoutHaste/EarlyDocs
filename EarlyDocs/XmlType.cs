@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -9,6 +10,8 @@ namespace EarlyDocs
 {
 	class XmlType : XmlMember
 	{
+		private readonly TypeAttributes STATIC_TYPEATTRIBUTES = TypeAttributes.Abstract | TypeAttributes.Sealed;
+
 		public string TypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
@@ -25,7 +28,11 @@ namespace EarlyDocs
 				return Fields.Where(f => !f.IsConstant).ToList();
 			}
 		}
+
+		public List<XmlProperty> Properties = new List<XmlProperty>();
+		
 		public List<XmlMethod> Methods = new List<XmlMethod>();
+
 		public List<XmlType> Types = new List<XmlType>();
 		public List<XmlEnum> Enums {
 			get {
@@ -38,7 +45,6 @@ namespace EarlyDocs
 			TypeName = element.Attribute("name")?.Value.Substring(2);
 			ParseAssembly(TypeName);
 			ParseName(TypeName);
-			IsStatic = element.Descendants().Any(d => d.Name == "static");
 		}
 
 		public static XmlType Factory(XElement element)
@@ -71,6 +77,11 @@ namespace EarlyDocs
 			Fields.Add(field);
 		}
 
+		public void Add(XmlProperty property)
+		{
+			Properties.Add(property);
+		}
+
 		public void Add(XmlMethod method)
 		{
 			Methods.Add(method);
@@ -79,6 +90,11 @@ namespace EarlyDocs
 		public void Add(XmlType type)
 		{
 			Types.Add(type);
+		}
+
+		public void Apply(TypeInfo typeInfo)
+		{
+			IsStatic = ((typeInfo.Attributes & STATIC_TYPEATTRIBUTES) == STATIC_TYPEATTRIBUTES);
 		}
 
 		public virtual string PreSummary()
@@ -123,6 +139,15 @@ namespace EarlyDocs
 					{
 						output.Append(field.ToMarkdown(indent + 3));
 					}
+				}
+			}
+
+			if(Properties.Count > 0)
+			{
+				output.Append(String.Format("{0} Properties\n\n", new String('#', indent + 1)));
+				foreach(XmlProperty p in Properties.OrderBy(m => m.Name))
+				{
+					output.Append(p.ToMarkdown(indent + 2));
 				}
 			}
 

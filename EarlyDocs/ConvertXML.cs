@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -27,9 +28,10 @@ namespace EarlyDocs
 			}
 		}
 
-		public ConvertXML(string filename, string outputDirectory)
+		public ConvertXML(string dll, string filename, string outputDirectory)
 		{
-			Load(filename);
+			LoadXML(filename);
+			LoadAssembly(dll);
 
 			if(!Directory.Exists(outputDirectory))
 			{
@@ -42,7 +44,7 @@ namespace EarlyDocs
 			Save(GenerateTableOfContents(), outputDirectory, "TableOfContents.md");
 		}
 
-		private void Load(string filename)
+		private void LoadXML(string filename)
 		{
 			XDocument doc = XDocument.Load(filename);
 
@@ -52,6 +54,18 @@ namespace EarlyDocs
 				{
 					LoadMembers(element);
 				}
+			}
+		}
+
+		private void LoadAssembly(string dll)
+		{
+			Assembly a = Assembly.LoadFrom(dll);
+			foreach(TypeInfo typeInfo in a.DefinedTypes)
+			{
+				XmlType type = FindType(typeInfo.FullName);
+				if(type == null) continue;
+
+				type.Apply(typeInfo);
 			}
 		}
 
@@ -74,6 +88,11 @@ namespace EarlyDocs
 				if(element.Attribute("name").Value.StartsWith("F:"))
 				{
 					LoadField(element);
+					continue;
+				}
+				if(element.Attribute("name").Value.StartsWith("P:"))
+				{
+					LoadProperty(element);
 					continue;
 				}
 			}
@@ -109,6 +128,15 @@ namespace EarlyDocs
 			if(parent == null)
 				throw new Exception("Missing documenation for Type: " + field.TypeName);
 			parent.Add(field);
+		}
+
+		private void LoadProperty(XElement element)
+		{
+			XmlProperty property = new XmlProperty(element);
+			XmlType parent = FindType(property.TypeName);
+			if(parent == null)
+				throw new Exception("Missing documenation for Type: " + property.TypeName);
+			parent.Add(property);
 		}
 
 		private XmlType FindType(string name)

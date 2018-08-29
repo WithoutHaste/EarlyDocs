@@ -4,6 +4,8 @@ XML to MD documentation converter for Visual Studio XML documentation.
 
 Instead of making a single .md file, it will generate a TableOfContents file linked to one file per Type, and all the files will be saved in a "documentation" folder.
 
+Also pulls additional information from the dll itself to provide more than the XML documentation provides.
+
 The goal is to make this into a tool that will run when a project is built, and can be installed as a NuGet package.
 
 This library is under active development. Report bugs and request features on Github, or to wohaste@gmail.com.
@@ -45,18 +47,6 @@ Add `<interface/>` tag to comments before an Interface, otherwise it will be doc
 /// </summary>
 /// <interface/>
 public interface MyInterface...
-```
-
-### static
-
-Add `<static/>` tag to comments before a Static Class to help with documentation organization.
-
-```
-/// <summary>
-/// Description
-/// </summary>
-/// <static/>
-public static MyClass...
 ```
 
 ## Examples
