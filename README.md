@@ -25,30 +25,6 @@ public const int MyFieldA...
 public readonly int MyFieldB...
 ```
 
-### enum
-
-Add `<enum/>` tag to comments before an Enum Type, otherwise it will be documented as a normal Type.
-
-```
-/// <summary>
-/// Description
-/// </summary>
-/// <enum/>
-public enum MyEnum...
-```
-
-### interface
-
-Add `<interface/>` tag to comments before an Interface, otherwise it will be documented as a normal Type.
-
-```
-/// <summary>
-/// Description
-/// </summary>
-/// <interface/>
-public interface MyInterface...
-```
-
 ## Examples
 
 Other projects with EarlyDocs-generated documentation.

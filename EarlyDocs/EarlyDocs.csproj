@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertXML.cs" />
-    <Compile Include="XmlEnum.cs" />
     <Compile Include="XmlField.cs" />
     <Compile Include="XmlMember.cs" />
     <Compile Include="XmlMethod.cs" />

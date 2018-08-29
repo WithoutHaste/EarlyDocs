@@ -62,7 +62,7 @@ namespace EarlyDocs
 			Assembly a = Assembly.LoadFrom(dll);
 			foreach(TypeInfo typeInfo in a.DefinedTypes)
 			{
-				XmlType type = FindType(typeInfo.FullName);
+				XmlType type = FindType(typeInfo.FullName.Replace('+', '.'));
 				if(type == null) continue;
 
 				type.Apply(typeInfo);
@@ -100,14 +100,11 @@ namespace EarlyDocs
 
 		private void LoadType(XElement element)
 		{
-			XmlType type = XmlType.Factory(element);
-			if(type is XmlEnum)
+			XmlType type = new XmlType(element);
+			if(typeNameToType.ContainsKey(type.Assembly)) //check for nested type
 			{
-				if(typeNameToType.ContainsKey(type.Assembly))
-				{
-					typeNameToType[type.Assembly].Add(type);
-					return;
-				}
+				typeNameToType[type.Assembly].Add(type);
+				return;
 			}
 			typeNameToType[type.TypeName] = type;
 		}

@@ -18,6 +18,7 @@ namespace EarlyDocs
 		public string Name { get; protected set; }
 		public bool IsStatic { get; protected set; }
 		public bool IsInterface { get; protected set; }
+		public bool IsEnum { get; protected set; }
 
 		public List<XmlField> Fields = new List<XmlField>();
 		public List<XmlField> ConstantFields {
@@ -36,9 +37,14 @@ namespace EarlyDocs
 		public List<XmlMethod> Methods = new List<XmlMethod>();
 
 		public List<XmlType> Types = new List<XmlType>();
-		public List<XmlEnum> Enums {
+		public List<XmlType> NestedTypes {
 			get {
-				return Types.OfType<XmlEnum>().ToList();
+				return Types.Where(t => !t.IsEnum).ToList();
+			}
+		}
+		public List<XmlType> Enums {
+			get {
+				return Types.Where(t => t.IsEnum).ToList();
 			}
 		}
 
@@ -47,15 +53,6 @@ namespace EarlyDocs
 			TypeName = element.Attribute("name")?.Value.Substring(2);
 			ParseAssembly(TypeName);
 			ParseName(TypeName);
-		}
-
-		public static XmlType Factory(XElement element)
-		{
-			if(element.Descendants().Any(d => d.Name == "enum"))
-			{
-				return new XmlEnum(element);
-			}
-			return new XmlType(element);
 		}
 
 		private void ParseAssembly(string fullName)
@@ -94,6 +91,7 @@ namespace EarlyDocs
 		{
 			IsStatic = ((typeInfo.Attributes & STATIC_TYPEATTRIBUTES) == STATIC_TYPEATTRIBUTES);
 			IsInterface = ((typeInfo.Attributes & INTERFACE_TYPEATTRIBUTES) == INTERFACE_TYPEATTRIBUTES);
+			IsEnum = (typeInfo.BaseType != null && typeInfo.BaseType.Name == "Enum");
 		}
 
 		public virtual string PreSummary()
@@ -107,6 +105,8 @@ namespace EarlyDocs
 
 		public virtual string ToMarkdown(int indent)
 		{
+			if(IsEnum) return EnumToMarkdown(indent);
+
 			StringBuilder output = new StringBuilder();
 
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
@@ -116,7 +116,7 @@ namespace EarlyDocs
 			if(Enums.Count > 0)
 			{
 				output.Append(String.Format("{0} Enums\n\n", new String('#', indent + 1)));
-				foreach(XmlEnum e in Enums.OrderBy(m => m.Name))
+				foreach(XmlType e in Enums.OrderBy(m => m.Name))
 				{
 					output.Append(e.ToMarkdown(indent + 2));
 				}
@@ -160,6 +160,35 @@ namespace EarlyDocs
 					output.Append(method.ToMarkdown(indent + 2));
 				}
 			}
+
+			if(NestedTypes.Count > 0)
+			{
+				output.Append(String.Format("{0} Nested Types\n\n", new String('#', indent + 1)));
+				foreach(XmlType e in NestedTypes.OrderBy(m => m.Name))
+				{
+					output.Append(e.ToMarkdown(indent + 2));
+				}
+			}
+
+			return output.ToString();
+		}
+
+		private string EnumToMarkdown(int indent)
+		{
+			StringBuilder output = new StringBuilder();
+
+			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
+			output.Append(String.Format("{0}\n\n", Summary));
+
+			if(Fields.Count > 0)
+			{
+				foreach(XmlField field in Fields)
+				{
+					output.Append(String.Format("* {0}: {1}  \n", field.Name, field.Summary));
+				}
+			}
+
+			output.Append("\n");
 
 			return output.ToString();
 		}
