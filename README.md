@@ -22,6 +22,18 @@ Add `<enum/>` tag to comments before an Enum Type, otherwise it will be document
 public enum MyEnum...
 ```
 
+### interface
+
+Add `<interface/>` tag to comments before an Interface, otherwise it will be documented as a normal Type.
+
+```
+/// <summary>
+/// Description
+/// </summary>
+/// <interface/>
+public interface MyInterface...
+```
+
 ### static
 
 Add `<static/>` tag to comments before a Static Class to help with documentation organization.

@@ -37,6 +37,10 @@ namespace EarlyDocs
 			{
 				return new XmlEnum(element);
 			}
+			if(element.Descendants().Any(d => d.Name == "interface"))
+			{
+				return new XmlInterface(element);
+			}
 			return new XmlType(element);
 		}
 
@@ -67,11 +71,19 @@ namespace EarlyDocs
 			Types.Add(type);
 		}
 
+		public virtual string PreSummary()
+		{
+			if(IsStatic)
+				return "Static type.\n\n";
+			return null;
+		}
+
 		public virtual string ToMarkdown()
 		{
 			StringBuilder output = new StringBuilder();
 
 			output.Append(String.Format("# {0}\n\n", Name));
+			output.Append(PreSummary());
 			output.Append(String.Format("{0}\n\n", Summary));
 
 			if(Enums.Count > 0)
