@@ -84,6 +84,11 @@ op_OnesComplement
 
 		private void ParseParameters(string signature)
 		{
+			if(!signature.Contains("("))
+			{
+				Parameters = "()";
+				return;
+			}
 			string parameters = signature.Substring(signature.IndexOf('('));
 			parameters = parameters.Replace("(", "").Replace(")", "");
 			string[] fields = parameters.Split(',');
@@ -101,7 +106,11 @@ op_OnesComplement
 
 		private void ParseTypeNameAndAssembly(string signature)
 		{
-			string fullName = signature.Substring(0, signature.IndexOf('('));
+			string fullName = signature;
+			if(signature.Contains('('))
+			{
+				fullName = signature.Substring(0, signature.IndexOf('('));
+			}
 			string[] fields = fullName.Split('.');
 			TypeName = String.Join(".", fields.Take(fields.Length - 1).ToArray());
 			Assembly = String.Join(".", fields.Take(fields.Length - 2).ToArray());
@@ -109,10 +118,16 @@ op_OnesComplement
 
 		private void ParseMemberName(string signature)
 		{
-			string fullName = signature.Substring(0, signature.IndexOf('('));
+			string fullName = signature;
+			if(signature.Contains('('))
+			{
+				fullName = signature.Substring(0, signature.IndexOf('('));
+			}
 			string[] fields = fullName.Split('.');
 			Name = fields.Last();
 		}
+
+		//todo: this parsing of the signature could be a lot better
 
 		public bool MatchesSignature(MethodInfo methodInfo)
 		{
@@ -123,13 +138,17 @@ op_OnesComplement
 
 		public bool MatchesArguments(ParameterInfo[] parameterInfos)
 		{
+			if(Parameters == "()" && parameterInfos.Length == 0)
+			{
+				return true;
+			}
 			string[] parameters = Parameters.Replace("(", "").Replace(")", "").Split(',');
 			if(parameters.Length != parameterInfos.Length)
 				return false;
 
 			for(int i = 0; i < parameters.Length; i++)
 			{
-				if(parameters[i].LastTerm() != parameterInfos[i].ParameterType.Name)
+				if(parameters[i].Trim().LastTerm() != parameterInfos[i].ParameterType.Name)
 				{
 					return false;
 				}
@@ -150,7 +169,7 @@ op_OnesComplement
 			if(IsOperator && operatorToSymbol.ContainsKey(Name))
 			{
 				string[] types = Parameters.Replace("(", "").Replace(")", "").Split(',');
-				output.Append(String.Format("{0} {1} = {2} {3} {4}\n\n", new String('#', indent), ReturnTypeName, types[0].Trim(), operatorToSymbol[Name], types[1].Trim()));
+				output.Append(String.Format("{0} {1} = ({2} {3} {4})\n\n", new String('#', indent), ReturnTypeName, types[0].Trim(), operatorToSymbol[Name], types[1].Trim()));
 			}
 			else
 			{

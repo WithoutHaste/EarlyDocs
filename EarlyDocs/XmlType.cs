@@ -37,7 +37,7 @@ namespace EarlyDocs
 		public List<XmlMethod> Methods = new List<XmlMethod>();
 		public List<XmlMethod> NormalMethods{
 			get {
-				return Methods.Where(t => !t.IsConstructor && !t.IsStatic).ToList();
+				return Methods.Where(t => !t.IsConstructor && !t.IsStatic && !t.IsOperator).ToList();
 			}
 		}
 		public List<XmlMethod> Constructors {
