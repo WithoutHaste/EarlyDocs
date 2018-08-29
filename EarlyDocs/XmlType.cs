@@ -37,12 +37,17 @@ namespace EarlyDocs
 		public List<XmlMethod> Methods = new List<XmlMethod>();
 		public List<XmlMethod> NormalMethods{
 			get {
-				return Methods.Where(t => !t.IsConstructor).ToList();
+				return Methods.Where(t => !t.IsConstructor && !t.IsStatic).ToList();
 			}
 		}
 		public List<XmlMethod> Constructors {
 			get {
 				return Methods.Where(t => t.IsConstructor).ToList();
+			}
+		}
+		public List<XmlMethod> StaticMethods {
+			get {
+				return Methods.Where(t => t.IsStatic).ToList();
 			}
 		}
 
@@ -118,6 +123,17 @@ namespace EarlyDocs
 
 				property.Apply(propertyInfo);
 			}
+
+			foreach(MethodInfo methodInfo in typeInfo.DeclaredMethods)
+			{
+				XmlMethod method = Methods.FirstOrDefault(m => methodInfo.Name == m.Name);
+				if(method == null) continue;
+
+				method.Apply(methodInfo);
+			}
+			//todo: if public members are not already here, add them
+			//so you don't have to put useless text on self-explanatory members
+			//can I turn off the green underlines in Visual Studio?
 		}
 
 		public virtual string PreSummary()
@@ -182,6 +198,15 @@ namespace EarlyDocs
 			{
 				output.Append(String.Format("{0} Constructors\n\n", new String('#', indent + 1)));
 				foreach(XmlMethod method in Constructors.OrderBy(m => m.Name))
+				{
+					output.Append(method.ToMarkdown(indent + 2));
+				}
+			}
+
+			if(StaticMethods.Count > 0)
+			{
+				output.Append(String.Format("{0} Static Methods\n\n", new String('#', indent + 1)));
+				foreach(XmlMethod method in StaticMethods.OrderBy(m => m.Name))
 				{
 					output.Append(method.ToMarkdown(indent + 2));
 				}

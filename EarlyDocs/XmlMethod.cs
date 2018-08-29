@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -9,6 +10,8 @@ namespace EarlyDocs
 {
 	class XmlMethod : XmlMember
 	{
+		private readonly MethodAttributes STATIC_METHODATTRIBUTES = MethodAttributes.Static;
+
 		public string Signature { get; protected set; }
 		public string Parameters { get; protected set; }
 		public string ShortSignature { get { return Name + Parameters; } }
@@ -16,6 +19,7 @@ namespace EarlyDocs
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
 		public bool IsConstructor { get; protected set; }
+		public bool IsStatic { get; protected set; }
 
 		public XmlMethod(XElement element) : base(element)
 		{
@@ -61,6 +65,11 @@ namespace EarlyDocs
 			string fullName = signature.Substring(0, signature.IndexOf('('));
 			string[] fields = fullName.Split('.');
 			Name = fields.Last();
+		}
+
+		public void Apply(MethodInfo methodInfo)
+		{
+			IsStatic = ((methodInfo.Attributes & STATIC_METHODATTRIBUTES) == STATIC_METHODATTRIBUTES);
 		}
 
 		public string ToMarkdown(int indent)
