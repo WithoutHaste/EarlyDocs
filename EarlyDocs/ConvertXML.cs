@@ -116,6 +116,7 @@ namespace EarlyDocs
 			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
 			{
 				writer.Write(text);
+				writer.Write("\n\n(Auto-generated file)");
 			}
 		}
 
