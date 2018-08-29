@@ -182,6 +182,23 @@ op_OnesComplement
 			}
 		}
 
+		public void Apply(ConstructorInfo methodInfo)
+		{
+			int index = 0;
+			foreach(ParameterInfo parameterInfo in methodInfo.GetParameters())
+			{
+				Params[index].Apply(parameterInfo);
+				index++;
+			}
+			foreach(XElement element in ParamsXml)
+			{
+				XmlParam x = Params.FirstOrDefault(p => p.Name == element.Attribute("name").Value);
+				if(x == null) continue;
+
+				x.Apply(element);
+			}
+		}
+
 		public string ToMarkdown(int indent)
 		{
 			StringBuilder output = new StringBuilder();

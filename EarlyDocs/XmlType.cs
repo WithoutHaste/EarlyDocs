@@ -136,7 +136,15 @@ namespace EarlyDocs
 
 				method.Apply(methodInfo);
 			}
-			//todo: if public members are not already here, add them
+
+			foreach(ConstructorInfo constructorInfo in typeInfo.DeclaredConstructors)
+			{
+				XmlMethod method = Methods.FirstOrDefault(m => m.IsConstructor && m.MatchesArguments(constructorInfo.GetParameters()));
+				if(method == null) continue;
+
+				method.Apply(constructorInfo);
+			}
+			//todo: if public members are not already here, add them (but not automatic Property set/get methods)
 			//so you don't have to put useless text on self-explanatory members
 			//can I turn off the green underlines in Visual Studio?
 		}
