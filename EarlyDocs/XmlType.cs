@@ -15,6 +15,16 @@ namespace EarlyDocs
 		public bool IsStatic { get; protected set; }
 
 		public List<XmlField> Fields = new List<XmlField>();
+		public List<XmlField> ConstantFields {
+			get {
+				return Fields.Where(f => f.IsConstant).ToList();
+			}
+		}
+		public List<XmlField> NormalFields {
+			get {
+				return Fields.Where(f => !f.IsConstant).ToList();
+			}
+		}
 		public List<XmlMethod> Methods = new List<XmlMethod>();
 		public List<XmlType> Types = new List<XmlType>();
 		public List<XmlEnum> Enums {
@@ -78,38 +88,50 @@ namespace EarlyDocs
 			return null;
 		}
 
-		public virtual string ToMarkdown()
+		public virtual string ToMarkdown(int indent)
 		{
 			StringBuilder output = new StringBuilder();
 
-			output.Append(String.Format("# {0}\n\n", Name));
+			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
 			output.Append(PreSummary());
 			output.Append(String.Format("{0}\n\n", Summary));
 
 			if(Enums.Count > 0)
 			{
-				output.Append(String.Format("## Enums\n\n"));
+				output.Append(String.Format("{0} Enums\n\n", new String('#', indent + 1)));
 				foreach(XmlEnum e in Enums.OrderBy(m => m.Name))
 				{
-					output.Append(e.ToMarkdown());
+					output.Append(e.ToMarkdown(indent + 2));
 				}
 			}
 
 			if(Fields.Count > 0)
 			{
-				output.Append(String.Format("## Fields\n\n"));
-				foreach(XmlField field in Fields.OrderBy(m => m.Name))
+				output.Append(String.Format("{0} Fields\n\n", new String('#', indent + 1)));
+				if(ConstantFields.Count > 0)
 				{
-					output.Append(field.ToMarkdown());
+					output.Append(String.Format("{0} Constant Fields\n\n", new String('#', indent + 2)));
+					foreach(XmlField field in ConstantFields.OrderBy(m => m.Name))
+					{
+						output.Append(field.ToMarkdown(indent + 3));
+					}
+				}
+				if(NormalFields.Count > 0)
+				{
+					output.Append(String.Format("{0} Normal Fields\n\n", new String('#', indent + 2)));
+					foreach(XmlField field in NormalFields.OrderBy(m => m.Name))
+					{
+						output.Append(field.ToMarkdown(indent + 3));
+					}
 				}
 			}
 
 			if(Methods.Count > 0)
 			{
-				output.Append(String.Format("## Methods\n\n"));
+				output.Append(String.Format("{0} Methods\n\n", new String('#', indent + 1)));
 				foreach(XmlMethod method in Methods.OrderBy(m => m.Name))
 				{
-					output.Append(method.ToMarkdown());
+					output.Append(method.ToMarkdown(indent + 2));
 				}
 			}
 

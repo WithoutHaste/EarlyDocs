@@ -13,11 +13,11 @@ namespace EarlyDocs
 		{
 		}
 
-		public override string ToMarkdown()
+		public override string ToMarkdown(int indent)
 		{
 			StringBuilder output = new StringBuilder();
 
-			output.Append(String.Format("### {0}\n\n", Name));
+			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
 			output.Append(String.Format("{0}\n\n", Summary));
 
 			if(Fields.Count > 0)

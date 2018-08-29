@@ -10,6 +10,19 @@ This library is under active development. Report bugs and request features on Gi
 
 ## Custom Tags
 
+### constant
+
+Add `<constant/>` tag to comments before a Field to help organize documentation.
+
+```
+/// <summary>Description</summary>
+/// <constant/>
+public const int MyFieldA...
+/// <summary>Description</summary>
+/// <constant/>
+public readonly int MyFieldB...
+```
+
 ### enum
 
 Add `<enum/>` tag to comments before an Enum Type, otherwise it will be documented as a normal Type.

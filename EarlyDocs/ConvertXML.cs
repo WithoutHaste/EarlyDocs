@@ -37,7 +37,7 @@ namespace EarlyDocs
 			}
 			foreach(XmlType type in typeNameToType.Values)
 			{
-				Save(type.ToMarkdown(), outputDirectory, type.Name + ".md");
+				Save(type.ToMarkdown(1), outputDirectory, type.Name + ".md");
 			}
 			Save(GenerateTableOfContents(), outputDirectory, "TableOfContents.md");
 		}

@@ -56,11 +56,11 @@ namespace EarlyDocs
 			Name = fields.Last();
 		}
 
-		public string ToMarkdown()
+		public string ToMarkdown(int indent)
 		{
 			StringBuilder output = new StringBuilder();
 
-			output.Append(String.Format("### {0}\n\n", ShortSignature));
+			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), ShortSignature));
 			output.Append(String.Format("{0}\n\n", Summary));
 
 			return output.ToString();

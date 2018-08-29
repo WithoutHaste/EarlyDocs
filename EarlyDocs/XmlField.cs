@@ -12,12 +12,14 @@ namespace EarlyDocs
 		public string TypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
+		public bool IsConstant { get; protected set; }
 
 		public XmlField(XElement element) : base(element)
 		{
 			string name = element.Attribute("name").Value.Substring(2);
 			ParseTypeNameAndAssembly(name);
 			ParseMemberName(name);
+			IsConstant = element.Descendants().Any(d => d.Name == "constant");
 		}
 
 		private void ParseTypeNameAndAssembly(string name)
@@ -33,12 +35,15 @@ namespace EarlyDocs
 			Name = fields.Last();
 		}
 
-		public string ToMarkdown()
+		public string ToMarkdown(int indent)
 		{
 			StringBuilder output = new StringBuilder();
 
-			output.Append(String.Format("### {0}\n\n", Name));
-			output.Append(String.Format("{0}\n\n", Summary));
+			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
+			if(!String.IsNullOrEmpty(Summary))
+			{
+				output.Append(String.Format("{0}\n\n", Summary));
+			}
 
 			return output.ToString();
 		}
