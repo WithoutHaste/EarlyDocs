@@ -10,7 +10,8 @@ namespace EarlyDocs
 {
 	class XmlField : XmlMember
 	{
-		private readonly FieldAttributes CONSTANT_FIELDATTRIBUTES = FieldAttributes.Static | FieldAttributes.InitOnly;
+		private readonly FieldAttributes READONLY_FIELDATTRIBUTES = FieldAttributes.Static | FieldAttributes.InitOnly;
+		private readonly FieldAttributes CONSTANT_FIELDATTRIBUTES = FieldAttributes.Static | FieldAttributes.Literal;
 
 		public string ParentTypeName { get; protected set; }
 		public string Assembly { get; protected set; }
@@ -38,9 +39,16 @@ namespace EarlyDocs
 			Name = fields.Last();
 		}
 
+		private bool FieldIsConstant(FieldAttributes attributes)
+		{
+			if((attributes & READONLY_FIELDATTRIBUTES) == READONLY_FIELDATTRIBUTES)
+				return true;
+			return ((attributes & CONSTANT_FIELDATTRIBUTES) == CONSTANT_FIELDATTRIBUTES);
+		}
+
 		public void Apply(FieldInfo fieldInfo)
 		{
-			IsConstant = ((fieldInfo.Attributes & CONSTANT_FIELDATTRIBUTES) == CONSTANT_FIELDATTRIBUTES);
+			IsConstant = FieldIsConstant(fieldInfo.Attributes);
 			DataTypeName = fieldInfo.FieldType.Name;
 		}
 
