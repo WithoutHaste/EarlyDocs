@@ -338,7 +338,10 @@ namespace EarlyDocs
 			StringBuilder output = new StringBuilder();
 
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
-			output.Append(String.Format("{0}\n\n", Summary));
+			if(!Summary.IsEmpty)
+			{
+				output.Append(String.Format("{0}\n\n", Summary));
+			}
 			if(!Remarks.IsEmpty)
 			{
 				output.Append(String.Format("{0}\n\n", Remarks));
@@ -365,6 +368,10 @@ namespace EarlyDocs
 					else
 					{
 						output.Append(String.Format("* {0}: {1}  \n", field.Name, field.Summary));
+						foreach(XmlComments example in field.Examples)
+						{
+							output.Append(String.Format("    * Example: {0}  \n", example));
+						}
 					}
 				}
 			}
