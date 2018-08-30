@@ -46,6 +46,7 @@
     <Compile Include="ConvertXML.cs" />
     <Compile Include="StringExtensions.cs" />
     <Compile Include="XmlComments.cs" />
+    <Compile Include="XmlEvent.cs" />
     <Compile Include="XmlException.cs" />
     <Compile Include="XmlField.cs" />
     <Compile Include="XmlMember.cs" />

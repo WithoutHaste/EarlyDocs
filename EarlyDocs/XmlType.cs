@@ -35,6 +35,7 @@ namespace EarlyDocs
 		}
 
 		public List<XmlProperty> Properties = new List<XmlProperty>();
+		public List<XmlEvent> Events = new List<XmlEvent>();
 		
 		public List<XmlMethod> Methods = new List<XmlMethod>();
 		public List<XmlMethod> NormalMethods{
@@ -102,6 +103,11 @@ namespace EarlyDocs
 		public void Add(XmlProperty property)
 		{
 			Properties.Add(property);
+		}
+
+		public void Add(XmlEvent e)
+		{
+			Events.Add(e);
 		}
 
 		public void Add(XmlMethod method)
@@ -267,6 +273,15 @@ namespace EarlyDocs
 				foreach(XmlProperty p in Properties.OrderBy(m => m.Name))
 				{
 					output.Append(p.ToMarkdown(indent + 2));
+				}
+			}
+
+			if(Events.Count > 0)
+			{
+				output.Append(String.Format("{0} Events\n\n", new String('#', indent + 1)));
+				foreach(XmlEvent e in Events.OrderBy(m => m.Name))
+				{
+					output.Append(e.ToMarkdown(indent + 2));
 				}
 			}
 

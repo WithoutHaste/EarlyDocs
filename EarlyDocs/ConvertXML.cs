@@ -95,19 +95,24 @@ namespace EarlyDocs
 					LoadType(element);
 					continue;
 				}
-				if(element.Attribute("name").Value.StartsWith("M:"))
+				else if(element.Attribute("name").Value.StartsWith("M:"))
 				{
 					LoadMethod(element);
 					continue;
 				}
-				if(element.Attribute("name").Value.StartsWith("F:"))
+				else if(element.Attribute("name").Value.StartsWith("F:"))
 				{
 					LoadField(element);
 					continue;
 				}
-				if(element.Attribute("name").Value.StartsWith("P:"))
+				else if(element.Attribute("name").Value.StartsWith("P:"))
 				{
 					LoadProperty(element);
+					continue;
+				}
+				else if(element.Attribute("name").Value.StartsWith("E:"))
+				{
+					LoadEvent(element);
 					continue;
 				}
 			}
@@ -149,6 +154,15 @@ namespace EarlyDocs
 			if(parent == null)
 				return;
 			parent.Add(property);
+		}
+
+		private void LoadEvent(XElement element)
+		{
+			XmlEvent e = new XmlEvent(element);
+			XmlType parent = FindType(e.ParentTypeName);
+			if(parent == null)
+				return;
+			parent.Add(e);
 		}
 
 		private XmlType FindType(string name)
