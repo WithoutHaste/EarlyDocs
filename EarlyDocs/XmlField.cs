@@ -53,6 +53,10 @@ namespace EarlyDocs
 			{
 				output.Append(String.Format("{0}\n\n", Summary));
 			}
+			if(!Remarks.IsEmpty)
+			{
+				output.Append(String.Format("{0}\n\n", Remarks));
+			}
 
 			return output.ToString();
 		}
