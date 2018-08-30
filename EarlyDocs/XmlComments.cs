@@ -115,7 +115,7 @@ namespace EarlyDocs
 			{
 				return String.Format("[{0}]({1})", typeName, url);
 			}
-			return String.Format("[{0}]({1}/documentation/{0}.md)", typeName, url);
+			return String.Format("[{0}]({1}documentation/{0}.md)", typeName, url);
 		}
 
 		//todo: support "term" and "description" tags in "listheader" and "item"
