@@ -13,6 +13,7 @@ namespace EarlyDocs
 
 		public XmlComments Summary { get; protected set; }
 		public XmlComments Remarks { get; protected set; }
+		public List<XmlComments> Examples = new List<XmlComments>();
 		public XmlComments Returns { get; protected set; }
 
 		public XmlMember(XElement element)
@@ -39,6 +40,10 @@ namespace EarlyDocs
 				else if(child.Name == "returns")
 				{
 					Returns = new XmlComments(child);
+				}
+				else if(child.Name == "example")
+				{
+					Examples.Add(new XmlComments(child));
 				}
 			}
 		}

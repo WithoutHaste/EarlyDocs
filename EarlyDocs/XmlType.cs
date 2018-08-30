@@ -222,6 +222,15 @@ namespace EarlyDocs
 				}
 			}
 
+			if(Examples.Count > 0)
+			{
+				output.Append(String.Format("{0} Examples\n\n", new String('#', indent + 1)));
+				foreach(XmlComments c in Examples)
+				{
+					output.Append(c + "\n\n");
+				}
+			}
+
 			if(Enums.Count > 0)
 			{
 				output.Append(String.Format("{0} Enums\n\n", new String('#', indent + 1)));
@@ -320,9 +329,18 @@ namespace EarlyDocs
 				output.Append(String.Format("{0}\n\n", Remarks));
 			}
 
+			if(Examples.Count > 0)
+			{
+				output.Append(String.Format("{0} Examples\n\n", new String('#', indent + 1)));
+				foreach(XmlComments c in Examples)
+				{
+					output.Append(c + "\n\n");
+				}
+			}
+
 			if(Fields.Count > 0)
 			{
-				output.Append("Constants:  \n");
+				output.Append(String.Format("{0} Constants\n\n", new String('#', indent + 1)));
 				foreach(XmlField field in Fields)
 				{
 					if(field.Summary.IsEmpty)
