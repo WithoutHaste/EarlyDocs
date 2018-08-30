@@ -14,10 +14,10 @@ namespace EarlyDocs
 		{
 		}
 
-		public void Apply(PropertyInfo propertyInfo)
+		public void Apply(EventInfo eventInfo)
 		{
 			IsConstant = false;
-			DataTypeName = propertyInfo.PropertyType.Name;
+			DataTypeName = eventInfo.EventHandlerType.Name;
 		}
 	}
 }

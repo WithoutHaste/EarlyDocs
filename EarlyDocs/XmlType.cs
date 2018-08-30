@@ -200,9 +200,14 @@ namespace EarlyDocs
 
 				method.Apply(constructorInfo);
 			}
-			//todo: if public members are not already here, add them (but not automatic Property set/get methods)
-			//so you don't have to put useless text on self-explanatory members
-			//can I turn off the green underlines in Visual Studio?
+
+			foreach(EventInfo eventInfo in typeInfo.DeclaredEvents)
+			{
+				XmlEvent e = Events.FirstOrDefault(m => m.Name == eventInfo.Name);
+				if(e == null) continue;
+
+				e.Apply(eventInfo);
+			}
 		}
 
 		public virtual string PreSummary()
