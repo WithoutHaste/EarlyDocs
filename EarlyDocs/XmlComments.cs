@@ -159,7 +159,7 @@ namespace EarlyDocs
 				tag = tag.Substring(1);
 			}
 			string ignoreIndent = tag.GetLeadingWhitespace();
-			tag = tag.Trim();
+			tag = tag.TrimEnd();
 			output.Append("```\n");
 			foreach(string line in tag.Split('\n'))
 			{
