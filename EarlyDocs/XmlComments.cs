@@ -125,11 +125,13 @@ namespace EarlyDocs
 		{
 			StringBuilder output = new StringBuilder();
 			XElement element = XElement.Parse(tag);
+			bool isNumberedList = (element.Attribute("type").Value == "number");
 			XElement header = element.Descendants().FirstOrDefault(d => d.Name == "listheader");
 			if(header != null)
 			{
 				output.Append(header.Value.Trim() + "  \n");
 			}
+			int number = 1;
 			foreach(XElement item in element.Descendants().Where(d => d.Name == "item"))
 			{
 				if(item.Descendants().Any(d => d.Name == "term"))
@@ -138,13 +140,14 @@ namespace EarlyDocs
 					if(item.Descendants().Any(d => d.Name == "description"))
 					{
 						string description = item.Descendants().First(d => d.Name == "description").Value.Trim();
-						output.Append(String.Format("* {0}: {1}  \n", term, description));
+						output.Append(String.Format("{0} {1}: {2}  \n", ((isNumberedList) ? number.ToString() + "." : "*"), term, description));
 						continue;
 					}
-					output.Append(String.Format("* {0}:  \n", term));
+					output.Append(String.Format("{0} {1}:  \n", ((isNumberedList) ? number.ToString() + "." : "*"), term));
 					continue;
 				}
-				output.Append(String.Format("* {0}  \n", item.Value.Trim()));
+				output.Append(String.Format("{0} {1}  \n", ((isNumberedList) ? number.ToString() + "." : "*"), item.Value.Trim()));
+				number++;
 			}
 			return output.ToString();
 		}
