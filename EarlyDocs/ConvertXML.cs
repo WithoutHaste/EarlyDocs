@@ -119,7 +119,7 @@ namespace EarlyDocs
 			XmlMethod member = new XmlMethod(element);
 			XmlType parent = FindType(member.TypeName);
 			if(parent == null)
-				throw new Exception("Missing documenation for Type: " + member.TypeName);
+				return;
 			parent.Add(member);
 		}
 
@@ -128,7 +128,7 @@ namespace EarlyDocs
 			XmlField field = new XmlField(element);
 			XmlType parent = FindType(field.ParentTypeName);
 			if(parent == null)
-				throw new Exception("Missing documenation for Type: " + field.ParentTypeName);
+				return;
 			parent.Add(field);
 		}
 
@@ -137,7 +137,7 @@ namespace EarlyDocs
 			XmlProperty property = new XmlProperty(element);
 			XmlType parent = FindType(property.ParentTypeName);
 			if(parent == null)
-				throw new Exception("Missing documenation for Type: " + property.ParentTypeName);
+				return;
 			parent.Add(property);
 		}
 

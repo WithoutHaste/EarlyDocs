@@ -16,11 +16,11 @@ This library is under active development. Report bugs and request features on Gi
 
 Other projects with EarlyDocs-generated documentation.
 
-[WithoutHaste.Drawing.Colors](https://github.com/WithoutHaste/WithoutHaste.Drawing.Colors/documentation/TableOfContents.md)
+[WithoutHaste.Drawing.Colors](https://github.com/WithoutHaste/WithoutHaste.Drawing.Colors/blob/master/documentation/TableOfContents.md)
 
 [WithoutHaste.Drawing.Shapes](https://github.com/WithoutHaste/WithoutHaste.Drawing.Shapes/blob/master/documentation/TableOfContents.md)
 
-[WithoutHaste.Windows.GUI](https://github.com/WithoutHaste/WithoutHaste.Windows.GUI/documentation/TableOfContents.md)
+[WithoutHaste.Windows.GUI](https://github.com/WithoutHaste/WithoutHaste.Windows.GUI/blob/master/documentation/TableOfContents.md)
 
 ## Versions
 
