@@ -27,7 +27,7 @@ namespace EarlyDocs
 
 		public XmlComments(XElement element)
 		{
-			Text = element.ToString().StripOuterTags();
+			Text = element.ToString().StripOuterTags().Trim();
 		}
 
 		public override string ToString()
@@ -64,6 +64,12 @@ namespace EarlyDocs
 					string tag = GetDoubleTag(text, index, "list");
 					index += tag.Length + 1;
 					output.Append(TagToList(tag));
+				}
+				else if(AtTag(text, index, "code"))
+				{
+					string tag = GetDoubleTag(text, index, "code");
+					index += tag.Length + 1;
+					output.Append(TagToCode(tag));
 				}
 				else
 				{
@@ -140,6 +146,27 @@ namespace EarlyDocs
 				}
 				output.Append(String.Format("* {0}  \n", item.Value.Trim()));
 			}
+			return output.ToString();
+		}
+
+		private string TagToCode(string tag)
+		{
+			StringBuilder output = new StringBuilder();
+			tag = tag.StripOuterTags();
+			tag = tag.Replace("\r", "");
+			if(tag.StartsWith("\n"))
+			{
+				tag = tag.Substring(1);
+			}
+			string ignoreIndent = tag.GetLeadingWhitespace();
+			tag = tag.Trim();
+			output.Append("```\n");
+			foreach(string line in tag.Split('\n'))
+			{
+				output.Append(line.TrimEnd().Substring(ignoreIndent.Length));
+				output.Append("\n");
+			}
+			output.Append("```\n");
 			return output.ToString();
 		}
 

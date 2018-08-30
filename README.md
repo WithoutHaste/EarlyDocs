@@ -25,6 +25,7 @@ Top-level tags:
 Formatting within other tags:  
 * para
 * see
+* code
 * list type="bullet"
     * listheader
 	    * plain text
@@ -40,6 +41,13 @@ Formatting within other tags:
 When the `cref` attribute matches a Type in the current assembly, the text will be displayed as a link to the documentation for that Type.
 
 To link to a Type in another project, use custom attribute `url`. If the `url` ends with a file extension, the `url` will be used as the entire link. If it does not, it will interpreted as an EarlyDocs documentation location.
+
+Example:  
+```
+<see cref="MyType"/>
+results in link
+[MyType](documentation/MyType.md)
+```
 
 Example:  
 ```

@@ -28,7 +28,7 @@ namespace EarlyDocs
 			text = text.Substring(openingTagEndIndex + 1);
 			int endingTagStartIndex = text.LastIndexOf("</");
 			text = text.Substring(0, endingTagStartIndex);
-			return text.Trim();
+			return text;
 		}
 
 		/// <summary>
@@ -47,6 +47,18 @@ namespace EarlyDocs
 		{
 			Regex r = new Regex(@"\.\w+$", RegexOptions.IgnoreCase);
 			return (r.IsMatch(text));
+		}
+
+		/// <summary>
+		/// Return all whitespace from beginning of string to the first non-whitespace character.
+		/// Returns an empty string if there are not leading whitespaces.
+		/// </summary>
+		public static string GetLeadingWhitespace(this string text)
+		{
+			if(text.Length == 0 || !text[0].IsWhitespace())
+				return "";
+			Regex r = new Regex(@"^\s+", RegexOptions.IgnoreCase);
+			return r.Match(text).Value;
 		}
 	}
 }
