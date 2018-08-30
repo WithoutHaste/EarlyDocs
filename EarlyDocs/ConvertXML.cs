@@ -14,7 +14,7 @@ namespace EarlyDocs
 		private Dictionary<string, XmlType> typeNameToType = new Dictionary<string, XmlType>();
 		private List<XmlType> NormalTypes {
 			get {
-				return typeNameToType.Values.Where(t => !t.IsStatic && !t.IsInterface).ToList();
+				return typeNameToType.Values.Where(t => !t.IsAbstract && !t.IsStatic && !t.IsInterface).ToList();
 			}
 		}
 		private List<XmlType> StaticTypes {
@@ -25,6 +25,11 @@ namespace EarlyDocs
 		private List<XmlType> InterfaceTypes {
 			get {
 				return typeNameToType.Values.Where(t => t.IsInterface).ToList();
+			}
+		}
+		private List<XmlType> AbstractTypes {
+			get {
+				return typeNameToType.Values.Where(t => t.IsAbstract).ToList();
 			}
 		}
 
@@ -164,6 +169,11 @@ namespace EarlyDocs
 			StringBuilder output = new StringBuilder();
 
 			output.Append("# Contents\n\n");
+			output.Append("## Abstract Types\n\n");
+			foreach(XmlType type in AbstractTypes.OrderBy(t => t.Name))
+			{
+				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
+			}
 			output.Append("## Types\n\n");
 			foreach(XmlType type in NormalTypes.OrderBy(t => t.Name))
 			{

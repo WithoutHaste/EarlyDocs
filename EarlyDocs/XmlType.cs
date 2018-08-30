@@ -10,15 +10,13 @@ namespace EarlyDocs
 {
 	class XmlType : XmlMember
 	{
-		private readonly TypeAttributes STATIC_TYPEATTRIBUTES = TypeAttributes.Abstract | TypeAttributes.Sealed;
-		private readonly TypeAttributes INTERFACE_TYPEATTRIBUTES = TypeAttributes.Abstract | TypeAttributes.ClassSemanticsMask;
-
 		public string BaseNamespace { get; protected set; }
 		public string BaseTypeName { get; protected set; }
 
 		public string TypeName { get; protected set; }
 		public string Assembly { get; protected set; }
 		public string Name { get; protected set; }
+		public bool IsAbstract { get; protected set; }
 		public bool IsStatic { get; protected set; }
 		public bool IsInterface { get; protected set; }
 		public bool IsEnum { get; protected set; }
@@ -110,12 +108,36 @@ namespace EarlyDocs
 			Types.Add(type);
 		}
 
+		private bool TypeIsAbstract(TypeAttributes attributes)
+		{
+			if((attributes & TypeAttributes.Sealed) == TypeAttributes.Sealed)
+				return false;
+			if((attributes & TypeAttributes.ClassSemanticsMask) == TypeAttributes.ClassSemanticsMask)
+				return false;
+			return ((attributes & TypeAttributes.Abstract) == TypeAttributes.Abstract);
+		}
+
+		private bool TypeIsStatic(TypeAttributes attributes)
+		{
+			if((attributes & TypeAttributes.Sealed) != TypeAttributes.Sealed)
+				return false;
+			return ((attributes & TypeAttributes.Abstract) == TypeAttributes.Abstract);
+		}
+
+		private bool TypeIsInterface(TypeAttributes attributes)
+		{
+			if((attributes & TypeAttributes.ClassSemanticsMask) != TypeAttributes.ClassSemanticsMask)
+				return false;
+			return ((attributes & TypeAttributes.Abstract) == TypeAttributes.Abstract);
+		}
+
 		public void Apply(TypeInfo typeInfo)
 		{
 			BaseNamespace = typeInfo.BaseType?.Namespace;
 			BaseTypeName = typeInfo.BaseType?.Name;
-			IsStatic = ((typeInfo.Attributes & STATIC_TYPEATTRIBUTES) == STATIC_TYPEATTRIBUTES);
-			IsInterface = ((typeInfo.Attributes & INTERFACE_TYPEATTRIBUTES) == INTERFACE_TYPEATTRIBUTES);
+			IsAbstract = TypeIsAbstract(typeInfo.Attributes);
+			IsStatic = TypeIsStatic(typeInfo.Attributes);
+			IsInterface = TypeIsInterface(typeInfo.Attributes);
 			IsEnum = (typeInfo.BaseType != null && typeInfo.BaseType.Name == "Enum");
 
 			foreach(FieldInfo fieldInfo in typeInfo.DeclaredFields)
