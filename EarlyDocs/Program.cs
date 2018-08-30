@@ -27,3 +27,6 @@ namespace EarlyDocs
 		}
 	}
 }
+
+//todo: replace System.Single with "float" and System.String with "string" and System.Int32 with "int"
+//todo: translate parameters like "System.Drawing.Color@" to "out System.Drawing.Color"

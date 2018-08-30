@@ -164,7 +164,12 @@ op_OnesComplement
 
 			for(int i = 0; i < parameters.Length; i++)
 			{
-				if(parameters[i].Trim().LastTerm() != parameterInfos[i].ParameterType.Name)
+				string parameter = parameters[i].Trim().LastTerm();
+				if(parameter.EndsWith("@"))
+				{
+					parameter = parameter.Replace("@", "&");
+				}
+				if(parameter != parameterInfos[i].ParameterType.Name)
 				{
 					return false;
 				}
