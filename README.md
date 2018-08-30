@@ -63,6 +63,19 @@ results in link
 [MyType](http://otherproject.com/folder/documentation/MyType.md)
 ```
 
+### layout
+
+Add a `layout` tag to the documentation of a Type to specify how to layout the documentation page.
+
+Set attribute `methods` to `keep_order` to display methods in same order they appear in the code. Otherwise, methods are displayed in alphabetical order.
+
+Example:  
+```
+/// <summary>Description</summary>
+/// <layout methods="keep_order"/>
+public class MyType...
+```
+
 ## Examples
 
 Other projects with EarlyDocs-generated documentation.

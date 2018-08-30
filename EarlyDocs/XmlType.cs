@@ -22,6 +22,8 @@ namespace EarlyDocs
 		public bool IsEnum { get; protected set; }
 		public bool IsException { get; protected set; }
 
+		public bool LayoutKeepMethodOrder { get; protected set; }
+
 		public List<XmlField> Fields = new List<XmlField>();
 		public List<XmlField> ConstantFields {
 			get {
@@ -81,6 +83,15 @@ namespace EarlyDocs
 			ParseAssembly(TypeName);
 			ParseName(TypeName);
 			IsException = Name.EndsWith("Exception");
+
+			XElement layout = element.Descendants().FirstOrDefault(d => d.Name == "layout");
+			if(layout != null)
+			{
+				if(layout.Attribute("methods") != null)
+				{
+					LayoutKeepMethodOrder = (layout.Attribute("methods").Value == "keep_order");
+				}
+			}
 		}
 
 		private void ParseAssembly(string fullName)
@@ -285,32 +296,9 @@ namespace EarlyDocs
 				}
 			}
 
-			if(Constructors.Count > 0)
-			{
-				output.Append(String.Format("{0} Constructors\n\n", new String('#', indent + 1)));
-				foreach(XmlMethod method in Constructors.OrderBy(m => m.Name))
-				{
-					output.Append(method.ToMarkdown(indent + 2));
-				}
-			}
-
-			if(StaticMethods.Count > 0)
-			{
-				output.Append(String.Format("{0} Static Methods\n\n", new String('#', indent + 1)));
-				foreach(XmlMethod method in StaticMethods.OrderBy(m => m.Name))
-				{
-					output.Append(method.ToMarkdown(indent + 2));
-				}
-			}
-
-			if(NormalMethods.Count > 0)
-			{
-				output.Append(String.Format("{0} Methods\n\n", new String('#', indent + 1)));
-				foreach(XmlMethod method in NormalMethods.OrderBy(m => m.Name))
-				{
-					output.Append(method.ToMarkdown(indent + 2));
-				}
-			}
+			MethodsToMarkdown("Constructors", indent + 1, Constructors, output);
+			MethodsToMarkdown("Static Methods", indent + 1, StaticMethods, output);
+			MethodsToMarkdown("Methods", indent + 1, NormalMethods, output);
 
 			if(Operators.Count > 0)
 			{
@@ -331,6 +319,27 @@ namespace EarlyDocs
 			}
 
 			return output.ToString();
+		}
+
+		private void MethodsToMarkdown(string header, int indent, List<XmlMethod> methods, StringBuilder output)
+		{
+			if(methods.Count == 0) return;
+
+			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), header));
+			if(LayoutKeepMethodOrder)
+			{
+				foreach(XmlMethod method in methods)
+				{
+					output.Append(method.ToMarkdown(indent + 1));
+				}
+			}
+			else
+			{
+				foreach(XmlMethod method in methods.OrderBy(m => m.Name))
+				{
+					output.Append(method.ToMarkdown(indent + 1));
+				}
+			}
 		}
 
 		private string EnumToMarkdown(int indent)
