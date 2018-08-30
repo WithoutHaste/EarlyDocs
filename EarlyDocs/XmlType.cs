@@ -167,6 +167,12 @@ namespace EarlyDocs
 				XmlMethod method = Methods.FirstOrDefault(m => m.MatchesSignature(methodInfo));
 				if(method == null) continue;
 
+				if((methodInfo.Attributes & MethodAttributes.Private) == MethodAttributes.Private)
+				{
+					Methods.Remove(method);
+					continue;
+				}
+
 				method.Apply(methodInfo);
 			}
 
