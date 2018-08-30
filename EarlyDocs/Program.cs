@@ -10,11 +10,11 @@ namespace EarlyDocs
 	{
 		static void Main(string[] args)
 		{
-			//new ConvertXML(
-			//	"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.dll",
-			//	"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.XML",
-			//	"E:/Github/WithoutHaste.Drawing.Shapes/documentation"
-			//);
+			new ConvertXML(
+				"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.dll",
+				"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.XML",
+				"E:/Github/WithoutHaste.Drawing.Shapes/documentation"
+			);
 
 			//new ConvertXML(
 			//	"E:/Github/WithoutHaste.Drawing.Colors/Colors/bin/Release/WithoutHaste.Drawing.Colors.dll",
@@ -22,11 +22,11 @@ namespace EarlyDocs
 			//	"E:/Github/WithoutHaste.Drawing.Colors/documentation"
 			//);
 
-			new ConvertXML(
-				"E:/Github/WithoutHaste.Windows.GUI/GUI/bin/Release/WithoutHaste.Windows.GUI.dll",
-				"E:/Github/WithoutHaste.Windows.GUI/GUI/bin/Release/WithoutHaste.Windows.GUI.XML",
-				"E:/Github/WithoutHaste.Windows.GUI/documentation"
-			);
+			//new ConvertXML(
+			//	"E:/Github/WithoutHaste.Windows.GUI/GUI/bin/Release/WithoutHaste.Windows.GUI.dll",
+			//	"E:/Github/WithoutHaste.Windows.GUI/GUI/bin/Release/WithoutHaste.Windows.GUI.XML",
+			//	"E:/Github/WithoutHaste.Windows.GUI/documentation"
+			//);
 
 			Console.WriteLine("done");
 			Console.ReadLine();
