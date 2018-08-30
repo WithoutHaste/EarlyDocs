@@ -4,6 +4,7 @@ Converter from Visual Studio XML documentation to Markdown files.
 * Created for C# library projects
 * Generates one .md file per Type
 * Generates one TableOfContents.md file that links to everything else
+    * Displays the summary of each Type
 * Save everything to a "documentation" directory
 
 EarlyDocs pulls additional information from the .dll itself to provide more than the XML documentation contains.
