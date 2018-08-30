@@ -49,9 +49,9 @@ namespace EarlyDocs
 			StringBuilder output = new StringBuilder();
 
 			output.Append(String.Format("{0} {1} {2}\n\n", new String('#', indent), DataTypeName, Name));
-			if(!String.IsNullOrEmpty(Summary))
+			if(!Summary.IsEmpty)
 			{
-				output.Append(String.Format("{0}\n\n", MarkdownSummary));
+				output.Append(String.Format("{0}\n\n", Summary));
 			}
 
 			return output.ToString();

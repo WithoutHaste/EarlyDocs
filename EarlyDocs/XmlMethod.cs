@@ -223,9 +223,9 @@ op_OnesComplement
 				output.Append(String.Format("{0} {1}{2}{3}\n\n", new String('#', indent), ((ReturnTypeName != null) ? ReturnTypeName + " " : ""), Name, FormatParameters()));
 			}
 
-			if(!String.IsNullOrEmpty(Summary))
+			if(!Summary.IsEmpty)
 			{
-				output.Append(String.Format("{0}\n\n", MarkdownSummary));
+				output.Append(String.Format("{0}\n\n", Summary));
 			}
 
 			bool displayedParameter = false;
@@ -239,7 +239,7 @@ op_OnesComplement
 				output.Append("\n");
 			}
 
-			if(!String.IsNullOrEmpty(Returns))
+			if(!Returns.IsEmpty)
 			{
 				output.Append(String.Format("Returns: {0}\n\n", Returns));
 			}

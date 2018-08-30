@@ -73,6 +73,10 @@ namespace EarlyDocs
 		public XmlType(XElement element) : base(element)
 		{
 			TypeName = element.Attribute("name")?.Value.Substring(2);
+			if(TypeName.Contains("`"))
+			{
+				TypeName = TypeName.Substring(0, TypeName.IndexOf('`')); //this is due to generic types
+			}
 			ParseAssembly(TypeName);
 			ParseName(TypeName);
 			IsException = Name.EndsWith("Exception");
@@ -195,7 +199,7 @@ namespace EarlyDocs
 
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
 			output.Append(PreSummary());
-			output.Append(String.Format("{0}\n\n", MarkdownSummary));
+			output.Append(String.Format("{0}\n\n", Summary));
 			if(!String.IsNullOrEmpty(BaseTypeName))
 			{
 				if(BaseNamespace == Assembly)
@@ -306,7 +310,7 @@ namespace EarlyDocs
 			{
 				foreach(XmlField field in Fields)
 				{
-					if(String.IsNullOrEmpty(field.Summary))
+					if(field.Summary.IsEmpty)
 					{
 						output.Append(String.Format("* {0}  \n", field.Name));
 					}
