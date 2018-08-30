@@ -231,7 +231,7 @@ op_OnesComplement
 			bool displayedParameter = false;
 			foreach(XmlParam p in Params.Where(p => !String.IsNullOrEmpty(p.Description)))
 			{
-				output.Append(String.Format("Parameter {0}: {1}\n", p.Name, p.Description));
+				output.Append(String.Format("Parameter {0}: {1}  \n", p.Name, p.Description));
 				displayedParameter = true;
 			}
 			if(displayedParameter)
