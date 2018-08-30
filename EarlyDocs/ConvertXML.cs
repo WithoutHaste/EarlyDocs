@@ -12,24 +12,34 @@ namespace EarlyDocs
 	class ConvertXML
 	{
 		private Dictionary<string, XmlType> typeNameToType = new Dictionary<string, XmlType>();
+		private List<XmlType> ExceptionTypes {
+			get {
+				return typeNameToType.Values.Where(t => t.IsException).ToList();
+			}
+		}
 		private List<XmlType> NormalTypes {
 			get {
-				return typeNameToType.Values.Where(t => !t.IsAbstract && !t.IsStatic && !t.IsInterface).ToList();
+				return typeNameToType.Values.Where(t => !t.IsAbstract && !t.IsStatic && !t.IsInterface && !t.IsException && !t.IsEnum).ToList();
 			}
 		}
 		private List<XmlType> StaticTypes {
 			get {
-				return typeNameToType.Values.Where(t => t.IsStatic && !t.IsInterface).ToList();
+				return typeNameToType.Values.Where(t => t.IsStatic && !t.IsInterface && !t.IsException && !t.IsEnum).ToList();
 			}
 		}
 		private List<XmlType> InterfaceTypes {
 			get {
-				return typeNameToType.Values.Where(t => t.IsInterface).ToList();
+				return typeNameToType.Values.Where(t => t.IsInterface && !t.IsException).ToList();
+			}
+		}
+		private List<XmlType> EnumTypes {
+			get {
+				return typeNameToType.Values.Where(t => t.IsEnum && !t.IsException).ToList();
 			}
 		}
 		private List<XmlType> AbstractTypes {
 			get {
-				return typeNameToType.Values.Where(t => t.IsAbstract).ToList();
+				return typeNameToType.Values.Where(t => t.IsAbstract && !t.IsException).ToList();
 			}
 		}
 
@@ -169,28 +179,25 @@ namespace EarlyDocs
 			StringBuilder output = new StringBuilder();
 
 			output.Append("# Contents\n\n");
-			output.Append("## Abstract Types\n\n");
-			foreach(XmlType type in AbstractTypes.OrderBy(t => t.Name))
-			{
-				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
-			}
-			output.Append("## Types\n\n");
-			foreach(XmlType type in NormalTypes.OrderBy(t => t.Name))
-			{
-				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
-			}
-			output.Append("## Static Types\n\n");
-			foreach(XmlType type in StaticTypes.OrderBy(t => t.Name))
-			{
-				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
-			}
-			output.Append("## Interfaces\n\n");
-			foreach(XmlType type in InterfaceTypes.OrderBy(t => t.Name))
-			{
-				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
-			}
+			GenerateTableOfContentsSection("Abstract Types", AbstractTypes, output);
+			GenerateTableOfContentsSection("Types", NormalTypes, output);
+			GenerateTableOfContentsSection("Static Types", StaticTypes, output);
+			GenerateTableOfContentsSection("Interfaces", InterfaceTypes, output);
+			GenerateTableOfContentsSection("Enums", EnumTypes, output);
+			GenerateTableOfContentsSection("Exceptions", ExceptionTypes, output);
 
 			return output.ToString();
+		}
+
+		private void GenerateTableOfContentsSection(string header, List<XmlType> types, StringBuilder output)
+		{
+			if(types.Count == 0) return;
+
+			output.Append(String.Format("## {0}\n\n", header));
+			foreach(XmlType type in types.OrderBy(t => t.Name))
+			{
+				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
+			}
 		}
 	}
 }

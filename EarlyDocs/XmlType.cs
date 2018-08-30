@@ -20,6 +20,7 @@ namespace EarlyDocs
 		public bool IsStatic { get; protected set; }
 		public bool IsInterface { get; protected set; }
 		public bool IsEnum { get; protected set; }
+		public bool IsException { get; protected set; }
 
 		public List<XmlField> Fields = new List<XmlField>();
 		public List<XmlField> ConstantFields {
@@ -74,6 +75,7 @@ namespace EarlyDocs
 			TypeName = element.Attribute("name")?.Value.Substring(2);
 			ParseAssembly(TypeName);
 			ParseName(TypeName);
+			IsException = Name.EndsWith("Exception");
 		}
 
 		private void ParseAssembly(string fullName)
