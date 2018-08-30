@@ -200,6 +200,10 @@ namespace EarlyDocs
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
 			output.Append(PreSummary());
 			output.Append(String.Format("{0}\n\n", Summary));
+			if(!Remarks.IsEmpty)
+			{
+				output.Append(String.Format("{0}\n\n", Remarks));
+			}
 			if(!String.IsNullOrEmpty(BaseTypeName))
 			{
 				if(BaseNamespace == Assembly)
@@ -305,9 +309,14 @@ namespace EarlyDocs
 
 			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
 			output.Append(String.Format("{0}\n\n", Summary));
+			if(!Remarks.IsEmpty)
+			{
+				output.Append(String.Format("{0}\n\n", Remarks));
+			}
 
 			if(Fields.Count > 0)
 			{
+				output.Append("Constants:  \n");
 				foreach(XmlField field in Fields)
 				{
 					if(field.Summary.IsEmpty)

@@ -117,6 +117,18 @@ namespace EarlyDocs
 			}
 			foreach(XElement item in element.Descendants().Where(d => d.Name == "item"))
 			{
+				if(item.Descendants().Any(d => d.Name == "term"))
+				{
+					string term = item.Descendants().First(d => d.Name == "term").Value.Trim();
+					if(item.Descendants().Any(d => d.Name == "description"))
+					{
+						string description = item.Descendants().First(d => d.Name == "description").Value.Trim();
+						output.Append(String.Format("* {0}: {1}  \n", term, description));
+						continue;
+					}
+					output.Append(String.Format("* {0}:  \n", term));
+					continue;
+				}
 				output.Append(String.Format("* {0}  \n", item.Value.Trim()));
 			}
 			return output.ToString();

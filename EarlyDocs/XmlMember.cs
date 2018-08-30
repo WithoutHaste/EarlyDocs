@@ -12,6 +12,7 @@ namespace EarlyDocs
 		private XElement xml;
 
 		public XmlComments Summary { get; protected set; }
+		public XmlComments Remarks { get; protected set; }
 		public XmlComments Returns { get; protected set; }
 
 		public XmlMember(XElement element)
@@ -23,12 +24,17 @@ namespace EarlyDocs
 		public void Parse(XElement element)
 		{
 			Summary = new XmlComments();
+			Remarks = new XmlComments();
 			Returns = new XmlComments();
 			foreach(XElement child in element.Elements())
 			{
 				if(child.Name == "summary")
 				{
 					Summary = new XmlComments(child);
+				}
+				else if(child.Name == "remarks")
+				{
+					Remarks = new XmlComments(child);
 				}
 				else if(child.Name == "returns")
 				{
