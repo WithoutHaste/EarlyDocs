@@ -67,7 +67,7 @@ results in link
 
 Add a `layout` tag to the documentation of a Type to specify how to layout the documentation page.
 
-Set attribute `methods` to `keep_order` to display methods in same order they appear in the code. Otherwise, methods are displayed in alphabetical order.
+Set attribute `methods` to `keep_order` to display methods in the same order as they appear in the code. Otherwise, methods are displayed in alphabetical order.
 
 Example:  
 ```
@@ -78,7 +78,7 @@ public class MyType...
 
 ## Examples
 
-Other projects with EarlyDocs-generated documentation.
+Projects with EarlyDocs-generated documentation.
 
 [WithoutHaste.Drawing.Colors](https://github.com/WithoutHaste/WithoutHaste.Drawing.Colors/blob/master/documentation/TableOfContents.md)
 
