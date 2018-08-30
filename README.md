@@ -87,6 +87,14 @@ Projects with EarlyDocs-generated documentation.
 
 [WithoutHaste.Windows.GUI](https://github.com/WithoutHaste/WithoutHaste.Windows.GUI/blob/master/documentation/TableOfContents.md)
 
+## License
+
+[MIT License](https://github.com/WithoutHaste/EarlyDocs/blob/master/LICENSE)
+
+## Support
+
+[Become a patron](https://www.patreon.com/withouthaste) of this and other Without Haste open source projects.
+
 ## Versions
 
 Version 1 in development.
