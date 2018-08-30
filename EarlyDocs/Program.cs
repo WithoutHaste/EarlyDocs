@@ -16,10 +16,16 @@ namespace EarlyDocs
 			//	"E:/Github/WithoutHaste.Drawing.Shapes/documentation"
 			//);
 
+			//new ConvertXML(
+			//	"E:/Github/WithoutHaste.Drawing.Colors/Colors/bin/Release/WithoutHaste.Drawing.Colors.dll",
+			//	"E:/Github/WithoutHaste.Drawing.Colors/Colors/bin/Release/WithoutHaste.Drawing.Colors.XML",
+			//	"E:/Github/WithoutHaste.Drawing.Colors/documentation"
+			//);
+
 			new ConvertXML(
-				"E:/Github/WithoutHaste.Drawing.Colors/Colors/bin/Release/WithoutHaste.Drawing.Colors.dll",
-				"E:/Github/WithoutHaste.Drawing.Colors/Colors/bin/Release/WithoutHaste.Drawing.Colors.XML",
-				"E:/Github/WithoutHaste.Drawing.Colors/documentation"
+				"E:/Github/WithoutHaste.Windows.GUI/GUI/bin/Release/WithoutHaste.Windows.GUI.dll",
+				"E:/Github/WithoutHaste.Windows.GUI/GUI/bin/Release/WithoutHaste.Windows.GUI.XML",
+				"E:/Github/WithoutHaste.Windows.GUI/documentation"
 			);
 
 			Console.WriteLine("done");

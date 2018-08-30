@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace EarlyDocs
@@ -36,6 +37,16 @@ namespace EarlyDocs
 		public static bool IsWhitespace(this char c)
 		{
 			return (c == ' ' || c == '\n' || c == '\r' || c == '\t');
+		}
+
+		/// <summary>
+		/// True if this path or url ends with some file extension.
+		/// Webpage endings (such as .com) are interpreted as file extensions.
+		/// </summary>
+		public static bool EndsWithFileExtension(this string text)
+		{
+			Regex r = new Regex(@"\.\w+$", RegexOptions.IgnoreCase);
+			return (r.IsMatch(text));
 		}
 	}
 }

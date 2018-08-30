@@ -99,8 +99,17 @@ namespace EarlyDocs
 		{
 			XElement xml = XElement.Parse(tag);
 			string cref = xml.Attribute("cref").Value;
+			string url = xml.Attribute("url")?.Value;
 			string typeName = cref.Substring(cref.LastIndexOf('.') + 1);
-			return String.Format("[{0}]({0}.md)", typeName);
+			if(String.IsNullOrEmpty(url))
+			{
+				return String.Format("[{0}]({0}.md)", typeName);
+			}
+			if(url.EndsWithFileExtension())
+			{
+				return String.Format("[{0}]({1})", typeName, url);
+			}
+			return String.Format("[{0}]({1}/documentation/{0}.md)", typeName, url);
 		}
 
 		//todo: support "term" and "description" tags in "listheader" and "item"
