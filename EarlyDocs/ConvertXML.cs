@@ -4,16 +4,18 @@ using System.Linq;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 using WithoutHaste.DataFiles.Markdown;
 
 namespace EarlyDocs
 {
+	internal static class Ext
+	{
+		public const string MD = ".md";
+	}
+
 	class ConvertXML
 	{
-		private const string MD = ".md";
-
 		private Dictionary<string, XmlType> typeNameToType = new Dictionary<string, XmlType>();
 		private List<XmlType> ExceptionTypes {
 			get {
@@ -57,9 +59,9 @@ namespace EarlyDocs
 			}
 			foreach(XmlType type in typeNameToType.Values)
 			{
-				Save(type.ToMarkdown(1), outputDirectory, type.Name + ".md");
+				Save(type.ToMarkdownFile(), outputDirectory, type.Name + Ext.MD);
 			}
-			Save(GenerateTableOfContents(), outputDirectory, "TableOfContents" + MD);
+			Save(GenerateTableOfContents(), outputDirectory, "TableOfContents" + Ext.MD);
 		}
 
 		private void LoadXML(string filename)
@@ -183,6 +185,7 @@ namespace EarlyDocs
 			return null;
 		}
 
+		[ObsoleteAttribute("Replace with Save(MarkdownFile...)")]
 		private void Save(string text, string directory, string filename)
 		{
 			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
@@ -220,7 +223,7 @@ namespace EarlyDocs
 			MarkdownSection section = parent.AddSection(header);
 			foreach(XmlType type in types.OrderBy(t => t.Name))
 			{
-				section.AddInline(new MarkdownInlineLink(type.Name, type.Name + MD));
+				section.AddInLine(new MarkdownInlineLink(type.Name, type.Name + Ext.MD));
 				section.Add(new MarkdownParagraph(type.Summary.ToString()));
 			}
 		}

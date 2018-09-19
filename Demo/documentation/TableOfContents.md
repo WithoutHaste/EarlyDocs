@@ -7,6 +7,9 @@ Summary of the class.
 
 ## Types
 
+[DerivedClass](DerivedClass.md)  
+Summary of the class.
+
 [NormalClass](NormalClass.md)  
 Summary of the class.
 

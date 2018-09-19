@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using WithoutHaste.DataFiles.Markdown;
 
 namespace EarlyDocs
 {
@@ -219,180 +220,186 @@ namespace EarlyDocs
 			return null;
 		}
 
-		public virtual string ToMarkdown(int indent)
+		public virtual MarkdownFile ToMarkdownFile()
 		{
-			if(IsEnum) return EnumToMarkdown(indent);
+			MarkdownFile markdown = new MarkdownFile();
 
-			StringBuilder output = new StringBuilder();
+			if(IsEnum)
+			{
+				markdown.AddSection(EnumToMarkdownSection());
+			}
+			else
+			{
+				markdown.AddSection(ToMarkdownSection());
+			}
 
-			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
-			output.Append(PreSummary());
-			output.Append(String.Format("{0}\n\n", Summary));
+			return markdown;
+		}
+
+		public virtual MarkdownSection ToMarkdownSection()
+		{
+			MarkdownSection typeSection = new MarkdownSection(Name);
+			typeSection.AddInParagraph(PreSummary());
+			if(!Summary.IsEmpty)
+			{
+				typeSection.AddInParagraph(Summary.ToString());
+			}
 			if(!Remarks.IsEmpty)
 			{
-				output.Append(String.Format("{0}\n\n", Remarks));
+				typeSection.AddInParagraph(Remarks.ToString());
 			}
 			if(!String.IsNullOrEmpty(BaseTypeName))
 			{
 				if(BaseNamespace == Assembly)
 				{
-					output.Append(String.Format("Base Type: [{0}]({0}.md)\n\n", BaseTypeName));
+					typeSection.Add(new MarkdownParagraph(new MarkdownText("Base Type: "), new MarkdownInlineLink(BaseTypeName, BaseTypeName + Ext.MD)));
 				}
 				else
 				{
-					output.Append(String.Format("Base Type: {0}.{1}\n\n", BaseNamespace, BaseTypeName));
+					typeSection.AddInParagraph(String.Format("Base Type: {0}.{1}", BaseNamespace, BaseTypeName));
 				}
 			}
-
 			if(Examples.Count > 0)
 			{
-				output.Append(String.Format("{0} Examples\n\n", new String('#', indent + 1)));
+				MarkdownSection exampleSection = typeSection.AddSection("Examples");
 				foreach(XmlComments c in Examples)
 				{
-					output.Append(c + "\n\n");
+					exampleSection.AddInParagraph(c.ToString());
 				}
 			}
-
 			if(Enums.Count > 0)
 			{
-				output.Append(String.Format("{0} Enums\n\n", new String('#', indent + 1)));
+				MarkdownSection enumSection = typeSection.AddSection("Enums");
 				foreach(XmlType e in Enums.OrderBy(m => m.Name))
 				{
-					output.Append(e.ToMarkdown(indent + 2));
+					enumSection.AddSection(e.EnumToMarkdownSection());
 				}
 			}
-
 			if(Fields.Count > 0)
 			{
-				output.Append(String.Format("{0} Fields\n\n", new String('#', indent + 1)));
+				MarkdownSection fieldSection = typeSection.AddSection("Fields");
 				if(ConstantFields.Count > 0)
 				{
-					output.Append(String.Format("{0} Constant Fields\n\n", new String('#', indent + 2)));
+					MarkdownSection constantFieldSection = fieldSection.AddSection("Constant Fields");
 					foreach(XmlField field in ConstantFields.OrderBy(m => m.Name))
 					{
-						output.Append(field.ToMarkdown(indent + 3));
+						constantFieldSection.AddInParagraph(field.ToMarkdown(constantFieldSection.Depth + 1));
 					}
 				}
 				if(NormalFields.Count > 0)
 				{
-					output.Append(String.Format("{0} Normal Fields\n\n", new String('#', indent + 2)));
+					MarkdownSection normalFieldSection = fieldSection.AddSection("Normal Fields");
 					foreach(XmlField field in NormalFields.OrderBy(m => m.Name))
 					{
-						output.Append(field.ToMarkdown(indent + 3));
+						normalFieldSection.AddInParagraph(field.ToMarkdown(normalFieldSection.Depth + 1));
 					}
 				}
 			}
-
 			if(Properties.Count > 0)
 			{
-				output.Append(String.Format("{0} Properties\n\n", new String('#', indent + 1)));
+				MarkdownSection propertySection = typeSection.AddSection("Properties");
 				foreach(XmlProperty p in Properties.OrderBy(m => m.Name))
 				{
-					output.Append(p.ToMarkdown(indent + 2));
+					propertySection.AddInParagraph(p.ToMarkdown(propertySection.Depth + 1));
 				}
 			}
-
 			if(Events.Count > 0)
 			{
-				output.Append(String.Format("{0} Events\n\n", new String('#', indent + 1)));
+				MarkdownSection eventSection = typeSection.AddSection("Events");
 				foreach(XmlEvent e in Events.OrderBy(m => m.Name))
 				{
-					output.Append(e.ToMarkdown(indent + 2));
+					eventSection.AddInParagraph(e.ToMarkdown(eventSection.Depth + 1));
 				}
 			}
 
-			MethodsToMarkdown("Constructors", indent + 1, Constructors, output);
-			MethodsToMarkdown("Static Methods", indent + 1, StaticMethods, output);
-			MethodsToMarkdown("Methods", indent + 1, NormalMethods, output);
+			MethodsToMarkdown(typeSection, "Constructors", Constructors);
+			MethodsToMarkdown(typeSection, "Static Methods", StaticMethods);
+			MethodsToMarkdown(typeSection, "Methods", NormalMethods);
 
 			if(Operators.Count > 0)
 			{
-				output.Append(String.Format("{0} Operators\n\n", new String('#', indent + 1)));
+				MarkdownSection operatorSection = typeSection.AddSection("Operators");
 				foreach(XmlMethod method in Operators.OrderBy(m => m.Name))
 				{
-					output.Append(method.ToMarkdown(indent + 2));
+					operatorSection.AddInParagraph(method.ToMarkdown(operatorSection.Depth + 1));
 				}
 			}
-
 			if(NestedTypes.Count > 0)
 			{
-				output.Append(String.Format("{0} Nested Types\n\n", new String('#', indent + 1)));
+				MarkdownSection nestedTypeSection = typeSection.AddSection("Nested Types");
 				foreach(XmlType e in NestedTypes.OrderBy(m => m.Name))
 				{
-					output.Append(e.ToMarkdown(indent + 2));
+					nestedTypeSection.AddSection(e.ToMarkdownSection());
 				}
 			}
 
-			return output.ToString();
+			return typeSection;
 		}
 
-		private void MethodsToMarkdown(string header, int indent, List<XmlMethod> methods, StringBuilder output)
+		private void MethodsToMarkdown(MarkdownSection parent, string header, List<XmlMethod> methods)
 		{
 			if(methods.Count == 0) return;
 
-			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), header));
-			if(LayoutKeepMethodOrder)
+			MarkdownSection methodSection = parent.AddSection(header);
+			if(!LayoutKeepMethodOrder)
 			{
-				foreach(XmlMethod method in methods)
-				{
-					output.Append(method.ToMarkdown(indent + 1));
-				}
+				methods = methods.OrderBy(m => m.Name).ToList();
 			}
-			else
+			foreach(XmlMethod method in methods)
 			{
-				foreach(XmlMethod method in methods.OrderBy(m => m.Name))
-				{
-					output.Append(method.ToMarkdown(indent + 1));
-				}
+				methodSection.AddInParagraph(method.ToMarkdown(methodSection.Depth + 1));
 			}
 		}
 
-		private string EnumToMarkdown(int indent)
+		private MarkdownSection EnumToMarkdownSection()
 		{
-			StringBuilder output = new StringBuilder();
+			MarkdownSection enumSection = new MarkdownSection(Name);
 
-			output.Append(String.Format("{0} {1}\n\n", new String('#', indent), Name));
 			if(!Summary.IsEmpty)
 			{
-				output.Append(String.Format("{0}\n\n", Summary));
+				enumSection.AddInParagraph(Summary.ToString());
 			}
 			if(!Remarks.IsEmpty)
 			{
-				output.Append(String.Format("{0}\n\n", Remarks));
+				enumSection.AddInParagraph(Remarks.ToString());
 			}
-
 			if(Examples.Count > 0)
 			{
-				output.Append(String.Format("{0} Examples\n\n", new String('#', indent + 1)));
+				MarkdownSection exampleSection = enumSection.AddSection("Examples");
 				foreach(XmlComments c in Examples)
 				{
-					output.Append(c + "\n\n");
+					exampleSection.AddInParagraph(c.ToString());
 				}
 			}
-
 			if(Fields.Count > 0)
 			{
-				output.Append(String.Format("{0} Constants\n\n", new String('#', indent + 1)));
+				MarkdownSection fieldSection = enumSection.AddSection("Constants");
+				MarkdownList list = new MarkdownList(isOrdered: false);
+				fieldSection.Add(list);
+
 				foreach(XmlField field in Fields)
 				{
 					if(field.Summary.IsEmpty)
 					{
-						output.Append(String.Format("* {0}  \n", field.Name));
+						list.Add(new MarkdownText(field.Name));
 					}
 					else
 					{
-						output.Append(String.Format("* {0}: {1}  \n", field.Name, field.Summary));
-						foreach(XmlComments example in field.Examples)
+						list.Add(new MarkdownText(String.Format("{0}: {1}", field.Name, field.Summary.ToString())));
+						if(field.Examples.Count > 0)
 						{
-							output.Append(String.Format("    * Example: {0}  \n", example));
+							MarkdownList exampleList = new MarkdownList();
+							list.Add(exampleList);
+							foreach(XmlComments example in field.Examples)
+							{
+								exampleList.Add(new MarkdownText("Example: " + example.ToString()));
+							}
 						}
 					}
 				}
 			}
 
-			output.Append("\n");
-
-			return output.ToString();
+			return enumSection;
 		}
 	}
 }

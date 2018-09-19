@@ -14,4 +14,3 @@ Summary of the enum.
             had brought with it clouds so sombre, and a rain so penetrating, that further out-door 
             exercise was now out of the question  
 * MultipleSummaries: Summary 3 of 3.  
-
