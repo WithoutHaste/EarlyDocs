@@ -1,3 +1,6 @@
+Demo/.vs/*
+Demo/bin/*
+Demo/obj/*
 EarlyDocs/.vs/*
 EarlyDocs/bin/*
 EarlyDocs/obj/*

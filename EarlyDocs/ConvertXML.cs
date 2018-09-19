@@ -6,11 +6,14 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using WithoutHaste.DataFiles.Markdown;
 
 namespace EarlyDocs
 {
 	class ConvertXML
 	{
+		private const string MD = ".md";
+
 		private Dictionary<string, XmlType> typeNameToType = new Dictionary<string, XmlType>();
 		private List<XmlType> ExceptionTypes {
 			get {
@@ -56,7 +59,7 @@ namespace EarlyDocs
 			{
 				Save(type.ToMarkdown(1), outputDirectory, type.Name + ".md");
 			}
-			Save(GenerateTableOfContents(), outputDirectory, "TableOfContents.md");
+			Save(GenerateTableOfContents(), outputDirectory, "TableOfContents" + MD);
 		}
 
 		private void LoadXML(string filename)
@@ -188,29 +191,37 @@ namespace EarlyDocs
 			}
 		}
 
-		private string GenerateTableOfContents()
+		private void Save(MarkdownFile markdown, string directory, string filename)
 		{
-			StringBuilder output = new StringBuilder();
-
-			output.Append("# Contents\n\n");
-			GenerateTableOfContentsSection("Abstract Types", AbstractTypes, output);
-			GenerateTableOfContentsSection("Types", NormalTypes, output);
-			GenerateTableOfContentsSection("Static Types", StaticTypes, output);
-			GenerateTableOfContentsSection("Interfaces", InterfaceTypes, output);
-			GenerateTableOfContentsSection("Enums", EnumTypes, output);
-			GenerateTableOfContentsSection("Exceptions", ExceptionTypes, output);
-
-			return output.ToString();
+			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
+			{
+				writer.Write(markdown.ToMarkdown());
+			}
 		}
 
-		private void GenerateTableOfContentsSection(string header, List<XmlType> types, StringBuilder output)
+		private MarkdownFile GenerateTableOfContents()
+		{
+			MarkdownFile markdown = new MarkdownFile();
+			MarkdownSection section = markdown.AddSection("Contents");
+			AddTableOfContentsSection(section, "Abstract Types", AbstractTypes);
+			AddTableOfContentsSection(section, "Types", NormalTypes);
+			AddTableOfContentsSection(section, "Static Types", StaticTypes);
+			AddTableOfContentsSection(section, "Interfaces", InterfaceTypes);
+			AddTableOfContentsSection(section, "Enums", EnumTypes);
+			AddTableOfContentsSection(section, "Exceptions", ExceptionTypes);
+
+			return markdown;
+		}
+
+		private void AddTableOfContentsSection(MarkdownSection parent, string header, List<XmlType> types)
 		{
 			if(types.Count == 0) return;
 
-			output.Append(String.Format("## {0}\n\n", header));
+			MarkdownSection section = parent.AddSection(header);
 			foreach(XmlType type in types.OrderBy(t => t.Name))
 			{
-				output.Append(String.Format("[{0}]({1}.md)  \n{2}\n\n", type.Name, type.Name, type.Summary));
+				section.AddInline(new MarkdownInlineLink(type.Name, type.Name + MD));
+				section.Add(new MarkdownParagraph(type.Summary.ToString()));
 			}
 		}
 	}
