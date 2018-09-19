@@ -11,10 +11,16 @@ namespace EarlyDocs
 		static void Main(string[] args)
 		{
 			new ConvertXML(
-				"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.dll",
-				"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.XML",
-				"E:/Github/WithoutHaste.Drawing.Shapes/documentation"
+				"E:/Github/WithoutHaste.DataFiles/DataFiles/bin/Release/WithoutHaste.DataFiles.dll",
+				"E:/Github/WithoutHaste.DataFiles/DataFiles/bin/Release/WithoutHaste.DataFiles.XML",
+				"E:/Github/WithoutHaste.DataFiles/documentation"
 			);
+
+			//new ConvertXML(
+			//	"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.dll",
+			//	"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.XML",
+			//	"E:/Github/WithoutHaste.Drawing.Shapes/documentation"
+			//);
 
 			//new ConvertXML(
 			//	"E:/Github/WithoutHaste.Drawing.Colors/Colors/bin/Release/WithoutHaste.Drawing.Colors.dll",

@@ -71,6 +71,12 @@ namespace EarlyDocs
 					index += tag.Length + 1;
 					output.Append(TagToCode(tag));
 				}
+				else if(AtTag(text, index, "![CDATA["))
+				{
+					string tag = GetCDATATag(text, index);
+					index += tag.Length + 1;
+					output.Append(TagToCode(tag));
+				}
 				else
 				{
 					output.Append(text[index]);
@@ -97,6 +103,13 @@ namespace EarlyDocs
 		private string GetDoubleTag(string text, int index, string tagName)
 		{
 			string tag = "</" + tagName + ">";
+			int endIndex = text.IndexOf(tag, index) + tag.Length;
+			return text.Substring(index, endIndex - index);
+		}
+
+		private string GetCDATATag(string text, int index)
+		{
+			string tag = "]]>";
 			int endIndex = text.IndexOf(tag, index) + tag.Length;
 			return text.Substring(index, endIndex - index);
 		}
@@ -156,6 +169,7 @@ namespace EarlyDocs
 		{
 			StringBuilder output = new StringBuilder();
 			tag = tag.StripOuterTags();
+			tag = tag.StripOuterCDATATags();
 			tag = tag.Replace("\r", "");
 			if(tag.StartsWith("\n"))
 			{
@@ -163,7 +177,7 @@ namespace EarlyDocs
 			}
 			string ignoreIndent = tag.GetLeadingWhitespace();
 			tag = tag.TrimEnd();
-			output.Append("```\n");
+			output.Append("\n```\n"); //''' can't have any whitespace before it
 			foreach(string line in tag.Split('\n'))
 			{
 				output.Append(line.TrimEnd().Substring(ignoreIndent.Length));

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?mso-application progid="Excel.Sheet"?>
-<Workbook xmlns:c="urn:schemas-microsoft-com:office:component:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x2="http://schemas.microsoft.com/office/excel/2003/xml" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel">
+<Workbook xmlns:c="urn:schemas-microsoft-com:office:component:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:x2="http://schemas.microsoft.com/office/excel/2003/xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
   <Styles>
     <Style ss:ID="cellShortDate">
       <NumberFormat ss:Format="Short Date" />
@@ -14,6 +14,11 @@
   </Styles>
   <ss:Worksheet ss:Name="Active">
     <Table>
+      <Column ss:Width="25" />
+      <Column ss:Width="300" />
+      <Column ss:Width="60" />
+      <Column ss:Width="60" />
+      <Column ss:Width="60" />
       <Row>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Id</Data>
@@ -31,11 +36,85 @@
           <Data ss:Type="String">Created</Data>
         </Cell>
       </Row>
-      <Column ss:Width="25" />
-      <Column ss:Width="300" />
-      <Column ss:Width="60" />
-      <Column ss:Width="60" />
-      <Column ss:Width="60" />
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">11</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">build up MarkDown format in DataFiles
+on save, create MarkDown object then save it to string</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-19T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">12</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">display as shown in design document</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-19T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">7</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">support custom tag: &lt;duplicate cref="..." /&gt;
+which will completely copy the documentation from the references Type/Method/etc to this one
+- use case: Overloaded methods that have duplicate xml documentation, just their parameter types are different
+
+this is still very human readable in the code itself
+
+Ex: DataFiles.ExcelPackageHelper.AppendRows
+
+When EarlyDocs is released, can add an Answer to
+https://stackoverflow.com/questions/41715976/dry-xml-comments
+about this custom functionality</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-17T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">9</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">bug: static methods are listing return type but normal methods are not</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-18T00:00:00.000</Data>
+        </Cell>
+      </Row>
       <Row>
         <Cell>
           <Data ss:Type="Number">1</Data>
@@ -43,24 +122,6 @@
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">add Demo project
 that will have structure and documentation that tests/demos every feature in the project</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-09-06T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">4</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">keep some sort of Versions document
-- is there a suggested format?</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -85,7 +146,7 @@ what order is it in?</Data>
           <Data ss:Type="String">Todo</Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Task</Data>
+          <Data ss:Type="String">Feature - Minor</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-13T00:00:00.000</Data>
@@ -102,7 +163,7 @@ what order is it in?</Data>
           <Data ss:Type="String">Todo</Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Task</Data>
+          <Data ss:Type="String">Feature - Minor</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-13T00:00:00.000</Data>
@@ -119,10 +180,27 @@ what order is it in?</Data>
           <Data ss:Type="String">Todo</Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Task</Data>
+          <Data ss:Type="String">Feature - Major</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-06T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">8</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">for constants, can i show the const value?</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-18T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -143,11 +221,34 @@ what order is it in?</Data>
           <Data ss:Type="DateTime">2018-09-06T00:00:00.000</Data>
         </Cell>
       </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">10</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">when version 1.0.0 is ready, re-make all the library documentation with most up to date version</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-18T00:00:00.000</Data>
+        </Cell>
+      </Row>
     </Table>
     <x:WorksheetOptions />
   </ss:Worksheet>
   <ss:Worksheet ss:Name="Inactive">
     <Table>
+      <Column ss:Width="25" />
+      <Column ss:Width="300" />
+      <Column ss:Width="60" />
+      <Column ss:Width="60" />
+      <Column ss:Width="60" />
+      <Column ss:Width="60" />
       <Row>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Id</Data>
@@ -168,12 +269,6 @@ what order is it in?</Data>
           <Data ss:Type="String">Done</Data>
         </Cell>
       </Row>
-      <Column ss:Width="25" />
-      <Column ss:Width="300" />
-      <Column ss:Width="60" />
-      <Column ss:Width="60" />
-      <Column ss:Width="60" />
-      <Column ss:Width="60" />
     </Table>
     <x:WorksheetOptions />
   </ss:Worksheet>
@@ -213,14 +308,14 @@ what order is it in?</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Task</Data>
+          <Data ss:Type="String">Feature - Major</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">6</Data>
+          <Data ss:Type="Number">12</Data>
         </Cell>
       </Row>
       <Row>
@@ -235,9 +330,114 @@ what order is it in?</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Bug</Data>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Inactive</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Major</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Inactive</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Inactive</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Inactive</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Documentation</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">
+          </Data>
         </Cell>
       </Row>
     </Table>
+    <x:WorksheetOptions />
   </ss:Worksheet>
 </Workbook>

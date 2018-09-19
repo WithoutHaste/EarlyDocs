@@ -32,6 +32,20 @@ namespace EarlyDocs
 		}
 
 		/// <summary>
+		/// Remove outer-most opening and closing CDATA tags.
+		/// </summary>
+		public static string StripOuterCDATATags(this string text)
+		{
+			text = text.Trim();
+			if(!text.StartsWith("<![CDATA[")) return text;
+			int openingTagEndIndex = text.IndexOf("A[");
+			text = text.Substring(openingTagEndIndex + 2);
+			int endingTagStartIndex = text.LastIndexOf("]]>");
+			text = text.Substring(0, endingTagStartIndex);
+			return text;
+		}
+
+		/// <summary>
 		/// Character is a whitespace character.
 		/// </summary>
 		public static bool IsWhitespace(this char c)
