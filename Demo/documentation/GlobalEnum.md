@@ -1,6 +1,8 @@
 # GlobalEnum
 
-Summary of the enum.## Constants
+Summary of the enum.
+
+## Constants
 
 * Invalid: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  
 * NoSummary  
@@ -8,3 +10,4 @@ Summary of the enum.## Constants
 * LongSummary: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  
 * MultiLineSummary: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  
 * MultipleSummaries: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  
+

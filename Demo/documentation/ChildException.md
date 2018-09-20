@@ -1,8 +1,8 @@
 # ChildException
 
+Base type: System.Exception.
 
-
-Summary of exception.Base Type: System.Exception
+Summary of exception.
 
 ## Constructors
 

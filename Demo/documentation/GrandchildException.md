@@ -1,8 +1,8 @@
 # GrandchildException
 
+Base type: [ChildException](ChildException.md).
 
-
-Summary of exception.Base Type: [ChildException](ChildException.md)
+Summary of exception.
 
 ## Fields
 

@@ -9,7 +9,7 @@ namespace Demo
 	/// <summary>
 	/// Summary of the class.
 	/// </summary>
-	public class StaticClass
+	public static class StaticClass
 	{
 	}
 }

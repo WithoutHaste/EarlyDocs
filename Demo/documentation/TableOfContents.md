@@ -13,6 +13,8 @@ Summary of the class.
 [NormalClass](NormalClass.md)  
 Summary of the class.
 
+## Static Types
+
 [StaticClass](StaticClass.md)  
 Summary of the class.
 

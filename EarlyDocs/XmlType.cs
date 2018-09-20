@@ -211,15 +211,6 @@ namespace EarlyDocs
 			}
 		}
 
-		public virtual string PreSummary()
-		{
-			if(IsStatic)
-				return "Static type.\n\n";
-			if(IsInterface)
-				return "Interface type.\n\n";
-			return null;
-		}
-
 		public virtual MarkdownFile ToMarkdownFile()
 		{
 			MarkdownFile markdown = new MarkdownFile();
@@ -239,34 +230,10 @@ namespace EarlyDocs
 		public virtual MarkdownSection ToMarkdownSection()
 		{
 			MarkdownSection typeSection = new MarkdownSection(Name);
-			typeSection.AddInParagraph(PreSummary());
-			if(!Summary.IsEmpty)
-			{
-				typeSection.Add(Summary.ToMarkdown());
-			}
-			if(!Remarks.IsEmpty)
-			{
-				typeSection.Add(Remarks.ToMarkdown());
-			}
-			if(!String.IsNullOrEmpty(BaseTypeName))
-			{
-				if(BaseNamespace == Assembly)
-				{
-					typeSection.Add(new MarkdownParagraph(new MarkdownText("Base Type: "), new MarkdownInlineLink(BaseTypeName, BaseTypeName + Ext.MD)));
-				}
-				else
-				{
-					typeSection.AddInParagraph(String.Format("Base Type: {0}.{1}", BaseNamespace, BaseTypeName));
-				}
-			}
-			if(Examples.Count > 0)
-			{
-				MarkdownSection exampleSection = typeSection.AddSection("Examples");
-				foreach(XmlComments c in Examples)
-				{
-					exampleSection.Add(c.ToMarkdown());
-				}
-			}
+			PreSummaryToMarkdown(typeSection);
+			CommentsToMarkdown(typeSection, Summary);
+			CommentsToMarkdown(typeSection, Remarks);
+			CommentsSectionToMarkdown(typeSection, "Examples", Examples);
 			if(Enums.Count > 0)
 			{
 				MarkdownSection enumSection = typeSection.AddSection("Enums");
@@ -334,6 +301,50 @@ namespace EarlyDocs
 			}
 
 			return typeSection;
+		}
+
+		private void PreSummaryToMarkdown(MarkdownSection parent)
+		{
+			MarkdownParagraph preSummary = new MarkdownParagraph();
+
+			if(IsStatic)
+				preSummary.Add("Static type. ");
+			else if(IsInterface)
+				preSummary.Add("Interface type. ");
+			else if(IsAbstract)
+				preSummary.Add("Abstract type. ");
+			if(!String.IsNullOrEmpty(BaseTypeName))
+			{
+				if(BaseNamespace == Assembly)
+					preSummary.Add(new MarkdownText("Base type: "), new MarkdownInlineLink(BaseTypeName, BaseTypeName + Ext.MD), new MarkdownText("."));
+				else
+					preSummary.Add(String.Format("Base type: {0}.{1}.", BaseNamespace, BaseTypeName));
+			}
+
+			if(!preSummary.IsEmpty)
+			{
+				parent.Add(preSummary);
+			}
+		}
+
+		private void CommentsToMarkdown(MarkdownSection parent, XmlComments comments)
+		{
+			if(comments.IsEmpty) return;
+
+			parent.Add(comments.ToMarkdown());
+			if(!parent.EndsWith(typeof(IMarkdownIsBlock)))
+				parent.Add(new MarkdownParagraph());
+		}
+
+		private void CommentsSectionToMarkdown(MarkdownSection parent, string header, List<XmlComments> comments)
+		{
+			if(comments.Count == 0) return;
+
+			MarkdownSection section = parent.AddSection(header);
+			foreach(XmlComments c in comments)
+			{
+				CommentsToMarkdown(section, c);
+			}
 		}
 
 		private void MethodsToMarkdown(MarkdownSection parent, string header, List<XmlMethod> methods)

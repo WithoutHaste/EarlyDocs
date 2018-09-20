@@ -21,8 +21,7 @@ namespace EarlyDocs
 			string language = null;
 
 			tag = tag.StripOuterTags();
-			bool isCDATA = XmlComments.AtCDATATag(tag, 0);
-			if(isCDATA)
+			if(XmlComments.AtCDATATag(tag, 0))
 			{
 				tag = tag.StripOuterCDATATags();
 				language = "xml";

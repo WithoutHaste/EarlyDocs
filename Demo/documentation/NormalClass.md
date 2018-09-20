@@ -1,22 +1,41 @@
 # NormalClass
 
+Base type: System.Object.
 
+Summary of the class.
 
-Summary of the class.Remarks about the class.Base Type: System.Object
+Remarks about the class.
 
 ## Examples
 
-Class can be used this way.Class can be used that way.## Enums
+Class can be used this way.
+
+Class can be used that way.
+
+Code example:
+              
+```
+<code>
+              NormalClass a = new NormalClass();
+              NormalClass b = new NormalClass();
+              </code>```
+
+
+
+## Enums
 
 ### ClassEnum
 
-Summary of enum that has no summaries on the values.#### Constants
+Summary of enum that has no summaries on the values.
+
+#### Constants
 
 * Invalid  
 * Character  
 * Word  
 * Phrase  
 * Sentence  
+
 ## Fields
 
 ### Constant Fields

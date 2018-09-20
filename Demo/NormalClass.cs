@@ -47,6 +47,13 @@ namespace Demo
 	/// </remarks>
 	/// <example>Class can be used this way.</example>
 	/// <example>Class can be used that way.</example>
+	/// <example>
+	///   Code example:
+	///   <code>
+	///   NormalClass a = new NormalClass();
+	///   NormalClass b = new NormalClass();
+	///   </code>
+	/// </example>
 	public class NormalClass
 	{
 		/// <summary>

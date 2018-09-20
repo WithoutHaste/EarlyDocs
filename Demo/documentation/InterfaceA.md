@@ -1,7 +1,6 @@
 # InterfaceA
 
-Interface type.
-
-
+Interface type. 
 
 Summary of the interface.
+
