@@ -2,9 +2,7 @@
 
 
 
-Summary of exception.
-
-Base Type: [ChildException](ChildException.md)
+Summary of exception.Base Type: [ChildException](ChildException.md)
 
 ## Fields
 
@@ -12,13 +10,13 @@ Base Type: [ChildException](ChildException.md)
 
 #### Int32 Value
 
-Summary of field.
+EarlyDocs.XmlComments
 
 
 
 ## Constructors
 
-### GrandchildException(System.String message, System.Int32 value)
+### GrandchildException(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
 
 
 

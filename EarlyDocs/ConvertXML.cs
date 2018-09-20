@@ -224,7 +224,7 @@ namespace EarlyDocs
 			foreach(XmlType type in types.OrderBy(t => t.Name))
 			{
 				section.AddInLine(new MarkdownInlineLink(type.Name, type.Name + Ext.MD));
-				section.Add(new MarkdownParagraph(type.Summary.ToString()));
+				section.Add(new MarkdownParagraph(type.Summary.ToMarkdown().OfType<IMarkdownInLine>().ToArray())); //todo: limiting the list by type seems like an error in the inheritance tree
 			}
 		}
 	}

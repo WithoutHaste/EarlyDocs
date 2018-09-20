@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
+using WithoutHaste.DataFiles.Markdown;
 
 namespace EarlyDocs
 {
@@ -43,9 +42,11 @@ namespace EarlyDocs
 			Description = element.Value;
 		}
 
-		public override string ToString()
+		public MarkdownText ToMarkdown()
 		{
-			return String.Format("{0}{1}", TypeName, ((Name == null) ? "" : " " + Name));
+			string text = TypeName;
+			if(!String.IsNullOrEmpty(Name)) text += " " + Name;
+			return new MarkdownText(text);
 		}
 
 	}

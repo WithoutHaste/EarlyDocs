@@ -2,25 +2,15 @@
 
 
 
-Summary of the class.
-
-Remarks about the class.
-
-Base Type: System.Object
+Summary of the class.Remarks about the class.Base Type: System.Object
 
 ## Examples
 
-Class can be used this way.
-
-Class can be used that way.
-
-## Enums
+Class can be used this way.Class can be used that way.## Enums
 
 ### ClassEnum
 
-Summary of enum that has no summaries on the values.
-
-#### Constants
+Summary of enum that has no summaries on the values.#### Constants
 
 * Invalid  
 * Character  
@@ -33,7 +23,7 @@ Summary of enum that has no summaries on the values.
 
 #### Int32 CONSTANT_FIELD
 
-Summary of field.
+EarlyDocs.XmlComments
 
 
 
@@ -41,7 +31,7 @@ Summary of field.
 
 #### String NormalField
 
-Summary of field.
+EarlyDocs.XmlComments
 
 
 
@@ -49,7 +39,7 @@ Summary of field.
 
 ### Boolean NormalProperty
 
-Summary of property.
+EarlyDocs.XmlComments
 
 
 
@@ -57,7 +47,7 @@ Summary of property.
 
 ### EventHandler NormalEvent
 
-Summary of when event is triggered.
+EarlyDocs.XmlComments
 
 
 
@@ -65,13 +55,13 @@ Summary of when event is triggered.
 
 ### NormalClass()
 
-Summary of constructor.
+EarlyDocs.XmlComments
 
 
 
-### NormalClass(System.String text)
+### NormalClass(WithoutHaste.DataFiles.Markdown.MarkdownText)
 
-Summary of constructor.
+EarlyDocs.XmlComments
 
 Parameter text: Description of parameter.  
 
@@ -81,7 +71,7 @@ Parameter text: Description of parameter.
 
 ### Void StaticMethodA()
 
-Summary of method.
+EarlyDocs.XmlComments
 
 
 
@@ -89,19 +79,19 @@ Summary of method.
 
 ### Void InstanceMethodA()
 
-Summary of method.
+EarlyDocs.XmlComments
 
 
 
-### InstanceMethodB(System.Int32, System.String, System.DateTime, System.Collections.Generic.List{System.String})
+### InstanceMethodB(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
 
-Summary of method.
+EarlyDocs.XmlComments
 
 
 
-### StaticMethodB(System.Int32, System.String, System.DateTime, System.Collections.Generic.List{System.String})
+### StaticMethodB(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
 
-Summary of method.
+EarlyDocs.XmlComments
 
 
 
@@ -109,12 +99,12 @@ Summary of method.
 
 ### NormalClass = (NormalClass + NormalClass)
 
-Summary of operator.
+EarlyDocs.XmlComments
 
 Parameter a: Description of parameter a.  
 Parameter b: Description of parameter b.  
 
-Returns: Description of return value.
+Returns: EarlyDocs.XmlComments
 
 
 

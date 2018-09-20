@@ -242,11 +242,11 @@ namespace EarlyDocs
 			typeSection.AddInParagraph(PreSummary());
 			if(!Summary.IsEmpty)
 			{
-				typeSection.AddInParagraph(Summary.ToString());
+				typeSection.Add(Summary.ToMarkdown());
 			}
 			if(!Remarks.IsEmpty)
 			{
-				typeSection.AddInParagraph(Remarks.ToString());
+				typeSection.Add(Remarks.ToMarkdown());
 			}
 			if(!String.IsNullOrEmpty(BaseTypeName))
 			{
@@ -264,7 +264,7 @@ namespace EarlyDocs
 				MarkdownSection exampleSection = typeSection.AddSection("Examples");
 				foreach(XmlComments c in Examples)
 				{
-					exampleSection.AddInParagraph(c.ToString());
+					exampleSection.Add(c.ToMarkdown());
 				}
 			}
 			if(Enums.Count > 0)
@@ -357,24 +357,24 @@ namespace EarlyDocs
 
 			if(!Summary.IsEmpty)
 			{
-				enumSection.AddInParagraph(Summary.ToString());
+				enumSection.Add(Summary.ToMarkdown());
 			}
 			if(!Remarks.IsEmpty)
 			{
-				enumSection.AddInParagraph(Remarks.ToString());
+				enumSection.Add(Remarks.ToMarkdown());
 			}
 			if(Examples.Count > 0)
 			{
 				MarkdownSection exampleSection = enumSection.AddSection("Examples");
 				foreach(XmlComments c in Examples)
 				{
-					exampleSection.AddInParagraph(c.ToString());
+					exampleSection.Add(c.ToMarkdown());
 				}
 			}
 			if(Fields.Count > 0)
 			{
 				MarkdownSection fieldSection = enumSection.AddSection("Constants");
-				MarkdownList list = new MarkdownList(isOrdered: false);
+				MarkdownList list = new MarkdownList(isNumbered: false);
 				fieldSection.Add(list);
 
 				foreach(XmlField field in Fields)
@@ -385,14 +385,14 @@ namespace EarlyDocs
 					}
 					else
 					{
-						list.Add(new MarkdownText(String.Format("{0}: {1}", field.Name, field.Summary.ToString())));
+						list.Add(new MarkdownText(String.Format("{0}: {1}", field.Name, field.Summary.ToMarkdown())));
 						if(field.Examples.Count > 0)
 						{
 							MarkdownList exampleList = new MarkdownList();
 							list.Add(exampleList);
 							foreach(XmlComments example in field.Examples)
 							{
-								exampleList.Add(new MarkdownText("Example: " + example.ToString()));
+								exampleList.Add(new MarkdownText("Example: " + example.ToMarkdown()));
 							}
 						}
 					}

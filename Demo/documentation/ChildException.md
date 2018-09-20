@@ -2,13 +2,11 @@
 
 
 
-Summary of exception.
-
-Base Type: System.Exception
+Summary of exception.Base Type: System.Exception
 
 ## Constructors
 
-### ChildException(System.String message)
+### ChildException(WithoutHaste.DataFiles.Markdown.MarkdownText)
 
 
 

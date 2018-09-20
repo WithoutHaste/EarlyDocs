@@ -2,7 +2,5 @@
 
 
 
-Summary of the class.
-
-Base Type: [NormalClass](NormalClass.md)
+Summary of the class.Base Type: [NormalClass](NormalClass.md)
 

@@ -1,16 +1,10 @@
 # GlobalEnum
 
-Summary of the enum.
+Summary of the enum.## Constants
 
-## Constants
-
-* Invalid: Invalid selection.  
+* Invalid: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  
 * NoSummary  
-* ShortSummary: A short summary.  
-* LongSummary: A very long summary without line breaks: There was no possibility of taking a walk that day. We had been wandering, indeed, in the leafless shrubbery an hour in the morning; but since dinner (Mrs. Reed, when there was no company, dined early) the cold winter wind had brought with it clouds so sombre, and a rain so penetrating, that further out-door exercise was now out of the question  
-* MultiLineSummary: A very long summary with line breaks: There was no possibility of taking a walk that day. 
-            We had been wandering, indeed, in the leafless shrubbery an hour in the morning; but 
-            since dinner (Mrs. Reed, when there was no company, dined early) the cold winter wind 
-            had brought with it clouds so sombre, and a rain so penetrating, that further out-door 
-            exercise was now out of the question  
-* MultipleSummaries: Summary 3 of 3.  
+* ShortSummary: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  
+* LongSummary: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  
+* MultiLineSummary: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  
+* MultipleSummaries: WithoutHaste.DataFiles.Markdown.IMarkdownInSection[]  

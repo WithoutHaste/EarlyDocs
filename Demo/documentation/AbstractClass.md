@@ -2,7 +2,5 @@
 
 
 
-Summary of the class.
-
-Base Type: System.Object
+Summary of the class.Base Type: System.Object
 

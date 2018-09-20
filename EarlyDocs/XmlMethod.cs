@@ -265,7 +265,7 @@ op_OnesComplement
 
 		private string FormatParameters()
 		{
-			return String.Format("({0})", String.Join(", ", Params.Select(p => p.ToString())));
+			return String.Format("({0})", String.Join(", ", Params.Select(p => p.ToMarkdown())));
 		}
 	}
 }
