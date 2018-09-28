@@ -1,38 +1,36 @@
 # Contents
 
-## Abstract Types
-
-[AbstractClass](AbstractClass.md)  
-Summary of the class.
-
 ## Types
 
-[DerivedClass](DerivedClass.md)  
-Summary of the class.
+[Armor](Armor.md)  
+Represents an inventory item that can act as armor.
 
-[NormalClass](NormalClass.md)  
-Summary of the class.
+[Inventory](Inventory.md)  
+Represents a character's inventory.
+
+[Money](Money.md)  
+Represents money-type inventory items.
+
+[Weapon](Weapon.md)  
+Represents an inventory item that is a weapon.
 
 ## Static Types
 
-[StaticClass](StaticClass.md)  
-Summary of the class.
+[StandardItems](StandardItems.md)  
+Collection of standard inventory items.
+
+## Abstract Types
+
+[Item](Item.md)  
+Represents an item that can be held in inventory.
 
 ## Interfaces
 
-[InterfaceA](InterfaceA.md)  
-Summary of the interface.
-
-## Enums
-
-[GlobalEnum](GlobalEnum.md)  
-Summary of the enum.
+[IEquippable](IEquippable.md)  
+Represents an item that can be equipped by the character.
 
 ## Exceptions
 
-[ChildException](ChildException.md)  
-Summary of exception.
-
-[GrandchildException](GrandchildException.md)  
-Summary of exception.
+[InventoryLowException](InventoryLowException.md)  
+Exception related to an inventory quantity being too low.
 

@@ -42,14 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractClass.cs" />
-    <Compile Include="ChildException.cs" />
-    <Compile Include="DerivedClass.cs" />
-    <Compile Include="GrandchildException.cs" />
-    <Compile Include="InterfaceA.cs" />
-    <Compile Include="NormalClass.cs" />
+    <Compile Include="Items\Armor.cs" />
+    <Compile Include="exceptions\InventoryLowException.cs" />
+    <Compile Include="Items\IEquippable.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\Money.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StaticClass.cs" />
+    <Compile Include="Items\StandardItems.cs" />
+    <Compile Include="Items\Weapon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

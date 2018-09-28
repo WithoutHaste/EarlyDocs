@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo
+namespace Demo.Items
 {
 	/// <summary>
-	/// Summary of the interface.
+	/// Represents an item that can be equipped by the character.
 	/// </summary>
-	public interface InterfaceA
+	public interface IEquippable
 	{
 	}
 }

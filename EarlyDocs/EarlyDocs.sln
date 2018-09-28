@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarlyDocs", "EarlyDocs.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "..\Demo\Demo.csproj", "{F9405CBF-404C-4167-BC21-B9AC44225B76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarlyDocsTest", "..\EarlyDocsTest\EarlyDocsTest.csproj", "{BD53B3B2-1BC0-4346-98E6-5DD803CB56D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F9405CBF-404C-4167-BC21-B9AC44225B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9405CBF-404C-4167-BC21-B9AC44225B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9405CBF-404C-4167-BC21-B9AC44225B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD53B3B2-1BC0-4346-98E6-5DD803CB56D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD53B3B2-1BC0-4346-98E6-5DD803CB56D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD53B3B2-1BC0-4346-98E6-5DD803CB56D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD53B3B2-1BC0-4346-98E6-5DD803CB56D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

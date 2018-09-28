@@ -41,7 +41,8 @@
           <Data ss:Type="Number">26</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">refactor parsing of VS XML to objects to DataFiles library</Data>
+          <Data ss:Type="String">refactor parsing of VS XML to objects to DataFiles library
+- because I need to test XmlCode parsing of block and I can't with it in the Console Application</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -58,7 +59,9 @@
           <Data ss:Type="Number">24</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">fill Demo with test cases</Data>
+          <Data ss:Type="String">fill Demo with test cases
+- name like ClassWithShortDocumentation, ClassFromPartial, and describe these with their Demo purpose in their documentation
+- use lorem ipsum for space-filling so it clear user does not need to read it</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -108,6 +111,23 @@ so documentation is copied from override method in superclass or interface
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">35</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">change label of Constants to "Constant or Readonly" for accuracy</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-25T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">7</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -148,6 +168,23 @@ about this custom functionality</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-18T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">29</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">nested types</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-21T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -237,6 +274,59 @@ about this custom functionality</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">27</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">if namespace of class does not match assembly name</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-21T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">28</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">subnamespaces, like DataFiles.Markdown
+- top level table of contents has Namespace section that links to a separate TableOfContents.Markdown.md file for each subnamespaces (and so on)
+- types in subnamespaces saved to same folder like Markdown.MarkdownFile.md</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-21T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">37</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">config option: empty documentation folder before saving or leave it alone</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-28T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">17</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -250,6 +340,23 @@ about this custom functionality</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-19T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">36</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">make sure readme is clear that this is based on open source library WithoutHaste.DataFiles.DotNet which parses the xml documentation and Assembly reflection information and available for others to use.</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Documentation</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-26T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -305,6 +412,74 @@ what order is it in?</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-13T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">31</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">cref link to operator method</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-21T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">32</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">cref link to constructor</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-21T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">33</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">cref link to generic type</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-21T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">34</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">cref link to generic method</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-21T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -399,24 +574,6 @@ what order is it in?</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">link ReadMe to Demo documentation instead of other projects</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-09-19T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">14</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">support everything on
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -546,7 +703,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">26</Data>
+          <Data ss:Type="Number">37</Data>
         </Cell>
       </Row>
       <Row>

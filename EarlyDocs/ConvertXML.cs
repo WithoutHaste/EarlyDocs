@@ -5,6 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
+using WithoutHaste.DataFiles.DotNet;
 using WithoutHaste.DataFiles.Markdown;
 
 namespace EarlyDocs
@@ -48,14 +49,30 @@ namespace EarlyDocs
 			}
 		}
 
-		public ConvertXML(string dll, string filename, string outputDirectory)
+		public ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory)
 		{
-			LoadXML(filename);
-			LoadAssembly(dll);
+			bool emptyDocumentationFolderFirst = true;
+
+			DotNetDocumentationFile xmlDocumentation = new DotNetDocumentationFile(xmlDocumentationFilename);
+			xmlDocumentation.AddAssemblyInfo(dllFilename);
+
+
+
+
+
+			LoadXML(xmlDocumentationFilename);
+			LoadAssembly(dllFilename);
 
 			if(!Directory.Exists(outputDirectory))
 			{
 				Directory.CreateDirectory(outputDirectory);
+			}
+			if(emptyDocumentationFolderFirst)
+			{
+				foreach(FileInfo file in (new DirectoryInfo(outputDirectory)).GetFiles())
+				{
+					file.Delete();
+				}
 			}
 			foreach(XmlType type in typeNameToType.Values)
 			{
@@ -206,9 +223,9 @@ namespace EarlyDocs
 		{
 			MarkdownFile markdown = new MarkdownFile();
 			MarkdownSection section = markdown.AddSection("Contents");
-			AddTableOfContentsSection(section, "Abstract Types", AbstractTypes);
 			AddTableOfContentsSection(section, "Types", NormalTypes);
 			AddTableOfContentsSection(section, "Static Types", StaticTypes);
+			AddTableOfContentsSection(section, "Abstract Types", AbstractTypes);
 			AddTableOfContentsSection(section, "Interfaces", InterfaceTypes);
 			AddTableOfContentsSection(section, "Enums", EnumTypes);
 			AddTableOfContentsSection(section, "Exceptions", ExceptionTypes);
