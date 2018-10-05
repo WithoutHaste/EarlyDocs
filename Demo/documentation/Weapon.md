@@ -1,30 +1,25 @@
 # Weapon
 
-Base type: [Item](Item.md).
-
+Inheritance: System.Object → Demo.Items.Item  
+Implements: Demo.Items.IEquippable  
+  
 Represents an inventory item that is a weapon.
 
 ## Fields
 
 ### Constant Fields
 
-#### Int32 MAX_QUANTITY
+#### MAX_QUANTITY int
 
-EarlyDocs.XmlComments
-
-
+Standard maximum inventory quantity for weapon items.
 
 ## Properties
 
-### Int32 DamageClass
+### DamageClass int
 
-EarlyDocs.XmlComments
-
-
+Measure of the damage dealt by the weapon.
 
 ## Constructors
 
-### Weapon(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
-
-
+### Weapon(string name, string shortDescription, string longDescription, int damageClass)
 

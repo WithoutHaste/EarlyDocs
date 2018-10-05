@@ -1,28 +1,21 @@
 # InventoryLowException
 
-Base type: System.Exception.
-
+Inheritance: System.Object → System.Exception  
+Implements: System.Runtime.Serialization.ISerializable, System.Runtime.InteropServices._Exception  
+  
 Exception related to an inventory quantity being too low.
 
 ## Properties
 
-### Int32 ActualQuantity
+### ActualQuantity int
 
+### ExpectedQuantity int
 
+### Item Demo.Items.Item
 
-### Int32 ExpectedQuantity
-
-
-
-### Item Item
-
-EarlyDocs.XmlComments
-
-
+The inventory item with low quantity.
 
 ## Constructors
 
-### InventoryLowException(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
-
-
+### InventoryLowException(Demo.Items.Item item, int expectedQuantity, int actualQuantity)
 

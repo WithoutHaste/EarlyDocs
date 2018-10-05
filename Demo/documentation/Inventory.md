@@ -1,35 +1,20 @@
 # Inventory
 
-Base type: System.Object.
-
+Inheritance: System.Object  
+  
 Represents a character's inventory.
 
 ## Constructors
 
 ### Inventory()
 
-
-
 ## Methods
 
-### Void Decrement(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
+### Decrement(Demo.Items.Item item, int quantity)
 
-EarlyDocs.XmlComments
+Remove units of an item from inventory.
 
-Parameter quantity: Amount to remove from inventory.  
+### Increment(Demo.Items.Item item, int quantity)
 
-ArgumentException:  cannot be less than 1.
-InventoryLowException: There are not enough units of  in inventory.
-
-
-
-### Void Increment(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
-
-EarlyDocs.XmlComments
-
-Parameter quantity: Amount to add to inventory.  
-
-ArgumentException:  cannot be less than 1.
-
-
+Add more units of an item to inventory.
 

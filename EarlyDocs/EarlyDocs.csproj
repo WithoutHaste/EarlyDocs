@@ -46,7 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvertDotNet.cs" />
     <Compile Include="ConvertXML.cs" />
+    <Compile Include="DotNetExtensions.cs" />
     <Compile Include="IXmlInComments.cs" />
     <Compile Include="IXmlInList.cs" />
     <Compile Include="StringExtensions.cs" />

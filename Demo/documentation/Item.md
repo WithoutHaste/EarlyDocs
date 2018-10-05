@@ -1,42 +1,31 @@
 # Item
 
-Abstract type. Base type: System.Object.
-
+Abstract  
+Inheritance: System.Object  
+  
 Represents an item that can be held in inventory.
 
 ## Fields
 
 ### Constant Fields
 
-#### Int32 NO_MAX_QUANTITY
+#### NO_MAX_QUANTITY int
 
-EarlyDocs.XmlComments
-
-
+Indicates item has no limit on inventory quantity.
 
 ## Properties
 
-### String LongDescription
+### LongDescription string
 
+### MaxQuantity int
 
+The maximum number of this item that can be held in inventory at one time.
 
-### Int32 MaxQuantity
+### Name string
 
-EarlyDocs.XmlComments
-
-
-
-### String Name
-
-
-
-### String ShortDescription
-
-
+### ShortDescription string
 
 ## Constructors
 
-### Item(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
-
-
+### Item(string name, string shortDescription, string longDescription, int maxQuantity)
 

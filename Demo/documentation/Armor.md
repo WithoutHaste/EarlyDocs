@@ -1,30 +1,25 @@
 # Armor
 
-Base type: [Item](Item.md).
-
+Inheritance: System.Object → Demo.Items.Item  
+Implements: Demo.Items.IEquippable  
+  
 Represents an inventory item that can act as armor.
 
 ## Fields
 
 ### Constant Fields
 
-#### Int32 MAX_QUANTITY
+#### MAX_QUANTITY int
 
-EarlyDocs.XmlComments
-
-
+Standard maximum inventory quantity for armor items.
 
 ## Properties
 
-### Int32 ArmorClass
+### ArmorClass int
 
-EarlyDocs.XmlComments
-
-
+Measure of the strength of the armor.
 
 ## Constructors
 
-### Armor(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
-
-
+### Armor(string name, string shortDescription, string longDescription, int armorClass)
 

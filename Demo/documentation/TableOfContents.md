@@ -1,6 +1,6 @@
 # Contents
 
-## Types
+## Concrete Types
 
 [Armor](Armor.md)  
 Represents an inventory item that can act as armor.

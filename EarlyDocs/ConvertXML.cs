@@ -51,7 +51,7 @@ namespace EarlyDocs
 
 		public ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory)
 		{
-			bool emptyDocumentationFolderFirst = true;
+			bool emptyOutputDirectoryFirst = true;
 
 			DotNetDocumentationFile xmlDocumentation = new DotNetDocumentationFile(xmlDocumentationFilename);
 			xmlDocumentation.AddAssemblyInfo(dllFilename);
@@ -63,22 +63,31 @@ namespace EarlyDocs
 			LoadXML(xmlDocumentationFilename);
 			LoadAssembly(dllFilename);
 
+			PrepareOutputDirectory(outputDirectory, emptyOutputDirectoryFirst);
+			//foreach(XmlType type in typeNameToType.Values)
+			//{
+			//	Save(type.ToMarkdownFile(), outputDirectory, type.Name + Ext.MD);
+			//}
+			foreach(DotNetType type in xmlDocumentation.Types)
+			{
+				Save(type, outputDirectory, type.Name.LocalName + Ext.MD);
+			}
+			Save(GenerateTableOfContents(xmlDocumentation), outputDirectory, "TableOfContents" + Ext.MD);
+		}
+
+		private void PrepareOutputDirectory(string outputDirectory, bool emptyOutputDirectoryFirst)
+		{
 			if(!Directory.Exists(outputDirectory))
 			{
 				Directory.CreateDirectory(outputDirectory);
 			}
-			if(emptyDocumentationFolderFirst)
+			if(emptyOutputDirectoryFirst)
 			{
 				foreach(FileInfo file in (new DirectoryInfo(outputDirectory)).GetFiles())
 				{
 					file.Delete();
 				}
 			}
-			foreach(XmlType type in typeNameToType.Values)
-			{
-				Save(type.ToMarkdownFile(), outputDirectory, type.Name + Ext.MD);
-			}
-			Save(GenerateTableOfContents(), outputDirectory, "TableOfContents" + Ext.MD);
 		}
 
 		private void LoadXML(string filename)
@@ -219,29 +228,37 @@ namespace EarlyDocs
 			}
 		}
 
-		private MarkdownFile GenerateTableOfContents()
+		private void Save(DotNetType type, string directory, string filename)
+		{
+			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
+			{
+				writer.Write(type.ToMarkdownFile().ToMarkdown());
+			}
+		}
+
+		private MarkdownFile GenerateTableOfContents(DotNetDocumentationFile xmlDocumentation)
 		{
 			MarkdownFile markdown = new MarkdownFile();
 			MarkdownSection section = markdown.AddSection("Contents");
-			AddTableOfContentsSection(section, "Types", NormalTypes);
-			AddTableOfContentsSection(section, "Static Types", StaticTypes);
-			AddTableOfContentsSection(section, "Abstract Types", AbstractTypes);
-			AddTableOfContentsSection(section, "Interfaces", InterfaceTypes);
-			AddTableOfContentsSection(section, "Enums", EnumTypes);
-			AddTableOfContentsSection(section, "Exceptions", ExceptionTypes);
+			AddTableOfContentsSection(section, "Concrete Types", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Normal).ToList());
+			AddTableOfContentsSection(section, "Static Types", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Static).ToList());
+			AddTableOfContentsSection(section, "Abstract Types", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Abstract).ToList());
+			AddTableOfContentsSection(section, "Interfaces", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Interface).ToList());
+			AddTableOfContentsSection(section, "Enums", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Enum).ToList());
+			AddTableOfContentsSection(section, "Exceptions", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Exception).ToList());
 
 			return markdown;
 		}
 
-		private void AddTableOfContentsSection(MarkdownSection parent, string header, List<XmlType> types)
+		private void AddTableOfContentsSection(MarkdownSection parent, string header, List<DotNetType> types)
 		{
 			if(types.Count == 0) return;
 
 			MarkdownSection section = parent.AddSection(header);
-			foreach(XmlType type in types.OrderBy(t => t.Name))
+			foreach(DotNetType type in types.OrderBy(t => t.Name.LocalName))
 			{
-				section.AddInLine(new MarkdownInlineLink(type.Name, type.Name + Ext.MD));
-				section.AddInParagraph(type.Summary.ToMarkdown().OfType<IMarkdownInLine>().ToList()); //todo: limiting by type indicates problem in class hierarchy
+				section.AddInLine(new MarkdownInlineLink(type.Name.LocalName, type.Name.LocalName + Ext.MD));
+				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.SummaryComments));
 			}
 		}
 	}

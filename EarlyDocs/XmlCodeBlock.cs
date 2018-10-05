@@ -41,9 +41,6 @@ namespace EarlyDocs
 			}
 
 			return new XmlCodeBlock(builder.ToString(), language);
-			//todo: support language attribute
-			//rather, better than making user put that in all comments, support global code block language attribute in earlydocs settings (or auto see it in assembly?)
-			//and support one-off language attributes on <code> tags
 		}
 
 		public IMarkdownInSection ToMarkdownInSection()

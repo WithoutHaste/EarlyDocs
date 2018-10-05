@@ -1,14 +1,13 @@
 # Money
 
-Base type: [Item](Item.md).
-
+Inheritance: System.Object → Demo.Items.Item  
+  
 Represents money-type inventory items.
 
+Remarks:  
 Money items have no maximum inventory quantity.
 
 ## Constructors
 
-### Money(WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText, WithoutHaste.DataFiles.Markdown.MarkdownText)
-
-
+### Money(string name, string shortDescription, string longDescription)
 

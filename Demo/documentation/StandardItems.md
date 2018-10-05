@@ -1,40 +1,31 @@
 # StandardItems
 
-Static type. Base type: System.Object.
-
+Static  
+Inheritance: System.Object  
+  
 Collection of standard inventory items.
 
 ## Fields
 
 ### Constant Fields
 
-#### Armor ARMOR_LEATHER_LV1
+#### ARMOR_LEATHER_LV1 Demo.Items.Armor
 
-EarlyDocs.XmlComments
+Level 1 leather armor.
 
+#### COPPER Demo.Items.Money
 
+Copper coins.
 
-#### Money COPPER
+#### GOLD Demo.Items.Money
 
-EarlyDocs.XmlComments
+Gold coins.
 
+#### SILVER Demo.Items.Money
 
+Silver coins.
 
-#### Money GOLD
+#### SWORD_SHORT_LV1 Demo.Items.Weapon
 
-EarlyDocs.XmlComments
-
-
-
-#### Money SILVER
-
-EarlyDocs.XmlComments
-
-
-
-#### Weapon SWORD_SHORT_LV1
-
-EarlyDocs.XmlComments
-
-
+Level 1 short sword.
 
