@@ -38,24 +38,6 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">26</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">refactor parsing of VS XML to objects to DataFiles library
-- because I need to test XmlCode parsing of block and I can't with it in the Console Application</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Major</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-09-20T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">24</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -382,6 +364,24 @@ about this custom functionality</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">39</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">include a how-to for using .Net xml tags
+with details like how to reference an indexer property in a cref</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Documentation</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-08T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">16</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -639,6 +639,27 @@ what order is it in?</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">26</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">refactor parsing of VS XML to objects to DataFiles library
+- because I need to test XmlCode parsing of block and I can't with it in the Console Application</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-20T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-08T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">25</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -724,7 +745,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">38</Data>
+          <Data ss:Type="Number">39</Data>
         </Cell>
       </Row>
       <Row>

@@ -16,6 +16,12 @@ namespace EarlyDocs
 				"E:/Github/EarlyDocs/Demo/documentation"
 			);
 
+			new ConvertXML(
+				"E:/Github/EarlyDocs/Test/bin/Debug/Test.dll",
+				"E:/Github/EarlyDocs/Test/bin/Debug/Test.XML",
+				"E:/Github/EarlyDocs/Test/documentation"
+			);
+
 			//new ConvertXML(
 			//	"E:/Github/WithoutHaste.DataFiles/DataFiles/bin/Release/WithoutHaste.DataFiles.dll",
 			//	"E:/Github/WithoutHaste.DataFiles/DataFiles/bin/Release/WithoutHaste.DataFiles.XML",
