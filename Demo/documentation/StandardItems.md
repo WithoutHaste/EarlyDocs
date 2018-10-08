@@ -1,7 +1,7 @@
 # StandardItems
 
-Static  
-Inheritance: System.Object  
+**Static**  
+**Inheritance:** System.Object  
   
 Collection of standard inventory items.
 

@@ -1,10 +1,10 @@
 # Money
 
-Inheritance: System.Object → Demo.Items.Item  
+**Inheritance:** System.Object → Demo.Items.Item  
   
 Represents money-type inventory items.
 
-Remarks:  
+**Remarks:**  
 Money items have no maximum inventory quantity.
 
 ## Constructors

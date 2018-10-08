@@ -29,6 +29,10 @@ namespace Demo.Items
 		public int MaxQuantity { get; protected set; }
 
 		/// <summary></summary>
+		/// <param name="name">Display name of item.</param>
+		/// <param name="shortDescription">Short description of item. Limit to 256 characters.</param>
+		/// <param name="longDescription">Long description of item. No length limit.</param>
+		/// <param name="maxQuantity">Maximum number of units that can be carried in inventory at one time.</param>
 		public Item(string name, string shortDescription, string longDescription, int maxQuantity = NO_MAX_QUANTITY)
 		{
 			Name = name;

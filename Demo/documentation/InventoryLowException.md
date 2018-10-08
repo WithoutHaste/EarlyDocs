@@ -1,7 +1,7 @@
 # InventoryLowException
 
-Inheritance: System.Object → System.Exception  
-Implements: System.Runtime.Serialization.ISerializable, System.Runtime.InteropServices._Exception  
+**Inheritance:** System.Object → System.Exception  
+**Implements:** System.Runtime.Serialization.ISerializable, System.Runtime.InteropServices._Exception  
   
 Exception related to an inventory quantity being too low.
 

@@ -1,7 +1,7 @@
 # Item
 
-Abstract  
-Inheritance: System.Object  
+**Abstract**  
+**Inheritance:** System.Object  
   
 Represents an item that can be held in inventory.
 
@@ -28,4 +28,22 @@ The maximum number of this item that can be held in inventory at one time.
 ## Constructors
 
 ### Item(string name, string shortDescription, string longDescription, int maxQuantity)
+
+#### Parameters
+
+##### name
+
+Display name of item.
+
+##### shortDescription
+
+Short description of item. Limit to 256 characters.
+
+##### longDescription
+
+Long description of item. No length limit.
+
+##### maxQuantity
+
+Maximum number of units that can be carried in inventory at one time.
 

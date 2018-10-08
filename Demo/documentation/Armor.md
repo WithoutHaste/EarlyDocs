@@ -1,7 +1,7 @@
 # Armor
 
-Inheritance: System.Object → Demo.Items.Item  
-Implements: Demo.Items.IEquippable  
+**Inheritance:** System.Object → Demo.Items.Item  
+**Implements:** Demo.Items.IEquippable  
   
 Represents an inventory item that can act as armor.
 

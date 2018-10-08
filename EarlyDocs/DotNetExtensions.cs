@@ -62,7 +62,7 @@ namespace EarlyDocs
 			}
 			if(type.RemarksComments.Count > 0)
 			{
-				typeSection.Add(new MarkdownLine("Remarks:")); //todo: make bold
+				typeSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
 				typeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.RemarksComments));
 			}
 			if(type.ExampleComments.Count > 0)
@@ -145,7 +145,7 @@ namespace EarlyDocs
 			}
 			if(field.RemarksComments.Count > 0)
 			{
-				memberSection.Add(new MarkdownLine("Remarks:")); //todo: make bold
+				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
 				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(field.RemarksComments));
 			}
 			if(field.ExampleComments.Count > 0)
@@ -173,11 +173,22 @@ namespace EarlyDocs
 			}
 			if(method.RemarksComments.Count > 0)
 			{
-				memberSection.Add(new MarkdownLine("Remarks:")); //todo: make bold
+				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
 				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(method.RemarksComments));
+			}
+			if(method.ParameterComments.Count > 0)
+			{
+				//todo: order parameters as they are ordered in method signature
+				//todo: if ALL parameters are just simple one-line text, display more succinctly
+				MarkdownSection parameterSection = memberSection.AddSection("Parameters");
+				foreach(DotNetCommentParameter comment in method.ParameterComments)
+				{
+					parameterSection.AddSection(ToMarkdownSection(comment));
+				}
 			}
 			if(method.ExampleComments.Count > 0)
 			{
+				//todo: label examples as A, B, C...
 				MarkdownSection exampleSection = memberSection.AddSection("Examples");
 				exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.ExampleComments));
 			}
@@ -186,6 +197,15 @@ namespace EarlyDocs
 			//todo: returns
 
 			return memberSection;
+		}
+
+		public static MarkdownSection ToMarkdownSection(this DotNetCommentParameter parameter)
+		{
+			string header = parameter.ParameterLink.Name;
+
+			MarkdownSection section = new MarkdownSection(header);
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(parameter));
+			return section;
 		}
 
 		public static MarkdownSection ToMarkdownEnumSection(this DotNetType type)
@@ -246,10 +266,10 @@ namespace EarlyDocs
 			//todo: make bold
 			switch(type.Category)
 			{
-				case TypeCategory.Static: parent.Add(new MarkdownLine("Static")); changeMade = true; break;
-				case TypeCategory.Interface: parent.Add(new MarkdownLine("Interface")); changeMade = true; break;
-				case TypeCategory.Abstract: parent.Add(new MarkdownLine("Abstract")); changeMade = true; break;
-				case TypeCategory.Enum: parent.Add(new MarkdownLine("Enumeration")); changeMade = true; break;
+				case TypeCategory.Static: parent.Add(new MarkdownLine(MarkdownText.Bold("Static"))); changeMade = true; break;
+				case TypeCategory.Interface: parent.Add(new MarkdownLine(MarkdownText.Bold("Interface"))); changeMade = true; break;
+				case TypeCategory.Abstract: parent.Add(new MarkdownLine(MarkdownText.Bold("Abstract"))); changeMade = true; break;
+				case TypeCategory.Enum: parent.Add(new MarkdownLine(MarkdownText.Bold("Enumeration"))); changeMade = true; break;
 			}
 
 			if(type.BaseType != null)
@@ -261,14 +281,15 @@ namespace EarlyDocs
 					inheritanceLine.Prepend(baseType.Name.FullName + " → ");
 					baseType = baseType.BaseType;
 				}
-				inheritanceLine.Prepend("Inheritance: "); //todo: make bold
+				inheritanceLine.Prepend(" ");
+				inheritanceLine.Prepend(MarkdownText.Bold("Inheritance:"));
 				parent.Add(inheritanceLine);
 				changeMade = true;
 			}
 
 			if(type.ImplementedInterfaces.Count > 0)
 			{
-				MarkdownLine interfaceLine = new MarkdownLine("Implements: "); //todo: make bold
+				MarkdownLine interfaceLine = new MarkdownLine(MarkdownText.Bold("Implements:"), new MarkdownText(" "));
 				interfaceLine.Add(String.Join(", ", type.ImplementedInterfaces.Select(i => i.Name.FullName).ToArray())); //todo: shorten in-project names to LocalName and make them links to documentation
 				parent.Add(interfaceLine);
 				changeMade = true;
