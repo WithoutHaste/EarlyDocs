@@ -9,13 +9,13 @@ namespace Test.SpaceA
 	/// <summary>
 	/// Tests a class in a nested namespace.
 	/// </summary>
-	public class ClassInNamespace
+	public class ClassInNamespaceA
 	{
 		/// <summary></summary>
 		public int FieldA = 0;
 
 		/// <summary></summary>
-		public ClassInNamespace()
+		public ClassInNamespaceA()
 		{
 		}
 

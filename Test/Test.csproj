@@ -46,8 +46,10 @@
     <Compile Include="ClassFieldPropertyModifiers.cs" />
     <Compile Include="ClassFieldPropertyValue.cs" />
     <Compile Include="ClassInherits.cs" />
+    <Compile Include="ClassMethodOverloading.cs" />
     <Compile Include="ClassMultilineComments.cs" />
     <Compile Include="ClassMultipleOnceTags.cs" />
+    <Compile Include="ClassOperatorOverloading.cs" />
     <Compile Include="ClassPartial.cs" />
     <Compile Include="ClassSealed.cs" />
     <Compile Include="ClassSimpleComments.cs" />
@@ -56,7 +58,9 @@
     <Compile Include="Global.cs" />
     <Compile Include="IInterfaceSimpleComments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpaceA\ClassInNamespace.cs" />
+    <Compile Include="SpaceA\ClassInNamespaceA.cs" />
+    <Compile Include="SpaceA\SpaceB\ClassInNamespaceB.cs" />
+    <Compile Include="StructSimpleComments.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

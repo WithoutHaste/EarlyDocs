@@ -11,6 +11,18 @@ namespace Test
 	/// </summary>
 	public class ClassInherits : ClassSimpleComments, IInterfaceSimpleComments
 	{
-		//todo
+		/// <inheritdoc/>
+		public int PropertyA { get; set; }
+
+		/// <inheritdoc/>
+		public void MethodA()
+		{
+		}
+
+		/// <inheritdoc/>
+		public override int MethodVirtual()
+		{
+			return 1;
+		}
 	}
 }

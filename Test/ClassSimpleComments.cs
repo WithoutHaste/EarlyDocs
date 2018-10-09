@@ -172,5 +172,20 @@ namespace Test
 		public void MethodWithoutParameters()
 		{
 		}
+
+		/// <summary>
+		/// [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.
+		/// </summary>
+		/// <remarks>
+		/// [Remarks Tag] [Short] [One Line] Mauris finibus eros urna, in gravida metus ullamcorper at.
+		/// </remarks>
+		/// <example>[Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.</example>
+		/// <permission cref="MethodVirtual()">[Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.</permission>
+		/// <exception cref="Exception">[Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.</exception>
+		/// [Floating Comment] [Short] [One Line] Curabitur euismod condimentum risus, ut pellentesque tortor fringilla in.
+		public virtual int MethodVirtual()
+		{
+			return 0;
+		}
 	}
 }

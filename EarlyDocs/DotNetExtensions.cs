@@ -24,10 +24,10 @@ namespace EarlyDocs
 			switch(name.FullName)
 			{
 				case "System.Double": return "double";
-				case "System.Float": return "float";
 				case "System.Int16": return "short";
 				case "System.Int32": return "int";
 				case "System.Int64": return "long";
+				case "System.Single": return "float";
 				case "System.String": return "string";
 			}
 			switch(name.FullNamespace)
