@@ -183,6 +183,13 @@ List type attribute can be set to "bullet" or "number". Do not manually include 
 /// </list>
 ```
 
+```xml
+/// <list type="bullet">
+///   <item>Description</item>
+///   <item>Description</item>
+/// </list>
+```
+
 ### table
 
 Include a formatted table.
