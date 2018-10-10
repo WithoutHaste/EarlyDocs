@@ -116,7 +116,7 @@ public void Method(int x, string y)
 }
 ```
 
-See the [cref](#cref) section for everything you can link to.
+See the [cref](#cref-attribute) section for everything you can link to.
 
 ## example
 
