@@ -115,7 +115,7 @@ namespace Test //should be just like ClassSimpleComments, but for a generic type
 		/// [Remarks Tag] [Short] [One Line] Sed at scelerisque nulla, sit amet hendrerit quam.
 		/// </remarks>
 		/// <example>[Example Tag] [Short] [One Line] Praesent ligula enim, mattis et justo vel, tempor ultrices nunc.</example>
-		/// <permission cref="ClassSimpleCommentsGeneric{T,U}.Finalize()">[Permission Tag] [References Destructor] [Short] [One Line] Nulla eleifend euismod blandit.</permission>
+		/// <permission cref="Finalize()">[Permission Tag] [References Destructor] [Short] [One Line] Nulla eleifend euismod blandit.</permission>
 		/// <exception cref="IndexOutOfRangeException">[Exception Tag] [Short] [One Line] Phasellus id tellus odio.</exception>
 		/// [Floating Comment] [Short] [One Line] Suspendisse potenti.
 		~ClassSimpleCommentsGeneric()

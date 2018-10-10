@@ -226,7 +226,7 @@ namespace Test
 		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Donec id mollis orci.
 		/// </summary>
-		/// <permission cref="op_True(ClassOperatorOverloading)">[Permission Tag] [References Operator] [Short] [One Line] Donec molestie condimentum purus, vitae condimentum diam dignissim et.</permission>
+		/// <permission cref="operator true(ClassOperatorOverloading)">[Permission Tag] [References Operator] [Short] [One Line] Donec molestie condimentum purus, vitae condimentum diam dignissim et.</permission>
 		public static bool operator true(ClassOperatorOverloading a)
 		{
 			return true;
@@ -235,7 +235,7 @@ namespace Test
 		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Pellentesque consectetur libero a ligula tempus convallis.
 		/// </summary>
-		/// <permission cref="op_False(ClassOperatorOverloading)">[Permission Tag] [References Operator] [Short] [One Line] Nullam ullamcorper purus in velit tempus, in scelerisque erat porta.</permission>
+		/// <permission cref="operator false(ClassOperatorOverloading)">[Permission Tag] [References Operator] [Short] [One Line] Nullam ullamcorper purus in velit tempus, in scelerisque erat porta.</permission>
 		public static bool operator false(ClassOperatorOverloading a)
 		{
 			return true;

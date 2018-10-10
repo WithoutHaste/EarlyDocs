@@ -15,25 +15,9 @@ This library is under active development. Report bugs and request features on Gi
 
 ## Supported Xml Tags
 
-Top-level tags:  
-* summary
-* remarks
-* example
-* param
-* returns
-* exception
+Supports all standard Microsoft XML tags.
 
-Formatting within other tags:  
-* para
-* see
-* code
-* list type="bullet"
-    * listheader
-	    * plain text
-    * item
-	    * plain text
-        * term
-        * term with description
+See examples: [How to Use XML Comments](HowToUseXmlComments.md)
 
 ## Custom Tags
 
@@ -62,19 +46,6 @@ Example:
 <see cref="MyType" url="http://otherproject.com/folder/"/>
 results in link
 [MyType](http://otherproject.com/folder/documentation/MyType.md)
-```
-
-### layout
-
-Add a `layout` tag to the documentation of a Type to specify how to layout the documentation page.
-
-Set attribute `methods` to `keep_order` to display methods in the same order as they appear in the code. Otherwise, methods are displayed in alphabetical order.
-
-Example:  
-```
-/// <summary>Description</summary>
-/// <layout methods="keep_order"/>
-public class MyType...
 ```
 
 ## Examples

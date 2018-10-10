@@ -230,7 +230,8 @@ default, leave it alone</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">include a how-to for using .Net xml tags
-with details like how to reference an indexer property in a cref</Data>
+with details like how to reference an indexer property in a cref
+- when this page is done, link Visual Studio code notes to here instead of duplicating the documentation notes</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -378,6 +379,24 @@ with details like how to reference an indexer property in a cref</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-19T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">44</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">list of other .Net documentors:
+https://visualstudiomagazine.com/articles/2017/02/21/vs-dotnet-code-documentation-tools-roundup.aspx</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-10T00:00:00.000</Data>
         </Cell>
       </Row>
     </Table>
@@ -824,7 +843,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">43</Data>
+          <Data ss:Type="Number">44</Data>
         </Cell>
       </Row>
       <Row>
