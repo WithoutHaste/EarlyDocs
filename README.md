@@ -17,7 +17,7 @@ This library is under active development. Report bugs and request features on Gi
 
 Supports all standard Microsoft XML tags.
 
-See examples: [How to Use XML Comments](HowToUseXmlComments.md)
+See examples: [How to Use XML Comments in .Net](HowToUseXmlComments.md)
 
 ## Custom Tags
 

@@ -103,7 +103,7 @@ public void Method(List<int> list, string fileName)
 }
 ```
 
-See the [cref](#cref-Attribute) section for everything you can link to.
+See the [cref](#cref-attribute) section for everything you can link to.
 
 ## permission
 
@@ -241,7 +241,7 @@ Make a reference to another type, field, or member.
 /// <remarks>...similar to the <see cref="OtherMethod()"/> method.</remarks>
 ```
 
-See the [cref](#cref-Attribute) section for everything you can link to.
+See the [cref](#cref-attribute) section for everything you can link to.
 
 ### seealso
 
@@ -251,7 +251,7 @@ Make a reference to another type, field, or member. This is a less important ref
 /// <remarks>...similar to the <seealso cref="OtherMethod()"/> method.</remarks>
 ```
 
-See the [cref](#cref-Attribute) section for everything you can link to.
+See the [cref](#cref-attribute) section for everything you can link to.
 
 ### CDATA
 
