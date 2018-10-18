@@ -340,10 +340,10 @@ public int MyMethod()
 ```
 
 ```
-/// <see cref="MyMethod(int,string)"/>
-/// <see cref="MyType.MyMethod(int,string)"/>
-/// <see cref="FullNamespace.MyType.MyMethod(int,string)"/>
-public int MyMethod(int x, string y)
+/// <see cref="MyMethod(int,string,List{int})"/>
+/// <see cref="MyType.MyMethod(int,string,List{int})"/>
+/// <see cref="FullNamespace.MyType.MyMethod(int,string,List{int})"/>
+public int MyMethod(int x, string y, List<int> z)
 {
 }
 ```
@@ -392,6 +392,13 @@ If you know how to cref a static constructor, please message me.
 ~MyType()
 {
 }
+```
+
+**Delegate**
+
+```
+/// <see cref="MyEventHandler" />
+public delegate void MyEventHandler(object sender, EventArgs e);
 ```
 
 **Field**

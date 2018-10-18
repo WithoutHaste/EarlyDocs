@@ -13,21 +13,39 @@ namespace Test
 	public class ClassCommonTypeAliases
 	{
 		/// <summary></summary>
-		public short ShortField = 0;
+		public bool FieldBoolean;
 
 		/// <summary></summary>
-		public int IntegerField = 0;
+		public short FieldShort;
 
 		/// <summary></summary>
-		public double DoubleField = 0;
+		public int FieldInt;
 
 		/// <summary></summary>
-		public float FloatField = 0;
+		public long FieldLong;
 
 		/// <summary></summary>
-		public string StringField = "0";
+		public float FieldFloat;
 
 		/// <summary></summary>
-		public List<int> ListIntegerField = new List<int>();
+		public double FieldDouble;
+
+		/// <summary></summary>
+		public string FieldString;
+
+		/// <summary></summary>
+		public List<int> FieldList;
+
+		/// <summary></summary>
+		public Dictionary<int, string> FieldDictionary;
+
+		/// <summary></summary>
+		public Exception FieldException;
+
+		/// <summary></summary>
+		public Action<int> FieldAction;
+
+		/// <summary></summary>
+		public Func<int, string> FieldFunc;
 	}
 }

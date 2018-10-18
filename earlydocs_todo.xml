@@ -38,27 +38,11 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">41</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">write complex comments test cases</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Major</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-09T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">40</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">keep working through test cases until all are handled</Data>
+          <Data ss:Type="String">keep working through test cases until all are handled
+- extend complex test cases as needed</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -124,6 +108,25 @@ and support one-off language attributes on &lt;code&gt; tags</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-29T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">45</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">how to cref a static constructor?
+- open question on StackOverflow
+- open question on Sandcastle github</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -428,6 +431,26 @@ https://visualstudiomagazine.com/articles/2017/02/21/vs-dotnet-code-documentatio
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">41</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">write complex comments test cases</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-09T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -843,7 +866,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">44</Data>
+          <Data ss:Type="Number">45</Data>
         </Cell>
       </Row>
       <Row>

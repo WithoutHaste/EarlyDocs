@@ -47,6 +47,7 @@
     <Compile Include="ClassFieldPropertyModifiers.cs" />
     <Compile Include="ClassFieldPropertyValue.cs" />
     <Compile Include="ClassInherits.cs" />
+    <Compile Include="ClassListComments.cs" />
     <Compile Include="ClassMethodOverloading.cs" />
     <Compile Include="ClassMultilineComments.cs" />
     <Compile Include="ClassMultipleOnceTags.cs" />

@@ -11,6 +11,5 @@ namespace Test
 	/// </summary>
 	public static class ClassStatic
 	{
-		//todo
 	}
 }

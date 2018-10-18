@@ -11,6 +11,5 @@ namespace Test
 	/// </summary>
 	public sealed class ClassSealed
 	{
-		//todo
 	}
 }

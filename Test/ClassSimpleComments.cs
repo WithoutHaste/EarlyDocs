@@ -88,12 +88,11 @@ namespace Test
 		/// [Remarks Tag] [Short] [One Line] Donec ullamcorper eros vitae dolor tempus tristique.
 		/// </remarks>
 		/// <example>[Example Tag] [Short] [One Line] Proin in lacus at dui lacinia rutrum ac sed libero.</example>
-		/// <permission cref="ClassSimpleComments()">[Permission Tag] [References Static Constructor] [Short] [One Line] Nulla tincidunt dui eu odio posuere ultricies.</permission>
 		/// <exception cref="Exception">[Exception Tag] [Short] [One Line] Vivamus in lectus facilisis, ornare augue nec, semper dolor.</exception>
 		/// [Floating Comment] [Short] [One Line] Nam auctor mollis congue.
 		static ClassSimpleComments()
 		{
-			//todo: how to reference this method on permission tag
+			//todo: how to reference a static constructor in a cref?
 		}
 
 		/// <summary>
