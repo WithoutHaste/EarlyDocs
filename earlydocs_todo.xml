@@ -229,25 +229,6 @@ default, leave it alone</Data>
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">39</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">include a how-to for using .Net xml tags
-with details like how to reference an indexer property in a cref
-- when this page is done, link Visual Studio code notes to here instead of duplicating the documentation notes</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Documentation</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-08T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">16</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -279,23 +260,6 @@ with details like how to reference an indexer property in a cref
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-13T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">43</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">? remove Demo project ?</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-09T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -431,6 +395,48 @@ https://visualstudiomagazine.com/articles/2017/02/21/vs-dotnet-code-documentatio
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">43</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">? remove Demo project ?</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-09T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">39</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">include a how-to for using .Net xml tags
+with details like how to reference an indexer property in a cref
+- when this page is done, link Visual Studio code notes to here instead of duplicating the documentation notes</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Documentation</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-08T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
