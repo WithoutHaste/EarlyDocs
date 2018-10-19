@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Test
 {
 	/// <summary>
-	/// Tests abstract class.
+	/// Tests abstract classes and members.
 	/// </summary>
 	public abstract class ClassAbstract
 	{
@@ -21,7 +21,7 @@ namespace Test
 		/// <example>[Example Tag] [Short] [One Line] Quisque volutpat hendrerit ex, sit amet accumsan ligula tincidunt et.</example>
 		/// <permission cref="FieldNotAbstract">[Permission Tag] [References Field] [Short] [One Line] Mauris tempor sollicitudin metus, a tristique ex fermentum eget.</permission>
 		/// [Floating Comment] [Short] [One Line] Cras ac aliquam risus, ut sagittis dolor.
-		public int FieldNotAbstract { get; set; }
+		public int FieldNotAbstract;
 
 		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Sed pharetra elit eget felis iaculis, nec mattis urna malesuada.

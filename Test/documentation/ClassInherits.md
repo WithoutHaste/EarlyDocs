@@ -7,11 +7,5 @@ Tests class inheritance.
 
 ## Properties
 
-### PropertyA int
-
-## Methods
-
-### System.Void MethodA()
-
-### int MethodVirtual()
+### int PropertyA
 

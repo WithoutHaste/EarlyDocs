@@ -19,6 +19,18 @@ namespace EarlyDocs
 			return parameter.TypeName.ToDisplayString() + " " + parameter.Name;
 		}
 
+		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace)
+		{
+			_namespace += ".";
+
+			string displayString = name.ToDisplayString();
+			if(displayString.StartsWith(_namespace))
+			{
+				displayString = displayString.Substring(_namespace.Length);
+			}
+			return displayString;
+		}
+
 		public static string ToDisplayString(this DotNetQualifiedName name)
 		{
 			if(name == null)
@@ -93,18 +105,16 @@ namespace EarlyDocs
 				MarkdownSection fieldSection = typeSection.AddSection("Fields");
 				if(type.ConstantFields.Count > 0)
 				{
-					MarkdownSection constantFieldSection = fieldSection.AddSection("Constant Fields");
 					foreach(DotNetField field in type.ConstantFields.OrderBy(m => m.Name.LocalName))
 					{
-						constantFieldSection.AddSection(ToMarkdownSection(field));
+						fieldSection.AddSection(ToMarkdownSection(field));
 					}
 				}
 				if(type.NormalFields.Count > 0)
 				{
-					MarkdownSection normalFieldSection = fieldSection.AddSection("Normal Fields");
 					foreach(DotNetField field in type.NormalFields.OrderBy(m => m.Name.LocalName))
 					{
-						normalFieldSection.AddSection(ToMarkdownSection(field));
+						fieldSection.AddSection(ToMarkdownSection(field));
 					}
 				}
 			}
@@ -144,9 +154,14 @@ namespace EarlyDocs
 
 		public static MarkdownSection ToMarkdownSection(this DotNetField field)
 		{
-			string header = field.Name.LocalName;
-			if(field.TypeName != null)
-				header += " " + field.TypeName.ToDisplayString();
+			string header = field.TypeName.ToDisplayString() + " " + field.Name.LocalName;
+			if(field is DotNetProperty)
+			{
+				if((field as DotNetProperty).Category == FieldCategory.Abstract)
+				{
+					header = "abstract " + header;
+				}
+			}
 			MarkdownSection memberSection = new MarkdownSection(header);
 
 			if(field.SummaryComments.Count > 0)
@@ -160,10 +175,29 @@ namespace EarlyDocs
 			}
 			if(field.ExampleComments.Count > 0)
 			{
-				MarkdownSection exampleSection = memberSection.AddSection("Examples");
-				exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(field.ExampleComments));
+				char index = 'A'; //todo cleanup duplicated example sections
+				foreach(DotNetComment comment in field.ExampleComments)
+				{
+					string exampleHeader = "Example " + index + ":";
+					if(field.ExampleComments.Count == 1)
+						exampleHeader = "Example:";
+					memberSection.Add(new MarkdownLine(MarkdownText.Bold(exampleHeader)));
+					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+					index++;
+				}
 			}
-			//todo: value tag
+			foreach(DotNetCommentQualifiedLinkedGroup comment in field.PermissionComments)
+			{
+				string permissionHeader = "Permission: " + comment.QualifiedLink.Name.ToDisplayString(field.Name.FullNamespace);
+				if(field.Name == comment.QualifiedLink.Name)
+					permissionHeader = "Permission:";
+				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
+				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+			}
+			if(field.FloatingComments != null)
+			{
+				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(field.FloatingComments));
+			}
 
 			return memberSection;
 		}

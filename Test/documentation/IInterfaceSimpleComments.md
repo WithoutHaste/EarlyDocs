@@ -14,28 +14,18 @@
 
 ## Properties
 
-### PropertyA int
+### abstract int PropertyA
 
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.
 
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Vivamus at turpis vestibulum, ultricies nibh at, finibus tortor.
 
-#### Examples
-
+**Example:**  
 [Example Tag] [Short] [One Line] Nulla ullamcorper est nec ipsum vehicula, eget tincidunt ante accumsan.
 
-## Methods
+**Permission:**  
+[Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.
 
-### System.Void MethodA()
-
-[Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.
-
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Nullam in quam vel metus faucibus pulvinar.
-
-#### Examples
-
-**Example A:**  
-[Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.
+[Floating Comment] [Short] [One Line] Ut massa nibh, rutrum nec urna in, interdum congue justo.
 

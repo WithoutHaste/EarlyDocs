@@ -6,9 +6,7 @@ Tests the incorrect nested of comments.
 
 ## Fields
 
-### Normal Fields
-
-#### RemarksInRemarks int
+### int RemarksInRemarks
 
 **Remarks:**  
 [Remarks Tag] [Multiline] Donec dignissim urna ut 
@@ -21,7 +19,7 @@ Tests the incorrect nested of comments.
               nec diam hendrerit ultrices. Pellentesque eu dolor 
               scelerisque, ultrices felis eu, rutrum turpis.
 
-#### SummaryInSummary int
+### int SummaryInSummary
 
 [Summary Tag] [Multiline] Vestibulum a maximus mauris. 
             Quisque vel magna et ipsum auctor condimentum vel vitae 

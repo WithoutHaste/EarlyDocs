@@ -6,27 +6,25 @@ Tests fields/properties with (1) a single summary tag (2) a single value tag (3)
 
 ## Fields
 
-### Normal Fields
-
-#### SummaryField string
+### string SummaryField
 
 Nulla facilisi.
 
-#### SummaryValueField string
+### string SummaryValueField
 
 Fusce ac mi sit amet turpis facilisis venenatis maximus ac nunc.
 
-#### ValueField string
+### string ValueField
 
 ## Properties
 
-### SummaryProperty string
+### string SummaryProperty
 
 Nullam nec lorem vitae nunc pellentesque gravida.
 
-### SummaryValueProperty string
+### string SummaryValueProperty
 
 Donec turpis augue, feugiat ut sapien at, sagittis tristique enim.
 
-### ValueProperty string
+### string ValueProperty
 

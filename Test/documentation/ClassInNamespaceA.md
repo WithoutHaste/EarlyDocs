@@ -6,9 +6,7 @@ Tests a class in a nested namespace.
 
 ## Fields
 
-### Normal Fields
-
-#### FieldA int
+### int FieldA
 
 ## Constructors
 

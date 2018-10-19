@@ -6,29 +6,27 @@ Tests lists and tables in comments.
 
 ## Fields
 
-### Normal Fields
-
-#### BulletList int
+### int BulletList
 
 **Remarks:**  
+**Example A:**  
+**Example B:**  
 
-##### Examples
+### int BulletListInNumberItem
 
-#### BulletListInNumberItem int
+### int BulletListInNumberList
 
-#### BulletListInNumberList int
-
-#### NumberList int
+### int NumberList
 
 **Remarks:**  
+**Example A:**  
+**Example B:**  
 
-##### Examples
+### int NumberListInBulletItem
 
-#### NumberListInBulletItem int
+### int NumberListInBulletList
 
-#### NumberListInBulletList int
-
-#### Table int
+### int Table
 
 **Remarks:**  
 

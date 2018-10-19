@@ -6,57 +6,53 @@ Tests modifiers on fields and properties.
 
 ## Fields
 
-### Constant Fields
-
-#### ConstField int
+### int ConstField
 
 Maecenas scelerisque purus in lacus sollicitudin, eu commodo lacus ultricies.
 
-### Normal Fields
-
-#### InternalField int
+### int InternalField
 
 Nulla facilisi.
 
-#### PrivateField int
+### int PrivateField
 
 Donec suscipit dolor rhoncus urna blandit tempus.
 
-#### ProtectedField int
+### int ProtectedField
 
 Aenean ac rhoncus nulla, a rutrum turpis.
 
-#### ProtectedInternalField int
+### int ProtectedInternalField
 
 Morbi neque leo, posuere id nulla in, laoreet fermentum dolor.
 
-#### PublicField int
+### int PublicField
 
 Proin et facilisis tellus.
 
-#### ReadonlyField int
+### int ReadonlyField
 
 In sagittis tempor libero eget finibus.
 
-#### StaticField int
+### int StaticField
 
 Pellentesque ullamcorper pretium diam eget commodo.
 
 ## Properties
 
-### ProtectedProtectedProperty int
+### int ProtectedProtectedProperty
 
 Mauris et tincidunt ligula, nec efficitur justo.
 
-### PublicPrivateProperty int
+### int PublicPrivateProperty
 
 Aliquam in sagittis ipsum.
 
-### PublicProtectedProperty int
+### int PublicProtectedProperty
 
 Nam urna purus, aliquam a metus quis, cursus interdum ligula.
 
-### PublicPublicProperty int
+### int PublicPublicProperty
 
 Sed consectetur tincidunt velit at suscipit.
 

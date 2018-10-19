@@ -11,16 +11,10 @@ namespace EarlyDocs
 		static void Main(string[] args)
 		{
 			new ConvertXML(
-				"C:/DataDrive/Github/EarlyDocs/Test/bin/Debug/Test.dll",
-				"C:/DataDrive/Github/EarlyDocs/Test/bin/Debug/Test.XML",
-				"C:/DataDrive/Github/EarlyDocs/Test/documentation"
+				"../../../Test/bin/Debug/Test.dll",
+				"../../../Test/bin/Debug/Test.XML",
+				"../../../Test/documentation"
 			);
-
-			//new ConvertXML(
-			//	"E:/Github/EarlyDocs/Test/bin/Debug/Test.dll",
-			//	"E:/Github/EarlyDocs/Test/bin/Debug/Test.XML",
-			//	"E:/Github/EarlyDocs/Test/documentation"
-			//);
 
 			//new ConvertXML(
 			//	"E:/Github/WithoutHaste.DataFiles/DataFiles/bin/Release/WithoutHaste.DataFiles.dll",

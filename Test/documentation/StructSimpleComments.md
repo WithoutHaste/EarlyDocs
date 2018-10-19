@@ -14,31 +14,37 @@
 
 ## Fields
 
-### Normal Fields
-
-#### IntegerField int
+### int IntegerField
 
 [Summary Tag] [Short] [One Line] Sed at molestie metus.
 
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Vivamus at turpis vestibulum, ultricies nibh at, finibus tortor.
 
-##### Examples
-
+**Example:**  
 [Example Tag] [Short] [One Line] Curabitur ullamcorper a turpis at luctus.
+
+**Permission:**  
+[Permission Tag] [References Field] [Short] [One Line] Vivamus lobortis vehicula hendrerit.
+
+[Floating Comment] [Short] [One Line] Suspendisse eget placerat tortor.
 
 ## Properties
 
-### StringProperty string
+### string StringProperty
 
 [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.
 
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Fusce mauris arcu, ullamcorper sed ipsum quis, viverra fermentum enim.
 
-#### Examples
-
+**Example:**  
 [Example Tag] [Short] [One Line] Nulla sit amet nulla et tortor laoreet aliquam.
+
+**Permission:**  
+[Permission Tag] [References Property] [Short] [One Line] Sed neque magna, dignissim eget ullamcorper non, tempor vitae massa.
+
+[Floating Comment] [Short] [One Line] Nullam et porttitor mauris, eget porta urna.
 
 ## Constructors
 

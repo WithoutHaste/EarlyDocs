@@ -33,31 +33,37 @@
 
 ## Fields
 
-### Normal Fields
-
-#### IntegerField int
+### int IntegerField
 
 [Summary Tag] [Short] [One Line] Nam ut feugiat urna, eu varius arcu.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Suspendisse at placerat libero.
 
-##### Examples
-
+**Example:**  
 [Example Tag] [Short] [One Line] Nulla vitae malesuada ante.
+
+**Permission:**  
+[Permission Tag] [References Field] [Short] [One Line] Proin at mi aliquet, maximus sem vitae, hendrerit eros.
+
+[Floating Comment] [Short] [One Line] Nulla ullamcorper leo vel leo aliquet consequat.
 
 ## Properties
 
-### IntegerProperty int
+### int IntegerProperty
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Curabitur cursus libero eu tincidunt iaculis.
 
-#### Examples
-
+**Example:**  
 [Example Tag] [Short] [One Line] Nunc tincidunt sapien a cursus condimentum.
+
+**Permission:**  
+[Permission Tag] [References Property] [Short] [One Line] Aliquam interdum nisi ac aliquet pellentesque.
+
+[Floating Comment] [Short] [One Line] Phasellus ac lobortis nisi, ac bibendum nulla.
 
 ## Constructors
 
@@ -120,30 +126,6 @@
 [Example Tag] [Short] [One Line] Sed quis mollis justo, sit amet vulputate justo.
 
 ## Methods
-
-### System.Void Finalize()
-
-[Summary Tag] [Short] [One Line] Aenean quam urna, pharetra vel malesuada ut, gravida ac libero.
-
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Pellentesque tincidunt magna sit amet nisl tristique egestas.
-
-#### Examples
-
-**Example A:**  
-[Example Tag] [Short] [One Line] Maecenas eu vestibulum mi, sit amet consequat urna.
-
-### int MethodVirtual()
-
-[Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.
-
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Mauris finibus eros urna, in gravida metus ullamcorper at.
-
-#### Examples
-
-**Example A:**  
-[Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.
 
 ### System.Void MethodWithoutParameters()
 

@@ -14,31 +14,37 @@
 
 ## Fields
 
-### Normal Fields
-
-#### TField 
+###  TField
 
 [Summary Tag] [Short] [One Line] Sed feugiat, velit vel convallis accumsan, magna dui ultrices lorem, nec sollicitudin lorem nisl sit amet justo.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Donec porta metus at neque vehicula, nec placerat ligula tristique.
 
-##### Examples
-
+**Example:**  
 [Example Tag] [Short] [One Line] Fusce ut suscipit ante.
+
+**Permission:**  
+[Permission Tag] [References Field] [Short] [One Line] Vivamus eget fermentum ligula.
+
+[Floating Comment] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 ## Properties
 
-### UProperty 
+###  UProperty
 
 [Summary Tag] [Short] [One Line] Phasellus tellus orci, maximus sed suscipit eu, sollicitudin ut ipsum.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Donec sit amet nulla non turpis vulputate tincidunt.
 
-#### Examples
-
+**Example:**  
 [Example Tag] [Short] [One Line] Nam et elit et arcu gravida ultricies eget in lacus.
+
+**Permission:**  
+[Permission Tag] [References Property] [Short] [One Line] Etiam sit amet ligula vel ligula feugiat dictum ac vitae eros.
+
+[Floating Comment] [Short] [One Line] Donec scelerisque fringilla eros, in egestas turpis.
 
 ## Constructors
 
@@ -75,18 +81,4 @@
 
 **Example A:**  
 [Example Tag] [Short] [One Line] In gravida, ex accumsan pellentesque pretium, elit ex pharetra arcu, feugiat maximus dui est nec ligula.
-
-## Methods
-
-### System.Void Finalize()
-
-[Summary Tag] [Short] [One Line] Quisque scelerisque elit a massa semper luctus.
-
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Sed at scelerisque nulla, sit amet hendrerit quam.
-
-#### Examples
-
-**Example A:**  
-[Example Tag] [Short] [One Line] Praesent ligula enim, mattis et justo vel, tempor ultrices nunc.
 

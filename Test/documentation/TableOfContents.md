@@ -27,6 +27,9 @@ Tests modifiers on fields and properties.
 [ClassFieldPropertyValue](ClassFieldPropertyValue.md)  
 Tests fields/properties with (1) a single summary tag (2) a single value tag (3) using both at once.
 
+[ClassFormattingErrors](ClassFormattingErrors.md)  
+Tests formatting errors in xml comments.
+
 [ClassInherits](ClassInherits.md)  
 Tests class inheritance.
 
@@ -45,9 +48,6 @@ Tests overloaded methods.
 [ClassMultilineComments](ClassMultilineComments.md)  
 Tests different ways to format multiline comments.
 
-[ClassMultipleOnceTags](ClassMultipleOnceTags.md)  
-Tests the use of multiple tags for tags where only one is expected: summary, remarks, returns, value.
-
 [ClassOperatorOverloading](ClassOperatorOverloading.md)  
 Tests operator overloading.
 
@@ -56,8 +56,15 @@ Tests operator overloading.
 
 [Part B] Aliquam eget eros ex.
 
+[ClassRepeatedTags](ClassRepeatedTags.md)  
+Tests the use of multiple tags for tags where only one is expected: summary, remarks, returns, value.
+            Tests the use of multiple tags for tags where multiple are expected: example, exception, param, typeparam, permission.
+
 [ClassSealed](ClassSealed.md)  
 Tests sealed class.
+
+[ClassSeeAlso](ClassSeeAlso.md)  
+Tests see and seealso tags, i.e. test links.
 
 [ClassSimpleComments](ClassSimpleComments.md)  
 [Summary Tag] [Short] [One Line] Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -85,7 +92,7 @@ Tests static class.
 ## Abstract Types
 
 [ClassAbstract](ClassAbstract.md)  
-Tests abstract class.
+Tests abstract classes and members.
 
 ## Interfaces
 
@@ -103,4 +110,9 @@ Tests an enum declared in a namespace with complex comments
 [EnumGlobalInternal](EnumGlobalInternal.md)  
 [EnumGlobalSimple](EnumGlobalSimple.md)  
 Tests an enum declared in a namespace with simple comments.
+
+## Exceptions
+
+[ClassException](ClassException.md)  
+Supports test to link to custom exception.
 

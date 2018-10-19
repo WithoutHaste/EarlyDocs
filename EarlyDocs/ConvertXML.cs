@@ -58,7 +58,7 @@ namespace EarlyDocs
 
 
 
-
+			//todo: cleanup old method
 
 			LoadXML(xmlDocumentationFilename);
 			LoadAssembly(dllFilename);
