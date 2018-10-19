@@ -29,3 +29,24 @@
 
 [Floating Comment] [Short] [One Line] Ut massa nibh, rutrum nec urna in, interdum congue justo.
 
+## Methods
+
+### Void MethodA()
+
+[Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Nullam in quam vel metus faucibus pulvinar.
+
+**Returns:**  
+**Example:**  
+[Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.
+
+**Permission: MethodA**  
+[Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.
+
+**Exceptions:**  
+_System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.
+
+[Floating Comment] [Short] [One Line] Sed vehicula gravida efficitur.
+

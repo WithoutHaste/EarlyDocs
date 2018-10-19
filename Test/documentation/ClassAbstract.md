@@ -24,6 +24,36 @@ Tests abstract classes and members.
 
 ## Properties
 
+### int this[int]
+
+[Summary Tag] [Short] [One Line] Suspendisse et ultricies justo, et sagittis nibh.
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Proin non dui efficitur risus facilisis porta at at lectus.
+
+**Example:**  
+[Example Tag] [Short] [One Line] Maecenas pretium gravida laoreet.
+
+**Permission:**  
+[Permission Tag] [References Indexer] [Short] [One Line] Etiam convallis non elit ac dictum.
+
+[Floating Comment] [Short] [One Line] Vestibulum finibus nulla nec dui facilisis, sed venenatis sem dictum.
+
+### string this[string]
+
+[Summary Tag] [Short] [One Line] Suspendisse libero ex, pretium vel quam eget, convallis faucibus tortor.
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Nunc lorem magna, hendrerit eu justo vitae, iaculis consequat odio.
+
+**Example:**  
+[Example Tag] [Short] [One Line] Phasellus consectetur finibus mi quis dictum.
+
+**Permission:**  
+[Permission Tag] [References Indexer] [Short] [One Line] Fusce eu auctor arcu, ut interdum neque.
+
+[Floating Comment] [Short] [One Line] Integer elementum mauris ut venenatis consectetur.
+
 ### abstract int PropertyAbstract
 
 [Summary Tag] [Short] [One Line] Sed pharetra elit eget felis iaculis, nec mattis urna malesuada.
@@ -56,7 +86,7 @@ Tests abstract classes and members.
 
 ## Events
 
-###  EventA
+### EventHandler EventA
 
 [Summary Tag] [Short] [One Line] Donec non commodo ante, at commodo nulla.
 
@@ -73,6 +103,27 @@ Tests abstract classes and members.
 
 ## Methods
 
+### double MethodAbstract()
+
+[Summary Tag] [Short] [One Line] Donec facilisis, nibh eu faucibus rhoncus, diam ipsum scelerisque magna, imperdiet aliquet mi erat ut libero.
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Quisque dapibus sem eget eros pretium, ut porttitor nibh tempus.
+
+**Returns:**  
+[Returns Tag] [Short] [One Line] Nam semper purus tempor lectus sagittis pretium.
+
+**Example:**  
+[Example Tag] [Short] [One Line] Duis sed quam rutrum, hendrerit est ac, posuere lorem.
+
+**Permission: MethodAbstract**  
+[Permission Tag] [References Method] [Short] [One Line] In id facilisis libero.
+
+**Exceptions:**  
+_System.IO.FileNotFoundException: _[Exception Tag] [Short] [One Line] Cras sed diam ipsum.
+
+[Floating Comment] [Short] [One Line] Mauris lobortis lorem quis odio rhoncus lobortis.
+
 ### double MethodNotAbstract()
 
 [Summary Tag] [Short] [One Line] Suspendisse luctus scelerisque ipsum vitae cursus.
@@ -80,8 +131,17 @@ Tests abstract classes and members.
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Integer vestibulum elit sit amet diam bibendum ultrices.
 
-#### Examples
+**Returns:**  
+[Returns Tag] [Short] [One Line] In vestibulum imperdiet ligula, ac malesuada metus sodales quis.
 
-**Example A:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Vestibulum ultricies metus ante, a eleifend quam maximus in.
+
+**Permission: MethodNotAbstract**  
+[Permission Tag] [References Method] [Short] [One Line] Sed molestie, sapien non lobortis cursus, elit neque rhoncus nunc, sit amet pellentesque ex mauris vel velit.
+
+**Exceptions:**  
+_System.IO.FileNotFoundException: _[Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.
+
+[Floating Comment] [Short] [One Line] Proin quis justo id dolor posuere consequat non non nulla.
 

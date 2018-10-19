@@ -12,7 +12,11 @@ Tests see and seealso tags, i.e. test links.
 
 ###  ClassSeeAlso()
 
+**Returns:**  
+
 ## Methods
 
 ### string MethodWithParameters(int a, int b)
+
+**Returns:**  
 

@@ -54,9 +54,21 @@ Tests the use of multiple tags for tags where only one is expected: summary, rem
 
 ## Methods
 
-### System.Void MethodMultipleExceptions()
+### Void MethodMultipleExceptions()
 
-### System.Void MethodMultipleParams(int a, string b, int c, float d, List<System.Collections.Generic.List<System.Int32>> e, System.Boolean f)
+**Returns:**  
+**Exceptions:**  
+_System.ArgumentException: _[1st Exception Tag] Nullam feugiat odio felis.
+
+_System.ArgumentException: _[2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.
+
+_System.ArgumentException: _[3rd Exception Tag] Nulla sed magna sed velit dictum auctor.
+
+_System.IO.FileNotFoundException: _[4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.
+
+_Test.ClassException: _[5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.
+
+### Void MethodMultipleParams(int a, string b, int c, float d, List<System.Collections.Generic.List<System.Int32>> e, Boolean f)
 
 #### Parameters
 
@@ -84,7 +96,9 @@ Tests the use of multiple tags for tags where only one is expected: summary, rem
 
 [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.
 
-### System.Void MethodRepeatedOnceOnlyTags()
+**Returns:**  
+
+### Void MethodRepeatedOnceOnlyTags()
 
 [1st Summary Tag] Curabitur consequat nec risus vitae convallis.
 
@@ -98,4 +112,11 @@ Tests the use of multiple tags for tags where only one is expected: summary, rem
 [2nd Remarks Tag] Vivamus nisl ex, condimentum vitae posuere eget, imperdiet sed diam.
 
 [3rd Remarks Tag] Pellentesque vulputate suscipit molestie.
+
+**Returns:**  
+[1st Returns Tag] Cras sollicitudin laoreet massa, a consequat orci pellentesque sit amet.
+
+[2nd Returns Tag] Pellentesque a tempus libero.
+
+[3rd Returns Tag] Etiam nunc nunc, consequat sit amet leo vitae, laoreet malesuada tellus.
 

@@ -9,3 +9,5 @@ Supports test to link to custom exception.
 
 ###  ClassException(string message)
 
+**Returns:**  
+

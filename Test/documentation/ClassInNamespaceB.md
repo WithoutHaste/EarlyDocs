@@ -12,3 +12,5 @@ Tests a class in a nested namespace.
 
 ###  ClassInNamespaceB()
 
+**Returns:**  
+

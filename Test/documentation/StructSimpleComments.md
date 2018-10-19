@@ -55,10 +55,17 @@
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Mauris condimentum libero nibh, sit amet hendrerit nulla tempus ut.
 
-#### Examples
-
-**Example A:**  
+**Returns:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Nunc vel ullamcorper augue.
+
+**Permission: #ctor**  
+[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.
+
+**Exceptions:**  
+_System.Exception: _[Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.
+
+[Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.
 
 ## Static Methods
 
@@ -79,10 +86,19 @@
 
 [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.
 
-#### Examples
+**Returns:**  
+[Returns Tag] [Short] [One Line] Proin fringilla eros et lacinia hendrerit.
 
-**Example A:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Etiam vitae lorem in nunc sollicitudin accumsan sed ac sem.
+
+**Permission: StaticMethodWithParametersWithReturn**  
+[Permission Tag] [References Method] [Short] [One Line] Nunc ullamcorper egestas vulputate.
+
+**Exceptions:**  
+_System.ArgumentException: _[Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.
+
+[Floating Comment] [Short] [One Line] Vivamus convallis libero nec neque vestibulum porta.
 
 ## Methods
 
@@ -103,8 +119,17 @@
 
 [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.
 
-#### Examples
+**Returns:**  
+[Returns Tag] [Short] [One Line] Donec lobortis eros quis quam aliquam hendrerit.
 
-**Example A:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Nulla ullamcorper erat a urna porttitor, sed sodales nisl porttitor.
+
+**Permission: MethodWithParametersWithReturn**  
+[Permission Tag] [References Method] [Short] [One Line] Cras eget dignissim nisi, lacinia semper turpis.
+
+**Exceptions:**  
+_System.ArgumentException: _[Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.
+
+[Floating Comment] [Short] [One Line] Quisque sit amet ante eu nulla laoreet auctor.
 

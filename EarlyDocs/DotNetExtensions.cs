@@ -10,6 +10,28 @@ namespace EarlyDocs
 {
 	public static class DotNetExtensions
 	{
+		public static string ToHeader(this DotNetField field)
+		{
+			if(field is DotNetProperty)
+				return ToHeader(field as DotNetProperty);
+			return field.TypeName.ToDisplayString() + " " + field.Name.LocalName;
+		}
+
+		public static string ToHeader(this DotNetProperty property)
+		{
+			if(property is DotNetIndexer)
+				return ToHeader(property as DotNetIndexer);
+			string header = property.TypeName.ToDisplayString() + " " + property.Name.LocalName;
+			if(property.Category == FieldCategory.Abstract)
+				header = "abstract " + header;
+			return header;
+		}
+
+		public static string ToHeader(this DotNetIndexer indexer)
+		{
+			return indexer.TypeName.ToDisplayString() + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayString()).ToArray()) + "]";
+		}
+
 		public static string ToDisplayString(this DotNetParameter parameter)
 		{
 			if(parameter.TypeName == null)
@@ -48,6 +70,7 @@ namespace EarlyDocs
 			switch(name.FullNamespace)
 			{
 				case "System.Collections.Generic": return name.LocalName;
+				case "System": return name.LocalName;
 			}
 			return name.FullName;
 		}
@@ -121,9 +144,19 @@ namespace EarlyDocs
 			if(type.Properties.Count > 0)
 			{
 				MarkdownSection propertySection = typeSection.AddSection("Properties");
-				foreach(DotNetProperty p in type.Properties.OrderBy(m => m.Name.LocalName))
+				if(type.IndexerProperties.Count > 0)
 				{
-					propertySection.AddSection(ToMarkdownSection(p as DotNetField));
+					foreach(DotNetIndexer i in type.IndexerProperties.OrderBy(m => m.Parameters.Count).ThenBy(m => m.ParameterTypesSignature))
+					{
+						propertySection.AddSection(ToMarkdownSection(i as DotNetField));
+					}
+				}
+				if(type.NormalProperties.Count > 0)
+				{
+					foreach(DotNetProperty p in type.NormalProperties.OrderBy(m => m.Name.LocalName))
+					{
+						propertySection.AddSection(ToMarkdownSection(p as DotNetField));
+					}
 				}
 			}
 			if(type.Events.Count > 0)
@@ -139,7 +172,7 @@ namespace EarlyDocs
 			MethodsToMarkdown(typeSection, "Static Methods", type.StaticMethods);
 			MethodsToMarkdown(typeSection, "Methods", type.NormalMethods);
 			MethodsToMarkdown(typeSection, "Operators", type.OperatorMethods.Cast<DotNetMethod>().ToList());
-			/*
+			/* todo Nested Types
 			if(NestedTypes.Count > 0)
 			{
 				MarkdownSection nestedTypeSection = typeSection.AddSection("Nested Types");
@@ -154,15 +187,7 @@ namespace EarlyDocs
 
 		public static MarkdownSection ToMarkdownSection(this DotNetField field)
 		{
-			string header = field.TypeName.ToDisplayString() + " " + field.Name.LocalName;
-			if(field is DotNetProperty)
-			{
-				if((field as DotNetProperty).Category == FieldCategory.Abstract)
-				{
-					header = "abstract " + header;
-				}
-			}
-			MarkdownSection memberSection = new MarkdownSection(header);
+			MarkdownSection memberSection = new MarkdownSection(field.ToHeader());
 
 			if(field.SummaryComments.Count > 0)
 			{
@@ -209,6 +234,7 @@ namespace EarlyDocs
 				header += "()";
 			else
 				header += String.Format("({0})", String.Join(", ", method.Parameters.Select(p => p.ToDisplayString()).ToArray()));
+			//todo: mark abstract
 			MarkdownSection memberSection = new MarkdownSection(header);
 
 			if(method.SummaryComments.Count > 0)
@@ -230,16 +256,43 @@ namespace EarlyDocs
 					parameterSection.AddSection(ToMarkdownSection(comment));
 				}
 			}
+			if(method.ReturnsComments != null)
+			{
+				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Returns:")));
+				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.ReturnsComments));
+			}
 			if(method.ExampleComments.Count > 0)
 			{
-				MarkdownSection exampleSection = memberSection.AddSection("Examples");
-				char index = 'A';
+				char index = 'A'; //todo cleanup duplicated example sections
 				foreach(DotNetComment comment in method.ExampleComments)
 				{
-					exampleSection.Add(new MarkdownLine(MarkdownText.Bold("Example " + index + ":")));
-					exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+					string exampleHeader = "Example " + index + ":";
+					if(method.ExampleComments.Count == 1)
+						exampleHeader = "Example:";
+					memberSection.Add(new MarkdownLine(MarkdownText.Bold(exampleHeader)));
+					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 					index++;
 				}
+			}
+			foreach(DotNetCommentQualifiedLinkedGroup comment in method.PermissionComments)
+			{
+				string permissionHeader = "Permission: " + comment.QualifiedLink.Name.ToDisplayString(method.Name.FullNamespace);
+				//todo: if method matches full signature of cref
+				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
+				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+			}
+			if(method.ExceptionComments.Count > 0)
+			{
+				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Exceptions:")));
+				foreach(DotNetCommentQualifiedLinkedGroup comment in method.ExceptionComments)
+				{
+					memberSection.Add(MarkdownText.Italic(comment.QualifiedLink.Name.FullName + ": "));
+					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				}
+			}
+			if(method.FloatingComments != null)
+			{
+				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.FloatingComments));
 			}
 
 			//todo: param/typeparam info

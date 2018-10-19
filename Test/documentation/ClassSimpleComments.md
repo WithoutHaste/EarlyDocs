@@ -50,6 +50,21 @@
 
 ## Properties
 
+### string this[int]
+
+[Summary Tag] [Short] [One Line] Integer condimentum gravida ante at blandit.
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Aliquam luctus libero dui, sit amet porta tellus scelerisque eget.
+
+**Example:**  
+[Example Tag] [Short] [One Line] Nullam in sem ac ipsum dignissim gravida.
+
+**Permission:**  
+[Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.
+
+[Floating Comment] [Short] [One Line] Mauris aliquam pharetra ex id posuere.
+
 ### int IntegerProperty
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.
@@ -74,10 +89,17 @@
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Sed nec tincidunt velit.
 
-#### Examples
-
-**Example A:**  
+**Returns:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Suspendisse ut euismod est, nec dictum augue.
+
+**Permission: #ctor**  
+[Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.
+
+**Exceptions:**  
+_System.Exception: _[Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.
+
+[Floating Comment] [Short] [One Line] Aenean maximus maximus dui, vel ornare est tempor sit amet.
 
 ###  ClassSimpleComments(int a, string b)
 
@@ -96,10 +118,17 @@
 
 [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.
 
-#### Examples
-
-**Example A:**  
+**Returns:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Sed quis dignissim odio, non facilisis felis.
+
+**Permission: #ctor**  
+[Permission Tag] [References Constructor] [Short] [One Line] Nullam viverra placerat lacus, vitae bibendum justo interdum quis.
+
+**Exceptions:**  
+_System.ArgumentException: _[Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.
+
+[Floating Comment] [Short] [One Line] Ut dictum massa at iaculis semper.
 
 ## Static Methods
 
@@ -120,22 +149,38 @@
 
 [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.
 
-#### Examples
+**Returns:**  
+[Returns Tag] [Short] [One Line] Maecenas sed orci accumsan, dictum arcu nec, eleifend est.
 
-**Example A:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Sed quis mollis justo, sit amet vulputate justo.
+
+**Permission: StaticMethodWithParametersWithReturn**  
+[Permission Tag] [References Method] [Short] [One Line] In pharetra magna id lorem fermentum rutrum.
+
+**Exceptions:**  
+_System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.
+
+[Floating Comment] [Short] [One Line] Suspendisse sed purus et arcu hendrerit posuere at sit amet orci.
 
 ## Methods
 
-### System.Void MethodWithoutParameters()
+### Void MethodWithoutParameters()
 
 [Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Maecenas vel nunc fringilla urna pellentesque volutpat quis ac sapien.
 
-#### Examples
-
-**Example A:**  
+**Returns:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Suspendisse ultrices porta sem sed eleifend.
+
+**Permission: MethodWithoutParameters**  
+[Permission Tag] [References Method] [Short] [One Line] Suspendisse auctor purus sit amet eros iaculis semper.
+
+**Exceptions:**  
+_System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.
+
+[Floating Comment] [Short] [One Line] In auctor dui et massa sagittis, ut consequat mauris interdum.
 

@@ -6,7 +6,7 @@ Tests overloaded methods.
 
 ## Methods
 
-### System.Void MethodOverload(int a, int b)
+### Void MethodOverload(int a, int b)
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.
 
@@ -23,12 +23,23 @@ Tests overloaded methods.
 
 [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.
 
-#### Examples
-
-**Example A:**  
+**Returns:**  
+**Example:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.
 
-### System.Void MethodOverload(double a, double b)
+**Permission: MethodOverload**  
+[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.
 
-### System.Void MethodOverload(float a, float b)
+**Exceptions:**  
+_System.ArgumentException: _[Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.
+
+[Floating Comment] [Short] [One Line] Nulla facilisi.
+
+### Void MethodOverload(double a, double b)
+
+**Returns:**  
+
+### Void MethodOverload(float a, float b)
+
+**Returns:**  
 

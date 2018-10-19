@@ -7,25 +7,25 @@ Tests the display of common data types that have recognized aliases in .Net.
 
 ## Fields
 
-### System.Action<System.Int32> FieldAction
+### Action<System.Int32> FieldAction
 
-### System.Boolean FieldBoolean
+### Boolean FieldBoolean
 
-### System.Byte FieldByte
+### Byte FieldByte
 
-### System.Char FieldChar
+### Char FieldChar
 
-### System.Decimal FieldDecimal
+### Decimal FieldDecimal
 
 ### Dictionary<System.Int32,System.String> FieldDictionary
 
 ### double FieldDouble
 
-### System.Exception FieldException
+### Exception FieldException
 
 ### float FieldFloat
 
-### System.Func<System.Int32,System.String> FieldFunc
+### Func<System.Int32,System.String> FieldFunc
 
 ### int FieldInt
 
@@ -33,15 +33,15 @@ Tests the display of common data types that have recognized aliases in .Net.
 
 ### long FieldLong
 
-### System.SByte FieldSByte
+### SByte FieldSByte
 
 ### short FieldShort
 
 ### string FieldString
 
-### System.UInt32 FieldUInt
+### UInt32 FieldUInt
 
-### System.UInt64 FieldULong
+### UInt64 FieldULong
 
-### System.UInt16 FieldUShort
+### UInt16 FieldUShort
 
