@@ -1,0 +1,34 @@
+# ClassMethodOverloading
+
+**Inheritance:** System.Object  
+  
+Tests overloaded methods.
+
+## Methods
+
+### MethodOverload(int a, int b)
+
+[Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.
+
+#### Parameters
+
+##### a
+
+[Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.
+
+##### b
+
+[Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.
+
+#### Examples
+
+**Example A:**  
+[Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.
+
+### MethodOverload(double a, double b)
+
+### MethodOverload(float a, float b)
+

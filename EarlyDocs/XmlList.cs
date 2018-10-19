@@ -30,17 +30,18 @@ namespace EarlyDocs
 		//todo: support numbered lists and table
 		public XmlList(string tag)
 		{
-			XElement element = XElement.Parse(tag); //expects <list> tag
-			IsNumbered = (element.Attribute("type").Value == "number");
-			XElement header = element.Descendants().FirstOrDefault(d => d.Name == "listheader");
-			if(header != null)
-			{
-				Header = new XmlListItem(header);
-			}
-			foreach(XElement item in element.Descendants().Where(d => d.Name == "item"))
-			{
-				Elements.Add(new XmlListItem(item));
-			}
+			//todo: translate to DotNet structure
+			//XElement element = XElement.Parse(tag); //expects <list> tag
+			//IsNumbered = (element.Attribute("type").Value == "number");
+			//XElement header = element.Descendants().FirstOrDefault(d => d.Name == "listheader");
+			//if(header != null)
+			//{
+			//	Header = new XmlListItem(header);
+			//}
+			//foreach(XElement item in element.Descendants().Where(d => d.Name == "item"))
+			//{
+			//	Elements.Add(new XmlListItem(item));
+			//}
 		}
 
 		public void Add(IXmlInList element)

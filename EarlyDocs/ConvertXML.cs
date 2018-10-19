@@ -230,6 +230,9 @@ namespace EarlyDocs
 
 		private void Save(DotNetType type, string directory, string filename)
 		{
+			//todo: move formatting of filename to central location that links can use
+			filename = filename.Replace("<", "_").Replace(">", "_").Replace(",", "_");
+
 			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
 			{
 				writer.Write(type.ToMarkdownFile().ToMarkdown());

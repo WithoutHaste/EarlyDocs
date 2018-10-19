@@ -67,8 +67,15 @@ namespace EarlyDocs
 			}
 			if(type.ExampleComments.Count > 0)
 			{
+				//todo: duplicate code with method examples
 				MarkdownSection exampleSection = typeSection.AddSection("Examples");
-				exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(type.ExampleComments));
+				char index = 'A';
+				foreach(DotNetComment comment in type.ExampleComments)
+				{
+					exampleSection.Add(new MarkdownLine(MarkdownText.Bold("Example " + index + ":")));
+					exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+					index++; //todo: if more than 26 comments, loop to AA,AB,...
+				}
 			}
 			if(type.NestedEnums.Count > 0)
 			{
@@ -188,9 +195,14 @@ namespace EarlyDocs
 			}
 			if(method.ExampleComments.Count > 0)
 			{
-				//todo: label examples as A, B, C...
 				MarkdownSection exampleSection = memberSection.AddSection("Examples");
-				exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.ExampleComments));
+				char index = 'A';
+				foreach(DotNetComment comment in method.ExampleComments)
+				{
+					exampleSection.Add(new MarkdownLine(MarkdownText.Bold("Example " + index + ":")));
+					exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+					index++;
+				}
 			}
 
 			//todo: param/typeparam info

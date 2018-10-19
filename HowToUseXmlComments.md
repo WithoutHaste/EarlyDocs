@@ -398,7 +398,18 @@ If you know how to cref a static constructor, please message me.
 
 ```
 /// <see cref="MyEventHandler" />
+/// <see cref="FullNamespace.MyEventHandler"/>
 public delegate void MyEventHandler(object sender, EventArgs e);
+```
+
+```
+/// <see cref="MyEventHandler" />
+/// <see cref="MyType.MyEventHandler"/>
+/// <see cref="FullNamespace.MyType.MyEventHandler"/>
+public class MyType
+{
+	public delegate void MyEventHandler(object sender, EventArgs e);
+}
 ```
 
 **Field**

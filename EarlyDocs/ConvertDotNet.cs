@@ -22,14 +22,24 @@ namespace EarlyDocs
 
 			foreach(DotNetComment comment in list)
 			{
-				if(comment is DotNetCommentGroup)
-				{
-					markdown.AddRange(DotNetCommentGroupToMarkdown(comment as DotNetCommentGroup));
-				}
-				else if(comment is DotNetCommentText)
-				{
-					markdown.Add(new MarkdownParagraph((comment as DotNetCommentText).Text));
-				}
+				markdown.AddRange(DotNetCommentsToMarkdown(comment));
+			}
+
+			return markdown;
+		}
+
+		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(DotNetComment comment)
+		{
+			//todo: expand support
+			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
+
+			if(comment is DotNetCommentGroup)
+			{
+				markdown.AddRange(DotNetCommentGroupToMarkdown(comment as DotNetCommentGroup));
+			}
+			else if(comment is DotNetCommentText)
+			{
+				markdown.Add(new MarkdownParagraph((comment as DotNetCommentText).Text));
 			}
 
 			return markdown;

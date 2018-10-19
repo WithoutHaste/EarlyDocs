@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassAbstract.cs" />
+    <Compile Include="ClassCommentsNestedWrong.cs" />
     <Compile Include="ClassCommonTypeAliases.cs" />
-    <Compile Include="ClassEvents.cs" />
+    <Compile Include="ClassComplexComments.cs" />
+    <Compile Include="ClassEventsDelegates.cs" />
     <Compile Include="ClassFieldPropertyModifiers.cs" />
     <Compile Include="ClassFieldPropertyValue.cs" />
     <Compile Include="ClassInherits.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="ClassSimpleCommentsGeneric.cs" />
     <Compile Include="ClassStatic.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="IInterfaceInherits.cs" />
     <Compile Include="IInterfaceSimpleComments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpaceA\ClassInNamespaceA.cs" />
