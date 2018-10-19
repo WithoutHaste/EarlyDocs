@@ -228,7 +228,7 @@
           <Data ss:Type="Number">12</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">ClassMultipleOnceTags</Data>
+          <Data ss:Type="String">ClassRepeatedTags</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -340,6 +340,23 @@
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">27</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">ClassSeeAlso</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Test</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-19T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -463,6 +480,23 @@
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">28</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">ClassException</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Test</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-19T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">26</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -555,7 +589,7 @@
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">26</Data>
+          <Data ss:Type="Number">28</Data>
         </Cell>
       </Row>
       <Row>
@@ -587,8 +621,7 @@
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">
-          </Data>
+          <Data ss:Type="String">Inactive</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">

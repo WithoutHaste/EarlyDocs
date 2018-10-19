@@ -84,5 +84,32 @@ namespace Test
 	/// </example>
 	public class ClassComplexComments
 	{
+		/// <exception cref="IndexOutOfRangeException">
+		/// [1st Exception Tag] [Has Example] Cras ante risus, sodales quis massa vel, pulvinar auctor ipsum.
+		///   <example>
+		///   Fusce ligula ipsum, porttitor at velit ut, commodo auctor ligula. Nunc imperdiet, justo sed bibendum laoreet, nibh purus laoreet dolor, 
+		///   vitae consectetur sem erat quis ipsum. Nam tincidunt non magna in mattis. Curabitur nec efficitur sapien, vel rutrum odio.
+		///   </example>
+		/// </exception>
+		/// <exception cref="System.IO.FileNotFoundException">[2nd Exception Tag] [Has ParamRef] Nulla facilisi. Donec fermentum nisl felis, <paramref name="x"/> ac <paramref name="y"/> venenatis tellus tincidunt ultrices.</exception>
+		/// <exception cref="ArgumentException">[3rd Exception Tag] [Has TypeParamRef] Vestibulum ante ipsum primis in faucibus orci <typeparamref name="A"/> luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.</exception>
+		public void MethodComplexExceptions<A>(string x, A y, int z)
+		{
+		}
+
+		/// <typeparam name="A">[TypeParam Tag] [Has Example] <example>Donec euismod mollis dui, non bibendum quam porta non.</example> Nunc mollis leo est, in bibendum lacus rhoncus maximus.</typeparam>
+		/// <param name="z">[Param Rag] [Has Example] 
+		///   <example>
+		///   Maecenas molestie, nisi nec cursus malesuada, nisi est egestas lacus, mollis aliquam urna elit eu mauris. Maecenas lobortis congue nisi. Praesent tincidunt sagittis mi non semper.
+		///   </example>
+		///   Vestibulum convallis sapien eget nunc sagittis cursus. Pellentesque suscipit urna nulla, 
+		///   non vestibulum enim tempus euismod. Suspendisse mattis purus at mauris imperdiet, vitae 
+		///   volutpat urna commodo. Cras justo dolor, aliquet a nibh sed, porttitor fringilla odio. 
+		///   
+		///   Vestibulum metus lorem, pulvinar sed maximus ac, efficitur ac odio.
+		/// </param>
+		public void MethodComplexParamsAndTypeParams<A>(string x, A y, int z)
+		{
+		}
 	}
 }
