@@ -25,7 +25,7 @@ Tests the use of multiple tags for tags where only one is expected: summary, rem
 
 ## Methods
 
-### MethodA()
+### System.Void MethodA()
 
 [1st Summary Tag] Curabitur consequat nec risus vitae convallis.
 

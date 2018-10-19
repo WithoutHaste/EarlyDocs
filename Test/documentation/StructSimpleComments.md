@@ -42,7 +42,7 @@
 
 ## Constructors
 
-### StructSimpleComments()
+###  StructSimpleComments()
 
 [Summary Tag] [Short] [One Line] Nam sollicitudin, tortor sit amet cursus sollicitudin, nunc sem pretium ante, et ultrices lectus nibh sollicitudin arcu.
 
@@ -56,7 +56,7 @@
 
 ## Static Methods
 
-### StaticMethodWithParametersWithReturn(int a, string b)
+### double StaticMethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.
 
@@ -80,7 +80,7 @@
 
 ## Methods
 
-### MethodWithParametersWithReturn(int a, string b)
+### float MethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Donec sollicitudin sem et nisi laoreet, et gravida nulla scelerisque.
 

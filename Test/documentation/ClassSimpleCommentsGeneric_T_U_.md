@@ -42,7 +42,7 @@
 
 ## Constructors
 
-### ClassSimpleCommentsGeneric<T,U>()
+###  ClassSimpleCommentsGeneric<T,U>()
 
 [Summary Tag] [Short] [One Line] Cras a arcu sem.
 
@@ -54,7 +54,7 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Phasellus bibendum mauris eget justo tempor, non imperdiet dolor maximus.
 
-### ClassSimpleCommentsGeneric<T,U>(T, U)
+###  ClassSimpleCommentsGeneric<T,U>(T, U)
 
 [Summary Tag] [Short] [One Line] Phasellus interdum purus interdum dolor lacinia mollis.
 
@@ -78,7 +78,7 @@
 
 ## Methods
 
-### Finalize()
+### System.Void Finalize()
 
 [Summary Tag] [Short] [One Line] Quisque scelerisque elit a massa semper luctus.
 

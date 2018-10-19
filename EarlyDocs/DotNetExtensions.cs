@@ -21,6 +21,9 @@ namespace EarlyDocs
 
 		public static string ToDisplayString(this DotNetQualifiedName name)
 		{
+			if(name == null)
+				return "";
+
 			switch(name.FullName)
 			{
 				case "System.Double": return "double";
@@ -167,7 +170,7 @@ namespace EarlyDocs
 
 		public static MarkdownSection ToMarkdownSection(this DotNetMethod method)
 		{
-			string header = method.Name.LocalName;
+			string header = method.ReturnTypeName.ToDisplayString() + " " + method.Name.LocalName;
 			if(method.Parameters == null || method.Parameters.Count == 0)
 				header += "()";
 			else

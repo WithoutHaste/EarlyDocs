@@ -6,7 +6,7 @@ Tests overloaded methods.
 
 ## Methods
 
-### MethodOverload(int a, int b)
+### System.Void MethodOverload(int a, int b)
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.
 
@@ -28,7 +28,7 @@ Tests overloaded methods.
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.
 
-### MethodOverload(double a, double b)
+### System.Void MethodOverload(double a, double b)
 
-### MethodOverload(float a, float b)
+### System.Void MethodOverload(float a, float b)
 

@@ -27,7 +27,7 @@
 
 ## Methods
 
-### MethodA()
+### System.Void MethodA()
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.
 

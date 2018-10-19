@@ -61,7 +61,7 @@
 
 ## Constructors
 
-### ClassSimpleComments()
+###  ClassSimpleComments()
 
 [Summary Tag] [Short] [One Line] Nam ornare velit eget sagittis hendrerit.
 
@@ -73,7 +73,7 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Suspendisse ut euismod est, nec dictum augue.
 
-### ClassSimpleComments(int a, string b)
+###  ClassSimpleComments(int a, string b)
 
 [Summary Tag] [Short] [One Line] Sed eu molestie augue, sed congue sapien.
 
@@ -97,7 +97,7 @@
 
 ## Static Methods
 
-### StaticMethodWithParametersWithReturn(int a, string b)
+### string StaticMethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Vivamus et ex convallis, egestas justo ut, faucibus arcu.
 
@@ -121,7 +121,7 @@
 
 ## Methods
 
-### Finalize()
+### System.Void Finalize()
 
 [Summary Tag] [Short] [One Line] Aenean quam urna, pharetra vel malesuada ut, gravida ac libero.
 
@@ -133,7 +133,7 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Maecenas eu vestibulum mi, sit amet consequat urna.
 
-### MethodVirtual()
+### int MethodVirtual()
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.
 
@@ -145,7 +145,7 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.
 
-### MethodWithoutParameters()
+### System.Void MethodWithoutParameters()
 
 [Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.
 

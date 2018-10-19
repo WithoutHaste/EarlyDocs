@@ -12,5 +12,5 @@ Tests a class in a nested namespace.
 
 ## Constructors
 
-### ClassInNamespaceA()
+###  ClassInNamespaceA()
 

@@ -11,7 +11,7 @@ Tests class inheritance.
 
 ## Methods
 
-### MethodA()
+### System.Void MethodA()
 
-### MethodVirtual()
+### int MethodVirtual()
 
