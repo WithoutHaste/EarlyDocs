@@ -1,6 +1,6 @@
 # ClassPartial
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 [Part A] Tests partial class, where there are comments on each part.
 

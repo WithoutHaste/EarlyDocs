@@ -55,6 +55,8 @@ namespace EarlyDocs
 
 			DotNetDocumentationFile xmlDocumentation = new DotNetDocumentationFile(xmlDocumentationFilename);
 			xmlDocumentation.AddAssemblyInfo(dllFilename);
+			DotNetSettings.QualifiedNameConverter = DotNetSettings.DefaultQualifiedNameConverter;
+			DotNetSettings.AdditionalQualifiedNameConverter = DotNetExtensions.QualifiedNameConverter;
 
 
 

@@ -1,6 +1,6 @@
 # ClassCommentsNestedWrong
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests the incorrect nested of comments.
 

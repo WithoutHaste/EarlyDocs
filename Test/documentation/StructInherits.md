@@ -1,6 +1,6 @@
 # StructInherits
 
-**Inheritance:** System.Object → Test.StructSimpleComments  
+**Inheritance:** object → Test.StructSimpleComments  
   
 Tests struct inheritance.
 

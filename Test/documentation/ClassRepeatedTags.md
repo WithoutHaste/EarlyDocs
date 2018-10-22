@@ -1,6 +1,6 @@
 # ClassRepeatedTags
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests the use of multiple tags for tags where only one is expected: summary, remarks, returns, value.
             Tests the use of multiple tags for tags where multiple are expected: example, exception, param, typeparam, permission.
@@ -54,21 +54,20 @@ Tests the use of multiple tags for tags where only one is expected: summary, rem
 
 # Methods
 
-## Void MethodMultipleExceptions()
+## void MethodMultipleExceptions()
 
-**Returns:**  
 **Exceptions:**  
-_System.ArgumentException:_ [1st Exception Tag] Nullam feugiat odio felis.
+_ArgumentException:_ [1st Exception Tag] Nullam feugiat odio felis.
 
-_System.ArgumentException:_ [2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.
+_ArgumentException:_ [2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.
 
-_System.ArgumentException:_ [3rd Exception Tag] Nulla sed magna sed velit dictum auctor.
+_ArgumentException:_ [3rd Exception Tag] Nulla sed magna sed velit dictum auctor.
 
 _System.IO.FileNotFoundException:_ [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.
 
 _Test.ClassException:_ [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.
 
-## Void MethodMultipleParams(int a, string b, int c, float d, List<System.Collections.Generic.List<System.Int32>> e, Boolean f)
+## void MethodMultipleParams(int a, string b, int c, float d, List<List<int>> e, bool f)
 
 ### Parameters
 
@@ -96,9 +95,7 @@ _Test.ClassException:_ [5th Exception Tag] Nullam fermentum libero placerat lacu
 
 [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.
 
-**Returns:**  
-
-## Void MethodRepeatedOnceOnlyTags()
+## void MethodRepeatedOnceOnlyTags()
 
 [1st Summary Tag] Curabitur consequat nec risus vitae convallis.
 

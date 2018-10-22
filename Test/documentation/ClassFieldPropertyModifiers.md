@@ -1,6 +1,6 @@
 # ClassFieldPropertyModifiers
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests modifiers on fields and properties.
 

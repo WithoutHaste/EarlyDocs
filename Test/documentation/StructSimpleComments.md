@@ -1,6 +1,6 @@
 # StructSimpleComments
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 [Summary Tag] [Short] [One Line] Donec porttitor mi in odio fermentum lobortis.
 
@@ -55,7 +55,6 @@
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Mauris condimentum libero nibh, sit amet hendrerit nulla tempus ut.
 
-**Returns:**  
 **Example:**  
 [Example Tag] [Short] [One Line] Nunc vel ullamcorper augue.
 
@@ -63,7 +62,7 @@
 [Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.
 
 **Exceptions:**  
-_System.Exception:_ [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.
+_Exception:_ [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.
 
 [Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.
 
@@ -96,7 +95,7 @@ _System.Exception:_ [Exception Tag] [Short] [One Line] Fusce tristique efficitur
 [Permission Tag] [References Method] [Short] [One Line] Nunc ullamcorper egestas vulputate.
 
 **Exceptions:**  
-_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.
 
 [Floating Comment] [Short] [One Line] Vivamus convallis libero nec neque vestibulum porta.
 
@@ -129,7 +128,7 @@ _System.ArgumentException:_ [Exception Tag] [Short] [One Line] Suspendisse ornar
 [Permission Tag] [References Method] [Short] [One Line] Cras eget dignissim nisi, lacinia semper turpis.
 
 **Exceptions:**  
-_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.
 
 [Floating Comment] [Short] [One Line] Quisque sit amet ante eu nulla laoreet auctor.
 

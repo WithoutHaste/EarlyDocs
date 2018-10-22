@@ -1,6 +1,6 @@
 # ClassListComments
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests lists and tables in comments.
 

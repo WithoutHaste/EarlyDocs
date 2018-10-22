@@ -1,6 +1,6 @@
 # ClassInNamespaceA
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests a class in a nested namespace.
 
@@ -11,6 +11,4 @@ Tests a class in a nested namespace.
 # Constructors
 
 ##  ClassInNamespaceA()
-
-**Returns:**  
 

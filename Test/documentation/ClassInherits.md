@@ -1,6 +1,6 @@
 # ClassInherits
 
-**Inheritance:** System.Object → Test.ClassSimpleComments  
+**Inheritance:** object → Test.ClassSimpleComments  
 **Implements:** Test.IInterfaceSimpleComments  
   
 Tests class inheritance.

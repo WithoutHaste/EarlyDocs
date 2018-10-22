@@ -1,6 +1,6 @@
 # ClassSimpleCommentsGeneric<T,U>
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 [Summary Tag] [Short] [One Line] Cras suscipit et sapien ac tincidunt.
 
@@ -70,7 +70,6 @@
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-**Returns:**  
 **Example:**  
 [Example Tag] [Short] [One Line] Phasellus bibendum mauris eget justo tempor, non imperdiet dolor maximus.
 
@@ -78,7 +77,7 @@
 [Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.
 
 **Exceptions:**  
-_System.Exception:_ [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.
+_Exception:_ [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.
 
 [Floating Comment] [Short] [One Line] Ut nunc mauris, varius at enim in, elementum tempor metus.
 
@@ -99,7 +98,6 @@ _System.Exception:_ [Exception Tag] [Short] [One Line] Proin vel libero aliquam,
 
 [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.
 
-**Returns:**  
 **Example:**  
 [Example Tag] [Short] [One Line] In gravida, ex accumsan pellentesque pretium, elit ex pharetra arcu, feugiat maximus dui est nec ligula.
 
@@ -107,7 +105,7 @@ _System.Exception:_ [Exception Tag] [Short] [One Line] Proin vel libero aliquam,
 [Permission Tag] [References Constructor] [Short] [One Line] Pellentesque vitae metus nec sem tristique mollis pharetra ac magna.
 
 **Exceptions:**  
-_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.
 
 [Floating Comment] [Short] [One Line] Duis at enim gravida, commodo purus a, vulputate ligula.
 

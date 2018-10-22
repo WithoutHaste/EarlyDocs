@@ -1,6 +1,6 @@
 # ClassComplexComments
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 [Summary Tag] [Multiline] Ut eleifend dignissim viverra. Donec ut nisl id augue dapibus 
              congue eget et risus. Nulla id gravida felis, nec viverra lectus. 

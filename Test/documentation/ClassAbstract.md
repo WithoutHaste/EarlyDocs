@@ -1,7 +1,7 @@
 # ClassAbstract
 
 **Abstract**  
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests abstract classes and members.
 

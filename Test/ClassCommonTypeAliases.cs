@@ -55,6 +55,9 @@ namespace Test
 		public string FieldString;
 
 		/// <summary></summary>
+		public object FieldObject;
+
+		/// <summary></summary>
 		public List<int> FieldList;
 
 		/// <summary></summary>
@@ -68,5 +71,65 @@ namespace Test
 
 		/// <summary></summary>
 		public Func<int, string> FieldFunc;
+
+		/// <summary></summary>
+		public void MethodBoolean(bool a) { }
+
+		/// <summary></summary>
+		public void MethodByte(byte a) { }
+
+		/// <summary></summary>
+		public void MethodSByte(sbyte a) { }
+
+		/// <summary></summary>
+		public void MethodShort(short a) { }
+
+		/// <summary></summary>
+		public void MethodUShort(ushort a) { }
+
+		/// <summary></summary>
+		public void MethodInt(int a) { }
+
+		/// <summary></summary>
+		public void MethodUInt(uint a) { }
+
+		/// <summary></summary>
+		public void MethodLong(long a) { }
+
+		/// <summary></summary>
+		public void MethodULong(ulong a) { }
+
+		/// <summary></summary>
+		public void MethodFloat(float a) { }
+
+		/// <summary></summary>
+		public void MethodDouble(double a) { }
+
+		/// <summary></summary>
+		public void MethodDecimal(decimal a) { }
+
+		/// <summary></summary>
+		public void MethodChar(char a) { }
+
+		/// <summary></summary>
+		public void MethodString(string a) { }
+
+		/// <summary></summary>
+		public void MethodObject(object a) { }
+
+		/// <summary></summary>
+		public void MethodList(List<int> a) { }
+
+		/// <summary></summary>
+		public void MethodDictionary(Dictionary<int, string> a) { }
+
+		/// <summary></summary>
+		public void MethodException(Exception a) { }
+
+		/// <summary></summary>
+		public void MethodAction(Action<int> a) { }
+
+		/// <summary></summary>
+		public void MethodFunc(Func<int, string> a) { }
 	}
 }

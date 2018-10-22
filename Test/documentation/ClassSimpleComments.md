@@ -1,6 +1,6 @@
 # ClassSimpleComments
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 [Summary Tag] [Short] [One Line] Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
@@ -89,7 +89,6 @@
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Sed nec tincidunt velit.
 
-**Returns:**  
 **Example:**  
 [Example Tag] [Short] [One Line] Suspendisse ut euismod est, nec dictum augue.
 
@@ -97,7 +96,7 @@
 [Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.
 
 **Exceptions:**  
-_System.Exception:_ [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.
+_Exception:_ [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.
 
 [Floating Comment] [Short] [One Line] Aenean maximus maximus dui, vel ornare est tempor sit amet.
 
@@ -118,7 +117,6 @@ _System.Exception:_ [Exception Tag] [Short] [One Line] Vestibulum condimentum ti
 
 [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.
 
-**Returns:**  
 **Example:**  
 [Example Tag] [Short] [One Line] Sed quis dignissim odio, non facilisis felis.
 
@@ -126,7 +124,7 @@ _System.Exception:_ [Exception Tag] [Short] [One Line] Vestibulum condimentum ti
 [Permission Tag] [References Constructor] [Short] [One Line] Nullam viverra placerat lacus, vitae bibendum justo interdum quis.
 
 **Exceptions:**  
-_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.
 
 [Floating Comment] [Short] [One Line] Ut dictum massa at iaculis semper.
 
@@ -159,20 +157,19 @@ _System.ArgumentException:_ [Exception Tag] [Short] [One Line] Vivamus vitae con
 [Permission Tag] [References Method] [Short] [One Line] In pharetra magna id lorem fermentum rutrum.
 
 **Exceptions:**  
-_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.
 
 [Floating Comment] [Short] [One Line] Suspendisse sed purus et arcu hendrerit posuere at sit amet orci.
 
 # Methods
 
-## Void MethodWithoutParameters()
+## void MethodWithoutParameters()
 
 [Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Maecenas vel nunc fringilla urna pellentesque volutpat quis ac sapien.
 
-**Returns:**  
 **Example:**  
 [Example Tag] [Short] [One Line] Suspendisse ultrices porta sem sed eleifend.
 
@@ -180,7 +177,7 @@ _System.ArgumentException:_ [Exception Tag] [Short] [One Line] Aliquam et ante n
 [Permission Tag] [References Method] [Short] [One Line] Suspendisse auctor purus sit amet eros iaculis semper.
 
 **Exceptions:**  
-_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.
 
 [Floating Comment] [Short] [One Line] In auctor dui et massa sagittis, ut consequat mauris interdum.
 

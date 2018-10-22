@@ -1,6 +1,6 @@
 # ClassFormattingErrors
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests formatting errors in xml comments.
 

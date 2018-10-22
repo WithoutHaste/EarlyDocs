@@ -1,6 +1,6 @@
 # ClassSealed
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests sealed class.
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WithoutHaste.DataFiles;
 using WithoutHaste.DataFiles.DotNet;
 using WithoutHaste.DataFiles.Markdown;
 
@@ -57,22 +58,26 @@ namespace EarlyDocs
 		{
 			if(name == null)
 				return "";
-
-			switch(name.FullName)
-			{
-				case "System.Double": return "double";
-				case "System.Int16": return "short";
-				case "System.Int32": return "int";
-				case "System.Int64": return "long";
-				case "System.Single": return "float";
-				case "System.String": return "string";
-			}
-			switch(name.FullNamespace)
-			{
-				case "System.Collections.Generic": return name.LocalName;
-				case "System": return name.LocalName;
-			}
 			return name.FullName;
+		}
+
+		public static string QualifiedNameConverter(string fullName, int depth)
+		{
+			if(depth > 0)
+				return fullName;
+
+			string[] commonNamespaces = new string[] { "System.", "System.Collections.Generic." };
+			foreach(string _namespace in commonNamespaces)
+			{
+				if(!fullName.StartsWith(_namespace)) continue;
+
+				string localName = fullName.RemoveFromStart(_namespace);
+				if(localName.SplitIgnoreNested('.').Length > 1) continue;
+
+				return localName;
+			}
+
+			return fullName;
 		}
 
 		public static MarkdownFile ToMarkdownFile(this DotNetType type)
@@ -227,7 +232,7 @@ namespace EarlyDocs
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
 				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 			}
-			if(field.FloatingComments != null)
+			if(!field.FloatingComments.IsEmpty)
 			{
 				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(field.FloatingComments));
 			}
@@ -265,7 +270,7 @@ namespace EarlyDocs
 					parameterSection.AddSection(ToMarkdownSection(comment));
 				}
 			}
-			if(method.ReturnsComments != null)
+			if(!method.ReturnsComments.IsEmpty)
 			{
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Returns:")));
 				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.ReturnsComments));
@@ -305,7 +310,7 @@ namespace EarlyDocs
 					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 				}
 			}
-			if(method.FloatingComments != null)
+			if(!method.FloatingComments.IsEmpty)
 			{
 				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.FloatingComments));
 			}

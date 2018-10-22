@@ -1,23 +1,23 @@
 # ClassCommonTypeAliases
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests the display of common data types that have recognized aliases in .Net.
             Also common data types that have long fully-qualified names.
 
 # Fields
 
-## Action<System.Int32> FieldAction
+## Action<int> FieldAction
 
-## Boolean FieldBoolean
+## bool FieldBoolean
 
-## Byte FieldByte
+## byte FieldByte
 
-## Char FieldChar
+## char FieldChar
 
-## Decimal FieldDecimal
+## decimal FieldDecimal
 
-## Dictionary<System.Int32,System.String> FieldDictionary
+## Dictionary<int,string> FieldDictionary
 
 ## double FieldDouble
 
@@ -25,23 +25,67 @@ Tests the display of common data types that have recognized aliases in .Net.
 
 ## float FieldFloat
 
-## Func<System.Int32,System.String> FieldFunc
+## Func<int,string> FieldFunc
 
 ## int FieldInt
 
-## List<System.Int32> FieldList
+## List<int> FieldList
 
 ## long FieldLong
 
-## SByte FieldSByte
+## object FieldObject
+
+## sbyte FieldSByte
 
 ## short FieldShort
 
 ## string FieldString
 
-## UInt32 FieldUInt
+## uint FieldUInt
 
-## UInt64 FieldULong
+## ulong FieldULong
 
-## UInt16 FieldUShort
+## ushort FieldUShort
+
+# Methods
+
+## void MethodAction(Action<int> a)
+
+## void MethodBoolean(bool a)
+
+## void MethodByte(byte a)
+
+## void MethodChar(char a)
+
+## void MethodDecimal(decimal a)
+
+## void MethodDictionary(Dictionary<int,string> a)
+
+## void MethodDouble(double a)
+
+## void MethodException(Exception a)
+
+## void MethodFloat(float a)
+
+## void MethodFunc(Func<int,string> a)
+
+## void MethodInt(int a)
+
+## void MethodList(List<int> a)
+
+## void MethodLong(long a)
+
+## void MethodObject(object a)
+
+## void MethodSByte(sbyte a)
+
+## void MethodShort(short a)
+
+## void MethodString(string a)
+
+## void MethodUInt(uint a)
+
+## void MethodULong(ulong a)
+
+## void MethodUShort(ushort a)
 

@@ -1,12 +1,12 @@
 # ClassMethodOverloading
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests overloaded methods.
 
 # Methods
 
-## Void MethodOverload(int a, int b)
+## void MethodOverload(int a, int b)
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.
 
@@ -23,7 +23,6 @@ Tests overloaded methods.
 
 [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.
 
-**Returns:**  
 **Example:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.
 
@@ -31,15 +30,11 @@ Tests overloaded methods.
 [Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.
 
 **Exceptions:**  
-_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.
 
 [Floating Comment] [Short] [One Line] Nulla facilisi.
 
-## Void MethodOverload(double a, double b)
+## void MethodOverload(double a, double b)
 
-**Returns:**  
-
-## Void MethodOverload(float a, float b)
-
-**Returns:**  
+## void MethodOverload(float a, float b)
 

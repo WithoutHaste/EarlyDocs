@@ -1,6 +1,6 @@
 # ClassMultilineComments
 
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests different ways to format multiline comments.
 

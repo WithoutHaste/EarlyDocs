@@ -1,7 +1,7 @@
 # EventHandlerGlobal
 
-**Inheritance:** System.Object → System.Delegate → System.MulticastDelegate  
-**Implements:** System.ICloneable, System.Runtime.Serialization.ISerializable  
+**Inheritance:** object → Delegate → MulticastDelegate  
+**Implements:** ICloneable, System.Runtime.Serialization.ISerializable  
   
 [Summary Tag] [Short] [One Line] Donec gravida egestas nibh.
 

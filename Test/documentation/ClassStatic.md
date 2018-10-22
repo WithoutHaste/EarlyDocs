@@ -1,7 +1,7 @@
 # ClassStatic
 
 **Static**  
-**Inheritance:** System.Object  
+**Inheritance:** object  
   
 Tests static class.
 
