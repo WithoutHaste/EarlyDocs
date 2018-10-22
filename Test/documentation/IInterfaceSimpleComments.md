@@ -12,9 +12,9 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Nam eget velit vestibulum, euismod arcu eu, pretium odio.
 
-## Properties
+# Properties
 
-### abstract int PropertyA
+## abstract int PropertyA
 
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.
 
@@ -29,9 +29,9 @@
 
 [Floating Comment] [Short] [One Line] Ut massa nibh, rutrum nec urna in, interdum congue justo.
 
-## Methods
+# Methods
 
-### abstract Void MethodA()
+## abstract Void MethodA()
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.
 

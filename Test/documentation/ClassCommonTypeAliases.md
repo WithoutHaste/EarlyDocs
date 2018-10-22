@@ -5,43 +5,43 @@
 Tests the display of common data types that have recognized aliases in .Net.
             Also common data types that have long fully-qualified names.
 
-## Fields
+# Fields
 
-### Action<System.Int32> FieldAction
+## Action<System.Int32> FieldAction
 
-### Boolean FieldBoolean
+## Boolean FieldBoolean
 
-### Byte FieldByte
+## Byte FieldByte
 
-### Char FieldChar
+## Char FieldChar
 
-### Decimal FieldDecimal
+## Decimal FieldDecimal
 
-### Dictionary<System.Int32,System.String> FieldDictionary
+## Dictionary<System.Int32,System.String> FieldDictionary
 
-### double FieldDouble
+## double FieldDouble
 
-### Exception FieldException
+## Exception FieldException
 
-### float FieldFloat
+## float FieldFloat
 
-### Func<System.Int32,System.String> FieldFunc
+## Func<System.Int32,System.String> FieldFunc
 
-### int FieldInt
+## int FieldInt
 
-### List<System.Int32> FieldList
+## List<System.Int32> FieldList
 
-### long FieldLong
+## long FieldLong
 
-### SByte FieldSByte
+## SByte FieldSByte
 
-### short FieldShort
+## short FieldShort
 
-### string FieldString
+## string FieldString
 
-### UInt32 FieldUInt
+## UInt32 FieldUInt
 
-### UInt64 FieldULong
+## UInt64 FieldULong
 
-### UInt16 FieldUShort
+## UInt16 FieldUShort
 

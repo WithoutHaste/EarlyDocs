@@ -4,29 +4,29 @@
   
 Tests lists and tables in comments.
 
-## Fields
+# Fields
 
-### int BulletList
-
-**Remarks:**  
-**Example A:**  
-**Example B:**  
-
-### int BulletListInNumberItem
-
-### int BulletListInNumberList
-
-### int NumberList
+## int BulletList
 
 **Remarks:**  
 **Example A:**  
 **Example B:**  
 
-### int NumberListInBulletItem
+## int BulletListInNumberItem
 
-### int NumberListInBulletList
+## int BulletListInNumberList
 
-### int Table
+## int NumberList
+
+**Remarks:**  
+**Example A:**  
+**Example B:**  
+
+## int NumberListInBulletItem
+
+## int NumberListInBulletList
+
+## int Table
 
 **Remarks:**  
 

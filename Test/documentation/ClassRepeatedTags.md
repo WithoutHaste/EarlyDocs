@@ -5,9 +5,9 @@
 Tests the use of multiple tags for tags where only one is expected: summary, remarks, returns, value.
             Tests the use of multiple tags for tags where multiple are expected: example, exception, param, typeparam, permission.
 
-## Fields
+# Fields
 
-### int FieldRepeatedOnceOnlyTags
+## int FieldRepeatedOnceOnlyTags
 
 [1st Summary Tag] Sed ut libero a ante commodo dictum vitae eget urna.
 
@@ -22,9 +22,9 @@ Tests the use of multiple tags for tags where only one is expected: summary, rem
 
 [3rd Remarks Tag] Proin quis nunc lacus.
 
-## Properties
+# Properties
 
-### float PropertyMultipleExamples
+## float PropertyMultipleExamples
 
 **Example A:**  
 [1st Example Tag] Ut tincidunt ipsum sit amet eros dictum, sed sollicitudin nisl interdum.
@@ -52,9 +52,9 @@ Tests the use of multiple tags for tags where only one is expected: summary, rem
 **Example F:**  
 [6th Example Tag] Fusce sit amet lacinia risus, at efficitur neque. Integer enim lorem, interdum maximus sollicitudin vitae, mollis at ante. In faucibus dolor erat, at efficitur leo dignissim quis. Aenean metus velit, convallis vel dignissim ut, fermentum vitae augue. Ut nunc erat, auctor ut leo at, tincidunt vestibulum leo. Quisque euismod nibh magna, dignissim sagittis dolor porta non. Phasellus a ornare nulla. Praesent auctor rutrum justo quis semper. Sed posuere cursus facilisis.
 
-## Methods
+# Methods
 
-### Void MethodMultipleExceptions()
+## Void MethodMultipleExceptions()
 
 **Returns:**  
 **Exceptions:**  
@@ -68,37 +68,37 @@ _System.IO.FileNotFoundException: _[4th Exception Tag] Sed et mauris ut purus bi
 
 _Test.ClassException: _[5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.
 
-### Void MethodMultipleParams(int a, string b, int c, float d, List<System.Collections.Generic.List<System.Int32>> e, Boolean f)
+## Void MethodMultipleParams(int a, string b, int c, float d, List<System.Collections.Generic.List<System.Int32>> e, Boolean f)
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [1st Param Tag] Maecenas volutpat elit ut congue vulputate.
 
-##### b
+#### b
 
 [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.
 
-##### c
+#### c
 
 [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.
 
-##### f
+#### f
 
 [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.
 
-##### e
+#### e
 
 [5th Param Tag] Nullam ultrices eleifend risus a condimentum.
 
-##### d
+#### d
 
 [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.
 
 **Returns:**  
 
-### Void MethodRepeatedOnceOnlyTags()
+## Void MethodRepeatedOnceOnlyTags()
 
 [1st Summary Tag] Curabitur consequat nec risus vitae convallis.
 

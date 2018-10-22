@@ -4,19 +4,19 @@
   
 Tests see and seealso tags, i.e. test links.
 
-## Properties
+# Properties
 
-### int PropertyA
+## int PropertyA
 
-## Constructors
+# Constructors
 
-###  ClassSeeAlso()
+##  ClassSeeAlso()
 
 **Returns:**  
 
-## Methods
+# Methods
 
-### string MethodWithParameters(int a, int b)
+## string MethodWithParameters(int a, int b)
 
 **Returns:**  
 

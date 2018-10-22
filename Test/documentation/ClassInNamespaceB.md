@@ -4,13 +4,13 @@
   
 Tests a class in a nested namespace.
 
-## Fields
+# Fields
 
-### int FieldA
+## int FieldA
 
-## Constructors
+# Constructors
 
-###  ClassInNamespaceB()
+##  ClassInNamespaceB()
 
 **Returns:**  
 

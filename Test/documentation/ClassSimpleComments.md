@@ -12,28 +12,28 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Duis rhoncus libero non nibh efficitur semper.
 
-## Enums
+# Enums
 
-### EnumInClassSimple
+## EnumInClassSimple
 
 [Summary Tag] [Short] [One Line] Pellentesque mattis lacus turpis, at elementum tortor eleifend eu.
 
 [Remarks Tag] [Long] [One Line] Integer elementum erat nibh, eu placerat massa dignissim vel.
 
-#### Examples
+### Examples
 
 [Example Tag] [Short] [One Line] Nulla id placerat quam.
 
-#### Constants
+### Constants
 
 * Test.ClassSimpleComments.EnumInClassSimple.Invalid: TODO  
 * Test.ClassSimpleComments.EnumInClassSimple.Aliquam: TODO  
 * Test.ClassSimpleComments.EnumInClassSimple.Suscipit: TODO  
 * Test.ClassSimpleComments.EnumInClassSimple.Efficitur: TODO  
 
-## Fields
+# Fields
 
-### int IntegerField
+## int IntegerField
 
 [Summary Tag] [Short] [One Line] Nam ut feugiat urna, eu varius arcu.
 
@@ -48,9 +48,9 @@
 
 [Floating Comment] [Short] [One Line] Nulla ullamcorper leo vel leo aliquet consequat.
 
-## Properties
+# Properties
 
-### string this[int]
+## string this[int]
 
 [Summary Tag] [Short] [One Line] Integer condimentum gravida ante at blandit.
 
@@ -65,7 +65,7 @@
 
 [Floating Comment] [Short] [One Line] Mauris aliquam pharetra ex id posuere.
 
-### int IntegerProperty
+## int IntegerProperty
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.
 
@@ -80,9 +80,9 @@
 
 [Floating Comment] [Short] [One Line] Phasellus ac lobortis nisi, ac bibendum nulla.
 
-## Constructors
+# Constructors
 
-###  ClassSimpleComments()
+##  ClassSimpleComments()
 
 [Summary Tag] [Short] [One Line] Nam ornare velit eget sagittis hendrerit.
 
@@ -101,20 +101,20 @@ _System.Exception: _[Exception Tag] [Short] [One Line] Vestibulum condimentum ti
 
 [Floating Comment] [Short] [One Line] Aenean maximus maximus dui, vel ornare est tempor sit amet.
 
-###  ClassSimpleComments(int a, string b)
+##  ClassSimpleComments(int a, string b)
 
 [Summary Tag] [Short] [One Line] Sed eu molestie augue, sed congue sapien.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Nam commodo justo ac porta maximus.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.
 
-##### b
+#### b
 
 [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.
 
@@ -130,22 +130,22 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Vivamus vitae con
 
 [Floating Comment] [Short] [One Line] Ut dictum massa at iaculis semper.
 
-## Static Methods
+# Static Methods
 
-### string StaticMethodWithParametersWithReturn(int a, string b)
+## string StaticMethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Vivamus et ex convallis, egestas justo ut, faucibus arcu.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Maecenas vitae quam quis urna bibendum rhoncus nec id libero.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Nulla consectetur, urna eget ultrices ultricies, velit tortor iaculis lectus, quis condimentum tortor ex vitae ipsum.
 
-##### b
+#### b
 
 [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.
 
@@ -163,9 +163,9 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam et ante n
 
 [Floating Comment] [Short] [One Line] Suspendisse sed purus et arcu hendrerit posuere at sit amet orci.
 
-## Methods
+# Methods
 
-### Void MethodWithoutParameters()
+## Void MethodWithoutParameters()
 
 [Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.
 

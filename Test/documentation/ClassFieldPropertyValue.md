@@ -4,27 +4,27 @@
   
 Tests fields/properties with (1) a single summary tag (2) a single value tag (3) using both at once.
 
-## Fields
+# Fields
 
-### string SummaryField
+## string SummaryField
 
 Nulla facilisi.
 
-### string SummaryValueField
+## string SummaryValueField
 
 Fusce ac mi sit amet turpis facilisis venenatis maximus ac nunc.
 
-### string ValueField
+## string ValueField
 
-## Properties
+# Properties
 
-### string SummaryProperty
+## string SummaryProperty
 
 Nullam nec lorem vitae nunc pellentesque gravida.
 
-### string SummaryValueProperty
+## string SummaryValueProperty
 
 Donec turpis augue, feugiat ut sapien at, sagittis tristique enim.
 
-### string ValueProperty
+## string ValueProperty
 

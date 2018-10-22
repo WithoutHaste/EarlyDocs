@@ -117,7 +117,8 @@ namespace EarlyDocs
 			}
 			if(type.NestedEnums.Count > 0)
 			{
-				MarkdownSection enumSection = typeSection.AddSection("Enums");
+				MarkdownSection enumSection = new MarkdownSection("Enums");
+				typeSection.Add(enumSection);
 				foreach(DotNetType e in type.NestedEnums.OrderBy(m => m.Name.LocalName))
 				{
 					enumSection.AddSection(e.ToMarkdownEnumSection());
@@ -125,7 +126,8 @@ namespace EarlyDocs
 			}
 			if(type.Fields.Count > 0)
 			{
-				MarkdownSection fieldSection = typeSection.AddSection("Fields");
+				MarkdownSection fieldSection = new MarkdownSection("Fields");
+				typeSection.Add(fieldSection);
 				if(type.ConstantFields.Count > 0)
 				{
 					foreach(DotNetField field in type.ConstantFields.OrderBy(m => m.Name.LocalName))
@@ -143,7 +145,8 @@ namespace EarlyDocs
 			}
 			if(type.Properties.Count > 0)
 			{
-				MarkdownSection propertySection = typeSection.AddSection("Properties");
+				MarkdownSection propertySection = new MarkdownSection("Properties");
+				typeSection.Add(propertySection);
 				if(type.IndexerProperties.Count > 0)
 				{
 					foreach(DotNetIndexer i in type.IndexerProperties.OrderBy(m => m.Parameters.Count).ThenBy(m => m.ParameterTypesSignature))
@@ -161,17 +164,22 @@ namespace EarlyDocs
 			}
 			if(type.Events.Count > 0)
 			{
-				MarkdownSection eventSection = typeSection.AddSection("Events");
+				MarkdownSection eventSection = new MarkdownSection("Events");
+				typeSection.Add(eventSection);
 				foreach(DotNetEvent e in type.Events.OrderBy(m => m.Name.LocalName))
 				{
 					eventSection.AddSection(ToMarkdownSection(e as DotNetField));
 				}
 			}
 			
-			MethodsToMarkdown(typeSection, "Constructors", type.ConstructorMethods.Cast<DotNetMethod>().ToList());
-			MethodsToMarkdown(typeSection, "Static Methods", type.StaticMethods);
-			MethodsToMarkdown(typeSection, "Methods", type.NormalMethods);
-			MethodsToMarkdown(typeSection, "Operators", type.OperatorMethods.Cast<DotNetMethod>().ToList());
+			if(type.ConstructorMethods.Count > 0)
+				typeSection.Add(MethodsToMarkdown("Constructors", type.ConstructorMethods.Cast<DotNetMethod>().ToList()));
+			if(type.StaticMethods.Count > 0)
+				typeSection.Add(MethodsToMarkdown("Static Methods", type.StaticMethods));
+			if(type.NormalMethods.Count > 0)
+				typeSection.Add(MethodsToMarkdown("Methods", type.NormalMethods));
+			if(type.OperatorMethods.Count > 0)
+				typeSection.Add(MethodsToMarkdown("Operators", type.OperatorMethods.Cast<DotNetMethod>().ToList()));
 			/* todo Nested Types
 			if(NestedTypes.Count > 0)
 			{
@@ -410,16 +418,15 @@ namespace EarlyDocs
 			}
 		}
 
-		private static void MethodsToMarkdown(MarkdownSection parent, string header, List<DotNetMethod> methods)
+		private static MarkdownSection MethodsToMarkdown(string header, List<DotNetMethod> methods)
 		{
-			if(methods.Count == 0) return;
-
-			MarkdownSection methodSection = parent.AddSection(header);
+			MarkdownSection methodSection = new MarkdownSection(header);
 			methods = methods.OrderBy(m => m.Name.LocalName).ToList();
 			foreach(DotNetMethod method in methods)
 			{
 				methodSection.AddSection(ToMarkdownSection(method));
 			}
+			return methodSection;
 		}
 
 		/*

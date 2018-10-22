@@ -4,9 +4,9 @@
   
 Tests different ways to format multiline comments.
 
-## Fields
+# Fields
 
-### int FieldA
+## int FieldA
 
 [Summary Tag] [Multiline with Endline]
             Etiam enim odio, imperdiet finibus fringilla 
@@ -18,7 +18,7 @@ Tests different ways to format multiline comments.
             a, vestibulum a odio. Nulla id odio egestas, 
             volutpat ligula ut, laoreet sem.
 
-### int FieldB
+## int FieldB
 
 [Summary Tag] [Multiline with Paragraphs]
 

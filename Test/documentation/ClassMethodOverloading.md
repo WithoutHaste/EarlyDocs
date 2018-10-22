@@ -4,22 +4,22 @@
   
 Tests overloaded methods.
 
-## Methods
+# Methods
 
-### Void MethodOverload(int a, int b)
+## Void MethodOverload(int a, int b)
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.
 
-##### b
+#### b
 
 [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.
 
@@ -35,11 +35,11 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Vestibulum pulvin
 
 [Floating Comment] [Short] [One Line] Nulla facilisi.
 
-### Void MethodOverload(double a, double b)
+## Void MethodOverload(double a, double b)
 
 **Returns:**  
 
-### Void MethodOverload(float a, float b)
+## Void MethodOverload(float a, float b)
 
 **Returns:**  
 

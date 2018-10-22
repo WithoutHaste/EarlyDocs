@@ -5,7 +5,7 @@
   
 Tests class inheritance.
 
-## Properties
+# Properties
 
-### int PropertyA
+## int PropertyA
 

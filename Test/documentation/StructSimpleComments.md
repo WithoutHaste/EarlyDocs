@@ -12,9 +12,9 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Nunc suscipit ipsum sed nisi interdum euismod.
 
-## Fields
+# Fields
 
-### int IntegerField
+## int IntegerField
 
 [Summary Tag] [Short] [One Line] Sed at molestie metus.
 
@@ -29,9 +29,9 @@
 
 [Floating Comment] [Short] [One Line] Suspendisse eget placerat tortor.
 
-## Properties
+# Properties
 
-### string StringProperty
+## string StringProperty
 
 [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.
 
@@ -46,9 +46,9 @@
 
 [Floating Comment] [Short] [One Line] Nullam et porttitor mauris, eget porta urna.
 
-## Constructors
+# Constructors
 
-###  StructSimpleComments()
+##  StructSimpleComments()
 
 [Summary Tag] [Short] [One Line] Nam sollicitudin, tortor sit amet cursus sollicitudin, nunc sem pretium ante, et ultrices lectus nibh sollicitudin arcu.
 
@@ -67,22 +67,22 @@ _System.Exception: _[Exception Tag] [Short] [One Line] Fusce tristique efficitur
 
 [Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.
 
-## Static Methods
+# Static Methods
 
-### double StaticMethodWithParametersWithReturn(int a, string b)
+## double StaticMethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Mauris eu felis eleifend, posuere leo ut, sollicitudin ipsum.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.
 
-##### b
+#### b
 
 [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.
 
@@ -100,22 +100,22 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Suspendisse ornar
 
 [Floating Comment] [Short] [One Line] Vivamus convallis libero nec neque vestibulum porta.
 
-## Methods
+# Methods
 
-### float MethodWithParametersWithReturn(int a, string b)
+## float MethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Donec sollicitudin sem et nisi laoreet, et gravida nulla scelerisque.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Vivamus sollicitudin nisi sollicitudin eros egestas tempus.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.
 
-##### b
+#### b
 
 [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.
 

@@ -5,9 +5,9 @@
   
 Supports test to link to custom exception.
 
-## Constructors
+# Constructors
 
-###  ClassException(string message)
+##  ClassException(string message)
 
 **Returns:**  
 

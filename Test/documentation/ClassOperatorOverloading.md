@@ -4,22 +4,22 @@
   
 Tests operator overloading.
 
-## Operators
+# Operators
 
-### Test.ClassOperatorOverloading op_Addition(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Test.ClassOperatorOverloading op_Addition(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Praesent id pulvinar nunc.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Vestibulum eget magna ut turpis pellentesque lobortis.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Vivamus nec felis tortor.
 
-##### b
+#### b
 
 [Parameter Tag] [Short] [One Line] Nam maximus odio vel consequat congue.
 
@@ -37,20 +37,20 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Curabitur et laci
 
 [Floating Comment] [Short] [One Line] Morbi viverra arcu et sapien maximus varius.
 
-### Test.ClassOperatorOverloading op_Addition(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_Addition(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Sed hendrerit eros eget purus dictum, viverra feugiat eros porttitor.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Nunc a odio sodales augue congue posuere ut a ex.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Pellentesque est metus, euismod sit amet viverra eget, tincidunt consectetur massa.
 
-##### b
+#### b
 
 [Parameter Tag] [Short] [One Line] Maecenas maximus congue neque, at iaculis justo dignissim nec.
 
@@ -68,7 +68,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 
 [Floating Comment] [Short] [One Line] Pellentesque vel malesuada mi, quis pharetra erat.
 
-### Test.ClassOperatorOverloading op_BitwiseAnd(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Test.ClassOperatorOverloading op_BitwiseAnd(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Cras vulputate est ante, scelerisque dignissim neque porttitor sed.
 
@@ -76,7 +76,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Nulla sed ex tellus.
 
-### Test.ClassOperatorOverloading op_BitwiseAnd(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_BitwiseAnd(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Ut elit enim, posuere id nunc ac, fermentum congue nibh.
 
@@ -84,7 +84,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Suspendisse porta interdum nisi quis luctus.
 
-### Test.ClassOperatorOverloading op_BitwiseOr(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Test.ClassOperatorOverloading op_BitwiseOr(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Curabitur vel turpis vel tellus luctus sagittis.
 
@@ -92,7 +92,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Donec dictum venenatis enim at venenatis.
 
-### Test.ClassOperatorOverloading op_BitwiseOr(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_BitwiseOr(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
 
@@ -100,7 +100,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Donec sagittis, nulla non lobortis egestas, lectus quam euismod purus, nec luctus elit justo eu libero.
 
-### Test.ClassOperatorOverloading op_Decrement(Test.ClassOperatorOverloading a)
+## Test.ClassOperatorOverloading op_Decrement(Test.ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Vestibulum euismod consequat sodales.
 
@@ -108,7 +108,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Proin molestie dapibus sem quis varius.
 
-### Test.ClassOperatorOverloading op_Division(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Test.ClassOperatorOverloading op_Division(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Suspendisse ac gravida nunc, sit amet consequat orci.
 
@@ -116,7 +116,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Pellentesque metus lacus, aliquet vitae lorem vel, accumsan lacinia ante.
 
-### Test.ClassOperatorOverloading op_Division(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_Division(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Donec consectetur diam in felis elementum, a iaculis lacus semper.
 
@@ -124,7 +124,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Integer varius, sem vitae bibendum elementum, felis tellus eleifend tellus, sed commodo sem lorem a risus.
 
-### Boolean op_Equality(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Boolean op_Equality(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Nam maximus vehicula nisi non lacinia.
 
@@ -132,7 +132,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Curabitur ut purus nulla.
 
-### Boolean op_Equality(Test.ClassOperatorOverloading a, int b)
+## Boolean op_Equality(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
 
@@ -140,7 +140,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Maecenas sed felis blandit, rhoncus ante vel, mollis orci.
 
-### Test.ClassOperatorOverloading op_ExclusiveOr(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Test.ClassOperatorOverloading op_ExclusiveOr(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Nam euismod euismod consectetur.
 
@@ -148,7 +148,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Fusce ornare aliquam lorem, at commodo nisl suscipit nec.
 
-### Test.ClassOperatorOverloading op_ExclusiveOr(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_ExclusiveOr(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Suspendisse potenti.
 
@@ -156,16 +156,16 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Quisque vitae pur
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] In eget vehicula massa.
 
-###  op_Explicit((Test.ClassOperatorOverloading)~System.Single)
+##  op_Explicit((Test.ClassOperatorOverloading)~System.Single)
 
 [Summary Tag] [Short] [One Line] Maecenas mattis fringilla felis, a lacinia quam commodo id.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Quisque et mattis leo.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Vivamus volutpat, elit sit amet gravida rutrum, quam tortor vulputate risus, sed blandit dolor lacus non diam.
 
@@ -183,16 +183,16 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Nullam eu libero 
 
 [Floating Comment] [Short] [One Line] Proin accumsan, dolor non consequat ultricies, tellus nulla lobortis massa, porttitor iaculis ipsum erat ac nibh.
 
-###  op_Explicit((Test.ClassOperatorOverloading)~System.Int16)
+##  op_Explicit((Test.ClassOperatorOverloading)~System.Int16)
 
 [Summary Tag] [Short] [One Line] Nunc imperdiet ex et leo porttitor fermentum.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Duis varius gravida metus id ultrices.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] In hac habitasse platea dictumst.
 
@@ -210,7 +210,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam hendrerit
 
 [Floating Comment] [Short] [One Line] Quisque et efficitur nunc.
 
-### Boolean op_False(Test.ClassOperatorOverloading a)
+## Boolean op_False(Test.ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Pellentesque consectetur libero a ligula tempus convallis.
 
@@ -218,7 +218,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam hendrerit
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Nullam ullamcorper purus in velit tempus, in scelerisque erat porta.
 
-### Boolean op_GreaterThan(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Boolean op_GreaterThan(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Suspendisse potenti.
 
@@ -226,7 +226,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam hendrerit
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam rutrum sed leo quis vestibulum.
 
-### Boolean op_GreaterThan(Test.ClassOperatorOverloading a, int b)
+## Boolean op_GreaterThan(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Aenean sodales pharetra odio, at volutpat turpis feugiat id.
 
@@ -234,7 +234,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam hendrerit
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Quisque est purus, aliquet id lacinia nec, scelerisque et sem.
 
-### Boolean op_GreaterThanOrEqual(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Boolean op_GreaterThanOrEqual(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Morbi purus lacus, dignissim gravida imperdiet egestas, rutrum sed nibh.
 
@@ -242,7 +242,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam hendrerit
 **Permission: !:>=**  
 [Permission Tag] [References Operator] [Short] [One Line] Vivamus tempus tincidunt nulla et commodo.
 
-### Boolean op_GreaterThanOrEqual(Test.ClassOperatorOverloading a, int b)
+## Boolean op_GreaterThanOrEqual(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Nunc non diam luctus, consectetur purus vitae, commodo quam.
 
@@ -250,16 +250,16 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam hendrerit
 **Permission: !:>=**  
 [Permission Tag] [References Operator] [Short] [One Line] In elementum, mi non viverra molestie, lorem felis interdum massa, at varius quam ex in massa.
 
-###  op_Implicit((Test.ClassOperatorOverloading)~System.Double)
+##  op_Implicit((Test.ClassOperatorOverloading)~System.Double)
 
 [Summary Tag] [Short] [One Line] Nam sit amet egestas orci.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] In a fermentum nunc.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Vestibulum quis fringilla ipsum.
 
@@ -277,16 +277,16 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Sed ac molestie a
 
 [Floating Comment] [Short] [One Line] Maecenas sagittis nec metus a fermentum.
 
-###  op_Implicit((Test.ClassOperatorOverloading)~System.Int32)
+##  op_Implicit((Test.ClassOperatorOverloading)~System.Int32)
 
 [Summary Tag] [Short] [One Line] Fusce at mollis urna.
 
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Fusce accumsan augue dui.
 
-#### Parameters
+### Parameters
 
-##### a
+#### a
 
 [Parameter Tag] [Short] [One Line] Vestibulum semper maximus turpis, quis sodales nisl mattis ac.
 
@@ -304,7 +304,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 
 [Floating Comment] [Short] [One Line] Proin in odio turpis.
 
-### Test.ClassOperatorOverloading op_Increment(Test.ClassOperatorOverloading a)
+## Test.ClassOperatorOverloading op_Increment(Test.ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Mauris felis nisi, consequat sit amet vulputate sed, consectetur ac libero.
 
@@ -312,7 +312,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Morbi finibus ullamcorper pellentesque.
 
-### Boolean op_Inequality(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Boolean op_Inequality(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
@@ -320,7 +320,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Nulla at iaculis augue.
 
-### Boolean op_Inequality(Test.ClassOperatorOverloading a, int b)
+## Boolean op_Inequality(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Sed porttitor gravida ligula, et semper libero euismod eget.
 
@@ -328,7 +328,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Nam sollicitudin molestie urna eu condimentum.
 
-### Test.ClassOperatorOverloading op_LeftShift(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_LeftShift(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Etiam faucibus, dolor ac condimentum scelerisque, quam libero faucibus nisi, non sagittis lacus augue quis odio.
 
@@ -336,7 +336,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Quisque egestas est nec nibh tempus ultrices.
 
-### Boolean op_LessThan(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Boolean op_LessThan(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] In in dignissim magna.
 
@@ -344,7 +344,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Cras quis mauris eu nibh luctus egestas eget eu ex.
 
-### Boolean op_LessThan(Test.ClassOperatorOverloading a, int b)
+## Boolean op_LessThan(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Quisque a massa purus.
 
@@ -352,7 +352,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam nisl felis, bibendum quis ipsum ut, cursus hendrerit augue.
 
-### Boolean op_LessThanOrEqual(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Boolean op_LessThanOrEqual(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Morbi placerat ut metus sollicitudin bibendum.
 
@@ -360,7 +360,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Sed vestibulum justo mauris, quis rhoncus dolor tristique porttitor.
 
-### Boolean op_LessThanOrEqual(Test.ClassOperatorOverloading a, int b)
+## Boolean op_LessThanOrEqual(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Donec semper convallis malesuada.
 
@@ -368,7 +368,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Duis ullamcorper sapien mi, ac convallis erat vestibulum a.
 
-### Test.ClassOperatorOverloading op_LogicalNot(Test.ClassOperatorOverloading a)
+## Test.ClassOperatorOverloading op_LogicalNot(Test.ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Duis eget velit vitae nisi maximus mollis.
 
@@ -376,7 +376,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Praesent mauris arcu, gravida elementum nibh in, pellentesque fermentum lacus.
 
-### Test.ClassOperatorOverloading op_Modulus(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Test.ClassOperatorOverloading op_Modulus(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Aliquam sit amet sapien a odio consequat egestas sit amet ac nulla.
 
@@ -384,7 +384,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Fusce imperdiet ante ac nunc aliquet semper.
 
-### Test.ClassOperatorOverloading op_Modulus(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_Modulus(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Phasellus malesuada elit orci, eget tincidunt arcu placerat sit amet.
 
@@ -392,7 +392,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Nullam ultricies urna id semper egestas.
 
-### Test.ClassOperatorOverloading op_Multiply(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Test.ClassOperatorOverloading op_Multiply(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Duis a urna at purus placerat bibendum.
 
@@ -400,7 +400,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam iaculis nibh a risus tempus, non semper magna volutpat.
 
-### Test.ClassOperatorOverloading op_Multiply(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_Multiply(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Suspendisse nec felis sagittis, rhoncus dolor sit amet, varius ipsum.
 
@@ -408,7 +408,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Suspendisse potenti.
 
-### Test.ClassOperatorOverloading op_OnesComplement(Test.ClassOperatorOverloading a)
+## Test.ClassOperatorOverloading op_OnesComplement(Test.ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Proin id felis at turpis rhoncus ultrices sit amet in ex.
 
@@ -416,7 +416,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Aenean eget velit augue.
 
-### Test.ClassOperatorOverloading op_RightShift(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_RightShift(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Suspendisse mattis pretium ligula sit amet elementum.
 
@@ -424,7 +424,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Suspendisse sit amet arcu erat.
 
-### Test.ClassOperatorOverloading op_Subtraction(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
+## Test.ClassOperatorOverloading op_Subtraction(Test.ClassOperatorOverloading a, Test.ClassOperatorOverloading b)
 
 [Summary Tag] [Short] [One Line] Donec dictum lacus tortor, at mollis est tempor ut.
 
@@ -432,7 +432,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Aenean tempor nulla a tellus interdum, in commodo nisi sagittis.
 
-### Test.ClassOperatorOverloading op_Subtraction(Test.ClassOperatorOverloading a, int b)
+## Test.ClassOperatorOverloading op_Subtraction(Test.ClassOperatorOverloading a, int b)
 
 [Summary Tag] [Short] [One Line] Quisque quis tortor dapibus, posuere ipsum mattis, efficitur eros.
 
@@ -440,7 +440,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec malesuada e
 **Permission: **  
 [Permission Tag] [References Operator] [Short] [One Line] Nunc faucibus sem tortor, sed pharetra ligula congue vel.
 
-### Boolean op_True(Test.ClassOperatorOverloading a)
+## Boolean op_True(Test.ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Donec id mollis orci.
 
