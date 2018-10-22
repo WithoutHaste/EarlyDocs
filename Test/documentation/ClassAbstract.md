@@ -116,11 +116,11 @@ Tests abstract classes and members.
 **Example:**  
 [Example Tag] [Short] [One Line] Duis sed quam rutrum, hendrerit est ac, posuere lorem.
 
-**Permission: **  
+**Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] In id facilisis libero.
 
 **Exceptions:**  
-_System.IO.FileNotFoundException: _[Exception Tag] [Short] [One Line] Cras sed diam ipsum.
+_System.IO.FileNotFoundException:_ [Exception Tag] [Short] [One Line] Cras sed diam ipsum.
 
 [Floating Comment] [Short] [One Line] Mauris lobortis lorem quis odio rhoncus lobortis.
 
@@ -137,11 +137,11 @@ _System.IO.FileNotFoundException: _[Exception Tag] [Short] [One Line] Cras sed d
 **Example:**  
 [Example Tag] [Short] [One Line] Vestibulum ultricies metus ante, a eleifend quam maximus in.
 
-**Permission: **  
+**Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] Sed molestie, sapien non lobortis cursus, elit neque rhoncus nunc, sit amet pellentesque ex mauris vel velit.
 
 **Exceptions:**  
-_System.IO.FileNotFoundException: _[Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.
+_System.IO.FileNotFoundException:_ [Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.
 
 [Floating Comment] [Short] [One Line] Proin quis justo id dolor posuere consequat non non nulla.
 

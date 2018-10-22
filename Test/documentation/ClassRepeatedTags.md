@@ -58,15 +58,15 @@ Tests the use of multiple tags for tags where only one is expected: summary, rem
 
 **Returns:**  
 **Exceptions:**  
-_System.ArgumentException: _[1st Exception Tag] Nullam feugiat odio felis.
+_System.ArgumentException:_ [1st Exception Tag] Nullam feugiat odio felis.
 
-_System.ArgumentException: _[2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.
+_System.ArgumentException:_ [2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.
 
-_System.ArgumentException: _[3rd Exception Tag] Nulla sed magna sed velit dictum auctor.
+_System.ArgumentException:_ [3rd Exception Tag] Nulla sed magna sed velit dictum auctor.
 
-_System.IO.FileNotFoundException: _[4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.
+_System.IO.FileNotFoundException:_ [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.
 
-_Test.ClassException: _[5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.
+_Test.ClassException:_ [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.
 
 ## Void MethodMultipleParams(int a, string b, int c, float d, List<System.Collections.Generic.List<System.Int32>> e, Boolean f)
 

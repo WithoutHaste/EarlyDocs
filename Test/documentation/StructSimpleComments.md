@@ -63,7 +63,7 @@
 [Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.
 
 **Exceptions:**  
-_System.Exception: _[Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.
+_System.Exception:_ [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.
 
 [Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.
 
@@ -92,11 +92,11 @@ _System.Exception: _[Exception Tag] [Short] [One Line] Fusce tristique efficitur
 **Example:**  
 [Example Tag] [Short] [One Line] Etiam vitae lorem in nunc sollicitudin accumsan sed ac sem.
 
-**Permission: **  
+**Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] Nunc ullamcorper egestas vulputate.
 
 **Exceptions:**  
-_System.ArgumentException: _[Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.
+_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.
 
 [Floating Comment] [Short] [One Line] Vivamus convallis libero nec neque vestibulum porta.
 
@@ -125,11 +125,11 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Suspendisse ornar
 **Example:**  
 [Example Tag] [Short] [One Line] Nulla ullamcorper erat a urna porttitor, sed sodales nisl porttitor.
 
-**Permission: **  
+**Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] Cras eget dignissim nisi, lacinia semper turpis.
 
 **Exceptions:**  
-_System.ArgumentException: _[Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.
+_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.
 
 [Floating Comment] [Short] [One Line] Quisque sit amet ante eu nulla laoreet auctor.
 

@@ -42,11 +42,11 @@
 **Example:**  
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.
 
-**Permission: **  
+**Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.
 
 **Exceptions:**  
-_System.ArgumentException: _[Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.
+_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.
 
 [Floating Comment] [Short] [One Line] Sed vehicula gravida efficitur.
 

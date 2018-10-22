@@ -78,7 +78,7 @@
 [Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.
 
 **Exceptions:**  
-_System.Exception: _[Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.
+_System.Exception:_ [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.
 
 [Floating Comment] [Short] [One Line] Ut nunc mauris, varius at enim in, elementum tempor metus.
 
@@ -107,7 +107,7 @@ _System.Exception: _[Exception Tag] [Short] [One Line] Proin vel libero aliquam,
 [Permission Tag] [References Constructor] [Short] [One Line] Pellentesque vitae metus nec sem tristique mollis pharetra ac magna.
 
 **Exceptions:**  
-_System.ArgumentException: _[Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.
+_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.
 
 [Floating Comment] [Short] [One Line] Duis at enim gravida, commodo purus a, vulputate ligula.
 

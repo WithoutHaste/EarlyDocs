@@ -27,11 +27,11 @@ Tests overloaded methods.
 **Example:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.
 
-**Permission: **  
+**Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.
 
 **Exceptions:**  
-_System.ArgumentException: _[Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.
+_System.ArgumentException:_ [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.
 
 [Floating Comment] [Short] [One Line] Nulla facilisi.
 

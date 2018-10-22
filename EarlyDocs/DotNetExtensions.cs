@@ -290,7 +290,7 @@ namespace EarlyDocs
 				{
 					if(method.MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink))
 					{
-						permissionHeader = "Permission: ";
+						permissionHeader = "Permission:";
 					}
 				}
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
@@ -301,7 +301,7 @@ namespace EarlyDocs
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Exceptions:")));
 				foreach(DotNetCommentQualifiedLinkedGroup comment in method.ExceptionComments)
 				{
-					memberSection.Add(MarkdownText.Italic(comment.QualifiedLink.Name.FullName + ": "));
+					memberSection.Add(MarkdownText.Italic(comment.QualifiedLink.Name.FullName + ":"), new MarkdownText(" "));
 					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 				}
 			}
