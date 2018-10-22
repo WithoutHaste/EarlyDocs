@@ -27,7 +27,7 @@ Tests overloaded methods.
 **Example:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.
 
-**Permission: MethodOverload**  
+**Permission: **  
 [Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.
 
 **Exceptions:**  

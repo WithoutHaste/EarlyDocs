@@ -103,7 +103,7 @@ Tests abstract classes and members.
 
 ## Methods
 
-### double MethodAbstract()
+### abstract double MethodAbstract()
 
 [Summary Tag] [Short] [One Line] Donec facilisis, nibh eu faucibus rhoncus, diam ipsum scelerisque magna, imperdiet aliquet mi erat ut libero.
 
@@ -116,7 +116,7 @@ Tests abstract classes and members.
 **Example:**  
 [Example Tag] [Short] [One Line] Duis sed quam rutrum, hendrerit est ac, posuere lorem.
 
-**Permission: MethodAbstract**  
+**Permission: **  
 [Permission Tag] [References Method] [Short] [One Line] In id facilisis libero.
 
 **Exceptions:**  
@@ -137,7 +137,7 @@ _System.IO.FileNotFoundException: _[Exception Tag] [Short] [One Line] Cras sed d
 **Example:**  
 [Example Tag] [Short] [One Line] Vestibulum ultricies metus ante, a eleifend quam maximus in.
 
-**Permission: MethodNotAbstract**  
+**Permission: **  
 [Permission Tag] [References Method] [Short] [One Line] Sed molestie, sapien non lobortis cursus, elit neque rhoncus nunc, sit amet pellentesque ex mauris vel velit.
 
 **Exceptions:**  

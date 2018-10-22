@@ -31,7 +31,7 @@
 
 ## Methods
 
-### Void MethodA()
+### abstract Void MethodA()
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.
 
@@ -42,7 +42,7 @@
 **Example:**  
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.
 
-**Permission: MethodA**  
+**Permission: **  
 [Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.
 
 **Exceptions:**  

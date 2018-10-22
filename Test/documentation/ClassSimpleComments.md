@@ -155,7 +155,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Vivamus vitae con
 **Example:**  
 [Example Tag] [Short] [One Line] Sed quis mollis justo, sit amet vulputate justo.
 
-**Permission: StaticMethodWithParametersWithReturn**  
+**Permission: **  
 [Permission Tag] [References Method] [Short] [One Line] In pharetra magna id lorem fermentum rutrum.
 
 **Exceptions:**  
@@ -176,7 +176,7 @@ _System.ArgumentException: _[Exception Tag] [Short] [One Line] Aliquam et ante n
 **Example:**  
 [Example Tag] [Short] [One Line] Suspendisse ultrices porta sem sed eleifend.
 
-**Permission: MethodWithoutParameters**  
+**Permission: **  
 [Permission Tag] [References Method] [Short] [One Line] Suspendisse auctor purus sit amet eros iaculis semper.
 
 **Exceptions:**  

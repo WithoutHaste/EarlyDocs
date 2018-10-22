@@ -234,7 +234,8 @@ namespace EarlyDocs
 				header += "()";
 			else
 				header += String.Format("({0})", String.Join(", ", method.Parameters.Select(p => p.ToDisplayString()).ToArray()));
-			//todo: mark abstract
+			if(method.Category == MethodCategory.Abstract)
+				header = "abstract " + header;
 			MarkdownSection memberSection = new MarkdownSection(header);
 
 			if(method.SummaryComments.Count > 0)
@@ -277,7 +278,13 @@ namespace EarlyDocs
 			foreach(DotNetCommentQualifiedLinkedGroup comment in method.PermissionComments)
 			{
 				string permissionHeader = "Permission: " + comment.QualifiedLink.Name.ToDisplayString(method.Name.FullNamespace);
-				//todo: if method matches full signature of cref
+				if(comment is DotNetCommentMethodLinkedGroup)
+				{
+					if(method.MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink))
+					{
+						permissionHeader = "Permission: ";
+					}
+				}
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
 				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 			}
