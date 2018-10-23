@@ -3,16 +3,14 @@
 **Inheritance:** object  
   
 [Summary Tag] [Short] [One Line] Cras suscipit et sapien ac tincidunt.  
+  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Etiam et pretium magna.  
   
-
-## Examples
-
-**Example A:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Duis rhoncus libero non nibh efficitur semper.  
-
   
+[Floating Comment] [Short] [One Line] Mauris cursus erat at ligula pretium dignissim.  
 
 # Fields
 

@@ -98,32 +98,14 @@ namespace EarlyDocs
 		public static MarkdownSection ToMarkdownSection(this DotNetType type)
 		{
 			MarkdownSection typeSection = new MarkdownSection(type.Name.LocalName);
-			PreSummaryToMarkdown(typeSection, type);
-			if(type.SummaryComments.Count > 0) //todo: these ifs are duplicated in DotNetMember ToMarkdownSection
-			{
-				typeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.SummaryComments));
-			}
-			if(type.RemarksComments.Count > 0)
-			{
-				typeSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
-				typeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.RemarksComments));
-				typeSection.Add(new MarkdownLine());
-			}
-			if(type.ExampleComments.Count > 0)
-			{
-				//todo: duplicate code with method examples
-				MarkdownSection exampleSection = typeSection.AddSection("Examples");
-				char index = 'A';
-				foreach(DotNetComment comment in type.ExampleComments)
-				{
-					exampleSection.Add(new MarkdownLine(MarkdownText.Bold("Example " + index + ":")));
-					exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
-					index++; //todo: if more than 26 comments, loop to AA,AB,...
-				}
-				typeSection.Add(new MarkdownLine());
-			}
+			AddPreSummary(typeSection, type);
+			AddSummary(typeSection, type as DotNetMember);
+			AddRemarks(typeSection, type as DotNetMember);
+			AddExamples(typeSection, type as DotNetMember);
+			AddFloatingComments(typeSection, type as DotNetMember);
 			if(type.NestedEnums.Count > 0)
 			{
+				//todo: simply list the enum as link to enum page, and list just the enum values without any comments as short-reference
 				MarkdownSection enumSection = new MarkdownSection("Enums");
 				typeSection.Add(enumSection);
 				foreach(DotNetType e in type.NestedEnums.OrderBy(m => m.Name.LocalName))
@@ -179,15 +161,18 @@ namespace EarlyDocs
 				}
 			}
 			
+			//todo: static constructors
 			if(type.ConstructorMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Constructors", type.ConstructorMethods.Cast<DotNetMethod>().ToList()));
-			if(type.StaticMethods.Count > 0)
-				typeSection.Add(MethodsToMarkdown("Static Methods", type.StaticMethods));
 			if(type.NormalMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Methods", type.NormalMethods));
+			if(type.StaticMethods.Count > 0)
+				typeSection.Add(MethodsToMarkdown("Static Methods", type.StaticMethods));
 			if(type.OperatorMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Operators", type.OperatorMethods.Cast<DotNetMethod>().ToList()));
-			/* todo Nested Types
+			//todo: destructors
+
+			/* todo Nested Types: just a list of the type names with their summaries, linked to the type pages
 			if(NestedTypes.Count > 0)
 			{
 				MarkdownSection nestedTypeSection = typeSection.AddSection("Nested Types");
@@ -200,48 +185,24 @@ namespace EarlyDocs
 			return typeSection;
 		}
 
+		public static MarkdownFile ToMarkdownFile(this DotNetDelegate _delegate)
+		{
+			MarkdownFile markdown = new MarkdownFile();
+
+			markdown.AddSection(ToMarkdownSection(_delegate as DotNetMethod));
+
+			return markdown;
+		}
+
 		public static MarkdownSection ToMarkdownSection(this DotNetField field)
 		{
 			MarkdownSection memberSection = new MarkdownSection(field.ToHeader());
 
-			if(field.SummaryComments.Count > 0)
-			{
-				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(field.SummaryComments));
-				memberSection.Add(new MarkdownLine());
-			}
-			if(field.RemarksComments.Count > 0)
-			{
-				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
-				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(field.RemarksComments));
-				memberSection.Add(new MarkdownLine());
-			}
-			if(field.ExampleComments.Count > 0)
-			{
-				char index = 'A'; //todo cleanup duplicated example sections
-				foreach(DotNetComment comment in field.ExampleComments)
-				{
-					string exampleHeader = "Example " + index + ":";
-					if(field.ExampleComments.Count == 1)
-						exampleHeader = "Example:";
-					memberSection.Add(new MarkdownLine(MarkdownText.Bold(exampleHeader)));
-					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
-					index++;
-				}
-				memberSection.Add(new MarkdownLine());
-			}
-			foreach(DotNetCommentQualifiedLinkedGroup comment in field.PermissionComments)
-			{
-				string permissionHeader = "Permission: " + comment.QualifiedLink.Name.ToDisplayString(field.Name.FullNamespace);
-				if(field.Name == comment.QualifiedLink.Name)
-					permissionHeader = "Permission:";
-				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
-				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
-				memberSection.Add(new MarkdownLine());
-			}
-			if(!field.FloatingComments.IsEmpty)
-			{
-				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(field.FloatingComments));
-			}
+			AddSummary(memberSection, field as DotNetMember);
+			AddRemarks(memberSection, field as DotNetMember);
+			AddExamples(memberSection, field as DotNetMember);
+			AddPermissions(memberSection, field as DotNetMember);
+			AddFloatingComments(memberSection, field as DotNetMember);
 
 			return memberSection;
 		}
@@ -255,19 +216,23 @@ namespace EarlyDocs
 				header += String.Format("({0})", String.Join(", ", method.Parameters.Select(p => p.ToDisplayString()).ToArray()));
 			if(method.Category == MethodCategory.Abstract)
 				header = "abstract " + header;
+
+			string fullHeader = header;
+			if(method is DotNetDelegate)
+			{
+				header = method.Name.LocalName;
+			}
+
 			MarkdownSection memberSection = new MarkdownSection(header);
 
-			if(method.SummaryComments.Count > 0)
+			if(method is DotNetDelegate)
 			{
-				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(method.SummaryComments));
-				memberSection.Add(new MarkdownLine());
+				memberSection.AddInLine(MarkdownText.Bold("Delegate"));
+				memberSection.AddInParagraph(MarkdownText.Bold(fullHeader));
 			}
-			if(method.RemarksComments.Count > 0)
-			{
-				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
-				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(method.RemarksComments));
-				memberSection.Add(new MarkdownLine());
-			}
+
+			AddSummary(memberSection, method as DotNetMember);
+			AddRemarks(memberSection, method as DotNetMember);
 			if(method.ParameterComments.Count > 0)
 			{
 				//todo: order parameters as they are ordered in method signature
@@ -279,57 +244,11 @@ namespace EarlyDocs
 				}
 				memberSection.Add(new MarkdownLine());
 			}
-			if(!method.ReturnsComments.IsEmpty)
-			{
-				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Returns:")));
-				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.ReturnsComments));
-				memberSection.Add(new MarkdownLine());
-			}
-			if(method.ExampleComments.Count > 0)
-			{
-				char index = 'A'; //todo cleanup duplicated example sections
-				foreach(DotNetComment comment in method.ExampleComments)
-				{
-					string exampleHeader = "Example " + index + ":";
-					if(method.ExampleComments.Count == 1)
-						exampleHeader = "Example:";
-					memberSection.Add(new MarkdownLine(MarkdownText.Bold(exampleHeader)));
-					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
-					memberSection.Add(new MarkdownLine());
-					index++;
-				}
-			}
-			foreach(DotNetCommentQualifiedLinkedGroup comment in method.PermissionComments)
-			{
-				string permissionHeader = "Permission: " + comment.QualifiedLink.Name.ToDisplayString(method.Name.FullNamespace);
-				if(comment is DotNetCommentMethodLinkedGroup)
-				{
-					if(method.MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink))
-					{
-						permissionHeader = "Permission:";
-					}
-				}
-				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
-				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
-				memberSection.Add(new MarkdownLine());
-			}
-			if(method.ExceptionComments.Count > 0)
-			{
-				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Exceptions:")));
-				foreach(DotNetCommentQualifiedLinkedGroup comment in method.ExceptionComments)
-				{
-					memberSection.Add(MarkdownText.Italic(comment.QualifiedLink.Name.FullName + ":"), new MarkdownText(" "));
-					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
-				}
-				memberSection.Add(new MarkdownLine());
-			}
-			if(!method.FloatingComments.IsEmpty)
-			{
-				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.FloatingComments));
-			}
-
-			//todo: param/typeparam info
-			//todo: returns
+			AddReturns(memberSection, method as DotNetMember);
+			AddExamples(memberSection, method as DotNetMember);
+			AddPermissions(memberSection, method as DotNetMember);
+			AddExceptions(memberSection, method as DotNetMember);
+			AddFloatingComments(memberSection, method as DotNetMember);
 
 			return memberSection;
 		}
@@ -394,7 +313,7 @@ namespace EarlyDocs
 			return enumSection;
 		}
 
-		private static void PreSummaryToMarkdown(MarkdownSection parent, DotNetType type)
+		private static void AddPreSummary(MarkdownSection parent, DotNetType type)
 		{
 			bool changeMade = false;
 
@@ -447,68 +366,96 @@ namespace EarlyDocs
 			return methodSection;
 		}
 
-		/*
-		public static IMarkdownInSection ToMarkdown(this DotNetComment comment)
+		private static void AddSummary(MarkdownSection section, DotNetMember member)
 		{
-			//should not be needed, since all subclasses are handled explicitly
-			//but is required for compilation
-			throw new NotImplementedException("Unknown comment type.");
+			if(member.SummaryComments.Count == 0)
+				return;
+
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.SummaryComments));
+			section.Add(new MarkdownLine());
 		}
 
-		public static MarkdownText ToMarkdown(this DotNetCommentCode code)
+		private static void AddRemarks(MarkdownSection section, DotNetMember member)
 		{
-			return new MarkdownText(code.Text);
+			if(member.RemarksComments.Count == 0)
+				return;
+
+			section.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.RemarksComments));
+			section.Add(new MarkdownLine());
 		}
 
-		public static MarkdownCodeBlock ToMarkdown(this DotNetCommentCodeBlock codeBlock)
+		private static void AddReturns(MarkdownSection section, DotNetMember member)
 		{
-			return new MarkdownCodeBlock(codeBlock.Text, codeBlock.Language);
+			if(member.ReturnsComments.IsEmpty)
+				return;
+
+			section.Add(new MarkdownLine(MarkdownText.Bold("Returns:")));
+			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.ReturnsComments));
+			section.Add(new MarkdownLine());
 		}
 
-		public static IMarkdownInSection[] ToMarkdown(this DotNetCommentGroup group)
+		private static void AddExamples(MarkdownSection section, DotNetMember member)
 		{
-			return group.Comments.Select(x => x.ToMarkdown()).ToArray();
-		}
+			if(member.ExampleComments.Count == 0)
+				return;
 
-		//public static IMarkdownInSection ToMarkdown(this DotNetCommentLinkedGroup<IDotNetCommentLink> group)
-		//{
-		//}
-
-		public static MarkdownParagraph ToMarkdown(this DotNetCommentParameter parameter)
-		{
-			return new MarkdownParagraph(String.Format("Parameter **{0}**: {1}", parameter.Link.Name, "TODO"));
-		}
-
-		public static MarkdownTable ToMarkdown(this DotNetCommentTable table)
-		{
-		}
-
-		public static MarkdownList ToMarkdown(this DotNetCommentList list)
-		{
-			MarkdownList mdList = new MarkdownList(list.IsNumbered);
-
-			foreach(DotNetCommentListItem item in list.Items)
+			char index = 'A'; //todo: update indexer to go to "AA", "AB" after "Z"
+			foreach(DotNetComment comment in member.ExampleComments)
 			{
-				mdList.Add(item.ToMarkdown());
+				string exampleHeader = "Example " + index + ":";
+				if(member.ExampleComments.Count == 1)
+					exampleHeader = "Example:";
+				section.Add(new MarkdownLine(MarkdownText.Bold(exampleHeader)));
+				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				index++;
 			}
-
-			return mdList;
+			section.Add(new MarkdownLine());
 		}
 
-		public static IMarkdownInList ToMarkdown(this DotNetCommentListItem item)
+		private static void AddPermissions(MarkdownSection section, DotNetMember member)
 		{
-			if(item.IsHeader)
+			foreach(DotNetCommentQualifiedLinkedGroup comment in member.PermissionComments)
 			{
-				if(String.IsNullOrEmpty(item.Description))
-					return new MarkdownLine("**" + item.Term + "**");
-				return new MarkdownLine(String.Format("**{0}: {1}**", item.Term, item.Description));
+				string permissionHeader = "Permission: " + comment.QualifiedLink.Name.ToDisplayString(member.Name.FullNamespace);
+				if(member.Name == comment.QualifiedLink.Name)
+				{
+					permissionHeader = "Permission:";
+				}
+				if(comment is DotNetCommentMethodLinkedGroup && member is DotNetMethod)
+				{
+					if((member as DotNetMethod).MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink))
+					{
+						permissionHeader = "Permission:";
+					}
+				}
+				section.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
+				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				section.Add(new MarkdownLine());
 			}
-			else
+		}
+
+		private static void AddExceptions(MarkdownSection section, DotNetMember member)
+		{
+			if(member.ExceptionComments.Count == 0)
+				return;
+
+			section.Add(new MarkdownLine(MarkdownText.Bold("Exceptions:")));
+			foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 			{
-				if(String.IsNullOrEmpty(item.Description))
-					return new MarkdownLine(item.Term);
-				return new MarkdownLine(String.Format("{0}: {1}", item.Term, item.Description));
+				section.Add(MarkdownText.Italic(comment.QualifiedLink.Name.FullName + ":"), new MarkdownText(" "));
+				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 			}
-		}*/
+			section.Add(new MarkdownLine());
+		}
+
+		private static void AddFloatingComments(MarkdownSection section, DotNetMember member)
+		{
+			if(member.FloatingComments.IsEmpty)
+				return;
+
+			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.FloatingComments));
+		}
+
 	}
 }

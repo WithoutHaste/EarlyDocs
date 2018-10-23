@@ -58,21 +58,14 @@ namespace EarlyDocs
 			DotNetSettings.QualifiedNameConverter = DotNetSettings.DefaultQualifiedNameConverter;
 			DotNetSettings.AdditionalQualifiedNameConverter = DotNetExtensions.QualifiedNameConverter;
 
-
-
-			//todo: cleanup old method
-
-			LoadXML(xmlDocumentationFilename);
-			LoadAssembly(dllFilename);
-
 			PrepareOutputDirectory(outputDirectory, emptyOutputDirectoryFirst);
-			//foreach(XmlType type in typeNameToType.Values)
-			//{
-			//	Save(type.ToMarkdownFile(), outputDirectory, type.Name + Ext.MD);
-			//}
 			foreach(DotNetType type in xmlDocumentation.Types)
 			{
 				Save(type, outputDirectory, type.Name.LocalName + Ext.MD);
+			}
+			foreach(DotNetDelegate _delegate in xmlDocumentation.Delegates)
+			{
+				Save(_delegate, outputDirectory, _delegate.Name.LocalName + Ext.MD);
 			}
 			Save(GenerateTableOfContents(xmlDocumentation), outputDirectory, "TableOfContents" + Ext.MD);
 		}
@@ -91,137 +84,7 @@ namespace EarlyDocs
 				}
 			}
 		}
-
-		private void LoadXML(string filename)
-		{
-			XDocument doc = XDocument.Load(filename);
-
-			foreach(XElement element in doc.Root.Elements())
-			{
-				if(element.Name == "members")
-				{
-					LoadMembers(element);
-				}
-			}
-		}
-
-		private void LoadAssembly(string dll)
-		{
-			Assembly a = Assembly.LoadFrom(dll);
-			foreach(TypeInfo typeInfo in a.DefinedTypes)
-			{
-				XmlType type = FindType(typeInfo.FullName.Replace('+', '.'));
-				if(type == null) continue;
-
-				type.Apply(typeInfo);
-			}
-		}
-
-		private void LoadMembers(XElement members)
-		{
-			foreach(XElement element in members.Elements())
-			{
-				if(element.Attribute("name") == null)
-					continue;
-				if(element.Attribute("name").Value.StartsWith("T:"))
-				{
-					LoadType(element);
-					continue;
-				}
-				else if(element.Attribute("name").Value.StartsWith("M:"))
-				{
-					LoadMethod(element);
-					continue;
-				}
-				else if(element.Attribute("name").Value.StartsWith("F:"))
-				{
-					LoadField(element);
-					continue;
-				}
-				else if(element.Attribute("name").Value.StartsWith("P:"))
-				{
-					LoadProperty(element);
-					continue;
-				}
-				else if(element.Attribute("name").Value.StartsWith("E:"))
-				{
-					LoadEvent(element);
-					continue;
-				}
-			}
-		}
-
-		private void LoadType(XElement element)
-		{
-			XmlType type = new XmlType(element);
-			if(typeNameToType.ContainsKey(type.Assembly)) //check for nested type
-			{
-				typeNameToType[type.Assembly].Add(type);
-				return;
-			}
-			typeNameToType[type.TypeName] = type;
-		}
-
-		private void LoadMethod(XElement element)
-		{
-			XmlMethod member = new XmlMethod(element);
-			XmlType parent = FindType(member.TypeName);
-			if(parent == null)
-				return;
-			parent.Add(member);
-		}
-
-		private void LoadField(XElement element)
-		{
-			XmlField field = new XmlField(element);
-			XmlType parent = FindType(field.ParentTypeName);
-			if(parent == null)
-				return;
-			parent.Add(field);
-		}
-
-		private void LoadProperty(XElement element)
-		{
-			XmlProperty property = new XmlProperty(element);
-			XmlType parent = FindType(property.ParentTypeName);
-			if(parent == null)
-				return;
-			parent.Add(property);
-		}
-
-		private void LoadEvent(XElement element)
-		{
-			XmlEvent e = new XmlEvent(element);
-			XmlType parent = FindType(e.ParentTypeName);
-			if(parent == null)
-				return;
-			parent.Add(e);
-		}
-
-		private XmlType FindType(string name)
-		{
-			foreach(XmlType type in typeNameToType.Values)
-			{
-				if(type.TypeName == name)
-					return type;
-				foreach(XmlType subType in type.Types)
-				{
-					if(subType.TypeName == name)
-						return subType;
-				}
-			}
-			return null;
-		}
-
-		[ObsoleteAttribute("Replace with Save(MarkdownFile...)")]
-		private void Save(string text, string directory, string filename)
-		{
-			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
-			{
-				writer.Write(text);
-			}
-		}
-
+		
 		private void Save(MarkdownFile markdown, string directory, string filename)
 		{
 			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
@@ -241,6 +104,17 @@ namespace EarlyDocs
 			}
 		}
 
+		private void Save(DotNetDelegate _delegate, string directory, string filename)
+		{
+			//todo: move formatting of filename to central location that links can use
+			filename = filename.Replace("<", "_").Replace(">", "_").Replace(",", "_");
+
+			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
+			{
+				writer.Write(_delegate.ToMarkdownFile().ToMarkdown());
+			}
+		}
+
 		private MarkdownFile GenerateTableOfContents(DotNetDocumentationFile xmlDocumentation)
 		{
 			MarkdownFile markdown = new MarkdownFile();
@@ -250,6 +124,7 @@ namespace EarlyDocs
 			AddTableOfContentsSection(section, "Abstract Types", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Abstract).ToList());
 			AddTableOfContentsSection(section, "Interfaces", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Interface).ToList());
 			AddTableOfContentsSection(section, "Enums", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Enum).ToList());
+			AddTableOfContentsSection(section, "Delegates", xmlDocumentation.Delegates);
 			AddTableOfContentsSection(section, "Exceptions", xmlDocumentation.Types.Where(t => t.Category == TypeCategory.Exception).ToList());
 
 			return markdown;
@@ -264,6 +139,20 @@ namespace EarlyDocs
 			{
 				section.AddInLine(new MarkdownInlineLink(type.Name.LocalName, type.Name.LocalName + Ext.MD));
 				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.SummaryComments));
+				section.Add(new MarkdownLine());
+			}
+		}
+
+		private void AddTableOfContentsSection(MarkdownSection parent, string header, List<DotNetDelegate> _delegates)
+		{
+			if(_delegates.Count == 0) return;
+
+			MarkdownSection section = parent.AddSection(header);
+			foreach(DotNetDelegate _delegate in _delegates.OrderBy(t => t.Name.LocalName))
+			{
+				section.AddInLine(new MarkdownInlineLink(_delegate.Name.LocalName, _delegate.Name.LocalName + Ext.MD));
+				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments));
+				section.Add(new MarkdownLine());
 			}
 		}
 	}

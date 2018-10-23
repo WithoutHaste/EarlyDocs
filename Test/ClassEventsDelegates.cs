@@ -19,7 +19,10 @@ namespace Test
 	/// [Floating Comment] [Short] [One Line] Quisque neque sapien, vulputate commodo leo non, mollis suscipit nunc.
 	public delegate void EventHandlerGlobal(object sender, EventArgs e);
 
-	class ClassEventsDelegates
+	/// <summary>
+	/// Tests events and delegates.
+	/// </summary>
+	public class ClassEventsDelegates
 	{
 		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Phasellus ut nulla aliquam, commodo ante ac, accumsan leo.

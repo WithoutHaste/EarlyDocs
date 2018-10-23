@@ -3,6 +3,7 @@
 **Inheritance:** object  
   
 Tests a class in a nested namespace.  
+  
 
 # Fields
 

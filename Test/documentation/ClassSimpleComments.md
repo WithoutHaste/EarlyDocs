@@ -3,16 +3,14 @@
 **Inheritance:** object  
   
 [Summary Tag] [Short] [One Line] Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Sed nibh turpis, pulvinar eget odio sed, ornare cursus nunc. Curabitur commodo nibh egestas lectus porttitor placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada accumsan dolor tempus viverra. Nam finibus est non nisi volutpat pharetra. Suspendisse sollicitudin sed lectus vitae tincidunt. Vivamus finibus dapibus dui, venenatis ullamcorper ex egestas accumsan. Curabitur quis augue erat. Donec convallis faucibus magna accumsan vulputate. Vestibulum in vulputate dui, tristique hendrerit metus. Integer ligula lectus, porta ac turpis eu, fringilla pellentesque nisi.  
   
-
-## Examples
-
-**Example A:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Duis rhoncus libero non nibh efficitur semper.  
-
   
+[Floating Comment] [Short] [One Line] Pellentesque quis augue vel orci semper mattis.  
 
 # Enums
 
@@ -131,6 +129,26 @@ _ArgumentException:_ [Exception Tag] [Short] [One Line] Vivamus vitae condimentu
   
 [Floating Comment] [Short] [One Line] Ut dictum massa at iaculis semper.  
 
+# Methods
+
+## void MethodWithoutParameters()
+
+[Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.  
+  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Maecenas vel nunc fringilla urna pellentesque volutpat quis ac sapien.  
+  
+**Example:**  
+[Example Tag] [Short] [One Line] Suspendisse ultrices porta sem sed eleifend.  
+  
+**Permission:**  
+[Permission Tag] [References Method] [Short] [One Line] Suspendisse auctor purus sit amet eros iaculis semper.  
+  
+**Exceptions:**  
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.  
+  
+[Floating Comment] [Short] [One Line] In auctor dui et massa sagittis, ut consequat mauris interdum.  
+
 # Static Methods
 
 ## string StaticMethodWithParametersWithReturn(int a, string b)
@@ -165,24 +183,4 @@ _ArgumentException:_ [Exception Tag] [Short] [One Line] Vivamus vitae condimentu
 _ArgumentException:_ [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.  
   
 [Floating Comment] [Short] [One Line] Suspendisse sed purus et arcu hendrerit posuere at sit amet orci.  
-
-# Methods
-
-## void MethodWithoutParameters()
-
-[Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.  
-  
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Maecenas vel nunc fringilla urna pellentesque volutpat quis ac sapien.  
-  
-**Example:**  
-[Example Tag] [Short] [One Line] Suspendisse ultrices porta sem sed eleifend.  
-  
-**Permission:**  
-[Permission Tag] [References Method] [Short] [One Line] Suspendisse auctor purus sit amet eros iaculis semper.  
-  
-**Exceptions:**  
-_ArgumentException:_ [Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.  
-  
-[Floating Comment] [Short] [One Line] In auctor dui et massa sagittis, ut consequat mauris interdum.  
 

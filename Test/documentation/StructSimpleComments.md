@@ -3,16 +3,14 @@
 **Inheritance:** object  
   
 [Summary Tag] [Short] [One Line] Donec porttitor mi in odio fermentum lobortis.  
+  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Fusce ut turpis nec ipsum hendrerit fermentum a in nisl.  
   
-
-## Examples
-
-**Example A:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Nunc suscipit ipsum sed nisi interdum euismod.  
-
   
+[Floating Comment] [Short] [One Line] Sed sit amet dapibus nibh, non luctus quam.  
 
 # Fields
 
@@ -68,41 +66,6 @@ _Exception:_ [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula
   
 [Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.  
 
-# Static Methods
-
-## double StaticMethodWithParametersWithReturn(int a, string b)
-
-[Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
-  
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Mauris eu felis eleifend, posuere leo ut, sollicitudin ipsum.  
-  
-
-### Parameters
-
-#### a
-
-[Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
-
-#### b
-
-[Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
-
-  
-**Returns:**  
-[Returns Tag] [Short] [One Line] Proin fringilla eros et lacinia hendrerit.  
-  
-**Example:**  
-[Example Tag] [Short] [One Line] Etiam vitae lorem in nunc sollicitudin accumsan sed ac sem.  
-  
-**Permission:**  
-[Permission Tag] [References Method] [Short] [One Line] Nunc ullamcorper egestas vulputate.  
-  
-**Exceptions:**  
-_ArgumentException:_ [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.  
-  
-[Floating Comment] [Short] [One Line] Vivamus convallis libero nec neque vestibulum porta.  
-
 # Methods
 
 ## float MethodWithParametersWithReturn(int a, string b)
@@ -137,4 +100,39 @@ _ArgumentException:_ [Exception Tag] [Short] [One Line] Suspendisse ornare orci 
 _ArgumentException:_ [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.  
   
 [Floating Comment] [Short] [One Line] Quisque sit amet ante eu nulla laoreet auctor.  
+
+# Static Methods
+
+## double StaticMethodWithParametersWithReturn(int a, string b)
+
+[Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
+  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Mauris eu felis eleifend, posuere leo ut, sollicitudin ipsum.  
+  
+
+### Parameters
+
+#### a
+
+[Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
+
+#### b
+
+[Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
+
+  
+**Returns:**  
+[Returns Tag] [Short] [One Line] Proin fringilla eros et lacinia hendrerit.  
+  
+**Example:**  
+[Example Tag] [Short] [One Line] Etiam vitae lorem in nunc sollicitudin accumsan sed ac sem.  
+  
+**Permission:**  
+[Permission Tag] [References Method] [Short] [One Line] Nunc ullamcorper egestas vulputate.  
+  
+**Exceptions:**  
+_ArgumentException:_ [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.  
+  
+[Floating Comment] [Short] [One Line] Vivamus convallis libero nec neque vestibulum porta.  
 

@@ -3,6 +3,7 @@
 **Inheritance:** object  
   
 Tests fields/properties with (1) a single summary tag (2) a single value tag (3) using both at once.  
+  
 
 # Fields
 

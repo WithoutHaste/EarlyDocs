@@ -3,6 +3,7 @@
 **Inheritance:** object  
   
 Tests overloaded methods.  
+  
 
 # Methods
 

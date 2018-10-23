@@ -4,4 +4,5 @@
 **Inheritance:** object  
   
 Tests static class.  
+  
 

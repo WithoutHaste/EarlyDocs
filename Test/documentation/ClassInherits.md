@@ -4,6 +4,7 @@
 **Implements:** Test.IInterfaceSimpleComments  
   
 Tests class inheritance.  
+  
 
 # Properties
 

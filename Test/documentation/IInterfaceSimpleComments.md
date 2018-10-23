@@ -3,16 +3,14 @@
 **Interface**  
   
 [Summary Tag] [Short] [One Line] Cras posuere mattis nisi, sed porta libero auctor eu.  
+  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Ut in sem eu purus facilisis venenatis eu id magna.  
   
-
-## Examples
-
-**Example A:**  
+**Example:**  
 [Example Tag] [Short] [One Line] Nam eget velit vestibulum, euismod arcu eu, pretium odio.  
-
   
+[Floating Comment] [Short] [One Line] Donec venenatis vitae elit at faucibus.  
 
 # Properties
 

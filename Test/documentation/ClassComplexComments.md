@@ -12,6 +12,7 @@ leo diam. Nullam pulvinar iaculis nunc, eu tristique elit.
   
 Interdum et malesuada fames ac ante ipsum primis in faucibus.Praesent dapibus euismod nibh,   
 ac sollicitudin mi iaculis non.  
+  
 **Remarks:**  
 [Remarks Tag] [Multiline] Nulla vulputate eros sit amet libero volutpat   
 dignissim. Etiam rutrum imperdiet felis, id hendrerit magna sollicitudin   
@@ -24,9 +25,6 @@ vel dolor auctor rhoncus. Aliquam aliquam urna vitae varius vestibulum. Mauris
 condimentum risus a mi condimentum viverra.  
     
   
-
-## Examples
-
 **Example A:**  
 [Example Tag] [Multiline] Donec lectus odio, mollis id ante ut, ornare pretium lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla nec justo varius sem consequat bibendum vitae eget nisl.  
     
@@ -67,6 +65,5 @@ for (int i = 0; i < lines.Length; i++)
 {  
     c++;  
 }  
-
   
 

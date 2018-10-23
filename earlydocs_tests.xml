@@ -38,27 +38,11 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">4</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">ClassComplexComments</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Test</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">5</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">ClassEventsDelegates</Data>
+          <Data ss:Type="String">ClassEventsDelegates
+- global delegate: return type</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -348,6 +332,23 @@
         </Cell>
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">IInterfaceInherits</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Test</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">4</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">ClassComplexComments</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>

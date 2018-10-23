@@ -3,4 +3,5 @@
 **Inheritance:** object  
   
 Tests sealed class.  
+  
 
