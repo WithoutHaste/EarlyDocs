@@ -17,38 +17,6 @@ namespace EarlyDocs
 
 	class ConvertXML
 	{
-		private Dictionary<string, XmlType> typeNameToType = new Dictionary<string, XmlType>();
-		private List<XmlType> ExceptionTypes {
-			get {
-				return typeNameToType.Values.Where(t => t.IsException).ToList();
-			}
-		}
-		private List<XmlType> NormalTypes {
-			get {
-				return typeNameToType.Values.Where(t => !t.IsAbstract && !t.IsStatic && !t.IsInterface && !t.IsException && !t.IsEnum).ToList();
-			}
-		}
-		private List<XmlType> StaticTypes {
-			get {
-				return typeNameToType.Values.Where(t => t.IsStatic && !t.IsInterface && !t.IsException && !t.IsEnum).ToList();
-			}
-		}
-		private List<XmlType> InterfaceTypes {
-			get {
-				return typeNameToType.Values.Where(t => t.IsInterface && !t.IsException).ToList();
-			}
-		}
-		private List<XmlType> EnumTypes {
-			get {
-				return typeNameToType.Values.Where(t => t.IsEnum && !t.IsException).ToList();
-			}
-		}
-		private List<XmlType> AbstractTypes {
-			get {
-				return typeNameToType.Values.Where(t => t.IsAbstract && !t.IsException).ToList();
-			}
-		}
-
 		public ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory)
 		{
 			bool emptyOutputDirectoryFirst = true;
