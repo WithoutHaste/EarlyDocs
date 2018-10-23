@@ -3,7 +3,7 @@
 **Inheritance:** object → Test.ClassSimpleComments  
 **Implements:** Test.IInterfaceSimpleComments  
   
-Tests class inheritance.
+Tests class inheritance.  
 
 # Properties
 

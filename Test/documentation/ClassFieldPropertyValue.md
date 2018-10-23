@@ -2,17 +2,19 @@
 
 **Inheritance:** object  
   
-Tests fields/properties with (1) a single summary tag (2) a single value tag (3) using both at once.
+Tests fields/properties with (1) a single summary tag (2) a single value tag (3) using both at once.  
 
 # Fields
 
 ## string SummaryField
 
-Nulla facilisi.
+Nulla facilisi.  
+  
 
 ## string SummaryValueField
 
-Fusce ac mi sit amet turpis facilisis venenatis maximus ac nunc.
+Fusce ac mi sit amet turpis facilisis venenatis maximus ac nunc.  
+  
 
 ## string ValueField
 
@@ -20,11 +22,13 @@ Fusce ac mi sit amet turpis facilisis venenatis maximus ac nunc.
 
 ## string SummaryProperty
 
-Nullam nec lorem vitae nunc pellentesque gravida.
+Nullam nec lorem vitae nunc pellentesque gravida.  
+  
 
 ## string SummaryValueProperty
 
-Donec turpis augue, feugiat ut sapien at, sagittis tristique enim.
+Donec turpis augue, feugiat ut sapien at, sagittis tristique enim.  
+  
 
 ## string ValueProperty
 

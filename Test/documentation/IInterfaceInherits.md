@@ -3,5 +3,5 @@
 **Interface**  
 **Implements:** Test.IInterfaceSimpleComments  
   
-Tests interface inheritance.
+Tests interface inheritance.  
 

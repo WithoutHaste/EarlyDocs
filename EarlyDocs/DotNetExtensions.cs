@@ -107,6 +107,7 @@ namespace EarlyDocs
 			{
 				typeSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
 				typeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.RemarksComments));
+				typeSection.Add(new MarkdownLine());
 			}
 			if(type.ExampleComments.Count > 0)
 			{
@@ -119,6 +120,7 @@ namespace EarlyDocs
 					exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 					index++; //todo: if more than 26 comments, loop to AA,AB,...
 				}
+				typeSection.Add(new MarkdownLine());
 			}
 			if(type.NestedEnums.Count > 0)
 			{
@@ -205,11 +207,13 @@ namespace EarlyDocs
 			if(field.SummaryComments.Count > 0)
 			{
 				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(field.SummaryComments));
+				memberSection.Add(new MarkdownLine());
 			}
 			if(field.RemarksComments.Count > 0)
 			{
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
 				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(field.RemarksComments));
+				memberSection.Add(new MarkdownLine());
 			}
 			if(field.ExampleComments.Count > 0)
 			{
@@ -223,6 +227,7 @@ namespace EarlyDocs
 					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 					index++;
 				}
+				memberSection.Add(new MarkdownLine());
 			}
 			foreach(DotNetCommentQualifiedLinkedGroup comment in field.PermissionComments)
 			{
@@ -231,6 +236,7 @@ namespace EarlyDocs
 					permissionHeader = "Permission:";
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
 				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				memberSection.Add(new MarkdownLine());
 			}
 			if(!field.FloatingComments.IsEmpty)
 			{
@@ -254,11 +260,13 @@ namespace EarlyDocs
 			if(method.SummaryComments.Count > 0)
 			{
 				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(method.SummaryComments));
+				memberSection.Add(new MarkdownLine());
 			}
 			if(method.RemarksComments.Count > 0)
 			{
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
 				memberSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(method.RemarksComments));
+				memberSection.Add(new MarkdownLine());
 			}
 			if(method.ParameterComments.Count > 0)
 			{
@@ -269,11 +277,13 @@ namespace EarlyDocs
 				{
 					parameterSection.AddSection(ToMarkdownSection(comment));
 				}
+				memberSection.Add(new MarkdownLine());
 			}
 			if(!method.ReturnsComments.IsEmpty)
 			{
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold("Returns:")));
 				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(method.ReturnsComments));
+				memberSection.Add(new MarkdownLine());
 			}
 			if(method.ExampleComments.Count > 0)
 			{
@@ -285,6 +295,7 @@ namespace EarlyDocs
 						exampleHeader = "Example:";
 					memberSection.Add(new MarkdownLine(MarkdownText.Bold(exampleHeader)));
 					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+					memberSection.Add(new MarkdownLine());
 					index++;
 				}
 			}
@@ -300,6 +311,7 @@ namespace EarlyDocs
 				}
 				memberSection.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
 				memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				memberSection.Add(new MarkdownLine());
 			}
 			if(method.ExceptionComments.Count > 0)
 			{
@@ -309,6 +321,7 @@ namespace EarlyDocs
 					memberSection.Add(MarkdownText.Italic(comment.QualifiedLink.Name.FullName + ":"), new MarkdownText(" "));
 					memberSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 				}
+				memberSection.Add(new MarkdownLine());
 			}
 			if(!method.FloatingComments.IsEmpty)
 			{

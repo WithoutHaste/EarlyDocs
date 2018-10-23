@@ -2,5 +2,5 @@
 
 **Inheritance:** object  
   
-Tests sealed class.
+Tests sealed class.  
 

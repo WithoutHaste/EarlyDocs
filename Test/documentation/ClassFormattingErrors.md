@@ -2,5 +2,5 @@
 
 **Inheritance:** object  
   
-Tests formatting errors in xml comments.
+Tests formatting errors in xml comments.  
 

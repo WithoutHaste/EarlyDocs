@@ -2,7 +2,7 @@
 
 **Inheritance:** object  
   
-Tests see and seealso tags, i.e. test links.
+Tests see and seealso tags, i.e. test links.  
 
 # Properties
 

@@ -3,5 +3,5 @@
 **Static**  
 **Inheritance:** object  
   
-Tests static class.
+Tests static class.  
 

@@ -2,5 +2,5 @@
 
 **Inheritance:** object → Test.StructSimpleComments  
   
-Tests struct inheritance.
+Tests struct inheritance.  
 

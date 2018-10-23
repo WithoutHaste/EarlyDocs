@@ -17,7 +17,6 @@ namespace EarlyDocs
 
 		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(List<DotNetComment> list)
 		{
-			//todo: expand support
 			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
 
 			foreach(DotNetComment comment in list)
@@ -30,7 +29,6 @@ namespace EarlyDocs
 
 		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(DotNetComment comment)
 		{
-			//todo: expand support
 			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
 
 			if(comment is DotNetCommentGroup)
@@ -39,7 +37,8 @@ namespace EarlyDocs
 			}
 			else if(comment is DotNetCommentText)
 			{
-				markdown.Add(new MarkdownParagraph((comment as DotNetCommentText).Text));
+				string text = (comment as DotNetCommentText).Text;
+				markdown.AddRange(text.Split('\n').Select(t => new MarkdownLine(t)).ToArray());
 			}
 
 			return markdown;
