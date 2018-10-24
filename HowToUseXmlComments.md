@@ -381,7 +381,17 @@ public MyType(int x, string y)
 
 **Static Constructor Method**
 
-If you know how to cref a static constructor, please message me.
+```
+/// <see cref="M:FullNamespace.MyType.#cctor"/>
+static MyType()
+{
+}
+```
+
+This format is not recognized by Visual Studio Intellisense on the comment itself, but it does show up in the XML file correctly.
+_(Meaning that hovering over comment cref="System.Exception" will bring up the summary of that type, but hovering other this example does nothing.)_
+
+If you know how to cref a static constructor in a way Visual Studio recognizes, please message me.
 
 **Destructor or Finalize Method**
 

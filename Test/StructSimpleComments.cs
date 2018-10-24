@@ -52,11 +52,11 @@ namespace Test
 		/// [Remarks Tag] [Short] [One Line] Nunc ut diam risus.
 		/// </remarks>
 		/// <example>[Example Tag] [Short] [One Line] Suspendisse orci odio, luctus vel ultrices at, gravida eget enim.</example>
+		/// <permission cref="M:Test.StructSimpleComments.#cctor">[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.</permission>
 		/// <exception cref="Exception">[Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.</exception>
 		/// [Floating Comment] [Short] [One Line] Proin rutrum consectetur dui at egestas.
 		static StructSimpleComments()
 		{
-			//todo: how to reference a static constructor in a cref?
 		}
 
 		/// <summary>
