@@ -13,6 +13,7 @@ leo diam. Nullam pulvinar iaculis nunc, eu tristique elit.
 Interdum et malesuada fames ac ante ipsum primis in faucibus.Praesent dapibus euismod nibh,   
 ac sollicitudin mi iaculis non.  
   
+<hr/>  
 **Remarks:**  
 [Remarks Tag] [Multiline] Nulla vulputate eros sit amet libero volutpat   
 dignissim. Etiam rutrum imperdiet felis, id hendrerit magna sollicitudin   
@@ -25,7 +26,11 @@ vel dolor auctor rhoncus. Aliquam aliquam urna vitae varius vestibulum. Mauris
 condimentum risus a mi condimentum viverra.  
     
   
-**Example A:**  
+
+# Examples
+
+## Example A:
+
 [Example Tag] [Multiline] Donec lectus odio, mollis id ante ut, ornare pretium lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla nec justo varius sem consequat bibendum vitae eget nisl.  
     
 using System;  
@@ -43,7 +48,9 @@ class Program
     }  
 }  
 Proin sollicitudin non est eget semper. Suspendisse imperdiet turpis ac elit hendrerit dapibus ut a lacus. Curabitur pulvinar lacus at risus condimentum, eget ornare ligula tempus.    
-**Example B:**  
+
+## Example B:
+
 [Example Tag] [Multiline] Aliquam sed mi convallis, convallis purus congue, volutpat augue.  
   
 Donec lobortis consequat ligula in faucibus. Ut vitae sapien vel lacus malesuada pharetra id id nisl. Vestibulum vel felis enim.  
@@ -65,5 +72,4 @@ for (int i = 0; i < lines.Length; i++)
 {  
     c++;  
 }  
-  
 

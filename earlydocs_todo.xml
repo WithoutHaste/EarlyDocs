@@ -91,6 +91,24 @@ such as DotNetTypeExtensions</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">52</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">review design of EarlyDocs
+refactor as needed</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-25T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">18</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -988,7 +1006,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">51</Data>
+          <Data ss:Type="Number">52</Data>
         </Cell>
       </Row>
       <Row>

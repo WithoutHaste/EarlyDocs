@@ -15,6 +15,35 @@ namespace EarlyDocs
 			return DotNetCommentsToMarkdown(group.Comments);
 		}
 
+		/// <summary>
+		/// Returns the first line of comments produced by the group.
+		/// Intended for groups that boil down to a single line.
+		/// </summary>
+		public static List<IMarkdownInLine> DotNetCommentGroupToMarkdownLine(DotNetCommentGroup group)
+		{
+			List<IMarkdownInSection> inSectionList = DotNetCommentGroupToMarkdown(group);
+			List<IMarkdownInLine> line = new List<IMarkdownInLine>();
+
+			foreach(IMarkdownInSection inSection in inSectionList)
+			{
+				if(inSection is MarkdownLine)
+				{
+					line.AddRange((inSection as MarkdownLine).Elements);
+					return line;
+				}
+				if(inSection is IMarkdownInLine)
+				{
+					line.Add(inSection as IMarkdownInLine);
+				}
+				else
+				{
+					return line;
+				}
+			}
+
+			return line;
+		}
+
 		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(List<DotNetComment> list)
 		{
 			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();

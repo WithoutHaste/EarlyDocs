@@ -10,8 +10,10 @@ Tests lists and tables in comments.
 ## int BulletList
 
   
+<hr/>  
 **Remarks:**  
   
+<hr/>  
 **Example A:**  
 **Example B:**  
   
@@ -27,8 +29,10 @@ Tests lists and tables in comments.
 ## int NumberList
 
   
+<hr/>  
 **Remarks:**  
   
+<hr/>  
 **Example A:**  
 **Example B:**  
   
@@ -44,6 +48,7 @@ Tests lists and tables in comments.
 ## int Table
 
   
+<hr/>  
 **Remarks:**  
   
 

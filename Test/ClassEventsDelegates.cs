@@ -17,7 +17,7 @@ namespace Test
 	/// <param name="sender">[Param Tag] [Short] [One Line] Nunc bibendum, purus sit amet sodales molestie, libero metus mattis massa, porttitor vehicula sem ligula in quam.</param>
 	/// <param name="e">[Param Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.</param>
 	/// [Floating Comment] [Short] [One Line] Quisque neque sapien, vulputate commodo leo non, mollis suscipit nunc.
-	public delegate void EventHandlerGlobal(object sender, EventArgs e);
+	public delegate EventHandler EventHandlerGlobal(object sender, EventArgs e);
 
 	/// <summary>
 	/// Tests events and delegates.
