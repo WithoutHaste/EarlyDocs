@@ -27,14 +27,8 @@ namespace EarlyDocs
 			DotNetSettings.AdditionalQualifiedNameConverter = DotNetExtensions.QualifiedNameConverter;
 
 			PrepareOutputDirectory(outputDirectory, emptyOutputDirectoryFirst);
-			foreach(DotNetType type in xmlDocumentation.Types)
-			{
-				Save(type, outputDirectory, type.Name.LocalName + Ext.MD);
-			}
-			foreach(DotNetDelegate _delegate in xmlDocumentation.Delegates)
-			{
-				Save(_delegate, outputDirectory, _delegate.Name.LocalName + Ext.MD);
-			}
+			GenerateTypePages(xmlDocumentation.Types, outputDirectory);
+			GenerateDelegatePages(xmlDocumentation.Delegates, outputDirectory);
 			Save(GenerateTableOfContents(xmlDocumentation), outputDirectory, "TableOfContents" + Ext.MD);
 		}
 
@@ -52,7 +46,34 @@ namespace EarlyDocs
 				}
 			}
 		}
-		
+
+		private void GenerateTypePages(List<DotNetType> types, string outputDirectory, string _namespace = null)
+		{
+			foreach(DotNetType type in types)
+			{
+				string typeName = type.Name.LocalName;
+				if(!String.IsNullOrEmpty(_namespace))
+					typeName = _namespace + "." + typeName;
+
+				Save(type, outputDirectory, typeName + Ext.MD);
+
+				GenerateTypePages(type.NestedTypes, outputDirectory, typeName);
+				GenerateDelegatePages(type.Delegates, outputDirectory, typeName);
+			}
+		}
+
+		private void GenerateDelegatePages(List<DotNetDelegate> delegates, string outputDirectory, string _namespace = null)
+		{
+			foreach(DotNetDelegate _delegate in delegates)
+			{
+				string delegateName = _delegate.Name.LocalName;
+				if(!String.IsNullOrEmpty(_namespace))
+					delegateName = _namespace + "." + delegateName;
+
+				Save(_delegate, outputDirectory, delegateName + Ext.MD);
+			}
+		}
+
 		private void Save(MarkdownFile markdown, string directory, string filename)
 		{
 			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))

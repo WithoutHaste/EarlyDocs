@@ -69,7 +69,7 @@ Tests events and delegates.
 [Permission Tag] [References Event] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
   
 
-## Test.ClassEventsDelegates.EventHandlerInClass EventB
+## [EventHandlerInClass](Test.ClassEventsDelegates.EventHandlerInClass.md) EventB
 
 [Summary Tag] [Short] [One Line] Suspendisse non enim semper sapien volutpat rhoncus.  
   
@@ -92,6 +92,12 @@ Tests events and delegates.
 ## EventHandler EventC
 
 [Summary Tag] [Private Member] [Should Ignore] Duis justo dolor, dapibus eu pulvinar vitae, iaculis non neque.  
+  
+
+# Delegates
+
+[EventHandlerInClass](EventHandlerInClass.md)  
+[Summary Tag] [Short] [One Line] Phasellus ut nulla aliquam, commodo ante ac, accumsan leo.  
   
 
 # Methods

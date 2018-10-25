@@ -11,18 +11,18 @@ namespace EarlyDocs
 {
 	public static class DotNetExtensions
 	{
-		public static string ToHeader(this DotNetField field)
+		public static string ToHeader(this DotNetField field, DotNetType parent)
 		{
 			if(field is DotNetProperty)
-				return ToHeader(field as DotNetProperty);
-			return field.TypeName.ToDisplayString() + " " + field.Name.LocalName;
+				return ToHeader(field as DotNetProperty, parent);
+			return field.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + field.Name.LocalName;
 		}
 
-		public static string ToHeader(this DotNetProperty property)
+		public static string ToHeader(this DotNetProperty property, DotNetType parent)
 		{
 			if(property is DotNetIndexer)
 				return ToHeader(property as DotNetIndexer);
-			string header = property.TypeName.ToDisplayString() + " " + property.Name.LocalName;
+			string header = property.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + property.Name.LocalName;
 			if(property.Category == FieldCategory.Abstract)
 				header = "abstract " + header;
 			return header;
@@ -30,12 +30,12 @@ namespace EarlyDocs
 
 		public static string ToHeader(this DotNetIndexer indexer)
 		{
-			return indexer.TypeName.ToDisplayString() + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayString()).ToArray()) + "]";
+			return indexer.TypeName.ToDisplayStringLink() + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink()).ToArray()) + "]";
 		}
 
 		public static string ToHeader(this DotNetParameter parameter)
 		{
-			return parameter.TypeName.ToDisplayString() + " " + parameter.Name;
+			return parameter.TypeName.ToDisplayStringLink() + " " + parameter.Name;
 		}
 
 		public static string ToDisplayString(this DotNetParameter parameter)
@@ -43,18 +43,34 @@ namespace EarlyDocs
 			if(parameter.TypeName == null)
 				return parameter.Name;
 			if(String.IsNullOrEmpty(parameter.Name))
-				return parameter.TypeName.ToDisplayString();
-			return parameter.TypeName.ToDisplayString() + " " + parameter.Name;
+				return parameter.TypeName.ToDisplayStringLink();
+			return parameter.TypeName.ToDisplayStringLink() + " " + parameter.Name;
 		}
 
-		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace)
+		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
 		{
+			if(_namespace == null)
+				_namespace = "";
 			_namespace += ".";
 
 			string displayString = name.ToDisplayString();
 			if(displayString.StartsWith(_namespace))
 			{
 				displayString = displayString.Substring(_namespace.Length);
+			}
+			return displayString;
+		}
+
+		public static string ToDisplayStringLink(this DotNetQualifiedName name, string _namespace = null)
+		{
+			if(_namespace == null)
+				_namespace = "";
+			_namespace += ".";
+
+			string displayString = name.ToDisplayString();
+			if(displayString.StartsWith(_namespace))
+			{
+				displayString = String.Format("[{0}]({1})", displayString.Substring(_namespace.Length), displayString + Ext.MD);
 			}
 			return displayString;
 		}
@@ -127,14 +143,14 @@ namespace EarlyDocs
 				{
 					foreach(DotNetField field in type.ConstantFields.OrderBy(m => m.Name.LocalName))
 					{
-						fieldSection.AddSection(ToMarkdownSection(field));
+						fieldSection.AddSection(ToMarkdownSection(field, type));
 					}
 				}
 				if(type.NormalFields.Count > 0)
 				{
 					foreach(DotNetField field in type.NormalFields.OrderBy(m => m.Name.LocalName))
 					{
-						fieldSection.AddSection(ToMarkdownSection(field));
+						fieldSection.AddSection(ToMarkdownSection(field, type));
 					}
 				}
 			}
@@ -146,14 +162,14 @@ namespace EarlyDocs
 				{
 					foreach(DotNetIndexer i in type.IndexerProperties.OrderBy(m => m.Parameters.Count).ThenBy(m => m.ParameterTypesSignature))
 					{
-						propertySection.AddSection(ToMarkdownSection(i as DotNetField));
+						propertySection.AddSection(ToMarkdownSection(i as DotNetField, type));
 					}
 				}
 				if(type.NormalProperties.Count > 0)
 				{
 					foreach(DotNetProperty p in type.NormalProperties.OrderBy(m => m.Name.LocalName))
 					{
-						propertySection.AddSection(ToMarkdownSection(p as DotNetField));
+						propertySection.AddSection(ToMarkdownSection(p as DotNetField, type));
 					}
 				}
 			}
@@ -163,10 +179,21 @@ namespace EarlyDocs
 				typeSection.Add(eventSection);
 				foreach(DotNetEvent e in type.Events.OrderBy(m => m.Name.LocalName))
 				{
-					eventSection.AddSection(ToMarkdownSection(e as DotNetField));
+					eventSection.AddSection(ToMarkdownSection(e as DotNetField, type));
 				}
 			}
-			
+			if(type.Delegates.Count > 0)
+			{
+				MarkdownSection delegateSection = new MarkdownSection("Delegates");
+				typeSection.Add(delegateSection);
+				foreach(DotNetDelegate _delegate in type.Delegates.OrderBy(m => m.Name.LocalName))
+				{
+					delegateSection.AddInLine(new MarkdownInlineLink(_delegate.Name.LocalName, _delegate.Name.LocalName + Ext.MD));
+					delegateSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments));
+					delegateSection.Add(new MarkdownLine());
+				}
+			}
+
 			//todo: static constructors
 			if(type.ConstructorMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Constructors", type.ConstructorMethods.Cast<DotNetMethod>().ToList()));
@@ -200,9 +227,9 @@ namespace EarlyDocs
 			return markdown;
 		}
 
-		public static MarkdownSection ToMarkdownSection(this DotNetField field)
+		public static MarkdownSection ToMarkdownSection(this DotNetField field, DotNetType parent)
 		{
-			MarkdownSection memberSection = new MarkdownSection(field.ToHeader());
+			MarkdownSection memberSection = new MarkdownSection(field.ToHeader(parent));
 
 			AddSummary(memberSection, field as DotNetMember);
 			AddRemarks(memberSection, field as DotNetMember);
@@ -409,15 +436,13 @@ namespace EarlyDocs
 			MarkdownSection examplesSection = new MarkdownSection("Examples");
 			section.Add(examplesSection);
 
-			char index = 'A'; //todo: update indexer to go to "AA", "AB" after "Z"
+			AlphabetCounter counter = new AlphabetCounter();
 			foreach(DotNetComment comment in member.ExampleComments)
 			{
-				string exampleHeader = "Example " + index + ":";
+				string exampleHeader = "Example " + counter.Value + ":";
 				MarkdownSection exampleSection = examplesSection.AddSection(exampleHeader);
-
 				exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
-
-				index++;
+				counter++;
 			}
 		}
 
@@ -429,13 +454,13 @@ namespace EarlyDocs
 			if(!section.IsEmpty)
 				section.Add(new MarkdownLine("<hr/>"));
 
-			char index = 'A'; //todo: update indexer to go to "AA", "AB" after "Z"
+			AlphabetCounter counter = new AlphabetCounter();
 			foreach(DotNetComment comment in member.ExampleComments)
 			{
-				string exampleHeader = "Example " + index + ":";
+				string exampleHeader = "Example " + counter.Value + ":";
 				section.AddInLine(MarkdownText.Bold(exampleHeader));
 				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
-				index++;
+				counter++;
 			}
 			section.Add(new MarkdownLine());
 		}
