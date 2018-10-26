@@ -1,6 +1,6 @@
 # ClassSimpleCommentsGeneric<T,U>
 
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 [Summary Tag] [Short] [One Line] Cras suscipit et sapien ac tincidunt.  
   
@@ -154,6 +154,119 @@
 <hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
+
+  
+<hr/>  
+**Parameters:**
+
+  
+
+# Methods
+
+##  #cctor()
+
+[Summary Tag] [Short] [One Line] Donec sit amet erat ac diam fermentum porttitor vitae et diam.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Morbi maximus quis lectus sit amet consequat.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Nam nec rhoncus diam.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Mauris quis metus convallis, consequat dui viverra, commodo sapien.  
+  
+**Permission: Test.ClassSimpleCommentsGeneric.#cctor**  
+[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.  
+  
+<hr/>  
+**Exceptions:**  
+* _Exception_: [Exception Tag] [Short] [One Line] Nunc ornare dignissim erat, id malesuada urna elementum et.  
+
+  
+
+## void Finalize()
+
+[Summary Tag] [Short] [One Line] Quisque scelerisque elit a massa semper luctus.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Sed at scelerisque nulla, sit amet hendrerit quam.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Suspendisse potenti.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Praesent ligula enim, mattis et justo vel, tempor ultrices nunc.  
+  
+**Permission:**  
+[Permission Tag] [References Destructor] [Short] [One Line] Nulla eleifend euismod blandit.  
+  
+<hr/>  
+**Exceptions:**  
+* _IndexOutOfRangeException_: [Exception Tag] [Short] [One Line] Phasellus id tellus odio.  
+
+  
+
+##  MethodWithTypeParameters<A,B>(A, B, U)
+
+[Summary Tag] [Short] [One Line] Maecenas molestie purus id fermentum dictum.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Vestibulum volutpat congue ligula eget scelerisque.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Morbi sagittis ipsum nec lorem volutpat, sit amet sodales nulla faucibus.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Vivamus ultrices tristique est ultrices bibendum.  
+  
+**Permission:**  
+[Permission Tag] [References Method] [Short] [One Line] Etiam ut dolor bibendum, malesuada ligula eu, maximus sapien.  
+  
+<hr/>  
+**Exceptions:**  
+* _ArgumentException_: [Exception Tag] [Short] [One Line] Nunc purus libero, scelerisque a felis et, feugiat ultrices ipsum.  
+
+  
+<hr/>  
+**Parameters:**
+
+  
+
+##  StaticMethodWithParametersWithReturn(T, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string))
+
+[Summary Tag] [Short] [One Line] Mauris malesuada varius risus eu condimentum.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Cras luctus erat tincidunt dolor finibus, et lobortis mi vulputate.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Nulla dignissim orci id justo laoreet, non consequat lorem semper.  
+  
+**Returns:**  
+[Returns Tag] [Short] [One Line] Donec non nibh dignissim, imperdiet nibh non, aliquet felis.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Fusce scelerisque, sem ut mattis condimentum, arcu ligula egestas mi, eu vulputate turpis ante ut purus.  
+  
+**Permission:**  
+[Permission Tag] [References Method] [Short] [One Line] Phasellus sollicitudin, augue non dictum varius, diam urna aliquet odio, ut tincidunt leo sem id leo.  
+  
+<hr/>  
+**Exceptions:**  
+* _ArgumentException_: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
 
   
 <hr/>  

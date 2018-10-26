@@ -1,6 +1,6 @@
 # ClassRepeatedTags
 
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 Tests the use of multiple tags for tags where only one is expected: summary, remarks, returns, value.  
 Tests the use of multiple tags for tags where multiple are expected: example, exception, param, typeparam, permission.  
@@ -102,6 +102,12 @@ vehicula facilisis ipsum, vel faucibus justo.
 * _[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d_: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
 * _[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e_: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
 * _[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f_: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
+
+  
+
+##  MethodMultipleTypeParams<A,B,C,A2,B2,C2>()
+
+**Parameters:**
 
   
 

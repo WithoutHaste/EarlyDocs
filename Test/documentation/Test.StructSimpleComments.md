@@ -1,6 +1,6 @@
 # StructSimpleComments
 
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 [Summary Tag] [Short] [One Line] Donec porttitor mi in odio fermentum lobortis.  
   
@@ -105,6 +105,31 @@
   
 
 # Methods
+
+##  #cctor()
+
+[Summary Tag] [Short] [One Line] Pellentesque quis ex eu odio pretium vehicula.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Nunc ut diam risus.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Proin rutrum consectetur dui at egestas.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Suspendisse orci odio, luctus vel ultrices at, gravida eget enim.  
+  
+**Permission:**  
+[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.  
+  
+<hr/>  
+**Exceptions:**  
+* _Exception_: [Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.  
+
+  
 
 ## float MethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 

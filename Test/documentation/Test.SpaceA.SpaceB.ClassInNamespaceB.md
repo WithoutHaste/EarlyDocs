@@ -1,6 +1,6 @@
 # ClassInNamespaceB
 
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 Tests a class in a nested namespace.  
   

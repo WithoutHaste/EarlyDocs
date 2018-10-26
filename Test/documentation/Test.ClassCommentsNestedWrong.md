@@ -1,6 +1,6 @@
 # ClassCommentsNestedWrong
 
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 Tests the incorrect nested of comments.  
   

@@ -1,7 +1,7 @@
 # ClassAbstract
 
 **Abstract**  
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 Tests abstract classes and members.  
   

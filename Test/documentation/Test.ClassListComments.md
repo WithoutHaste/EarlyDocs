@@ -1,6 +1,6 @@
 # ClassListComments
 
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 Tests lists and tables in comments.  
   

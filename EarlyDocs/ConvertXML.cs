@@ -25,6 +25,8 @@ namespace EarlyDocs
 			xmlDocumentation.AddAssemblyInfo(dllFilename);
 			DotNetExtensions.TurnQualifiedNameConverterOn();
 
+			//Assembly assembly = Assembly.LoadFrom(dllFilename); //for testing only
+
 			PrepareOutputDirectory(outputDirectory, emptyOutputDirectoryFirst);
 			BuildInternalFullNames(xmlDocumentation.Types);
 			BuildInternalFullNames(xmlDocumentation.Delegates);
@@ -32,7 +34,7 @@ namespace EarlyDocs
 			GenerateDelegatePages(xmlDocumentation.Delegates, outputDirectory);
 			Save(GenerateTableOfContents(xmlDocumentation), outputDirectory, "TableOfContents" + Ext.MD);
 		}
-
+		
 		private void PrepareOutputDirectory(string outputDirectory, bool emptyOutputDirectoryFirst)
 		{
 			if(!Directory.Exists(outputDirectory))

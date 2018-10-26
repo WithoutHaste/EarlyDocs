@@ -1,7 +1,7 @@
 # ClassInherits
 
-**Inheritance:** object → Test.ClassSimpleComments  
-**Implements:** Test.IInterfaceSimpleComments  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [ClassSimpleComments](Test.ClassSimpleComments.md)  
+**Implements:** [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md)  
   
 Tests class inheritance.  
   
@@ -9,4 +9,78 @@ Tests class inheritance.
 # Properties
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA { get; set; }
+
+[Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.  
+  
+<hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Etiam vel quam vehicula, semper nulla vel, condimentum augue.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Long] [One Line] Vivamus at turpis vestibulum, ultricies nibh at, finibus tortor.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Ut massa nibh, rutrum nec urna in, interdum congue justo.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Nulla ullamcorper est nec ipsum vehicula, eget tincidunt ante accumsan.  
+  
+**Permission: Test.IInterfaceSimpleComments.PropertyA**  
+[Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.  
+  
+
+# Methods
+
+## void MethodA()
+
+[Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Nullam in quam vel metus faucibus pulvinar.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Sed vehicula gravida efficitur.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.  
+  
+**Permission: Test.IInterfaceSimpleComments.MethodA**  
+[Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.  
+  
+<hr/>  
+**Exceptions:**  
+* _ArgumentException_: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
+
+  
+
+## int MethodVirtual()
+
+[Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Mauris finibus eros urna, in gravida metus ullamcorper at.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Curabitur euismod condimentum risus, ut pellentesque tortor fringilla in.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
+  
+**Permission: Test.ClassSimpleComments.MethodVirtual**  
+[Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.  
+  
+<hr/>  
+**Exceptions:**  
+* _Exception_: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
+
+  
 

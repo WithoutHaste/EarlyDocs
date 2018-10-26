@@ -1,6 +1,6 @@
 # ClassFieldPropertyModifiers
 
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 Tests modifiers on fields and properties.  
   

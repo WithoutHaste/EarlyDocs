@@ -1,7 +1,7 @@
 # IInterfaceInherits
 
 **Interface**  
-**Implements:** Test.IInterfaceSimpleComments  
+**Implements:** [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md)  
   
 Tests interface inheritance.  
   

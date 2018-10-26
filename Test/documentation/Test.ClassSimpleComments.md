@@ -1,6 +1,6 @@
 # ClassSimpleComments
 
-**Inheritance:** object  
+**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
 [Summary Tag] [Short] [One Line] Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
   
@@ -183,6 +183,81 @@
   
 
 # Methods
+
+##  #cctor()
+
+[Summary Tag] [Short] [One Line] Fusce ac lorem nisi.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Donec ullamcorper eros vitae dolor tempus tristique.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Nam auctor mollis congue.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Proin in lacus at dui lacinia rutrum ac sed libero.  
+  
+**Permission:**  
+[Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.  
+  
+<hr/>  
+**Exceptions:**  
+* _Exception_: [Exception Tag] [Short] [One Line] Vivamus in lectus facilisis, ornare augue nec, semper dolor.  
+
+  
+
+## void Finalize()
+
+[Summary Tag] [Short] [One Line] Aenean quam urna, pharetra vel malesuada ut, gravida ac libero.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Pellentesque tincidunt magna sit amet nisl tristique egestas.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Fusce ullamcorper placerat blandit.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Maecenas eu vestibulum mi, sit amet consequat urna.  
+  
+**Permission:**  
+[Permission Tag] [References Destructor] [Short] [One Line] Duis accumsan tempor erat ac vehicula.  
+  
+<hr/>  
+**Exceptions:**  
+* _IndexOutOfRangeException_: [Exception Tag] [Short] [One Line] Duis eu pellentesque orci, nec lobortis magna.  
+
+  
+
+## int MethodVirtual()
+
+[Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
+  
+<hr/>  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Mauris finibus eros urna, in gravida metus ullamcorper at.  
+  
+<hr/>  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Curabitur euismod condimentum risus, ut pellentesque tortor fringilla in.  
+  
+<hr/>  
+**Example A:**  
+[Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
+  
+**Permission:**  
+[Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.  
+  
+<hr/>  
+**Exceptions:**  
+* _Exception_: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
+
+  
 
 ## void MethodWithoutParameters()
 

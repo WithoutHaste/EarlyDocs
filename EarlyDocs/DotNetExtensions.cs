@@ -466,11 +466,11 @@ namespace EarlyDocs
 
 			if(type.BaseType != null)
 			{
-				MarkdownLine inheritanceLine = new MarkdownLine(type.BaseType.Name.FullName); //todo: shorten in-project names to LocalName and make them links to documentation
+				MarkdownLine inheritanceLine = new MarkdownLine(type.BaseType.Name.ToDisplayStringLink(type.Name.FullNamespace));
 				DotNetBaseType baseType = type.BaseType.BaseType;
 				while(baseType != null)
 				{
-					inheritanceLine.Prepend(baseType.Name.FullName + " → ");
+					inheritanceLine.Prepend(baseType.Name.ToDisplayStringLink(type.Name.FullNamespace) + " → ");
 					baseType = baseType.BaseType;
 				}
 				inheritanceLine.Prepend(" ");
@@ -482,7 +482,7 @@ namespace EarlyDocs
 			if(type.ImplementedInterfaces.Count > 0)
 			{
 				MarkdownLine interfaceLine = new MarkdownLine(MarkdownText.Bold("Implements:"), new MarkdownText(" "));
-				interfaceLine.Add(String.Join(", ", type.ImplementedInterfaces.Select(i => i.Name.FullName).ToArray())); //todo: shorten in-project names to LocalName and make them links to documentation
+				interfaceLine.Add(String.Join(", ", type.ImplementedInterfaces.Select(i => i.Name.ToDisplayStringLink(type.Name.FullNamespace)).ToArray()));
 				parent.Add(interfaceLine);
 				changeMade = true;
 			}
