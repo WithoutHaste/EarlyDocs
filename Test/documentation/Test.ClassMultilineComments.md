@@ -7,7 +7,7 @@ Tests different ways to format multiline comments.
 
 # Fields
 
-## int FieldA
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldA
 
 [Summary Tag] [Multiline with Endline]  
 Etiam enim odio, imperdiet finibus fringilla   
@@ -20,7 +20,7 @@ a, vestibulum a odio. Nulla id odio egestas,
 volutpat ligula ut, laoreet sem.   
   
 
-## int FieldB
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldB
 
 [Summary Tag] [Multiline with Paragraphs]  
 Nunc tellus justo, venenatis eu ornare vel, laoreet in nulla. Nam id ullamcorper ipsum, vitae iaculis diam. Aliquam ullamcorper quam at ex egestas facilisis. Duis condimentum tellus dui, at porttitor dolor efficitur ac.  

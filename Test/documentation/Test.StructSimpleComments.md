@@ -27,7 +27,7 @@
 
 # Fields
 
-## int IntegerField
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerField
 
 [Summary Tag] [Short] [One Line] Sed at molestie metus.  
   
@@ -49,7 +49,7 @@
 
 # Properties
 
-## string StringProperty
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) StringProperty
 
 [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.  
   
@@ -98,7 +98,7 @@
 
 # Methods
 
-## float MethodWithParametersWithReturn(int a, string b)
+## float MethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Donec sollicitudin sem et nisi laoreet, et gravida nulla scelerisque.  
   
@@ -128,14 +128,14 @@
 <hr/>  
 **Parameters:**
 
-* _int a_: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
-* _string b_: [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.  
+* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
+* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.  
 
   
 
 # Static Methods
 
-## double StaticMethodWithParametersWithReturn(int a, string b)
+## double StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
   
@@ -165,8 +165,8 @@
 <hr/>  
 **Parameters:**
 
-* _int a_: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
-* _string b_: [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
+* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
+* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
 
   
 

@@ -8,5 +8,5 @@ Tests class inheritance.
 
 # Properties
 
-## int PropertyA
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA
 

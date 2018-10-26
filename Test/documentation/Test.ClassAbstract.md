@@ -8,7 +8,7 @@ Tests abstract classes and members.
 
 # Fields
 
-## int FieldNotAbstract
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldNotAbstract
 
 [Summary Tag] [Short] [One Line] Proin non lectus in ante egestas porta.  
   
@@ -30,7 +30,7 @@ Tests abstract classes and members.
 
 # Properties
 
-## int this[int]
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32)]
 
 [Summary Tag] [Short] [One Line] Suspendisse et ultricies justo, et sagittis nibh.  
   
@@ -50,7 +50,7 @@ Tests abstract classes and members.
 [Permission Tag] [References Indexer] [Short] [One Line] Etiam convallis non elit ac dictum.  
   
 
-## string this[string]
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) this[[string](https://docs.microsoft.com/en-us/dotnet/api/system.string)]
 
 [Summary Tag] [Short] [One Line] Suspendisse libero ex, pretium vel quam eget, convallis faucibus tortor.  
   
@@ -70,7 +70,7 @@ Tests abstract classes and members.
 [Permission Tag] [References Indexer] [Short] [One Line] Fusce eu auctor arcu, ut interdum neque.  
   
 
-## abstract int PropertyAbstract
+## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyAbstract
 
 [Summary Tag] [Short] [One Line] Sed pharetra elit eget felis iaculis, nec mattis urna malesuada.  
   
@@ -90,7 +90,7 @@ Tests abstract classes and members.
 [Permission Tag] [References Property] [Short] [One Line] Integer metus lacus, faucibus eget neque nec, congue sodales mauris.  
   
 
-## int PropertyNotAbstract
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyNotAbstract
 
 [Summary Tag] [Short] [One Line] Ut quam purus, laoreet ac tortor eget, lobortis finibus velit.  
   
@@ -112,7 +112,7 @@ Tests abstract classes and members.
 
 # Events
 
-## EventHandler EventA
+## [EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler) EventA
 
 [Summary Tag] [Short] [One Line] Donec non commodo ante, at commodo nulla.  
   

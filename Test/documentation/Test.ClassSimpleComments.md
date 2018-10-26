@@ -49,7 +49,7 @@
 
 # Fields
 
-## int IntegerField
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerField
 
 [Summary Tag] [Short] [One Line] Nam ut feugiat urna, eu varius arcu.  
   
@@ -71,7 +71,7 @@
 
 # Properties
 
-## string this[int]
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32)]
 
 [Summary Tag] [Short] [One Line] Integer condimentum gravida ante at blandit.  
   
@@ -91,7 +91,7 @@
 [Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.  
   
 
-## int IntegerProperty
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerProperty
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.  
   
@@ -138,7 +138,7 @@
 
   
 
-##  ClassSimpleComments(int a, string b)
+##  ClassSimpleComments([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Sed eu molestie augue, sed congue sapien.  
   
@@ -165,8 +165,8 @@
 <hr/>  
 **Parameters:**
 
-* _int a_: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
-* _string b_: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
+* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
+* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
 
   
 
@@ -199,7 +199,7 @@
 
 # Static Methods
 
-## string StaticMethodWithParametersWithReturn(int a, string b)
+## string StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Vivamus et ex convallis, egestas justo ut, faucibus arcu.  
   
@@ -229,8 +229,8 @@
 <hr/>  
 **Parameters:**
 
-* _int a_: [Parameter Tag] [Short] [One Line] Nulla consectetur, urna eget ultrices ultricies, velit tortor iaculis lectus, quis condimentum tortor ex vitae ipsum.  
-* _string b_: [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.  
+* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Nulla consectetur, urna eget ultrices ultricies, velit tortor iaculis lectus, quis condimentum tortor ex vitae ipsum.  
+* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.  
 
   
 

@@ -34,7 +34,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 # Fields
 
-## int FieldRepeatedOnceOnlyTags
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldRepeatedOnceOnlyTags
 
 [1st Summary Tag] Sed ut libero a ante commodo dictum vitae eget urna.  
 [2nd Summary Tag] Suspendisse a aliquet ex.  
@@ -49,7 +49,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 # Properties
 
-## float PropertyMultipleExamples
+## [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) PropertyMultipleExamples
 
 **Example A:**  
 [1st Example Tag] Ut tincidunt ipsum sit amet eros dictum, sed sollicitudin nisl interdum.  
@@ -86,16 +86,16 @@ vehicula facilisis ipsum, vel faucibus justo.
 
   
 
-## void MethodMultipleParams(int a, string b, int c, float d, List<List<int>> e, bool f)
+## void MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List<List<int>>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
 
 **Parameters:**
 
-* _int a_: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
-* _string b_: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
-* _int c_: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
-* _float d_: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
-* _List<List<int>> e_: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
-* _bool f_: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
+* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
+* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
+* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c_: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
+* _[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d_: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
+* _[List<List<int>>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e_: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
+* _[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f_: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
   
 

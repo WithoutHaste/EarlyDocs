@@ -8,5 +8,5 @@ Supports test to link to custom exception.
 
 # Constructors
 
-##  ClassException(string message)
+##  ClassException([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) message)
 

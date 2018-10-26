@@ -11,6 +11,31 @@ namespace EarlyDocs
 {
 	public static class DotNetExtensions
 	{
+		/// <summary>
+		/// List of all full names of known types/delegates in the assembly being documented
+		/// </summary>
+		public static List<string> InternalFullNames = new List<string>();
+
+		public static List<DotNetQualifiedName> KnownMicrosoftNamespaces = new List<DotNetQualifiedName>() {
+			DotNetQualifiedName.FromVisualStudioXml("System"),
+			DotNetQualifiedName.FromVisualStudioXml("System.Collections.Generic"),
+			DotNetQualifiedName.FromVisualStudioXml("System.Linq"),
+			DotNetQualifiedName.FromVisualStudioXml("System.Text"),
+			DotNetQualifiedName.FromVisualStudioXml("System.Threading.Tasks")
+		};
+
+		public static bool IsInKnownMicrosoftNamespace(this DotNetQualifiedName name)
+		{
+			if(KnownMicrosoftNamespaces.Contains(name))
+				return true;
+			if(name.FullNamespace != null)
+			{
+				if(name.FullNamespace.IsInKnownMicrosoftNamespace())
+					return true;
+			}
+			return false;
+		}
+
 		public static string ToHeader(this DotNetField field, DotNetType parent)
 		{
 			if(field is DotNetProperty)
@@ -63,16 +88,39 @@ namespace EarlyDocs
 
 		public static string ToDisplayStringLink(this DotNetQualifiedName name, string _namespace = null)
 		{
-			if(_namespace == null)
-				_namespace = "";
-			_namespace += ".";
-
 			string displayString = name.ToDisplayString();
-			if(displayString.StartsWith(_namespace))
+			if(InternalFullNames.Contains(displayString))
 			{
-				displayString = String.Format("[{0}]({1})", displayString.Substring(_namespace.Length), displayString + Ext.MD);
+				displayString = String.Format("[{0}]({1})", name.ToDisplayString(_namespace), displayString + Ext.MD);
+			}
+			else if(name.IsInKnownMicrosoftNamespace())
+			{
+				TurnQualifiedNameConverterOff();
+				//todo: convert generic type parameters from <T> style to `1 style
+				string microsoftDocumentation = @"https://docs.microsoft.com/en-us/dotnet/api/";
+				displayString = String.Format("[{0}]({1}{2})", displayString, microsoftDocumentation, name.FullName.ToMicrosoftLinkFormat());
+				TurnQualifiedNameConverterOn();
 			}
 			return displayString;
+		}
+
+		private static string ToMicrosoftLinkFormat(this string name)
+		{
+			name = name.ToLower();
+
+			List<string> segments = name.SplitIgnoreNested('.').ToList();
+			for(int i = 0; i < segments.Count; i++)
+			{
+				string segment = segments[i];
+				if(segment.IndexOf('<') == -1) continue;
+
+				string genericTypeParameters = segment.Substring(segment.IndexOf('<'));
+				string[] parameters = genericTypeParameters.RemoveOuterBraces().SplitIgnoreNested(',');
+
+				segment = segment.Replace(genericTypeParameters, "-" + parameters.Length);
+				segments[i] = segment;
+			}
+			return String.Join(".", segments.ToArray());
 		}
 
 		public static string ToDisplayString(this DotNetQualifiedName name)
@@ -80,6 +128,18 @@ namespace EarlyDocs
 			if(name == null)
 				return "";
 			return name.FullName;
+		}
+
+		public static void TurnQualifiedNameConverterOn()
+		{
+			DotNetSettings.QualifiedNameConverter = DotNetSettings.DefaultQualifiedNameConverter;
+			DotNetSettings.AdditionalQualifiedNameConverter = DotNetExtensions.QualifiedNameConverter;
+		}
+
+		public static void TurnQualifiedNameConverterOff()
+		{
+			DotNetSettings.QualifiedNameConverter = null;
+			DotNetSettings.AdditionalQualifiedNameConverter = null;
 		}
 
 		public static string QualifiedNameConverter(string fullName, int depth)
@@ -188,7 +248,7 @@ namespace EarlyDocs
 				typeSection.Add(delegateSection);
 				foreach(DotNetDelegate _delegate in type.Delegates.OrderBy(m => m.Name.LocalName))
 				{
-					delegateSection.AddInLine(new MarkdownInlineLink(_delegate.Name.LocalName, _delegate.Name.LocalName + Ext.MD));
+					delegateSection.AddInLine(new MarkdownInlineLink(_delegate.Name.LocalName, _delegate.Name.FullName + Ext.MD));
 					delegateSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments));
 					delegateSection.Add(new MarkdownLine());
 				}

@@ -23,10 +23,11 @@ namespace EarlyDocs
 
 			DotNetDocumentationFile xmlDocumentation = new DotNetDocumentationFile(xmlDocumentationFilename);
 			xmlDocumentation.AddAssemblyInfo(dllFilename);
-			DotNetSettings.QualifiedNameConverter = DotNetSettings.DefaultQualifiedNameConverter;
-			DotNetSettings.AdditionalQualifiedNameConverter = DotNetExtensions.QualifiedNameConverter;
+			DotNetExtensions.TurnQualifiedNameConverterOn();
 
 			PrepareOutputDirectory(outputDirectory, emptyOutputDirectoryFirst);
+			BuildInternalFullNames(xmlDocumentation.Types);
+			BuildInternalFullNames(xmlDocumentation.Delegates);
 			GenerateTypePages(xmlDocumentation.Types, outputDirectory);
 			GenerateDelegatePages(xmlDocumentation.Delegates, outputDirectory);
 			Save(GenerateTableOfContents(xmlDocumentation), outputDirectory, "TableOfContents" + Ext.MD);
@@ -47,30 +48,47 @@ namespace EarlyDocs
 			}
 		}
 
-		private void GenerateTypePages(List<DotNetType> types, string outputDirectory, string _namespace = null)
+		private void BuildInternalFullNames(List<DotNetType> types)
 		{
 			foreach(DotNetType type in types)
 			{
-				string typeName = type.Name.LocalName;
-				if(!String.IsNullOrEmpty(_namespace))
-					typeName = _namespace + "." + typeName;
+				string typeName = type.Name.FullName;
+				DotNetExtensions.InternalFullNames.Add(typeName);
 
-				Save(type, outputDirectory, typeName + Ext.MD);
-
-				GenerateTypePages(type.NestedTypes, outputDirectory, typeName);
-				GenerateDelegatePages(type.Delegates, outputDirectory, typeName);
+				BuildInternalFullNames(type.NestedTypes);
+				BuildInternalFullNames(type.Delegates);
 			}
 		}
 
-		private void GenerateDelegatePages(List<DotNetDelegate> delegates, string outputDirectory, string _namespace = null)
+		private void BuildInternalFullNames(List<DotNetDelegate> delegates)
 		{
 			foreach(DotNetDelegate _delegate in delegates)
 			{
-				string delegateName = _delegate.Name.LocalName;
-				if(!String.IsNullOrEmpty(_namespace))
-					delegateName = _namespace + "." + delegateName;
+				string delegateName = _delegate.Name.FullName;
+				DotNetExtensions.InternalFullNames.Add(delegateName);
+			}
+		}
 
+		private void GenerateTypePages(List<DotNetType> types, string outputDirectory)
+		{
+			foreach(DotNetType type in types)
+			{
+				string typeName = type.Name.FullName;
+				Save(type, outputDirectory, typeName + Ext.MD);
+				DotNetExtensions.InternalFullNames.Add(typeName);
+
+				GenerateTypePages(type.NestedTypes, outputDirectory);
+				GenerateDelegatePages(type.Delegates, outputDirectory);
+			}
+		}
+
+		private void GenerateDelegatePages(List<DotNetDelegate> delegates, string outputDirectory)
+		{
+			foreach(DotNetDelegate _delegate in delegates)
+			{
+				string delegateName = _delegate.Name.FullName;
 				Save(_delegate, outputDirectory, delegateName + Ext.MD);
+				DotNetExtensions.InternalFullNames.Add(delegateName);
 			}
 		}
 
@@ -126,7 +144,7 @@ namespace EarlyDocs
 			MarkdownSection section = parent.AddSection(header);
 			foreach(DotNetType type in types.OrderBy(t => t.Name.LocalName))
 			{
-				section.AddInLine(new MarkdownInlineLink(type.Name.LocalName, type.Name.LocalName + Ext.MD));
+				section.AddInLine(new MarkdownInlineLink(type.Name.LocalName, type.Name.FullName + Ext.MD));
 				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.SummaryComments));
 				section.Add(new MarkdownLine());
 			}
@@ -139,7 +157,7 @@ namespace EarlyDocs
 			MarkdownSection section = parent.AddSection(header);
 			foreach(DotNetDelegate _delegate in _delegates.OrderBy(t => t.Name.LocalName))
 			{
-				section.AddInLine(new MarkdownInlineLink(_delegate.Name.LocalName, _delegate.Name.LocalName + Ext.MD));
+				section.AddInLine(new MarkdownInlineLink(_delegate.Name.LocalName, _delegate.Name.FullName + Ext.MD));
 				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments));
 				section.Add(new MarkdownLine());
 			}

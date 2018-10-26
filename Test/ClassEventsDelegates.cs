@@ -55,7 +55,7 @@ namespace Test
 		/// [Remarks Tag] [Short] [One Line] Fusce vel quam ac urna sagittis suscipit non sit amet nulla.
 		/// </remarks>
 		/// <example>[Example Tag] [Short] [One Line] Vestibulum tincidunt justo ut lorem consectetur, a facilisis tortor lacinia.</example>
-		/// <permission cref="EventA">[Permission Tag] [References Event] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.</permission>
+		/// <permission cref="EventB">[Permission Tag] [References Event] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.</permission>
 		/// [Floating Comment] [Short] [One Line] Nunc faucibus commodo ultrices.
 		protected event EventHandlerInClass EventB;
 

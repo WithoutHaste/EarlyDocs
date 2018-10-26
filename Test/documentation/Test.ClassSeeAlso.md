@@ -32,7 +32,7 @@ or
 
 # Properties
 
-## int PropertyA
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA
 
 # Constructors
 
@@ -40,5 +40,5 @@ or
 
 # Methods
 
-## string MethodWithParameters(int a, int b)
+## string MethodWithParameters([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
 

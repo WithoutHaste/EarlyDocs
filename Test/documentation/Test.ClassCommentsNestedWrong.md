@@ -7,7 +7,7 @@ Tests the incorrect nested of comments.
 
 # Fields
 
-## int RemarksInRemarks
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) RemarksInRemarks
 
 **Remarks:**  
 [Remarks Tag] [Multiline] Donec dignissim urna ut   
@@ -21,7 +21,7 @@ nec diam hendrerit ultrices. Pellentesque eu dolor
 scelerisque, ultrices felis eu, rutrum turpis.  
   
 
-## int SummaryInSummary
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) SummaryInSummary
 
 [Summary Tag] [Multiline] Vestibulum a maximus mauris.   
 Quisque vel magna et ipsum auctor condimentum vel vitae   

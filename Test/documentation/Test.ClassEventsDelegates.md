@@ -7,7 +7,7 @@ Tests events and delegates.
 
 # Fields
 
-## Action<int> ActionInClass
+## [Action<int>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) ActionInClass
 
 [Summary Tag] [Short] [One Line] Suspendisse mattis lacinia orci, eu cursus lacus ultricies ac.  
   
@@ -27,7 +27,7 @@ Tests events and delegates.
 [Permission Tag] [References Action] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
   
 
-## Func<int,string> FuncInClass
+## [Func<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FuncInClass
 
 [Summary Tag] [Short] [One Line] Maecenas et turpis eget mi dapibus sodales.  
   
@@ -49,7 +49,7 @@ Tests events and delegates.
 
 # Events
 
-## Test.EventHandlerGlobal EventA
+## [Test.EventHandlerGlobal](Test.EventHandlerGlobal.md) EventA
 
 [Summary Tag] [Short] [One Line] Mauris sit amet vestibulum justo.  
   
@@ -85,24 +85,24 @@ Tests events and delegates.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vestibulum tincidunt justo ut lorem consectetur, a facilisis tortor lacinia.  
   
-**Permission: EventA**  
+**Permission:**  
 [Permission Tag] [References Event] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
   
 
-## EventHandler EventC
+## [EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler) EventC
 
 [Summary Tag] [Private Member] [Should Ignore] Duis justo dolor, dapibus eu pulvinar vitae, iaculis non neque.  
   
 
 # Delegates
 
-[EventHandlerInClass](EventHandlerInClass.md)  
+[EventHandlerInClass](Test.ClassEventsDelegates.EventHandlerInClass.md)  
 [Summary Tag] [Short] [One Line] Phasellus ut nulla aliquam, commodo ante ac, accumsan leo.  
   
 
 # Methods
 
-## void MethodWithAction(Action<int> action)
+## void MethodWithAction([Action<int>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action)
 
 [Summary Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
   
@@ -129,11 +129,11 @@ Tests events and delegates.
 <hr/>  
 **Parameters:**
 
-* _Action<int> action_: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
+* _[Action<int>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action_: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
 
   
 
-## void MethodWithFunc(Func<int,string> func)
+## void MethodWithFunc([Func<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func)
 
 [Summary Tag] [Short] [One Line] Donec accumsan lacus a dolor auctor, sit amet cursus eros faucibus.  
   
@@ -160,7 +160,7 @@ Tests events and delegates.
 <hr/>  
 **Parameters:**
 
-* _Func<int,string> func_: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
+* _[Func<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func_: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
 
   
 
