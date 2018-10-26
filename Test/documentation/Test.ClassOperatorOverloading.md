@@ -233,6 +233,8 @@ Tests operator overloading.
 <hr/>  
 **Parameters:**
 
+* _a_: [Parameter Tag] [Short] [One Line] Vivamus volutpat, elit sit amet gravida rutrum, quam tortor vulputate risus, sed blandit dolor lacus non diam.  
+
   
 
 ##  op_Explicit((Test.ClassOperatorOverloading)~System.Int16)
@@ -269,6 +271,8 @@ Tests operator overloading.
   
 <hr/>  
 **Parameters:**
+
+* _a_: [Parameter Tag] [Short] [One Line] In hac habitasse platea dictumst.  
 
   
 
@@ -357,6 +361,8 @@ Tests operator overloading.
 <hr/>  
 **Parameters:**
 
+* _a_: [Parameter Tag] [Short] [One Line] Vestibulum quis fringilla ipsum.  
+
   
 
 ##  op_Implicit((Test.ClassOperatorOverloading)~System.Int32)
@@ -393,6 +399,8 @@ Tests operator overloading.
   
 <hr/>  
 **Parameters:**
+
+* _a_: [Parameter Tag] [Short] [One Line] Vestibulum semper maximus turpis, quis sodales nisl mattis ac.  
 
   
 

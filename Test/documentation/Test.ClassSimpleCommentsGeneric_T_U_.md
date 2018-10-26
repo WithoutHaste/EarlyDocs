@@ -187,6 +187,9 @@
 <hr/>  
 **Parameters:**
 
+* _t_: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
+* _u_: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
+
   
 
 # Methods
@@ -280,6 +283,12 @@
 <hr/>  
 **Parameters:**
 
+* _a_: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
+* _A_: [Type Parameter Tag] [Short] [One Line] Aenean neque ipsum, finibus at dolor nec, hendrerit gravida odio.  
+* _b_: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
+* _B_: [Type Parameter Tag] [Short] [One Line] Nunc faucibus sed elit ut pellentesque.  
+* _u_: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
+
   
 
 ##  StaticMethodWithParametersWithReturn(T, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string))
@@ -316,6 +325,9 @@
   
 <hr/>  
 **Parameters:**
+
+* _b_: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
+* _t_: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
 
   
 

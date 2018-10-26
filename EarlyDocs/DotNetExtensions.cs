@@ -111,6 +111,11 @@ namespace EarlyDocs
 			return parameter.TypeName.ToDisplayStringLink() + " " + parameter.Name;
 		}
 
+		public static string ToHeader(this DotNetCommentParameter commentParameter)
+		{
+			return commentParameter.ParameterLink.Name;
+		}
+
 		public static string ToDisplayString(this DotNetParameter parameter)
 		{
 			if(parameter.TypeName == null)
@@ -667,6 +672,15 @@ namespace EarlyDocs
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
+				foreach(DotNetCommentParameter commentParameter in method.ParameterComments.OrderBy(p => p.ParameterLink.Name)) //then the type parameters or unknown parameters
+				{
+					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
+						continue;
+
+					MarkdownLine line = new MarkdownLine(MarkdownText.Italic(commentParameter.ToHeader()), new MarkdownText(": "));
+					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					list.Add(line);
+				}
 			}
 			else
 			{
@@ -678,6 +692,14 @@ namespace EarlyDocs
 
 					MarkdownSection parameterSection = parametersSection.AddSection(parameter.ToHeader());
 					parameterSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
+				}
+				foreach(DotNetCommentParameter commentParameter in method.ParameterComments.OrderBy(p => p.ParameterLink.Name)) //then the type parameters or unknown parameters
+				{
+					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
+						continue;
+
+					section.Add(MarkdownText.Bold(commentParameter.ToHeader()));
+					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
 				}
 			}
 		}
@@ -705,6 +727,15 @@ namespace EarlyDocs
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
+				foreach(DotNetCommentParameter commentParameter in method.ParameterComments.OrderBy(p => p.ParameterLink.Name)) //then the type parameters or unknown parameters
+				{
+					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
+						continue;
+
+					MarkdownLine line = new MarkdownLine(MarkdownText.Italic(commentParameter.ToHeader()), new MarkdownText(": "));
+					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					list.Add(line);
+				}
 			}
 			else
 			{
@@ -715,6 +746,14 @@ namespace EarlyDocs
 						continue;
 
 					section.Add(MarkdownText.Bold(parameter.ToHeader()));
+					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
+				}
+				foreach(DotNetCommentParameter commentParameter in method.ParameterComments.OrderBy(p => p.ParameterLink.Name)) //then the type parameters or unknown parameters
+				{
+					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
+						continue;
+
+					section.Add(MarkdownText.Bold(commentParameter.ToHeader()));
 					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
 				}
 			}
