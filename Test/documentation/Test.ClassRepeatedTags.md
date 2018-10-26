@@ -86,7 +86,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 
   
 
-## void MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List<List<int>>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
+## void MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
 
 **Parameters:**
 
@@ -94,7 +94,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 * _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
 * _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c_: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
 * _[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d_: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
-* _[List<List<int>>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e_: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
+* _[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e_: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
 * _[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f_: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
   

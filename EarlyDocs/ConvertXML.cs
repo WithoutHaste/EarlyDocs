@@ -54,6 +54,7 @@ namespace EarlyDocs
 			{
 				string typeName = type.Name.FullName;
 				DotNetExtensions.InternalFullNames.Add(typeName);
+				DotNetExtensions.InternalFullNames.Add(typeName.Replace("<", "&lt;").Replace(">", "&gt;"));
 
 				BuildInternalFullNames(type.NestedTypes);
 				BuildInternalFullNames(type.Delegates);
@@ -66,6 +67,7 @@ namespace EarlyDocs
 			{
 				string delegateName = _delegate.Name.FullName;
 				DotNetExtensions.InternalFullNames.Add(delegateName);
+				DotNetExtensions.InternalFullNames.Add(delegateName.Replace("<", "&lt;").Replace(">", "&gt;"));
 			}
 		}
 

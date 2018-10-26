@@ -8,7 +8,7 @@ Also common data types that have long fully-qualified names.
 
 # Fields
 
-## [Action<int>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) FieldAction
+## [Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) FieldAction
 
 ## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) FieldBoolean
 
@@ -18,7 +18,7 @@ Also common data types that have long fully-qualified names.
 
 ## [decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal) FieldDecimal
 
-## [Dictionary<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) FieldDictionary
+## [Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) FieldDictionary
 
 ## [double](https://docs.microsoft.com/en-us/dotnet/api/system.double) FieldDouble
 
@@ -26,11 +26,11 @@ Also common data types that have long fully-qualified names.
 
 ## [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) FieldFloat
 
-## [Func<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FieldFunc
+## [Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FieldFunc
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldInt
 
-## [List<int>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) FieldList
+## [List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) FieldList
 
 ## [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64) FieldLong
 
@@ -50,7 +50,7 @@ Also common data types that have long fully-qualified names.
 
 # Methods
 
-## void MethodAction([Action<int>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) a)
+## void MethodAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) a)
 
 ## void MethodBoolean([bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) a)
 
@@ -60,7 +60,7 @@ Also common data types that have long fully-qualified names.
 
 ## void MethodDecimal([decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal) a)
 
-## void MethodDictionary([Dictionary<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) a)
+## void MethodDictionary([Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) a)
 
 ## void MethodDouble([double](https://docs.microsoft.com/en-us/dotnet/api/system.double) a)
 
@@ -68,11 +68,11 @@ Also common data types that have long fully-qualified names.
 
 ## void MethodFloat([float](https://docs.microsoft.com/en-us/dotnet/api/system.single) a)
 
-## void MethodFunc([Func<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) a)
+## void MethodFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) a)
 
 ## void MethodInt([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a)
 
-## void MethodList([List<int>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) a)
+## void MethodList([List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) a)
 
 ## void MethodLong([long](https://docs.microsoft.com/en-us/dotnet/api/system.int64) a)
 

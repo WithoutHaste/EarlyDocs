@@ -7,7 +7,7 @@ Tests events and delegates.
 
 # Fields
 
-## [Action<int>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) ActionInClass
+## [Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) ActionInClass
 
 [Summary Tag] [Short] [One Line] Suspendisse mattis lacinia orci, eu cursus lacus ultricies ac.  
   
@@ -27,7 +27,7 @@ Tests events and delegates.
 [Permission Tag] [References Action] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
   
 
-## [Func<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FuncInClass
+## [Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FuncInClass
 
 [Summary Tag] [Short] [One Line] Maecenas et turpis eget mi dapibus sodales.  
   
@@ -102,7 +102,7 @@ Tests events and delegates.
 
 # Methods
 
-## void MethodWithAction([Action<int>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action)
+## void MethodWithAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action)
 
 [Summary Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
   
@@ -129,11 +129,11 @@ Tests events and delegates.
 <hr/>  
 **Parameters:**
 
-* _[Action<int>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action_: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
+* _[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action_: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
 
   
 
-## void MethodWithFunc([Func<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func)
+## void MethodWithFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func)
 
 [Summary Tag] [Short] [One Line] Donec accumsan lacus a dolor auctor, sit amet cursus eros faucibus.  
   
@@ -160,7 +160,7 @@ Tests events and delegates.
 <hr/>  
 **Parameters:**
 
-* _[Func<int,string>](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func_: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
+* _[Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func_: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
 
   
 

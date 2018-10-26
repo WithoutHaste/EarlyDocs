@@ -74,15 +74,21 @@ namespace EarlyDocs
 
 		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
 		{
+			if(name == null)
+				return "";
+
 			if(_namespace == null)
 				_namespace = "";
 			_namespace += ".";
 
-			string displayString = name.ToDisplayString();
+			string displayString = name.FullName;
 			if(displayString.StartsWith(_namespace))
 			{
 				displayString = displayString.Substring(_namespace.Length);
 			}
+
+			displayString = displayString.Replace("<", "&lt;").Replace(">", "&gt;"); //markdown understands html tags
+
 			return displayString;
 		}
 
@@ -121,13 +127,6 @@ namespace EarlyDocs
 				segments[i] = segment;
 			}
 			return String.Join(".", segments.ToArray());
-		}
-
-		public static string ToDisplayString(this DotNetQualifiedName name)
-		{
-			if(name == null)
-				return "";
-			return name.FullName;
 		}
 
 		public static void TurnQualifiedNameConverterOn()

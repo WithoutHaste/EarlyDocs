@@ -25,7 +25,7 @@
 
 [Permission Tag] [References Generic Class] [Short] [One Line] Vestibulum at justo quis velit finibus imperdiet.  
 
-## ClassSimpleCommentsGeneric<T,U>.TField
+## ClassSimpleCommentsGeneric&lt;T,U&gt;.TField
 
 [Permission Tag] [References Field] [Short] [One Line] Vestibulum malesuada volutpat tincidunt.  
 

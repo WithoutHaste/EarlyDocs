@@ -257,7 +257,7 @@ Tests operator overloading.
 
 [Summary Tag] [Short] [One Line] Morbi purus lacus, dignissim gravida imperdiet egestas, rutrum sed nibh.  
   
-**Permission: !:>=**  
+**Permission: !:&gt;=**  
 [Permission Tag] [References Operator] [Short] [One Line] Vivamus tempus tincidunt nulla et commodo.  
   
 
@@ -265,7 +265,7 @@ Tests operator overloading.
 
 [Summary Tag] [Short] [One Line] Nunc non diam luctus, consectetur purus vitae, commodo quam.  
   
-**Permission: !:>=**  
+**Permission: !:&gt;=**  
 [Permission Tag] [References Operator] [Short] [One Line] In elementum, mi non viverra molestie, lorem felis interdum massa, at varius quam ex in massa.  
   
 
