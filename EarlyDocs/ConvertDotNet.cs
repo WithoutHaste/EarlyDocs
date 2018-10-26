@@ -69,8 +69,53 @@ namespace EarlyDocs
 				string text = (comment as DotNetCommentText).Text;
 				markdown.AddRange(text.Split('\n').Select(t => new MarkdownLine(t)).ToArray());
 			}
+			else if(comment is DotNetCommentList)
+			{
+				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentList));
+			}
+			else if(comment is DotNetCommentTable)
+			{
+				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentTable));
+			}
 
 			return markdown;
+		}
+
+		public static MarkdownList DotNetCommentsToMarkdown(DotNetCommentList commentList)
+		{
+			MarkdownList markdownList = new MarkdownList(isNumbered: commentList.IsNumbered);
+
+			foreach(DotNetCommentListItem commentItem in commentList.Items)
+			{
+				string text = "";
+				if(String.IsNullOrEmpty(commentItem.Term))
+					text = commentItem.Description;
+				else if(String.IsNullOrEmpty(commentItem.Description))
+					text = "**" + commentItem.Term + "**";
+				else
+					text = "**" + commentItem.Term + "**: " + commentItem.Description;
+				markdownList.Add(new MarkdownLine(text));
+			}
+
+			return markdownList;
+		}
+
+		public static MarkdownTable DotNetCommentsToMarkdown(DotNetCommentTable commentTable)
+		{
+			MarkdownTable markdownTable = new MarkdownTable();
+
+			foreach(DotNetCommentRow commentRow in commentTable.Rows)
+			{
+				MarkdownTableRow markdownRow = DotNetCommentsToMarkdown(commentRow);
+				markdownTable.Add(markdownRow);
+			}
+
+			return markdownTable;
+		}
+
+		public static MarkdownTableRow DotNetCommentsToMarkdown(DotNetCommentRow commentRow)
+		{
+			return new MarkdownTableRow(commentRow.Cells.Select(c => c.Text).ToArray());
 		}
 	}
 }
