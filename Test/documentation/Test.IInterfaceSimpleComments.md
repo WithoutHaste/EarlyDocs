@@ -27,7 +27,7 @@
 
 # Properties
 
-## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA
+## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA { get; set; }
 
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.  
   

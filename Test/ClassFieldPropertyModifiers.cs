@@ -47,10 +47,10 @@ namespace Test
 		/// <summary>Mauris et tincidunt ligula, nec efficitur justo.</summary>
 		protected int ProtectedProtectedProperty { get; set; }
 
-		/// <summary>Abracadabra.</summary>
+		/// <summary>Quisque sapien lacus, convallis eget mi at, tristique elementum nibh.</summary>
 		protected int GetOnlyProperty { get; }
 
-		/// <summary>Deja vu.</summary>
+		/// <summary>Vestibulum dapibus porttitor eros, eget elementum lectus mattis sit amet.</summary>
 		protected int SetOnlyProperty { set { } }
 	}
 }

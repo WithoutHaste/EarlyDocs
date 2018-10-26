@@ -7,7 +7,7 @@ Tests modifiers on fields and properties.
 
 # Fields
 
-## static const [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) ConstField
+## const [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) ConstField
 
 Maecenas scelerisque purus in lacus sollicitudin, eu commodo lacus ultricies.  
   
@@ -49,33 +49,33 @@ Pellentesque ullamcorper pretium diam eget commodo.
 
 # Properties
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) GetOnlyProperty
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) GetOnlyProperty { protected get; }
 
-Abracadabra.  
+Quisque sapien lacus, convallis eget mi at, tristique elementum nibh.  
   
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) ProtectedProtectedProperty
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) ProtectedProtectedProperty { protected get; protected set; }
 
 Mauris et tincidunt ligula, nec efficitur justo.  
   
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PublicPrivateProperty
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PublicPrivateProperty { get; private set; }
 
 Aliquam in sagittis ipsum.  
   
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PublicProtectedProperty
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PublicProtectedProperty { get; protected set; }
 
 Nam urna purus, aliquam a metus quis, cursus interdum ligula.  
   
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PublicPublicProperty
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PublicPublicProperty { get; set; }
 
 Sed consectetur tincidunt velit at suscipit.  
   
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) SetOnlyProperty
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) SetOnlyProperty { protected set; }
 
-Deja vu.  
+Vestibulum dapibus porttitor eros, eget elementum lectus mattis sit amet.  
   
 

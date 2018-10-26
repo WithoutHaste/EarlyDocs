@@ -73,7 +73,7 @@
 [Permission Tag] [References Indexer Property] [Short] [One Line] Sed in sapien pretium, eleifend metus eu, posuere leo.  
   
 
-##  UProperty
+##  UProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Phasellus tellus orci, maximus sed suscipit eu, sollicitudin ut ipsum.  
   

@@ -21,15 +21,15 @@ Fusce ac mi sit amet turpis facilisis venenatis maximus ac nunc.
 
 # Properties
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) SummaryProperty
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) SummaryProperty { get; set; }
 
 Nullam nec lorem vitae nunc pellentesque gravida.  
   
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) SummaryValueProperty
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) SummaryValueProperty { get; set; }
 
 Donec turpis augue, feugiat ut sapien at, sagittis tristique enim.  
   
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) ValueProperty
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) ValueProperty { get; set; }
 

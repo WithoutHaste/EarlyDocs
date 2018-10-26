@@ -91,7 +91,7 @@
 [Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.  
   
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerProperty
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.  
   

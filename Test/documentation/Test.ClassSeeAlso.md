@@ -32,7 +32,7 @@ or
 
 # Properties
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA { get; set; }
 
 # Constructors
 

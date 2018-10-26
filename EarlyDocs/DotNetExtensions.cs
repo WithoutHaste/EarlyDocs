@@ -57,7 +57,7 @@ namespace EarlyDocs
 				case AccessModifier.Private: header = "private " + header; break;
 			}
 
-			if(field.IsStatic)
+			if(field.IsStatic && field.Category != FieldCategory.Constant)
 				header = "static " + header;
 
 			return header;
@@ -73,26 +73,30 @@ namespace EarlyDocs
 			if(property.Category == FieldCategory.Abstract)
 				header = "abstract " + header;
 
+			header += " { ";
 			if(property.HasGetterMethod)
 			{
 				switch(property.GetterMethod.AccessModifier)
 				{
-					case AccessModifier.Protected: header += " protected get;"; break;
-					case AccessModifier.Internal: header += " internal get;"; break;
-					case AccessModifier.InternalProtected: header += " internal protected get;"; break;
-					case AccessModifier.Private: header += " private get;"; break;
+					case AccessModifier.Public: header += "get; "; break;
+					case AccessModifier.Protected: header += "protected get; "; break;
+					case AccessModifier.Internal: header += "internal get; "; break;
+					case AccessModifier.InternalProtected: header += "internal protected get; "; break;
+					case AccessModifier.Private: header += "private get; "; break;
 				}
 			}
 			if(property.HasSetterMethod)
 			{
 				switch(property.SetterMethod.AccessModifier)
 				{
-					case AccessModifier.Protected: header += " protected set;"; break;
-					case AccessModifier.Internal: header += " internal set;"; break;
-					case AccessModifier.InternalProtected: header += " internal protected set;"; break;
-					case AccessModifier.Private: header += " private set;"; break;
+					case AccessModifier.Public: header += "set; "; break;
+					case AccessModifier.Protected: header += "protected set; "; break;
+					case AccessModifier.Internal: header += "internal set; "; break;
+					case AccessModifier.InternalProtected: header += "internal protected set; "; break;
+					case AccessModifier.Private: header += "private set; "; break;
 				}
 			}
+			header += "}";
 
 			return header;
 		}

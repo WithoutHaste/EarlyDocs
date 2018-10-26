@@ -49,7 +49,7 @@
 
 # Properties
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) StringProperty
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) StringProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.  
   

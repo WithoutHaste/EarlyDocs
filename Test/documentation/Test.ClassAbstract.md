@@ -70,7 +70,7 @@ Tests abstract classes and members.
 [Permission Tag] [References Indexer] [Short] [One Line] Fusce eu auctor arcu, ut interdum neque.  
   
 
-## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyAbstract
+## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyAbstract { get; set; }
 
 [Summary Tag] [Short] [One Line] Sed pharetra elit eget felis iaculis, nec mattis urna malesuada.  
   
@@ -90,7 +90,7 @@ Tests abstract classes and members.
 [Permission Tag] [References Property] [Short] [One Line] Integer metus lacus, faucibus eget neque nec, congue sodales mauris.  
   
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyNotAbstract
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyNotAbstract { get; set; }
 
 [Summary Tag] [Short] [One Line] Ut quam purus, laoreet ac tortor eget, lobortis finibus velit.  
   

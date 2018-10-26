@@ -49,7 +49,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 # Properties
 
-## [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) PropertyMultipleExamples
+## [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) PropertyMultipleExamples { get; set; }
 
 **Example A:**  
 [1st Example Tag] Ut tincidunt ipsum sit amet eros dictum, sed sollicitudin nisl interdum.  
