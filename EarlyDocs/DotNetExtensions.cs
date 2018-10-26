@@ -40,16 +40,60 @@ namespace EarlyDocs
 		{
 			if(field is DotNetProperty)
 				return ToHeader(field as DotNetProperty, parent);
-			return field.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + field.Name.LocalName;
+
+			string header = field.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + field.Name.LocalName;
+
+			switch(field.Category)
+			{
+				case FieldCategory.Constant: header = "const " + header; break;
+				case FieldCategory.ReadOnly: header = "readonly " + header; break;
+			}
+
+			switch(field.AccessModifier)
+			{
+				case AccessModifier.Protected: header = "protected " + header; break;
+				case AccessModifier.Internal: header = "internal " + header; break;
+				case AccessModifier.InternalProtected: header = "internal protected " + header; break;
+				case AccessModifier.Private: header = "private " + header; break;
+			}
+
+			if(field.IsStatic)
+				header = "static " + header;
+
+			return header;
 		}
 
 		public static string ToHeader(this DotNetProperty property, DotNetType parent)
 		{
 			if(property is DotNetIndexer)
 				return ToHeader(property as DotNetIndexer);
+
 			string header = property.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + property.Name.LocalName;
+
 			if(property.Category == FieldCategory.Abstract)
 				header = "abstract " + header;
+
+			if(property.HasGetterMethod)
+			{
+				switch(property.GetterMethod.AccessModifier)
+				{
+					case AccessModifier.Protected: header += " protected get;"; break;
+					case AccessModifier.Internal: header += " internal get;"; break;
+					case AccessModifier.InternalProtected: header += " internal protected get;"; break;
+					case AccessModifier.Private: header += " private get;"; break;
+				}
+			}
+			if(property.HasSetterMethod)
+			{
+				switch(property.SetterMethod.AccessModifier)
+				{
+					case AccessModifier.Protected: header += " protected set;"; break;
+					case AccessModifier.Internal: header += " internal set;"; break;
+					case AccessModifier.InternalProtected: header += " internal protected set;"; break;
+					case AccessModifier.Private: header += " private set;"; break;
+				}
+			}
+
 			return header;
 		}
 

@@ -46,5 +46,11 @@ namespace Test
 
 		/// <summary>Mauris et tincidunt ligula, nec efficitur justo.</summary>
 		protected int ProtectedProtectedProperty { get; set; }
+
+		/// <summary>Abracadabra.</summary>
+		protected int GetOnlyProperty { get; }
+
+		/// <summary>Deja vu.</summary>
+		protected int SetOnlyProperty { set { } }
 	}
 }
