@@ -32,6 +32,10 @@
 [Summary Tag] [Short] [One Line] Sed at molestie metus.  
   
 <hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Mauris mattis nibh eget lacinia elementum.  
+  
+<hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Vivamus at turpis vestibulum, ultricies nibh at, finibus tortor.  
   
@@ -52,6 +56,10 @@
 ## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) StringProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.  
+  
+<hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Quisque in aliquam nunc.  
   
 <hr/>  
 **Remarks:**  

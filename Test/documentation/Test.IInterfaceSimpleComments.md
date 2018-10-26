@@ -32,6 +32,10 @@
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.  
   
 <hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Etiam vel quam vehicula, semper nulla vel, condimentum augue.  
+  
+<hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Vivamus at turpis vestibulum, ultricies nibh at, finibus tortor.  
   

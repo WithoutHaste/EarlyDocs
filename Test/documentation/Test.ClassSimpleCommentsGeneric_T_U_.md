@@ -36,6 +36,10 @@
 [Summary Tag] [Short] [One Line] Sed feugiat, velit vel convallis accumsan, magna dui ultrices lorem, nec sollicitudin lorem nisl sit amet justo.  
   
 <hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Sed nec nibh sed nisl gravida eleifend.  
+  
+<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Donec porta metus at neque vehicula, nec placerat ligula tristique.  
   
@@ -58,6 +62,10 @@
 [Summary Tag] [Short] [One Line] Nulla non metus at dui condimentum semper.  
   
 <hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Cras sit amet neque quis lorem porta blandit.  
+  
+<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Suspendisse erat dolor, blandit eu elit quis, ultricies consectetur purus.  
   
@@ -76,6 +84,10 @@
 ##  UProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Phasellus tellus orci, maximus sed suscipit eu, sollicitudin ut ipsum.  
+  
+<hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Donec vel viverra quam, et lacinia elit.  
   
 <hr/>  
 **Remarks:**  

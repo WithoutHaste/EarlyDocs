@@ -54,6 +54,10 @@
 [Summary Tag] [Short] [One Line] Nam ut feugiat urna, eu varius arcu.  
   
 <hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Cras nec ultricies augue, at vulputate purus.  
+  
+<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Suspendisse at placerat libero.  
   
@@ -76,6 +80,10 @@
 [Summary Tag] [Short] [One Line] Integer condimentum gravida ante at blandit.  
   
 <hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Praesent sem ipsum, posuere a venenatis quis, placerat eu orci.  
+  
+<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Aliquam luctus libero dui, sit amet porta tellus scelerisque eget.  
   
@@ -94,6 +102,10 @@
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.  
+  
+<hr/>  
+**Value:**  
+[Value Tag] [Short] [One Line] Quisque venenatis risus sit amet tellus eleifend tincidunt.  
   
 <hr/>  
 **Remarks:**  

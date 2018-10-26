@@ -41,6 +41,12 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 [3rd Summary Tag] Fusce porttitor ultrices volutpat.  
   
 <hr/>  
+**Value:**  
+[1st Value Tag] Nulla erat quam, vestibulum sed orci vel, interdum condimentum magna.  
+[2nd Value Tag] Duis dapibus ultrices arcu, sed aliquam velit egestas quis.  
+[3rd Value Tag] Donec aliquet arcu neque, vitae laoreet lectus viverra ut.  
+  
+<hr/>  
 **Remarks:**  
 [1st Remarks Tag] Praesent rhoncus porta aliquet.  
 [2nd Remarks Tag] Proin venenatis, sapien nec maximus dictum, velit nisi condimentum velit, non luctus leo metus eget arcu.  

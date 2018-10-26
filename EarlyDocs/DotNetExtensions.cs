@@ -339,6 +339,7 @@ namespace EarlyDocs
 			MarkdownSection memberSection = new MarkdownSection(field.ToHeader(parent));
 
 			AddSummary(memberSection, field as DotNetMember);
+			AddValue(memberSection, field as DotNetMember);
 			AddRemarks(memberSection, field as DotNetMember);
 			AddFloatingComments(memberSection, field as DotNetMember);
 			AddExamples(memberSection, field as DotNetMember);
@@ -509,6 +510,21 @@ namespace EarlyDocs
 				return;
 
 			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.SummaryComments));
+			section.Add(new MarkdownLine());
+		}
+
+		private static void AddValue(MarkdownSection section, DotNetMember member)
+		{
+			if(member.ValueComments.Count == 0)
+				return;
+
+			if(!section.IsEmpty)
+			{
+				section.Add(new MarkdownLine("<hr/>"));
+				section.Add(new MarkdownLine(MarkdownText.Bold("Value:")));
+			}
+
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.ValueComments));
 			section.Add(new MarkdownLine());
 		}
 
