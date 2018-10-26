@@ -4,9 +4,11 @@
   
 [Summary Tag] [Short] [One Line] Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Sed nibh turpis, pulvinar eget odio sed, ornare cursus nunc. Curabitur commodo nibh egestas lectus porttitor placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada accumsan dolor tempus viverra. Nam finibus est non nisi volutpat pharetra. Suspendisse sollicitudin sed lectus vitae tincidunt. Vivamus finibus dapibus dui, venenatis ullamcorper ex egestas accumsan. Curabitur quis augue erat. Donec convallis faucibus magna accumsan vulputate. Vestibulum in vulputate dui, tristique hendrerit metus. Integer ligula lectus, porta ac turpis eu, fringilla pellentesque nisi.  
+  
   
 <hr/>  
 **Misc:**  
@@ -18,27 +20,35 @@
 ## Example A:
 
 [Example Tag] [Short] [One Line] Duis rhoncus libero non nibh efficitur semper.  
+  
 
 # Permissions
 
 ## current member
 
 [Permission Tag] [References Class] [Short] [One Line] Pellentesque ac odio pharetra, blandit turpis sed, ultrices massa.  
+  
 
 ## ClassSimpleComments.IntegerField
 
 [Permission Tag] [References Field] [Short] [One Line] Quisque aliquam diam at ullamcorper pellentesque.  
+  
 
 # Enums
 
 ## EnumInClassSimple
 
 [Summary Tag] [Short] [One Line] Pellentesque mattis lacus turpis, at elementum tortor eleifend eu.  
+  
+  
 [Remarks Tag] [Long] [One Line] Integer elementum erat nibh, eu placerat massa dignissim vel.  
+  
+  
 
 ### Examples
 
 [Example Tag] [Short] [One Line] Nulla id placerat quam.  
+  
 
 ### Constants
 
@@ -53,13 +63,16 @@
 
 [Summary Tag] [Short] [One Line] Nam ut feugiat urna, eu varius arcu.  
   
+  
 <hr/>  
 **Value:**  
 [Value Tag] [Short] [One Line] Cras nec ultricies augue, at vulputate purus.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Suspendisse at placerat libero.  
+  
   
 <hr/>  
 **Misc:**  
@@ -69,8 +82,10 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Nulla vitae malesuada ante.  
   
+  
 **Permission:**  
 [Permission Tag] [References Field] [Short] [One Line] Proin at mi aliquet, maximus sem vitae, hendrerit eros.  
+  
   
 
 # Properties
@@ -79,13 +94,16 @@
 
 [Summary Tag] [Short] [One Line] Integer condimentum gravida ante at blandit.  
   
+  
 <hr/>  
 **Value:**  
 [Value Tag] [Short] [One Line] Praesent sem ipsum, posuere a venenatis quis, placerat eu orci.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Aliquam luctus libero dui, sit amet porta tellus scelerisque eget.  
+  
   
 <hr/>  
 **Misc:**  
@@ -95,21 +113,26 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Nullam in sem ac ipsum dignissim gravida.  
   
+  
 **Permission:**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.  
+  
   
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.  
   
+  
 <hr/>  
 **Value:**  
 [Value Tag] [Short] [One Line] Quisque venenatis risus sit amet tellus eleifend tincidunt.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Curabitur cursus libero eu tincidunt iaculis.  
+  
   
 <hr/>  
 **Misc:**  
@@ -119,8 +142,10 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Nunc tincidunt sapien a cursus condimentum.  
   
+  
 **Permission:**  
 [Permission Tag] [References Property] [Short] [One Line] Aliquam interdum nisi ac aliquet pellentesque.  
+  
   
 
 # Constructors
@@ -129,9 +154,11 @@
 
 [Summary Tag] [Short] [One Line] Nam ornare velit eget sagittis hendrerit.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Sed nec tincidunt velit.  
+  
   
 <hr/>  
 **Misc:**  
@@ -141,8 +168,10 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Suspendisse ut euismod est, nec dictum augue.  
   
+  
 **Permission: #ctor**  
 [Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.  
+  
   
 <hr/>  
 **Exceptions:**  
@@ -154,9 +183,11 @@
 
 [Summary Tag] [Short] [One Line] Sed eu molestie augue, sed congue sapien.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Nam commodo justo ac porta maximus.  
+  
   
 <hr/>  
 **Misc:**  
@@ -166,8 +197,10 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Sed quis dignissim odio, non facilisis felis.  
   
+  
 **Permission: #ctor**  
 [Permission Tag] [References Constructor] [Short] [One Line] Nullam viverra placerat lacus, vitae bibendum justo interdum quis.  
+  
   
 <hr/>  
 **Exceptions:**  
@@ -188,9 +221,11 @@
 
 [Summary Tag] [Short] [One Line] Fusce ac lorem nisi.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Donec ullamcorper eros vitae dolor tempus tristique.  
+  
   
 <hr/>  
 **Misc:**  
@@ -200,8 +235,10 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Proin in lacus at dui lacinia rutrum ac sed libero.  
   
+  
 **Permission:**  
 [Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.  
+  
   
 <hr/>  
 **Exceptions:**  
@@ -213,9 +250,11 @@
 
 [Summary Tag] [Short] [One Line] Aenean quam urna, pharetra vel malesuada ut, gravida ac libero.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Pellentesque tincidunt magna sit amet nisl tristique egestas.  
+  
   
 <hr/>  
 **Misc:**  
@@ -225,8 +264,10 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Maecenas eu vestibulum mi, sit amet consequat urna.  
   
+  
 **Permission:**  
 [Permission Tag] [References Destructor] [Short] [One Line] Duis accumsan tempor erat ac vehicula.  
+  
   
 <hr/>  
 **Exceptions:**  
@@ -238,9 +279,11 @@
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Mauris finibus eros urna, in gravida metus ullamcorper at.  
+  
   
 <hr/>  
 **Misc:**  
@@ -250,8 +293,10 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
   
+  
 **Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.  
+  
   
 <hr/>  
 **Exceptions:**  
@@ -263,9 +308,11 @@
 
 [Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Maecenas vel nunc fringilla urna pellentesque volutpat quis ac sapien.  
+  
   
 <hr/>  
 **Misc:**  
@@ -275,8 +322,10 @@
 **Example A:**  
 [Example Tag] [Short] [One Line] Suspendisse ultrices porta sem sed eleifend.  
   
+  
 **Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] Suspendisse auctor purus sit amet eros iaculis semper.  
+  
   
 <hr/>  
 **Exceptions:**  
@@ -290,9 +339,11 @@
 
 [Summary Tag] [Short] [One Line] Vivamus et ex convallis, egestas justo ut, faucibus arcu.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Maecenas vitae quam quis urna bibendum rhoncus nec id libero.  
+  
   
 <hr/>  
 **Misc:**  
@@ -301,12 +352,15 @@
 **Returns:**  
 [Returns Tag] [Short] [One Line] Maecenas sed orci accumsan, dictum arcu nec, eleifend est.  
   
+  
 <hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Sed quis mollis justo, sit amet vulputate justo.  
   
+  
 **Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] In pharetra magna id lorem fermentum rutrum.  
+  
   
 <hr/>  
 **Exceptions:**  

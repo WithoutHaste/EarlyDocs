@@ -5,6 +5,7 @@
   
 Tests class inheritance.  
   
+  
 
 # Properties
 
@@ -12,13 +13,16 @@ Tests class inheritance.
 
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.  
   
+  
 <hr/>  
 **Value:**  
 [Value Tag] [Short] [One Line] Etiam vel quam vehicula, semper nulla vel, condimentum augue.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Vivamus at turpis vestibulum, ultricies nibh at, finibus tortor.  
+  
   
 <hr/>  
 **Misc:**  
@@ -28,8 +32,10 @@ Tests class inheritance.
 **Example A:**  
 [Example Tag] [Short] [One Line] Nulla ullamcorper est nec ipsum vehicula, eget tincidunt ante accumsan.  
   
+  
 **Permission: Test.IInterfaceSimpleComments.PropertyA**  
 [Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.  
+  
   
 
 # Methods
@@ -38,9 +44,11 @@ Tests class inheritance.
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Nullam in quam vel metus faucibus pulvinar.  
+  
   
 <hr/>  
 **Misc:**  
@@ -50,8 +58,10 @@ Tests class inheritance.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.  
   
+  
 **Permission: Test.IInterfaceSimpleComments.MethodA**  
 [Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.  
+  
   
 <hr/>  
 **Exceptions:**  
@@ -63,9 +73,11 @@ Tests class inheritance.
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Mauris finibus eros urna, in gravida metus ullamcorper at.  
+  
   
 <hr/>  
 **Misc:**  
@@ -75,8 +87,10 @@ Tests class inheritance.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
   
+  
 **Permission: Test.ClassSimpleComments.MethodVirtual**  
 [Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.  
+  
   
 <hr/>  
 **Exceptions:**  

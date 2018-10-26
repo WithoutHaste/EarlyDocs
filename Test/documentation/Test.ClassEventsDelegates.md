@@ -4,6 +4,7 @@
   
 Tests events and delegates.  
   
+  
 
 # Fields
 
@@ -11,9 +12,11 @@ Tests events and delegates.
 
 [Summary Tag] [Short] [One Line] Suspendisse mattis lacinia orci, eu cursus lacus ultricies ac.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Donec dictum consectetur lacus non sodales.  
+  
   
 <hr/>  
 **Misc:**  
@@ -23,17 +26,21 @@ Tests events and delegates.
 **Example A:**  
 [Example Tag] [Short] [One Line] Aenean mi leo, sagittis a mollis vel, pretium eu justo. In auctor est eget nibh luctus blandit.  
   
+  
 **Permission:**  
 [Permission Tag] [References Action] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
+  
   
 
 ## [Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FuncInClass
 
 [Summary Tag] [Short] [One Line] Maecenas et turpis eget mi dapibus sodales.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Phasellus id pharetra justo.  
+  
   
 <hr/>  
 **Misc:**  
@@ -43,8 +50,10 @@ Tests events and delegates.
 **Example A:**  
 [Example Tag] [Short] [One Line] In commodo, arcu eget vulputate faucibus, justo libero varius nulla, sed tempus nisl nibh in augue.  
   
+  
 **Permission:**  
 [Permission Tag] [References Func] [Short] [One Line] Quisque neque sapien, vulputate commodo leo non, mollis suscipit nunc.  
+  
   
 
 # Events
@@ -53,9 +62,11 @@ Tests events and delegates.
 
 [Summary Tag] [Short] [One Line] Mauris sit amet vestibulum justo.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Praesent volutpat nibh vehicula rutrum condimentum.  
+  
   
 <hr/>  
 **Misc:**  
@@ -65,17 +76,21 @@ Tests events and delegates.
 **Example A:**  
 [Example Tag] [Short] [One Line] Nulla placerat ultricies augue, mollis rutrum tellus tempus ut.  
   
+  
 **Permission:**  
 [Permission Tag] [References Event] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
+  
   
 
 ## [EventHandlerInClass](Test.ClassEventsDelegates.EventHandlerInClass.md) EventB
 
 [Summary Tag] [Short] [One Line] Suspendisse non enim semper sapien volutpat rhoncus.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Fusce vel quam ac urna sagittis suscipit non sit amet nulla.  
+  
   
 <hr/>  
 **Misc:**  
@@ -85,19 +100,24 @@ Tests events and delegates.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vestibulum tincidunt justo ut lorem consectetur, a facilisis tortor lacinia.  
   
+  
 **Permission:**  
 [Permission Tag] [References Event] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
+  
   
 
 ## [EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler) EventC
 
 [Summary Tag] [Private Member] [Should Ignore] Duis justo dolor, dapibus eu pulvinar vitae, iaculis non neque.  
   
+  
 
 # Delegates
 
 [EventHandlerInClass](Test.ClassEventsDelegates.EventHandlerInClass.md)  
 [Summary Tag] [Short] [One Line] Phasellus ut nulla aliquam, commodo ante ac, accumsan leo.  
+  
+  
   
 
 # Methods
@@ -106,9 +126,11 @@ Tests events and delegates.
 
 [Summary Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Phasellus ut nulla aliquam, commodo ante ac, accumsan leo.  
+  
   
 <hr/>  
 **Misc:**  
@@ -118,8 +140,10 @@ Tests events and delegates.
 **Example A:**  
 [Example Tag] [Short] [One Line] Duis metus ex, suscipit quis quam vel, viverra imperdiet magna.  
   
+  
 **Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] Nam vitae risus quis est aliquet egestas.  
+  
   
 <hr/>  
 **Exceptions:**  
@@ -137,9 +161,11 @@ Tests events and delegates.
 
 [Summary Tag] [Short] [One Line] Donec accumsan lacus a dolor auctor, sit amet cursus eros faucibus.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Pellentesque est nibh, vehicula at velit id, scelerisque pretium tortor.  
+  
   
 <hr/>  
 **Misc:**  
@@ -149,8 +175,10 @@ Tests events and delegates.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus lobortis neque eget mi semper finibus.  
   
+  
 **Permission:**  
 [Permission Tag] [References Method] [Short] [One Line] In aliquet libero in euismod rutrum.  
+  
   
 <hr/>  
 **Exceptions:**  

@@ -4,4 +4,5 @@
   
 Tests sealed class.  
   
+  
 

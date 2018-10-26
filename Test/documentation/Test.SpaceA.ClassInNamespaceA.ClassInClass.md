@@ -4,6 +4,7 @@
   
 Tests a class nested in a class.  
   
+  
 
 # Fields
 

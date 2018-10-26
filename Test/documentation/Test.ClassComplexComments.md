@@ -13,6 +13,7 @@ leo diam. Nullam pulvinar iaculis nunc, eu tristique elit.
 Interdum et malesuada fames ac ante ipsum primis in faucibus.Praesent dapibus euismod nibh,   
 ac sollicitudin mi iaculis non.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Multiline] Nulla vulputate eros sit amet libero volutpat   
@@ -33,6 +34,7 @@ condimentum risus a mi condimentum viverra.
 6. **Luctus**  
 7. **Posuere**  
 
+  
   
 
 # Examples
@@ -56,6 +58,7 @@ class Program
     }  
 }  
 Proin sollicitudin non est eget semper. Suspendisse imperdiet turpis ac elit hendrerit dapibus ut a lacus. Curabitur pulvinar lacus at risus condimentum, eget ornare ligula tempus.    
+  
 
 ## Example B:
 
@@ -80,6 +83,7 @@ for (int i = 0; i < lines.Length; i++)
 {  
     c++;  
 }  
+  
 
 # Methods
 
@@ -90,11 +94,15 @@ _IndexOutOfRangeException:_ [1st Exception Tag] [Has Example] Cras ante risus, s
     
 Fusce ligula ipsum, porttitor at velit ut, commodo auctor ligula. Nunc imperdiet, justo sed bibendum laoreet, nibh purus laoreet dolor,   
 vitae consectetur sem erat quis ipsum. Nam tincidunt non magna in mattis. Curabitur nec efficitur sapien, vel rutrum odio.  
+  
+  
 _System.IO.FileNotFoundException:_ [2nd Exception Tag] [Has ParamRef] Nulla facilisi. Donec fermentum nisl felis,   
 ac   
 venenatis tellus tincidunt ultrices.  
+  
 _ArgumentException:_ [3rd Exception Tag] [Has TypeParamRef] Vestibulum ante ipsum primis in faucibus orci   
 luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.  
+  
   
 
 ##  MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string), A, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))

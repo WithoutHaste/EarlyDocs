@@ -4,9 +4,11 @@
 
 [Summary Tag] [Short] [One Line] Donec gravida egestas nibh.  
   
+  
 <hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Maecenas et turpis eget mi dapibus sodales.  
+  
   
 <hr/>  
 **Misc:**  
@@ -18,12 +20,14 @@
 ## Example A:
 
 [Example Tag] [Short] [One Line] Phasellus id pharetra justo.  
+  
 
 # Permissions
 
 ## current member
 
 [Permission Tag] [References Delegate] [Short] [One Line] In commodo, arcu eget vulputate faucibus, justo libero varius nulla, sed tempus nisl nibh in augue.  
+  
 
 # Parameters
 

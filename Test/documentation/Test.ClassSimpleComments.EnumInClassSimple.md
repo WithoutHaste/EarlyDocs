@@ -1,11 +1,16 @@
 # EnumInClassSimple
 
 [Summary Tag] [Short] [One Line] Pellentesque mattis lacus turpis, at elementum tortor eleifend eu.  
+  
+  
 [Remarks Tag] [Long] [One Line] Integer elementum erat nibh, eu placerat massa dignissim vel.  
+  
+  
 
 ## Examples
 
 [Example Tag] [Short] [One Line] Nulla id placerat quam.  
+  
 
 ## Constants
 

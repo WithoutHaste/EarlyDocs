@@ -510,7 +510,6 @@ namespace EarlyDocs
 				return;
 
 			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.SummaryComments));
-			section.Add(new MarkdownLine());
 		}
 
 		private static void AddValue(MarkdownSection section, DotNetMember member)
@@ -525,7 +524,6 @@ namespace EarlyDocs
 			}
 
 			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.ValueComments));
-			section.Add(new MarkdownLine());
 		}
 
 		private static void AddRemarks(MarkdownSection section, DotNetMember member)
@@ -538,7 +536,6 @@ namespace EarlyDocs
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
 			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.RemarksComments));
-			section.Add(new MarkdownLine());
 		}
 
 		private static void AddReturns(MarkdownSection section, DotNetMember member)
@@ -548,7 +545,6 @@ namespace EarlyDocs
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Returns:")));
 			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.ReturnsComments));
-			section.Add(new MarkdownLine());
 		}
 
 		private static void AddTopLevelExamples(MarkdownSection section, DotNetMember member)
@@ -647,7 +643,6 @@ namespace EarlyDocs
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Misc:")));
 			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.FloatingComments));
-			section.Add(new MarkdownLine());
 		}
 
 		public static void AddTopLevelParameters(MarkdownSection section, DotNetMethod method)

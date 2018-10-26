@@ -1,6 +1,8 @@
 # EnumGlobalSimple
 
 Tests an enum declared in a namespace with simple comments.  
+  
+  
 
 ## Constants
 

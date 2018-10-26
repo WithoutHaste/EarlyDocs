@@ -5,4 +5,5 @@
   
 Tests interface inheritance.  
   
+  
 

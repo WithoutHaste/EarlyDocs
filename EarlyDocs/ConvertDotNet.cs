@@ -12,7 +12,9 @@ namespace EarlyDocs
 	{
 		public static List<IMarkdownInSection> DotNetCommentGroupToMarkdown(DotNetCommentGroup group)
 		{
-			return DotNetCommentsToMarkdown(group.Comments);
+			List<IMarkdownInSection> result = DotNetCommentsToMarkdown(group.Comments);
+			result.Add(new MarkdownLine()); //because comment groups are like paragraphs, with space in between
+			return result;
 		}
 
 		/// <summary>
