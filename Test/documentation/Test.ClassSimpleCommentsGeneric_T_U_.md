@@ -13,6 +13,11 @@
 [Floating Comment] [Short] [One Line] Mauris cursus erat at ligula pretium dignissim.  
   
 
+# Generic Type Parameters
+
+* **T**: [Type Parameter Tag] [Short] [One Line] Aenean pellentesque lectus nec urna faucibus, eget sodales diam mollis.  
+* **U**: [Type Parameter Tag] [Short] [One Line] Etiam libero justo, maximus in augue vel, tempus sagittis eros.  
+
 # Examples
 
 ## Example A:
@@ -164,9 +169,6 @@
   
 **Parameters:**
 
-* **t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
-* **u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
-
   
 
 # Methods
@@ -245,13 +247,13 @@
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Nunc purus libero, scelerisque a felis et, feugiat ultrices ipsum.  
 
   
-**Parameters:**
+**Generic Type Parameters:**
 
-* **a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
 * **A**: [Type Parameter Tag] [Short] [One Line] Aenean neque ipsum, finibus at dolor nec, hendrerit gravida odio.  
-* **b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
 * **B**: [Type Parameter Tag] [Short] [One Line] Nunc faucibus sed elit ut pellentesque.  
-* **u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
+
+  
+**Parameters:**
 
   
 
@@ -284,9 +286,6 @@
 
   
 **Parameters:**
-
-* **b**: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
-* **t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
 
   
 

@@ -127,7 +127,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 
 ## void MethodMultipleTypeParams<A,B,C,D,E,F>()
 
-**Parameters:**
+**Generic Type Parameters:**
 
 * **A**: [1st TypeParam Tag] Curabitur eget velit porta, bibendum metus vitae, venenatis enim.  
 * **B**: [2nd TypeParam Tag] Duis lacus velit, aliquet sagittis sem eget, malesuada blandit nisl.  

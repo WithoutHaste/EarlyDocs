@@ -236,6 +236,7 @@ namespace EarlyDocs
 			AddSummary(typeSection, type as DotNetMember);
 			AddRemarks(typeSection, type as DotNetMember);
 			AddFloatingComments(typeSection, type as DotNetMember);
+			AddTopLevelTypeParameters(typeSection, type as DotNetMember);
 			AddTopLevelExamples(typeSection, type as DotNetMember);
 			AddTopLevelPermissions(typeSection, type as DotNetMember);
 			if(type.NestedEnums.Count > 0)
@@ -387,19 +388,16 @@ namespace EarlyDocs
 			{
 				AddTopLevelExamples(memberSection, method as DotNetMember);
 				AddTopLevelPermissions(memberSection, method as DotNetMember);
+				AddTopLevelExceptions(memberSection, method as DotNetMember);
+				AddTopLevelTypeParameters(memberSection, method as DotNetMember);
+				AddTopLevelParameters(memberSection, method);
 			}
 			else
 			{
 				AddExamples(memberSection, method as DotNetMember);
 				AddPermissions(memberSection, method as DotNetMember);
-			}
-			AddExceptions(memberSection, method as DotNetMember);
-			if(method.Category == MethodCategory.Delegate)
-			{
-				AddTopLevelParameters(memberSection, method);
-			}
-			else
-			{
+				AddExceptions(memberSection, method as DotNetMember);
+				AddTypeParameters(memberSection, method as DotNetMember);
 				AddParameters(memberSection, method);
 			}
 
@@ -645,6 +643,63 @@ namespace EarlyDocs
 			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.FloatingComments));
 		}
 
+		public static void AddTopLevelTypeParameters(MarkdownSection section, DotNetMember member)
+		{
+			if(member.TypeParameterComments.Count == 0)
+				return;
+
+			MarkdownSection parametersSection = new MarkdownSection("Generic Type Parameters");
+			section.Add(parametersSection);
+
+			if(EachCommentIsOneTextComment(member.ParameterComments)) //todo: partially duplicated with AddParameters method
+			{
+				MarkdownList list = new MarkdownList(isNumbered: false);
+				section.Add(list);
+				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
+				{
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(commentParameter.ToHeader()), new MarkdownText(": "));
+					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					list.Add(line);
+				}
+			}
+			else
+			{
+				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
+				{
+					section.Add(MarkdownText.Bold(commentParameter.ToHeader()));
+					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
+				}
+			}
+		}
+
+		public static void AddTypeParameters(MarkdownSection section, DotNetMember member)
+		{
+			if(member.TypeParameterComments.Count == 0)
+				return;
+
+			section.Add(new MarkdownParagraph(MarkdownText.Bold("Generic Type Parameters:")));
+			if(EachCommentIsOneTextComment(member.ParameterComments))
+			{
+				MarkdownList list = new MarkdownList(isNumbered: false);
+				section.Add(list);
+				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
+				{
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(commentParameter.ToHeader()), new MarkdownText(": "));
+					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					list.Add(line);
+				}
+			}
+			else
+			{
+				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
+				{
+					section.Add(MarkdownText.Bold(commentParameter.ToHeader()));
+					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
+				}
+			}
+			section.Add(new MarkdownLine());
+		}
+
 		public static void AddTopLevelParameters(MarkdownSection section, DotNetMethod method)
 		{
 			if(method.ParameterComments.Count == 0)
@@ -667,15 +722,6 @@ namespace EarlyDocs
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
-				foreach(DotNetCommentParameter commentParameter in method.ParameterComments.OrderBy(p => p.ParameterLink.Name)) //then the type parameters or unknown parameters
-				{
-					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
-						continue;
-
-					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(commentParameter.ToHeader()), new MarkdownText(": "));
-					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
-					list.Add(line);
-				}
 			}
 			else
 			{
@@ -687,14 +733,6 @@ namespace EarlyDocs
 
 					MarkdownSection parameterSection = parametersSection.AddSection(parameter.ToHeader());
 					parameterSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
-				}
-				foreach(DotNetCommentParameter commentParameter in method.ParameterComments.OrderBy(p => p.ParameterLink.Name)) //then the type parameters or unknown parameters
-				{
-					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
-						continue;
-
-					section.Add(MarkdownText.Bold(commentParameter.ToHeader()));
-					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
 				}
 			}
 		}
@@ -719,15 +757,6 @@ namespace EarlyDocs
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
-				foreach(DotNetCommentParameter commentParameter in method.ParameterComments.OrderBy(p => p.ParameterLink.Name)) //then the type parameters or unknown parameters
-				{
-					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
-						continue;
-
-					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(commentParameter.ToHeader()), new MarkdownText(": "));
-					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
-					list.Add(line);
-				}
 			}
 			else
 			{
@@ -738,14 +767,6 @@ namespace EarlyDocs
 						continue;
 
 					section.Add(MarkdownText.Bold(parameter.ToHeader()));
-					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
-				}
-				foreach(DotNetCommentParameter commentParameter in method.ParameterComments.OrderBy(p => p.ParameterLink.Name)) //then the type parameters or unknown parameters
-				{
-					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
-						continue;
-
-					section.Add(MarkdownText.Bold(commentParameter.ToHeader()));
 					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
 				}
 			}
