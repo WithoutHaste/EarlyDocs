@@ -110,7 +110,7 @@ Tests events and delegates.
 
 # Methods
 
-##  MethodWithAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1))
+## void MethodWithAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action)
 
 [Summary Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
   
@@ -136,11 +136,11 @@ Tests events and delegates.
   
 **Parameters:**
 
-* **action**: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
+* **[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action**: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
 
   
 
-##  MethodWithFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2))
+## void MethodWithFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func)
 
 [Summary Tag] [Short] [One Line] Donec accumsan lacus a dolor auctor, sit amet cursus eros faucibus.  
   
@@ -166,7 +166,7 @@ Tests events and delegates.
   
 **Parameters:**
 
-* **func**: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
+* **[Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func**: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
 
   
 

@@ -135,7 +135,7 @@
 
   
 
-##  MethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32), [string](https://docs.microsoft.com/en-us/dotnet/api/system.string))
+## float MethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Donec sollicitudin sem et nisi laoreet, et gravida nulla scelerisque.  
   
@@ -165,12 +165,14 @@
   
 **Parameters:**
 
-* **a**: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
-* **b**: [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.  
 
   
 
-##  StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32), [string](https://docs.microsoft.com/en-us/dotnet/api/system.string))
+# Static Methods
+
+## double StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
   
@@ -200,8 +202,8 @@
   
 **Parameters:**
 
-* **a**: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
-* **b**: [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
 
   
 
