@@ -14,7 +14,6 @@ Interdum et malesuada fames ac ante ipsum primis in faucibus.Praesent dapibus eu
 ac sollicitudin mi iaculis non.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Multiline] Nulla vulputate eros sit amet libero volutpat   
 dignissim. Etiam rutrum imperdiet felis, id hendrerit magna sollicitudin   

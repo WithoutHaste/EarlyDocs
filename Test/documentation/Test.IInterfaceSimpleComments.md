@@ -5,12 +5,10 @@
 [Summary Tag] [Short] [One Line] Cras posuere mattis nisi, sed porta libero auctor eu.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Ut in sem eu purus facilisis venenatis eu id magna.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Donec venenatis vitae elit at faucibus.  
   
@@ -36,21 +34,17 @@
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.  
   
   
-<hr/>  
 **Value:**  
 [Value Tag] [Short] [One Line] Etiam vel quam vehicula, semper nulla vel, condimentum augue.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Vivamus at turpis vestibulum, ultricies nibh at, finibus tortor.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Ut massa nibh, rutrum nec urna in, interdum congue justo.  
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Nulla ullamcorper est nec ipsum vehicula, eget tincidunt ante accumsan.  
   
@@ -67,16 +61,13 @@
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Nullam in quam vel metus faucibus pulvinar.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Sed vehicula gravida efficitur.  
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.  
   
@@ -85,7 +76,6 @@
 [Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
 

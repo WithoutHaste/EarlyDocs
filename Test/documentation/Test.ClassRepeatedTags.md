@@ -50,7 +50,6 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 [3rd Summary Tag] Fusce porttitor ultrices volutpat.  
   
   
-<hr/>  
 **Value:**  
 [1st Value Tag] Nulla erat quam, vestibulum sed orci vel, interdum condimentum magna.  
   
@@ -59,7 +58,6 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 [3rd Value Tag] Donec aliquet arcu neque, vitae laoreet lectus viverra ut.  
   
   
-<hr/>  
 **Remarks:**  
 [1st Remarks Tag] Praesent rhoncus porta aliquet.  
   
@@ -149,7 +147,6 @@ vehicula facilisis ipsum, vel faucibus justo.
 [3rd Summary Tag] Aliquam scelerisque erat risus, ac tincidunt augue egestas quis.  
   
   
-<hr/>  
 **Remarks:**  
 [1st Remarks Tag] Aenean a cursus arcu.  
   

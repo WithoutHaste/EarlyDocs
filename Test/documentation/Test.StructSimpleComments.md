@@ -5,12 +5,10 @@
 [Summary Tag] [Short] [One Line] Donec porttitor mi in odio fermentum lobortis.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Fusce ut turpis nec ipsum hendrerit fermentum a in nisl.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Sed sit amet dapibus nibh, non luctus quam.  
   
@@ -36,21 +34,17 @@
 [Summary Tag] [Short] [One Line] Sed at molestie metus.  
   
   
-<hr/>  
 **Value:**  
 [Value Tag] [Short] [One Line] Mauris mattis nibh eget lacinia elementum.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Vivamus at turpis vestibulum, ultricies nibh at, finibus tortor.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Suspendisse eget placerat tortor.  
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Curabitur ullamcorper a turpis at luctus.  
   
@@ -67,21 +61,17 @@
 [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.  
   
   
-<hr/>  
 **Value:**  
 [Value Tag] [Short] [One Line] Quisque in aliquam nunc.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Long] [One Line] Fusce mauris arcu, ullamcorper sed ipsum quis, viverra fermentum enim.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Nullam et porttitor mauris, eget porta urna.  
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Nulla sit amet nulla et tortor laoreet aliquam.  
   
@@ -98,16 +88,13 @@
 [Summary Tag] [Short] [One Line] Nam sollicitudin, tortor sit amet cursus sollicitudin, nunc sem pretium ante, et ultrices lectus nibh sollicitudin arcu.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Mauris condimentum libero nibh, sit amet hendrerit nulla tempus ut.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.  
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Nunc vel ullamcorper augue.  
   
@@ -116,7 +103,6 @@
 [Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.  
   
   
-<hr/>  
 **Exceptions:**  
 * _Exception_: [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.  
 
@@ -129,16 +115,13 @@
 [Summary Tag] [Short] [One Line] Pellentesque quis ex eu odio pretium vehicula.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Nunc ut diam risus.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Proin rutrum consectetur dui at egestas.  
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Suspendisse orci odio, luctus vel ultrices at, gravida eget enim.  
   
@@ -147,7 +130,6 @@
 [Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.  
   
   
-<hr/>  
 **Exceptions:**  
 * _Exception_: [Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.  
 
@@ -158,12 +140,10 @@
 [Summary Tag] [Short] [One Line] Donec sollicitudin sem et nisi laoreet, et gravida nulla scelerisque.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Vivamus sollicitudin nisi sollicitudin eros egestas tempus.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Quisque sit amet ante eu nulla laoreet auctor.  
   
@@ -171,7 +151,6 @@
 [Returns Tag] [Short] [One Line] Donec lobortis eros quis quam aliquam hendrerit.  
   
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Nulla ullamcorper erat a urna porttitor, sed sodales nisl porttitor.  
   
@@ -180,12 +159,10 @@
 [Permission Tag] [References Method] [Short] [One Line] Cras eget dignissim nisi, lacinia semper turpis.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.  
 
   
-<hr/>  
 **Parameters:**
 
 * _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
@@ -200,12 +177,10 @@
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Mauris eu felis eleifend, posuere leo ut, sollicitudin ipsum.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Vivamus convallis libero nec neque vestibulum porta.  
   
@@ -213,7 +188,6 @@
 [Returns Tag] [Short] [One Line] Proin fringilla eros et lacinia hendrerit.  
   
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Etiam vitae lorem in nunc sollicitudin accumsan sed ac sem.  
   
@@ -222,12 +196,10 @@
 [Permission Tag] [References Method] [Short] [One Line] Nunc ullamcorper egestas vulputate.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.  
 
   
-<hr/>  
 **Parameters:**
 
 * _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  

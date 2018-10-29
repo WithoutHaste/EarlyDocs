@@ -18,10 +18,6 @@ namespace EarlyDocs
 
 		public static List<DotNetQualifiedName> KnownMicrosoftNamespaces = new List<DotNetQualifiedName>() {
 			DotNetQualifiedName.FromVisualStudioXml("System"),
-			DotNetQualifiedName.FromVisualStudioXml("System.Collections.Generic"),
-			DotNetQualifiedName.FromVisualStudioXml("System.Linq"),
-			DotNetQualifiedName.FromVisualStudioXml("System.Text"),
-			DotNetQualifiedName.FromVisualStudioXml("System.Threading.Tasks")
 		};
 
 		public static bool IsInKnownMicrosoftNamespace(this DotNetQualifiedName name)
@@ -524,7 +520,6 @@ namespace EarlyDocs
 
 			if(!section.IsEmpty)
 			{
-				section.Add(new MarkdownLine("<hr/>"));
 				section.Add(new MarkdownLine(MarkdownText.Bold("Value:")));
 			}
 
@@ -535,9 +530,6 @@ namespace EarlyDocs
 		{
 			if(member.RemarksComments.Count == 0)
 				return;
-
-			if(!section.IsEmpty)
-				section.Add(new MarkdownLine("<hr/>"));
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
 			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.RemarksComments));
@@ -574,9 +566,6 @@ namespace EarlyDocs
 		{
 			if(member.ExampleComments.Count == 0)
 				return;
-
-			if(!section.IsEmpty)
-				section.Add(new MarkdownLine("<hr/>"));
 
 			AlphabetCounter counter = new AlphabetCounter();
 			foreach(DotNetComment comment in member.ExampleComments)
@@ -643,9 +632,6 @@ namespace EarlyDocs
 			if(member.FloatingComments.IsEmpty)
 				return;
 
-			if(!section.IsEmpty)
-				section.Add(new MarkdownLine("<hr/>"));
-
 			section.Add(new MarkdownLine(MarkdownText.Bold("Misc:")));
 			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.FloatingComments));
 		}
@@ -708,9 +694,6 @@ namespace EarlyDocs
 		{
 			if(method.ParameterComments.Count == 0)
 				return;
-
-			if(!section.IsEmpty)
-				section.Add(new MarkdownLine("<hr/>"));
 
 			section.Add(new MarkdownParagraph(MarkdownText.Bold("Parameters:")));
 			if(EachCommentIsOneTextComment(method.ParameterComments))
@@ -793,9 +776,6 @@ namespace EarlyDocs
 		{
 			if(member.ExceptionComments.Count == 0)
 				return;
-
-			if(!section.IsEmpty)
-				section.Add(new MarkdownLine("<hr/>"));
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Exceptions:")));
 

@@ -13,16 +13,13 @@ Tests overloaded methods.
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Nulla facilisi.  
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
@@ -31,12 +28,10 @@ Tests overloaded methods.
 [Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
   
-<hr/>  
 **Parameters:**
 
 * _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.  

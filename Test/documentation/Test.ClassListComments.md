@@ -17,7 +17,6 @@ Tests lists and tables in comments.
 
   
   
-<hr/>  
 **Remarks:**  
 * **Term A**: Description A  
 * **Term B**: Description B  
@@ -25,7 +24,6 @@ Tests lists and tables in comments.
 
   
   
-<hr/>  
 **Example A:**  
 * Description A  
 * Description B  
@@ -70,7 +68,6 @@ Tests lists and tables in comments.
 
   
   
-<hr/>  
 **Remarks:**  
 1. **Term A**: Description A  
 2. **Term B**: Description B  
@@ -78,7 +75,6 @@ Tests lists and tables in comments.
 
   
   
-<hr/>  
 **Example A:**  
 1. Description A  
 2. Description B  
@@ -122,7 +118,6 @@ Tests lists and tables in comments.
 | Row 2, Cell 1 | Row 2, Cell 2 | Row 2, Cell 3 |
   
   
-<hr/>  
 **Remarks:**  
 | Row 1, Cell 1 | Row 1, Cell 2 | Row 1, Cell 3 |
 | ------------- | ------------- | ------------- |

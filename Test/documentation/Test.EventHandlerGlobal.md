@@ -5,12 +5,10 @@
 [Summary Tag] [Short] [One Line] Donec gravida egestas nibh.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Maecenas et turpis eget mi dapibus sodales.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Quisque neque sapien, vulputate commodo leo non, mollis suscipit nunc.  
   

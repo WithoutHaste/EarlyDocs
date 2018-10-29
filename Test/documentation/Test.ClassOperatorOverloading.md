@@ -13,12 +13,10 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Praesent id pulvinar nunc.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Vestibulum eget magna ut turpis pellentesque lobortis.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Morbi viverra arcu et sapien maximus varius.  
   
@@ -26,7 +24,6 @@ Tests operator overloading.
 [Returns Tag] [Short] [One Line] Etiam nec ex ac ante gravida gravida eu pulvinar risus.  
   
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Phasellus eget aliquet tellus.  
   
@@ -35,12 +32,10 @@ Tests operator overloading.
 [Permission Tag] [References Operator] [Short] [One Line] Pellentesque viverra rutrum molestie.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Curabitur et lacinia felis.  
 
   
-<hr/>  
 **Parameters:**
 
 * _[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a_: [Parameter Tag] [Short] [One Line] Vivamus nec felis tortor.  
@@ -53,12 +48,10 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Sed hendrerit eros eget purus dictum, viverra feugiat eros porttitor.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Nunc a odio sodales augue congue posuere ut a ex.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Pellentesque vel malesuada mi, quis pharetra erat.  
   
@@ -66,7 +59,6 @@ Tests operator overloading.
 [Returns Tag] [Short] [One Line] Maecenas tempor quam nisi, sit amet eleifend enim consectetur et.  
   
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Maecenas lectus velit, maximus vel ipsum eu, volutpat tempor tortor.  
   
@@ -75,12 +67,10 @@ Tests operator overloading.
 [Permission Tag] [References Operator] [Short] [One Line] Sed at nisi leo.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Quisque vitae purus elit.  
 
   
-<hr/>  
 **Parameters:**
 
 * _[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a_: [Parameter Tag] [Short] [One Line] Pellentesque est metus, euismod sit amet viverra eget, tincidunt consectetur massa.  
@@ -203,12 +193,10 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Maecenas mattis fringilla felis, a lacinia quam commodo id.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Quisque et mattis leo.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Proin accumsan, dolor non consequat ultricies, tellus nulla lobortis massa, porttitor iaculis ipsum erat ac nibh.  
   
@@ -216,7 +204,6 @@ Tests operator overloading.
 [Returns Tag] [Short] [One Line] Donec convallis, tortor eu porttitor fermentum, felis ligula blandit neque, ac ultrices quam massa eget lacus.  
   
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Nulla imperdiet diam ut felis ultricies, tempor scelerisque odio ornare.  
   
@@ -225,12 +212,10 @@ Tests operator overloading.
 [Permission Tag] [References Operator] [Short] [One Line] Phasellus euismod quam ut lacus tincidunt suscipit.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Nullam eu libero arcu.  
 
   
-<hr/>  
 **Parameters:**
 
 * _a_: [Parameter Tag] [Short] [One Line] Vivamus volutpat, elit sit amet gravida rutrum, quam tortor vulputate risus, sed blandit dolor lacus non diam.  
@@ -242,12 +227,10 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Nunc imperdiet ex et leo porttitor fermentum.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Duis varius gravida metus id ultrices.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Quisque et efficitur nunc.  
   
@@ -255,7 +238,6 @@ Tests operator overloading.
 [Returns Tag] [Short] [One Line] Quisque at quam nulla.  
   
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Ut vestibulum tellus felis, auctor venenatis turpis blandit sit amet.  
   
@@ -264,12 +246,10 @@ Tests operator overloading.
 [Permission Tag] [References Operator] [Short] [One Line] Donec vel dictum velit, eget porta arcu.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Aliquam hendrerit, ligula quis faucibus venenatis, libero leo venenatis lacus, vulputate euismod erat turpis nec ex.  
 
   
-<hr/>  
 **Parameters:**
 
 * _a_: [Parameter Tag] [Short] [One Line] In hac habitasse platea dictumst.  
@@ -331,12 +311,10 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Nam sit amet egestas orci.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] In a fermentum nunc.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Maecenas sagittis nec metus a fermentum.  
   
@@ -344,7 +322,6 @@ Tests operator overloading.
 [Returns Tag] [Short] [One Line] Donec in lobortis orci.  
   
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] Sed massa justo, laoreet quis magna at, iaculis dictum justo.  
   
@@ -353,12 +330,10 @@ Tests operator overloading.
 [Permission Tag] [References Operator] [Short] [One Line] Interdum et malesuada fames ac ante ipsum primis in faucibus.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Sed ac molestie ante, vel porttitor neque.  
 
   
-<hr/>  
 **Parameters:**
 
 * _a_: [Parameter Tag] [Short] [One Line] Vestibulum quis fringilla ipsum.  
@@ -370,12 +345,10 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Fusce at mollis urna.  
   
   
-<hr/>  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Fusce accumsan augue dui.  
   
   
-<hr/>  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Proin in odio turpis.  
   
@@ -383,7 +356,6 @@ Tests operator overloading.
 [Returns Tag] [Short] [One Line] Vivamus fermentum turpis in tellus dignissim, vel aliquam nunc venenatis.  
   
   
-<hr/>  
 **Example A:**  
 [Example Tag] [Short] [One Line] In laoreet mauris nec purus venenatis accumsan.  
   
@@ -392,12 +364,10 @@ Tests operator overloading.
 [Permission Tag] [References Operator] [Short] [One Line] Etiam dictum cursus elementum.  
   
   
-<hr/>  
 **Exceptions:**  
 * _ArgumentException_: [Exception Tag] [Short] [One Line] Donec malesuada ex sit amet mollis facilisis.  
 
   
-<hr/>  
 **Parameters:**
 
 * _a_: [Parameter Tag] [Short] [One Line] Vestibulum semper maximus turpis, quis sodales nisl mattis ac.  
