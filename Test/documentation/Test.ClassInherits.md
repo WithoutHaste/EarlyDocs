@@ -36,7 +36,7 @@ Tests class inheritance.
 
 # Methods
 
-## void MethodA()
+##  MethodA()
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.  
   
@@ -61,7 +61,7 @@ Tests class inheritance.
 
   
 
-## int MethodVirtual()
+##  MethodVirtual()
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
   

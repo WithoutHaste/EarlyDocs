@@ -196,7 +196,7 @@
 
   
 
-## void Finalize()
+##  Finalize()
 
 [Summary Tag] [Short] [One Line] Quisque scelerisque elit a massa semper luctus.  
   

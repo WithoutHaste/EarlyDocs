@@ -40,5 +40,5 @@ or
 
 # Methods
 
-## string MethodWithParameters([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  MethodWithParameters([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 

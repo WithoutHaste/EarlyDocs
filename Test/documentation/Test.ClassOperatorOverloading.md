@@ -8,7 +8,7 @@ Tests operator overloading.
 
 # Operators
 
-## Test.ClassOperatorOverloading op_Addition([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_Addition([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Praesent id pulvinar nunc.  
   
@@ -38,12 +38,12 @@ Tests operator overloading.
   
 **Parameters:**
 
-* **[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a**: [Parameter Tag] [Short] [One Line] Vivamus nec felis tortor.  
-* **[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b**: [Parameter Tag] [Short] [One Line] Nam maximus odio vel consequat congue.  
+* **a**: [Parameter Tag] [Short] [One Line] Vivamus nec felis tortor.  
+* **b**: [Parameter Tag] [Short] [One Line] Nam maximus odio vel consequat congue.  
 
   
 
-## Test.ClassOperatorOverloading op_Addition([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_Addition([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Sed hendrerit eros eget purus dictum, viverra feugiat eros porttitor.  
   
@@ -73,12 +73,12 @@ Tests operator overloading.
   
 **Parameters:**
 
-* **[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a**: [Parameter Tag] [Short] [One Line] Pellentesque est metus, euismod sit amet viverra eget, tincidunt consectetur massa.  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b**: [Parameter Tag] [Short] [One Line] Maecenas maximus congue neque, at iaculis justo dignissim nec.  
+* **a**: [Parameter Tag] [Short] [One Line] Pellentesque est metus, euismod sit amet viverra eget, tincidunt consectetur massa.  
+* **b**: [Parameter Tag] [Short] [One Line] Maecenas maximus congue neque, at iaculis justo dignissim nec.  
 
   
 
-## Test.ClassOperatorOverloading op_BitwiseAnd([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_BitwiseAnd([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Cras vulputate est ante, scelerisque dignissim neque porttitor sed.  
   
@@ -88,7 +88,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_BitwiseAnd([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_BitwiseAnd([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Ut elit enim, posuere id nunc ac, fermentum congue nibh.  
   
@@ -98,7 +98,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_BitwiseOr([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_BitwiseOr([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Curabitur vel turpis vel tellus luctus sagittis.  
   
@@ -108,7 +108,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_BitwiseOr([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_BitwiseOr([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.  
   
@@ -118,7 +118,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Decrement([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a)
+##  op_Decrement([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Vestibulum euismod consequat sodales.  
   
@@ -128,7 +128,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Division([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_Division([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Suspendisse ac gravida nunc, sit amet consequat orci.  
   
@@ -138,7 +138,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Division([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_Division([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Donec consectetur diam in felis elementum, a iaculis lacus semper.  
   
@@ -148,7 +148,7 @@ Tests operator overloading.
   
   
 
-## bool op_Equality([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_Equality([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Nam maximus vehicula nisi non lacinia.  
   
@@ -158,7 +158,7 @@ Tests operator overloading.
   
   
 
-## bool op_Equality([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_Equality([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.  
   
@@ -168,7 +168,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_ExclusiveOr([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_ExclusiveOr([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Nam euismod euismod consectetur.  
   
@@ -178,7 +178,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_ExclusiveOr([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_ExclusiveOr([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Suspendisse potenti.  
   
@@ -256,7 +256,7 @@ Tests operator overloading.
 
   
 
-## bool op_False([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a)
+##  op_False([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Pellentesque consectetur libero a ligula tempus convallis.  
   
@@ -266,7 +266,7 @@ Tests operator overloading.
   
   
 
-## bool op_GreaterThan([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_GreaterThan([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Suspendisse potenti.  
   
@@ -276,7 +276,7 @@ Tests operator overloading.
   
   
 
-## bool op_GreaterThan([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_GreaterThan([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Aenean sodales pharetra odio, at volutpat turpis feugiat id.  
   
@@ -286,7 +286,7 @@ Tests operator overloading.
   
   
 
-## bool op_GreaterThanOrEqual([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_GreaterThanOrEqual([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Morbi purus lacus, dignissim gravida imperdiet egestas, rutrum sed nibh.  
   
@@ -296,7 +296,7 @@ Tests operator overloading.
   
   
 
-## bool op_GreaterThanOrEqual([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_GreaterThanOrEqual([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Nunc non diam luctus, consectetur purus vitae, commodo quam.  
   
@@ -374,7 +374,7 @@ Tests operator overloading.
 
   
 
-## Test.ClassOperatorOverloading op_Increment([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a)
+##  op_Increment([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Mauris felis nisi, consequat sit amet vulputate sed, consectetur ac libero.  
   
@@ -384,7 +384,7 @@ Tests operator overloading.
   
   
 
-## bool op_Inequality([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_Inequality([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
   
@@ -394,7 +394,7 @@ Tests operator overloading.
   
   
 
-## bool op_Inequality([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_Inequality([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Sed porttitor gravida ligula, et semper libero euismod eget.  
   
@@ -404,7 +404,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_LeftShift([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_LeftShift([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Etiam faucibus, dolor ac condimentum scelerisque, quam libero faucibus nisi, non sagittis lacus augue quis odio.  
   
@@ -414,7 +414,7 @@ Tests operator overloading.
   
   
 
-## bool op_LessThan([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_LessThan([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] In in dignissim magna.  
   
@@ -424,7 +424,7 @@ Tests operator overloading.
   
   
 
-## bool op_LessThan([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_LessThan([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Quisque a massa purus.  
   
@@ -434,7 +434,7 @@ Tests operator overloading.
   
   
 
-## bool op_LessThanOrEqual([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_LessThanOrEqual([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Morbi placerat ut metus sollicitudin bibendum.  
   
@@ -444,7 +444,7 @@ Tests operator overloading.
   
   
 
-## bool op_LessThanOrEqual([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_LessThanOrEqual([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Donec semper convallis malesuada.  
   
@@ -454,7 +454,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_LogicalNot([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a)
+##  op_LogicalNot([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Duis eget velit vitae nisi maximus mollis.  
   
@@ -464,7 +464,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Modulus([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_Modulus([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Aliquam sit amet sapien a odio consequat egestas sit amet ac nulla.  
   
@@ -474,7 +474,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Modulus([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_Modulus([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Phasellus malesuada elit orci, eget tincidunt arcu placerat sit amet.  
   
@@ -484,7 +484,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Multiply([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_Multiply([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Duis a urna at purus placerat bibendum.  
   
@@ -494,7 +494,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Multiply([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_Multiply([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Suspendisse nec felis sagittis, rhoncus dolor sit amet, varius ipsum.  
   
@@ -504,7 +504,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_OnesComplement([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a)
+##  op_OnesComplement([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Proin id felis at turpis rhoncus ultrices sit amet in ex.  
   
@@ -514,7 +514,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_RightShift([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_RightShift([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Suspendisse mattis pretium ligula sit amet elementum.  
   
@@ -524,7 +524,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Subtraction([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b)
+##  op_Subtraction([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Donec dictum lacus tortor, at mollis est tempor ut.  
   
@@ -534,7 +534,7 @@ Tests operator overloading.
   
   
 
-## Test.ClassOperatorOverloading op_Subtraction([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+##  op_Subtraction([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 [Summary Tag] [Short] [One Line] Quisque quis tortor dapibus, posuere ipsum mattis, efficitur eros.  
   
@@ -544,7 +544,7 @@ Tests operator overloading.
   
   
 
-## bool op_True([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a)
+##  op_True([Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md))
 
 [Summary Tag] [Short] [One Line] Donec id mollis orci.  
   

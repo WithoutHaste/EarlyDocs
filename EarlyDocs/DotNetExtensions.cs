@@ -585,6 +585,8 @@ namespace EarlyDocs
 
 		private static void AddTopLevelPermissions(MarkdownSection section, DotNetMember member)
 		{
+			//todo: so much duplicated logic to refactor
+
 			if(member.PermissionComments.Count == 0)
 				return;
 

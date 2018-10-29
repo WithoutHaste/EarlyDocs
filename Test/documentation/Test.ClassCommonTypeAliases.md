@@ -51,43 +51,43 @@ Also common data types that have long fully-qualified names.
 
 # Methods
 
-## void MethodAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) a)
+##  MethodAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1))
 
-## void MethodBoolean([bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) a)
+##  MethodBoolean([bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean))
 
-## void MethodByte([byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte) a)
+##  MethodByte([byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte))
 
-## void MethodChar([char](https://docs.microsoft.com/en-us/dotnet/api/system.char) a)
+##  MethodChar([char](https://docs.microsoft.com/en-us/dotnet/api/system.char))
 
-## void MethodDecimal([decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal) a)
+##  MethodDecimal([decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal))
 
-## void MethodDictionary([Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) a)
+##  MethodDictionary([Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2))
 
-## void MethodDouble([double](https://docs.microsoft.com/en-us/dotnet/api/system.double) a)
+##  MethodDouble([double](https://docs.microsoft.com/en-us/dotnet/api/system.double))
 
-## void MethodException([Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception) a)
+##  MethodException([Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception))
 
-## void MethodFloat([float](https://docs.microsoft.com/en-us/dotnet/api/system.single) a)
+##  MethodFloat([float](https://docs.microsoft.com/en-us/dotnet/api/system.single))
 
-## void MethodFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) a)
+##  MethodFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2))
 
-## void MethodInt([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a)
+##  MethodInt([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
-## void MethodList([List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) a)
+##  MethodList([List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1))
 
-## void MethodLong([long](https://docs.microsoft.com/en-us/dotnet/api/system.int64) a)
+##  MethodLong([long](https://docs.microsoft.com/en-us/dotnet/api/system.int64))
 
-## void MethodObject([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) a)
+##  MethodObject([object](https://docs.microsoft.com/en-us/dotnet/api/system.object))
 
-## void MethodSByte([sbyte](https://docs.microsoft.com/en-us/dotnet/api/system.sbyte) a)
+##  MethodSByte([sbyte](https://docs.microsoft.com/en-us/dotnet/api/system.sbyte))
 
-## void MethodShort([short](https://docs.microsoft.com/en-us/dotnet/api/system.int16) a)
+##  MethodShort([short](https://docs.microsoft.com/en-us/dotnet/api/system.int16))
 
-## void MethodString([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) a)
+##  MethodString([string](https://docs.microsoft.com/en-us/dotnet/api/system.string))
 
-## void MethodUInt([uint](https://docs.microsoft.com/en-us/dotnet/api/system.uint32) a)
+##  MethodUInt([uint](https://docs.microsoft.com/en-us/dotnet/api/system.uint32))
 
-## void MethodULong([ulong](https://docs.microsoft.com/en-us/dotnet/api/system.uint64) a)
+##  MethodULong([ulong](https://docs.microsoft.com/en-us/dotnet/api/system.uint64))
 
-## void MethodUShort([ushort](https://docs.microsoft.com/en-us/dotnet/api/system.uint16) a)
+##  MethodUShort([ushort](https://docs.microsoft.com/en-us/dotnet/api/system.uint16))
 

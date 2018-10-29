@@ -101,7 +101,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 
 # Methods
 
-## void MethodMultipleExceptions()
+##  MethodMultipleExceptions()
 
 **Exceptions:**  
 * **ArgumentException**: [1st Exception Tag] Nullam feugiat odio felis.  
@@ -112,20 +112,20 @@ vehicula facilisis ipsum, vel faucibus justo.
 
   
 
-## void MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
+##  MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32), [string](https://docs.microsoft.com/en-us/dotnet/api/system.string), [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32), [float](https://docs.microsoft.com/en-us/dotnet/api/system.single), [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1), [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean))
 
 **Parameters:**
 
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
-* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c**: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
-* **[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d**: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
-* **[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
-* **[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
+* **a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
+* **b**: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
+* **c**: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
+* **d**: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
+* **e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
+* **f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
   
 
-##  MethodMultipleTypeParams<A,B,C,A2,B2,C2>()
+## void MethodMultipleTypeParams<A,B,C,D,E,F>()
 
 **Parameters:**
 
@@ -138,7 +138,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 
   
 
-## void MethodRepeatedOnceOnlyTags()
+##  MethodRepeatedOnceOnlyTags()
 
 [1st Summary Tag] Curabitur consequat nec risus vitae convallis.  
   

@@ -141,7 +141,7 @@ Tests abstract classes and members.
 
 # Methods
 
-## abstract double MethodAbstract()
+##  MethodAbstract()
 
 [Summary Tag] [Short] [One Line] Donec facilisis, nibh eu faucibus rhoncus, diam ipsum scelerisque magna, imperdiet aliquet mi erat ut libero.  
   
@@ -170,7 +170,7 @@ Tests abstract classes and members.
 
   
 
-## double MethodNotAbstract()
+##  MethodNotAbstract()
 
 [Summary Tag] [Short] [One Line] Suspendisse luctus scelerisque ipsum vitae cursus.  
   
