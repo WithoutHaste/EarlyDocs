@@ -24,18 +24,18 @@ Tests overloaded methods.
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
   
 **Parameters:**
 
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.  
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b_: [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b**: [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.  
 
   
 

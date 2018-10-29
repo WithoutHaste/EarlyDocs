@@ -52,12 +52,12 @@ Tests class inheritance.
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.  
   
   
-**Permission: Test.IInterfaceSimpleComments.MethodA**  
+**Permission: Test.IInterfaceSimpleComments.MethodA()**  
 [Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
 
   
 
@@ -77,12 +77,12 @@ Tests class inheritance.
 [Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
   
   
-**Permission: Test.ClassSimpleComments.MethodVirtual**  
+**Permission: Test.ClassSimpleComments.MethodVirtual()**  
 [Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.  
   
   
 **Exceptions:**  
-* _Exception_: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
+* **Exception**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
 
   
 

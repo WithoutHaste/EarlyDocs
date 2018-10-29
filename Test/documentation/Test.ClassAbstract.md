@@ -25,7 +25,7 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Quisque volutpat hendrerit ex, sit amet accumsan ligula tincidunt et.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Field] [Short] [One Line] Mauris tempor sollicitudin metus, a tristique ex fermentum eget.  
   
   
@@ -48,7 +48,7 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Maecenas pretium gravida laoreet.  
   
   
-**Permission:**  
+**Permission: Item(int)**  
 [Permission Tag] [References Indexer] [Short] [One Line] Etiam convallis non elit ac dictum.  
   
   
@@ -69,7 +69,7 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Phasellus consectetur finibus mi quis dictum.  
   
   
-**Permission:**  
+**Permission: Item(string)**  
 [Permission Tag] [References Indexer] [Short] [One Line] Fusce eu auctor arcu, ut interdum neque.  
   
   
@@ -90,7 +90,7 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Sed cursus mauris nec lorem dapibus, ut bibendum sem hendrerit.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Integer metus lacus, faucibus eget neque nec, congue sodales mauris.  
   
   
@@ -111,7 +111,7 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Aliquam erat volutpat.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Fusce vestibulum velit ac dignissim hendrerit.  
   
   
@@ -134,7 +134,7 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Aliquam auctor est sed condimentum vulputate.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Event] [Short] [One Line] Donec non metus sed felis interdum ullamcorper non non dolor.  
   
   
@@ -161,12 +161,12 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Duis sed quam rutrum, hendrerit est ac, posuere lorem.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] In id facilisis libero.  
   
   
 **Exceptions:**  
-* _System.IO.FileNotFoundException_: [Exception Tag] [Short] [One Line] Cras sed diam ipsum.  
+* **System.IO.FileNotFoundException**: [Exception Tag] [Short] [One Line] Cras sed diam ipsum.  
 
   
 
@@ -190,12 +190,12 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Vestibulum ultricies metus ante, a eleifend quam maximus in.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Sed molestie, sapien non lobortis cursus, elit neque rhoncus nunc, sit amet pellentesque ex mauris vel velit.  
   
   
 **Exceptions:**  
-* _System.IO.FileNotFoundException_: [Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.  
+* **System.IO.FileNotFoundException**: [Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.  
 
   
 

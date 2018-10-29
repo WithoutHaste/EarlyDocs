@@ -77,7 +77,7 @@
 [Example Tag] [Short] [One Line] Nulla vitae malesuada ante.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Field] [Short] [One Line] Proin at mi aliquet, maximus sem vitae, hendrerit eros.  
   
   
@@ -104,7 +104,7 @@
 [Example Tag] [Short] [One Line] Nullam in sem ac ipsum dignissim gravida.  
   
   
-**Permission:**  
+**Permission: Item(int)**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.  
   
   
@@ -129,7 +129,7 @@
 [Example Tag] [Short] [One Line] Nunc tincidunt sapien a cursus condimentum.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Aliquam interdum nisi ac aliquet pellentesque.  
   
   
@@ -152,12 +152,12 @@
 [Example Tag] [Short] [One Line] Suspendisse ut euismod est, nec dictum augue.  
   
   
-**Permission: #ctor**  
+**Permission: #ctor()**  
 [Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.  
   
   
 **Exceptions:**  
-* _Exception_: [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.  
+* **Exception**: [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.  
 
   
 
@@ -177,18 +177,18 @@
 [Example Tag] [Short] [One Line] Sed quis dignissim odio, non facilisis felis.  
   
   
-**Permission: #ctor**  
+**Permission: #ctor(int,string)**  
 [Permission Tag] [References Constructor] [Short] [One Line] Nullam viverra placerat lacus, vitae bibendum justo interdum quis.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.  
 
   
 **Parameters:**
 
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
-* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
 
   
 
@@ -210,12 +210,12 @@
 [Example Tag] [Short] [One Line] Proin in lacus at dui lacinia rutrum ac sed libero.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.  
   
   
 **Exceptions:**  
-* _Exception_: [Exception Tag] [Short] [One Line] Vivamus in lectus facilisis, ornare augue nec, semper dolor.  
+* **Exception**: [Exception Tag] [Short] [One Line] Vivamus in lectus facilisis, ornare augue nec, semper dolor.  
 
   
 
@@ -235,12 +235,12 @@
 [Example Tag] [Short] [One Line] Maecenas eu vestibulum mi, sit amet consequat urna.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Destructor] [Short] [One Line] Duis accumsan tempor erat ac vehicula.  
   
   
 **Exceptions:**  
-* _IndexOutOfRangeException_: [Exception Tag] [Short] [One Line] Duis eu pellentesque orci, nec lobortis magna.  
+* **IndexOutOfRangeException**: [Exception Tag] [Short] [One Line] Duis eu pellentesque orci, nec lobortis magna.  
 
   
 
@@ -260,12 +260,12 @@
 [Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.  
   
   
 **Exceptions:**  
-* _Exception_: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
+* **Exception**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
 
   
 
@@ -285,12 +285,12 @@
 [Example Tag] [Short] [One Line] Suspendisse ultrices porta sem sed eleifend.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Suspendisse auctor purus sit amet eros iaculis semper.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.  
 
   
 
@@ -316,18 +316,18 @@
 [Example Tag] [Short] [One Line] Sed quis mollis justo, sit amet vulputate justo.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] In pharetra magna id lorem fermentum rutrum.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.  
 
   
 **Parameters:**
 
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Nulla consectetur, urna eget ultrices ultricies, velit tortor iaculis lectus, quis condimentum tortor ex vitae ipsum.  
-* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Nulla consectetur, urna eget ultrices ultricies, velit tortor iaculis lectus, quis condimentum tortor ex vitae ipsum.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.  
 
   
 

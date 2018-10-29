@@ -121,6 +121,11 @@ namespace EarlyDocs
 			return parameter.TypeName.ToDisplayStringLink() + " " + parameter.Name;
 		}
 
+		public static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
+		{
+			return methodLink.Name.ToDisplayString(_namespace) + "(" + String.Join(",", methodLink.Parameters.Select(p => p.TypeName.ToDisplayString(_namespace)).ToArray()) + ")";
+		}
+
 		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
 		{
 			if(name == null)
@@ -589,13 +594,14 @@ namespace EarlyDocs
 			foreach(DotNetCommentQualifiedLinkedGroup comment in member.PermissionComments)
 			{
 				string permissionHeader = comment.QualifiedLink.Name.ToDisplayString(member.Name.FullNamespace);
-				if(member.Name == comment.QualifiedLink.Name) //todo: move link to member comparison to its own method, maybe even in DataFiles.DotNet
+				if(member.Name == comment.QualifiedLink.Name) //todo: move link to member comparison to its own method, maybe even in DataFiles.DotNet - see where else comparisons should be moved to library
 				{
 					permissionHeader = "current member";
 				}
-				if(comment is DotNetCommentMethodLinkedGroup && member is DotNetMethod)
+				if(comment is DotNetCommentMethodLinkedGroup)
 				{
-					if((member as DotNetMethod).MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink))
+					permissionHeader = (comment as DotNetCommentMethodLinkedGroup).MethodLink.ToDisplayString(member.Name.FullNamespace);
+					if(member is DotNetMethod && (member as DotNetMethod).MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink)) //todo: move comparison logic to library
 					{
 						permissionHeader = "current member";
 					}
@@ -612,13 +618,14 @@ namespace EarlyDocs
 				string permissionHeader = "Permission: " + comment.QualifiedLink.Name.ToDisplayString(member.Name.FullNamespace);
 				if(member.Name == comment.QualifiedLink.Name)
 				{
-					permissionHeader = "Permission:";
+					permissionHeader = "Permission: current member";
 				}
-				if(comment is DotNetCommentMethodLinkedGroup && member is DotNetMethod)
+				if(comment is DotNetCommentMethodLinkedGroup)
 				{
-					if((member as DotNetMethod).MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink))
+					permissionHeader = "Permission: " + (comment as DotNetCommentMethodLinkedGroup).MethodLink.ToDisplayString(member.Name.FullNamespace);
+					if(member is DotNetMethod && (member as DotNetMethod).MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink))
 					{
-						permissionHeader = "Permission:";
+						permissionHeader = "Permission: current member";
 					}
 				}
 				section.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
@@ -654,7 +661,7 @@ namespace EarlyDocs
 					if(commentParameter == null)
 						continue;
 
-					MarkdownLine line = new MarkdownLine(MarkdownText.Italic(parameter.ToHeader()), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader()), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
@@ -663,7 +670,7 @@ namespace EarlyDocs
 					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
 						continue;
 
-					MarkdownLine line = new MarkdownLine(MarkdownText.Italic(commentParameter.ToHeader()), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(commentParameter.ToHeader()), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
@@ -706,7 +713,7 @@ namespace EarlyDocs
 					if(commentParameter == null)
 						continue;
 
-					MarkdownLine line = new MarkdownLine(MarkdownText.Italic(parameter.ToHeader()), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader()), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
@@ -715,7 +722,7 @@ namespace EarlyDocs
 					if(method.Parameters.Any(p => p.Name == commentParameter.ParameterLink.Name))
 						continue;
 
-					MarkdownLine line = new MarkdownLine(MarkdownText.Italic(commentParameter.ToHeader()), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(commentParameter.ToHeader()), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
@@ -757,7 +764,7 @@ namespace EarlyDocs
 				section.Add(list);
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
-					MarkdownLine line = new MarkdownLine(MarkdownText.Italic(comment.QualifiedLink.Name.FullName), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(comment.QualifiedLink.Name.FullName), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(comment));
 					list.Add(line);
 				}
@@ -785,7 +792,7 @@ namespace EarlyDocs
 				section.Add(list);
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
-					MarkdownLine line = new MarkdownLine(MarkdownText.Italic(comment.QualifiedLink.Name.FullName), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(comment.QualifiedLink.Name.FullName), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(comment));
 					list.Add(line);
 				}
@@ -794,7 +801,7 @@ namespace EarlyDocs
 			{
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
-					section.Add(MarkdownText.Italic(comment.QualifiedLink.Name.FullName + ":"), new MarkdownText(" "));
+					section.Add(MarkdownText.Bold(comment.QualifiedLink.Name.FullName + ":"), new MarkdownText(" "));
 					section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 				}
 			}

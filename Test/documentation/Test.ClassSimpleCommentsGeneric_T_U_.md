@@ -54,7 +54,7 @@
 [Example Tag] [Short] [One Line] Fusce ut suscipit ante.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Field] [Short] [One Line] Vivamus eget fermentum ligula.  
   
   
@@ -81,7 +81,7 @@
 [Example Tag] [Short] [One Line] Nunc quis odio dui.  
   
   
-**Permission:**  
+**Permission: Item(int)**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Sed in sapien pretium, eleifend metus eu, posuere leo.  
   
   
@@ -106,7 +106,7 @@
 [Example Tag] [Short] [One Line] Nam et elit et arcu gravida ultricies eget in lacus.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Etiam sit amet ligula vel ligula feugiat dictum ac vitae eros.  
   
   
@@ -129,12 +129,12 @@
 [Example Tag] [Short] [One Line] Phasellus bibendum mauris eget justo tempor, non imperdiet dolor maximus.  
   
   
-**Permission: #ctor**  
+**Permission: #ctor()**  
 [Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.  
   
   
 **Exceptions:**  
-* _Exception_: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
+* **Exception**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
 
   
 
@@ -154,18 +154,18 @@
 [Example Tag] [Short] [One Line] In gravida, ex accumsan pellentesque pretium, elit ex pharetra arcu, feugiat maximus dui est nec ligula.  
   
   
-**Permission: #ctor**  
+**Permission: #ctor(T,U)**  
 [Permission Tag] [References Constructor] [Short] [One Line] Pellentesque vitae metus nec sem tristique mollis pharetra ac magna.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
 
   
 **Parameters:**
 
-* _t_: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
-* _u_: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
+* **t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
+* **u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
 
   
 
@@ -187,12 +187,12 @@
 [Example Tag] [Short] [One Line] Mauris quis metus convallis, consequat dui viverra, commodo sapien.  
   
   
-**Permission: Test.ClassSimpleCommentsGeneric.#cctor**  
+**Permission: Test.ClassSimpleCommentsGeneric.#cctor()**  
 [Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.  
   
   
 **Exceptions:**  
-* _Exception_: [Exception Tag] [Short] [One Line] Nunc ornare dignissim erat, id malesuada urna elementum et.  
+* **Exception**: [Exception Tag] [Short] [One Line] Nunc ornare dignissim erat, id malesuada urna elementum et.  
 
   
 
@@ -212,12 +212,12 @@
 [Example Tag] [Short] [One Line] Praesent ligula enim, mattis et justo vel, tempor ultrices nunc.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Destructor] [Short] [One Line] Nulla eleifend euismod blandit.  
   
   
 **Exceptions:**  
-* _IndexOutOfRangeException_: [Exception Tag] [Short] [One Line] Phasellus id tellus odio.  
+* **IndexOutOfRangeException**: [Exception Tag] [Short] [One Line] Phasellus id tellus odio.  
 
   
 
@@ -237,21 +237,21 @@
 [Example Tag] [Short] [One Line] Vivamus ultrices tristique est ultrices bibendum.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Etiam ut dolor bibendum, malesuada ligula eu, maximus sapien.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Nunc purus libero, scelerisque a felis et, feugiat ultrices ipsum.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Nunc purus libero, scelerisque a felis et, feugiat ultrices ipsum.  
 
   
 **Parameters:**
 
-* _a_: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
-* _A_: [Type Parameter Tag] [Short] [One Line] Aenean neque ipsum, finibus at dolor nec, hendrerit gravida odio.  
-* _b_: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
-* _B_: [Type Parameter Tag] [Short] [One Line] Nunc faucibus sed elit ut pellentesque.  
-* _u_: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
+* **a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
+* **A**: [Type Parameter Tag] [Short] [One Line] Aenean neque ipsum, finibus at dolor nec, hendrerit gravida odio.  
+* **b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
+* **B**: [Type Parameter Tag] [Short] [One Line] Nunc faucibus sed elit ut pellentesque.  
+* **u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
 
   
 
@@ -275,18 +275,18 @@
 [Example Tag] [Short] [One Line] Fusce scelerisque, sem ut mattis condimentum, arcu ligula egestas mi, eu vulputate turpis ante ut purus.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Phasellus sollicitudin, augue non dictum varius, diam urna aliquet odio, ut tincidunt leo sem id leo.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
 
   
 **Parameters:**
 
-* _b_: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
-* _t_: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
+* **b**: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
+* **t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
 
   
 

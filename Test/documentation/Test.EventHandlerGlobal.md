@@ -29,6 +29,6 @@
 
 # Parameters
 
-* _[object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender_: [Param Tag] [Short] [One Line] Nunc bibendum, purus sit amet sodales molestie, libero metus mattis massa, porttitor vehicula sem ligula in quam.  
-* _[EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e_: [Param Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
+* **[object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender**: [Param Tag] [Short] [One Line] Nunc bibendum, purus sit amet sodales molestie, libero metus mattis massa, porttitor vehicula sem ligula in quam.  
+* **[EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e**: [Param Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
 

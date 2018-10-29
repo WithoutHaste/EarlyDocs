@@ -49,7 +49,7 @@
 [Example Tag] [Short] [One Line] Curabitur ullamcorper a turpis at luctus.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Field] [Short] [One Line] Vivamus lobortis vehicula hendrerit.  
   
   
@@ -76,7 +76,7 @@
 [Example Tag] [Short] [One Line] Nulla sit amet nulla et tortor laoreet aliquam.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Sed neque magna, dignissim eget ullamcorper non, tempor vitae massa.  
   
   
@@ -99,12 +99,12 @@
 [Example Tag] [Short] [One Line] Nunc vel ullamcorper augue.  
   
   
-**Permission: #ctor**  
+**Permission: #ctor()**  
 [Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.  
   
   
 **Exceptions:**  
-* _Exception_: [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.  
+* **Exception**: [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.  
 
   
 
@@ -126,12 +126,12 @@
 [Example Tag] [Short] [One Line] Suspendisse orci odio, luctus vel ultrices at, gravida eget enim.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.  
   
   
 **Exceptions:**  
-* _Exception_: [Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.  
+* **Exception**: [Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.  
 
   
 
@@ -155,18 +155,18 @@
 [Example Tag] [Short] [One Line] Nulla ullamcorper erat a urna porttitor, sed sodales nisl porttitor.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Cras eget dignissim nisi, lacinia semper turpis.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.  
 
   
 **Parameters:**
 
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
-* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.  
 
   
 
@@ -192,18 +192,18 @@
 [Example Tag] [Short] [One Line] Etiam vitae lorem in nunc sollicitudin accumsan sed ac sem.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Nunc ullamcorper egestas vulputate.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.  
 
   
 **Parameters:**
 
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
-* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
 
   
 

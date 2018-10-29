@@ -28,18 +28,18 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] Phasellus eget aliquet tellus.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Pellentesque viverra rutrum molestie.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Curabitur et lacinia felis.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Curabitur et lacinia felis.  
 
   
 **Parameters:**
 
-* _[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a_: [Parameter Tag] [Short] [One Line] Vivamus nec felis tortor.  
-* _[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b_: [Parameter Tag] [Short] [One Line] Nam maximus odio vel consequat congue.  
+* **[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a**: [Parameter Tag] [Short] [One Line] Vivamus nec felis tortor.  
+* **[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) b**: [Parameter Tag] [Short] [One Line] Nam maximus odio vel consequat congue.  
 
   
 
@@ -63,18 +63,18 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] Maecenas lectus velit, maximus vel ipsum eu, volutpat tempor tortor.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Sed at nisi leo.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Quisque vitae purus elit.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Quisque vitae purus elit.  
 
   
 **Parameters:**
 
-* _[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a_: [Parameter Tag] [Short] [One Line] Pellentesque est metus, euismod sit amet viverra eget, tincidunt consectetur massa.  
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b_: [Parameter Tag] [Short] [One Line] Maecenas maximus congue neque, at iaculis justo dignissim nec.  
+* **[Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md) a**: [Parameter Tag] [Short] [One Line] Pellentesque est metus, euismod sit amet viverra eget, tincidunt consectetur massa.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b**: [Parameter Tag] [Short] [One Line] Maecenas maximus congue neque, at iaculis justo dignissim nec.  
 
   
 
@@ -83,7 +83,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Cras vulputate est ante, scelerisque dignissim neque porttitor sed.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nulla sed ex tellus.  
   
   
@@ -93,7 +93,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Ut elit enim, posuere id nunc ac, fermentum congue nibh.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Suspendisse porta interdum nisi quis luctus.  
   
   
@@ -103,7 +103,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Curabitur vel turpis vel tellus luctus sagittis.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Donec dictum venenatis enim at venenatis.  
   
   
@@ -113,7 +113,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Donec sagittis, nulla non lobortis egestas, lectus quam euismod purus, nec luctus elit justo eu libero.  
   
   
@@ -123,7 +123,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Vestibulum euismod consequat sodales.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Proin molestie dapibus sem quis varius.  
   
   
@@ -133,7 +133,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Suspendisse ac gravida nunc, sit amet consequat orci.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Pellentesque metus lacus, aliquet vitae lorem vel, accumsan lacinia ante.  
   
   
@@ -143,7 +143,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Donec consectetur diam in felis elementum, a iaculis lacus semper.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Integer varius, sem vitae bibendum elementum, felis tellus eleifend tellus, sed commodo sem lorem a risus.  
   
   
@@ -153,7 +153,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Nam maximus vehicula nisi non lacinia.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Curabitur ut purus nulla.  
   
   
@@ -163,7 +163,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Maecenas sed felis blandit, rhoncus ante vel, mollis orci.  
   
   
@@ -173,7 +173,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Nam euismod euismod consectetur.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Fusce ornare aliquam lorem, at commodo nisl suscipit nec.  
   
   
@@ -183,7 +183,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Suspendisse potenti.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] In eget vehicula massa.  
   
   
@@ -208,17 +208,17 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] Nulla imperdiet diam ut felis ultricies, tempor scelerisque odio ornare.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Phasellus euismod quam ut lacus tincidunt suscipit.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Nullam eu libero arcu.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Nullam eu libero arcu.  
 
   
 **Parameters:**
 
-* _a_: [Parameter Tag] [Short] [One Line] Vivamus volutpat, elit sit amet gravida rutrum, quam tortor vulputate risus, sed blandit dolor lacus non diam.  
+* **a**: [Parameter Tag] [Short] [One Line] Vivamus volutpat, elit sit amet gravida rutrum, quam tortor vulputate risus, sed blandit dolor lacus non diam.  
 
   
 
@@ -242,17 +242,17 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] Ut vestibulum tellus felis, auctor venenatis turpis blandit sit amet.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Donec vel dictum velit, eget porta arcu.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Aliquam hendrerit, ligula quis faucibus venenatis, libero leo venenatis lacus, vulputate euismod erat turpis nec ex.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Aliquam hendrerit, ligula quis faucibus venenatis, libero leo venenatis lacus, vulputate euismod erat turpis nec ex.  
 
   
 **Parameters:**
 
-* _a_: [Parameter Tag] [Short] [One Line] In hac habitasse platea dictumst.  
+* **a**: [Parameter Tag] [Short] [One Line] In hac habitasse platea dictumst.  
 
   
 
@@ -261,7 +261,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Pellentesque consectetur libero a ligula tempus convallis.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nullam ullamcorper purus in velit tempus, in scelerisque erat porta.  
   
   
@@ -271,7 +271,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Suspendisse potenti.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam rutrum sed leo quis vestibulum.  
   
   
@@ -281,7 +281,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Aenean sodales pharetra odio, at volutpat turpis feugiat id.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Quisque est purus, aliquet id lacinia nec, scelerisque et sem.  
   
   
@@ -291,7 +291,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Morbi purus lacus, dignissim gravida imperdiet egestas, rutrum sed nibh.  
   
   
-**Permission: !:&gt;=**  
+**Permission: !:&gt;=(ClassOperatorOverloading,ClassOperatorOverloading)**  
 [Permission Tag] [References Operator] [Short] [One Line] Vivamus tempus tincidunt nulla et commodo.  
   
   
@@ -301,7 +301,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Nunc non diam luctus, consectetur purus vitae, commodo quam.  
   
   
-**Permission: !:&gt;=**  
+**Permission: !:&gt;=(ClassOperatorOverloading,int)**  
 [Permission Tag] [References Operator] [Short] [One Line] In elementum, mi non viverra molestie, lorem felis interdum massa, at varius quam ex in massa.  
   
   
@@ -326,17 +326,17 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] Sed massa justo, laoreet quis magna at, iaculis dictum justo.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Interdum et malesuada fames ac ante ipsum primis in faucibus.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Sed ac molestie ante, vel porttitor neque.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Sed ac molestie ante, vel porttitor neque.  
 
   
 **Parameters:**
 
-* _a_: [Parameter Tag] [Short] [One Line] Vestibulum quis fringilla ipsum.  
+* **a**: [Parameter Tag] [Short] [One Line] Vestibulum quis fringilla ipsum.  
 
   
 
@@ -360,17 +360,17 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] In laoreet mauris nec purus venenatis accumsan.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam dictum cursus elementum.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Donec malesuada ex sit amet mollis facilisis.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Donec malesuada ex sit amet mollis facilisis.  
 
   
 **Parameters:**
 
-* _a_: [Parameter Tag] [Short] [One Line] Vestibulum semper maximus turpis, quis sodales nisl mattis ac.  
+* **a**: [Parameter Tag] [Short] [One Line] Vestibulum semper maximus turpis, quis sodales nisl mattis ac.  
 
   
 
@@ -379,7 +379,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Mauris felis nisi, consequat sit amet vulputate sed, consectetur ac libero.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Morbi finibus ullamcorper pellentesque.  
   
   
@@ -389,7 +389,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nulla at iaculis augue.  
   
   
@@ -399,7 +399,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Sed porttitor gravida ligula, et semper libero euismod eget.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nam sollicitudin molestie urna eu condimentum.  
   
   
@@ -409,7 +409,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Etiam faucibus, dolor ac condimentum scelerisque, quam libero faucibus nisi, non sagittis lacus augue quis odio.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Quisque egestas est nec nibh tempus ultrices.  
   
   
@@ -419,7 +419,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] In in dignissim magna.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Cras quis mauris eu nibh luctus egestas eget eu ex.  
   
   
@@ -429,7 +429,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Quisque a massa purus.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam nisl felis, bibendum quis ipsum ut, cursus hendrerit augue.  
   
   
@@ -439,7 +439,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Morbi placerat ut metus sollicitudin bibendum.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Sed vestibulum justo mauris, quis rhoncus dolor tristique porttitor.  
   
   
@@ -449,7 +449,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Donec semper convallis malesuada.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Duis ullamcorper sapien mi, ac convallis erat vestibulum a.  
   
   
@@ -459,7 +459,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Duis eget velit vitae nisi maximus mollis.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Praesent mauris arcu, gravida elementum nibh in, pellentesque fermentum lacus.  
   
   
@@ -469,7 +469,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Aliquam sit amet sapien a odio consequat egestas sit amet ac nulla.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Fusce imperdiet ante ac nunc aliquet semper.  
   
   
@@ -479,7 +479,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Phasellus malesuada elit orci, eget tincidunt arcu placerat sit amet.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nullam ultricies urna id semper egestas.  
   
   
@@ -489,7 +489,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Duis a urna at purus placerat bibendum.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam iaculis nibh a risus tempus, non semper magna volutpat.  
   
   
@@ -499,7 +499,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Suspendisse nec felis sagittis, rhoncus dolor sit amet, varius ipsum.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Suspendisse potenti.  
   
   
@@ -509,7 +509,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Proin id felis at turpis rhoncus ultrices sit amet in ex.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Aenean eget velit augue.  
   
   
@@ -519,7 +519,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Suspendisse mattis pretium ligula sit amet elementum.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Suspendisse sit amet arcu erat.  
   
   
@@ -529,7 +529,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Donec dictum lacus tortor, at mollis est tempor ut.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Aenean tempor nulla a tellus interdum, in commodo nisi sagittis.  
   
   
@@ -539,7 +539,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Quisque quis tortor dapibus, posuere ipsum mattis, efficitur eros.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nunc faucibus sem tortor, sed pharetra ligula congue vel.  
   
   
@@ -549,7 +549,7 @@ Tests operator overloading.
 [Summary Tag] [Short] [One Line] Donec id mollis orci.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Donec molestie condimentum purus, vitae condimentum diam dignissim et.  
   
   

@@ -24,7 +24,7 @@ Tests events and delegates.
 [Example Tag] [Short] [One Line] Aenean mi leo, sagittis a mollis vel, pretium eu justo. In auctor est eget nibh luctus blandit.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Action] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
   
   
@@ -45,7 +45,7 @@ Tests events and delegates.
 [Example Tag] [Short] [One Line] In commodo, arcu eget vulputate faucibus, justo libero varius nulla, sed tempus nisl nibh in augue.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Func] [Short] [One Line] Quisque neque sapien, vulputate commodo leo non, mollis suscipit nunc.  
   
   
@@ -68,7 +68,7 @@ Tests events and delegates.
 [Example Tag] [Short] [One Line] Nulla placerat ultricies augue, mollis rutrum tellus tempus ut.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Event] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
   
   
@@ -89,7 +89,7 @@ Tests events and delegates.
 [Example Tag] [Short] [One Line] Vestibulum tincidunt justo ut lorem consectetur, a facilisis tortor lacinia.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Event] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
   
   
@@ -126,17 +126,17 @@ Tests events and delegates.
 [Example Tag] [Short] [One Line] Duis metus ex, suscipit quis quam vel, viverra imperdiet magna.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] Nam vitae risus quis est aliquet egestas.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
 
   
 **Parameters:**
 
-* _[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action_: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
+* **[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action**: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
 
   
 
@@ -156,17 +156,17 @@ Tests events and delegates.
 [Example Tag] [Short] [One Line] Vivamus lobortis neque eget mi semper finibus.  
   
   
-**Permission:**  
+**Permission: current member**  
 [Permission Tag] [References Method] [Short] [One Line] In aliquet libero in euismod rutrum.  
   
   
 **Exceptions:**  
-* _ArgumentException_: [Exception Tag] [Short] [One Line] Sed fermentum ornare nisi, et vestibulum lorem tincidunt in.  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Sed fermentum ornare nisi, et vestibulum lorem tincidunt in.  
 
   
 **Parameters:**
 
-* _[Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func_: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
+* **[Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func**: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
 
   
 

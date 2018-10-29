@@ -89,17 +89,17 @@ for (int i = 0; i < lines.Length; i++)
 ##  MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string), A, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
 
 **Exceptions:**  
-_IndexOutOfRangeException:_ [1st Exception Tag] [Has Example] Cras ante risus, sodales quis massa vel, pulvinar auctor ipsum.  
+**IndexOutOfRangeException:** [1st Exception Tag] [Has Example] Cras ante risus, sodales quis massa vel, pulvinar auctor ipsum.  
     
 Fusce ligula ipsum, porttitor at velit ut, commodo auctor ligula. Nunc imperdiet, justo sed bibendum laoreet, nibh purus laoreet dolor,   
 vitae consectetur sem erat quis ipsum. Nam tincidunt non magna in mattis. Curabitur nec efficitur sapien, vel rutrum odio.  
   
   
-_System.IO.FileNotFoundException:_ [2nd Exception Tag] [Has ParamRef] Nulla facilisi. Donec fermentum nisl felis,   
+**System.IO.FileNotFoundException:** [2nd Exception Tag] [Has ParamRef] Nulla facilisi. Donec fermentum nisl felis,   
 ac   
 venenatis tellus tincidunt ultrices.  
   
-_ArgumentException:_ [3rd Exception Tag] [Has TypeParamRef] Vestibulum ante ipsum primis in faucibus orci   
+**ArgumentException:** [3rd Exception Tag] [Has TypeParamRef] Vestibulum ante ipsum primis in faucibus orci   
 luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.  
   
   

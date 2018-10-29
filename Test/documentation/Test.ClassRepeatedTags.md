@@ -19,7 +19,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 [2nd Permission Tag] Proin sit amet risus nec nulla hendrerit posuere.  
   
 
-## ClassRepeatedTags.MethodMultipleExceptions
+## ClassRepeatedTags.MethodMultipleExceptions()
 
 [3rd Permission Tag] Donec volutpat dignissim vehicula.  
   
@@ -34,7 +34,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 [5th Permission Tag] Suspendisse potenti.  
   
 
-## ClassSimpleComments.Finalize
+## ClassSimpleComments.Finalize()
 
 [6th Permission Tag] Suspendisse interdum, arcu a venenatis fringilla, elit velit mattis turpis, et gravida augue eros sed erat.  
   
@@ -104,11 +104,11 @@ vehicula facilisis ipsum, vel faucibus justo.
 ## void MethodMultipleExceptions()
 
 **Exceptions:**  
-* _ArgumentException_: [1st Exception Tag] Nullam feugiat odio felis.  
-* _ArgumentException_: [2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.  
-* _ArgumentException_: [3rd Exception Tag] Nulla sed magna sed velit dictum auctor.  
-* _System.IO.FileNotFoundException_: [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.  
-* _Test.ClassException_: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
+* **ArgumentException**: [1st Exception Tag] Nullam feugiat odio felis.  
+* **ArgumentException**: [2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.  
+* **ArgumentException**: [3rd Exception Tag] Nulla sed magna sed velit dictum auctor.  
+* **System.IO.FileNotFoundException**: [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.  
+* **Test.ClassException**: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
 
   
 
@@ -116,12 +116,12 @@ vehicula facilisis ipsum, vel faucibus justo.
 
 **Parameters:**
 
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a_: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
-* _[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b_: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
-* _[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c_: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
-* _[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d_: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
-* _[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e_: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
-* _[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f_: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c**: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
+* **[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d**: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
+* **[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
+* **[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
   
 
@@ -129,12 +129,12 @@ vehicula facilisis ipsum, vel faucibus justo.
 
 **Parameters:**
 
-* _A_: [1st TypeParam Tag] Curabitur eget velit porta, bibendum metus vitae, venenatis enim.  
-* _B_: [2nd TypeParam Tag] Duis lacus velit, aliquet sagittis sem eget, malesuada blandit nisl.  
-* _C_: [3rd TypeParam Tag] Aenean tempor viverra dolor, quis congue enim feugiat in.  
-* _D_: [6th TypeParam Tag] Vestibulum ac fringilla felis.  
-* _E_: [5th TypeParam Tag] Aliquam erat volutpat.  
-* _F_: [4th TypeParam Tag] Pellentesque ultricies porta nunc a tempus.  
+* **A**: [1st TypeParam Tag] Curabitur eget velit porta, bibendum metus vitae, venenatis enim.  
+* **B**: [2nd TypeParam Tag] Duis lacus velit, aliquet sagittis sem eget, malesuada blandit nisl.  
+* **C**: [3rd TypeParam Tag] Aenean tempor viverra dolor, quis congue enim feugiat in.  
+* **D**: [6th TypeParam Tag] Vestibulum ac fringilla felis.  
+* **E**: [5th TypeParam Tag] Aliquam erat volutpat.  
+* **F**: [4th TypeParam Tag] Pellentesque ultricies porta nunc a tempus.  
 
   
 
