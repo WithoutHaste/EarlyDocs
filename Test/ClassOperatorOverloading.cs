@@ -352,7 +352,7 @@ namespace Test
 		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Morbi purus lacus, dignissim gravida imperdiet egestas, rutrum sed nibh.
 		/// </summary>
-		/// <permission cref=">=(ClassOperatorOverloading,ClassOperatorOverloading)">[Permission Tag] [References Operator] [Short] [One Line] Vivamus tempus tincidunt nulla et commodo.</permission>
+		/// <permission cref="op_GreaterThanOrEqual(ClassOperatorOverloading,ClassOperatorOverloading)">[Permission Tag] [References Operator] [Short] [One Line] Vivamus tempus tincidunt nulla et commodo.</permission>
 		public static bool operator >=(ClassOperatorOverloading a, ClassOperatorOverloading b)
 		{
 			return true;
@@ -361,7 +361,7 @@ namespace Test
 		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Nunc non diam luctus, consectetur purus vitae, commodo quam.
 		/// </summary>
-		/// <permission cref=">=(ClassOperatorOverloading,int)">[Permission Tag] [References Operator] [Short] [One Line] In elementum, mi non viverra molestie, lorem felis interdum massa, at varius quam ex in massa.</permission>
+		/// <permission cref="op_GreaterThanOrEqual(ClassOperatorOverloading,int)">[Permission Tag] [References Operator] [Short] [One Line] In elementum, mi non viverra molestie, lorem felis interdum massa, at varius quam ex in massa.</permission>
 		public static bool operator >=(ClassOperatorOverloading a, int b)
 		{
 			return true;

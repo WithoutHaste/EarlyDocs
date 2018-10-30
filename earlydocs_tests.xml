@@ -41,7 +41,9 @@
           <Data ss:Type="Number">13</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">ClassOperatorOverloading</Data>
+          <Data ss:Type="String">ClassOperatorOverloading
+- sorting methods into operator order
+- handling implicit and explicit conversions</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>

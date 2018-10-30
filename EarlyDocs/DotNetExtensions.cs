@@ -20,8 +20,37 @@ namespace EarlyDocs
 			DotNetQualifiedName.FromVisualStudioXml("System"),
 		};
 
+		public static Dictionary<string, string> UnaryOperators = new Dictionary<string, string>() {
+				{ "op_True", "(true)" },
+				{ "op_False", "(false)" },
+				{ "op_OnesComplement", "~" },
+				{ "op_LogicalNot", "!" },
+				{ "op_Decrement", "--" },
+				{ "op_Increment", "++" }
+			};
+		public static Dictionary<string, string> BinaryOperators = new Dictionary<string, string>() {
+				{ "op_Addition", "+" },
+				{ "op_Subtraction", "-" },
+				{ "op_Multiply", "*" },
+				{ "op_Division", "/" },
+				{ "op_Modulus", "%" },
+				{ "op_BitwiseAnd", "&" },
+				{ "op_BitwiseOr", "|" },
+				{ "op_ExclusiveOr", "^" },
+				{ "op_Equality", "==" },
+				{ "op_Inequality", "!=" },
+				{ "op_GreaterThan", ">" },
+				{ "op_LessThan", "<" },
+				{ "op_GreaterThanOrEqual", ">=" },
+				{ "op_LessThanOrEqual", "<=" },
+				{ "op_RightShift", ">>" },
+				{ "op_LeftShift", "<<" }
+			};
+
 		public static bool IsInKnownMicrosoftNamespace(this DotNetQualifiedName name)
 		{
+			if(name == null)
+				return false;
 			if(KnownMicrosoftNamespaces.Contains(name))
 				return true;
 			if(name.FullNamespace != null)
@@ -31,6 +60,8 @@ namespace EarlyDocs
 			}
 			return false;
 		}
+
+		//---------------------------------------------------------------------------------
 
 		public static string ToHeader(this DotNetField field, DotNetType parent)
 		{
@@ -102,9 +133,9 @@ namespace EarlyDocs
 			return indexer.TypeName.ToDisplayStringLink() + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink()).ToArray()) + "]";
 		}
 
-		public static string ToHeader(this DotNetParameter parameter)
+		public static string ToHeader(this DotNetParameter parameter, string _namespace = null)
 		{
-			return parameter.TypeName.ToDisplayStringLink() + " " + parameter.Name;
+			return parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
 		}
 
 		public static string ToHeader(this DotNetCommentParameter commentParameter)
@@ -112,13 +143,58 @@ namespace EarlyDocs
 			return commentParameter.ParameterLink.Name;
 		}
 
-		public static string ToDisplayString(this DotNetParameter parameter)
+		public static string ToHeader(this DotNetMethod method)
+		{
+			if(method is DotNetMethodOperator)
+			{
+				return ToHeader(method as DotNetMethodOperator);
+			}
+
+			string header = method.ReturnTypeName.ToDisplayString(method.Name.FullNamespace) + " " + method.Name.LocalName;
+			if(method.Parameters == null || method.Parameters.Count == 0)
+				header += "()";
+			else
+				header += String.Format("({0})", String.Join(", ", method.Parameters.Select(p => p.ToDisplayString(method.Name.FullNamespace)).ToArray()));
+
+			if(method.Category == MethodCategory.Abstract)
+				header = "abstract " + header;
+			if(method.Category == MethodCategory.Delegate)
+				header = "delegate " + header;
+
+			return header;
+		}
+
+		public static string ToHeader(this DotNetMethodOperator method)
+		{
+			string key = method.Name.LocalName;
+			string _namespace = method.Name.FullNamespace;
+
+			string returnType = method.ReturnTypeName.ToDisplayStringLink(_namespace);
+			if(BinaryOperators.ContainsKey(key) && method.Parameters.Count >= 2)
+			{
+				string parameterA = method.Parameters[0].ToHeader(_namespace);
+				string parameterB = method.Parameters[1].ToHeader(_namespace);
+				return String.Format("{0} = {1} {2} {3}", returnType, parameterA, BinaryOperators[key], parameterB);
+			}
+			else if(UnaryOperators.ContainsKey(key) && method.Parameters.Count >= 1)
+			{
+				string parameterA = method.Parameters[0].ToHeader(_namespace);
+				if(key == "op_Increment" || key == "op_Decrement")
+				{
+					return String.Format("{0} = ({1}){2}", returnType, parameterA, UnaryOperators[key]);
+				}
+				return String.Format("{0} = {1}({2})", returnType, UnaryOperators[key], parameterA);
+			}
+			return "unknown operator";
+		}
+
+		public static string ToDisplayString(this DotNetParameter parameter, string _namespace = null)
 		{
 			if(parameter.TypeName == null)
 				return parameter.Name;
 			if(String.IsNullOrEmpty(parameter.Name))
-				return parameter.TypeName.ToDisplayStringLink();
-			return parameter.TypeName.ToDisplayStringLink() + " " + parameter.Name;
+				return parameter.TypeName.ToDisplayStringLink(_namespace);
+			return parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
 		}
 
 		public static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
@@ -148,6 +224,9 @@ namespace EarlyDocs
 
 		public static string ToDisplayStringLink(this DotNetQualifiedName name, string _namespace = null)
 		{
+			if(name == _namespace)
+				return name.LocalName; //no need to link to same page, no need to show full path to current page
+
 			string displayString = name.ToDisplayString();
 			if(InternalFullNames.Contains(displayString))
 			{
@@ -183,6 +262,8 @@ namespace EarlyDocs
 			return String.Join(".", segments.ToArray());
 		}
 
+		//---------------------------------------------------------------------------------
+
 		public static void TurnQualifiedNameConverterOn()
 		{
 			DotNetSettings.QualifiedNameConverter = DotNetSettings.DefaultQualifiedNameConverter;
@@ -213,6 +294,8 @@ namespace EarlyDocs
 
 			return fullName;
 		}
+
+		//---------------------------------------------------------------------------------
 
 		public static MarkdownFile ToMarkdownFile(this DotNetType type)
 		{
@@ -316,7 +399,7 @@ namespace EarlyDocs
 			if(type.StaticMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Static Methods", type.StaticMethods));
 			if(type.OperatorMethods.Count > 0)
-				typeSection.Add(MethodsToMarkdown("Operators", type.OperatorMethods.Cast<DotNetMethod>().ToList()));
+				typeSection.Add(MethodsToMarkdown("Operators", type.OperatorMethods.OrderBy(o => o).Cast<DotNetMethod>().ToList()));
 			//todo: destructors
 
 			/* todo Nested Types: just a list of the type names with their summaries, linked to the type pages
@@ -357,16 +440,7 @@ namespace EarlyDocs
 
 		public static MarkdownSection ToMarkdownSection(this DotNetMethod method)
 		{
-			string header = method.ReturnTypeName.ToDisplayString() + " " + method.Name.LocalName;
-			if(method.Parameters == null || method.Parameters.Count == 0)
-				header += "()";
-			else
-				header += String.Format("({0})", String.Join(", ", method.Parameters.Select(p => p.ToDisplayString()).ToArray()));
-			if(method.Category == MethodCategory.Abstract)
-				header = "abstract " + header;
-			if(method.Category == MethodCategory.Delegate)
-				header = "delegate " + header;
-
+			string header = method.ToHeader();
 			string fullHeader = header;
 			if(method is DotNetDelegate)
 			{
