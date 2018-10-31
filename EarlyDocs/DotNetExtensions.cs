@@ -26,7 +26,9 @@ namespace EarlyDocs
 				{ "op_OnesComplement", "~" },
 				{ "op_LogicalNot", "!" },
 				{ "op_Decrement", "--" },
-				{ "op_Increment", "++" }
+				{ "op_Increment", "++" },
+				{ "op_Implicit", "implicit" },
+				{ "op_Explicit", "explicit" },
 			};
 		public static Dictionary<string, string> BinaryOperators = new Dictionary<string, string>() {
 				{ "op_Addition", "+" },
@@ -44,7 +46,7 @@ namespace EarlyDocs
 				{ "op_GreaterThanOrEqual", ">=" },
 				{ "op_LessThanOrEqual", "<=" },
 				{ "op_RightShift", ">>" },
-				{ "op_LeftShift", "<<" }
+				{ "op_LeftShift", "<<" },
 			};
 
 		public static bool IsInKnownMicrosoftNamespace(this DotNetQualifiedName name)
@@ -182,6 +184,10 @@ namespace EarlyDocs
 				if(key == "op_Increment" || key == "op_Decrement")
 				{
 					return String.Format("{0} = ({1}){2}", returnType, parameterA, UnaryOperators[key]);
+				}
+				else if(key == "op_Implicit" || key == "op_Explicit")
+				{
+					return String.Format("{0} {1}({2})", UnaryOperators[key], returnType, parameterA);
 				}
 				return String.Format("{0} = {1}({2})", returnType, UnaryOperators[key], parameterA);
 			}
@@ -399,7 +405,7 @@ namespace EarlyDocs
 			if(type.StaticMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Static Methods", type.StaticMethods));
 			if(type.OperatorMethods.Count > 0)
-				typeSection.Add(MethodsToMarkdown("Operators", type.OperatorMethods.OrderBy(o => o).Cast<DotNetMethod>().ToList()));
+				typeSection.Add(MethodOperatorsToMarkdown("Operators", type.OperatorMethods));
 			//todo: destructors
 
 			/* todo Nested Types: just a list of the type names with their summaries, linked to the type pages
@@ -574,8 +580,17 @@ namespace EarlyDocs
 		private static MarkdownSection MethodsToMarkdown(string header, List<DotNetMethod> methods)
 		{
 			MarkdownSection methodSection = new MarkdownSection(header);
-			methods = methods.OrderBy(m => m.Name.LocalName).ToList();
-			foreach(DotNetMethod method in methods)
+			foreach(DotNetMethod method in methods.OrderBy(m => m.Name.LocalName))
+			{
+				methodSection.AddSection(ToMarkdownSection(method));
+			}
+			return methodSection;
+		}
+
+		private static MarkdownSection MethodOperatorsToMarkdown(string header, List<DotNetMethodOperator> methods)
+		{
+			MarkdownSection methodSection = new MarkdownSection(header);
+			foreach(DotNetMethod method in methods.OrderBy(m => m))
 			{
 				methodSection.AddSection(ToMarkdownSection(method));
 			}
@@ -792,7 +807,7 @@ namespace EarlyDocs
 					if(commentParameter == null)
 						continue;
 
-					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader()), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader(method.Name.FullNamespace)), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
@@ -805,7 +820,7 @@ namespace EarlyDocs
 					if(commentParameter == null)
 						continue;
 
-					MarkdownSection parameterSection = parametersSection.AddSection(parameter.ToHeader());
+					MarkdownSection parameterSection = parametersSection.AddSection(parameter.ToHeader(method.Name.FullNamespace));
 					parameterSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
 				}
 			}
@@ -827,7 +842,7 @@ namespace EarlyDocs
 					if(commentParameter == null)
 						continue;
 
-					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader()), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader(method.Name.FullNamespace)), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
@@ -840,7 +855,7 @@ namespace EarlyDocs
 					if(commentParameter == null)
 						continue;
 
-					section.Add(MarkdownText.Bold(parameter.ToHeader()));
+					section.Add(MarkdownText.Bold(parameter.ToHeader(method.Name.FullNamespace)));
 					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
 				}
 			}
