@@ -152,11 +152,11 @@ namespace EarlyDocs
 				return ToHeader(method as DotNetMethodOperator);
 			}
 
-			string header = method.ReturnTypeName.ToDisplayString(method.Name.FullNamespace) + " " + method.Name.LocalName;
-			if(method.Parameters == null || method.Parameters.Count == 0)
+			string header = method.MethodName.ReturnTypeName.ToDisplayString(method.Name.FullNamespace) + " " + method.Name.LocalName;
+			if(method.MethodName.Parameters == null || method.MethodName.Parameters.Count == 0)
 				header += "()";
 			else
-				header += String.Format("({0})", String.Join(", ", method.Parameters.Select(p => p.ToDisplayString(method.Name.FullNamespace)).ToArray()));
+				header += String.Format("({0})", String.Join(", ", method.MethodName.Parameters.Select(p => p.ToDisplayString(method.Name.FullNamespace)).ToArray()));
 
 			if(method.Category == MethodCategory.Abstract)
 				header = "abstract " + header;
@@ -171,16 +171,16 @@ namespace EarlyDocs
 			string key = method.Name.LocalName;
 			string _namespace = method.Name.FullNamespace;
 
-			string returnType = method.ReturnTypeName.ToDisplayStringLink(_namespace);
-			if(BinaryOperators.ContainsKey(key) && method.Parameters.Count >= 2)
+			string returnType = method.MethodName.ReturnTypeName.ToDisplayStringLink(_namespace);
+			if(BinaryOperators.ContainsKey(key) && method.MethodName.Parameters.Count >= 2)
 			{
-				string parameterA = method.Parameters[0].ToHeader(_namespace);
-				string parameterB = method.Parameters[1].ToHeader(_namespace);
+				string parameterA = method.MethodName.Parameters[0].ToHeader(_namespace);
+				string parameterB = method.MethodName.Parameters[1].ToHeader(_namespace);
 				return String.Format("{0} = {1} {2} {3}", returnType, parameterA, BinaryOperators[key], parameterB);
 			}
-			else if(UnaryOperators.ContainsKey(key) && method.Parameters.Count >= 1)
+			else if(UnaryOperators.ContainsKey(key) && method.MethodName.Parameters.Count >= 1)
 			{
-				string parameterA = method.Parameters[0].ToHeader(_namespace);
+				string parameterA = method.MethodName.Parameters[0].ToHeader(_namespace);
 				if(key == "op_Increment" || key == "op_Decrement")
 				{
 					return String.Format("{0} = ({1}){2}", returnType, parameterA, UnaryOperators[key]);
@@ -205,7 +205,7 @@ namespace EarlyDocs
 
 		public static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
 		{
-			return methodLink.Name.ToDisplayString(_namespace) + "(" + String.Join(",", methodLink.Parameters.Select(p => p.TypeName.ToDisplayString(_namespace)).ToArray()) + ")";
+			return methodLink.Name.ToDisplayString(_namespace) + "(" + String.Join(",", methodLink.MethodName.Parameters.Select(p => p.TypeName.ToDisplayString(_namespace)).ToArray()) + ")";
 		}
 
 		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
@@ -801,7 +801,7 @@ namespace EarlyDocs
 			{
 				MarkdownList list = new MarkdownList(isNumbered: false);
 				section.Add(list);
-				foreach(DotNetParameter parameter in method.Parameters) //display in same order as in method signature
+				foreach(DotNetParameter parameter in method.MethodName.Parameters) //display in same order as in method signature
 				{
 					DotNetCommentParameter commentParameter = method.ParameterComments.FirstOrDefault(c => c.ParameterLink.Name == parameter.Name);
 					if(commentParameter == null)
@@ -814,7 +814,7 @@ namespace EarlyDocs
 			}
 			else
 			{
-				foreach(DotNetParameter parameter in method.Parameters) //display in same order as in method signature
+				foreach(DotNetParameter parameter in method.MethodName.Parameters) //display in same order as in method signature
 				{
 					DotNetCommentParameter commentParameter = method.ParameterComments.FirstOrDefault(c => c.ParameterLink.Name == parameter.Name);
 					if(commentParameter == null)
@@ -831,12 +831,12 @@ namespace EarlyDocs
 			if(method.ParameterComments.Count == 0)
 				return;
 
-			section.Add(new MarkdownParagraph(MarkdownText.Bold("Parameters:")));
+			section.Add(new MarkdownLine(MarkdownText.Bold("Parameters:")));
 			if(EachCommentIsOneTextComment(method.ParameterComments))
 			{
 				MarkdownList list = new MarkdownList(isNumbered: false);
 				section.Add(list);
-				foreach(DotNetParameter parameter in method.Parameters) //display in same order as in method signature
+				foreach(DotNetParameter parameter in method.MethodName.Parameters) //display in same order as in method signature
 				{
 					DotNetCommentParameter commentParameter = method.ParameterComments.FirstOrDefault(c => c.ParameterLink.Name == parameter.Name);
 					if(commentParameter == null)
@@ -849,7 +849,7 @@ namespace EarlyDocs
 			}
 			else
 			{
-				foreach(DotNetParameter parameter in method.Parameters) //display in same order as in method signature; todo: repeated generator structure
+				foreach(DotNetParameter parameter in method.MethodName.Parameters) //display in same order as in method signature; todo: repeated generator structure
 				{
 					DotNetCommentParameter commentParameter = method.ParameterComments.FirstOrDefault(c => c.ParameterLink.Name == parameter.Name);
 					if(commentParameter == null)

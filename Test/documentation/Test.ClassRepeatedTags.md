@@ -114,8 +114,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 
 ## void MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
 
-**Parameters:**
-
+**Parameters:**  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
 * **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c**: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  

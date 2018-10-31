@@ -134,8 +134,7 @@ Tests events and delegates.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action**: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
 
   
@@ -164,8 +163,7 @@ Tests events and delegates.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Sed fermentum ornare nisi, et vestibulum lorem tincidunt in.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **[Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func**: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
 
   

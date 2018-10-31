@@ -32,8 +32,7 @@ Tests overloaded methods.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b**: [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.  
 

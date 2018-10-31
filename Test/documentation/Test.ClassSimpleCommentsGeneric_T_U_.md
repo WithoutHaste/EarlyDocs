@@ -86,7 +86,7 @@
 [Example Tag] [Short] [One Line] Nunc quis odio dui.  
   
   
-**Permission: Item(int)**  
+**Permission: P:Test.ClassSimpleCommentsGeneric&lt;T,U&gt;.Item(int)**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Sed in sapien pretium, eleifend metus eu, posuere leo.  
   
   
@@ -167,8 +167,7 @@
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
 
   
-**Parameters:**
-
+**Parameters:**  
   
 
 # Methods
@@ -253,8 +252,7 @@
 * **B**: [Type Parameter Tag] [Short] [One Line] Nunc faucibus sed elit ut pellentesque.  
 
   
-**Parameters:**
-
+**Parameters:**  
   
 
 ##  StaticMethodWithParametersWithReturn(T, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string))
@@ -285,7 +283,6 @@
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
 
   
-**Parameters:**
-
+**Parameters:**  
   
 

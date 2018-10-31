@@ -28,7 +28,7 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] Sed massa justo, laoreet quis magna at, iaculis dictum justo.  
   
   
-**Permission: op_Implicit((Test.ClassOperatorOverloading)~System.Double)**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Interdum et malesuada fames ac ante ipsum primis in faucibus.  
   
   
@@ -36,8 +36,7 @@ Tests operator overloading.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Sed ac molestie ante, vel porttitor neque.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Vestibulum quis fringilla ipsum.  
 
   
@@ -62,7 +61,7 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] In laoreet mauris nec purus venenatis accumsan.  
   
   
-**Permission: op_Implicit((Test.ClassOperatorOverloading)~System.Int32)**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam dictum cursus elementum.  
   
   
@@ -70,8 +69,7 @@ Tests operator overloading.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Donec malesuada ex sit amet mollis facilisis.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Vestibulum semper maximus turpis, quis sodales nisl mattis ac.  
 
   
@@ -96,7 +94,7 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] Nulla imperdiet diam ut felis ultricies, tempor scelerisque odio ornare.  
   
   
-**Permission: op_Explicit((Test.ClassOperatorOverloading)~System.Single)**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Phasellus euismod quam ut lacus tincidunt suscipit.  
   
   
@@ -104,8 +102,7 @@ Tests operator overloading.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Nullam eu libero arcu.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Vivamus volutpat, elit sit amet gravida rutrum, quam tortor vulputate risus, sed blandit dolor lacus non diam.  
 
   
@@ -130,7 +127,7 @@ Tests operator overloading.
 [Example Tag] [Short] [One Line] Ut vestibulum tellus felis, auctor venenatis turpis blandit sit amet.  
   
   
-**Permission: op_Explicit((Test.ClassOperatorOverloading)~System.Int16)**  
+**Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Donec vel dictum velit, eget porta arcu.  
   
   
@@ -138,8 +135,7 @@ Tests operator overloading.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Aliquam hendrerit, ligula quis faucibus venenatis, libero leo venenatis lacus, vulputate euismod erat turpis nec ex.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] In hac habitasse platea dictumst.  
 
   
@@ -172,8 +168,7 @@ Tests operator overloading.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Quisque vitae purus elit.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Pellentesque est metus, euismod sit amet viverra eget, tincidunt consectetur massa.  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b**: [Parameter Tag] [Short] [One Line] Maecenas maximus congue neque, at iaculis justo dignissim nec.  
 
@@ -207,8 +202,7 @@ Tests operator overloading.
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Curabitur et lacinia felis.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Vivamus nec felis tortor.  
 * **ClassOperatorOverloading b**: [Parameter Tag] [Short] [One Line] Nam maximus odio vel consequat congue.  
 

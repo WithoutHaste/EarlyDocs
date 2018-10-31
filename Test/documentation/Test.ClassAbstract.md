@@ -48,7 +48,7 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Maecenas pretium gravida laoreet.  
   
   
-**Permission: Item(int)**  
+**Permission: P:Test.ClassAbstract.Item(int)**  
 [Permission Tag] [References Indexer] [Short] [One Line] Etiam convallis non elit ac dictum.  
   
   
@@ -69,7 +69,7 @@ Tests abstract classes and members.
 [Example Tag] [Short] [One Line] Phasellus consectetur finibus mi quis dictum.  
   
   
-**Permission: Item(string)**  
+**Permission: P:Test.ClassAbstract.Item(string)**  
 [Permission Tag] [References Indexer] [Short] [One Line] Fusce eu auctor arcu, ut interdum neque.  
   
   

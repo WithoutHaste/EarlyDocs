@@ -104,7 +104,7 @@
 [Example Tag] [Short] [One Line] Nullam in sem ac ipsum dignissim gravida.  
   
   
-**Permission: Item(int)**  
+**Permission: P:Test.ClassSimpleComments.Item(int)**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.  
   
   
@@ -185,8 +185,7 @@
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
 * **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
 
@@ -324,8 +323,7 @@
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.  
 
   
-**Parameters:**
-
+**Parameters:**  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Nulla consectetur, urna eget ultrices ultricies, velit tortor iaculis lectus, quis condimentum tortor ex vitae ipsum.  
 * **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.  
 
