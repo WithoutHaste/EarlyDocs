@@ -546,7 +546,7 @@ namespace EarlyDocs
 				case TypeCategory.Abstract: parent.Add(new MarkdownLine(MarkdownText.Bold("Abstract"))); changeMade = true; break;
 				case TypeCategory.Enum: parent.Add(new MarkdownLine(MarkdownText.Bold("Enumeration"))); changeMade = true; break;
 			}
-			if(type.IsSealed)
+			if(type.IsSealed && type.Category != TypeCategory.Static)
 			{
 				parent.Add(new MarkdownLine(MarkdownText.Bold("Sealed")));
 				changeMade = true;
