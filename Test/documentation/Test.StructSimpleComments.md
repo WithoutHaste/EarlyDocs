@@ -22,7 +22,7 @@
 
 # Permissions
 
-## current member
+## current type
 
 [Permission Tag] [References Struct] [Short] [One Line] Integer egestas dictum mollis.  
   

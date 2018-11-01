@@ -119,5 +119,17 @@ namespace EarlyDocs
 		{
 			return new MarkdownTableRow(commentRow.Cells.Select(c => c.Text).ToArray());
 		}
+
+		public static MarkdownList EnumToMinimalList(DotNetType _enum)
+		{
+			MarkdownList list = new MarkdownList(isNumbered: false);
+
+			foreach(DotNetField field in _enum.Fields)
+			{
+				list.Add(new MarkdownLine(field.ConstantValue + ": " + field.Name.LocalName));
+			}
+
+			return list;
+		}
 	}
 }

@@ -27,12 +27,12 @@
 
 # Permissions
 
-## current member
+## current type
 
 [Permission Tag] [References Generic Class] [Short] [One Line] Vestibulum at justo quis velit finibus imperdiet.  
   
 
-## ClassSimpleCommentsGeneric&lt;T,U&gt;.TField
+## TField
 
 [Permission Tag] [References Field] [Short] [One Line] Vestibulum malesuada volutpat tincidunt.  
   
@@ -66,7 +66,7 @@
 
 # Properties
 
-##  this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32)]
+##  this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
 
 [Summary Tag] [Short] [One Line] Nulla non metus at dui condimentum semper.  
   

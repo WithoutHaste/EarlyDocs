@@ -69,6 +69,8 @@ namespace EarlyDocs
 		{
 			if(field is DotNetProperty)
 				return ToHeader(field as DotNetProperty, parent);
+			if(parent.Category == TypeCategory.Enum)
+				return field.ConstantValue.ToString() + ": " + field.Name.LocalName;
 
 			string header = field.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + field.Name.LocalName;
 
@@ -132,7 +134,35 @@ namespace EarlyDocs
 
 		public static string ToHeader(this DotNetIndexer indexer)
 		{
-			return indexer.TypeName.ToDisplayStringLink() + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink()).ToArray()) + "]";
+			string header = indexer.TypeName.ToDisplayStringLink() + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink() + " " + p.Name).ToArray()) + "]";
+
+			//todo: duplicated from Property.ToHeader()
+			header += " { ";
+			if(indexer.HasGetterMethod)
+			{
+				switch(indexer.GetterMethod.AccessModifier)
+				{
+					case AccessModifier.Public: header += "get; "; break;
+					case AccessModifier.Protected: header += "protected get; "; break;
+					case AccessModifier.Internal: header += "internal get; "; break;
+					case AccessModifier.InternalProtected: header += "internal protected get; "; break;
+					case AccessModifier.Private: header += "private get; "; break;
+				}
+			}
+			if(indexer.HasSetterMethod)
+			{
+				switch(indexer.SetterMethod.AccessModifier)
+				{
+					case AccessModifier.Public: header += "set; "; break;
+					case AccessModifier.Protected: header += "protected set; "; break;
+					case AccessModifier.Internal: header += "internal set; "; break;
+					case AccessModifier.InternalProtected: header += "internal protected set; "; break;
+					case AccessModifier.Private: header += "private set; "; break;
+				}
+			}
+			header += "}";
+
+			return header;
 		}
 
 		public static string ToHeader(this DotNetParameter parameter, string _namespace = null)
@@ -330,12 +360,15 @@ namespace EarlyDocs
 			AddTopLevelPermissions(typeSection, type as DotNetMember);
 			if(type.NestedEnums.Count > 0)
 			{
-				//todo: simply list the enum as link to enum page, and list just the enum values without any comments as short-reference
 				MarkdownSection enumSection = new MarkdownSection("Enums");
 				typeSection.Add(enumSection);
 				foreach(DotNetType e in type.NestedEnums.OrderBy(m => m.Name.LocalName))
 				{
-					enumSection.AddSection(e.ToMarkdownEnumSection());
+					string enumHeader = e.Name.ToDisplayStringLink(type.Name);
+					enumSection.Add(new MarkdownLine(MarkdownText.Bold(enumHeader)));
+					enumSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(e.SummaryComments));
+					enumSection.Add(ConvertDotNet.EnumToMinimalList(e));
+					enumSection.Add(new MarkdownLine());
 				}
 			}
 			if(type.Fields.Count > 0)
@@ -487,51 +520,26 @@ namespace EarlyDocs
 		public static MarkdownSection ToMarkdownEnumSection(this DotNetType type)
 		{
 			if(type.Category != TypeCategory.Enum)
-				throw new Exception("Intended for enums only.");
+				return new MarkdownSection("");
 
 			MarkdownSection enumSection = new MarkdownSection(type.Name.LocalName);
 
-			if(type.SummaryComments.Count > 0) enumSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.SummaryComments));
-			if(type.RemarksComments.Count > 0) enumSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.RemarksComments));
-			if(type.ExampleComments.Count > 0)
-			{
-				MarkdownSection exampleSection = enumSection.AddSection("Examples");
-				exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(type.ExampleComments));
-			}
+			AddSummary(enumSection, type as DotNetMember);
+			AddRemarks(enumSection, type as DotNetMember);
+			AddFloatingComments(enumSection, type as DotNetMember);
+			AddTopLevelExamples(enumSection, type as DotNetMember);
+			AddTopLevelPermissions(enumSection, type as DotNetMember);
+
 			if(type.Fields.Count > 0)
 			{
-				//todo: given the various documentation options here, should probably do each value as a whole section instead of as a list item
-				MarkdownSection fieldSection = enumSection.AddSection("Constants");
-				MarkdownList list = new MarkdownList(isNumbered: false);
-				fieldSection.Add(list);
-
-				foreach(DotNetField field in type.Fields)
+				MarkdownSection fieldSection = new MarkdownSection("Constants");
+				enumSection.Add(fieldSection);
+				foreach(DotNetField field in type.Fields.OrderBy(f => f.ConstantValue))
 				{
-					//todo: default to using Summary or Value tag, instead of just Summary
-					//todo: if a field here has more than just a one-line description, this list format won't work
-					if(field.SummaryComments.Count == 0)
-					{
-						list.Add(new MarkdownText(field.Name));
-					}
-					else
-					{
-						//todo: support multiple summary tags - maybe in DataFiles it should be appending all the summary tag contents together? so only one unit is presented to this side? probably this
-						list.Add(new MarkdownText(String.Format("{0}: {1}", field.Name, "TODO")));
-						//todo: support examples
-						/*
-						if(field.Examples.Count > 0)
-						{
-							MarkdownList exampleList = new MarkdownList();
-							list.Add(exampleList);
-							foreach(XmlComments example in field.Examples)
-							{
-								exampleList.Add(new MarkdownText("Example: " + example.ToMarkdown()));
-							}
-						}
-						*/
-					}
+					fieldSection.AddSection(ToMarkdownSection(field, type));
 				}
 			}
+
 			return enumSection;
 		}
 
@@ -686,17 +694,25 @@ namespace EarlyDocs
 
 			foreach(DotNetCommentQualifiedLinkedGroup comment in member.PermissionComments)
 			{
-				string permissionHeader = comment.QualifiedLink.Name.ToDisplayString(member.Name.FullNamespace);
+				string permissionHeader = comment.QualifiedLink.Name.ToDisplayString(member.Name);
 				if(member.Name == comment.QualifiedLink.Name) //todo: move link to member comparison to its own method, maybe even in DataFiles.DotNet - see where else comparisons should be moved to library
 				{
 					permissionHeader = "current member";
+					if(member is DotNetType)
+					{
+						permissionHeader = "current type";
+					}
 				}
 				if(comment is DotNetCommentMethodLinkedGroup)
 				{
-					permissionHeader = (comment as DotNetCommentMethodLinkedGroup).MethodLink.ToDisplayString(member.Name.FullNamespace);
+					permissionHeader = (comment as DotNetCommentMethodLinkedGroup).MethodLink.ToDisplayString(member.Name);
 					if(member is DotNetMethod && (member as DotNetMethod).MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink)) //todo: move comparison logic to library
 					{
 						permissionHeader = "current member";
+						if(member is DotNetType)
+						{
+							permissionHeader = "current type";
+						}
 					}
 				}
 				MarkdownSection permissionSection = permissionsSection.AddSection(permissionHeader);

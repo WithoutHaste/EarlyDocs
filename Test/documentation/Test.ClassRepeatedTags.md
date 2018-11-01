@@ -9,32 +9,32 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 # Permissions
 
-## current member
+## current type
 
 [1st Permission Tag] Aliquam diam ante, ornare et placerat sed, egestas at ante.  
   
 
-## ClassRepeatedTags.FieldRepeatedOnceOnlyTags
+## FieldRepeatedOnceOnlyTags
 
 [2nd Permission Tag] Proin sit amet risus nec nulla hendrerit posuere.  
   
 
-## ClassRepeatedTags.MethodMultipleExceptions()
+## MethodMultipleExceptions()
 
 [3rd Permission Tag] Donec volutpat dignissim vehicula.  
   
 
-## ClassSimpleComments
+## Test.ClassSimpleComments
 
 [4th Permission Tag] Suspendisse varius ipsum at tortor hendrerit suscipit.  
   
 
-## ClassSimpleComments.IntegerProperty
+## Test.ClassSimpleComments.IntegerProperty
 
 [5th Permission Tag] Suspendisse potenti.  
   
 
-## ClassSimpleComments.Finalize()
+## Test.ClassSimpleComments.Finalize()
 
 [6th Permission Tag] Suspendisse interdum, arcu a venenatis fringilla, elit velit mattis turpis, et gravida augue eros sed erat.  
   

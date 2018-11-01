@@ -32,7 +32,7 @@ Tests abstract classes and members.
 
 # Properties
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32)]
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
 
 [Summary Tag] [Short] [One Line] Suspendisse et ultricies justo, et sagittis nibh.  
   
@@ -53,7 +53,7 @@ Tests abstract classes and members.
   
   
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) this[[string](https://docs.microsoft.com/en-us/dotnet/api/system.string)]
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) this[[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) key] { get; }
 
 [Summary Tag] [Short] [One Line] Suspendisse libero ex, pretium vel quam eget, convallis faucibus tortor.  
   

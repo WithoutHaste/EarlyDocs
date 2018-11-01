@@ -22,7 +22,7 @@
 
 # Permissions
 
-## current member
+## current type
 
 [Permission Tag] [References Interface] [Short] [One Line] Cras vel tortor ut massa efficitur sollicitudin.  
   
