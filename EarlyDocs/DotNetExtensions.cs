@@ -539,13 +539,17 @@ namespace EarlyDocs
 		{
 			bool changeMade = false;
 
-			//todo: make bold
 			switch(type.Category)
 			{
 				case TypeCategory.Static: parent.Add(new MarkdownLine(MarkdownText.Bold("Static"))); changeMade = true; break;
 				case TypeCategory.Interface: parent.Add(new MarkdownLine(MarkdownText.Bold("Interface"))); changeMade = true; break;
 				case TypeCategory.Abstract: parent.Add(new MarkdownLine(MarkdownText.Bold("Abstract"))); changeMade = true; break;
 				case TypeCategory.Enum: parent.Add(new MarkdownLine(MarkdownText.Bold("Enumeration"))); changeMade = true; break;
+			}
+			if(type.IsSealed)
+			{
+				parent.Add(new MarkdownLine(MarkdownText.Bold("Sealed")));
+				changeMade = true;
 			}
 
 			if(type.BaseType != null)
