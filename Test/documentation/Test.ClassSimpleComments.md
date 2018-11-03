@@ -94,7 +94,7 @@
 [Example Tag] [Short] [One Line] Nullam in sem ac ipsum dignissim gravida.  
   
   
-**Permission: P:Test.ClassSimpleComments.Item(int)**  
+**Permission: current member**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.  
   
   
@@ -126,64 +126,7 @@
 
 # Constructors
 
-##  ClassSimpleComments()
-
-[Summary Tag] [Short] [One Line] Nam ornare velit eget sagittis hendrerit.  
-  
-  
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Sed nec tincidunt velit.  
-  
-  
-**Misc:**  
-[Floating Comment] [Short] [One Line] Aenean maximus maximus dui, vel ornare est tempor sit amet.  
-  
-**Example A:**  
-[Example Tag] [Short] [One Line] Suspendisse ut euismod est, nec dictum augue.  
-  
-  
-**Permission: #ctor()**  
-[Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.  
-  
-  
-**Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.  
-
-  
-
-##  ClassSimpleComments([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
-
-[Summary Tag] [Short] [One Line] Sed eu molestie augue, sed congue sapien.  
-  
-  
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Nam commodo justo ac porta maximus.  
-  
-  
-**Misc:**  
-[Floating Comment] [Short] [One Line] Ut dictum massa at iaculis semper.  
-  
-**Example A:**  
-[Example Tag] [Short] [One Line] Sed quis dignissim odio, non facilisis felis.  
-  
-  
-**Permission: #ctor(int,string)**  
-[Permission Tag] [References Constructor] [Short] [One Line] Nullam viverra placerat lacus, vitae bibendum justo interdum quis.  
-  
-  
-**Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.  
-
-  
-**Parameters:**  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
-* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
-
-  
-
-# Methods
-
-##  #cctor()
+## static ClassSimpleComments()
 
 [Summary Tag] [Short] [One Line] Fusce ac lorem nisi.  
   
@@ -208,7 +151,64 @@
 
   
 
-## void Finalize()
+## ClassSimpleComments()
+
+[Summary Tag] [Short] [One Line] Nam ornare velit eget sagittis hendrerit.  
+  
+  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Sed nec tincidunt velit.  
+  
+  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Aenean maximus maximus dui, vel ornare est tempor sit amet.  
+  
+**Example A:**  
+[Example Tag] [Short] [One Line] Suspendisse ut euismod est, nec dictum augue.  
+  
+  
+**Permission: current member**  
+[Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.  
+  
+  
+**Exceptions:**  
+* **Exception**: [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.  
+
+  
+
+## ClassSimpleComments([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+
+[Summary Tag] [Short] [One Line] Sed eu molestie augue, sed congue sapien.  
+  
+  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Nam commodo justo ac porta maximus.  
+  
+  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Ut dictum massa at iaculis semper.  
+  
+**Example A:**  
+[Example Tag] [Short] [One Line] Sed quis dignissim odio, non facilisis felis.  
+  
+  
+**Permission: current member**  
+[Permission Tag] [References Constructor] [Short] [One Line] Nullam viverra placerat lacus, vitae bibendum justo interdum quis.  
+  
+  
+**Exceptions:**  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.  
+
+  
+**Parameters:**  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
+
+  
+
+# Destructor
+
+## virtual void Finalize()
 
 [Summary Tag] [Short] [One Line] Aenean quam urna, pharetra vel malesuada ut, gravida ac libero.  
   
@@ -233,7 +233,9 @@
 
   
 
-## int MethodVirtual()
+# Methods
+
+## virtual int MethodVirtual()
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
   
@@ -285,7 +287,7 @@
 
 # Static Methods
 
-## string StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static string StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Vivamus et ex convallis, egestas justo ut, faucibus arcu.  
   

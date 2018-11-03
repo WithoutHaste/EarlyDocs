@@ -183,11 +183,20 @@ namespace EarlyDocs
 			}
 
 			string header = method.MethodName.ReturnTypeName.ToDisplayString(method.Name.FullNamespace) + " " + method.Name.LocalName;
+			if(method is DotNetMethodConstructor)
+			{
+				header = method.Name.FullNamespace.LocalName;
+			}
+
 			if(method.MethodName.Parameters == null || method.MethodName.Parameters.Count == 0)
 				header += "()";
 			else
 				header += String.Format("({0})", String.Join(", ", method.MethodName.Parameters.Select(p => p.ToDisplayString(method.Name.FullNamespace)).ToArray()));
 
+			if(method.Category == MethodCategory.Virtual)
+				header = "virtual " + header;
+			if(method.Category == MethodCategory.Static)
+				header = "static " + header;
 			if(method.Category == MethodCategory.Abstract)
 				header = "abstract " + header;
 			if(method.Category == MethodCategory.Delegate)
@@ -433,6 +442,8 @@ namespace EarlyDocs
 			//todo: static constructors
 			if(type.ConstructorMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Constructors", type.ConstructorMethods.Cast<DotNetMethod>().ToList()));
+			if(type.DestructorMethod != null)
+				typeSection.Add(MethodsToMarkdown("Destructor", new List<DotNetMethod>() { type.DestructorMethod as DotNetMethod }));
 			if(type.NormalMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Methods", type.NormalMethods));
 			if(type.StaticMethods.Count > 0)
@@ -733,6 +744,10 @@ namespace EarlyDocs
 				{
 					permissionHeader = "Permission: " + (comment as DotNetCommentMethodLinkedGroup).MethodLink.ToDisplayString(member.Name.FullNamespace);
 					if(member is DotNetMethod && (member as DotNetMethod).MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink))
+					{
+						permissionHeader = "Permission: current member";
+					}
+					else if(member is DotNetIndexer && (member as DotNetIndexer).Matches((comment as DotNetCommentMethodLinkedGroup).MethodLink))
 					{
 						permissionHeader = "Permission: current member";
 					}

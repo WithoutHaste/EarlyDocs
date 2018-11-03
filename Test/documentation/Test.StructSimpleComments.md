@@ -83,34 +83,7 @@
 
 # Constructors
 
-##  StructSimpleComments()
-
-[Summary Tag] [Short] [One Line] Nam sollicitudin, tortor sit amet cursus sollicitudin, nunc sem pretium ante, et ultrices lectus nibh sollicitudin arcu.  
-  
-  
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Mauris condimentum libero nibh, sit amet hendrerit nulla tempus ut.  
-  
-  
-**Misc:**  
-[Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.  
-  
-**Example A:**  
-[Example Tag] [Short] [One Line] Nunc vel ullamcorper augue.  
-  
-  
-**Permission: #ctor()**  
-[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.  
-  
-  
-**Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.  
-
-  
-
-# Methods
-
-##  #cctor()
+## static StructSimpleComments()
 
 [Summary Tag] [Short] [One Line] Pellentesque quis ex eu odio pretium vehicula.  
   
@@ -134,6 +107,33 @@
 * **Exception**: [Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.  
 
   
+
+## StructSimpleComments()
+
+[Summary Tag] [Short] [One Line] Nam sollicitudin, tortor sit amet cursus sollicitudin, nunc sem pretium ante, et ultrices lectus nibh sollicitudin arcu.  
+  
+  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Mauris condimentum libero nibh, sit amet hendrerit nulla tempus ut.  
+  
+  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.  
+  
+**Example A:**  
+[Example Tag] [Short] [One Line] Nunc vel ullamcorper augue.  
+  
+  
+**Permission: current member**  
+[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.  
+  
+  
+**Exceptions:**  
+* **Exception**: [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.  
+
+  
+
+# Methods
 
 ## float MethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
@@ -171,7 +171,7 @@
 
 # Static Methods
 
-## double StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static double StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
   

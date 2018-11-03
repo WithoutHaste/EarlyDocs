@@ -86,7 +86,7 @@
 [Example Tag] [Short] [One Line] Nunc quis odio dui.  
   
   
-**Permission: P:Test.ClassSimpleCommentsGeneric&lt;T,U&gt;.Item(int)**  
+**Permission: current member**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Sed in sapien pretium, eleifend metus eu, posuere leo.  
   
   
@@ -118,61 +118,7 @@
 
 # Constructors
 
-##  ClassSimpleCommentsGeneric<T,U>()
-
-[Summary Tag] [Short] [One Line] Cras a arcu sem.  
-  
-  
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
-  
-  
-**Misc:**  
-[Floating Comment] [Short] [One Line] Ut nunc mauris, varius at enim in, elementum tempor metus.  
-  
-**Example A:**  
-[Example Tag] [Short] [One Line] Phasellus bibendum mauris eget justo tempor, non imperdiet dolor maximus.  
-  
-  
-**Permission: #ctor()**  
-[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.  
-  
-  
-**Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
-
-  
-
-##  ClassSimpleCommentsGeneric<T,U>(T, U)
-
-[Summary Tag] [Short] [One Line] Phasellus interdum purus interdum dolor lacinia mollis.  
-  
-  
-**Remarks:**  
-[Remarks Tag] [Short] [One Line] Duis ligula libero, blandit sit amet ante id, porttitor mattis dui.  
-  
-  
-**Misc:**  
-[Floating Comment] [Short] [One Line] Duis at enim gravida, commodo purus a, vulputate ligula.  
-  
-**Example A:**  
-[Example Tag] [Short] [One Line] In gravida, ex accumsan pellentesque pretium, elit ex pharetra arcu, feugiat maximus dui est nec ligula.  
-  
-  
-**Permission: #ctor(T,U)**  
-[Permission Tag] [References Constructor] [Short] [One Line] Pellentesque vitae metus nec sem tristique mollis pharetra ac magna.  
-  
-  
-**Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
-
-  
-**Parameters:**  
-  
-
-# Methods
-
-##  #cctor()
+## static ClassSimpleCommentsGeneric<T,U>()
 
 [Summary Tag] [Short] [One Line] Donec sit amet erat ac diam fermentum porttitor vitae et diam.  
   
@@ -197,7 +143,61 @@
 
   
 
-## void Finalize()
+## ClassSimpleCommentsGeneric<T,U>()
+
+[Summary Tag] [Short] [One Line] Cras a arcu sem.  
+  
+  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
+  
+  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Ut nunc mauris, varius at enim in, elementum tempor metus.  
+  
+**Example A:**  
+[Example Tag] [Short] [One Line] Phasellus bibendum mauris eget justo tempor, non imperdiet dolor maximus.  
+  
+  
+**Permission: current member**  
+[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.  
+  
+  
+**Exceptions:**  
+* **Exception**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
+
+  
+
+## ClassSimpleCommentsGeneric<T,U>(T, U)
+
+[Summary Tag] [Short] [One Line] Phasellus interdum purus interdum dolor lacinia mollis.  
+  
+  
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Duis ligula libero, blandit sit amet ante id, porttitor mattis dui.  
+  
+  
+**Misc:**  
+[Floating Comment] [Short] [One Line] Duis at enim gravida, commodo purus a, vulputate ligula.  
+  
+**Example A:**  
+[Example Tag] [Short] [One Line] In gravida, ex accumsan pellentesque pretium, elit ex pharetra arcu, feugiat maximus dui est nec ligula.  
+  
+  
+**Permission: current member**  
+[Permission Tag] [References Constructor] [Short] [One Line] Pellentesque vitae metus nec sem tristique mollis pharetra ac magna.  
+  
+  
+**Exceptions:**  
+* **ArgumentException**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
+
+  
+**Parameters:**  
+  
+
+# Destructor
+
+## virtual void Finalize()
 
 [Summary Tag] [Short] [One Line] Quisque scelerisque elit a massa semper luctus.  
   
@@ -221,6 +221,8 @@
 * **IndexOutOfRangeException**: [Exception Tag] [Short] [One Line] Phasellus id tellus odio.  
 
   
+
+# Methods
 
 ##  MethodWithTypeParameters<A,B>(A, B, U)
 

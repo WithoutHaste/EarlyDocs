@@ -12,5 +12,5 @@ Tests a class nested in a class.
 
 # Constructors
 
-##  ClassInClass()
+## ClassInClass()
 

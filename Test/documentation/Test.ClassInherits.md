@@ -61,7 +61,7 @@ Tests class inheritance.
 
   
 
-## int MethodVirtual()
+## virtual int MethodVirtual()
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
   
