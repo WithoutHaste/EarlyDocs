@@ -39,7 +39,7 @@
 
 # Fields
 
-##  TField
+## T TField
 
 [Summary Tag] [Short] [One Line] Sed feugiat, velit vel convallis accumsan, magna dui ultrices lorem, nec sollicitudin lorem nisl sit amet justo.  
   
@@ -66,7 +66,7 @@
 
 # Properties
 
-##  this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
+## T this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
 
 [Summary Tag] [Short] [One Line] Nulla non metus at dui condimentum semper.  
   
@@ -91,7 +91,7 @@
   
   
 
-##  UProperty { get; set; }
+## U UProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Phasellus tellus orci, maximus sed suscipit eu, sollicitudin ut ipsum.  
   
@@ -134,7 +134,7 @@
 [Example Tag] [Short] [One Line] Mauris quis metus convallis, consequat dui viverra, commodo sapien.  
   
   
-**Permission: Test.ClassSimpleCommentsGeneric.#cctor()**  
+**Permission: current member**  
 [Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.  
   
   
@@ -168,7 +168,7 @@
 
   
 
-## ClassSimpleCommentsGeneric<T,U>(T, U)
+## ClassSimpleCommentsGeneric<T,U>(T t, U u)
 
 [Summary Tag] [Short] [One Line] Phasellus interdum purus interdum dolor lacinia mollis.  
   
@@ -193,6 +193,9 @@
 
   
 **Parameters:**  
+* **T t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
+* **U u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
+
   
 
 # Destructor
@@ -224,7 +227,7 @@
 
 # Methods
 
-##  MethodWithTypeParameters<A,B>(A, B, U)
+## void MethodWithTypeParameters<A,B>(A a, B b, U u)
 
 [Summary Tag] [Short] [One Line] Maecenas molestie purus id fermentum dictum.  
   
@@ -255,9 +258,15 @@
 
   
 **Parameters:**  
+* **A a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
+* **B b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
+* **U u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
+
   
 
-##  StaticMethodWithParametersWithReturn(T, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string))
+# Static Methods
+
+## static U StaticMethodWithParametersWithReturn(T t, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Mauris malesuada varius risus eu condimentum.  
   
@@ -286,5 +295,8 @@
 
   
 **Parameters:**  
+* **T t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
+* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
+
   
 

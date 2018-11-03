@@ -69,7 +69,7 @@ namespace Test //should be just like ClassSimpleComments, but for a generic type
 		/// [Remarks Tag] [Short] [One Line] Morbi maximus quis lectus sit amet consequat.
 		/// </remarks>
 		/// <example>[Example Tag] [Short] [One Line] Mauris quis metus convallis, consequat dui viverra, commodo sapien.</example>
-		/// <permission cref="M:Test.ClassSimpleCommentsGeneric.#cctor">[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.</permission>
+		/// <permission cref="M:Test.ClassSimpleCommentsGeneric`2.#cctor">[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.</permission>
 		/// <exception cref="Exception">[Exception Tag] [Short] [One Line] Nunc ornare dignissim erat, id malesuada urna elementum et.</exception>
 		/// [Floating Comment] [Short] [One Line] Nam nec rhoncus diam.
 		static ClassSimpleCommentsGeneric()

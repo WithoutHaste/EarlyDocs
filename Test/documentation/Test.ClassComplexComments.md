@@ -86,7 +86,7 @@ for (int i = 0; i < lines.Length; i++)
 
 # Methods
 
-##  MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string), A, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
+## void MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, A y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
 
 **Exceptions:**  
 **IndexOutOfRangeException:** [1st Exception Tag] [Has Example] Cras ante risus, sodales quis massa vel, pulvinar auctor ipsum.  
@@ -104,7 +104,7 @@ luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.
   
   
 
-##  MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string), A, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32))
+## void MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, A y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
 
 **Generic Type Parameters:**
 
@@ -115,5 +115,16 @@ Nunc mollis leo est, in bibendum lacus rhoncus maximus.
   
   
 **Parameters:**  
+**[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z**[Param Rag] [Has Example]   
+                
+Maecenas molestie, nisi nec cursus malesuada, nisi est egestas lacus, mollis aliquam urna elit eu mauris. Maecenas lobortis congue nisi. Praesent tincidunt sagittis mi non semper.  
+  
+Vestibulum convallis sapien eget nunc sagittis cursus. Pellentesque suscipit urna nulla,   
+non vestibulum enim tempus euismod. Suspendisse mattis purus at mauris imperdiet, vitae   
+volutpat urna commodo. Cras justo dolor, aliquet a nibh sed, porttitor fringilla odio.   
+  
+Vestibulum metus lorem, pulvinar sed maximus ac, efficitur ac odio.  
+              
+  
   
 
