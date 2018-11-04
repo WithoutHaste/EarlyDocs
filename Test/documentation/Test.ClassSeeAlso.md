@@ -4,31 +4,8 @@
   
 Tests see and seealso tags, i.e. test links.  
   
-  
 **Misc:**  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-or  
-  
+[Test.ClassSeeAlso.PropertyA](Test.ClassSeeAlso.PropertyA)or[Local property](Test.ClassSeeAlso.PropertyA)[Test.ClassSeeAlso.PropertyA](Test.ClassSeeAlso.PropertyA)or[Local property](Test.ClassSeeAlso.PropertyA)[Test.ClassSeeAlso.#ctor](Test.ClassSeeAlso.#ctor)or[Local method](Test.ClassSeeAlso.#ctor)[Test.ClassSeeAlso.#ctor](Test.ClassSeeAlso.#ctor)or[Local method](Test.ClassSeeAlso.#ctor)[Test.ClassSeeAlso.MethodWithParameters](Test.ClassSeeAlso.MethodWithParameters)or[Local method with parameters](Test.ClassSeeAlso.MethodWithParameters)[Test.ClassSeeAlso.MethodWithParameters](Test.ClassSeeAlso.MethodWithParameters)or[Local method with parameters](Test.ClassSeeAlso.MethodWithParameters)[[Test.ClassSimpleComments](Test.ClassSimpleComments.md)]([Test.ClassSimpleComments](Test.ClassSimpleComments.md))or[Another internal type]([Test.ClassSimpleComments](Test.ClassSimpleComments.md))[[Test.ClassSimpleComments](Test.ClassSimpleComments.md)]([Test.ClassSimpleComments](Test.ClassSimpleComments.md))or[Another internal type]([Test.ClassSimpleComments](Test.ClassSimpleComments.md))[Test.ClassSimpleComments.IntegerProperty](Test.ClassSimpleComments.IntegerProperty)or[Another internal type's property](Test.ClassSimpleComments.IntegerProperty)[Test.ClassSimpleComments.IntegerProperty](Test.ClassSimpleComments.IntegerProperty)or[Another internal type's property](Test.ClassSimpleComments.IntegerProperty)[Test.ClassSimpleComments.#ctor](Test.ClassSimpleComments.#ctor)or[Another internal type's method](Test.ClassSimpleComments.#ctor)[Test.ClassSimpleComments.#ctor](Test.ClassSimpleComments.#ctor)or[Another internal type's method](Test.ClassSimpleComments.#ctor)[Test.ClassSimpleComments.#ctor](Test.ClassSimpleComments.#ctor)or[Another internal type's method with parameters](Test.ClassSimpleComments.#ctor)[Test.ClassSimpleComments.#ctor](Test.ClassSimpleComments.#ctor)or[Another internal type's method with parameters](Test.ClassSimpleComments.#ctor)[[System.IO.StreamWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter)]([System.IO.StreamWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter))or[External type]([System.IO.StreamWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter))[[System.IO.StreamWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter)]([System.IO.StreamWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter))or[External type]([System.IO.StreamWriter](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter))[[System.IO.StreamWriter.Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.encoding)]([System.IO.StreamWriter.Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.encoding))or[External type's property]([System.IO.StreamWriter.Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.encoding))[[System.IO.StreamWriter.Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.encoding)]([System.IO.StreamWriter.Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.encoding))or[External type's property]([System.IO.StreamWriter.Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.encoding))[[System.IO.StreamWriter.Close](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.close)]([System.IO.StreamWriter.Close](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.close))or[External type's method]([System.IO.StreamWriter.Close](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.close))[[System.IO.StreamWriter.Close](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.close)]([System.IO.StreamWriter.Close](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.close))or[External type's method]([System.IO.StreamWriter.Close](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.close))[[System.IO.StreamWriter.Write](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.write)]([System.IO.StreamWriter.Write](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.write))or[External type's method with parameters]([System.IO.StreamWriter.Write](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.write))[[System.IO.StreamWriter.Write](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.write)]([System.IO.StreamWriter.Write](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.write))or[External type's method with parameters]([System.IO.StreamWriter.Write](https://docs.microsoft.com/en-us/dotnet/api/system.io.streamwriter.write))  
 
 # Properties
 

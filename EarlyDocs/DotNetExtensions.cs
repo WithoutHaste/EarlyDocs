@@ -763,6 +763,11 @@ namespace EarlyDocs
 			if(member.FloatingComments.IsEmpty)
 				return;
 
+			if(member.Name.LocalName == "ClassSeeAlso")
+			{
+				int g = 8;
+			}
+
 			section.Add(new MarkdownLine(MarkdownText.Bold("Misc:")));
 			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.FloatingComments));
 		}

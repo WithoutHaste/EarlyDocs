@@ -62,14 +62,21 @@ namespace EarlyDocs
 		{
 			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
 
-			if(comment is DotNetCommentGroup)
+			if(comment is DotNetCommentQualifiedLinkedGroup && (comment.Tag == CommentTag.See || comment.Tag == CommentTag.SeeAlso))
+			{
+				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLinkedGroup));
+			}
+			else if(comment is DotNetCommentGroup)
 			{
 				markdown.AddRange(DotNetCommentGroupToMarkdown(comment as DotNetCommentGroup));
 			}
 			else if(comment is DotNetCommentText)
 			{
 				string text = (comment as DotNetCommentText).Text;
-				markdown.AddRange(text.Split('\n').Select(t => new MarkdownLine(t)).ToArray());
+				if(text.Contains("\n"))
+					markdown.AddRange(text.Split('\n').Select(t => new MarkdownLine(t)).ToArray());
+				else
+					markdown.Add(new MarkdownText(text));
 			}
 			else if(comment is DotNetCommentList)
 			{
@@ -78,6 +85,10 @@ namespace EarlyDocs
 			else if(comment is DotNetCommentTable)
 			{
 				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentTable));
+			}
+			else if(comment is DotNetCommentQualifiedLink)
+			{
+				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLink));
 			}
 
 			return markdown;
@@ -131,5 +142,19 @@ namespace EarlyDocs
 
 			return list;
 		}
+
+		public static MarkdownLink DotNetCommentsToMarkdown(DotNetCommentQualifiedLink commentLink)
+		{
+			string url = commentLink.Name.ToDisplayStringLink();
+			return new MarkdownInlineLink(url, url);
+		}
+
+		public static MarkdownLink DotNetCommentsToMarkdown(DotNetCommentQualifiedLinkedGroup commentGroup)
+		{
+			string text = String.Join("", DotNetCommentGroupToMarkdownLine(commentGroup).Select(x => x.ToMarkdown(null)).ToArray());
+			string url = commentGroup.QualifiedLink.Name.ToDisplayStringLink();
+			return new MarkdownInlineLink(text, url);
+		}
+
 	}
 }

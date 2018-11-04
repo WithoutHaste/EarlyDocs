@@ -4,28 +4,23 @@
 
 [Summary Tag] [Short] [One Line] Phasellus ut nulla aliquam, commodo ante ac, accumsan leo.  
   
-  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Duis metus ex, suscipit quis quam vel, viverra imperdiet magna.  
   
-  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Vivamus ultrices ex sit amet justo aliquet pretium.  
-  
 
 # Examples
 
 ## Example A:
 
 [Example Tag] [Short] [One Line] Nam vitae risus quis est aliquet egestas.  
-  
 
 # Permissions
 
 ## current member
 
-[Permission Tag] [References Delegate] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
-  
+[[Permission Tag] [References Delegate] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.]([Test.ClassEventsDelegates.EventHandlerInClass](Test.ClassEventsDelegates.EventHandlerInClass.md))
 
 # Parameters
 

@@ -5,5 +5,4 @@
   
 Tests static class.  
   
-  
 

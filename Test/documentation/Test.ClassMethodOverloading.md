@@ -4,7 +4,6 @@
   
 Tests overloaded methods.  
   
-  
 
 # Methods
 
@@ -12,22 +11,16 @@ Tests overloaded methods.
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
   
-  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.  
   
-  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Nulla facilisi.  
-  
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
-  
 **Permission: current member**  
-[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
-  
-  
+[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.MethodOverload)  
 **Exceptions:**  
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
@@ -42,22 +35,16 @@ Tests overloaded methods.
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
   
-  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.  
   
-  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Nulla facilisi.  
-  
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
-  
 **Permission: MethodOverload(int,int)**  
-[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
-  
-  
+[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.MethodOverload)  
 **Exceptions:**  
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
@@ -72,22 +59,16 @@ Tests overloaded methods.
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
   
-  
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.  
   
-  
 **Misc:**  
 [Floating Comment] [Short] [One Line] Nulla facilisi.  
-  
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
-  
 **Permission: MethodOverload(int,int)**  
-[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
-  
-  
+[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.MethodOverload)  
 **Exceptions:**  
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 

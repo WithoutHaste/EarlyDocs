@@ -4,5 +4,4 @@
   
 Tests struct inheritance.  
   
-  
 
