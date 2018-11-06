@@ -250,3 +250,10 @@
 
   
 
+# Nested Types
+
+[EnumInClassSimple](Test.ClassSimpleComments.EnumInClassSimple.md)  
+[Summary Tag] [Short] [One Line] Pellentesque mattis lacus turpis, at elementum tortor eleifend eu.  
+  
+  
+

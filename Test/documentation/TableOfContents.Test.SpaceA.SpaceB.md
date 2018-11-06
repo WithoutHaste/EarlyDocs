@@ -1,6 +1,6 @@
 # Contents of Test.SpaceA.SpaceB
 
-[Contents of Test.SpaceA](TableOfContents.Test.SpaceA.md)
+[Return to Contents of Test.SpaceA](TableOfContents.Test.SpaceA.md)
 
 ## Concrete Types
 

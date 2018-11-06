@@ -13,3 +13,10 @@ Tests a class in a nested namespace.
 
 ## ClassInNamespaceB()
 
+# Nested Types
+
+[ClassInClass](Test.SpaceA.SpaceB.ClassInNamespaceB.ClassInClass.md)  
+Tests a class nested in a class.  
+  
+  
+

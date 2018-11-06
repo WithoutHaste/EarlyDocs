@@ -161,7 +161,7 @@ namespace EarlyDocs
 			MarkdownSection section = markdown.AddSection("Contents of " + _namespace.FullName);
 
 			if(parent != null)
-				section.AddInParagraph(new MarkdownInlineLink("Contents of " + parent.FullName, TableOfContentsFilename(parent)));
+				section.AddInParagraph(new MarkdownInlineLink("Return to Contents of " + parent.FullName, TableOfContentsFilename(parent)));
 
 			if(childNamespaces != null && childNamespaces.Count > 0)
 			{

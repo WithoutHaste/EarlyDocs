@@ -490,15 +490,17 @@ namespace EarlyDocs
 			if(type.OperatorMethods.Count > 0)
 				typeSection.Add(MethodOperatorsToMarkdown("Operators", type.OperatorMethods));
 
-			/* todo Nested Types: just a list of the type names with their summaries, linked to the type pages
-			if(NestedTypes.Count > 0)
+			if(type.NestedTypes.Count > 0)
 			{
-				MarkdownSection nestedTypeSection = typeSection.AddSection("Nested Types");
-				foreach(XmlType e in NestedTypes.OrderBy(m => m.Name))
+				MarkdownSection nestedTypeSection = new MarkdownSection("Nested Types");
+				typeSection.Add(nestedTypeSection);
+				foreach(DotNetType nestedType in type.NestedTypes.OrderBy(m => m.Name))
 				{
-					nestedTypeSection.AddSection(e.ToMarkdownSection());
+					nestedTypeSection.AddInLine(new MarkdownInlineLink(nestedType.Name.LocalName, nestedType.Name.FullName + Ext.MD));
+					nestedTypeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(nestedType.SummaryComments));
+					nestedTypeSection.Add(new MarkdownLine());
 				}
-			}*/
+			}
 
 			return typeSection;
 		}
