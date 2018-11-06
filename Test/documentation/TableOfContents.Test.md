@@ -1,4 +1,8 @@
-# Contents
+# Contents of Test
+
+## Namespaces
+
+[Test.SpaceA](TableOfContents.Test.SpaceA.md)  
 
 ## Concrete Types
 
@@ -44,14 +48,6 @@ Tests formatting errors in xml comments.
   
 [ClassInherits](Test.ClassInherits.md)  
 Tests class inheritance.  
-  
-  
-[ClassInNamespaceA](Test.SpaceA.ClassInNamespaceA.md)  
-Tests a class in a nested namespace.  
-  
-  
-[ClassInNamespaceB](Test.SpaceA.SpaceB.ClassInNamespaceB.md)  
-Tests a class in a nested namespace.  
   
   
 [ClassListComments](Test.ClassListComments.md)  
