@@ -10,9 +10,9 @@ namespace EarlyDocs
 {
 	public static class ConvertDotNet
 	{
-		public static List<IMarkdownInSection> DotNetCommentGroupToMarkdown(DotNetCommentGroup group)
+		public static List<IMarkdownInSection> DotNetCommentGroupToMarkdown(DotNetCommentGroup group, DotNetMember parent = null)
 		{
-			List<IMarkdownInSection> result = DotNetCommentsToMarkdown(group.Comments);
+			List<IMarkdownInSection> result = DotNetCommentsToMarkdown(group.Comments, parent);
 			result.Add(new MarkdownLine()); //because comment groups are like paragraphs, with space in between
 			return result;
 		}
@@ -21,9 +21,9 @@ namespace EarlyDocs
 		/// Returns the first line of comments produced by the group.
 		/// Intended for groups that boil down to a single line.
 		/// </summary>
-		public static List<IMarkdownInLine> DotNetCommentGroupToMarkdownLine(DotNetCommentGroup group)
+		public static List<IMarkdownInLine> DotNetCommentGroupToMarkdownLine(DotNetCommentGroup group, DotNetMember parent = null)
 		{
-			List<IMarkdownInSection> inSectionList = DotNetCommentGroupToMarkdown(group);
+			List<IMarkdownInSection> inSectionList = DotNetCommentGroupToMarkdown(group, parent);
 			List<IMarkdownInLine> line = new List<IMarkdownInLine>();
 
 			foreach(IMarkdownInSection inSection in inSectionList)
@@ -46,35 +46,41 @@ namespace EarlyDocs
 			return line;
 		}
 
-		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(List<DotNetComment> list)
+		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(List<DotNetComment> list, DotNetMember parent = null)
 		{
 			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
 
 			foreach(DotNetComment comment in list)
 			{
-				markdown.AddRange(DotNetCommentsToMarkdown(comment));
+				markdown.AddRange(DotNetCommentsToMarkdown(comment, parent));
 			}
 
 			return markdown;
 		}
 
-		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(DotNetComment comment)
+		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(DotNetComment comment, DotNetMember parent = null)
 		{
 			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
 
 			if(comment is DotNetCommentQualifiedLinkedGroup && (comment.Tag == CommentTag.See || comment.Tag == CommentTag.SeeAlso))
 			{
-				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLinkedGroup));
+				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLinkedGroup, parent));
 			}
 			else if(comment is DotNetCommentGroup)
 			{
-				markdown.AddRange(DotNetCommentGroupToMarkdown(comment as DotNetCommentGroup));
+				markdown.AddRange(DotNetCommentGroupToMarkdown(comment as DotNetCommentGroup, parent));
 			}
 			else if(comment is DotNetCommentText)
 			{
 				string text = (comment as DotNetCommentText).Text;
 				if(text.Contains("\n"))
+				{
+					if(text.EndsWith("\n"))
+					{
+						text = text.Substring(0, text.Length - 1);
+					}
 					markdown.AddRange(text.Split('\n').Select(t => new MarkdownLine(t)).ToArray());
+				}
 				else
 					markdown.Add(new MarkdownText(text));
 			}
@@ -88,7 +94,7 @@ namespace EarlyDocs
 			}
 			else if(comment is DotNetCommentQualifiedLink)
 			{
-				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLink));
+				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLink, parent));
 			}
 
 			return markdown;
@@ -143,17 +149,39 @@ namespace EarlyDocs
 			return list;
 		}
 
-		public static MarkdownLink DotNetCommentsToMarkdown(DotNetCommentQualifiedLink commentLink)
+		public static IMarkdownInLine DotNetCommentsToMarkdown(DotNetCommentQualifiedLink commentLink, DotNetMember parent = null)
 		{
-			string url = commentLink.Name.ToDisplayStringLink();
-			return new MarkdownInlineLink(url, url);
+			string _namespace = null;
+			if(parent != null)
+			{
+				if(parent is DotNetType)
+					_namespace = parent.Name.FullName;
+				else _namespace = parent.Name.FullNamespace;
+			}
+			string text = commentLink.Name.ToDisplayString(_namespace);
+			string url = commentLink.Name.ToStringLink();
+
+			if(url.Contains("http"))
+				return new MarkdownInlineLink(text, url);
+
+			if(url.EndsWith(Ext.MD))
+			{
+				if(parent == null || parent.Name != commentLink.Name.FullNamespace)
+					return new MarkdownInlineLink(text, url);
+			}
+
+			return new MarkdownText(text);
 		}
 
-		public static MarkdownLink DotNetCommentsToMarkdown(DotNetCommentQualifiedLinkedGroup commentGroup)
+		public static IMarkdownInLine DotNetCommentsToMarkdown(DotNetCommentQualifiedLinkedGroup commentGroup, DotNetMember parent = null)
 		{
-			string text = String.Join("", DotNetCommentGroupToMarkdownLine(commentGroup).Select(x => x.ToMarkdown(null)).ToArray());
-			string url = commentGroup.QualifiedLink.Name.ToDisplayStringLink();
-			return new MarkdownInlineLink(text, url);
+			string text = String.Join("", DotNetCommentGroupToMarkdownLine(commentGroup, parent).Select(x => x.ToMarkdown(null)).ToArray());
+			IMarkdownInLine plainLink = DotNetCommentsToMarkdown(commentGroup.QualifiedLink, parent);
+			if(plainLink is MarkdownInlineLink)
+			{
+				return new MarkdownInlineLink(text, (plainLink as MarkdownInlineLink).Url);
+			}
+			return new MarkdownText(text);
 		}
 
 	}

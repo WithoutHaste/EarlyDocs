@@ -249,6 +249,9 @@ namespace EarlyDocs
 
 		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
 		{
+			if(name is DotNetQualifiedMethodName)
+				return (name as DotNetQualifiedMethodName).ToDisplayString(_namespace);
+
 			if(name == null)
 				return "";
 
@@ -267,25 +270,62 @@ namespace EarlyDocs
 			return displayString;
 		}
 
+		public static string ToDisplayString(this DotNetQualifiedMethodName name, string _namespace = null)
+		{
+			if(name == null)
+				return "";
+
+			if(_namespace == null)
+				_namespace = "";
+			_namespace += ".";
+
+			string displayString = name.FullName;
+			if(displayString.StartsWith(_namespace))
+			{
+				displayString = displayString.Substring(_namespace.Length);
+			}
+
+			displayString += name.ParametersWithoutNames;
+
+			displayString = displayString.Replace("#cctor", name.FullNamespace.LocalName);
+			displayString = displayString.Replace("#ctor", name.FullNamespace.LocalName);
+
+			displayString = displayString.Replace("<", "&lt;").Replace(">", "&gt;"); //markdown understands html tags
+
+			return displayString;
+		}
+
 		public static string ToDisplayStringLink(this DotNetQualifiedName name, string _namespace = null)
 		{
 			if(name == _namespace)
 				return name.LocalName; //no need to link to same page, no need to show full path to current page
 
-			string displayString = name.ToDisplayString();
-			if(InternalFullNames.Contains(displayString))
-			{
-				displayString = String.Format("[{0}]({1})", name.ToDisplayString(_namespace), displayString + Ext.MD);
-			}
-			else if(name.IsInKnownMicrosoftNamespace())
+			string displayString = name.ToDisplayString(_namespace);
+			string linkString = name.ToStringLink();
+			return String.Format("[{0}]({1})", displayString, linkString);
+		}
+
+		public static string ToStringLink(this DotNetQualifiedName name)
+		{
+			string linkString = name.FullName;
+			string parentLinkString = name.FullNamespace?.FullName;
+			if(name.IsInKnownMicrosoftNamespace())
 			{
 				TurnQualifiedNameConverterOff();
 				//todo: convert generic type parameters from <T> style to `1 style
 				string microsoftDocumentation = @"https://docs.microsoft.com/en-us/dotnet/api/";
-				displayString = String.Format("[{0}]({1}{2})", displayString, microsoftDocumentation, name.FullName.ToMicrosoftLinkFormat());
+				linkString = String.Format("{0}{1}", microsoftDocumentation, name.FullName.ToMicrosoftLinkFormat());
 				TurnQualifiedNameConverterOn();
 			}
-			return displayString;
+			else if(InternalFullNames.Contains(linkString))
+			{
+				linkString += Ext.MD;
+			}
+			else if(InternalFullNames.Contains(parentLinkString))
+			{
+				linkString = parentLinkString + Ext.MD;
+			}
+			return linkString;
 		}
 
 		private static string ToMicrosoftLinkFormat(this string name)
@@ -439,7 +479,6 @@ namespace EarlyDocs
 				}
 			}
 
-			//todo: static constructors
 			if(type.ConstructorMethods.Count > 0)
 				typeSection.Add(MethodsToMarkdown("Constructors", type.ConstructorMethods.Cast<DotNetMethod>().ToList()));
 			if(type.DestructorMethod != null)
@@ -450,7 +489,6 @@ namespace EarlyDocs
 				typeSection.Add(MethodsToMarkdown("Static Methods", type.StaticMethods));
 			if(type.OperatorMethods.Count > 0)
 				typeSection.Add(MethodOperatorsToMarkdown("Operators", type.OperatorMethods));
-			//todo: destructors
 
 			/* todo Nested Types: just a list of the type names with their summaries, linked to the type pages
 			if(NestedTypes.Count > 0)
@@ -763,13 +801,8 @@ namespace EarlyDocs
 			if(member.FloatingComments.IsEmpty)
 				return;
 
-			if(member.Name.LocalName == "ClassSeeAlso")
-			{
-				int g = 8;
-			}
-
 			section.Add(new MarkdownLine(MarkdownText.Bold("Misc:")));
-			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.FloatingComments));
+			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.FloatingComments, member));
 		}
 
 		public static void AddTopLevelTypeParameters(MarkdownSection section, DotNetMember member)

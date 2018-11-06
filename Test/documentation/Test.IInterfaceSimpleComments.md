@@ -20,7 +20,7 @@
 
 ## current type
 
-[[Permission Tag] [References Interface] [Short] [One Line] Cras vel tortor ut massa efficitur sollicitudin.]([Test.IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md))
+[[Permission Tag] [References Interface] [Short] [One Line] Cras vel tortor ut massa efficitur sollicitudin.](Test.IInterfaceSimpleComments.md)
 
 # Properties
 
@@ -40,7 +40,7 @@
 [Example Tag] [Short] [One Line] Nulla ullamcorper est nec ipsum vehicula, eget tincidunt ante accumsan.  
   
 **Permission: current member**  
-[[Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.](Test.IInterfaceSimpleComments.PropertyA)  
+[[Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.](Test.IInterfaceSimpleComments.md)  
 
 # Methods
 
@@ -57,7 +57,7 @@
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.  
   
 **Permission: current member**  
-[[Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.](Test.IInterfaceSimpleComments.MethodA)  
+[[Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.](Test.IInterfaceSimpleComments.md)  
 **Exceptions:**  
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
 

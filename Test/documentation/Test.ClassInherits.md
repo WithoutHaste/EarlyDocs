@@ -24,7 +24,7 @@ Tests class inheritance.
 [Example Tag] [Short] [One Line] Nulla ullamcorper est nec ipsum vehicula, eget tincidunt ante accumsan.  
   
 **Permission: Test.IInterfaceSimpleComments.PropertyA**  
-[[Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.](Test.IInterfaceSimpleComments.PropertyA)  
+[[Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.](Test.IInterfaceSimpleComments.md)  
 
 # Methods
 
@@ -40,8 +40,8 @@ Tests class inheritance.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.  
   
-**Permission: Test.IInterfaceSimpleComments.MethodA()**  
-[[Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.](Test.IInterfaceSimpleComments.MethodA)  
+**Permission: Test.IInterfaceSimpleComments.MethodA()()**  
+[[Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.](Test.IInterfaceSimpleComments.md)  
 **Exceptions:**  
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
 
@@ -59,8 +59,8 @@ Tests class inheritance.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
   
-**Permission: Test.ClassSimpleComments.MethodVirtual()**  
-[[Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.](Test.ClassSimpleComments.MethodVirtual)  
+**Permission: Test.ClassSimpleComments.MethodVirtual()()**  
+[[Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
 * **Exception**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
 

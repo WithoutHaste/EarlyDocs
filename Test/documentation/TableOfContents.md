@@ -86,7 +86,7 @@ Tests sealed class.
   
   
 [ClassSeeAlso](Test.ClassSeeAlso.md)  
-Tests see and seealso tags, i.e. test links.  
+Tests see and seealso tags, i.e. tests links.  
   
   
 [ClassSimpleComments](Test.ClassSimpleComments.md)  

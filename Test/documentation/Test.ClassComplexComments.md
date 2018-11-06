@@ -56,7 +56,7 @@ class Program
         }  
     }  
 }  
-Proin sollicitudin non est eget semper. Suspendisse imperdiet turpis ac elit hendrerit dapibus ut a lacus. Curabitur pulvinar lacus at risus condimentum, eget ornare ligula tempus.    
+Proin sollicitudin non est eget semper. Suspendisse imperdiet turpis ac elit hendrerit dapibus ut a lacus. Curabitur pulvinar lacus at risus condimentum, eget ornare ligula tempus.  
 
 ## Example B:
 
@@ -66,16 +66,16 @@ Donec lobortis consequat ligula in faucibus. Ut vitae sapien vel lacus malesuada
   
     
 string[] lines = File.ReadAllLines("C:\\rearrange.txt");  
-              
+            
 Console.WriteLine("Length: {0}", lines.Length);  
 Console.WriteLine("First: {0}", lines[0]);  
-              
+            
 int count = 0;  
 foreach (string line in lines)  
 {  
    count++;  
 }  
-              
+            
 int c = 0;  
 for (int i = 0; i < lines.Length; i++)  
 {  
@@ -85,12 +85,12 @@ for (int i = 0; i < lines.Length; i++)
 
 # Methods
 
-## void MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, A y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
+## void MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, [A](A) y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
 
 **Exceptions:**  
-**IndexOutOfRangeException:** [[1st Exception Tag] [Has Example] Cras ante risus, sodales quis massa vel, pulvinar auctor ipsum.]([IndexOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/system.indexoutofrangeexception))**System.IO.FileNotFoundException:** [[2nd Exception Tag] [Has ParamRef] Nulla facilisi. Donec fermentum nisl felis,  ac  venenatis tellus tincidunt ultrices.]([System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception))**ArgumentException:** [[3rd Exception Tag] [Has TypeParamRef] Vestibulum ante ipsum primis in faucibus orci  luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.]([ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception))  
+**IndexOutOfRangeException:** [[1st Exception Tag] [Has Example] Cras ante risus, sodales quis massa vel, pulvinar auctor ipsum.](https://docs.microsoft.com/en-us/dotnet/api/system.indexoutofrangeexception)**System.IO.FileNotFoundException:** [[2nd Exception Tag] [Has ParamRef] Nulla facilisi. Donec fermentum nisl felis,  ac  venenatis tellus tincidunt ultrices.](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**ArgumentException:** [[3rd Exception Tag] [Has TypeParamRef] Vestibulum ante ipsum primis in faucibus orci  luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)  
 
-## void MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, A y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
+## void MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, [A](A) y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
 
 **Generic Type Parameters:**
 
@@ -99,14 +99,13 @@ for (int i = 0; i < lines.Length; i++)
   
 **Parameters:**  
 **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z**[Param Rag] [Has Example]   
-                
+    
 Maecenas molestie, nisi nec cursus malesuada, nisi est egestas lacus, mollis aliquam urna elit eu mauris. Maecenas lobortis congue nisi. Praesent tincidunt sagittis mi non semper.  
 Vestibulum convallis sapien eget nunc sagittis cursus. Pellentesque suscipit urna nulla,   
 non vestibulum enim tempus euismod. Suspendisse mattis purus at mauris imperdiet, vitae   
 volutpat urna commodo. Cras justo dolor, aliquet a nibh sed, porttitor fringilla odio.   
   
 Vestibulum metus lorem, pulvinar sed maximus ac, efficitur ac odio.  
-              
   
   
 

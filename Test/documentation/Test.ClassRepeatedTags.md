@@ -11,27 +11,27 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 ## current type
 
-[[1st Permission Tag] Aliquam diam ante, ornare et placerat sed, egestas at ante.]([Test.ClassRepeatedTags](Test.ClassRepeatedTags.md))
+[[1st Permission Tag] Aliquam diam ante, ornare et placerat sed, egestas at ante.](Test.ClassRepeatedTags.md)
 
 ## FieldRepeatedOnceOnlyTags
 
-[[2nd Permission Tag] Proin sit amet risus nec nulla hendrerit posuere.](Test.ClassRepeatedTags.FieldRepeatedOnceOnlyTags)
+[[2nd Permission Tag] Proin sit amet risus nec nulla hendrerit posuere.](Test.ClassRepeatedTags.md)
 
-## MethodMultipleExceptions()
+## MethodMultipleExceptions()()
 
-[[3rd Permission Tag] Donec volutpat dignissim vehicula.](Test.ClassRepeatedTags.MethodMultipleExceptions)
+[[3rd Permission Tag] Donec volutpat dignissim vehicula.](Test.ClassRepeatedTags.md)
 
 ## Test.ClassSimpleComments
 
-[[4th Permission Tag] Suspendisse varius ipsum at tortor hendrerit suscipit.]([Test.ClassSimpleComments](Test.ClassSimpleComments.md))
+[[4th Permission Tag] Suspendisse varius ipsum at tortor hendrerit suscipit.](Test.ClassSimpleComments.md)
 
 ## Test.ClassSimpleComments.IntegerProperty
 
-[[5th Permission Tag] Suspendisse potenti.](Test.ClassSimpleComments.IntegerProperty)
+[[5th Permission Tag] Suspendisse potenti.](Test.ClassSimpleComments.md)
 
-## Test.ClassSimpleComments.Finalize()
+## Test.ClassSimpleComments.Finalize()()
 
-[[6th Permission Tag] Suspendisse interdum, arcu a venenatis fringilla, elit velit mattis turpis, et gravida augue eros sed erat.](Test.ClassSimpleComments.Finalize)
+[[6th Permission Tag] Suspendisse interdum, arcu a venenatis fringilla, elit velit mattis turpis, et gravida augue eros sed erat.](Test.ClassSimpleComments.md)
 
 # Fields
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Test
 {
 	/// <summary>
-	/// Tests see and seealso tags, i.e. test links.
+	/// Tests see and seealso tags, i.e. tests links.
 	/// </summary>
 	/// <see cref="PropertyA"/> or <see cref="PropertyA">Local property</see>
 	/// <seealso cref="PropertyA"/> or <seealso cref="PropertyA">Local property</seealso>

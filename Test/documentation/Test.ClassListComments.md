@@ -41,7 +41,8 @@ Tests lists and tables in comments.
 
 1. **Header Term**: Header Description  
 2. **Term A**: Description A  
-3.   
+3. **
+**  
 4. **Term C**: Description C  
 
   
@@ -92,7 +93,8 @@ Tests lists and tables in comments.
 
 * **Header Term**: Header Description  
 * **Term A**: Description A  
-*   
+* **
+**  
 * **Term C**: Description C  
 
   

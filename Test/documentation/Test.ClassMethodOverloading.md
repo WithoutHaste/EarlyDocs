@@ -20,7 +20,7 @@ Tests overloaded methods.
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
 **Permission: current member**  
-[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.MethodOverload)  
+[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
 **Exceptions:**  
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
@@ -43,8 +43,8 @@ Tests overloaded methods.
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
-**Permission: MethodOverload(int,int)**  
-[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.MethodOverload)  
+**Permission: MethodOverload(int,int)(int,int)**  
+[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
 **Exceptions:**  
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
@@ -67,8 +67,8 @@ Tests overloaded methods.
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
-**Permission: MethodOverload(int,int)**  
-[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.MethodOverload)  
+**Permission: MethodOverload(int,int)(int,int)**  
+[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
 **Exceptions:**  
 * **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 

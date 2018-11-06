@@ -18,7 +18,7 @@
 
 ## current type
 
-[[Permission Tag] [References Enum] [Short] [One Line] Sed in turpis in mauris vulputate varius ut eu magna.]([Test.ClassSimpleComments.EnumInClassSimple](Test.ClassSimpleComments.EnumInClassSimple.md))
+[[Permission Tag] [References Enum] [Short] [One Line] Sed in turpis in mauris vulputate varius ut eu magna.](Test.ClassSimpleComments.EnumInClassSimple.md)
 
 # Constants
 
