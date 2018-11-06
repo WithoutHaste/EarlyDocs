@@ -70,6 +70,10 @@ namespace EarlyDocs
 			{
 				markdown.AddRange(DotNetCommentGroupToMarkdown(comment as DotNetCommentGroup, parent));
 			}
+			else if(comment is DotNetCommentCodeBlock)
+			{
+				markdown.Add(new MarkdownCodeBlock((comment as DotNetCommentCodeBlock).Text));
+			}
 			else if(comment is DotNetCommentText)
 			{
 				string text = (comment as DotNetCommentText).Text;
