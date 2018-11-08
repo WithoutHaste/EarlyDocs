@@ -33,7 +33,7 @@
 
 # Fields
 
-## [T](T) TField
+## T TField
 
 [Summary Tag] [Short] [One Line] Sed feugiat, velit vel convallis accumsan, magna dui ultrices lorem, nec sollicitudin lorem nisl sit amet justo.  
   
@@ -53,7 +53,7 @@
 
 # Properties
 
-## [T](T) this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
+## T this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
 
 [Summary Tag] [Short] [One Line] Nulla non metus at dui condimentum semper.  
   
@@ -71,7 +71,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Indexer Property] [Short] [One Line] Sed in sapien pretium, eleifend metus eu, posuere leo.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
 
-## [U](U) UProperty { get; set; }
+## U UProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Phasellus tellus orci, maximus sed suscipit eu, sollicitudin ut ipsum.  
   
@@ -129,7 +129,7 @@
 
   
 
-## ClassSimpleCommentsGeneric<T,U>([T](T) t, [U](U) u)
+## ClassSimpleCommentsGeneric<T,U>(T t, U u)
 
 [Summary Tag] [Short] [One Line] Phasellus interdum purus interdum dolor lacinia mollis.  
   
@@ -148,8 +148,8 @@
 
   
 **Parameters:**  
-* **[T](T) t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
-* **[U](U) u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
+* **T t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
+* **U u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
 
   
 
@@ -176,7 +176,7 @@
 
 # Methods
 
-## void MethodWithTypeParameters<A,B>([A](A) a, [B](B) b, [U](U) u)
+## void MethodWithTypeParameters<A,B>(A a, B b, U u)
 
 [Summary Tag] [Short] [One Line] Maecenas molestie purus id fermentum dictum.  
   
@@ -201,15 +201,15 @@
 
   
 **Parameters:**  
-* **[A](A) a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
-* **[B](B) b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
-* **[U](U) u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
+* **A a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
+* **B b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
+* **U u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
 
   
 
 # Static Methods
 
-## static U StaticMethodWithParametersWithReturn([T](T) t, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static U StaticMethodWithParametersWithReturn(T t, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Mauris malesuada varius risus eu condimentum.  
   
@@ -231,7 +231,7 @@
 
   
 **Parameters:**  
-* **[T](T) t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
+* **T t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
 * **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
 
   

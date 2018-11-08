@@ -302,6 +302,11 @@ namespace EarlyDocs
 
 			string displayString = name.ToDisplayString(_namespace);
 			string linkString = name.ToStringLink();
+
+			if(!linkString.EndsWith(Ext.MD) && !linkString.Contains("http")) //todo: refactor: duplicates logic from ConvertDotNet.DotNetCommentsToMarkdown
+			{
+				return displayString;
+			}
 			return String.Format("[{0}]({1})", displayString, linkString);
 		}
 

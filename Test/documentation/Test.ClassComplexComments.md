@@ -93,7 +93,7 @@ for (int i = 0; i < lines.Length; i++)
 
 # Methods
 
-## void MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, [A](A) y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
+## void MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, A y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
 
 ### Exceptions
 
@@ -117,7 +117,7 @@ vitae consectetur sem erat quis ipsum. Nam tincidunt non magna in mattis. Curabi
 
   
 
-## void MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, [A](A) y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
+## void MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, A y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
 
 ### Generic Type Parameters
 
