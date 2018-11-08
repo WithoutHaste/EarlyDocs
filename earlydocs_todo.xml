@@ -91,6 +91,23 @@ such as DotNetTypeExtensions</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">55</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">clean up all those extra empty lines in the results</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-08T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">52</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -1042,7 +1059,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">54</Data>
+          <Data ss:Type="Number">55</Data>
         </Cell>
       </Row>
       <Row>

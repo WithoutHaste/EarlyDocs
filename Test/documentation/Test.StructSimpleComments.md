@@ -79,7 +79,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.](Test.StructSimpleComments.md)  
 **Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.  
+* **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.  
 
   
 
@@ -98,7 +98,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.](Test.StructSimpleComments.md)  
 **Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.  
+* **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.  
 
   
 
@@ -122,7 +122,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Cras eget dignissim nisi, lacinia semper turpis.](Test.StructSimpleComments.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.  
 
   
 **Parameters:**  
@@ -151,7 +151,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Nunc ullamcorper egestas vulputate.](Test.StructSimpleComments.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.  
 
   
 **Parameters:**  

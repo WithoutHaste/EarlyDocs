@@ -43,7 +43,7 @@ Tests class inheritance.
 **Permission: Test.IInterfaceSimpleComments.MethodA()()**  
 [[Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.](Test.IInterfaceSimpleComments.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
 
   
 
@@ -62,7 +62,7 @@ Tests class inheritance.
 **Permission: Test.ClassSimpleComments.MethodVirtual()()**  
 [[Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
+* **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
 
   
 

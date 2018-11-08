@@ -97,7 +97,11 @@ namespace Test
 		{
 		}
 
-		/// <typeparam name="A">[TypeParam Tag] [Has Example] <example>Donec euismod mollis dui, non bibendum quam porta non.</example> Nunc mollis leo est, in bibendum lacus rhoncus maximus.</typeparam>
+		/// <typeparam name="A">
+		///		[TypeParam Tag] [Has Example] 
+		///		<example>Donec euismod mollis dui, non bibendum quam porta non.</example>
+		///		Nunc mollis leo est, in bibendum lacus rhoncus maximus.
+		///	</typeparam>
 		/// <param name="z">[Param Rag] [Has Example] 
 		///   <example>
 		///   Maecenas molestie, nisi nec cursus malesuada, nisi est egestas lacus, mollis aliquam urna elit eu mauris. Maecenas lobortis congue nisi. Praesent tincidunt sagittis mi non semper.

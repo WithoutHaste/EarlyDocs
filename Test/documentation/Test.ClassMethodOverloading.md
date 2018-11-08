@@ -22,7 +22,7 @@ Tests overloaded methods.
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
   
 **Parameters:**  
@@ -46,7 +46,7 @@ Tests overloaded methods.
 **Permission: MethodOverload(int,int)(int,int)**  
 [[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
   
 **Parameters:**  
@@ -70,7 +70,7 @@ Tests overloaded methods.
 **Permission: MethodOverload(int,int)(int,int)**  
 [[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
   
 **Parameters:**  

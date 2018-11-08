@@ -25,7 +25,7 @@ Tests operator overloading.
 **Permission: current member**  
 [[Permission Tag] [References Operator] [Short] [One Line] Interdum et malesuada fames ac ante ipsum primis in faucibus.](Test.ClassOperatorOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Sed ac molestie ante, vel porttitor neque.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Sed ac molestie ante, vel porttitor neque.  
 
   
 **Parameters:**  
@@ -51,7 +51,7 @@ Tests operator overloading.
 **Permission: current member**  
 [[Permission Tag] [References Operator] [Short] [One Line] Etiam dictum cursus elementum.](Test.ClassOperatorOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Donec malesuada ex sit amet mollis facilisis.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Donec malesuada ex sit amet mollis facilisis.  
 
   
 **Parameters:**  
@@ -77,7 +77,7 @@ Tests operator overloading.
 **Permission: current member**  
 [[Permission Tag] [References Operator] [Short] [One Line] Phasellus euismod quam ut lacus tincidunt suscipit.](Test.ClassOperatorOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Nullam eu libero arcu.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Nullam eu libero arcu.  
 
   
 **Parameters:**  
@@ -103,7 +103,7 @@ Tests operator overloading.
 **Permission: current member**  
 [[Permission Tag] [References Operator] [Short] [One Line] Donec vel dictum velit, eget porta arcu.](Test.ClassOperatorOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Aliquam hendrerit, ligula quis faucibus venenatis, libero leo venenatis lacus, vulputate euismod erat turpis nec ex.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Aliquam hendrerit, ligula quis faucibus venenatis, libero leo venenatis lacus, vulputate euismod erat turpis nec ex.  
 
   
 **Parameters:**  
@@ -129,7 +129,7 @@ Tests operator overloading.
 **Permission: current member**  
 [[Permission Tag] [References Operator] [Short] [One Line] Sed at nisi leo.](Test.ClassOperatorOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Quisque vitae purus elit.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Quisque vitae purus elit.  
 
   
 **Parameters:**  
@@ -156,7 +156,7 @@ Tests operator overloading.
 **Permission: current member**  
 [[Permission Tag] [References Operator] [Short] [One Line] Pellentesque viverra rutrum molestie.](Test.ClassOperatorOverloading.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Curabitur et lacinia felis.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Curabitur et lacinia felis.  
 
   
 **Parameters:**  

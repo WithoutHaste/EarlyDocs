@@ -841,9 +841,9 @@ namespace EarlyDocs
 			if(member.TypeParameterComments.Count == 0)
 				return;
 
-			section.Add(new MarkdownParagraph(MarkdownText.Bold("Generic Type Parameters:")));
 			if(EachCommentIsOneTextComment(member.ParameterComments))
 			{
+				section.Add(new MarkdownParagraph(MarkdownText.Bold("Generic Type Parameters:")));
 				MarkdownList list = new MarkdownList(isNumbered: false);
 				section.Add(list);
 				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
@@ -855,10 +855,11 @@ namespace EarlyDocs
 			}
 			else
 			{
+				MarkdownSection parametersSection = section.AddSection("Generic Type Parameters");
 				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
 				{
-					section.Add(MarkdownText.Bold(commentParameter.ToHeader()));
-					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
+					MarkdownSection parameterSection = parametersSection.AddSection(commentParameter.ToHeader());
+					AddGroupComments(parameterSection, commentParameter, member);
 				}
 			}
 			section.Add(new MarkdownLine());
@@ -906,9 +907,9 @@ namespace EarlyDocs
 			if(method.ParameterComments.Count == 0)
 				return;
 
-			section.Add(new MarkdownLine(MarkdownText.Bold("Parameters:")));
 			if(EachCommentIsOneTextComment(method.ParameterComments))
 			{
+				section.Add(new MarkdownLine(MarkdownText.Bold("Parameters:")));
 				MarkdownList list = new MarkdownList(isNumbered: false);
 				section.Add(list);
 				foreach(DotNetParameter parameter in method.MethodName.Parameters) //display in same order as in method signature
@@ -924,14 +925,15 @@ namespace EarlyDocs
 			}
 			else
 			{
+				MarkdownSection parametersSection = section.AddSection("Parameters");
 				foreach(DotNetParameter parameter in method.MethodName.Parameters) //display in same order as in method signature; todo: repeated generator structure
 				{
 					DotNetCommentParameter commentParameter = method.ParameterComments.FirstOrDefault(c => c.ParameterLink.Name == parameter.Name);
 					if(commentParameter == null)
 						continue;
 
-					section.Add(MarkdownText.Bold(parameter.ToHeader(method.Name.FullNamespace)));
-					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
+					MarkdownSection parameterSection = parametersSection.AddSection(parameter.ToHeader(method.Name.FullNamespace));
+					AddGroupComments(parameterSection, commentParameter, method);
 				}
 			}
 			section.Add(new MarkdownLine());
@@ -971,28 +973,47 @@ namespace EarlyDocs
 			if(member.ExceptionComments.Count == 0)
 				return;
 
-			section.Add(new MarkdownLine(MarkdownText.Bold("Exceptions:")));
-
 			if(EachCommentIsOneTextComment(member.ExceptionComments))
 			{
+				section.Add(new MarkdownLine(MarkdownText.Bold("Exceptions:")));
 				MarkdownList list = new MarkdownList(isNumbered: false);
 				section.Add(list);
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
-					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(comment.QualifiedLink.Name.FullName), new MarkdownText(": "));
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(comment.QualifiedLink.Name.ToDisplayStringLink(member.Name)), new MarkdownText(": "));
 					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(comment));
 					list.Add(line);
 				}
 			}
 			else
 			{
+				MarkdownSection exceptionsSection = section.AddSection("Exceptions");
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
-					section.Add(MarkdownText.Bold(comment.QualifiedLink.Name.FullName + ":"), new MarkdownText(" "));
-					section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+					MarkdownSection exceptionSection = exceptionsSection.AddSection(comment.QualifiedLink.Name.ToDisplayStringLink(member.Name));
+					AddGroupComments(exceptionSection, comment, member);
 				}
 			}
 			section.Add(new MarkdownLine());
+		}
+
+		private static void AddGroupComments(MarkdownSection section, DotNetCommentLinkedGroup group, DotNetMember parent = null)
+		{
+			foreach(DotNetComment comment in group.Comments.Where(c => c.Tag != CommentTag.Example))
+			{
+				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment, parent));
+			}
+			section.Add(new MarkdownLine());
+
+			//todo: refactor: merge this with method AddExamples somehow
+			AlphabetCounter counter = new AlphabetCounter();
+			foreach(DotNetComment comment in group.Comments.Where(c => c.Tag == CommentTag.Example))
+			{
+				string exampleHeader = "Example " + counter.Value + ":";
+				section.AddInLine(MarkdownText.Bold(exampleHeader));
+				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				counter++;
+			}
 		}
 
 		/// <summary>

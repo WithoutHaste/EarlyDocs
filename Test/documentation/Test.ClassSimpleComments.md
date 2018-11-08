@@ -113,7 +113,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Vivamus in lectus facilisis, ornare augue nec, semper dolor.  
+* **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Vivamus in lectus facilisis, ornare augue nec, semper dolor.  
 
   
 
@@ -132,7 +132,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Constructor] [Short] [One Line] Nunc porta lectus commodo rutrum gravida.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.  
+* **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.  
 
   
 
@@ -151,7 +151,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Constructor] [Short] [One Line] Nullam viverra placerat lacus, vitae bibendum justo interdum quis.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.  
 
   
 **Parameters:**  
@@ -177,7 +177,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Destructor] [Short] [One Line] Duis accumsan tempor erat ac vehicula.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
-* **IndexOutOfRangeException**: [Exception Tag] [Short] [One Line] Duis eu pellentesque orci, nec lobortis magna.  
+* **[IndexOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/system.indexoutofrangeexception)**: [Exception Tag] [Short] [One Line] Duis eu pellentesque orci, nec lobortis magna.  
 
   
 
@@ -198,7 +198,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
+* **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
 
   
 
@@ -217,7 +217,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Suspendisse auctor purus sit amet eros iaculis semper.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Donec id eros eleifend, eleifend justo sed, laoreet ligula.  
 
   
 
@@ -241,7 +241,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] In pharetra magna id lorem fermentum rutrum.](Test.ClassSimpleComments.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.  
 
   
 **Parameters:**  

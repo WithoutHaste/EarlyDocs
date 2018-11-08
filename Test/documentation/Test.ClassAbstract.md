@@ -122,7 +122,7 @@ Tests abstract classes and members.
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] In id facilisis libero.](Test.ClassAbstract.md)  
 **Exceptions:**  
-* **System.IO.FileNotFoundException**: [Exception Tag] [Short] [One Line] Cras sed diam ipsum.  
+* **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [Exception Tag] [Short] [One Line] Cras sed diam ipsum.  
 
   
 
@@ -144,7 +144,7 @@ Tests abstract classes and members.
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Sed molestie, sapien non lobortis cursus, elit neque rhoncus nunc, sit amet pellentesque ex mauris vel velit.](Test.ClassAbstract.md)  
 **Exceptions:**  
-* **System.IO.FileNotFoundException**: [Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.  
+* **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.  
 
   
 

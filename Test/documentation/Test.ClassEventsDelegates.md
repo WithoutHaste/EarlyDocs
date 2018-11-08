@@ -98,7 +98,7 @@ Tests events and delegates.
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Nam vitae risus quis est aliquet egestas.](Test.ClassEventsDelegates.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
 
   
 **Parameters:**  
@@ -121,7 +121,7 @@ Tests events and delegates.
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] In aliquet libero in euismod rutrum.](Test.ClassEventsDelegates.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Sed fermentum ornare nisi, et vestibulum lorem tincidunt in.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Sed fermentum ornare nisi, et vestibulum lorem tincidunt in.  
 
   
 **Parameters:**  

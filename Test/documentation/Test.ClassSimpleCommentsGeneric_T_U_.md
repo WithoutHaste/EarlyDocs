@@ -106,7 +106,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
 **Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Nunc ornare dignissim erat, id malesuada urna elementum et.  
+* **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Nunc ornare dignissim erat, id malesuada urna elementum et.  
 
   
 
@@ -125,7 +125,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
 **Exceptions:**  
-* **Exception**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
+* **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
 
   
 
@@ -144,7 +144,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Constructor] [Short] [One Line] Pellentesque vitae metus nec sem tristique mollis pharetra ac magna.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
 
   
 **Parameters:**  
@@ -170,7 +170,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Destructor] [Short] [One Line] Nulla eleifend euismod blandit.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
 **Exceptions:**  
-* **IndexOutOfRangeException**: [Exception Tag] [Short] [One Line] Phasellus id tellus odio.  
+* **[IndexOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/system.indexoutofrangeexception)**: [Exception Tag] [Short] [One Line] Phasellus id tellus odio.  
 
   
 
@@ -191,7 +191,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Etiam ut dolor bibendum, malesuada ligula eu, maximus sapien.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Nunc purus libero, scelerisque a felis et, feugiat ultrices ipsum.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Nunc purus libero, scelerisque a felis et, feugiat ultrices ipsum.  
 
   
 **Generic Type Parameters:**
@@ -227,7 +227,7 @@
 **Permission: current member**  
 [[Permission Tag] [References Method] [Short] [One Line] Phasellus sollicitudin, augue non dictum varius, diam urna aliquet odio, ut tincidunt leo sem id leo.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
 **Exceptions:**  
-* **ArgumentException**: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
 
   
 **Parameters:**  

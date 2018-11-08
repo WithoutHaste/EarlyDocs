@@ -84,11 +84,11 @@ vehicula facilisis ipsum, vel faucibus justo.
 ## void MethodMultipleExceptions()
 
 **Exceptions:**  
-* **ArgumentException**: [1st Exception Tag] Nullam feugiat odio felis.  
-* **ArgumentException**: [2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.  
-* **ArgumentException**: [3rd Exception Tag] Nulla sed magna sed velit dictum auctor.  
-* **System.IO.FileNotFoundException**: [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.  
-* **Test.ClassException**: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [1st Exception Tag] Nullam feugiat odio felis.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [3rd Exception Tag] Nulla sed magna sed velit dictum auctor.  
+* **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.  
+* **[Test.ClassException](Test.ClassException.md)**: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
 
   
 
