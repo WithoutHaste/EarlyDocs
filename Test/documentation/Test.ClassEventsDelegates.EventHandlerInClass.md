@@ -20,7 +20,7 @@
 
 ## current member
 
-[[Permission Tag] [References Delegate] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.](Test.ClassEventsDelegates.EventHandlerInClass.md)
+[Permission Tag] [References Delegate] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.
 
 # Parameters
 

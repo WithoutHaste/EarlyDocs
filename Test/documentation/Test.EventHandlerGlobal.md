@@ -20,7 +20,7 @@
 
 ## current member
 
-[[Permission Tag] [References Delegate] [Short] [One Line] In commodo, arcu eget vulputate faucibus, justo libero varius nulla, sed tempus nisl nibh in augue.](Test.EventHandlerGlobal.md)
+[Permission Tag] [References Delegate] [Short] [One Line] In commodo, arcu eget vulputate faucibus, justo libero varius nulla, sed tempus nisl nibh in augue.
 
 # Parameters
 

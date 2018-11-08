@@ -15,7 +15,7 @@ namespace Test
 	/// <example>[Example Tag] [Short] [One Line] Nunc suscipit ipsum sed nisi interdum euismod.</example>
 	/// <permission cref="StructSimpleComments">[Permission Tag] [References Struct] [Short] [One Line] Integer egestas dictum mollis.</permission>
 	/// [Floating Comment] [Short] [One Line] Sed sit amet dapibus nibh, non luctus quam.
-	public class StructSimpleComments
+	public struct StructSimpleComments
 	{
 		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Sed at molestie metus.
@@ -29,7 +29,7 @@ namespace Test
 		/// <example>[Example Tag] [Short] [One Line] Curabitur ullamcorper a turpis at luctus.</example>
 		/// <permission cref="IntegerField">[Permission Tag] [References Field] [Short] [One Line] Vivamus lobortis vehicula hendrerit.</permission>
 		/// [Floating Comment] [Short] [One Line] Suspendisse eget placerat tortor.
-		public int IntegerField = 0;
+		public int IntegerField;
 
 		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.
@@ -66,11 +66,13 @@ namespace Test
 		/// [Remarks Tag] [Short] [One Line] Mauris condimentum libero nibh, sit amet hendrerit nulla tempus ut.
 		/// </remarks>
 		/// <example>[Example Tag] [Short] [One Line] Nunc vel ullamcorper augue.</example>
-		/// <permission cref="StructSimpleComments()">[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.</permission>
+		/// <permission cref="StructSimpleComments(int)">[Permission Tag] [References Constructor] [Short] [One Line] Sed gravida tristique diam quis rutrum.</permission>
 		/// <exception cref="Exception">[Exception Tag] [Short] [One Line] Fusce tristique efficitur ligula, vulputate gravida augue suscipit at.</exception>
 		/// [Floating Comment] [Short] [One Line] Vivamus tristique aliquet hendrerit.
-		public StructSimpleComments()
+		public StructSimpleComments(int i)
 		{
+			IntegerField = i;
+			StringProperty = "0";
 		}
 
 		/// <summary>

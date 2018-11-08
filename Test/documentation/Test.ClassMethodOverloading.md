@@ -20,7 +20,7 @@ Tests overloaded methods.
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
 **Permission: current member**  
-[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
+[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
@@ -44,7 +44,7 @@ Tests overloaded methods.
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
 **Permission: MethodOverload(int,int)(int,int)**  
-[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
+[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 
@@ -68,7 +68,7 @@ Tests overloaded methods.
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
   
 **Permission: MethodOverload(int,int)(int,int)**  
-[[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.](Test.ClassMethodOverloading.md)  
+[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
 

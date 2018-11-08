@@ -9,7 +9,16 @@ namespace Test
 	/// <summary>
 	/// Tests struct inheritance.
 	/// </summary>
-	public class StructInherits : StructSimpleComments
+	public struct StructInherits : IInterfaceSimpleComments
 	{
+		/// <summary>
+		/// [Summary Tag] [Does Not Inherit]
+		/// </summary>
+		public int PropertyA { get; set; }
+
+		/// <summary>
+		/// [Summary Tag] [Does Not Inherit]
+		/// </summary>
+		public void MethodA() { }
 	}
 }

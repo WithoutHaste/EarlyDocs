@@ -25,11 +25,11 @@
 
 ## current type
 
-[[Permission Tag] [References Generic Class] [Short] [One Line] Vestibulum at justo quis velit finibus imperdiet.](Test.ClassSimpleCommentsGeneric<T,U>.md)
+[Permission Tag] [References Generic Class] [Short] [One Line] Vestibulum at justo quis velit finibus imperdiet.
 
 ## TField
 
-[[Permission Tag] [References Field] [Short] [One Line] Vestibulum malesuada volutpat tincidunt.](Test.ClassSimpleCommentsGeneric<T,U>.md)
+[Permission Tag] [References Field] [Short] [One Line] Vestibulum malesuada volutpat tincidunt.
 
 # Fields
 
@@ -49,7 +49,7 @@
 [Example Tag] [Short] [One Line] Fusce ut suscipit ante.  
   
 **Permission: current member**  
-[[Permission Tag] [References Field] [Short] [One Line] Vivamus eget fermentum ligula.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Field] [Short] [One Line] Vivamus eget fermentum ligula.  
 
 # Properties
 
@@ -69,7 +69,7 @@
 [Example Tag] [Short] [One Line] Nunc quis odio dui.  
   
 **Permission: current member**  
-[[Permission Tag] [References Indexer Property] [Short] [One Line] Sed in sapien pretium, eleifend metus eu, posuere leo.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Indexer Property] [Short] [One Line] Sed in sapien pretium, eleifend metus eu, posuere leo.  
 
 ## U UProperty { get; set; }
 
@@ -87,7 +87,7 @@
 [Example Tag] [Short] [One Line] Nam et elit et arcu gravida ultricies eget in lacus.  
   
 **Permission: current member**  
-[[Permission Tag] [References Property] [Short] [One Line] Etiam sit amet ligula vel ligula feugiat dictum ac vitae eros.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Property] [Short] [One Line] Etiam sit amet ligula vel ligula feugiat dictum ac vitae eros.  
 
 # Constructors
 
@@ -104,7 +104,7 @@
 [Example Tag] [Short] [One Line] Mauris quis metus convallis, consequat dui viverra, commodo sapien.  
   
 **Permission: current member**  
-[[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.  
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Nunc ornare dignissim erat, id malesuada urna elementum et.  
 
@@ -123,7 +123,7 @@
 [Example Tag] [Short] [One Line] Phasellus bibendum mauris eget justo tempor, non imperdiet dolor maximus.  
   
 **Permission: current member**  
-[[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Constructor] [Short] [One Line] Aenean nec sollicitudin metus.  
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
 
@@ -142,7 +142,7 @@
 [Example Tag] [Short] [One Line] In gravida, ex accumsan pellentesque pretium, elit ex pharetra arcu, feugiat maximus dui est nec ligula.  
   
 **Permission: current member**  
-[[Permission Tag] [References Constructor] [Short] [One Line] Pellentesque vitae metus nec sem tristique mollis pharetra ac magna.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Constructor] [Short] [One Line] Pellentesque vitae metus nec sem tristique mollis pharetra ac magna.  
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
 
@@ -168,7 +168,7 @@
 [Example Tag] [Short] [One Line] Praesent ligula enim, mattis et justo vel, tempor ultrices nunc.  
   
 **Permission: current member**  
-[[Permission Tag] [References Destructor] [Short] [One Line] Nulla eleifend euismod blandit.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Destructor] [Short] [One Line] Nulla eleifend euismod blandit.  
 **Exceptions:**  
 * **[IndexOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/system.indexoutofrangeexception)**: [Exception Tag] [Short] [One Line] Phasellus id tellus odio.  
 
@@ -189,7 +189,7 @@
 [Example Tag] [Short] [One Line] Vivamus ultrices tristique est ultrices bibendum.  
   
 **Permission: current member**  
-[[Permission Tag] [References Method] [Short] [One Line] Etiam ut dolor bibendum, malesuada ligula eu, maximus sapien.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Method] [Short] [One Line] Etiam ut dolor bibendum, malesuada ligula eu, maximus sapien.  
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Nunc purus libero, scelerisque a felis et, feugiat ultrices ipsum.  
 
@@ -225,7 +225,7 @@
 [Example Tag] [Short] [One Line] Fusce scelerisque, sem ut mattis condimentum, arcu ligula egestas mi, eu vulputate turpis ante ut purus.  
   
 **Permission: current member**  
-[[Permission Tag] [References Method] [Short] [One Line] Phasellus sollicitudin, augue non dictum varius, diam urna aliquet odio, ut tincidunt leo sem id leo.](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[Permission Tag] [References Method] [Short] [One Line] Phasellus sollicitudin, augue non dictum varius, diam urna aliquet odio, ut tincidunt leo sem id leo.  
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
 

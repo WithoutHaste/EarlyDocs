@@ -1,5 +1,8 @@
 # EnumInClassSimple
 
+**Struct**  
+**Implements:** [IComparable](https://docs.microsoft.com/en-us/dotnet/api/system.icomparable), [IFormattable](https://docs.microsoft.com/en-us/dotnet/api/system.iformattable), [IConvertible](https://docs.microsoft.com/en-us/dotnet/api/system.iconvertible)  
+  
 [Summary Tag] [Short] [One Line] Pellentesque mattis lacus turpis, at elementum tortor eleifend eu.  
   
 **Remarks:**  
@@ -18,27 +21,27 @@
 
 ## current type
 
-[[Permission Tag] [References Enum] [Short] [One Line] Sed in turpis in mauris vulputate varius ut eu magna.](Test.ClassSimpleComments.EnumInClassSimple.md)
+[Permission Tag] [References Enum] [Short] [One Line] Sed in turpis in mauris vulputate varius ut eu magna.
 
-# Constants
+# Fields
 
-## 0: Invalid
-
-[Summary Tag] [Short] [One Line] Nulla facilisi.  
-  
-
-## 1: Aliquam
+## const EnumInClassSimple Aliquam
 
 [Summary Tag] [Short] [One Line] Aliquam egestas magna vel eros aliquet, sed ultricies est faucibus.  
   
 
-## 2: Suscipit
-
-[Summary Tag] [Short] [One Line] Praesent non nibh a velit lobortis commodo.  
-  
-
-## 3: Efficitur
+## const EnumInClassSimple Efficitur
 
 [Summary Tag] [Short] [One Line] Vivamus sed dui tristique, auctor augue a, bibendum sem.  
+  
+
+## const EnumInClassSimple Invalid
+
+[Summary Tag] [Short] [One Line] Nulla facilisi.  
+  
+
+## const EnumInClassSimple Suscipit
+
+[Summary Tag] [Short] [One Line] Praesent non nibh a velit lobortis commodo.  
   
 

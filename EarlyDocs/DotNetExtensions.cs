@@ -609,14 +609,15 @@ namespace EarlyDocs
 				case TypeCategory.Interface: parent.Add(new MarkdownLine(MarkdownText.Bold("Interface"))); changeMade = true; break;
 				case TypeCategory.Abstract: parent.Add(new MarkdownLine(MarkdownText.Bold("Abstract"))); changeMade = true; break;
 				case TypeCategory.Enum: parent.Add(new MarkdownLine(MarkdownText.Bold("Enumeration"))); changeMade = true; break;
+				case TypeCategory.Struct: parent.Add(new MarkdownLine(MarkdownText.Bold("Struct"))); changeMade = true; break;
 			}
-			if(type.IsSealed && type.Category != TypeCategory.Static)
+			if(type.IsSealed && type.Category != TypeCategory.Static && type.Category != TypeCategory.Struct)
 			{
 				parent.Add(new MarkdownLine(MarkdownText.Bold("Sealed")));
 				changeMade = true;
 			}
 
-			if(type.BaseType != null)
+			if(type.BaseType != null && type.Category != TypeCategory.Struct)
 			{
 				MarkdownLine inheritanceLine = new MarkdownLine(type.BaseType.Name.ToDisplayStringLink(type.Name.FullNamespace));
 				DotNetBaseType baseType = type.BaseType.BaseType;
@@ -772,7 +773,7 @@ namespace EarlyDocs
 					}
 				}
 				MarkdownSection permissionSection = permissionsSection.AddSection(permissionHeader);
-				permissionSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				permissionSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment.Comments));
 			}
 		}
 
@@ -798,7 +799,7 @@ namespace EarlyDocs
 					}
 				}
 				section.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
-				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment.Comments));
 				section.Add(new MarkdownLine());
 			}
 		}

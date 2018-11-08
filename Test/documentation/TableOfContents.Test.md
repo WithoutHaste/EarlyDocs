@@ -93,14 +93,6 @@ Tests see and seealso tags, i.e. tests links.
 [Summary Tag] [Short] [One Line] Cras suscipit et sapien ac tincidunt.  
   
   
-[StructInherits](Test.StructInherits.md)  
-Tests struct inheritance.  
-  
-  
-[StructSimpleComments](Test.StructSimpleComments.md)  
-[Summary Tag] [Short] [One Line] Donec porttitor mi in odio fermentum lobortis.  
-  
-  
 
 ## Static Types
 
@@ -124,20 +116,6 @@ Tests interface inheritance.
   
 [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md)  
 [Summary Tag] [Short] [One Line] Cras posuere mattis nisi, sed porta libero auctor eu.  
-  
-  
-
-## Enums
-
-[EnumGlobalComplex](Test.EnumGlobalComplex.md)  
-Tests an enum declared in a namespace with complex comments  
-  
-  
-[EnumGlobalInternal](Test.EnumGlobalInternal.md)  
-  
-  
-[EnumGlobalSimple](Test.EnumGlobalSimple.md)  
-Tests an enum declared in a namespace with simple comments.  
   
   
 
