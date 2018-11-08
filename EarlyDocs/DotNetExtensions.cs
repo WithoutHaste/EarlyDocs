@@ -539,7 +539,14 @@ namespace EarlyDocs
 			string fullHeader = header;
 			if(method is DotNetDelegate)
 			{
-				header = method.Name.LocalName;
+				if(InternalFullNames.Contains(method.Name.FullNamespace.FullName))
+				{
+					header = String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, method.Name.FullNamespace + Ext.MD, method.Name.LocalName);
+				}
+				else
+				{
+					header = String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(method.Name.FullNamespace), method.Name.LocalName);
+				}
 			}
 
 			MarkdownSection memberSection = new MarkdownSection(header);

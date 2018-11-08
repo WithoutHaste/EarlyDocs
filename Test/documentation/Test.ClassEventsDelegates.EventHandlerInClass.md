@@ -1,4 +1,4 @@
-# EventHandlerInClass
+# [Test.ClassEventsDelegates](Test.ClassEventsDelegates.md).EventHandlerInClass
 
 **delegate void EventHandlerInClass([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**
 

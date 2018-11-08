@@ -158,10 +158,11 @@ namespace EarlyDocs
 			List<DotNetDelegate> _delegates = xmlDocumentation.Delegates.Where(d => d.Name.FullNamespace == _namespace).ToList();
 
 			MarkdownFile markdown = new MarkdownFile();
-			MarkdownSection section = markdown.AddSection("Contents of " + _namespace.FullName);
-
+			string header = "Contents of " + _namespace.FullName;
 			if(parent != null)
-				section.AddInParagraph(new MarkdownInlineLink("Return to Contents of " + parent.FullName, TableOfContentsFilename(parent)));
+				header = String.Format("Contents of [{0}]({1}).{2}", parent.FullName, TableOfContentsFilename(parent), _namespace.LocalName);
+
+			MarkdownSection section = markdown.AddSection(header);
 
 			if(childNamespaces != null && childNamespaces.Count > 0)
 			{

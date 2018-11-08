@@ -529,6 +529,23 @@ https://visualstudiomagazine.com/articles/2017/02/21/vs-dotnet-code-documentatio
           <Data ss:Type="DateTime">2018-10-10T00:00:00.000</Data>
         </Cell>
       </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">57</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">support linking back to namespace table of contents when there is an extra segment between main namespace and type name</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-08T00:00:00.000</Data>
+        </Cell>
+      </Row>
     </Table>
     <x:WorksheetOptions />
   </ss:Worksheet>
@@ -1078,7 +1095,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">56</Data>
+          <Data ss:Type="Number">57</Data>
         </Cell>
       </Row>
       <Row>

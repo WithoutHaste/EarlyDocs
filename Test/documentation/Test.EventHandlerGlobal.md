@@ -1,4 +1,4 @@
-# EventHandlerGlobal
+# [Test](TableOfContents.Test.md).EventHandlerGlobal
 
 **delegate EventHandler EventHandlerGlobal([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**
 

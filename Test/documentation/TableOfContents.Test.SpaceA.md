@@ -1,6 +1,4 @@
-# Contents of Test.SpaceA
-
-[Return to Contents of Test](TableOfContents.Test.md)
+# Contents of [Test](TableOfContents.Test.md).SpaceA
 
 ## Namespaces
 
