@@ -1,4 +1,4 @@
-# ClassSeeAlso
+# [Test](TableOfContents.Test.md).ClassSeeAlso
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   

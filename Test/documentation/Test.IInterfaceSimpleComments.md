@@ -1,4 +1,4 @@
-# IInterfaceSimpleComments
+# [Test](TableOfContents.Test.md).IInterfaceSimpleComments
 
 **Interface**  
   

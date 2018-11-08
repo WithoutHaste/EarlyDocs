@@ -1,4 +1,4 @@
-# ClassCommonTypeAliases
+# [Test](TableOfContents.Test.md).ClassCommonTypeAliases
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   

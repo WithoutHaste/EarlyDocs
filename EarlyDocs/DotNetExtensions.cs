@@ -404,7 +404,7 @@ namespace EarlyDocs
 
 		public static MarkdownSection ToMarkdownSection(this DotNetType type)
 		{
-			MarkdownSection typeSection = new MarkdownSection(type.Name.LocalName);
+			MarkdownSection typeSection = new MarkdownSection(String.Format("[{0}]({1}).{2}", type.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(type.Name.FullNamespace), type.Name.LocalName));
 			AddPreSummary(typeSection, type);
 			AddSummary(typeSection, type as DotNetMember);
 			AddRemarks(typeSection, type as DotNetMember);

@@ -1,4 +1,4 @@
-# StructInherits
+# [Test](TableOfContents.Test.md).StructInherits
 
 **Struct**  
 **Implements:** [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md)  

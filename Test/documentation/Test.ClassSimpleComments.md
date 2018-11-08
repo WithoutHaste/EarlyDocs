@@ -1,4 +1,4 @@
-# ClassSimpleComments
+# [Test](TableOfContents.Test.md).ClassSimpleComments
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   

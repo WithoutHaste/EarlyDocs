@@ -1,4 +1,4 @@
-# ClassInherits
+# [Test](TableOfContents.Test.md).ClassInherits
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [ClassSimpleComments](Test.ClassSimpleComments.md)  
 **Implements:** [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md)  

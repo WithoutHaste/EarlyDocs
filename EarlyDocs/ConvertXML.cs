@@ -126,7 +126,7 @@ namespace EarlyDocs
 			}
 		}
 
-		private string TableOfContentsFilename(DotNetQualifiedName _namespace)
+		internal static string TableOfContentsFilename(DotNetQualifiedName _namespace)
 		{
 			return "TableOfContents." + _namespace.FullName + Ext.MD;
 		}

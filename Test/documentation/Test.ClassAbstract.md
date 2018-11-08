@@ -1,4 +1,4 @@
-# ClassAbstract
+# [Test](TableOfContents.Test.md).ClassAbstract
 
 **Abstract**  
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  

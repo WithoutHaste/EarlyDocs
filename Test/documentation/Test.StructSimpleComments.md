@@ -1,4 +1,4 @@
-# StructSimpleComments
+# [Test](TableOfContents.Test.md).StructSimpleComments
 
 **Struct**  
   

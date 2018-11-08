@@ -1,4 +1,4 @@
-# ClassFormattingErrors
+# [Test](TableOfContents.Test.md).ClassFormattingErrors
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   

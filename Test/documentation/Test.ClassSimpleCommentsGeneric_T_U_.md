@@ -1,4 +1,4 @@
-# ClassSimpleCommentsGeneric<T,U>
+# [Test](TableOfContents.Test.md).ClassSimpleCommentsGeneric<T,U>
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
   
