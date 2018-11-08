@@ -58,6 +58,8 @@ namespace EarlyDocs
 			return markdown;
 		}
 
+
+		//todo: refactor: extend the types instead of using if/else trees
 		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(DotNetComment comment, DotNetMember parent = null)
 		{
 			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
@@ -72,7 +74,11 @@ namespace EarlyDocs
 			}
 			else if(comment is DotNetCommentCodeBlock)
 			{
-				markdown.Add(new MarkdownCodeBlock((comment as DotNetCommentCodeBlock).Text));
+				markdown.Add(new MarkdownCodeBlock((comment as DotNetCommentCodeBlock).Text, (comment as DotNetCommentCodeBlock).Language));
+			}
+			else if(comment is DotNetCommentCode)
+			{
+				markdown.Add(new MarkdownCode((comment as DotNetCommentCode).Text));
 			}
 			else if(comment is DotNetCommentText)
 			{

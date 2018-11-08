@@ -6,6 +6,10 @@
 
 ## Concrete Types
 
+[ClassCode](Test.ClassCode.md)  
+Tests include code and xml in comments.  
+  
+  
 [ClassCommentsNestedWrong](Test.ClassCommentsNestedWrong.md)  
 Tests the incorrect nested of comments.  
   

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassAbstract.cs" />
+    <Compile Include="ClassCode.cs" />
     <Compile Include="ClassCommentsNestedWrong.cs" />
     <Compile Include="ClassCommonTypeAliases.cs" />
     <Compile Include="ClassComplexComments.cs" />
