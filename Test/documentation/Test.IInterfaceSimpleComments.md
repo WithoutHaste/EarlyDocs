@@ -42,6 +42,11 @@
 **Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.  
 
+## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyB { get; set; }
+
+SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
+  
+
 # Methods
 
 ## abstract void MethodA()
@@ -61,5 +66,10 @@
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
 
+  
+
+## abstract void MethodB()
+
+SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
   
 

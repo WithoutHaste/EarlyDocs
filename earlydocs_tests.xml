@@ -38,10 +38,14 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">30</Data>
+          <Data ss:Type="Number">8</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">test case: specifying which interface a member was inherited from</Data>
+          <Data ss:Type="String">ClassInherits
+- explicit interface implementations
+- permissions cref to explicit interface implementations
+- inheriting comments from parent interface
+- add cref to explicit interface implementation to cref notes</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -50,7 +54,7 @@
           <Data ss:Type="String">Test</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-26T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
         </Cell>
       </Row>
     </Table>
@@ -550,26 +554,6 @@
         </Cell>
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">ClassMultilineComments</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Done</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Test</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-26T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">8</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">ClassInherits</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Done</Data>

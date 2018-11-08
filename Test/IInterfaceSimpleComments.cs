@@ -32,6 +32,11 @@ namespace Test
 		int PropertyA { get; set; }
 
 		/// <summary>
+		/// SimpleComments: Enable test inheriting from multiple interfaces with the same member names.
+		/// </summary>
+		int PropertyB { get; set; }
+
+		/// <summary>
 		/// [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.
 		/// </summary>
 		/// <remarks>
@@ -42,5 +47,10 @@ namespace Test
 		/// <exception cref="ArgumentException">[Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.</exception>
 		/// [Floating Comment] [Short] [One Line] Sed vehicula gravida efficitur.
 		void MethodA();
+
+		/// <summary>
+		/// SimpleComments: Enable test inheriting from multiple interfaces with the same member names.
+		/// </summary>
+		void MethodB();
 	}
 }

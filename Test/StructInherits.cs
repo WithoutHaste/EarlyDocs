@@ -16,9 +16,15 @@ namespace Test
 		/// </summary>
 		public int PropertyA { get; set; }
 
+		/// <inheritdoc/>
+		public int PropertyB { get; set; }
+
 		/// <summary>
 		/// [Summary Tag] [Does Not Inherit]
 		/// </summary>
 		public void MethodA() { }
+
+		/// <inheritdoc/>
+		public void MethodB() { }
 	}
 }

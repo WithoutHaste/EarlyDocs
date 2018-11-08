@@ -64,6 +64,7 @@
     <Compile Include="ClassSimpleCommentsGeneric.cs" />
     <Compile Include="ClassStatic.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="IIntefaceB.cs" />
     <Compile Include="IInterfaceInherits.cs" />
     <Compile Include="IInterfaceSimpleComments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
