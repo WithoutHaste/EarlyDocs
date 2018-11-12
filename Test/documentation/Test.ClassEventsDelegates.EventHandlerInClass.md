@@ -1,12 +1,12 @@
 # [Test.ClassEventsDelegates](Test.ClassEventsDelegates.md).EventHandlerInClass
 
-**delegate void EventHandlerInClass([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**
+**delegate void EventHandlerInClass([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**  
 
 [Summary Tag] [Short] [One Line] Phasellus ut nulla aliquam, commodo ante ac, accumsan leo.  
-  
+
 **Remarks:**  
 [Remarks Tag] [Short] [One Line] Duis metus ex, suscipit quis quam vel, viverra imperdiet magna.  
-  
+
 **Misc:**  
 [Floating Comment] [Short] [One Line] Vivamus ultrices ex sit amet justo aliquet pretium.  
 
@@ -20,7 +20,7 @@
 
 ## current member
 
-[Permission Tag] [References Delegate] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.
+[Permission Tag] [References Delegate] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
 
 # Parameters
 

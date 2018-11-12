@@ -1,9 +1,8 @@
 # [Test](TableOfContents.Test.md).ClassFormattingErrors
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
-  
+
 Tests formatting errors in xml comments.  
-  
 
 # Fields
 
@@ -11,14 +10,9 @@ Tests formatting errors in xml comments.
 
 **Misc:**  
   
-  
-  
-  
-  
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) NameMissing
 
 **Misc:**  
-  
   
 

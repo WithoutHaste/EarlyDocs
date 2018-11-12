@@ -55,25 +55,6 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">56</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">Markdown: allow nested paragraphs
-the end result being that each paragraph makes sure it ends with a double end line
-- this will make formatting (for instance) the Misc section easier, making sure the whole region ends with a double endline even if it contains paragraphs of its own</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Minor</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-08T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">51</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -393,6 +374,28 @@ so running multiple files through this documentation process will rack up edits 
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">56</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">Markdown: allow nested paragraphs
+the end result being that each paragraph makes sure it ends with a double end line
+- this will make formatting (for instance) the Misc section easier, making sure the whole region ends with a double endline even if it contains paragraphs of its own</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-08T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>

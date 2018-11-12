@@ -4,6 +4,6 @@
 
 [IInterfaceB](Test.Filler.IInterfaceB.md)  
 Enable tests inheriting from multiple interfaces.  
-  
+
   
 

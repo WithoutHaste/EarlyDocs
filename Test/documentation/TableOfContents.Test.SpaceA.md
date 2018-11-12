@@ -8,6 +8,6 @@
 
 [ClassInNamespaceA](Test.SpaceA.ClassInNamespaceA.md)  
 Tests a class in a nested namespace.  
-  
+
   
 

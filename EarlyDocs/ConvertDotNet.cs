@@ -10,27 +10,28 @@ namespace EarlyDocs
 {
 	public static class ConvertDotNet
 	{
-		public static List<IMarkdownInSection> DotNetCommentGroupToMarkdown(DotNetCommentGroup group, DotNetMember parent = null)
+		public static MarkdownParagraph DotNetCommentGroupToMarkdown(DotNetCommentGroup group, DotNetMember parent = null)
 		{
-			List<IMarkdownInSection> result = DotNetCommentsToMarkdown(group.Comments, parent);
-			result.Add(new MarkdownLine()); //because comment groups are like paragraphs, with space in between
-			return result;
+			return DotNetCommentsToMarkdown(group.Comments, parent);
 		}
 
 		/// <summary>
 		/// Returns the first line of comments produced by the group.
 		/// Intended for groups that boil down to a single line.
 		/// </summary>
-		public static List<IMarkdownInLine> DotNetCommentGroupToMarkdownLine(DotNetCommentGroup group, DotNetMember parent = null)
+		public static MarkdownLine DotNetCommentGroupToMarkdownLine(DotNetCommentGroup group, DotNetMember parent = null)
 		{
-			List<IMarkdownInSection> inSectionList = DotNetCommentGroupToMarkdown(group, parent);
-			List<IMarkdownInLine> line = new List<IMarkdownInLine>();
+			MarkdownParagraph paragraph = DotNetCommentGroupToMarkdown(group, parent);
+			while(paragraph.Elements.Length > 0 && paragraph.Elements[0] is MarkdownParagraph)
+				paragraph = (paragraph.Elements[0] as MarkdownParagraph);
 
-			foreach(IMarkdownInSection inSection in inSectionList)
+			MarkdownLine line = new MarkdownLine();
+
+			foreach(IMarkdownInSection inSection in paragraph.Elements)
 			{
 				if(inSection is MarkdownLine)
 				{
-					line.AddRange((inSection as MarkdownLine).Elements);
+					line.Concat(inSection as MarkdownLine);
 					return line;
 				}
 				if(inSection is IMarkdownInLine)
@@ -46,39 +47,39 @@ namespace EarlyDocs
 			return line;
 		}
 
-		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(List<DotNetComment> list, DotNetMember parent = null)
+		public static MarkdownParagraph DotNetCommentsToMarkdown(List<DotNetComment> list, DotNetMember parent = null)
 		{
-			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
+			MarkdownParagraph paragraph = new MarkdownParagraph();
 
 			foreach(DotNetComment comment in list)
 			{
-				markdown.AddRange(DotNetCommentsToMarkdown(comment, parent));
+				paragraph.Add(DotNetCommentsToMarkdown(comment, parent));
 			}
 
-			return markdown;
+			return paragraph;
 		}
 
 
 		//todo: refactor: extend the types instead of using if/else trees
-		public static List<IMarkdownInSection> DotNetCommentsToMarkdown(DotNetComment comment, DotNetMember parent = null)
+		public static MarkdownParagraph DotNetCommentsToMarkdown(DotNetComment comment, DotNetMember parent = null)
 		{
-			List<IMarkdownInSection> markdown = new List<IMarkdownInSection>();
+			MarkdownParagraph paragraph = new MarkdownParagraph();
 
 			if(comment is DotNetCommentQualifiedLinkedGroup && (comment.Tag == CommentTag.See || comment.Tag == CommentTag.SeeAlso))
 			{
-				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLinkedGroup, parent));
+				paragraph.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLinkedGroup, parent));
 			}
 			else if(comment is DotNetCommentGroup)
 			{
-				markdown.AddRange(DotNetCommentGroupToMarkdown(comment as DotNetCommentGroup, parent));
+				paragraph.Add(DotNetCommentGroupToMarkdown(comment as DotNetCommentGroup, parent));
 			}
 			else if(comment is DotNetCommentCodeBlock)
 			{
-				markdown.Add(new MarkdownCodeBlock((comment as DotNetCommentCodeBlock).Text, (comment as DotNetCommentCodeBlock).Language));
+				paragraph.Add(new MarkdownCodeBlock((comment as DotNetCommentCodeBlock).Text, (comment as DotNetCommentCodeBlock).Language));
 			}
 			else if(comment is DotNetCommentCode)
 			{
-				markdown.Add(new MarkdownCode((comment as DotNetCommentCode).Text));
+				paragraph.Add(new MarkdownCode((comment as DotNetCommentCode).Text));
 			}
 			else if(comment is DotNetCommentText)
 			{
@@ -89,25 +90,25 @@ namespace EarlyDocs
 					{
 						text = text.Substring(0, text.Length - 1);
 					}
-					markdown.AddRange(text.Split('\n').Select(t => new MarkdownLine(t)).ToArray());
+					paragraph.Add(text.Split('\n').Select(t => new MarkdownLine(t)).ToArray());
 				}
 				else
-					markdown.Add(new MarkdownText(text));
+					paragraph.Add(new MarkdownText(text));
 			}
 			else if(comment is DotNetCommentList)
 			{
-				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentList));
+				paragraph.Add(DotNetCommentsToMarkdown(comment as DotNetCommentList));
 			}
 			else if(comment is DotNetCommentTable)
 			{
-				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentTable));
+				paragraph.Add(DotNetCommentsToMarkdown(comment as DotNetCommentTable));
 			}
 			else if(comment is DotNetCommentQualifiedLink)
 			{
-				markdown.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLink, parent));
+				paragraph.Add(DotNetCommentsToMarkdown(comment as DotNetCommentQualifiedLink, parent));
 			}
 
-			return markdown;
+			return paragraph;
 		}
 
 		public static MarkdownList DotNetCommentsToMarkdown(DotNetCommentList commentList)
@@ -185,7 +186,7 @@ namespace EarlyDocs
 
 		public static IMarkdownInLine DotNetCommentsToMarkdown(DotNetCommentQualifiedLinkedGroup commentGroup, DotNetMember parent = null)
 		{
-			string text = String.Join("", DotNetCommentGroupToMarkdownLine(commentGroup, parent).Select(x => x.ToMarkdown(null)).ToArray());
+			string text = String.Join("", DotNetCommentGroupToMarkdownLine(commentGroup, parent).Elements.Select(x => x.ToMarkdown(null)).ToArray());
 			IMarkdownInLine plainLink = DotNetCommentsToMarkdown(commentGroup.QualifiedLink, parent);
 			if(plainLink is MarkdownInlineLink)
 			{

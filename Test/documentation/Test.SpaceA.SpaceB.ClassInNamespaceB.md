@@ -1,9 +1,8 @@
 # [Test.SpaceA.SpaceB](TableOfContents.Test.SpaceA.SpaceB.md).ClassInNamespaceB
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
-  
+
 Tests a class in a nested namespace.  
-  
 
 # Fields
 
@@ -17,6 +16,4 @@ Tests a class in a nested namespace.
 
 [ClassInClass](Test.SpaceA.SpaceB.ClassInNamespaceB.ClassInClass.md)  
 Tests a class nested in a class.  
-  
-  
 

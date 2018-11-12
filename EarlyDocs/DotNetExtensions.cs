@@ -432,7 +432,6 @@ namespace EarlyDocs
 				{
 					implementedBySection.AddInLine(implementedBy.Name.ToDisplayStringLink());
 					implementedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(implementedBy.SummaryComments));
-					implementedBySection.Add(new MarkdownLine());
 				}
 			}
 			if(type.NestedEnums.Count > 0)
@@ -445,7 +444,6 @@ namespace EarlyDocs
 					enumSection.Add(new MarkdownLine(MarkdownText.Bold(enumHeader)));
 					enumSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(e.SummaryComments));
 					enumSection.Add(ConvertDotNet.EnumToMinimalList(e));
-					enumSection.Add(new MarkdownLine());
 				}
 			}
 			if(type.Fields.Count > 0)
@@ -503,7 +501,6 @@ namespace EarlyDocs
 				{
 					delegateSection.AddInLine(new MarkdownInlineLink(_delegate.Name.LocalName, _delegate.Name.FullName + Ext.MD));
 					delegateSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments));
-					delegateSection.Add(new MarkdownLine());
 				}
 			}
 
@@ -526,7 +523,6 @@ namespace EarlyDocs
 				{
 					nestedTypeSection.AddInLine(new MarkdownInlineLink(nestedType.Name.LocalName, nestedType.Name.FullName + Ext.MD));
 					nestedTypeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(nestedType.SummaryComments));
-					nestedTypeSection.Add(new MarkdownLine());
 				}
 			}
 
@@ -631,20 +627,19 @@ namespace EarlyDocs
 
 		private static void AddPreSummary(MarkdownSection parent, DotNetType type)
 		{
-			bool changeMade = false;
+			MarkdownParagraph paragraph = new MarkdownParagraph();
 
 			switch(type.Category)
 			{
-				case TypeCategory.Static: parent.Add(new MarkdownLine(MarkdownText.Bold("Static"))); changeMade = true; break;
-				case TypeCategory.Interface: parent.Add(new MarkdownLine(MarkdownText.Bold("Interface"))); changeMade = true; break;
-				case TypeCategory.Abstract: parent.Add(new MarkdownLine(MarkdownText.Bold("Abstract"))); changeMade = true; break;
-				case TypeCategory.Enum: parent.Add(new MarkdownLine(MarkdownText.Bold("Enumeration"))); changeMade = true; break;
-				case TypeCategory.Struct: parent.Add(new MarkdownLine(MarkdownText.Bold("Struct"))); changeMade = true; break;
+				case TypeCategory.Static: paragraph.Add(new MarkdownLine(MarkdownText.Bold("Static"))); break;
+				case TypeCategory.Interface: paragraph.Add(new MarkdownLine(MarkdownText.Bold("Interface"))); break;
+				case TypeCategory.Abstract: paragraph.Add(new MarkdownLine(MarkdownText.Bold("Abstract"))); break;
+				case TypeCategory.Enum: paragraph.Add(new MarkdownLine(MarkdownText.Bold("Enumeration"))); break;
+				case TypeCategory.Struct: paragraph.Add(new MarkdownLine(MarkdownText.Bold("Struct"))); break;
 			}
 			if(type.IsSealed && type.Category != TypeCategory.Static && type.Category != TypeCategory.Struct)
 			{
-				parent.Add(new MarkdownLine(MarkdownText.Bold("Sealed")));
-				changeMade = true;
+				paragraph.Add(new MarkdownLine(MarkdownText.Bold("Sealed")));
 			}
 
 			if(type.BaseType != null && type.Category != TypeCategory.Struct)
@@ -658,22 +653,18 @@ namespace EarlyDocs
 				}
 				inheritanceLine.Prepend(" ");
 				inheritanceLine.Prepend(MarkdownText.Bold("Inheritance:"));
-				parent.Add(inheritanceLine);
-				changeMade = true;
+				paragraph.Add(inheritanceLine);
 			}
 
 			if(type.ImplementedInterfaces.Count > 0)
 			{
 				MarkdownLine interfaceLine = new MarkdownLine(MarkdownText.Bold("Implements:"), new MarkdownText(" "));
 				interfaceLine.Add(String.Join(", ", type.ImplementedInterfaces.Select(i => i.Name.ToDisplayStringLink(type.Name.FullNamespace)).ToArray()));
-				parent.Add(interfaceLine);
-				changeMade = true;
+				paragraph.Add(interfaceLine);
 			}
 
-			if(changeMade)
-			{
-				parent.Add(new MarkdownLine());
-			}
+			if(!paragraph.IsEmpty)
+				parent.Add(paragraph);
 		}
 
 		private static MarkdownSection MethodsToMarkdown(string header, List<DotNetMethod> methods)
@@ -766,7 +757,6 @@ namespace EarlyDocs
 				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
 				counter++;
 			}
-			section.Add(new MarkdownLine());
 		}
 
 		private static void AddTopLevelPermissions(MarkdownSection section, DotNetMember member)
@@ -830,7 +820,6 @@ namespace EarlyDocs
 				}
 				section.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
 				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment.Comments));
-				section.Add(new MarkdownLine());
 			}
 		}
 
@@ -858,7 +847,7 @@ namespace EarlyDocs
 				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
 				{
 					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(commentParameter.ToHeader()), new MarkdownText(": "));
-					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					line.Concat(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
 			}
@@ -885,7 +874,7 @@ namespace EarlyDocs
 				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
 				{
 					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(commentParameter.ToHeader()), new MarkdownText(": "));
-					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					line.Concat(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
 			}
@@ -898,7 +887,6 @@ namespace EarlyDocs
 					AddGroupComments(parameterSection, commentParameter, member);
 				}
 			}
-			section.Add(new MarkdownLine());
 		}
 
 		public static void AddTopLevelParameters(MarkdownSection section, DotNetMethod method)
@@ -920,7 +908,7 @@ namespace EarlyDocs
 						continue;
 
 					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader(method.Name.FullNamespace)), new MarkdownText(": "));
-					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					line.Concat(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
 			}
@@ -955,7 +943,7 @@ namespace EarlyDocs
 						continue;
 
 					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader(method.Name.FullNamespace)), new MarkdownText(": "));
-					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					line.Concat(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
 					list.Add(line);
 				}
 			}
@@ -972,7 +960,6 @@ namespace EarlyDocs
 					AddGroupComments(parameterSection, commentParameter, method);
 				}
 			}
-			section.Add(new MarkdownLine());
 		}
 
 		public static void AddTopLevelExceptions(MarkdownSection section, DotNetMember member)
@@ -990,7 +977,7 @@ namespace EarlyDocs
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
 					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(comment.QualifiedLink.Name.FullName), new MarkdownText(": "));
-					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(comment));
+					line.Concat(ConvertDotNet.DotNetCommentGroupToMarkdownLine(comment));
 					list.Add(line);
 				}
 			}
@@ -1017,7 +1004,7 @@ namespace EarlyDocs
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
 					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(comment.QualifiedLink.Name.ToDisplayStringLink(member.Name)), new MarkdownText(": "));
-					line.Add(ConvertDotNet.DotNetCommentGroupToMarkdownLine(comment));
+					line.Concat(ConvertDotNet.DotNetCommentGroupToMarkdownLine(comment));
 					list.Add(line);
 				}
 			}
@@ -1030,7 +1017,6 @@ namespace EarlyDocs
 					AddGroupComments(exceptionSection, comment, member);
 				}
 			}
-			section.Add(new MarkdownLine());
 		}
 
 		private static void AddGroupComments(MarkdownSection section, DotNetCommentLinkedGroup group, DotNetMember parent = null)
@@ -1039,7 +1025,6 @@ namespace EarlyDocs
 			{
 				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment, parent));
 			}
-			section.Add(new MarkdownLine());
 
 			//todo: refactor: merge this with method AddExamples somehow
 			AlphabetCounter counter = new AlphabetCounter();
