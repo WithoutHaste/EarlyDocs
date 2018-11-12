@@ -1,4 +1,4 @@
-# [Test.SpaceA.SpaceB.ClassInNamespaceB](TableOfContents.Test.SpaceA.SpaceB.ClassInNamespaceB.md).ClassInClass
+# [Test.SpaceA.SpaceB.ClassInNamespaceB](Test.SpaceA.SpaceB.ClassInNamespaceB.md).ClassInClass
 
 **Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
 

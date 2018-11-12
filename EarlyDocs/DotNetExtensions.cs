@@ -416,7 +416,12 @@ namespace EarlyDocs
 
 		public static MarkdownSection ToMarkdownSection(this DotNetType type)
 		{
-			MarkdownSection typeSection = new MarkdownSection(String.Format("[{0}]({1}).{2}", type.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(type.Name.FullNamespace), type.Name.LocalName));
+			string header = String.Format("[{0}]({1}).{2}", type.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(type.Name.FullNamespace), type.Name.LocalName);
+			if(InternalFullNames.Contains(type.Name.FullNamespace.FullName))
+				header = String.Format("[{0}]({1}).{2}", type.Name.FullNamespace.FullName, type.Name.FullNamespace.FullName + Ext.MD, type.Name.LocalName);
+
+			MarkdownSection typeSection = new MarkdownSection(header);
+
 			AddPreSummary(typeSection, type);
 			AddSummary(typeSection, type as DotNetMember);
 			AddRemarks(typeSection, type as DotNetMember);
