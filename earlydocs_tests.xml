@@ -57,24 +57,6 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">35</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">EventHandlerGlobal
-- permission says "current member" instead of "current type"</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Test</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">36</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">

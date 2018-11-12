@@ -18,7 +18,7 @@
 
 # Permissions
 
-## current member
+## current type
 
 [Permission Tag] [References Delegate] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
 

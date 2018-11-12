@@ -775,7 +775,7 @@ namespace EarlyDocs
 				if(member.Name == comment.QualifiedLink.Name) //todo: move link to member comparison to its own method, maybe even in DataFiles.DotNet - see where else comparisons should be moved to library
 				{
 					permissionHeader = "current member";
-					if(member is DotNetType)
+					if(member is DotNetType || member is DotNetDelegate)
 					{
 						permissionHeader = "current type";
 					}
@@ -786,7 +786,7 @@ namespace EarlyDocs
 					if(member is DotNetMethod && (member as DotNetMethod).MatchesSignature((comment as DotNetCommentMethodLinkedGroup).MethodLink)) //todo: move comparison logic to library
 					{
 						permissionHeader = "current member";
-						if(member is DotNetType)
+						if(member is DotNetType || member is DotNetDelegate)
 						{
 							permissionHeader = "current type";
 						}

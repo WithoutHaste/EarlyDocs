@@ -18,7 +18,7 @@
 
 # Permissions
 
-## current member
+## current type
 
 [Permission Tag] [References Delegate] [Short] [One Line] In commodo, arcu eget vulputate faucibus, justo libero varius nulla, sed tempus nisl nibh in augue.  
 
