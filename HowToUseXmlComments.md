@@ -363,7 +363,7 @@ public int MyMethod<A,B>(A a, B b)
 
 ```
 /// <see cref="M:FullNamespace.MyType.InterfaceNamespace#InterfaceType#MyMethod(string)"/>
-int MyMethod(string x)
+int InterfaceNamespace.InterfaceType.MyMethod(string x)
 ```
 
 If you know how to cref an explicit interface implementation in a way Visual Studio recognizes, please message me.
