@@ -186,7 +186,7 @@ namespace EarlyDocs
 				return ToHeader(method as DotNetMethodOperator);
 			}
 
-			string header = method.MethodName.ReturnTypeName.ToDisplayString(method.Name.FullNamespace) + " " + method.Name.LocalName;
+			string header = method.MethodName.ReturnTypeName.ToDisplayStringLink(method.Name.FullNamespace) + " " + method.Name.LocalName;
 			if(method is DotNetMethodConstructor)
 			{
 				header = method.Name.FullNamespace.LocalName;

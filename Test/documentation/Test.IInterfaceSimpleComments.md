@@ -60,7 +60,7 @@ SimpleComments: Enable test inheriting from multiple interfaces with the same me
 
 # Methods
 
-## abstract void MethodA()
+## abstract [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodA()
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.  
 
@@ -79,7 +79,7 @@ SimpleComments: Enable test inheriting from multiple interfaces with the same me
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
 
-## abstract void MethodB()
+## abstract [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodB()
 
 SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
 

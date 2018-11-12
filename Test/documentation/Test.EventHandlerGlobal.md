@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).EventHandlerGlobal
 
-**delegate EventHandler EventHandlerGlobal([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**  
+**delegate [EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler) EventHandlerGlobal([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**  
 
 [Summary Tag] [Short] [One Line] Donec gravida egestas nibh.  
 

@@ -152,7 +152,7 @@
 
 # Destructor
 
-## virtual void Finalize()
+## virtual [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) Finalize()
 
 [Summary Tag] [Short] [One Line] Aenean quam urna, pharetra vel malesuada ut, gravida ac libero.  
 
@@ -173,7 +173,7 @@
 
 # Methods
 
-## virtual int MethodVirtual()
+## virtual [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) MethodVirtual()
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
 
@@ -192,7 +192,7 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
 
-## void MethodWithoutParameters()
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithoutParameters()
 
 [Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.  
 
@@ -213,7 +213,7 @@
 
 # Static Methods
 
-## static string StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Vivamus et ex convallis, egestas justo ut, faucibus arcu.  
 

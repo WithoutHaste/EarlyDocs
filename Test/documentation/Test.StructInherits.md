@@ -17,11 +17,11 @@ SimpleComments: Enable test inheriting from multiple interfaces with the same me
 
 # Methods
 
-## void MethodA()
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodA()
 
 [Summary Tag] [Does Not Inherit]  
 
-## void MethodB()
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodB()
 
 SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
 

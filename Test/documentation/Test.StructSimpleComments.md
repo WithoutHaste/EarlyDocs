@@ -106,7 +106,7 @@
 
 # Methods
 
-## float MethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) MethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Donec sollicitudin sem et nisi laoreet, et gravida nulla scelerisque.  
 
@@ -134,7 +134,7 @@
 
 # Static Methods
 
-## static double StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static [double](https://docs.microsoft.com/en-us/dotnet/api/system.double) StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
 

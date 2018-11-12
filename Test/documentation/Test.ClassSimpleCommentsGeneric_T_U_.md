@@ -157,7 +157,7 @@
 
 # Destructor
 
-## virtual void Finalize()
+## virtual [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) Finalize()
 
 [Summary Tag] [Short] [One Line] Quisque scelerisque elit a massa semper luctus.  
 
@@ -178,7 +178,7 @@
 
 # Methods
 
-## void MethodWithTypeParameters<A,B>(A a, B b, U u)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithTypeParameters<A,B>(A a, B b, U u)
 
 [Summary Tag] [Short] [One Line] Maecenas molestie purus id fermentum dictum.  
 

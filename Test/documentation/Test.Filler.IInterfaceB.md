@@ -17,7 +17,7 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 
 # Methods
 
-## abstract void MethodB()
+## abstract [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodB()
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 

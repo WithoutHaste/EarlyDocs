@@ -6,7 +6,7 @@ Tests overloaded methods.
 
 # Methods
 
-## void MethodOverload([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodOverload([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 
@@ -29,7 +29,7 @@ Tests overloaded methods.
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b**: [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.  
 
-## void MethodOverload([double](https://docs.microsoft.com/en-us/dotnet/api/system.double) a, [double](https://docs.microsoft.com/en-us/dotnet/api/system.double) b)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodOverload([double](https://docs.microsoft.com/en-us/dotnet/api/system.double) a, [double](https://docs.microsoft.com/en-us/dotnet/api/system.double) b)
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 
@@ -52,7 +52,7 @@ Tests overloaded methods.
 * **[double](https://docs.microsoft.com/en-us/dotnet/api/system.double) a**: [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.  
 * **[double](https://docs.microsoft.com/en-us/dotnet/api/system.double) b**: [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.  
 
-## void MethodOverload([float](https://docs.microsoft.com/en-us/dotnet/api/system.single) a, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) b)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodOverload([float](https://docs.microsoft.com/en-us/dotnet/api/system.single) a, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) b)
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 

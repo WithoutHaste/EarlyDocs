@@ -37,7 +37,7 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 
 # Methods
 
-## void MethodA()
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodA()
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.  
 
@@ -65,7 +65,7 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 
-## virtual int MethodVirtual()
+## virtual [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) MethodVirtual()
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
 

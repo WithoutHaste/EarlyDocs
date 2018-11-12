@@ -189,5 +189,5 @@ Local method with parameters
 
 # Methods
 
-## string MethodWithParameters([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) MethodWithParameters([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
 
