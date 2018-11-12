@@ -359,7 +359,7 @@ public int MyMethod<A,B>(A a, B b)
 }
 ```
 
-**Method with Explicit Interface Implementation
+**Method with Explicit Interface Implementation**
 
 ```
 /// <see cref="M:FullNamespace.MyType.InterfaceNamespace#InterfaceType#MyMethod(string)"/>
@@ -449,7 +449,7 @@ public int MyField = 0;
 public int MyProperty { get; set; }
 ```
 
-**Property with Explicit Interface Implementation
+**Property with Explicit Interface Implementation**
 
 ```
 /// <see cref="P:FullNamespace.MyType.InterfaceNamespace#InterfaceType#MyProperty"/>
