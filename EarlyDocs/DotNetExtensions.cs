@@ -243,11 +243,17 @@ namespace EarlyDocs
 
 		public static string ToDisplayString(this DotNetParameter parameter, string _namespace = null)
 		{
+			string prefix = "";
+			if(parameter.Category == ParameterCategory.Out)
+				prefix = "out ";
+			if(parameter.Category == ParameterCategory.Ref)
+				prefix = "ref ";
+
 			if(parameter.TypeName == null)
-				return parameter.Name;
+				return prefix + parameter.Name;
 			if(String.IsNullOrEmpty(parameter.Name))
-				return parameter.TypeName.ToDisplayStringLink(_namespace);
-			return parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
+				return prefix + parameter.TypeName.ToDisplayStringLink(_namespace);
+			return prefix + parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
 		}
 
 		public static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
@@ -329,7 +335,6 @@ namespace EarlyDocs
 			if(name.IsInKnownMicrosoftNamespace())
 			{
 				TurnQualifiedNameConverterOff();
-				//todo: convert generic type parameters from <T> style to `1 style
 				string microsoftDocumentation = @"https://docs.microsoft.com/en-us/dotnet/api/";
 				linkString = String.Format("{0}{1}", microsoftDocumentation, name.FullName.ToMicrosoftLinkFormat());
 				TurnQualifiedNameConverterOn();

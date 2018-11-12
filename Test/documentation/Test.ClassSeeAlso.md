@@ -37,7 +37,7 @@ Local method
 
   
 
-MethodWithParameters(int,int)  
+MethodWithParameters(int, int)  
 
  or  
 
@@ -45,7 +45,7 @@ Local method with parameters
 
   
 
-MethodWithParameters(int,int)  
+MethodWithParameters(int, int)  
 
  or  
 
@@ -101,7 +101,7 @@ Local method with parameters
 
   
 
-[Test.ClassSimpleComments.ClassSimpleComments(int,string)](Test.ClassSimpleComments.md)  
+[Test.ClassSimpleComments.ClassSimpleComments(int, string)](Test.ClassSimpleComments.md)  
 
  or  
 
@@ -109,7 +109,7 @@ Local method with parameters
 
   
 
-[Test.ClassSimpleComments.ClassSimpleComments(int,string)](Test.ClassSimpleComments.md)  
+[Test.ClassSimpleComments.ClassSimpleComments(int, string)](Test.ClassSimpleComments.md)  
 
  or  
 

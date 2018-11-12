@@ -61,6 +61,10 @@ Tests lists and tables in comments.
 Tests overloaded methods.  
 
   
+[ClassMethodParameters](Test.ClassMethodParameters.md)  
+Tests method parameter options.  
+
+  
 [ClassMultilineComments](Test.ClassMultilineComments.md)  
 Tests different ways to format multiline comments.  
 
