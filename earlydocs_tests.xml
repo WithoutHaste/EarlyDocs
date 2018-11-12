@@ -42,9 +42,6 @@
         </Cell>
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">ClassInherits
-- explicit interface implementations
-- permissions cref to explicit interface implementations
-- inheriting comments from parent interface
 - add cref to explicit interface implementation to cref notes</Data>
         </Cell>
         <Cell>

@@ -101,6 +101,9 @@ namespace EarlyDocs
 
 			string header = property.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + property.Name.LocalName;
 
+			if(property.Name.ExplicitInterface != null)
+				header = property.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + property.Name.ExplicitInterface.ToDisplayStringLink(parent.Name.FullName) + "." + property.Name.LocalName;
+
 			if(property.Category == FieldCategory.Abstract)
 				header = "abstract " + header;
 
@@ -187,6 +190,10 @@ namespace EarlyDocs
 			{
 				header = method.Name.FullNamespace.LocalName;
 			}
+			else if(method.Name.ExplicitInterface != null)
+			{
+				header = method.MethodName.ReturnTypeName.ToDisplayString(method.Name.FullNamespace) + " " + method.Name.ExplicitInterface.ToDisplayStringLink() + "." + method.Name.LocalName;
+			}
 
 			if(method.MethodName.Parameters == null || method.MethodName.Parameters.Count == 0)
 				header += "()";
@@ -247,6 +254,8 @@ namespace EarlyDocs
 			return methodLink.Name.ToDisplayString(_namespace) + "(" + String.Join(",", methodLink.MethodName.Parameters.Select(p => p.TypeName.ToDisplayString(_namespace)).ToArray()) + ")";
 		}
 
+		//todo: instead of passing "parent namespace" as a string, pass it as DotNetQualifiedName and use a new child.Localize(parent) method
+
 		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
 		{
 			if(name is DotNetQualifiedMethodName)
@@ -297,6 +306,8 @@ namespace EarlyDocs
 
 		public static string ToDisplayStringLink(this DotNetQualifiedName name, string _namespace = null)
 		{
+			if(name == null)
+				return "";
 			if(name == _namespace)
 				return name.LocalName; //no need to link to same page, no need to show full path to current page
 

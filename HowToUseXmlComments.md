@@ -359,6 +359,15 @@ public int MyMethod<A,B>(A a, B b)
 }
 ```
 
+**Method with Explicit Interface Implementation
+
+```
+/// <see cref="M:FullNamespace.MyType.InterfaceNamespace#InterfaceType#MyMethod(string)"/>
+int MyMethod(string x)
+```
+
+If you know how to cref an explicit interface implementation in a way Visual Studio recognizes, please message me.
+
 **Constructor Method**
 
 ```
@@ -388,7 +397,7 @@ static MyType()
 }
 ```
 
-This format is not recognized by Visual Studio Intellisense on the comment itself, but it does show up in the XML file correctly.
+This format is not recognized by Visual Studio Intellisense, but it does show up in the XML file correctly.
 _(Meaning that hovering over comment cref="System.Exception" will bring up the summary of that type, but hovering other this example does nothing.)_
 
 If you know how to cref a static constructor in a way Visual Studio recognizes, please message me.
@@ -439,6 +448,15 @@ public int MyField = 0;
 /// <see cref="FullNamespace.MyType.MyProperty"/>
 public int MyProperty { get; set; }
 ```
+
+**Property with Explicit Interface Implementation
+
+```
+/// <see cref="P:FullNamespace.MyType.InterfaceNamespace#InterfaceType#MyProperty"/>
+int InterfaceNamespace.InterfaceType.MyProperty { get; set; }
+```
+
+If you know how to cref an explicit interface implementation in a way Visual Studio recognizes, please message me.
 
 **Indexer**
 

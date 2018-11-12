@@ -26,15 +26,15 @@ Tests class inheritance.
 **Permission: Test.IInterfaceSimpleComments.PropertyA**  
 [Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) Test.Filler.IInterfaceB.PropertyB { private get; private set; }
-
-**Misc:**  
-  
-
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) Test.IInterfaceSimpleComments.PropertyB { private get; private set; }
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) [Test.IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).PropertyB { private get; private set; }
 
 **Permission: current member**  
 [Permission Tag] [Explcit Interface Implementation Property]  
+
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) [Test.Filler.IInterfaceB](Test.Filler.IInterfaceB.md).PropertyB { private get; private set; }
+
+B: Enable test inheriting from multiple interfaces with the same member names.  
+  
 
 # Methods
 
@@ -57,14 +57,14 @@ Tests class inheritance.
 
   
 
-##  MethodB()
+## void [Test.IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).MethodB()
 
 **Permission: current member**  
 [Permission Tag] [Explcit Interface Implementation Method]  
 
-##  MethodB()
+## void [Test.Filler.IInterfaceB](Test.Filler.IInterfaceB.md).MethodB()
 
-SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
+B: Enable test inheriting from multiple interfaces with the same member names.  
   
 
 ## virtual int MethodVirtual()
