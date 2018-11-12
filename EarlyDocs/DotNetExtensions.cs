@@ -11,10 +11,11 @@ namespace EarlyDocs
 {
 	public static class DotNetExtensions
 	{
-		/// <summary>
-		/// List of all full names of known types/delegates in the assembly being documented
-		/// </summary>
+		/// <summary>List of all full names of known types/delegates in the assembly being documented.</summary>
 		public static List<string> InternalFullNames = new List<string>();
+
+		/// <summary>List of all internal types that implement each internal interface.</summary>
+		public static Dictionary<DotNetQualifiedName, List<DotNetType>> InterfaceImplementedByTypes = new Dictionary<DotNetQualifiedName, List<DotNetType>>();
 
 		public static List<DotNetQualifiedName> KnownMicrosoftNamespaces = new List<DotNetQualifiedName>() {
 			DotNetQualifiedName.FromVisualStudioXml("System"),
@@ -423,6 +424,17 @@ namespace EarlyDocs
 			AddTopLevelTypeParameters(typeSection, type as DotNetMember);
 			AddTopLevelExamples(typeSection, type as DotNetMember);
 			AddTopLevelPermissions(typeSection, type as DotNetMember);
+			if(type.Category == TypeCategory.Interface && InterfaceImplementedByTypes.ContainsKey(type.Name))
+			{
+				MarkdownSection implementedBySection = new MarkdownSection("Implemented By");
+				typeSection.Add(implementedBySection);
+				foreach(DotNetType implementedBy in InterfaceImplementedByTypes[type.Name].OrderBy(t => t.Name))
+				{
+					implementedBySection.AddInLine(implementedBy.Name.ToDisplayStringLink());
+					implementedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(implementedBy.SummaryComments));
+					implementedBySection.Add(new MarkdownLine());
+				}
+			}
 			if(type.NestedEnums.Count > 0)
 			{
 				MarkdownSection enumSection = new MarkdownSection("Enums");

@@ -30,6 +30,7 @@ namespace EarlyDocs
 			PrepareOutputDirectory(outputDirectory, emptyOutputDirectoryFirst);
 			BuildInternalFullNames(xmlDocumentation.Types);
 			BuildInternalFullNames(xmlDocumentation.Delegates);
+			BuildInterfaceImplementedByTypes(xmlDocumentation.Types);
 			GenerateTypePages(xmlDocumentation.Types, outputDirectory);
 			GenerateDelegatePages(xmlDocumentation.Delegates, outputDirectory);
 			GenerateTableOfContents(xmlDocumentation, outputDirectory);
@@ -70,6 +71,20 @@ namespace EarlyDocs
 				string delegateName = _delegate.Name.FullName;
 				DotNetExtensions.InternalFullNames.Add(delegateName);
 				DotNetExtensions.InternalFullNames.Add(delegateName.Replace("<", "&lt;").Replace(">", "&gt;"));
+			}
+		}
+
+		private void BuildInterfaceImplementedByTypes(List<DotNetType> types)
+		{
+			foreach(DotNetType type in types)
+			{
+				foreach(DotNetBaseType implementedInterface in type.ImplementedInterfaces)
+				{
+					if(!DotNetExtensions.InterfaceImplementedByTypes.ContainsKey(implementedInterface.Name))
+						DotNetExtensions.InterfaceImplementedByTypes[implementedInterface.Name] = new List<DotNetType>();
+					DotNetExtensions.InterfaceImplementedByTypes[implementedInterface.Name].Add(type);
+				}
+				BuildInterfaceImplementedByTypes(type.NestedTypes);
 			}
 		}
 
