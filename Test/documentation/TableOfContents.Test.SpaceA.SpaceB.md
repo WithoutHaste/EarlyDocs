@@ -2,7 +2,7 @@
 
 ## Concrete Types
 
-[ClassInNamespaceB](Test.SpaceA.SpaceB.ClassInNamespaceB.md)  
+[**ClassInNamespaceB**](Test.SpaceA.SpaceB.ClassInNamespaceB.md)  
 Tests a class in a nested namespace.  
 
   
