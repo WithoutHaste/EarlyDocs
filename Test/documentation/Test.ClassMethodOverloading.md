@@ -42,7 +42,7 @@ Tests overloaded methods.
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
 
-**Permission: MethodOverload(int, int)(int,int)**  
+**Permission: MethodOverload(int, int)**  
 [Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
 
 **Exceptions:**  
@@ -65,7 +65,7 @@ Tests overloaded methods.
 **Example A:**  
 [Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
 
-**Permission: MethodOverload(int, int)(int,int)**  
+**Permission: MethodOverload(int, int)**  
 [Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
 
 **Exceptions:**  

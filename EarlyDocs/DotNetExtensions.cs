@@ -258,7 +258,7 @@ namespace EarlyDocs
 
 		public static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
 		{
-			return methodLink.Name.ToDisplayString(_namespace) + "(" + String.Join(",", methodLink.MethodName.Parameters.Select(p => p.TypeName.ToDisplayString(_namespace)).ToArray()) + ")";
+			return methodLink.Name.ToDisplayString(_namespace);
 		}
 
 		//todo: instead of passing "parent namespace" as a string, pass it as DotNetQualifiedName and use a new child.Localize(parent) method

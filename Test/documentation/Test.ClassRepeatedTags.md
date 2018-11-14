@@ -15,7 +15,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 [2nd Permission Tag] Proin sit amet risus nec nulla hendrerit posuere.  
 
-## MethodMultipleExceptions()()
+## MethodMultipleExceptions()
 
 [3rd Permission Tag] Donec volutpat dignissim vehicula.  
 
@@ -27,7 +27,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 [5th Permission Tag] Suspendisse potenti.  
 
-## Test.ClassSimpleComments.Finalize()()
+## Test.ClassSimpleComments.Finalize()
 
 [6th Permission Tag] Suspendisse interdum, arcu a venenatis fringilla, elit velit mattis turpis, et gravida augue eros sed erat.  
 

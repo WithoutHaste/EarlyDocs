@@ -50,7 +50,7 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.  
 
-**Permission: Test.IInterfaceSimpleComments.MethodA()()**  
+**Permission: Test.IInterfaceSimpleComments.MethodA()**  
 [Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.  
 
 **Exceptions:**  
@@ -78,7 +78,7 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
 
-**Permission: Test.ClassSimpleComments.MethodVirtual()()**  
+**Permission: Test.ClassSimpleComments.MethodVirtual()**  
 [Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.  
 
 **Exceptions:**  
