@@ -29,5 +29,16 @@ namespace Test
 		public void MethodRef(int a, ref string b)
 		{
 		}
+
+		/// <summary>
+		/// [Summary Tag] Flobotum ignus veritay.
+		/// </summary>
+		/// <param name="a">[Param Tag] Sigus si ficcundus.</param>
+		/// <param name="b">[Param Tag] En et tu.</param>
+		/// <param name="c">[Param Tag] Cloisen iplorum diggitallus.</param>
+		/// <param name="d">[Param Tag] Pinget ob flouritis regus ergo sum.</param>
+		public void MethodOptional(int a, string b, double c = 0, object d = null)
+		{
+		}
 	}
 }

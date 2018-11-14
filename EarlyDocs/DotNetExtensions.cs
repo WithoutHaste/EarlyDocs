@@ -249,11 +249,20 @@ namespace EarlyDocs
 			if(parameter.Category == ParameterCategory.Ref)
 				prefix = "ref ";
 
+			string suffix = "";
+			if(parameter.Category == ParameterCategory.Optional)
+			{
+				if(parameter.DefaultValue == null)
+					suffix = " = null";
+				else
+					suffix = " = " + parameter.DefaultValue.ToString();
+			}
+
 			if(parameter.TypeName == null)
-				return prefix + parameter.Name;
+				return prefix + parameter.Name + suffix;
 			if(String.IsNullOrEmpty(parameter.Name))
-				return prefix + parameter.TypeName.ToDisplayStringLink(_namespace);
-			return prefix + parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
+				return prefix + parameter.TypeName.ToDisplayStringLink(_namespace) + suffix;
+			return prefix + parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name + suffix;
 		}
 
 		public static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
