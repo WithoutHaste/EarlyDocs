@@ -2,7 +2,7 @@
 
 ## Namespaces
 
-[Test.SpaceA.SpaceB](TableOfContents.Test.SpaceA.SpaceB.md)  
+[**Test.SpaceA.SpaceB**](TableOfContents.Test.SpaceA.SpaceB.md)  
 
 ## Concrete Types
 

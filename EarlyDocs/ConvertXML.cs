@@ -185,7 +185,7 @@ namespace EarlyDocs
 				MarkdownSection childNamespacesSection = section.AddSection("Namespaces");
 				foreach(DotNetQualifiedName childNamespace in childNamespaces)
 				{
-					section.AddInLine(new MarkdownInlineLink(childNamespace.FullName, TableOfContentsFilename(childNamespace)));
+					section.AddInLine(new MarkdownInlineLink(MarkdownText.Bold(childNamespace.FullName), TableOfContentsFilename(childNamespace)));
 				}
 			}
 

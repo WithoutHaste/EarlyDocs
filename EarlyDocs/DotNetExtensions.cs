@@ -791,7 +791,7 @@ namespace EarlyDocs
 			foreach(DotNetCommentQualifiedLinkedGroup comment in member.PermissionComments)
 			{
 				string permissionHeader = comment.QualifiedLink.Name.ToDisplayString(member.Name);
-				if(member.Name == comment.QualifiedLink.Name) //todo: move link to member comparison to its own method, maybe even in DataFiles.DotNet - see where else comparisons should be moved to library
+				if(member.Matches(comment))
 				{
 					permissionHeader = "current member";
 					if(member is DotNetType || member is DotNetDelegate)
@@ -821,7 +821,7 @@ namespace EarlyDocs
 			foreach(DotNetCommentQualifiedLinkedGroup comment in member.PermissionComments)
 			{
 				string permissionHeader = "Permission: " + comment.QualifiedLink.Name.ToDisplayString(member.Name.FullNamespace);
-				if(member.Name == comment.QualifiedLink.Name)
+				if(member.Matches(comment))
 				{
 					permissionHeader = "Permission: current member";
 				}
