@@ -350,11 +350,11 @@ namespace EarlyDocs
 			}
 			else if(InternalFullNames.Contains(linkString))
 			{
-				linkString += Ext.MD;
+				linkString = ConvertXML.FormatFilename(linkString) + Ext.MD;
 			}
 			else if(InternalFullNames.Contains(parentLinkString))
 			{
-				linkString = parentLinkString + Ext.MD;
+				linkString = ConvertXML.FormatFilename(parentLinkString) + Ext.MD;
 			}
 			return linkString;
 		}

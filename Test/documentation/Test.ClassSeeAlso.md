@@ -13,6 +13,8 @@ MethodWithParameters(int, int) or Local method with parameters
 MethodWithParameters(int, int) or Local method with parameters  
 [Test.ClassSimpleComments](Test.ClassSimpleComments.md) or [Another internal type](Test.ClassSimpleComments.md)  
 [Test.ClassSimpleComments](Test.ClassSimpleComments.md) or [Another internal type](Test.ClassSimpleComments.md)  
+[Test.ClassSimpleCommentsGeneric&lt;T,U&gt;](Test.ClassSimpleCommentsGeneric_T_U_.md) or [Generic internal type](Test.ClassSimpleCommentsGeneric_T_U_.md)  
+[Test.ClassSimpleCommentsGeneric&lt;T,U&gt;](Test.ClassSimpleCommentsGeneric_T_U_.md) or [Generic internal type](Test.ClassSimpleCommentsGeneric_T_U_.md)  
 [Test.ClassSimpleComments.IntegerProperty](Test.ClassSimpleComments.md) or [Another internal type's property](Test.ClassSimpleComments.md)  
 [Test.ClassSimpleComments.IntegerProperty](Test.ClassSimpleComments.md) or [Another internal type's property](Test.ClassSimpleComments.md)  
 [Test.ClassSimpleComments.ClassSimpleComments()](Test.ClassSimpleComments.md) or [Another internal type's method](Test.ClassSimpleComments.md)  

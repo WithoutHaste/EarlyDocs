@@ -119,12 +119,16 @@ namespace EarlyDocs
 			}
 		}
 
+		internal static string FormatFilename(string filename)
+		{
+			//for generic type parameters
+			filename = filename.Replace("<", "_").Replace(">", "_").Replace(",", "_");
+			return filename;
+		}
+
 		private void Save(DotNetType type, string directory, string filename)
 		{
-			//todo: move formatting of filename to central location that links can use
-			filename = filename.Replace("<", "_").Replace(">", "_").Replace(",", "_");
-
-			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
+			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, FormatFilename(filename))))
 			{
 				writer.Write(type.ToMarkdownFile().ToMarkdown());
 			}
@@ -132,10 +136,7 @@ namespace EarlyDocs
 
 		private void Save(DotNetDelegate _delegate, string directory, string filename)
 		{
-			//todo: move formatting of filename to central location that links can use, make sure links do use it
-			filename = filename.Replace("<", "_").Replace(">", "_").Replace(",", "_");
-
-			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
+			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, FormatFilename(filename))))
 			{
 				writer.Write(_delegate.ToMarkdownFile().ToMarkdown());
 			}

@@ -17,6 +17,8 @@ namespace Test
 	/// <seealso cref="MethodWithParameters(int,int)"/> or <seealso cref="MethodWithParameters(int,int)">Local method with parameters</seealso>
 	/// <see cref="ClassSimpleComments"/> or <see cref="ClassSimpleComments">Another internal type</see>
 	/// <seealso cref="ClassSimpleComments"/> or <seealso cref="ClassSimpleComments">Another internal type</seealso>
+	/// <see cref="ClassSimpleCommentsGeneric{T,U}"/> or <see cref="ClassSimpleCommentsGeneric{T,U}">Generic internal type</see>
+	/// <seealso cref="ClassSimpleCommentsGeneric{T,U}"/> or <seealso cref="ClassSimpleCommentsGeneric{T,U}">Generic internal type</seealso>
 	/// <see cref="ClassSimpleComments.IntegerProperty"/> or <see cref="ClassSimpleComments.IntegerProperty">Another internal type's property</see>
 	/// <seealso cref="ClassSimpleComments.IntegerProperty"/> or <seealso cref="ClassSimpleComments.IntegerProperty">Another internal type's property</seealso>
 	/// <see cref="ClassSimpleComments.ClassSimpleComments()"/> or <see cref="ClassSimpleComments.ClassSimpleComments()">Another internal type's method</see>
