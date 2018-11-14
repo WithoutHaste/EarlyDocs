@@ -453,7 +453,7 @@ namespace EarlyDocs
 					string enumHeader = e.Name.ToDisplayStringLink(type.Name);
 					enumSection.Add(new MarkdownLine(MarkdownText.Bold(enumHeader)));
 					enumSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(e.SummaryComments));
-					enumSection.Add(ConvertDotNet.EnumToMinimalList(e));
+					enumSection.Add(ConvertDotNet.EnumToMinimalMDList(e));
 				}
 			}
 			if(type.Fields.Count > 0)
@@ -733,7 +733,7 @@ namespace EarlyDocs
 				return;
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Returns:")));
-			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.ReturnsComments));
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.ReturnsComments));
 		}
 
 		private static void AddTopLevelExamples(MarkdownSection section, DotNetMember member)
@@ -749,7 +749,7 @@ namespace EarlyDocs
 			{
 				string exampleHeader = "Example " + counter.Value + ":";
 				MarkdownSection exampleSection = examplesSection.AddSection(exampleHeader);
-				exampleSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				exampleSection.Add(ConvertDotNet.DotNetCommentsToParagraph(comment));
 				counter++;
 			}
 		}
@@ -764,7 +764,7 @@ namespace EarlyDocs
 			{
 				string exampleHeader = "Example " + counter.Value + ":";
 				section.AddInLine(MarkdownText.Bold(exampleHeader));
-				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				section.Add(ConvertDotNet.DotNetCommentsToParagraph(comment));
 				counter++;
 			}
 		}
@@ -803,7 +803,7 @@ namespace EarlyDocs
 					}
 				}
 				MarkdownSection permissionSection = permissionsSection.AddSection(permissionHeader);
-				permissionSection.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment.Comments));
+				permissionSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(comment));
 			}
 		}
 
@@ -829,7 +829,7 @@ namespace EarlyDocs
 					}
 				}
 				section.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
-				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment.Comments));
+				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(comment));
 			}
 		}
 
@@ -839,7 +839,7 @@ namespace EarlyDocs
 				return;
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Misc:")));
-			section.Add(ConvertDotNet.DotNetCommentsToMarkdown(member.FloatingComments, member));
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.FloatingComments, member));
 		}
 
 		public static void AddTopLevelTypeParameters(MarkdownSection section, DotNetMember member)
@@ -1033,7 +1033,7 @@ namespace EarlyDocs
 		{
 			foreach(DotNetComment comment in group.Comments.Where(c => c.Tag != CommentTag.Example))
 			{
-				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment, parent));
+				section.Add(ConvertDotNet.DotNetCommentsToParagraph(comment, parent));
 			}
 
 			//todo: refactor: merge this with method AddExamples somehow
@@ -1042,7 +1042,7 @@ namespace EarlyDocs
 			{
 				string exampleHeader = "Example " + counter.Value + ":";
 				section.AddInLine(MarkdownText.Bold(exampleHeader));
-				section.Add(ConvertDotNet.DotNetCommentsToMarkdown(comment));
+				section.Add(ConvertDotNet.DotNetCommentsToParagraph(comment));
 				counter++;
 			}
 		}

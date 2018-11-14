@@ -8,9 +8,7 @@ Tests include code and xml in comments.
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) CodeBlock
 
-[Summary Tag]  
-
-
+[Summary Tag]
 ```
 int a = 0;
 int b = 1;
@@ -25,9 +23,7 @@ string d = "d";
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) CodeBlockWithLanguage
 
-[Summary Tag]  
-
-
+[Summary Tag]
 ```php
 <?php
 $txt = "Hello world!";
@@ -48,26 +44,14 @@ function myTest() {
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) InlineCode
 
-Word word  
-
-`int a = 0;`  
-
- word word word.  
+Word word `int a = 0;` word word word.  
 
 **Misc:**  
-Misc misc misc  
-
-`public static void Main(string[] args) { }`  
-
- misc misc misc.  
+Misc misc misc `public static void Main(string[] args) { }` misc misc misc.  
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) InlineXml
 
-Word word word  
-
-`<html><body></body></html>`  
-
- word word word.  
+Word word word `<html><body></body></html>` word word word.  
 
 **Example A:**  
 
