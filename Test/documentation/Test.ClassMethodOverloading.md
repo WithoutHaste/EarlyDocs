@@ -6,6 +6,69 @@ Tests overloaded methods.
 
 # Methods
 
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodDuplicateOneLevel()
+
+[Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.  
+
+**Misc:**  
+[Floating Comment] [Short] [One Line] Nulla facilisi.  
+
+**Example A:**  
+[Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
+
+**Permission: MethodOverload(int, int)**  
+[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
+
+**Exceptions:**  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
+
+**Parameters:**  
+
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodDuplicateThreeLevels()
+
+[Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.  
+
+**Misc:**  
+[Floating Comment] [Short] [One Line] Nulla facilisi.  
+
+**Example A:**  
+[Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
+
+**Permission: MethodOverload(int, int)**  
+[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
+
+**Exceptions:**  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
+
+**Parameters:**  
+
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodDuplicateTwoLevels()
+
+[Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
+
+**Remarks:**  
+[Remarks Tag] [Short] [One Line] Etiam placerat turpis et felis posuere, id interdum turpis fringilla.  
+
+**Misc:**  
+[Floating Comment] [Short] [One Line] Nulla facilisi.  
+
+**Example A:**  
+[Example Tag] [Short] [One Line] In sit amet nisi ac ipsum consectetur venenatis.  
+
+**Permission: MethodOverload(int, int)**  
+[Permission Tag] [References Method] [Short] [One Line] Nulla lacus ligula, elementum sed lacus sit amet, mollis varius lectus.  
+
+**Exceptions:**  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vestibulum pulvinar mattis gravida.  
+
+**Parameters:**  
+
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodOverload([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  

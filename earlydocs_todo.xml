@@ -38,57 +38,19 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">64</Data>
+          <Data ss:Type="Number">54</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">EarlyDocs.DotNetExtensions
-refactor ToHeader and ToDisplayX methods to use DotNetQualifiedName instead of string parent
-use new DataFiles name.Localize(parentName) method</Data>
+          <Data ss:Type="String">implementing inheritdoc that looks more than one level deep</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Task</Data>
+          <Data ss:Type="String">Bug - Minor</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">65</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">EarlyDocs.DotNetExtensions
-figure out how to refactor all the AddTopLevelX vs AddX methods</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">69</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">DotNetMember.ParseVisualStudioXml
-a lot of that code duplication can be removed</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2018-10-26T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -209,40 +171,6 @@ default, leave it alone</Data>
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">54</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">implementing inheritdoc that looks more than one level deep</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Bug - Minor</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-26T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">62</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">implementing duplicate that looks more than one level deep</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Bug - Minor</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">46</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -347,6 +275,61 @@ so running multiple files through this documentation process will rack up edits 
           <Data ss:Type="DateTime">2018-10-26T00:00:00.000</Data>
         </Cell>
       </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">64</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">EarlyDocs.DotNetExtensions
+refactor ToHeader and ToDisplayX methods to use DotNetQualifiedName instead of string parent
+use new DataFiles name.Localize(parentName) method</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">65</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">EarlyDocs.DotNetExtensions
+figure out how to refactor all the AddTopLevelX vs AddX methods</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">69</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">DotNetMember.ParseVisualStudioXml
+a lot of that code duplication can be removed</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
+        </Cell>
+      </Row>
     </Table>
     <x:WorksheetOptions />
   </ss:Worksheet>
@@ -376,6 +359,68 @@ so running multiple files through this documentation process will rack up edits 
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">62</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">implementing duplicate that looks more than one level deep</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-14T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">72</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">DataFiles.DotNet
+- make all the GetFullListOfLocalNames internal</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-14T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-14T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">71</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">i'm adding the clone functionality
+so that DotNetQualifiedName.Localize can use a clone instead of a Flattened</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-14T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-14T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -1272,7 +1317,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">70</Data>
+          <Data ss:Type="Number">72</Data>
         </Cell>
       </Row>
       <Row>

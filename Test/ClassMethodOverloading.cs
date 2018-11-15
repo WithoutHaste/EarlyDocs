@@ -36,5 +36,20 @@ namespace Test
 		public void MethodOverload(float a, float b)
 		{
 		}
+
+		/// <duplicate cref="MethodOverload(int,int)" />
+		public void MethodDuplicateOneLevel()
+		{
+		}
+
+		/// <duplicate cref="MethodDuplicateOneLevel()" />
+		public void MethodDuplicateTwoLevels()
+		{
+		}
+
+		/// <duplicate cref="MethodDuplicateTwoLevels()" />
+		public void MethodDuplicateThreeLevels()
+		{
+		}
 	}
 }
