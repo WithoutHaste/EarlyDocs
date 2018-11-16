@@ -38,19 +38,55 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">54</Data>
+          <Data ss:Type="Number">61</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">implementing inheritdoc that looks more than one level deep</Data>
+          <Data ss:Type="String">install EarlyDocs into the Test project build operations
+- test</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Bug - Minor</Data>
+          <Data ss:Type="String">Feature - Major</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-26T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">2</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">make NuGet package out of project</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-06T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">46</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">add NuGet package to library projects
+verify that output it still good</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -132,59 +168,6 @@ default, leave it alone</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-26T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">61</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">install EarlyDocs into the Test project build operations
-- test</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Major</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">2</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">make NuGet package out of project</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Major</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-09-06T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">46</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">add NuGet package to library projects
-verify that output it still good</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-10-18T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -359,6 +342,26 @@ a lot of that code duplication can be removed</Data>
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">54</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">implementing inheritdoc that looks more than one level deep</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-10-26T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-16T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
