@@ -1,6 +1,6 @@
 # Table of Contents
 
-## (Test)[TableOfContents.Test.md]
+## [Test](TableOfContents.Test.md)
 
 [Test.ClassAbstract](Test.ClassAbstract.md)  
 [Test.ClassCode](Test.ClassCode.md)  
@@ -34,15 +34,15 @@
 [Test.StructSimpleComments](Test.StructSimpleComments.md)  
 [Test.EventHandlerGlobal](Test.EventHandlerGlobal.md)  
 
-### (Test.Filler)[TableOfContents.Test.Filler.md]
+### [Test.Filler](TableOfContents.Test.Filler.md)
 
 [Test.Filler.IInterfaceB](Test.Filler.IInterfaceB.md)  
 
-### (Test.SpaceA)[TableOfContents.Test.SpaceA.md]
+### [Test.SpaceA](TableOfContents.Test.SpaceA.md)
 
 [Test.SpaceA.ClassInNamespaceA](Test.SpaceA.ClassInNamespaceA.md)  
 
-#### (Test.SpaceA.SpaceB)[TableOfContents.Test.SpaceA.SpaceB.md]
+#### [Test.SpaceA.SpaceB](TableOfContents.Test.SpaceA.SpaceB.md)
 
 [Test.SpaceA.SpaceB.ClassInNamespaceB](Test.SpaceA.SpaceB.ClassInNamespaceB.md)  
 

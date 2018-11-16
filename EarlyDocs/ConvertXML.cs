@@ -183,7 +183,8 @@ namespace EarlyDocs
 
 		private MarkdownSection BuildMasterSummary(DotNetDocumentationFile xmlDocumentation, DotNetQualifiedClassNameTreeNode node)
 		{
-			MarkdownSection section = new MarkdownSection(String.Format("({0})[{1}]", node.Value, TableOfContentsFilename(node.Value)));
+			string header= (new MarkdownInlineLink(node.Value, TableOfContentsFilename(node.Value))).ToMarkdown(null);
+			MarkdownSection section = new MarkdownSection(header);
 			List<DotNetType> types = xmlDocumentation.Types.Where(t => t.Name.FullNamespace == node.Value).ToList();
 			foreach(DotNetType type in types)
 			{
