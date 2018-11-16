@@ -144,48 +144,91 @@ namespace EarlyDocs
 
 		internal static string TableOfContentsFilename(DotNetQualifiedName _namespace)
 		{
-			return "TableOfContents." + _namespace.FullName + Ext.MD;
+			return "TableOfContents." + FormatFilename(_namespace.FullName) + Ext.MD;
 		}
 
 		private void GenerateTableOfContents(DotNetDocumentationFile xmlDocumentation, string directory)
 		{
-			List<DotNetQualifiedName> _namespaces = new List<DotNetQualifiedName>();
+			List<DotNetQualifiedClassName> _namespaces = new List<DotNetQualifiedClassName>();
 			foreach(DotNetType type in xmlDocumentation.Types)
 			{
-				_namespaces.Add(type.Name.FullNamespace);
+				_namespaces.Add(type.TypeName.FullClassNamespace);
 			}
 			foreach(DotNetDelegate _delegate in xmlDocumentation.Delegates)
 			{
-				_namespaces.Add(_delegate.Name.FullNamespace);
+				_namespaces.Add(_delegate.MethodName.FullClassNamespace);
 			}
 			_namespaces = _namespaces.Distinct().ToList();
+			DotNetQualifiedClassNameTreeNode root = DotNetQualifiedClassNameTreeNode.Generate(_namespaces);
+			GenerateAndSaveTableOfContents(xmlDocumentation, root, directory);
 
-			foreach(DotNetQualifiedName _namespace in _namespaces)
+			//master table of contents
+			MarkdownFile markdown = new MarkdownFile();
+			MarkdownSection section = markdown.AddSection("Table of Contents");
+			if(root.Value == null)
 			{
-				DotNetQualifiedName parent = GetParentNamespace(_namespaces, _namespace);
-				List<DotNetQualifiedName> childNamespaces = GetChildNamespaces(_namespaces, _namespace);
-				Save(GenerateTableOfContents(xmlDocumentation, _namespace, parent, childNamespaces), directory, TableOfContentsFilename(_namespace));
+				foreach(DotNetQualifiedClassNameTreeNode node in root.Children)
+				{
+					MarkdownSection subsection = BuildMasterSummary(xmlDocumentation, node);
+					section.AddSection(subsection);
+				}
+			}
+			else
+			{
+				MarkdownSection subsection = BuildMasterSummary(xmlDocumentation, root);
+				section.AddSection(subsection);
+			}
+			Save(markdown, directory, "TableOfContents" + Ext.MD);
+		}
+
+		private MarkdownSection BuildMasterSummary(DotNetDocumentationFile xmlDocumentation, DotNetQualifiedClassNameTreeNode node)
+		{
+			MarkdownSection section = new MarkdownSection(String.Format("({0})[{1}]", node.Value, TableOfContentsFilename(node.Value)));
+			List<DotNetType> types = xmlDocumentation.Types.Where(t => t.Name.FullNamespace == node.Value).ToList();
+			foreach(DotNetType type in types)
+			{
+				section.Add(new MarkdownLine(new MarkdownInlineLink(type.Name, FormatFilename(type.Name + Ext.MD))));
+			}
+			List<DotNetDelegate> _delegates = xmlDocumentation.Delegates.Where(d => d.Name.FullNamespace == node.Value).ToList();
+			foreach(DotNetDelegate _delegate in _delegates)
+			{
+				section.Add(new MarkdownLine(new MarkdownInlineLink(_delegate.Name, FormatFilename(_delegate.Name + Ext.MD))));
+			}
+			foreach(DotNetQualifiedClassNameTreeNode child in node.Children)
+			{
+				section.AddSection(BuildMasterSummary(xmlDocumentation, child));
+			}
+			return section;
+		}
+
+		private void GenerateAndSaveTableOfContents(DotNetDocumentationFile xmlDocumentation, DotNetQualifiedClassNameTreeNode node, string directory)
+		{
+			if(node.Value != null)
+				Save(GenerateTableOfContents(xmlDocumentation, node), directory, TableOfContentsFilename(node.Value));
+			foreach(DotNetQualifiedClassNameTreeNode child in node.Children)
+			{
+				GenerateAndSaveTableOfContents(xmlDocumentation, child, directory);
 			}
 		}
 
-		private MarkdownFile GenerateTableOfContents(DotNetDocumentationFile xmlDocumentation, DotNetQualifiedName _namespace, DotNetQualifiedName parent, List<DotNetQualifiedName> childNamespaces)
+		private MarkdownFile GenerateTableOfContents(DotNetDocumentationFile xmlDocumentation, DotNetQualifiedClassNameTreeNode node)
 		{
-			List<DotNetType> types = xmlDocumentation.Types.Where(t => t.Name.FullNamespace == _namespace).ToList();
-			List<DotNetDelegate> _delegates = xmlDocumentation.Delegates.Where(d => d.Name.FullNamespace == _namespace).ToList();
+			List<DotNetType> types = xmlDocumentation.Types.Where(t => t.Name.FullNamespace == node.Value).ToList();
+			List<DotNetDelegate> _delegates = xmlDocumentation.Delegates.Where(d => d.Name.FullNamespace == node.Value).ToList();
 
 			MarkdownFile markdown = new MarkdownFile();
-			string header = "Contents of " + _namespace.FullName;
-			if(parent != null)
-				header = String.Format("Contents of [{0}]({1}).{2}", parent.FullName, TableOfContentsFilename(parent), _namespace.LocalName);
+			string header = "Contents of " + node.Value.FullName;
+			if(node.Parent != null)
+				header = String.Format("Contents of [{0}]({1}).{2}", node.Parent.Value.FullName, TableOfContentsFilename(node.Parent.Value), node.Value.LocalName);
 
 			MarkdownSection section = markdown.AddSection(header);
 
-			if(childNamespaces != null && childNamespaces.Count > 0)
+			if(node.Children.Count > 0)
 			{
 				MarkdownSection childNamespacesSection = section.AddSection("Namespaces");
-				foreach(DotNetQualifiedName childNamespace in childNamespaces)
+				foreach(DotNetQualifiedClassNameTreeNode child in node.Children)
 				{
-					section.AddInLine(new MarkdownInlineLink(MarkdownText.Bold(childNamespace.FullName), TableOfContentsFilename(childNamespace)));
+					section.AddInLine(new MarkdownInlineLink(MarkdownText.Bold(child.Value.FullName), TableOfContentsFilename(child.Value)));
 				}
 			}
 
@@ -224,34 +267,6 @@ namespace EarlyDocs
 				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments));
 				section.Add(new MarkdownLine());
 			}
-		}
-
-		/// <summary>Returns the closest parent in the provided list, or null.</summary>
-		private DotNetQualifiedName GetParentNamespace(List<DotNetQualifiedName> _namespaces, DotNetQualifiedName _namespace)
-		{
-			DotNetQualifiedName parent = null;
-			foreach(DotNetQualifiedName other in _namespaces)
-			{
-				if(other == _namespace) continue;
-				if(!_namespace.IsWithin(other)) continue;
-				if(parent == null)
-					parent = other;
-				else if(other.IsWithin(parent))
-					parent = other;
-			}
-			return parent;
-		}
-
-		private List<DotNetQualifiedName> GetChildNamespaces(List<DotNetQualifiedName> _namespaces, DotNetQualifiedName _namespace)
-		{
-			List<DotNetQualifiedName> childNamespaces = new List<DotNetQualifiedName>();
-			foreach(DotNetQualifiedName other in _namespaces)
-			{
-				if(other == _namespace) continue;
-				if(GetParentNamespace(_namespaces, other) == _namespace)
-					childNamespaces.Add(other);
-			}
-			return childNamespaces;
 		}
 	}
 }

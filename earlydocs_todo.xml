@@ -346,6 +346,29 @@ a lot of that code duplication can be removed</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">73</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">create a master table of contents file
+with a consistent name
+that links to all the namespace-specific contents
+- this will enable incremental build logic by providing a 1-to-1 mapping between input and output files</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-16T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-16T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">54</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -1320,7 +1343,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">72</Data>
+          <Data ss:Type="Number">73</Data>
         </Cell>
       </Row>
       <Row>
