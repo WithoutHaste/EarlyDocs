@@ -8,40 +8,20 @@ namespace EarlyDocs
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static int Main(string[] args)
 		{
-			new ConvertXML(
-				"../../../Test/bin/Debug/Test.dll",
-				"../../../Test/bin/Debug/Test.XML",
-				"../../../Test/documentation"
-			);
+			if(args.Length != 3)
+			{
+				Console.WriteLine("EarlyDocs expects arguments: full path to *.dll, full path to *.XML, full path to output directory.");
+				Environment.Exit(-1);
+			}
 
-			//new ConvertXML(
-			//	"E:/Github/WithoutHaste.DataFiles/DataFiles/bin/Release/WithoutHaste.DataFiles.dll",
-			//	"E:/Github/WithoutHaste.DataFiles/DataFiles/bin/Release/WithoutHaste.DataFiles.XML",
-			//	"E:/Github/WithoutHaste.DataFiles/documentation"
-			//);
+			new ConvertXML(dllFilename: args[0], xmlDocumentationFilename: args[1], outputDirectory: args[2]);
+			
+			//Console.WriteLine("EarlyDocs completed.");
+			//Console.ReadLine();
 
-			//new ConvertXML(
-			//	"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.dll",
-			//	"E:/Github/WithoutHaste.Drawing.Shapes/Shapes/bin/Release/WithoutHaste.Drawing.Shapes.XML",
-			//	"E:/Github/WithoutHaste.Drawing.Shapes/documentation"
-			//);
-
-			//new ConvertXML(
-			//	"E:/Github/WithoutHaste.Drawing.Colors/Colors/bin/Release/WithoutHaste.Drawing.Colors.dll",
-			//	"E:/Github/WithoutHaste.Drawing.Colors/Colors/bin/Release/WithoutHaste.Drawing.Colors.XML",
-			//	"E:/Github/WithoutHaste.Drawing.Colors/documentation"
-			//);
-
-			//new ConvertXML(
-			//	"E:/Github/WithoutHaste.Windows.GUI/GUI/bin/Release/WithoutHaste.Windows.GUI.dll",
-			//	"E:/Github/WithoutHaste.Windows.GUI/GUI/bin/Release/WithoutHaste.Windows.GUI.XML",
-			//	"E:/Github/WithoutHaste.Windows.GUI/documentation"
-			//);
-
-			Console.WriteLine("done");
-			Console.ReadLine();
+			return 0;
 		}
 	}
 }

@@ -38,20 +38,20 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">61</Data>
+          <Data ss:Type="Number">37</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">install EarlyDocs into the Test project build operations
-- test</Data>
+          <Data ss:Type="String">config option: empty documentation folder before saving or leave it alone
+default, leave it alone</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Feature - Major</Data>
+          <Data ss:Type="String">Feature - Minor</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2018-09-28T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -133,24 +133,6 @@ about this custom functionality</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-09-17T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">37</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">config option: empty documentation folder before saving or leave it alone
-default, leave it alone</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Minor</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-09-28T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -342,6 +324,27 @@ a lot of that code duplication can be removed</Data>
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">61</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">install EarlyDocs into the Test project build operations
+- test</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-12T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-16T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
