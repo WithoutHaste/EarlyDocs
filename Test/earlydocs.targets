@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<UsingTask TaskName="RunEarlyDocs" AssemblyFile="$(ProjectDir)$(OutDir)WithoutHaste.EarlyDocs.dll" />  
+	<Target Name="EarlyDocsTarget" AfterTargets="AfterBuild" Inputs="$(ProjectDir)$(OutDir)$(ProjectName).XML" Outputs="$(ProjectDir)documentation\TableOfContents.md">  
+		<Message Importance="Normal" Text="Starting EarlyDocs..."/>
+		<RunEarlyDocs LocationXML="$(ProjectDir)$(OutDir)$(ProjectName).XML" LocationDLL="$(ProjectDir)$(OutDir)$(ProjectName).dll" OutputDirectory="$(ProjectDir)documentation\" ContinueOnError="True">
+			<Output TaskParameter="RuntimeException" PropertyName="EarlyDocsException"/>
+			<Output TaskParameter="ReturnValue" PropertyName="EarlyDocsReturnValue"/>
+		</RunEarlyDocs>
+		<Warning Text="$(EarlyDocsException)" Condition="'$(EarlyDocsReturnValue)'==0"/>
+		<Message Importance="Normal" Text="Completed EarlyDocs."/>
+	</Target>  
+
+<!--
 	<Target Name="PrintFromTarget" AfterTargets="AfterBuild" Inputs="$(ProjectDir)$(OutDir)$(ProjectName).XML" Outputs="$(ProjectDir)documentation\TableOfContents.md">
 		<Message Importance="Normal" Text="Starting EarlyDocs..."/>
 		<Exec Command="C:\DataDrive\Github\EarlyDocs\EarlyDocs\bin\Release\EarlyDocs.exe $(ProjectDir)$(OutDir)$(ProjectName).dll $(ProjectDir)$(OutDir)$(ProjectName).XML $(ProjectDir)\documentation\" IgnoreExitCode="True" ConsoleToMSBuild="True">
@@ -9,4 +21,5 @@
 		<Message Importance="High" Text="$(OutputOfExec)" Condition="'%(ExitCodes.identity)'!=0"/>
 		<Message Importance="Normal" Text="Completed EarlyDocs."/>
 	</Target>
+-->
 </Project>

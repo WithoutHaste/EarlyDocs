@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EarlyDocs")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("WithoutHaste.EarlyDocs")]
+[assembly: AssemblyDescription("Generate Markdown documentation files for .Net libraries.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Without Haste, LLC")]
 [assembly: AssemblyProduct("EarlyDocs")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]

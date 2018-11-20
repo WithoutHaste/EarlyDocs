@@ -5,14 +5,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace EarlyDocs
+namespace WithoutHaste.EarlyDocs
 {
-	static class StringExtensions
+	internal static class StringExtensions
 	{
 		/// <summary>
 		/// Returns the last term in a period-delimited string.
 		/// </summary>
-		public static string LastTerm(this string text)
+		internal static string LastTerm(this string text)
 		{
 			return text.Split('.').Last();
 		}
@@ -20,7 +20,7 @@ namespace EarlyDocs
 		/// <summary>
 		/// Remove outer-most opening and closing tags.
 		/// </summary>
-		public static string StripOuterTags(this string text)
+		internal static string StripOuterTags(this string text)
 		{
 			text = text.Trim();
 			if(text[0] != '<') return text;
@@ -34,7 +34,7 @@ namespace EarlyDocs
 		/// <summary>
 		/// Remove outer-most opening and closing CDATA tags.
 		/// </summary>
-		public static string StripOuterCDATATags(this string text)
+		internal static string StripOuterCDATATags(this string text)
 		{
 			text = text.Trim();
 			if(!text.StartsWith("<![CDATA[")) return text;
@@ -48,7 +48,7 @@ namespace EarlyDocs
 		/// <summary>
 		/// Character is a whitespace character.
 		/// </summary>
-		public static bool IsWhitespace(this char c)
+		internal static bool IsWhitespace(this char c)
 		{
 			return (c == ' ' || c == '\n' || c == '\r' || c == '\t');
 		}
@@ -57,7 +57,7 @@ namespace EarlyDocs
 		/// True if this path or url ends with some file extension.
 		/// Webpage endings (such as .com) are interpreted as file extensions.
 		/// </summary>
-		public static bool EndsWithFileExtension(this string text)
+		internal static bool EndsWithFileExtension(this string text)
 		{
 			Regex r = new Regex(@"\.\w+$", RegexOptions.IgnoreCase);
 			return (r.IsMatch(text));
@@ -67,7 +67,7 @@ namespace EarlyDocs
 		/// Return all whitespace from beginning of string to the first non-whitespace character.
 		/// Returns an empty string if there are not leading whitespaces.
 		/// </summary>
-		public static string GetLeadingWhitespace(this string text)
+		internal static string GetLeadingWhitespace(this string text)
 		{
 			if(text.Length == 0 || !text[0].IsWhitespace())
 				return "";

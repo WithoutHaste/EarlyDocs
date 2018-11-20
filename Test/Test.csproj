@@ -39,6 +39,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WithoutHaste.DataFiles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EarlyDocs\bin\Debug\WithoutHaste.DataFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="WithoutHaste.EarlyDocs">
+      <HintPath>..\EarlyDocs\bin\Debug\WithoutHaste.EarlyDocs.dll</HintPath>
+    </Reference>
+    <Reference Include="WithoutHaste.Libraries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EarlyDocs\bin\Debug\WithoutHaste.Libraries.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassAbstract.cs" />

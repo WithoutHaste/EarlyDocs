@@ -1,5 +1,5 @@
 EarlyDocs/.vs/*
-EarlyDocs/bin/*
+EarlyDocs/bin/Debug/*
 EarlyDocs/obj/*
 Test/.vs/*
 Test/bin/*

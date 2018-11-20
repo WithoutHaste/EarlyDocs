@@ -8,16 +8,16 @@ using System.Xml.Linq;
 using WithoutHaste.DataFiles.DotNet;
 using WithoutHaste.DataFiles.Markdown;
 
-namespace EarlyDocs
+namespace WithoutHaste.EarlyDocs
 {
 	internal static class Ext
 	{
 		public const string MD = ".md";
 	}
 
-	class ConvertXML
+	internal class ConvertXML
 	{
-		public ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory)
+		internal ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory)
 		{
 			bool emptyOutputDirectoryFirst = true;
 

@@ -7,21 +7,21 @@ using WithoutHaste.DataFiles;
 using WithoutHaste.DataFiles.DotNet;
 using WithoutHaste.DataFiles.Markdown;
 
-namespace EarlyDocs
+namespace WithoutHaste.EarlyDocs
 {
-	public static class DotNetExtensions
+	internal static class DotNetExtensions
 	{
 		/// <summary>List of all full names of known types/delegates in the assembly being documented.</summary>
-		public static List<string> InternalFullNames = new List<string>();
+		internal static List<string> InternalFullNames = new List<string>();
 
 		/// <summary>List of all internal types that implement each internal interface.</summary>
-		public static Dictionary<DotNetQualifiedName, List<DotNetType>> InterfaceImplementedByTypes = new Dictionary<DotNetQualifiedName, List<DotNetType>>();
+		internal static Dictionary<DotNetQualifiedName, List<DotNetType>> InterfaceImplementedByTypes = new Dictionary<DotNetQualifiedName, List<DotNetType>>();
 
-		public static List<DotNetQualifiedName> KnownMicrosoftNamespaces = new List<DotNetQualifiedName>() {
+		internal static List<DotNetQualifiedName> KnownMicrosoftNamespaces = new List<DotNetQualifiedName>() {
 			DotNetQualifiedName.FromVisualStudioXml("System"),
 		};
 
-		public static Dictionary<string, string> UnaryOperators = new Dictionary<string, string>() {
+		internal static Dictionary<string, string> UnaryOperators = new Dictionary<string, string>() {
 				{ "op_True", "(true)" },
 				{ "op_False", "(false)" },
 				{ "op_OnesComplement", "~" },
@@ -31,7 +31,7 @@ namespace EarlyDocs
 				{ "op_Implicit", "implicit" },
 				{ "op_Explicit", "explicit" },
 			};
-		public static Dictionary<string, string> BinaryOperators = new Dictionary<string, string>() {
+		internal static Dictionary<string, string> BinaryOperators = new Dictionary<string, string>() {
 				{ "op_Addition", "+" },
 				{ "op_Subtraction", "-" },
 				{ "op_Multiply", "*" },
@@ -50,7 +50,7 @@ namespace EarlyDocs
 				{ "op_LeftShift", "<<" },
 			};
 
-		public static bool IsInKnownMicrosoftNamespace(this DotNetQualifiedName name)
+		internal static bool IsInKnownMicrosoftNamespace(this DotNetQualifiedName name)
 		{
 			if(name == null)
 				return false;
@@ -66,7 +66,7 @@ namespace EarlyDocs
 
 		//---------------------------------------------------------------------------------
 
-		public static string ToHeader(this DotNetField field, DotNetType parent)
+		internal static string ToHeader(this DotNetField field, DotNetType parent)
 		{
 			if(field is DotNetProperty)
 				return ToHeader(field as DotNetProperty, parent);
@@ -95,7 +95,7 @@ namespace EarlyDocs
 			return header;
 		}
 
-		public static string ToHeader(this DotNetProperty property, DotNetType parent)
+		internal static string ToHeader(this DotNetProperty property, DotNetType parent)
 		{
 			if(property is DotNetIndexer)
 				return ToHeader(property as DotNetIndexer);
@@ -136,7 +136,7 @@ namespace EarlyDocs
 			return header;
 		}
 
-		public static string ToHeader(this DotNetIndexer indexer)
+		internal static string ToHeader(this DotNetIndexer indexer)
 		{
 			string header = indexer.TypeName.ToDisplayStringLink() + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink() + " " + p.Name).ToArray()) + "]";
 
@@ -169,17 +169,17 @@ namespace EarlyDocs
 			return header;
 		}
 
-		public static string ToHeader(this DotNetParameter parameter, string _namespace = null)
+		internal static string ToHeader(this DotNetParameter parameter, string _namespace = null)
 		{
 			return parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
 		}
 
-		public static string ToHeader(this DotNetCommentParameter commentParameter)
+		internal static string ToHeader(this DotNetCommentParameter commentParameter)
 		{
 			return commentParameter.ParameterLink.Name;
 		}
 
-		public static string ToHeader(this DotNetMethod method)
+		internal static string ToHeader(this DotNetMethod method)
 		{
 			if(method is DotNetMethodOperator)
 			{
@@ -213,7 +213,7 @@ namespace EarlyDocs
 			return header;
 		}
 
-		public static string ToHeader(this DotNetMethodOperator method)
+		internal static string ToHeader(this DotNetMethodOperator method)
 		{
 			string key = method.Name.LocalName;
 			string _namespace = method.Name.FullNamespace;
@@ -241,7 +241,7 @@ namespace EarlyDocs
 			return "unknown operator";
 		}
 
-		public static string ToDisplayString(this DotNetParameter parameter, string _namespace = null)
+		internal static string ToDisplayString(this DotNetParameter parameter, string _namespace = null)
 		{
 			string prefix = "";
 			if(parameter.Category == ParameterCategory.Out)
@@ -265,14 +265,14 @@ namespace EarlyDocs
 			return prefix + parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name + suffix;
 		}
 
-		public static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
+		internal static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
 		{
 			return methodLink.Name.ToDisplayString(_namespace);
 		}
 
 		//todo: instead of passing "parent namespace" as a string, pass it as DotNetQualifiedName and use a new child.Localize(parent) method
 
-		public static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
+		internal static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
 		{
 			if(name is DotNetQualifiedMethodName)
 				return (name as DotNetQualifiedMethodName).ToDisplayString(_namespace);
@@ -295,7 +295,7 @@ namespace EarlyDocs
 			return displayString;
 		}
 
-		public static string ToDisplayString(this DotNetQualifiedMethodName name, string _namespace = null)
+		internal static string ToDisplayString(this DotNetQualifiedMethodName name, string _namespace = null)
 		{
 			if(name == null)
 				return "";
@@ -320,7 +320,7 @@ namespace EarlyDocs
 			return displayString;
 		}
 
-		public static string ToDisplayStringLink(this DotNetQualifiedName name, string _namespace = null)
+		internal static string ToDisplayStringLink(this DotNetQualifiedName name, string _namespace = null)
 		{
 			if(name == null)
 				return "";
@@ -337,7 +337,7 @@ namespace EarlyDocs
 			return String.Format("[{0}]({1})", displayString, linkString);
 		}
 
-		public static string ToStringLink(this DotNetQualifiedName name)
+		internal static string ToStringLink(this DotNetQualifiedName name)
 		{
 			string linkString = name.FullName;
 			string parentLinkString = name.FullNamespace?.FullName;
@@ -380,19 +380,19 @@ namespace EarlyDocs
 
 		//---------------------------------------------------------------------------------
 
-		public static void TurnQualifiedNameConverterOn()
+		internal static void TurnQualifiedNameConverterOn()
 		{
 			DotNetSettings.QualifiedNameConverter = DotNetSettings.DefaultQualifiedNameConverter;
 			DotNetSettings.AdditionalQualifiedNameConverter = DotNetExtensions.QualifiedNameConverter;
 		}
 
-		public static void TurnQualifiedNameConverterOff()
+		internal static void TurnQualifiedNameConverterOff()
 		{
 			DotNetSettings.QualifiedNameConverter = null;
 			DotNetSettings.AdditionalQualifiedNameConverter = null;
 		}
 
-		public static string QualifiedNameConverter(string fullName, int depth)
+		internal static string QualifiedNameConverter(string fullName, int depth)
 		{
 			if(depth > 0)
 				return fullName;
@@ -413,7 +413,7 @@ namespace EarlyDocs
 
 		//---------------------------------------------------------------------------------
 
-		public static MarkdownFile ToMarkdownFile(this DotNetType type)
+		internal static MarkdownFile ToMarkdownFile(this DotNetType type)
 		{
 			MarkdownFile markdown = new MarkdownFile();
 			if(type.Category == TypeCategory.Enum)
@@ -428,7 +428,7 @@ namespace EarlyDocs
 			return markdown;
 		}
 
-		public static MarkdownSection ToMarkdownSection(this DotNetType type)
+		internal static MarkdownSection ToMarkdownSection(this DotNetType type)
 		{
 			string header = String.Format("[{0}]({1}).{2}", type.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(type.Name.FullNamespace), type.Name.LocalName);
 			if(InternalFullNames.Contains(type.Name.FullNamespace.FullName))
@@ -548,7 +548,7 @@ namespace EarlyDocs
 			return typeSection;
 		}
 
-		public static MarkdownFile ToMarkdownFile(this DotNetDelegate _delegate)
+		internal static MarkdownFile ToMarkdownFile(this DotNetDelegate _delegate)
 		{
 			MarkdownFile markdown = new MarkdownFile();
 
@@ -557,7 +557,7 @@ namespace EarlyDocs
 			return markdown;
 		}
 
-		public static MarkdownSection ToMarkdownSection(this DotNetField field, DotNetType parent)
+		internal static MarkdownSection ToMarkdownSection(this DotNetField field, DotNetType parent)
 		{
 			MarkdownSection memberSection = new MarkdownSection(field.ToHeader(parent));
 
@@ -571,7 +571,7 @@ namespace EarlyDocs
 			return memberSection;
 		}
 
-		public static MarkdownSection ToMarkdownSection(this DotNetMethod method)
+		internal static MarkdownSection ToMarkdownSection(this DotNetMethod method)
 		{
 			string header = method.ToHeader();
 			string fullHeader = header;
@@ -618,7 +618,7 @@ namespace EarlyDocs
 			return memberSection;
 		}
 
-		public static MarkdownSection ToMarkdownEnumSection(this DotNetType type)
+		internal static MarkdownSection ToMarkdownEnumSection(this DotNetType type)
 		{
 			if(type.Category != TypeCategory.Enum)
 				return new MarkdownSection("");
@@ -851,7 +851,7 @@ namespace EarlyDocs
 			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.FloatingComments, member));
 		}
 
-		public static void AddTopLevelTypeParameters(MarkdownSection section, DotNetMember member)
+		internal static void AddTopLevelTypeParameters(MarkdownSection section, DotNetMember member)
 		{
 			if(member.TypeParameterComments.Count == 0)
 				return;
@@ -880,7 +880,7 @@ namespace EarlyDocs
 			}
 		}
 
-		public static void AddTypeParameters(MarkdownSection section, DotNetMember member)
+		internal static void AddTypeParameters(MarkdownSection section, DotNetMember member)
 		{
 			if(member.TypeParameterComments.Count == 0)
 				return;
@@ -908,7 +908,7 @@ namespace EarlyDocs
 			}
 		}
 
-		public static void AddTopLevelParameters(MarkdownSection section, DotNetMethod method)
+		internal static void AddTopLevelParameters(MarkdownSection section, DotNetMethod method)
 		{
 			if(method.ParameterComments.Count == 0)
 				return;
@@ -945,7 +945,7 @@ namespace EarlyDocs
 			}
 		}
 
-		public static void AddParameters(MarkdownSection section, DotNetMethod method)
+		internal static void AddParameters(MarkdownSection section, DotNetMethod method)
 		{
 			if(method.ParameterComments.Count == 0)
 				return;
@@ -981,7 +981,7 @@ namespace EarlyDocs
 			}
 		}
 
-		public static void AddTopLevelExceptions(MarkdownSection section, DotNetMember member)
+		internal static void AddTopLevelExceptions(MarkdownSection section, DotNetMember member)
 		{
 			if(member.ExceptionComments.Count == 0)
 				return;
