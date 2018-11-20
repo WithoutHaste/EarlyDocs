@@ -20,9 +20,7 @@
   <files>
     <file src='.\bin\Release\EarlyDocs.dll' target='ref\net452\EarlyDocs.dll' />
     <file src='.\bin\Release\WithoutHaste.DataFiles.dll' target='ref\net452\WithoutHaste.DataFiles.dll' />
-    <file src='.\bin\Release\WithoutHaste.Libraries.dll' target='ref\net452\WithoutHaste.Libraries.dll' />
     <file src='.\EarlyDocs.targets' target='build\EarlyDocs.targets' />
-    <file src='.\EarlyDocs.props' target='build\EarlyDocs.props' />
     <file src='.\nuget_readme.txt' target='content\earlydocs_readme.txt' />
   </files>
 </package>
