@@ -9,6 +9,9 @@ Enable tests inheriting from multiple interfaces.
 [Test.ClassInherits](Test.ClassInherits.md)  
 Tests class inheritance.  
 
+[Test.ClassInherits](Test.ClassInherits.md)  
+Tests class inheritance.  
+
 # Properties
 
 ## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyB { get; set; }

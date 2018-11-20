@@ -27,8 +27,17 @@
 [Test.ClassInherits](Test.ClassInherits.md)  
 Tests class inheritance.  
 
+[Test.ClassInherits](Test.ClassInherits.md)  
+Tests class inheritance.  
+
 [Test.IInterfaceInherits](Test.IInterfaceInherits.md)  
 Tests interface inheritance.  
+
+[Test.IInterfaceInherits](Test.IInterfaceInherits.md)  
+Tests interface inheritance.  
+
+[Test.StructInherits](Test.StructInherits.md)  
+Tests struct inheritance.  
 
 [Test.StructInherits](Test.StructInherits.md)  
 Tests struct inheritance.  
