@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WithoutHaste.DataFiles.DotNet;
 using WithoutHaste.DataFiles.Markdown;
 
-namespace WithoutHaste.EarlyDocs
+namespace EarlyDocs
 {
 	internal static class ConvertDotNet
 	{

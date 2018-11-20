@@ -8,7 +8,7 @@ using System.Xml.Linq;
 using WithoutHaste.DataFiles.DotNet;
 using WithoutHaste.DataFiles.Markdown;
 
-namespace WithoutHaste.EarlyDocs
+namespace EarlyDocs
 {
 	internal static class Ext
 	{

@@ -345,6 +345,27 @@ a lot of that code duplication can be removed</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">75</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">Note:
+Naming the project and dll "EarlyDocs" instead of "WithoutHaste.EarlyDocs" because it is a stand alone project. No one is expected to be including the namespace directly in their code. And it has a specific single purpose, not a general reusable one, so the name is designed to be unique already.</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Documentation</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">61</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -1363,7 +1384,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">74</Data>
+          <Data ss:Type="Number">75</Data>
         </Cell>
       </Row>
       <Row>

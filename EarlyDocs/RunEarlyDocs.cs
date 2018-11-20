@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
-namespace WithoutHaste.EarlyDocs
+namespace EarlyDocs
 {
 	public class RunEarlyDocs : Task
 	{

@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace WithoutHaste.EarlyDocs
+namespace EarlyDocs
 {
 	internal static class StringExtensions
 	{
