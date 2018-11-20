@@ -25,6 +25,11 @@ namespace EarlyDocs
 		public string OutputDirectory { get; set; }
 
 		/// <summary>
+		/// True means the OutputDirectory will be emptied before new files are saved there.
+		/// </summary>
+		public bool EmptyOutputDirectory { get; set; }
+
+		/// <summary>
 		/// Output property: set to 1 on success and 0 on an error.
 		/// </summary>
 		[Output]
@@ -44,7 +49,7 @@ namespace EarlyDocs
 		{
 			try
 			{
-				new ConvertXML(LocationDLL, LocationXML, OutputDirectory);
+				new ConvertXML(LocationDLL, LocationXML, OutputDirectory, EmptyOutputDirectory);
 			}
 			catch(Exception e)
 			{

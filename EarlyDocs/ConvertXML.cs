@@ -17,10 +17,8 @@ namespace EarlyDocs
 
 	internal class ConvertXML
 	{
-		internal ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory)
+		internal ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory, bool emptyOutputDirectoryFirst)
 		{
-			bool emptyOutputDirectoryFirst = true;
-
 			DotNetDocumentationFile xmlDocumentation = new DotNetDocumentationFile(xmlDocumentationFilename);
 			xmlDocumentation.AddAssemblyInfo(dllFilename);
 			DotNetExtensions.TurnQualifiedNameConverterOn();

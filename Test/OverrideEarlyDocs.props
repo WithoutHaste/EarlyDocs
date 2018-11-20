@@ -1,0 +1,6 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup Label="EarlyDocs">
+		<EarlyDocsOutputDir>..\..\documentation\</EarlyDocsOutputDir>
+		<EarlyDocsEmptyOutputDir>true</EarlyDocsEmptyOutputDir>
+	</PropertyGroup>
+</Project>
