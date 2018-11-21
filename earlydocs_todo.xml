@@ -38,6 +38,23 @@
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">96</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">property option to turn off earlydocs without uninstalling it</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-21T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">87</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -1770,7 +1787,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">95</Data>
+          <Data ss:Type="Number">96</Data>
         </Cell>
       </Row>
       <Row>
