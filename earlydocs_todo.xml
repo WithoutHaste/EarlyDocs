@@ -38,16 +38,17 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">83</Data>
+          <Data ss:Type="Number">87</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">support overriding *.XML filename</Data>
+          <Data ss:Type="String">on top level TableOfContents
+order types by name</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Feature - Major</Data>
+          <Data ss:Type="String">Feature - Minor</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
@@ -55,16 +56,112 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">84</Data>
+          <Data ss:Type="Number">90</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">support overriding *.dll filename</Data>
+          <Data ss:Type="String">WithoutHaste.DataFiles.Excel.ExcelPackageHelper
+AddWorksheet
+- parameter comments not showing
+and return types general not shown for any methods here</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
         </Cell>
         <Cell>
-          <Data ss:Type="String">Feature - Major</Data>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">91</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">WithoutHaste.DataFiles.AlphabetCounter
+- fix constuctors inheriting docs</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">92</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">WithoutHaste.DataFiles.TextHelper
+RemoveFromEnd method
+- on paramref, display name
+- on typeparamref too</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">93</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">WithoutHaste.DataFiles.TextHelper
+RemoveOuterBraces method
+- inline xml ended up as a block</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">94</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">WithoutHaste.DataFiles.ArbitraryCounter
+- protected method is not marked protected</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">95</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">WithoutHaste.DataFiles.Markdown.MarkdownFile
+- method return types should be localized to current namespace</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
@@ -82,6 +179,24 @@
         </Cell>
         <Cell>
           <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">86</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">in readme, include example of how to override properties
+and what their defaults are</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Documentation</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
@@ -316,6 +431,41 @@ about this custom functionality</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">88</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">AFTER VERSION 1</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">89</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">WithoutHaste.DataFiles.Excel.ExcelPackageHelper
+- constant fields do not have values in documentation</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">57</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -434,6 +584,46 @@ a lot of that code duplication can be removed</Data>
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">84</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">support overriding *.dll filename</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">83</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">support overriding *.XML filename</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -1580,7 +1770,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">85</Data>
+          <Data ss:Type="Number">95</Data>
         </Cell>
       </Row>
       <Row>
