@@ -1,8 +1,0 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup Label="EarlyDocs">
-		<!-- Directory markdown files will be saved to. Path is relative to $(OutputDir), ending with a "\". -->
-		<EarlyDocsOutputDir>documentation\</EarlyDocsOutputDir>
-		<!-- true means the EarlyDocsOutputDir will be emptied before saving new files. false means it will not. -->
-		<EarlyDocsEmptyOutputDir>true</EarlyDocsEmptyOutputDir>
-	</PropertyGroup>
-</Project>
