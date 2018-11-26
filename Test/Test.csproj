@@ -85,6 +85,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <EarlyDocsOutputDir>$(ProjectDir)documentation\</EarlyDocsOutputDir>
+    <!--<EarlyDocsSkip>True</EarlyDocsSkip>-->
+  </PropertyGroup>
   <Import Project="..\EarlyDocs\packages\EarlyDocs.1.0.0\build\EarlyDocs.targets" Condition="Exists('..\EarlyDocs\packages\EarlyDocs.1.0.0\build\EarlyDocs.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

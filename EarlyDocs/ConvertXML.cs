@@ -184,16 +184,16 @@ namespace EarlyDocs
 			string header= (new MarkdownInlineLink(node.Value, TableOfContentsFilename(node.Value))).ToMarkdown(null);
 			MarkdownSection section = new MarkdownSection(header);
 			List<DotNetType> types = xmlDocumentation.Types.Where(t => t.Name.FullNamespace == node.Value).ToList();
-			foreach(DotNetType type in types)
+			foreach(DotNetType type in types.OrderBy(t => t.Name))
 			{
 				section.Add(new MarkdownLine(new MarkdownInlineLink(type.Name, FormatFilename(type.Name + Ext.MD))));
 			}
 			List<DotNetDelegate> _delegates = xmlDocumentation.Delegates.Where(d => d.Name.FullNamespace == node.Value).ToList();
-			foreach(DotNetDelegate _delegate in _delegates)
+			foreach(DotNetDelegate _delegate in _delegates.OrderBy(d => d.Name))
 			{
 				section.Add(new MarkdownLine(new MarkdownInlineLink(_delegate.Name, FormatFilename(_delegate.Name + Ext.MD))));
 			}
-			foreach(DotNetQualifiedClassNameTreeNode child in node.Children)
+			foreach(DotNetQualifiedClassNameTreeNode child in node.Children.OrderBy(c => c.Value))
 			{
 				section.AddSection(BuildMasterSummary(xmlDocumentation, child));
 			}
