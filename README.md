@@ -1,52 +1,89 @@
 # EarlyDocs
 
-Converter from Visual Studio XML documentation to Markdown files.
-* Created for .Net library projects
-* Generates one .md file per Type
-* Generates one TableOfContents.md file that links to everything else
-    * Displays the summary of each Type
-* Save everything to a "documentation" directory
+EarlyDocs generates Markdown documentation for your .Net library.
 
-EarlyDocs pulls additional information from the .dll itself to provide more than the XML documentation contains.
+Install the EarlyDocs NuGet package to insert EarlyDocs into your build process. It will run after your project build is complete. Errors in EarlyDocs will not affect your build.
 
-Plans: turn this into a tool that will run when a project is built, and can be installed as a NuGet package.
+Summary:
+* Loads documentation from your Project.dll and Project.XML files.
+* Generates one Markdown documentation page for each Type in your project.
+* Generates one global Table of Contents per project and one detailed Table of Contents per namespace.
+* All Markdown files are inter-linked.
+* Everything is saved to one "documentation" directory.
+
+[Using EarlyDocs](USING_EARLYDOCS.md)
+
+EarlyDocs is build on top of 
+* [WithoutHaste.DataFiles.DotNet](https://github.com/WithoutHaste/WithoutHaste.DataFiles/tree/master/DataFiles/DotNet) which handles all the loading of information from the dll and xml files into an object model.
+* [WithoutHaste.DataFiles.Markdown](https://github.com/WithoutHaste/WithoutHaste.DataFiles/tree/master/DataFiles/Markdown) for building the Markdown files.
 
 This library is under active development. Report bugs and request features on Github, or to wohaste@gmail.com.
 
-## Supported Xml Tags
+## Supported XML Tags
 
 Supports all standard Microsoft XML tags.
 
 See examples: [How to Use XML Comments in .Net](HowToUseXmlComments.md)
 
-## Custom Tags
+### inheritdoc
 
-### cref
+Supports custom tag `<inheritdoc />` as a top-level tag.
 
-When the `cref` attribute matches a Type in the current assembly, the text will be displayed as a link to the documentation for that Type.
+The entire comments of the member/type with `<inheritdoc />` on it will be replaced with the entire comments of the member/type it inherits from.
 
-To link to a Type in another project, use custom attribute `url`. If the `url` ends with a file extension, the `url` will be used as the entire link. If it does not, it will interpreted as an EarlyDocs documentation location.
-
-Example:  
-```
-<see cref="MyType"/>
-results in link
-[MyType](documentation/MyType.md)
-```
+Supported inheritance: 
+* Classes inheriting from classes
+* Classes and interfaces inheriting from interfaces
+* Members inheriting from explicit interfaces
 
 Example:  
+TypeB will have the same documentation as TypeA.  
+TypeB.MethodA will have the same documentation as TypeA.MethodA.  
 ```
-<see cref="MyType" url="http://otherproject.com/file.html"/>
-results in link
-[MyType](http://otherproject.com/file.html)
+/// <summary>
+/// Summary of TypeA
+/// </summary>
+public class TypeA
+{
+	/// <summary>
+	/// Summary of MethodA
+	/// </summary>
+	public virtual void MethodA() { }
+}
+
+/// <inheritdoc />
+public class TypeB : TypeA
+{
+	/// <inheritdoc />
+	public override void MethodA() { }
+}
 ```
 
+### duplicate
+
+Supports custom tag `<duplicate cref="" />` as a top-level tag.
+
+The entire comments of the member/type with `<duplicate cref="" />` on it will be replaced with the entire comments of the member/type being referenced.
+
 Example:  
+All three overloaded methods will have the same documentation.  
 ```
-<see cref="MyType" url="http://otherproject.com/folder/"/>
-results in link
-[MyType](http://otherproject.com/folder/documentation/MyType.md)
+public class TypeA
+{
+	/// <summary>
+	/// Summary of MethodA
+	/// </summary>
+	public void MethodA(int a) { }
+
+	/// <duplicate cref="MethodA(int)" />
+	public void MethodA(float a) { }
+	
+	/// <duplicate cref="MethodA(int)" />
+	public void MethodA(double a) { }
+}
 ```
+
+[How to cref almost anything in your code.](HowToUseXmlComments.md#cref-attribute)
 
 ## Examples
 
@@ -57,6 +94,9 @@ Projects with EarlyDocs-generated documentation.
 [WithoutHaste.Drawing.Shapes](https://github.com/WithoutHaste/WithoutHaste.Drawing.Shapes/blob/master/documentation/TableOfContents.md)
 
 [WithoutHaste.Windows.GUI](https://github.com/WithoutHaste/WithoutHaste.Windows.GUI/blob/master/documentation/TableOfContents.md)
+
+The EarlyDocs test project includes examples of almost everything:
+[EarlyDocs test project documentation](https://github.com/WithoutHaste/EarlyDocs/blob/master/Test/documentation/TableOfContents.md)
 
 ## License
 
