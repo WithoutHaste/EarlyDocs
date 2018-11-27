@@ -79,6 +79,10 @@ Tests operator overloading.
 [Part B] Aliquam eget eros ex.  
 
   
+[**ClassRef**](Test.ClassRef.md)  
+Tests paramref and typeparamref tags.  
+
+  
 [**ClassRepeatedTags**](Test.ClassRepeatedTags.md)  
 Tests the use of multiple tags for tags where only one is expected: summary, remarks, returns, value.  
 Tests the use of multiple tags for tags where multiple are expected: example, exception, param, typeparam, permission.  

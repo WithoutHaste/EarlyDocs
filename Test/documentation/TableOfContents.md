@@ -19,6 +19,7 @@
 [Test.ClassMultilineComments](Test.ClassMultilineComments.md)  
 [Test.ClassOperatorOverloading](Test.ClassOperatorOverloading.md)  
 [Test.ClassPartial](Test.ClassPartial.md)  
+[Test.ClassRef](Test.ClassRef.md)  
 [Test.ClassRepeatedTags](Test.ClassRepeatedTags.md)  
 [Test.ClassSealed](Test.ClassSealed.md)  
 [Test.ClassSeeAlso](Test.ClassSeeAlso.md)  

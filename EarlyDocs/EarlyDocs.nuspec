@@ -12,15 +12,15 @@
 <!--    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<developmentDependency>true</developmentDependency><!--will not be part of the client's compiled project-->
-	<summary>Generates Markdown documentation files for project.</summary>
-    <description>Loads documentation data from .Net project DLL and XML files and outputs Markdown documentation files.</description>
+	<summary>Generates Markdown documentation files for .Net library project.</summary>
+    <description>Loads documentation data from .Net project DLL and XML files and outputs Markdown documentation files. See full documentation at https://github.com/WithoutHaste/EarlyDocs.</description>
     <releaseNotes>Initial release.</releaseNotes>
-    <tags>documentation .net markdown md open-source</tags>
+    <tags>documentation .net c# markdown md open-source</tags>
   </metadata>
   <files>
     <file src='.\bin\Release\EarlyDocs.dll' target='ref\net452\EarlyDocs.dll' />
     <file src='.\bin\Release\WithoutHaste.DataFiles.dll' target='ref\net452\WithoutHaste.DataFiles.dll' />
     <file src='.\EarlyDocs.targets' target='build\EarlyDocs.targets' />
-    <file src='.\nuget_readme.txt' target='content\earlydocs_readme.txt' />
+    <!--<file src='.\nuget_readme.txt' target='content\earlydocs_readme.txt' />-->
   </files>
 </package>

@@ -67,16 +67,19 @@ namespace EarlyDocs
 			else if(comment is DotNetCommentText)
 			{
 				string text = (comment as DotNetCommentText).Text;
-				if(text.Contains("\n"))
+				if(String.IsNullOrEmpty(text))
+					return;
+				string[] lines = text.Split('\n');
+				if(lines.Length == 0)
+					return;
+				for(int i = 0; i < lines.Length - 1; i++)
 				{
-					if(text.EndsWith("\n"))
-					{
-						text = text.Substring(0, text.Length - 1);
-					}
-					paragraph.Add(text.Split('\n').Select(t => new MarkdownLine(t)).ToArray());
+					paragraph.Add(new MarkdownLine(lines[i]));
 				}
-				else
-					paragraph.Add(new MarkdownText(text));
+				if(!String.IsNullOrEmpty(lines.Last()))
+				{
+					paragraph.Add(new MarkdownText(lines.Last()));
+				}
 			}
 			else if(comment is DotNetCommentList)
 			{
@@ -89,6 +92,12 @@ namespace EarlyDocs
 			else if(comment is DotNetCommentQualifiedLink)
 			{
 				paragraph.Add(ToMDLink(comment as DotNetCommentQualifiedLink, parent));
+			}
+			else if(comment is DotNetCommentParameterLink) //paramref and typeparamref
+			{
+				if(String.IsNullOrEmpty((comment as DotNetCommentParameterLink).Name))
+					return;
+				paragraph.Add(MarkdownText.Italic((comment as DotNetCommentParameterLink).Name));
 			}
 		}
 

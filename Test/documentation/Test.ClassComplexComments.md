@@ -23,8 +23,7 @@ Aliquam arcu arcu, porta quis libero id, sodales ornare elit. Maecenas risus
 nulla, consequat eget fermentum eu, ultrices at neque. Aenean quis ligula   
 vel dolor auctor rhoncus. Aliquam aliquam urna vitae varius vestibulum. Mauris   
 condimentum risus a mi condimentum viverra.  
-    
-1. **Mollis**  
+  1. **Mollis**  
 2. **Ante**  
 3. **Ornare**  
 4. **Ipsum**  
@@ -37,8 +36,7 @@ condimentum risus a mi condimentum viverra.
 ## Example A:
 
 [Example Tag] [Multiline] Donec lectus odio, mollis id ante ut, ornare pretium lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla nec justo varius sem consequat bibendum vitae eget nisl.  
-    
-
+  
 ```
 using System;
 using System.IO;
@@ -64,8 +62,7 @@ Proin sollicitudin non est eget semper. Suspendisse imperdiet turpis ac elit hen
   
 Donec lobortis consequat ligula in faucibus. Ut vitae sapien vel lacus malesuada pharetra id id nisl. Vestibulum vel felis enim.  
   
-    
-
+  
 ```
 string[] lines = File.ReadAllLines("C:\\rearrange.txt");
           
@@ -103,11 +100,11 @@ vitae consectetur sem erat quis ipsum. Nam tincidunt non magna in mattis. Curabi
 
 [2nd Exception Tag] [Has ParamRef] Nulla facilisi. Donec fermentum nisl felis,  
 
-  
+_x_  
 
  ac  
 
-  
+_y_  
 
  venenatis tellus tincidunt ultrices.  
 
@@ -115,7 +112,7 @@ vitae consectetur sem erat quis ipsum. Nam tincidunt non magna in mattis. Curabi
 
 [3rd Exception Tag] [Has TypeParamRef] Vestibulum ante ipsum primis in faucibus orci  
 
-  
+_A_  
 
  luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.  
 

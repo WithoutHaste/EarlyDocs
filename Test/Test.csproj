@@ -60,6 +60,7 @@
     <Compile Include="ClassMethodOverloading.cs" />
     <Compile Include="ClassMethodParameters.cs" />
     <Compile Include="ClassMultilineComments.cs" />
+    <Compile Include="ClassRef.cs" />
     <Compile Include="ClassRepeatedTags.cs" />
     <Compile Include="ClassOperatorOverloading.cs" />
     <Compile Include="ClassPartial.cs" />
@@ -77,9 +78,6 @@
     <Compile Include="SpaceA\SpaceB\ClassInNamespaceB.cs" />
     <Compile Include="StructInherits.cs" />
     <Compile Include="StructSimpleComments.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="earlydocs_readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
