@@ -205,6 +205,8 @@ namespace EarlyDocs
 				header = "virtual " + header;
 			if(method.Category == MethodCategory.Static)
 				header = "static " + header;
+			if(method.Category == MethodCategory.Protected)
+				header = "protected " + header;
 			if(method.Category == MethodCategory.Abstract)
 				header = "abstract " + header;
 			if(method.Category == MethodCategory.Delegate)

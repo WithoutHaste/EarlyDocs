@@ -106,5 +106,12 @@ namespace Test
 		{
 			return 0;
 		}
+
+		/// <summary>
+		/// Protected method in abstract class.
+		/// </summary>
+		protected void MethodProtected()
+		{
+		}
 	}
 }

@@ -153,3 +153,7 @@ Tests abstract classes and members.
 **Exceptions:**  
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.  
 
+## protected [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodProtected()
+
+Protected method in abstract class.  
+
