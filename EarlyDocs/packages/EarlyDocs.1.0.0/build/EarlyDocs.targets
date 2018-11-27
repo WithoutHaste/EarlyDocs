@@ -20,7 +20,7 @@
 			<Output TaskParameter="Value" PropertyName="EarlyDocsSkip"/>
 		</CreateProperty>
   
-		<RunEarlyDocs LocationXML="$(EarlyDocsXmlFile)" LocationDLL="$(EarlyDocsDllFile)" OutputDirectory="$(EarlyDocsOutputDir)" EmptyOutputDirectory="$(EarlyDocsEmptyOutputDir)" 
+		<RunEarlyDocs LocationXML="$(EarlyDocsXmlFile)" LocationDLL="$(EarlyDocsDllFile)" OutputDirectory="$(EarlyDocsOutputDir)" EmptyOutputDirectory="$(EarlyDocsEmptyOutputDir)" IncludeDlls="@(EarlyDocsInclude)"  
 			ContinueOnError="True" Condition="'$(EarlyDocsSkip)'=='False'">
 			<Output TaskParameter="RuntimeException" PropertyName="EarlyDocsException"/>
 			<Output TaskParameter="ReturnValue" PropertyName="EarlyDocsReturnValue"/>

@@ -5,3 +5,9 @@
 
 Tests static class.  
 
+# Static Methods
+
+## static [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) MethodA()
+
+Test return types on static methods.  
+

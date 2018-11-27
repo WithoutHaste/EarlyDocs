@@ -30,6 +30,11 @@ namespace EarlyDocs
 		public bool EmptyOutputDirectory { get; set; }
 
 		/// <summary>
+		/// List of full paths and filenames of third-party DLL assembly files that are referenced by the LocationDLL assembly.
+		/// </summary>
+		public string[] IncludeDlls { get; set; }
+
+		/// <summary>
 		/// Output property: set to 1 on success and 0 on an error.
 		/// </summary>
 		[Output]
@@ -49,7 +54,7 @@ namespace EarlyDocs
 		{
 			try
 			{
-				new ConvertXML(LocationDLL, LocationXML, OutputDirectory, EmptyOutputDirectory);
+				new ConvertXML(LocationDLL, LocationXML, OutputDirectory, IncludeDlls, EmptyOutputDirectory);
 			}
 			catch(Exception e)
 			{
@@ -60,6 +65,14 @@ namespace EarlyDocs
 
 			ReturnValue = 1;
 			return true;
+		}
+
+		/// <summary>
+		/// Unload the app domain so that all file locks on *.dll files are released.
+		/// </summary>
+		~RunEarlyDocs()
+		{
+			AppDomain.Unload(AppDomain.CurrentDomain);
 		}
 	}
 }

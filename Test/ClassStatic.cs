@@ -11,5 +11,12 @@ namespace Test
 	/// </summary>
 	public static class ClassStatic
 	{
+		/// <summary>
+		/// Test return types on static methods.
+		/// </summary>
+		public static string MethodA()
+		{
+			return "0";
+		}
 	}
 }

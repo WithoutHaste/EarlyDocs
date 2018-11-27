@@ -17,13 +17,11 @@ namespace EarlyDocs
 
 	internal class ConvertXML
 	{
-		internal ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory, bool emptyOutputDirectoryFirst)
+		internal ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory, string[] includeDlls, bool emptyOutputDirectoryFirst)
 		{
 			DotNetDocumentationFile xmlDocumentation = new DotNetDocumentationFile(xmlDocumentationFilename);
-			xmlDocumentation.AddAssemblyInfo(dllFilename);
+			xmlDocumentation.AddAssemblyInfo(dllFilename, includeDlls);
 			DotNetExtensions.TurnQualifiedNameConverterOn();
-
-			//Assembly assembly = Assembly.LoadFrom(dllFilename); //for testing only
 
 			PrepareOutputDirectory(outputDirectory, emptyOutputDirectoryFirst);
 			BuildInternalFullNames(xmlDocumentation.Types);
