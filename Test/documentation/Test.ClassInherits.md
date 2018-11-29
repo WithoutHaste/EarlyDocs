@@ -23,15 +23,15 @@ Tests class inheritance.
 **Example A:**  
 [Example Tag] [Short] [One Line] Nulla ullamcorper est nec ipsum vehicula, eget tincidunt ante accumsan.  
 
-**Permission: Test.IInterfaceSimpleComments.PropertyA**  
+**Permission: IInterfaceSimpleComments.PropertyA**  
 [Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) [Test.IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).PropertyB { private get; private set; }
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).PropertyB { private get; private set; }
 
 **Permission: current member**  
 [Permission Tag] [Explcit Interface Implementation Property]  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) [Test.Filler.IInterfaceB](Test.Filler.IInterfaceB.md).PropertyB { private get; private set; }
+## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) [Filler.IInterfaceB](Test.Filler.IInterfaceB.md).PropertyB { private get; private set; }
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 
@@ -50,7 +50,7 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus eu mauris cursus, facilisis lectus sit amet, viverra neque.  
 
-**Permission: Test.IInterfaceSimpleComments.MethodA()**  
+**Permission: IInterfaceSimpleComments.MethodA()**  
 [Permission Tag] [References Method] [Short] [One Line] Nam justo elit, sagittis ac elementum sed, feugiat id ipsum.  
 
 **Exceptions:**  
@@ -78,7 +78,7 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 **Example A:**  
 [Example Tag] [Short] [One Line] Vivamus ut risus et nisl blandit cursus nec eu odio.  
 
-**Permission: Test.ClassSimpleComments.MethodVirtual()**  
+**Permission: ClassSimpleComments.MethodVirtual()**  
 [Permission Tag] [References Method] [Short] [One Line] Etiam augue enim, pharetra sit amet dictum sit amet, interdum in magna.  
 
 **Exceptions:**  

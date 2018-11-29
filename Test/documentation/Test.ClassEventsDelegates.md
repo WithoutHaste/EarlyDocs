@@ -6,7 +6,7 @@ Tests events and delegates.
 
 # Fields
 
-## [Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) ActionInClass
+## [Action](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) ActionInClass
 
 [Summary Tag] [Short] [One Line] Suspendisse mattis lacinia orci, eu cursus lacus ultricies ac.  
 
@@ -22,7 +22,7 @@ Tests events and delegates.
 **Permission: current member**  
 [Permission Tag] [References Action] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
 
-## [Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FuncInClass
+## [Func](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FuncInClass
 
 [Summary Tag] [Short] [One Line] Maecenas et turpis eget mi dapibus sodales.  
 
@@ -40,7 +40,7 @@ Tests events and delegates.
 
 # Events
 
-## [Test.EventHandlerGlobal](Test.EventHandlerGlobal.md) EventA
+## [EventHandlerGlobal](Test.EventHandlerGlobal.md) EventA
 
 [Summary Tag] [Short] [One Line] Mauris sit amet vestibulum justo.  
 
@@ -83,7 +83,7 @@ Tests events and delegates.
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithAction([Action](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action)
 
 [Summary Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
 
@@ -103,9 +103,9 @@ Tests events and delegates.
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Curabitur dolor nisi, porta eget est sed, lobortis venenatis ligula.  
 
 **Parameters:**  
-* **[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action**: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
+* **[Action](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action**: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithFunc([Func](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func)
 
 [Summary Tag] [Short] [One Line] Donec accumsan lacus a dolor auctor, sit amet cursus eros faucibus.  
 
@@ -125,5 +125,5 @@ Tests events and delegates.
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Sed fermentum ornare nisi, et vestibulum lorem tincidunt in.  
 
 **Parameters:**  
-* **[Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func**: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
+* **[Func](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func**: [Parameter Tag] [Short] [One Line] Aenean quis mi id leo scelerisque euismod eget vel lacus.  
 

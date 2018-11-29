@@ -184,12 +184,10 @@ namespace EarlyDocs
 
 		internal static IMarkdownInLine ToMDLink(DotNetCommentQualifiedLink commentLink, DotNetMember parent = null)
 		{
-			string _namespace = null;
+			DotNetQualifiedName _namespace = null;
 			if(parent != null)
 			{
-				if(parent is DotNetType)
-					_namespace = parent.Name.FullName;
-				else _namespace = parent.Name.FullNamespace;
+				_namespace = (parent is DotNetType)  ? parent.Name : parent.Name.FullNamespace;
 			}
 			string text = commentLink.Name.ToDisplayString(_namespace);
 			string url = commentLink.Name.ToStringLink();

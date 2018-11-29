@@ -84,7 +84,7 @@ for (int i = 0; i < lines.Length; i++)
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, A y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x,  y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
 
 ### Exceptions
 
@@ -116,7 +116,7 @@ _A_
 
  luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x, A y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x,  y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
 
 ### Generic Type Parameters
 

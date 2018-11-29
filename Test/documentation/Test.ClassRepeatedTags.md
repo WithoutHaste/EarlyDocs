@@ -19,15 +19,15 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 [3rd Permission Tag] Donec volutpat dignissim vehicula.  
 
-## Test.ClassSimpleComments
+## ClassSimpleComments
 
 [4th Permission Tag] Suspendisse varius ipsum at tortor hendrerit suscipit.  
 
-## Test.ClassSimpleComments.IntegerProperty
+## ClassSimpleComments.IntegerProperty
 
 [5th Permission Tag] Suspendisse potenti.  
 
-## Test.ClassSimpleComments.Finalize()
+## ClassSimpleComments.Finalize()
 
 [6th Permission Tag] Suspendisse interdum, arcu a venenatis fringilla, elit velit mattis turpis, et gravida augue eros sed erat.  
 
@@ -94,16 +94,16 @@ vehicula facilisis ipsum, vel faucibus justo.
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [2nd Exception Tag] Fusce dui elit, iaculis ut venenatis ac, laoreet eget nisi.  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [3rd Exception Tag] Nulla sed magna sed velit dictum auctor.  
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.  
-* **[Test.ClassException](Test.ClassException.md)**: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
+* **[ClassException](Test.ClassException.md)**: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
 
 **Parameters:**  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
 * **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c**: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
 * **[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d**: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
-* **[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
+* **[List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
 * **[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleTypeParams<A,B,C,D,E,F>()

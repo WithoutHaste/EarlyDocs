@@ -73,7 +73,7 @@ namespace EarlyDocs
 			if(parent.Category == TypeCategory.Enum)
 				return field.ConstantValue.ToString() + ": " + field.Name.LocalName;
 
-			string header = field.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + field.Name.LocalName;
+			string header = field.TypeName.ToDisplayStringLink(parent.Name) + " " + field.Name.LocalName;
 
 			switch(field.Category)
 			{
@@ -100,10 +100,10 @@ namespace EarlyDocs
 			if(property is DotNetIndexer)
 				return ToHeader(property as DotNetIndexer);
 
-			string header = property.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + property.Name.LocalName;
+			string header = property.TypeName.ToDisplayStringLink(parent.Name) + " " + property.Name.LocalName;
 
 			if(property.Name.ExplicitInterface != null)
-				header = property.TypeName.ToDisplayStringLink(parent.Name.FullName) + " " + property.Name.ExplicitInterface.ToDisplayStringLink(parent.Name.FullName) + "." + property.Name.LocalName;
+				header = property.TypeName.ToDisplayStringLink(parent.Name) + " " + property.Name.ExplicitInterface.ToDisplayStringLink(parent.Name) + "." + property.Name.LocalName;
 
 			if(property.Category == FieldCategory.Abstract)
 				header = "abstract " + header;
@@ -169,7 +169,7 @@ namespace EarlyDocs
 			return header;
 		}
 
-		internal static string ToHeader(this DotNetParameter parameter, string _namespace = null)
+		internal static string ToHeader(this DotNetParameter parameter, DotNetQualifiedName _namespace = null)
 		{
 			return parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
 		}
@@ -199,7 +199,7 @@ namespace EarlyDocs
 			if(method.MethodName.Parameters == null || method.MethodName.Parameters.Count == 0)
 				header += "()";
 			else
-				header += String.Format("({0})", String.Join(", ", method.MethodName.Parameters.Select(p => p.ToDisplayString(method.Name.FullNamespace)).ToArray()));
+				header += String.Format("({0})", String.Join(", ", method.MethodName.Parameters.Select(p => p.ToDisplayString(method.Name)).ToArray()));
 
 			if(method.Category == MethodCategory.Virtual)
 				header = "virtual " + header;
@@ -218,7 +218,7 @@ namespace EarlyDocs
 		internal static string ToHeader(this DotNetMethodOperator method)
 		{
 			string key = method.Name.LocalName;
-			string _namespace = method.Name.FullNamespace;
+			DotNetQualifiedName _namespace = method.Name.FullNamespace;
 
 			string returnType = method.MethodName.ReturnTypeName.ToDisplayStringLink(_namespace);
 			if(BinaryOperators.ContainsKey(key) && method.MethodName.Parameters.Count >= 2)
@@ -243,7 +243,7 @@ namespace EarlyDocs
 			return "unknown operator";
 		}
 
-		internal static string ToDisplayString(this DotNetParameter parameter, string _namespace = null)
+		internal static string ToDisplayString(this DotNetParameter parameter, DotNetQualifiedName _namespace = null)
 		{
 			string prefix = "";
 			if(parameter.Category == ParameterCategory.Out)
@@ -267,14 +267,12 @@ namespace EarlyDocs
 			return prefix + parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name + suffix;
 		}
 
-		internal static string ToDisplayString(this DotNetCommentMethodLink methodLink, string _namespace = null)
+		internal static string ToDisplayString(this DotNetCommentMethodLink methodLink, DotNetQualifiedName _namespace = null)
 		{
 			return methodLink.Name.ToDisplayString(_namespace);
 		}
 
-		//todo: instead of passing "parent namespace" as a string, pass it as DotNetQualifiedName and use a new child.Localize(parent) method
-
-		internal static string ToDisplayString(this DotNetQualifiedName name, string _namespace = null)
+		internal static string ToDisplayString(this DotNetQualifiedName name, DotNetQualifiedName _namespace = null)
 		{
 			if(name is DotNetQualifiedMethodName)
 				return (name as DotNetQualifiedMethodName).ToDisplayString(_namespace);
@@ -282,36 +280,19 @@ namespace EarlyDocs
 			if(name == null)
 				return "";
 
-			if(_namespace == null)
-				_namespace = "";
-			_namespace += ".";
-
-			string displayString = name.FullName;
-			if(displayString.StartsWith(_namespace))
-			{
-				displayString = displayString.Substring(_namespace.Length);
-			}
+			string displayString = name.GetLocalized(_namespace).FullName;
 
 			displayString = displayString.Replace("<", "&lt;").Replace(">", "&gt;"); //markdown understands html tags
 
 			return displayString;
 		}
 
-		internal static string ToDisplayString(this DotNetQualifiedMethodName name, string _namespace = null)
+		internal static string ToDisplayString(this DotNetQualifiedMethodName name, DotNetQualifiedName _namespace = null)
 		{
 			if(name == null)
 				return "";
 
-			if(_namespace == null)
-				_namespace = "";
-			_namespace += ".";
-
-			string displayString = name.FullName;
-			if(displayString.StartsWith(_namespace))
-			{
-				displayString = displayString.Substring(_namespace.Length);
-			}
-
+			string displayString = name.GetLocalized(_namespace).FullName;
 			displayString += name.ParametersWithoutNames;
 
 			displayString = displayString.Replace("#cctor", name.FullNamespace.LocalName);
@@ -322,7 +303,7 @@ namespace EarlyDocs
 			return displayString;
 		}
 
-		internal static string ToDisplayStringLink(this DotNetQualifiedName name, string _namespace = null)
+		internal static string ToDisplayStringLink(this DotNetQualifiedName name, DotNetQualifiedName _namespace = null)
 		{
 			if(name == null)
 				return "";
@@ -398,6 +379,8 @@ namespace EarlyDocs
 		{
 			if(depth > 0)
 				return fullName;
+			if(String.IsNullOrEmpty(fullName))
+				return "";
 
 			string[] commonNamespaces = new string[] { "System.", "System.Collections.Generic." };
 			foreach(string _namespace in commonNamespaces)

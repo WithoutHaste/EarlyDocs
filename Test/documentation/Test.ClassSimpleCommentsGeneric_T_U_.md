@@ -27,7 +27,7 @@
 
 [Permission Tag] [References Generic Class] [Short] [One Line] Vestibulum at justo quis velit finibus imperdiet.  
 
-## TField
+## ClassSimpleCommentsGeneric.TField
 
 [Permission Tag] [References Field] [Short] [One Line] Vestibulum malesuada volutpat tincidunt.  
 
@@ -132,7 +132,7 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
 
-## ClassSimpleCommentsGeneric<T,U>(T t, U u)
+## ClassSimpleCommentsGeneric<T,U>( t,  u)
 
 [Summary Tag] [Short] [One Line] Phasellus interdum purus interdum dolor lacinia mollis.  
 
@@ -152,8 +152,8 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
 
 **Parameters:**  
-* **T t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
-* **U u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
+* **t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
+* **u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
 
 # Destructor
 
@@ -178,7 +178,7 @@
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithTypeParameters<A,B>(A a, B b, U u)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithTypeParameters<A,B>( a,  b,  u)
 
 [Summary Tag] [Short] [One Line] Maecenas molestie purus id fermentum dictum.  
 
@@ -203,13 +203,13 @@
 * **B**: [Type Parameter Tag] [Short] [One Line] Nunc faucibus sed elit ut pellentesque.  
 
 **Parameters:**  
-* **A a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
-* **B b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
-* **U u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
+* **a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
+* **b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
+* **u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
 
 # Static Methods
 
-## static U StaticMethodWithParametersWithReturn(T t, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static U StaticMethodWithParametersWithReturn( t, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
 
 [Summary Tag] [Short] [One Line] Mauris malesuada varius risus eu condimentum.  
 
@@ -232,6 +232,6 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
 
 **Parameters:**  
-* **T t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
+* **t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
 * **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
 
