@@ -203,7 +203,7 @@ namespace EarlyDocs
 
 			if(method.Category == MethodCategory.Virtual)
 				header = "virtual " + header;
-			if(method.Category == MethodCategory.Static)
+			if(method.Category == MethodCategory.Static || method.Category == MethodCategory.Extension)
 				header = "static " + header;
 			if(method.Category == MethodCategory.Protected)
 				header = "protected " + header;
@@ -250,6 +250,8 @@ namespace EarlyDocs
 				prefix = "out ";
 			if(parameter.Category == ParameterCategory.Ref)
 				prefix = "ref ";
+			if(parameter.Category == ParameterCategory.Extension)
+				prefix = "this ";
 
 			string suffix = "";
 			if(parameter.Category == ParameterCategory.Optional)

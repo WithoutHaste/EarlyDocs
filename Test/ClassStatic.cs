@@ -18,5 +18,14 @@ namespace Test
 		{
 			return "0";
 		}
+
+		/// <summary>
+		/// Test extension method parameters.
+		/// </summary>
+		/// <param name="a">Words a</param>
+		/// <param name="b">Words b</param>
+		public static void MethodExtension(this string a, string b)
+		{
+		}
 	}
 }
