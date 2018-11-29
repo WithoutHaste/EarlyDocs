@@ -33,7 +33,7 @@ Tests lists and tables in comments.
 1. **Header Term**: Header Description  
 2. **Term A**: Description A  
 3. **
-**  
+  **  
 4. **Term C**: Description C  
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) BulletListInNumberList
@@ -71,7 +71,7 @@ Tests lists and tables in comments.
 * **Header Term**: Header Description  
 * **Term A**: Description A  
 * **
-**  
+  **  
 * **Term C**: Description C  
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) NumberListInBulletList
