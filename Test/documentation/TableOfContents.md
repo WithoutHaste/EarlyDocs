@@ -13,6 +13,7 @@
 [Test.ClassFieldPropertyValue](Test.ClassFieldPropertyValue.md)  
 [Test.ClassFormattingErrors](Test.ClassFormattingErrors.md)  
 [Test.ClassInherits](Test.ClassInherits.md)  
+[Test.ClassInternalLinks](Test.ClassInternalLinks.md)  
 [Test.ClassListComments](Test.ClassListComments.md)  
 [Test.ClassMethodOverloading](Test.ClassMethodOverloading.md)  
 [Test.ClassMethodParameters](Test.ClassMethodParameters.md)  

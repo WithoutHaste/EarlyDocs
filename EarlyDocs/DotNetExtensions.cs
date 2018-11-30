@@ -332,8 +332,13 @@ namespace EarlyDocs
 				string microsoftDocumentation = @"https://docs.microsoft.com/en-us/dotnet/api/";
 				linkString = String.Format("{0}{1}", microsoftDocumentation, name.FullName.ToMicrosoftLinkFormat());
 				TurnQualifiedNameConverterOn();
+				return linkString;
 			}
-			else if(InternalFullNames.Contains(linkString))
+
+			if(linkString.EndsWith("[]"))
+				linkString = linkString.RemoveFromEnd("[]");
+
+			if(InternalFullNames.Contains(linkString))
 			{
 				linkString = ConvertXML.FormatFilename(linkString) + Ext.MD;
 			}
@@ -346,6 +351,9 @@ namespace EarlyDocs
 
 		private static string ToMicrosoftLinkFormat(this string name)
 		{
+			if(name.EndsWith("[]"))
+				return "system.array";
+
 			name = name.ToLower();
 
 			List<string> segments = name.SplitIgnoreNested('.').ToList();

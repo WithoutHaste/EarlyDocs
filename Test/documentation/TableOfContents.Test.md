@@ -53,6 +53,10 @@ Tests formatting errors in xml comments.
 Tests class inheritance.  
 
   
+[**ClassInternalLinks**](Test.ClassInternalLinks.md)  
+Tests the automatic internal links between types in this library.  
+
+  
 [**ClassListComments**](Test.ClassListComments.md)  
 Tests lists and tables in comments.  
 
