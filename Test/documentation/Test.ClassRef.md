@@ -6,14 +6,14 @@ Tests paramref and typeparamref tags.
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodA([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) c)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodA([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) c)
 
 The parameter names are: _a_, _b_, and _c_.  
 
 **Parameters:**  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: words a  
 * **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: words b  
-* **[List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) c**: words c  
+* **[List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) c**: words c  
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodB<A,B,C>( a,  b,  c)
 

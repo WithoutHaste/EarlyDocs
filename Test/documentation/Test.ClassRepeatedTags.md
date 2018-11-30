@@ -96,14 +96,14 @@ vehicula facilisis ipsum, vel faucibus justo.
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.  
 * **[ClassException](Test.ClassException.md)**: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
 
 **Parameters:**  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
 * **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
 * **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c**: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
 * **[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d**: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
-* **[List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
+* **[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
 * **[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleTypeParams<A,B,C,D,E,F>()

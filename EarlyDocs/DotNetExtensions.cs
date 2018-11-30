@@ -283,6 +283,10 @@ namespace EarlyDocs
 				return "";
 
 			string displayString = name.GetLocalized(_namespace).FullName;
+			if(name is DotNetQualifiedTypeName)
+			{
+				displayString = (name as DotNetQualifiedTypeName).GetLocalized(_namespace).FullName;
+			}
 
 			displayString = displayString.Replace("<", "&lt;").Replace(">", "&gt;"); //markdown understands html tags
 

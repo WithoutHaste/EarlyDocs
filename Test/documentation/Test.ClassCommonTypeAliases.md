@@ -7,7 +7,7 @@ Also common data types that have long fully-qualified names.
 
 # Fields
 
-## [Action](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) FieldAction
+## [Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) FieldAction
 
 ## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) FieldBoolean
 
@@ -17,7 +17,7 @@ Also common data types that have long fully-qualified names.
 
 ## [decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal) FieldDecimal
 
-## [Dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) FieldDictionary
+## [Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) FieldDictionary
 
 ## [double](https://docs.microsoft.com/en-us/dotnet/api/system.double) FieldDouble
 
@@ -25,11 +25,11 @@ Also common data types that have long fully-qualified names.
 
 ## [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) FieldFloat
 
-## [Func](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FieldFunc
+## [Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FieldFunc
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldInt
 
-## [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) FieldList
+## [List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) FieldList
 
 ## [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64) FieldLong
 
@@ -49,7 +49,7 @@ Also common data types that have long fully-qualified names.
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodAction([Action](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) a)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) a)
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodBoolean([bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) a)
 
@@ -59,7 +59,7 @@ Also common data types that have long fully-qualified names.
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodDecimal([decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal) a)
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodDictionary([Dictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) a)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodDictionary([Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) a)
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodDouble([double](https://docs.microsoft.com/en-us/dotnet/api/system.double) a)
 
@@ -67,11 +67,11 @@ Also common data types that have long fully-qualified names.
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodFloat([float](https://docs.microsoft.com/en-us/dotnet/api/system.single) a)
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodFunc([Func](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) a)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) a)
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodInt([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a)
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodList([List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) a)
+## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodList([List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) a)
 
 ## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodLong([long](https://docs.microsoft.com/en-us/dotnet/api/system.int64) a)
 
