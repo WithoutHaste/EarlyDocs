@@ -18,6 +18,15 @@ namespace Test
 		public ClassSimpleComments[] FieldTypeArray;
 
 		/// <summary></summary>
-		public List<ClassSimpleComments> FieldList;
+		public List<ClassSimpleComments> FieldTypeList;
+
+		/// <summary></summary>
+		public ClassSimpleComments PropertyType { get; set; }
+
+		/// <summary></summary>
+		public ClassSimpleComments[] PropertyTypeArray { get; set; }
+
+		/// <summary></summary>
+		public List<ClassSimpleComments> PropertyTypeList { get; set; }
 	}
 }

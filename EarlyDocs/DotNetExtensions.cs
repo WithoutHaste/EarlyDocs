@@ -98,7 +98,7 @@ namespace EarlyDocs
 		internal static string ToHeader(this DotNetProperty property, DotNetType parent)
 		{
 			if(property is DotNetIndexer)
-				return ToHeader(property as DotNetIndexer);
+				return ToHeader(property as DotNetIndexer, parent);
 
 			string header = property.TypeName.ToDisplayStringLink(parent.Name) + " " + property.Name.LocalName;
 
@@ -136,9 +136,9 @@ namespace EarlyDocs
 			return header;
 		}
 
-		internal static string ToHeader(this DotNetIndexer indexer)
+		internal static string ToHeader(this DotNetIndexer indexer, DotNetType parent)
 		{
-			string header = indexer.TypeName.ToDisplayStringLink() + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink() + " " + p.Name).ToArray()) + "]";
+			string header = indexer.TypeName.ToDisplayStringLink(parent.Name) + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink(parent.Name) + " " + p.Name).ToArray()) + "]";
 
 			//todo: duplicated from Property.ToHeader()
 			header += " { ";
