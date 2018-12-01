@@ -453,7 +453,7 @@ namespace EarlyDocs
 				{
 					string enumHeader = e.Name.ToDisplayStringLink(type.Name);
 					enumSection.Add(new MarkdownLine(MarkdownText.Bold(enumHeader)));
-					enumSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(e.SummaryComments));
+					enumSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(e.SummaryComments, e));
 					enumSection.Add(ConvertDotNet.EnumToMinimalMDList(e));
 				}
 			}
@@ -511,7 +511,7 @@ namespace EarlyDocs
 				foreach(DotNetDelegate _delegate in type.Delegates.OrderBy(m => m.Name.LocalName))
 				{
 					delegateSection.AddInLine(new MarkdownInlineLink(_delegate.Name.LocalName, _delegate.Name.FullName + Ext.MD));
-					delegateSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments));
+					delegateSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments, _delegate));
 				}
 			}
 
@@ -533,7 +533,7 @@ namespace EarlyDocs
 				foreach(DotNetType nestedType in type.NestedTypes.OrderBy(m => m.Name))
 				{
 					nestedTypeSection.AddInLine(new MarkdownInlineLink(nestedType.Name.LocalName, nestedType.Name.FullName + Ext.MD));
-					nestedTypeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(nestedType.SummaryComments));
+					nestedTypeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(nestedType.SummaryComments, nestedType));
 				}
 			}
 
@@ -544,7 +544,7 @@ namespace EarlyDocs
 				foreach(DotNetType implementedBy in InterfaceImplementedByTypes[type.Name].OrderBy(t => t.Name))
 				{
 					implementedBySection.AddInLine(implementedBy.Name.ToDisplayStringLink());
-					implementedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(implementedBy.SummaryComments));
+					implementedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(implementedBy.SummaryComments, implementedBy));
 				}
 			}
 
@@ -552,10 +552,10 @@ namespace EarlyDocs
 			{
 				MarkdownSection derivedBySection = new MarkdownSection("Derived By");
 				typeSection.Add(derivedBySection);
-				foreach(DotNetType DerivedBy in TypeDerivedBy[type.Name].OrderBy(t => t.Name))
+				foreach(DotNetType derivedBy in TypeDerivedBy[type.Name].OrderBy(t => t.Name))
 				{
-					derivedBySection.AddInLine(DerivedBy.Name.ToDisplayStringLink());
-					derivedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(DerivedBy.SummaryComments));
+					derivedBySection.AddInLine(derivedBy.Name.ToDisplayStringLink());
+					derivedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(derivedBy.SummaryComments, derivedBy));
 				}
 			}
 
@@ -730,7 +730,7 @@ namespace EarlyDocs
 			if(member.SummaryComments.Count == 0)
 				return;
 
-			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.SummaryComments));
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.SummaryComments, member));
 		}
 
 		private static void AddValue(MarkdownSection section, DotNetMember member)
@@ -743,7 +743,7 @@ namespace EarlyDocs
 				section.Add(new MarkdownLine(MarkdownText.Bold("Value:")));
 			}
 
-			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.ValueComments));
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.ValueComments, member));
 		}
 
 		private static void AddRemarks(MarkdownSection section, DotNetMember member)
@@ -752,7 +752,7 @@ namespace EarlyDocs
 				return;
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Remarks:")));
-			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.RemarksComments));
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.RemarksComments, member));
 		}
 
 		private static void AddReturns(MarkdownSection section, DotNetMember member)
@@ -761,7 +761,7 @@ namespace EarlyDocs
 				return;
 
 			section.Add(new MarkdownLine(MarkdownText.Bold("Returns:")));
-			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.ReturnsComments));
+			section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(member.ReturnsComments, member));
 		}
 
 		private static void AddTopLevelExamples(MarkdownSection section, DotNetMember member)
@@ -831,7 +831,7 @@ namespace EarlyDocs
 					}
 				}
 				MarkdownSection permissionSection = permissionsSection.AddSection(permissionHeader);
-				permissionSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(comment));
+				permissionSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(comment, member));
 			}
 		}
 
@@ -857,7 +857,7 @@ namespace EarlyDocs
 					}
 				}
 				section.Add(new MarkdownLine(MarkdownText.Bold(permissionHeader)));
-				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(comment));
+				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(comment, member));
 			}
 		}
 
@@ -894,7 +894,7 @@ namespace EarlyDocs
 				foreach(DotNetCommentParameter commentParameter in member.TypeParameterComments.OrderBy(p => p.ParameterLink.Name))
 				{
 					section.Add(MarkdownText.Bold(commentParameter.ToHeader()));
-					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
+					section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter, member));
 				}
 			}
 		}
@@ -959,7 +959,7 @@ namespace EarlyDocs
 						continue;
 
 					MarkdownSection parameterSection = parametersSection.AddSection(parameter.ToHeader(method.Name.FullNamespace));
-					parameterSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter));
+					parameterSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(commentParameter, method));
 				}
 			}
 		}
@@ -1060,7 +1060,7 @@ namespace EarlyDocs
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
 					MarkdownSection exceptionSection = exceptionsSection.AddSection(comment.QualifiedLink.Name.FullName);
-					exceptionSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(comment));
+					exceptionSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(comment, member));
 				}
 			}
 		}
