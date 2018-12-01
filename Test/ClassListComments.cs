@@ -12,6 +12,7 @@ namespace Test
 	public class ClassListComments
 	{
 		/// <summary>
+		///   Previous text:
 		///   <list type="bullet">
 		///     <listheader><term>Header Term</term><description>Header Description</description></listheader>
 		///     <item><term>Term A</term><description>Description A</description></item>
@@ -43,6 +44,7 @@ namespace Test
 		public int BulletList = 0;
 
 		/// <summary>
+		///   Previous text:
 		///   <list type="number">
 		///     <listheader><term>Header Term</term><description>Header Description</description></listheader>
 		///     <item><term>Term A</term><description>Description A</description></item>
@@ -74,6 +76,7 @@ namespace Test
 		public int NumberList = 0;
 
 		/// <summary>
+		///   Previous text:
 		///   <list type="table">
 		///     <listheader>
 		///       <term>Header 1</term>
@@ -109,6 +112,7 @@ namespace Test
 		public int Table = 0;
 
 		/// <summary>
+		///   Previous text:
 		///   <list type="bullet">
 		///     <listheader><term>Header Term</term><description>Header Description</description></listheader>
 		///     <item><term>Term A</term><description>Description A</description></item>
@@ -124,6 +128,7 @@ namespace Test
 		public int NumberListInBulletList = 0;
 
 		/// <summary>
+		///   Previous text:
 		///   <list type="bullet">
 		///     <listheader><term>Header Term</term><description>Header Description</description></listheader>
 		///     <item><term>Term A</term><description>Description A</description></item>
@@ -140,6 +145,7 @@ namespace Test
 		public int NumberListInBulletItem = 0;
 
 		/// <summary>
+		///   Previous text:
 		///   <list type="number">
 		///     <listheader><term>Header Term</term><description>Header Description</description></listheader>
 		///     <item><term>Term A</term><description>Description A</description></item>
@@ -155,6 +161,7 @@ namespace Test
 		public int BulletListInNumberList = 0;
 
 		/// <summary>
+		///   Previous text:
 		///   <list type="number">
 		///     <listheader><term>Header Term</term><description>Header Description</description></listheader>
 		///     <item><term>Term A</term><description>Description A</description></item>

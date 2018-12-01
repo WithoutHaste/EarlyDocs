@@ -8,6 +8,7 @@ Tests lists and tables in comments.
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) BulletList
 
+Previous text:  
 * **Header Term**: Header Description  
 * **Term A**: Description A  
 * **Term B**: Description B  
@@ -30,6 +31,8 @@ Tests lists and tables in comments.
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) BulletListInNumberItem
 
+Previous text:  
+    
 1. **Header Term**: Header Description  
 2. **Term A**: Description A  
 3. **
@@ -38,6 +41,7 @@ Tests lists and tables in comments.
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) BulletListInNumberList
 
+Previous text:  
 1. **Header Term**: Header Description  
 2. **Term A**: Description A  
 3. **Term B**: Description B  
@@ -46,6 +50,7 @@ Tests lists and tables in comments.
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) NumberList
 
+Previous text:  
 1. **Header Term**: Header Description  
 2. **Term A**: Description A  
 3. **Term B**: Description B  
@@ -68,6 +73,8 @@ Tests lists and tables in comments.
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) NumberListInBulletItem
 
+Previous text:  
+    
 * **Header Term**: Header Description  
 * **Term A**: Description A  
 * **
@@ -76,6 +83,7 @@ Tests lists and tables in comments.
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) NumberListInBulletList
 
+Previous text:  
 * **Header Term**: Header Description  
 * **Term A**: Description A  
 * **Term B**: Description B  
@@ -83,6 +91,9 @@ Tests lists and tables in comments.
 * **Term C**: Description C  
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) Table
+
+Previous text:  
+  
 
 | Header 1      | Header 2      | Header 3      |
 | ------------- | ------------- | ------------- |
