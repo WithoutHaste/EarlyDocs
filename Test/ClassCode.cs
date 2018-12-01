@@ -27,6 +27,7 @@ namespace Test
 		/// <summary>
 		/// Word word <c>int a = 0;</c> word word word.
 		/// </summary>
+		/// <remarks>Code including backtics: <c>a`aa``a`</c></remarks>
 		/// Misc misc misc <c>public static void Main(string[] args) { }</c> misc misc misc.
 		public int InlineCode = 0;
 
