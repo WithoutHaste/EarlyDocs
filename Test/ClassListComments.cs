@@ -176,5 +176,15 @@ namespace Test
 		///   </list>
 		/// </summary>
 		public int BulletListInNumberItem = 0;
+
+		/// <summary>
+		/// Previous text:
+		/// <list type='number'>
+		///		<item>Riccasus</item>
+		///		<item>Lorem <see cref='ClassSeeAlso'/></item>
+		///		<item>Finitini <see cref='ClassSeeAlso.MethodWithParameters(int,int)'/></item>
+		/// </list>
+		/// </summary>
+		public int InlineTagsInList = 0;
 	}
 }

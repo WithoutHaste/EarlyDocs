@@ -39,6 +39,9 @@ namespace EarlyDocs
 		internal static MarkdownLine DotNetCommentGroupToMarkdownLine(DotNetCommentGroup group, DotNetMember parent = null)
 		{
 			MarkdownLine line = new MarkdownLine();
+			if(group == null)
+				return line;
+
 			foreach(DotNetComment comment in group.Comments)
 			{
 				line.Concat(DotNetCommentsToLine(comment, parent));
@@ -83,7 +86,7 @@ namespace EarlyDocs
 			}
 			else if(comment is DotNetCommentList)
 			{
-				paragraph.Add(ToMDList(comment as DotNetCommentList));
+				paragraph.Add(ToMDList(comment as DotNetCommentList, parent));
 			}
 			else if(comment is DotNetCommentTable)
 			{
@@ -133,20 +136,34 @@ namespace EarlyDocs
 			return line;
 		}
 
-		internal static MarkdownList ToMDList(DotNetCommentList commentList)
+		internal static MarkdownList ToMDList(DotNetCommentList commentList, DotNetMember parent = null)
 		{
 			MarkdownList markdownList = new MarkdownList(isNumbered: commentList.IsNumbered);
 
 			foreach(DotNetCommentListItem commentItem in commentList.Items)
 			{
-				string text = "";
-				if(String.IsNullOrEmpty(commentItem.Term))
-					text = commentItem.Description;
-				else if(String.IsNullOrEmpty(commentItem.Description))
-					text = "**" + commentItem.Term + "**";
+				MarkdownLine text = new MarkdownLine();
+				if(commentItem.Term == null && commentItem.Description == null)
+				{
+					markdownList.Add(text);
+					continue;
+				}
+
+				if(commentItem.Term == null)
+				{
+					text = DotNetCommentGroupToMarkdownLine(commentItem.Description, parent);
+				}
+				else if(commentItem.Description == null)
+				{
+					text = DotNetCommentGroupToMarkdownLine(commentItem.Term, parent);
+				}
 				else
-					text = "**" + commentItem.Term + "**: " + commentItem.Description;
-				markdownList.Add(new MarkdownLine(text));
+				{
+					text = DotNetCommentGroupToMarkdownLine(commentItem.Term, parent);
+					text.Add(": ");
+					text.Concat(DotNetCommentGroupToMarkdownLine(commentItem.Description, parent));
+				}
+				markdownList.Add(text);
 			}
 
 			return markdownList;
