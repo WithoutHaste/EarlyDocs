@@ -134,6 +134,32 @@ Tests interface inheritance.
 
   
 
+## Enums
+
+[**EnumGlobalComplex**](Test.EnumGlobalComplex.md)  
+Tests an enum declared in a namespace with complex comments  
+
+  
+[**EnumGlobalInternal**](Test.EnumGlobalInternal.md)  
+  
+
+  
+[**EnumGlobalSimple**](Test.EnumGlobalSimple.md)  
+Tests an enum declared in a namespace with simple comments.  
+
+  
+
+## Structs
+
+[**StructInherits**](Test.StructInherits.md)  
+Tests struct inheritance.  
+
+  
+[**StructSimpleComments**](Test.StructSimpleComments.md)  
+[Summary Tag] [Short] [One Line] Donec porttitor mi in odio fermentum lobortis.  
+
+  
+
 ## Delegates
 
 [**EventHandlerGlobal**](Test.EventHandlerGlobal.md)  

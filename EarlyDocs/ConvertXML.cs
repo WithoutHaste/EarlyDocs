@@ -234,6 +234,7 @@ namespace EarlyDocs
 			AddTableOfContentsSection(section, "Abstract Types", types.Where(t => t.Category == TypeCategory.Abstract).ToList());
 			AddTableOfContentsSection(section, "Interfaces", types.Where(t => t.Category == TypeCategory.Interface).ToList());
 			AddTableOfContentsSection(section, "Enums", types.Where(t => t.Category == TypeCategory.Enum).ToList());
+			AddTableOfContentsSection(section, "Structs", types.Where(t => t.Category == TypeCategory.Struct).ToList());
 			AddTableOfContentsSection(section, "Delegates", _delegates);
 			AddTableOfContentsSection(section, "Exceptions", types.Where(t => t.Category == TypeCategory.Exception).ToList());
 

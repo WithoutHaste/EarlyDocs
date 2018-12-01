@@ -26,6 +26,16 @@
 
 [Permission Tag] [References Field] [Short] [One Line] Quisque aliquam diam at ullamcorper pellentesque.  
 
+# Enums
+
+**[EnumInClassSimple](Test.ClassSimpleComments.EnumInClassSimple.md)**  
+[Summary Tag] [Short] [One Line] Pellentesque mattis lacus turpis, at elementum tortor eleifend eu.  
+
+* 0: Invalid  
+* 1: Aliquam  
+* 2: Suscipit  
+* 3: Efficitur  
+
 # Fields
 
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerField
