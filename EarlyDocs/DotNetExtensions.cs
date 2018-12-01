@@ -17,6 +17,9 @@ namespace EarlyDocs
 		/// <summary>List of all internal types that implement each internal interface.</summary>
 		internal static Dictionary<DotNetQualifiedName, List<DotNetType>> InterfaceImplementedByTypes = new Dictionary<DotNetQualifiedName, List<DotNetType>>();
 
+		/// <summary>List of all internal types that are direct children of each other type.</summary>
+		internal static Dictionary<DotNetQualifiedName, List<DotNetType>> TypeDerivedBy = new Dictionary<DotNetQualifiedName, List<DotNetType>>();
+
 		internal static List<DotNetQualifiedName> KnownMicrosoftNamespaces = new List<DotNetQualifiedName>() {
 			DotNetQualifiedName.FromVisualStudioXml("System"),
 		};
@@ -442,16 +445,6 @@ namespace EarlyDocs
 			AddTopLevelTypeParameters(typeSection, type as DotNetMember);
 			AddTopLevelExamples(typeSection, type as DotNetMember);
 			AddTopLevelPermissions(typeSection, type as DotNetMember);
-			if(type.Category == TypeCategory.Interface && InterfaceImplementedByTypes.ContainsKey(type.Name))
-			{
-				MarkdownSection implementedBySection = new MarkdownSection("Implemented By");
-				typeSection.Add(implementedBySection);
-				foreach(DotNetType implementedBy in InterfaceImplementedByTypes[type.Name].OrderBy(t => t.Name))
-				{
-					implementedBySection.AddInLine(implementedBy.Name.ToDisplayStringLink());
-					implementedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(implementedBy.SummaryComments));
-				}
-			}
 			if(type.NestedEnums.Count > 0)
 			{
 				MarkdownSection enumSection = new MarkdownSection("Enums");
@@ -541,6 +534,28 @@ namespace EarlyDocs
 				{
 					nestedTypeSection.AddInLine(new MarkdownInlineLink(nestedType.Name.LocalName, nestedType.Name.FullName + Ext.MD));
 					nestedTypeSection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(nestedType.SummaryComments));
+				}
+			}
+
+			if(type.Category == TypeCategory.Interface && InterfaceImplementedByTypes.ContainsKey(type.Name))
+			{
+				MarkdownSection implementedBySection = new MarkdownSection("Implemented By");
+				typeSection.Add(implementedBySection);
+				foreach(DotNetType implementedBy in InterfaceImplementedByTypes[type.Name].OrderBy(t => t.Name))
+				{
+					implementedBySection.AddInLine(implementedBy.Name.ToDisplayStringLink());
+					implementedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(implementedBy.SummaryComments));
+				}
+			}
+
+			if(TypeDerivedBy.ContainsKey(type.Name))
+			{
+				MarkdownSection derivedBySection = new MarkdownSection("Derived By");
+				typeSection.Add(derivedBySection);
+				foreach(DotNetType DerivedBy in TypeDerivedBy[type.Name].OrderBy(t => t.Name))
+				{
+					derivedBySection.AddInLine(DerivedBy.Name.ToDisplayStringLink());
+					derivedBySection.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(DerivedBy.SummaryComments));
 				}
 			}
 

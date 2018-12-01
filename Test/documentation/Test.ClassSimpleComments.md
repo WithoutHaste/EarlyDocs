@@ -254,3 +254,8 @@
 [EnumInClassSimple](Test.ClassSimpleComments.EnumInClassSimple.md)  
 [Summary Tag] [Short] [One Line] Pellentesque mattis lacus turpis, at elementum tortor eleifend eu.  
 
+# Derived By
+
+[Test.ClassInherits](Test.ClassInherits.md)  
+Tests class inheritance.  
+

@@ -27,6 +27,7 @@ namespace EarlyDocs
 			BuildInternalFullNames(xmlDocumentation.Types);
 			BuildInternalFullNames(xmlDocumentation.Delegates);
 			BuildInterfaceImplementedByTypes(xmlDocumentation.Types);
+			BuildTypeDerivedBy(xmlDocumentation.Types);
 			GenerateTypePages(xmlDocumentation.Types, outputDirectory);
 			GenerateDelegatePages(xmlDocumentation.Delegates, outputDirectory);
 			GenerateTableOfContents(xmlDocumentation, outputDirectory);
@@ -81,6 +82,20 @@ namespace EarlyDocs
 					DotNetExtensions.InterfaceImplementedByTypes[implementedInterface.Name].Add(type);
 				}
 				BuildInterfaceImplementedByTypes(type.NestedTypes);
+			}
+		}
+
+		private void BuildTypeDerivedBy(List<DotNetType> types)
+		{
+			foreach(DotNetType type in types)
+			{
+				if(type.BaseType != null)
+				{
+					if(!DotNetExtensions.TypeDerivedBy.ContainsKey(type.BaseType.Name))
+						DotNetExtensions.TypeDerivedBy[type.BaseType.Name] = new List<DotNetType>();
+					DotNetExtensions.TypeDerivedBy[type.BaseType.Name].Add(type);
+				}
+				BuildTypeDerivedBy(type.NestedTypes);
 			}
 		}
 

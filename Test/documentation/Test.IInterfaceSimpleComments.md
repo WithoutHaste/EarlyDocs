@@ -22,17 +22,6 @@
 
 [Permission Tag] [References Interface] [Short] [One Line] Cras vel tortor ut massa efficitur sollicitudin.  
 
-# Implemented By
-
-[Test.ClassInherits](Test.ClassInherits.md)  
-Tests class inheritance.  
-
-[Test.IInterfaceInherits](Test.IInterfaceInherits.md)  
-Tests interface inheritance.  
-
-[Test.StructInherits](Test.StructInherits.md)  
-Tests struct inheritance.  
-
 # Properties
 
 ## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA { get; set; }
@@ -82,4 +71,15 @@ SimpleComments: Enable test inheriting from multiple interfaces with the same me
 ## abstract [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodB()
 
 SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
+
+# Implemented By
+
+[Test.ClassInherits](Test.ClassInherits.md)  
+Tests class inheritance.  
+
+[Test.IInterfaceInherits](Test.IInterfaceInherits.md)  
+Tests interface inheritance.  
+
+[Test.StructInherits](Test.StructInherits.md)  
+Tests struct inheritance.  
 
