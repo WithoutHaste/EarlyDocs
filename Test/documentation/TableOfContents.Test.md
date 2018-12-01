@@ -104,7 +104,7 @@ Tests see and seealso tags, i.e. tests links.
 [Summary Tag] [Short] [One Line] Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
 
   
-[**ClassSimpleCommentsGeneric<T,U>**](Test.ClassSimpleCommentsGeneric<T,U>.md)  
+[**ClassSimpleCommentsGeneric&lt;T,U&gt;**](Test.ClassSimpleCommentsGeneric<T,U>.md)  
 [Summary Tag] [Short] [One Line] Cras suscipit et sapien ac tincidunt.  
 
   

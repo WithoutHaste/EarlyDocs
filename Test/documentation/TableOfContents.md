@@ -25,7 +25,7 @@
 [Test.ClassSealed](Test.ClassSealed.md)  
 [Test.ClassSeeAlso](Test.ClassSeeAlso.md)  
 [Test.ClassSimpleComments](Test.ClassSimpleComments.md)  
-[Test.ClassSimpleCommentsGeneric<T,U>](Test.ClassSimpleCommentsGeneric_T_U_.md)  
+[Test.ClassSimpleCommentsGeneric&lt;T,U&gt;](Test.ClassSimpleCommentsGeneric_T_U_.md)  
 [Test.ClassStatic](Test.ClassStatic.md)  
 [Test.EnumGlobalComplex](Test.EnumGlobalComplex.md)  
 [Test.EnumGlobalInternal](Test.EnumGlobalInternal.md)  
