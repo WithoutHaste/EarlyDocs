@@ -47,7 +47,7 @@ function myTest() {
 Word word `int a = 0;` word word word.  
 
 **Remarks:**  
-Code including backtics: `a\`aa\`\`a\``  
+Code including backtics: ```a`aa``a` ```  
 
 **Misc:**  
 Misc misc misc `public static void Main(string[] args) { }` misc misc misc.  
