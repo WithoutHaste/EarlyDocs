@@ -78,6 +78,12 @@
 **Permission: current member**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.  
 
+**Exceptions:**  
+* **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] Murala dictum faccilius.  
+
+**Parameters:**  
+* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key**: [Param Tag] Toroldi vissi.  
+
 ## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.  

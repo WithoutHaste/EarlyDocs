@@ -581,6 +581,11 @@ namespace EarlyDocs
 			AddFloatingComments(memberSection, field as DotNetMember);
 			AddExamples(memberSection, field as DotNetMember);
 			AddPermissions(memberSection, field as DotNetMember);
+			AddExceptions(memberSection, field as DotNetMember);
+			if(field is DotNetIndexer)
+			{
+				AddParameters(memberSection, (field as DotNetIndexer));
+			}
 
 			return memberSection;
 		}
@@ -991,6 +996,42 @@ namespace EarlyDocs
 
 					MarkdownSection parameterSection = parametersSection.AddSection(parameter.ToHeader(method.Name.FullNamespace));
 					AddGroupComments(parameterSection, commentParameter, method);
+				}
+			}
+		}
+
+		internal static void AddParameters(MarkdownSection section, DotNetIndexer indexer)
+		{
+			if(indexer.ParameterComments.Count == 0)
+				return;
+
+			if(EachCommentIsOneTextComment(indexer.ParameterComments))
+			{
+				section.Add(new MarkdownLine(MarkdownText.Bold("Parameters:")));
+				MarkdownList list = new MarkdownList(isNumbered: false);
+				section.Add(list);
+				foreach(DotNetParameter parameter in indexer.Parameters) //display in same order as in indexer signature
+				{
+					DotNetCommentParameter commentParameter = indexer.ParameterComments.FirstOrDefault(c => c.ParameterLink.Name == parameter.Name);
+					if(commentParameter == null)
+						continue;
+
+					MarkdownLine line = new MarkdownLine(MarkdownText.Bold(parameter.ToHeader(indexer.Name.FullNamespace)), new MarkdownText(": "));
+					line.Concat(ConvertDotNet.DotNetCommentGroupToMarkdownLine(commentParameter));
+					list.Add(line);
+				}
+			}
+			else
+			{
+				MarkdownSection parametersSection = section.AddSection("Parameters");
+				foreach(DotNetParameter parameter in indexer.Parameters) //display in same order as in indexer signature; todo: repeated generator structure
+				{
+					DotNetCommentParameter commentParameter = indexer.ParameterComments.FirstOrDefault(c => c.ParameterLink.Name == parameter.Name);
+					if(commentParameter == null)
+						continue;
+
+					MarkdownSection parameterSection = parametersSection.AddSection(parameter.ToHeader(indexer.Name.FullNamespace));
+					AddGroupComments(parameterSection, commentParameter, indexer);
 				}
 			}
 		}

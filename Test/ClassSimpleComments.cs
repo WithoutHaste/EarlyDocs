@@ -78,6 +78,8 @@ namespace Test
 		/// </value>
 		/// <example>[Example Tag] [Short] [One Line] Nullam in sem ac ipsum dignissim gravida.</example>
 		/// <permission cref="this[int]">[Permission Tag] [References Indexer Property] [Short] [One Line] Curabitur luctus mi lobortis sem euismod, nec egestas purus feugiat.</permission>
+		/// <param name="key">[Param Tag] Toroldi vissi.</param>
+		/// <exception cref="ArgumentException">[Exception Tag] Murala dictum faccilius.</exception>
 		/// [Floating Comment] [Short] [One Line] Mauris aliquam pharetra ex id posuere.
 		public string this[int key] { get { return "0"; } set { } }
 
