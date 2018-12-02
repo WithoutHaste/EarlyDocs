@@ -1,13 +1,13 @@
 # [Test](TableOfContents.Test.md).ClassAbstract
 
 **Abstract**  
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests abstract classes and members.  
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldNotAbstract
+## int FieldNotAbstract
 
 [Summary Tag] [Short] [One Line] Proin non lectus in ante egestas porta.  
 
@@ -25,7 +25,7 @@ Tests abstract classes and members.
 
 # Properties
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
+## int this[int key] { get; set; }
 
 [Summary Tag] [Short] [One Line] Suspendisse et ultricies justo, et sagittis nibh.  
 
@@ -41,7 +41,7 @@ Tests abstract classes and members.
 **Permission: current member**  
 [Permission Tag] [References Indexer] [Short] [One Line] Etiam convallis non elit ac dictum.  
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) this[[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) key] { get; }
+## string this[string key] { get; }
 
 [Summary Tag] [Short] [One Line] Suspendisse libero ex, pretium vel quam eget, convallis faucibus tortor.  
 
@@ -57,7 +57,7 @@ Tests abstract classes and members.
 **Permission: current member**  
 [Permission Tag] [References Indexer] [Short] [One Line] Fusce eu auctor arcu, ut interdum neque.  
 
-## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyAbstract { get; set; }
+## abstract int PropertyAbstract { get; set; }
 
 [Summary Tag] [Short] [One Line] Sed pharetra elit eget felis iaculis, nec mattis urna malesuada.  
 
@@ -73,7 +73,7 @@ Tests abstract classes and members.
 **Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Integer metus lacus, faucibus eget neque nec, congue sodales mauris.  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyNotAbstract { get; set; }
+## int PropertyNotAbstract { get; set; }
 
 [Summary Tag] [Short] [One Line] Ut quam purus, laoreet ac tortor eget, lobortis finibus velit.  
 
@@ -109,7 +109,7 @@ Tests abstract classes and members.
 
 # Methods
 
-## abstract [double](https://docs.microsoft.com/en-us/dotnet/api/system.double) MethodAbstract()
+## abstract double MethodAbstract()
 
 [Summary Tag] [Short] [One Line] Donec facilisis, nibh eu faucibus rhoncus, diam ipsum scelerisque magna, imperdiet aliquet mi erat ut libero.  
 
@@ -131,7 +131,7 @@ Tests abstract classes and members.
 **Exceptions:**  
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [Exception Tag] [Short] [One Line] Cras sed diam ipsum.  
 
-## [double](https://docs.microsoft.com/en-us/dotnet/api/system.double) MethodNotAbstract()
+## double MethodNotAbstract()
 
 [Summary Tag] [Short] [One Line] Suspendisse luctus scelerisque ipsum vitae cursus.  
 
@@ -153,7 +153,7 @@ Tests abstract classes and members.
 **Exceptions:**  
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.  
 
-## protected [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodProtected()
+## protected void MethodProtected()
 
 Protected method in abstract class.  
 

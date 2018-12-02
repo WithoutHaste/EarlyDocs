@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).ClassSeeAlso
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests see and seealso tags, i.e. tests links.  
 
@@ -32,7 +32,7 @@ MethodWithParameters(int, int) or Local method with parameters
 
 # Properties
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA { get; set; }
+## int PropertyA { get; set; }
 
 # Constructors
 
@@ -40,5 +40,5 @@ MethodWithParameters(int, int) or Local method with parameters
 
 # Methods
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) MethodWithParameters([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b)
+## string MethodWithParameters(int a, int b)
 

@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).ClassRepeatedTags
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests the use of multiple tags for tags where only one is expected: summary, remarks, returns, value.  
 Tests the use of multiple tags for tags where multiple are expected: example, exception, param, typeparam, permission.  
@@ -33,7 +33,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldRepeatedOnceOnlyTags
+## int FieldRepeatedOnceOnlyTags
 
 [1st Summary Tag] Sed ut libero a ante commodo dictum vitae eget urna.  
 
@@ -57,7 +57,7 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 # Properties
 
-## [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) PropertyMultipleExamples { get; set; }
+## float PropertyMultipleExamples { get; set; }
 
 **Example A:**  
 [1st Example Tag] Ut tincidunt ipsum sit amet eros dictum, sed sollicitudin nisl interdum.  
@@ -87,7 +87,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleExceptions()
+## void MethodMultipleExceptions()
 
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [1st Exception Tag] Nullam feugiat odio felis.  
@@ -96,17 +96,17 @@ vehicula facilisis ipsum, vel faucibus justo.
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.  
 * **[ClassException](Test.ClassException.md)**: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleParams([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c, [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f)
+## void MethodMultipleParams(int a, string b, int c, float d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, bool f)
 
 **Parameters:**  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
-* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) c**: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
-* **[float](https://docs.microsoft.com/en-us/dotnet/api/system.single) d**: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
+* **int a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
+* **string b**: [2nd Param Tag] Nunc vehicula risus sed egestas volutpat.  
+* **int c**: [3rd Param Tag] Sed porttitor tempor nisi, ut luctus felis tristique vel.  
+* **float d**: [6th Param Tag] Suspendisse quis dui sit amet mi laoreet mollis.  
 * **[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
-* **[bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
+* **bool f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodMultipleTypeParams<A,B,C,D,E,F>()
+## void MethodMultipleTypeParams<A,B,C,D,E,F>()
 
 **Generic Type Parameters:**  
 
@@ -117,7 +117,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 * **E**: [5th TypeParam Tag] Aliquam erat volutpat.  
 * **F**: [4th TypeParam Tag] Pellentesque ultricies porta nunc a tempus.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodRepeatedOnceOnlyTags()
+## void MethodRepeatedOnceOnlyTags()
 
 [1st Summary Tag] Curabitur consequat nec risus vitae convallis.  
 

@@ -1,12 +1,12 @@
 # [Test](TableOfContents.Test.md).ClassOperatorOverloading
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests operator overloading.  
 
 # Operators
 
-## implicit [double](https://docs.microsoft.com/en-us/dotnet/api/system.double)(ClassOperatorOverloading a)
+## implicit double(ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Nam sit amet egestas orci.  
 
@@ -31,7 +31,7 @@ Tests operator overloading.
 **Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Vestibulum quis fringilla ipsum.  
 
-## implicit [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32)(ClassOperatorOverloading a)
+## implicit int(ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Fusce at mollis urna.  
 
@@ -56,7 +56,7 @@ Tests operator overloading.
 **Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Vestibulum semper maximus turpis, quis sodales nisl mattis ac.  
 
-## explicit [float](https://docs.microsoft.com/en-us/dotnet/api/system.single)(ClassOperatorOverloading a)
+## explicit float(ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Maecenas mattis fringilla felis, a lacinia quam commodo id.  
 
@@ -81,7 +81,7 @@ Tests operator overloading.
 **Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Vivamus volutpat, elit sit amet gravida rutrum, quam tortor vulputate risus, sed blandit dolor lacus non diam.  
 
-## explicit [short](https://docs.microsoft.com/en-us/dotnet/api/system.int16)(ClassOperatorOverloading a)
+## explicit short(ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Nunc imperdiet ex et leo porttitor fermentum.  
 
@@ -106,7 +106,7 @@ Tests operator overloading.
 **Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] In hac habitasse platea dictumst.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a + [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a + int b
 
 [Summary Tag] [Short] [One Line] Sed hendrerit eros eget purus dictum, viverra feugiat eros porttitor.  
 
@@ -130,7 +130,7 @@ Tests operator overloading.
 
 **Parameters:**  
 * **ClassOperatorOverloading a**: [Parameter Tag] [Short] [One Line] Pellentesque est metus, euismod sit amet viverra eget, tincidunt consectetur massa.  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b**: [Parameter Tag] [Short] [One Line] Maecenas maximus congue neque, at iaculis justo dignissim nec.  
+* **int b**: [Parameter Tag] [Short] [One Line] Maecenas maximus congue neque, at iaculis justo dignissim nec.  
 
 ## ClassOperatorOverloading = ClassOperatorOverloading a + ClassOperatorOverloading b
 
@@ -165,7 +165,7 @@ Tests operator overloading.
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Morbi finibus ullamcorper pellentesque.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a - [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a - int b
 
 [Summary Tag] [Short] [One Line] Quisque quis tortor dapibus, posuere ipsum mattis, efficitur eros.  
 
@@ -186,7 +186,7 @@ Tests operator overloading.
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Proin molestie dapibus sem quis varius.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a * [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a * int b
 
 [Summary Tag] [Short] [One Line] Suspendisse nec felis sagittis, rhoncus dolor sit amet, varius ipsum.  
 
@@ -200,7 +200,7 @@ Tests operator overloading.
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam iaculis nibh a risus tempus, non semper magna volutpat.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a / [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a / int b
 
 [Summary Tag] [Short] [One Line] Donec consectetur diam in felis elementum, a iaculis lacus semper.  
 
@@ -214,7 +214,7 @@ Tests operator overloading.
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Pellentesque metus lacus, aliquet vitae lorem vel, accumsan lacinia ante.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a % [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a % int b
 
 [Summary Tag] [Short] [One Line] Phasellus malesuada elit orci, eget tincidunt arcu placerat sit amet.  
 
@@ -228,91 +228,91 @@ Tests operator overloading.
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Fusce imperdiet ante ac nunc aliquet semper.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a == [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## bool = ClassOperatorOverloading a == int b
 
 [Summary Tag] [Short] [One Line] Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Maecenas sed felis blandit, rhoncus ante vel, mollis orci.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a == ClassOperatorOverloading b
+## bool = ClassOperatorOverloading a == ClassOperatorOverloading b
 
 [Summary Tag] [Short] [One Line] Nam maximus vehicula nisi non lacinia.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Curabitur ut purus nulla.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a != [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## bool = ClassOperatorOverloading a != int b
 
 [Summary Tag] [Short] [One Line] Sed porttitor gravida ligula, et semper libero euismod eget.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nam sollicitudin molestie urna eu condimentum.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a != ClassOperatorOverloading b
+## bool = ClassOperatorOverloading a != ClassOperatorOverloading b
 
 [Summary Tag] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nulla at iaculis augue.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a > [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## bool = ClassOperatorOverloading a > int b
 
 [Summary Tag] [Short] [One Line] Aenean sodales pharetra odio, at volutpat turpis feugiat id.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Quisque est purus, aliquet id lacinia nec, scelerisque et sem.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a > ClassOperatorOverloading b
+## bool = ClassOperatorOverloading a > ClassOperatorOverloading b
 
 [Summary Tag] [Short] [One Line] Suspendisse potenti.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam rutrum sed leo quis vestibulum.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a < [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## bool = ClassOperatorOverloading a < int b
 
 [Summary Tag] [Short] [One Line] Quisque a massa purus.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Etiam nisl felis, bibendum quis ipsum ut, cursus hendrerit augue.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a < ClassOperatorOverloading b
+## bool = ClassOperatorOverloading a < ClassOperatorOverloading b
 
 [Summary Tag] [Short] [One Line] In in dignissim magna.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Cras quis mauris eu nibh luctus egestas eget eu ex.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a >= [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## bool = ClassOperatorOverloading a >= int b
 
 [Summary Tag] [Short] [One Line] Nunc non diam luctus, consectetur purus vitae, commodo quam.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] In elementum, mi non viverra molestie, lorem felis interdum massa, at varius quam ex in massa.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a >= ClassOperatorOverloading b
+## bool = ClassOperatorOverloading a >= ClassOperatorOverloading b
 
 [Summary Tag] [Short] [One Line] Morbi purus lacus, dignissim gravida imperdiet egestas, rutrum sed nibh.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Vivamus tempus tincidunt nulla et commodo.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a <= [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## bool = ClassOperatorOverloading a <= int b
 
 [Summary Tag] [Short] [One Line] Donec semper convallis malesuada.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Duis ullamcorper sapien mi, ac convallis erat vestibulum a.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = ClassOperatorOverloading a <= ClassOperatorOverloading b
+## bool = ClassOperatorOverloading a <= ClassOperatorOverloading b
 
 [Summary Tag] [Short] [One Line] Morbi placerat ut metus sollicitudin bibendum.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Sed vestibulum justo mauris, quis rhoncus dolor tristique porttitor.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a & [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a & int b
 
 [Summary Tag] [Short] [One Line] Ut elit enim, posuere id nunc ac, fermentum congue nibh.  
 
@@ -326,7 +326,7 @@ Tests operator overloading.
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nulla sed ex tellus.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a | [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a | int b
 
 [Summary Tag] [Short] [One Line] Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.  
 
@@ -340,7 +340,7 @@ Tests operator overloading.
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Donec dictum venenatis enim at venenatis.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a ^ [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a ^ int b
 
 [Summary Tag] [Short] [One Line] Suspendisse potenti.  
 
@@ -368,28 +368,28 @@ Tests operator overloading.
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Aenean eget velit augue.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = (true)(ClassOperatorOverloading a)
+## bool = (true)(ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Donec id mollis orci.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Donec molestie condimentum purus, vitae condimentum diam dignissim et.  
 
-## [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean) = (false)(ClassOperatorOverloading a)
+## bool = (false)(ClassOperatorOverloading a)
 
 [Summary Tag] [Short] [One Line] Pellentesque consectetur libero a ligula tempus convallis.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Nullam ullamcorper purus in velit tempus, in scelerisque erat porta.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a >> [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a >> int b
 
 [Summary Tag] [Short] [One Line] Suspendisse mattis pretium ligula sit amet elementum.  
 
 **Permission: current member**  
 [Permission Tag] [References Operator] [Short] [One Line] Suspendisse sit amet arcu erat.  
 
-## ClassOperatorOverloading = ClassOperatorOverloading a << [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) b
+## ClassOperatorOverloading = ClassOperatorOverloading a << int b
 
 [Summary Tag] [Short] [One Line] Etiam faucibus, dolor ac condimentum scelerisque, quam libero faucibus nisi, non sagittis lacus augue quis odio.  
 

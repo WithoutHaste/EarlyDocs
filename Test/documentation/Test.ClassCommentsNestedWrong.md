@@ -1,12 +1,12 @@
 # [Test](TableOfContents.Test.md).ClassCommentsNestedWrong
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests the incorrect nested of comments.  
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) RemarksInRemarks
+## int RemarksInRemarks
 
 **Remarks:**  
 [Remarks Tag] [Multiline] Donec dignissim urna ut   
@@ -18,7 +18,7 @@ sodales magna vel, eleifend est. Aliquam viverra massa
 nec diam hendrerit ultrices. Pellentesque eu dolor   
 scelerisque, ultrices felis eu, rutrum turpis.  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) SummaryInSummary
+## int SummaryInSummary
 
 [Summary Tag] [Multiline] Vestibulum a maximus mauris.   
 Quisque vel magna et ipsum auctor condimentum vel vitae   

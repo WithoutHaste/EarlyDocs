@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).ClassInternalLinks
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests the automatic internal links between types in this library.  
 

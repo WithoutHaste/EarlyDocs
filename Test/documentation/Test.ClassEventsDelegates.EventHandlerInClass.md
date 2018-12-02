@@ -1,6 +1,6 @@
 # [Test.ClassEventsDelegates](Test.ClassEventsDelegates.md).EventHandlerInClass
 
-**delegate [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) EventHandlerInClass([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**  
+**delegate void EventHandlerInClass(object sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**  
 
 [Summary Tag] [Short] [One Line] Phasellus ut nulla aliquam, commodo ante ac, accumsan leo.  
 
@@ -24,6 +24,6 @@
 
 # Parameters
 
-* **[object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender**: [Param Tag] [Short] [One Line] NSuspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
+* **object sender**: [Param Tag] [Short] [One Line] NSuspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
 * **[EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e**: [Param Tag] [Short] [One Line] Vestibulum porttitor consectetur pellentesque.  
 

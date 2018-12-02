@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).EventHandlerGlobal
 
-**delegate [EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler) EventHandlerGlobal([object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**  
+**delegate [EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler) EventHandlerGlobal(object sender, [EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e)**  
 
 [Summary Tag] [Short] [One Line] Donec gravida egestas nibh.  
 
@@ -24,6 +24,6 @@
 
 # Parameters
 
-* **[object](https://docs.microsoft.com/en-us/dotnet/api/system.object) sender**: [Param Tag] [Short] [One Line] Nunc bibendum, purus sit amet sodales molestie, libero metus mattis massa, porttitor vehicula sem ligula in quam.  
+* **object sender**: [Param Tag] [Short] [One Line] Nunc bibendum, purus sit amet sodales molestie, libero metus mattis massa, porttitor vehicula sem ligula in quam.  
 * **[EventArgs](https://docs.microsoft.com/en-us/dotnet/api/system.eventargs) e**: [Param Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
 

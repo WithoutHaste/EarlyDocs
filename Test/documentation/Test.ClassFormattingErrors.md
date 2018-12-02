@@ -1,17 +1,17 @@
 # [Test](TableOfContents.Test.md).ClassFormattingErrors
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests formatting errors in xml comments.  
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) CrefMissing
+## int CrefMissing
 
 **Misc:**  
   
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) NameMissing
+## int NameMissing
 
 **Misc:**  
 __  

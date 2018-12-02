@@ -6,13 +6,13 @@ Enable tests inheriting from multiple interfaces.
 
 # Properties
 
-## abstract [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyB { get; set; }
+## abstract int PropertyB { get; set; }
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 
 # Methods
 
-## abstract [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodB()
+## abstract void MethodB()
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 

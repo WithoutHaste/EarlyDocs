@@ -1,12 +1,12 @@
 # [Test.SpaceA.ClassInNamespaceA](Test.SpaceA.ClassInNamespaceA.md).ClassInClass
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests a class nested in a class.  
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldA
+## int FieldA
 
 # Constructors
 

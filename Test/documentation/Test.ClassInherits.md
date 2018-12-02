@@ -1,13 +1,13 @@
 # [Test](TableOfContents.Test.md).ClassInherits
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [ClassSimpleComments](Test.ClassSimpleComments.md)  
+**Inheritance:** object → [ClassSimpleComments](Test.ClassSimpleComments.md)  
 **Implements:** [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md), [Filler.IInterfaceB](Test.Filler.IInterfaceB.md)  
 
 Tests class inheritance.  
 
 # Properties
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) PropertyA { get; set; }
+## int PropertyA { get; set; }
 
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.  
 
@@ -26,18 +26,18 @@ Tests class inheritance.
 **Permission: IInterfaceSimpleComments.PropertyA**  
 [Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).PropertyB { private get; private set; }
+## int [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).PropertyB { private get; private set; }
 
 **Permission: current member**  
 [Permission Tag] [Explcit Interface Implementation Property]  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) [Filler.IInterfaceB](Test.Filler.IInterfaceB.md).PropertyB { private get; private set; }
+## int [Filler.IInterfaceB](Test.Filler.IInterfaceB.md).PropertyB { private get; private set; }
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodA()
+## void MethodA()
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.  
 
@@ -65,7 +65,7 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 
-## virtual [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) MethodVirtual()
+## virtual int MethodVirtual()
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
 

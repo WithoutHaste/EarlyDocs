@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).ClassSimpleComments
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 [Summary Tag] [Short] [One Line] Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
 
@@ -38,7 +38,7 @@
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerField
+## int IntegerField
 
 [Summary Tag] [Short] [One Line] Nam ut feugiat urna, eu varius arcu.  
 
@@ -59,7 +59,7 @@
 
 # Properties
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
+## string this[int key] { get; set; }
 
 [Summary Tag] [Short] [One Line] Integer condimentum gravida ante at blandit.  
 
@@ -82,9 +82,9 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] Murala dictum faccilius.  
 
 **Parameters:**  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key**: [Param Tag] Toroldi vissi.  
+* **int key**: [Param Tag] Toroldi vissi.  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerProperty { get; set; }
+## int IntegerProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.  
 
@@ -143,7 +143,7 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Vestibulum condimentum tincidunt massa, a tincidunt magna facilisis vitae.  
 
-## ClassSimpleComments([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## ClassSimpleComments(int a, string b)
 
 [Summary Tag] [Short] [One Line] Sed eu molestie augue, sed congue sapien.  
 
@@ -163,12 +163,12 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Vivamus vitae condimentum nisi.  
 
 **Parameters:**  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
-* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
+* **int a**: [Parameter Tag] [Short] [One Line] Nullam bibendum enim nec turpis suscipit porttitor.  
+* **string b**: [Parameter Tag] [Short] [One Line] Aliquam erat volutpat.  
 
 # Destructor
 
-## virtual [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) Finalize()
+## virtual void Finalize()
 
 [Summary Tag] [Short] [One Line] Aenean quam urna, pharetra vel malesuada ut, gravida ac libero.  
 
@@ -189,7 +189,7 @@
 
 # Methods
 
-## virtual [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) MethodVirtual()
+## virtual int MethodVirtual()
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
 
@@ -208,7 +208,7 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithoutParameters()
+## void MethodWithoutParameters()
 
 [Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.  
 
@@ -229,7 +229,7 @@
 
 # Static Methods
 
-## static [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static string StaticMethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Vivamus et ex convallis, egestas justo ut, faucibus arcu.  
 
@@ -252,8 +252,8 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Aliquam et ante non felis facilisis interdum vitae et lacus.  
 
 **Parameters:**  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Nulla consectetur, urna eget ultrices ultricies, velit tortor iaculis lectus, quis condimentum tortor ex vitae ipsum.  
-* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.  
+* **int a**: [Parameter Tag] [Short] [One Line] Nulla consectetur, urna eget ultrices ultricies, velit tortor iaculis lectus, quis condimentum tortor ex vitae ipsum.  
+* **string b**: [Parameter Tag] [Short] [One Line] Duis ornare sodales convallis.  
 
 # Nested Types
 

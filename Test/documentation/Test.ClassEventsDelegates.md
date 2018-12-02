@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).ClassEventsDelegates
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests events and delegates.  
 
@@ -83,7 +83,7 @@ Tests events and delegates.
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action)
+## void MethodWithAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action)
 
 [Summary Tag] [Short] [One Line] Integer bibendum, orci ut blandit scelerisque, justo nibh fermentum mi, efficitur malesuada neque velit id ipsum.  
 
@@ -105,7 +105,7 @@ Tests events and delegates.
 **Parameters:**  
 * **[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) action**: [Parameter Tag] [Short] [One Line] Suspendisse fermentum suscipit purus, sodales dapibus ex faucibus et.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func)
+## void MethodWithFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) func)
 
 [Summary Tag] [Short] [One Line] Donec accumsan lacus a dolor auctor, sit amet cursus eros faucibus.  
 

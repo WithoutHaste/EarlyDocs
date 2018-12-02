@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).ClassComplexComments
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 [Summary Tag] [Multiline] Ut eleifend dignissim viverra. Donec ut nisl id augue dapibus   
 congue eget et risus. Nulla id gravida felis, nec viverra lectus.   
@@ -85,7 +85,7 @@ for (int i = 0; i < lines.Length; i++)
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodComplexExceptions<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x,  y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
+## void MethodComplexExceptions<A>(string x,  y, int z)
 
 ### Exceptions
 
@@ -117,7 +117,7 @@ _A_
 
  luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.  
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodComplexParamsAndTypeParams<A>([string](https://docs.microsoft.com/en-us/dotnet/api/system.string) x,  y, [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z)
+## void MethodComplexParamsAndTypeParams<A>(string x,  y, int z)
 
 ### Generic Type Parameters
 
@@ -132,7 +132,7 @@ Donec euismod mollis dui, non bibendum quam porta non.
 
 ### Parameters
 
-#### [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) z
+#### int z
 
 [Param Rag] [Has Example]  
 

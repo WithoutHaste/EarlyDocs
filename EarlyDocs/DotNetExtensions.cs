@@ -53,6 +53,25 @@ namespace EarlyDocs
 				{ "op_LeftShift", "<<" },
 			};
 
+		internal static List<string> BasicTypeNames = new List<string>() {
+			"System.Boolean", "bool",
+			"System.Byte", "byte",
+			"System.Char", "char",
+			"System.Decimal", "decimal",
+			"System.Double", "double",
+			"System.Int16", "short",
+			"System.Int32", "int",
+			"System.Int64", "long",
+			"System.Object", "object",
+			"System.SByte", "sbyte",
+			"System.Single", "float",
+			"System.String", "string",
+			"System.UInt16", "ushort",
+			"System.UInt32", "uint",
+			"System.UInt64", "ulong",
+			"System.Void", "void",
+		};
+
 		internal static bool IsInKnownMicrosoftNamespace(this DotNetQualifiedName name)
 		{
 			if(name == null)
@@ -333,6 +352,10 @@ namespace EarlyDocs
 		{
 			string linkString = name.FullName;
 			string parentLinkString = name.FullNamespace?.FullName;
+
+			if(BasicTypeNames.Contains(linkString))
+				return linkString;
+
 			if(name.IsInKnownMicrosoftNamespace())
 			{
 				TurnQualifiedNameConverterOff();

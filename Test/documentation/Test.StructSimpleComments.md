@@ -24,7 +24,7 @@
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) IntegerField
+## int IntegerField
 
 [Summary Tag] [Short] [One Line] Sed at molestie metus.  
 
@@ -45,7 +45,7 @@
 
 # Properties
 
-## [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) StringProperty { get; set; }
+## string StringProperty { get; set; }
 
 [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.  
 
@@ -85,7 +85,7 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Cras rutrum ante et neque cursus blandit.  
 
-## StructSimpleComments([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) i)
+## StructSimpleComments(int i)
 
 [Summary Tag] [Short] [One Line] Nam sollicitudin, tortor sit amet cursus sollicitudin, nunc sem pretium ante, et ultrices lectus nibh sollicitudin arcu.  
 
@@ -106,7 +106,7 @@
 
 # Methods
 
-## [float](https://docs.microsoft.com/en-us/dotnet/api/system.single) MethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## float MethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Donec sollicitudin sem et nisi laoreet, et gravida nulla scelerisque.  
 
@@ -129,12 +129,12 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Pellentesque ex nunc, molestie vel bibendum at, tincidunt vitae purus.  
 
 **Parameters:**  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
-* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.  
+* **int a**: [Parameter Tag] [Short] [One Line] Etiam felis dolor, suscipit non vulputate sed, venenatis sed turpis.  
+* **string b**: [Parameter Tag] [Short] [One Line] Ut a quam et diam molestie varius.  
 
 # Static Methods
 
-## static [double](https://docs.microsoft.com/en-us/dotnet/api/system.double) StaticMethodWithParametersWithReturn([int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static double StaticMethodWithParametersWithReturn(int a, string b)
 
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
 
@@ -157,6 +157,6 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Suspendisse ornare orci sit amet ante dignissim, eget iaculis eros fermentum.  
 
 **Parameters:**  
-* **[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) a**: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
-* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
+* **int a**: [Parameter Tag] [Short] [One Line] Donec aliquet pharetra felis, eget congue augue posuere in.  
+* **string b**: [Parameter Tag] [Short] [One Line] Cras convallis ut dolor id ultrices.  
 

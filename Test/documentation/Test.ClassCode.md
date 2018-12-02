@@ -1,12 +1,12 @@
 # [Test](TableOfContents.Test.md).ClassCode
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests include code and xml in comments.  
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) CodeBlock
+## int CodeBlock
 
 [Summary Tag]
 ```
@@ -21,7 +21,7 @@ string c = "c";
 string d = "d";
 ```  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) CodeBlockWithLanguage
+## int CodeBlockWithLanguage
 
 [Summary Tag]
 ```php
@@ -42,7 +42,7 @@ function myTest() {
 }
 ```  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) InlineCode
+## int InlineCode
 
 Word word `int a = 0;` word word word.  
 
@@ -52,7 +52,7 @@ Code including backtics: ```a`aa``a` ```
 **Misc:**  
 Misc misc misc `public static void Main(string[] args) { }` misc misc misc.  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) InlineXml
+## int InlineXml
 
 Word word word `<html><body></body></html>` word word word.  
 

@@ -1,12 +1,12 @@
 # [Test](TableOfContents.Test.md).ClassMultilineComments
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 Tests different ways to format multiline comments.  
 
 # Fields
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldA
+## int FieldA
 
 [Summary Tag] [Multiline with Endline]  
 Etiam enim odio, imperdiet finibus fringilla   
@@ -18,7 +18,7 @@ purus. Phasellus elit nisl, posuere eu ullamcorper
 a, vestibulum a odio. Nulla id odio egestas,   
 volutpat ligula ut, laoreet sem.  
 
-## [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) FieldB
+## int FieldB
 
 [Summary Tag] [Multiline with Paragraphs]  
 

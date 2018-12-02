@@ -1,6 +1,6 @@
 # [Test](TableOfContents.Test.md).ClassSimpleCommentsGeneric<T,U>
 
-**Inheritance:** [object](https://docs.microsoft.com/en-us/dotnet/api/system.object)  
+**Inheritance:** object  
 
 [Summary Tag] [Short] [One Line] Cras suscipit et sapien ac tincidunt.  
 
@@ -54,7 +54,7 @@
 
 # Properties
 
-## T this[[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32) key] { get; set; }
+## T this[int key] { get; set; }
 
 [Summary Tag] [Short] [One Line] Nulla non metus at dui condimentum semper.  
 
@@ -157,7 +157,7 @@
 
 # Destructor
 
-## virtual [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) Finalize()
+## virtual void Finalize()
 
 [Summary Tag] [Short] [One Line] Quisque scelerisque elit a massa semper luctus.  
 
@@ -178,7 +178,7 @@
 
 # Methods
 
-## [void](https://docs.microsoft.com/en-us/dotnet/api/system.void) MethodWithTypeParameters<A,B>( a,  b,  u)
+## void MethodWithTypeParameters<A,B>( a,  b,  u)
 
 [Summary Tag] [Short] [One Line] Maecenas molestie purus id fermentum dictum.  
 
@@ -209,7 +209,7 @@
 
 # Static Methods
 
-## static U StaticMethodWithParametersWithReturn( t, [string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b)
+## static U StaticMethodWithParametersWithReturn( t, string b)
 
 [Summary Tag] [Short] [One Line] Mauris malesuada varius risus eu condimentum.  
 
@@ -233,5 +233,5 @@
 
 **Parameters:**  
 * **t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
-* **[string](https://docs.microsoft.com/en-us/dotnet/api/system.string) b**: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
+* **string b**: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
 
