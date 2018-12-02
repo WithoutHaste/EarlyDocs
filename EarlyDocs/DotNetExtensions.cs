@@ -878,7 +878,7 @@ namespace EarlyDocs
 			MarkdownSection parametersSection = new MarkdownSection("Generic Type Parameters");
 			section.Add(parametersSection);
 
-			if(EachCommentIsOneTextComment(member.ParameterComments)) //todo: partially duplicated with AddParameters method
+			if(EachCommentIsAllInlineComments(member.ParameterComments)) //todo: partially duplicated with AddParameters method
 			{
 				MarkdownList list = new MarkdownList(isNumbered: false);
 				section.Add(list);
@@ -904,7 +904,7 @@ namespace EarlyDocs
 			if(member.TypeParameterComments.Count == 0)
 				return;
 
-			if(EachCommentIsOneTextComment(member.ParameterComments))
+			if(EachCommentIsAllInlineComments(member.ParameterComments))
 			{
 				section.Add(new MarkdownParagraph(MarkdownText.Bold("Generic Type Parameters:")));
 				MarkdownList list = new MarkdownList(isNumbered: false);
@@ -935,7 +935,7 @@ namespace EarlyDocs
 			MarkdownSection parametersSection = new MarkdownSection("Parameters");
 			section.Add(parametersSection);
 
-			if(EachCommentIsOneTextComment(method.ParameterComments)) //todo: partially duplicated with AddParameters method
+			if(EachCommentIsAllInlineComments(method.ParameterComments)) //todo: partially duplicated with AddParameters method
 			{
 				MarkdownList list = new MarkdownList(isNumbered: false);
 				section.Add(list);
@@ -969,7 +969,7 @@ namespace EarlyDocs
 			if(method.ParameterComments.Count == 0)
 				return;
 
-			if(EachCommentIsOneTextComment(method.ParameterComments))
+			if(EachCommentIsAllInlineComments(method.ParameterComments))
 			{
 				section.Add(new MarkdownLine(MarkdownText.Bold("Parameters:")));
 				MarkdownList list = new MarkdownList(isNumbered: false);
@@ -1005,7 +1005,7 @@ namespace EarlyDocs
 			if(indexer.ParameterComments.Count == 0)
 				return;
 
-			if(EachCommentIsOneTextComment(indexer.ParameterComments))
+			if(EachCommentIsAllInlineComments(indexer.ParameterComments))
 			{
 				section.Add(new MarkdownLine(MarkdownText.Bold("Parameters:")));
 				MarkdownList list = new MarkdownList(isNumbered: false);
@@ -1044,7 +1044,7 @@ namespace EarlyDocs
 			MarkdownSection exceptionsSection = new MarkdownSection("Exceptions");
 			section.Add(exceptionsSection);
 
-			if(EachCommentIsOneTextComment(member.ExceptionComments)) //todo: partially duplicated with AddExceptions method
+			if(EachCommentIsAllInlineComments(member.ExceptionComments)) //todo: partially duplicated with AddExceptions method
 			{
 				MarkdownList list = new MarkdownList(isNumbered: false);
 				section.Add(list);
@@ -1070,7 +1070,7 @@ namespace EarlyDocs
 			if(member.ExceptionComments.Count == 0)
 				return;
 
-			if(EachCommentIsOneTextComment(member.ExceptionComments))
+			if(EachCommentIsAllInlineComments(member.ExceptionComments))
 			{
 				section.Add(new MarkdownLine(MarkdownText.Bold("Exceptions:")));
 				MarkdownList list = new MarkdownList(isNumbered: false);
@@ -1087,7 +1087,7 @@ namespace EarlyDocs
 				MarkdownSection exceptionsSection = section.AddSection("Exceptions");
 				foreach(DotNetCommentQualifiedLinkedGroup comment in member.ExceptionComments)
 				{
-					MarkdownSection exceptionSection = exceptionsSection.AddSection(comment.QualifiedLink.Name.ToDisplayStringLink(member.Name));
+					MarkdownSection exceptionSection = exceptionsSection.AddSection(comment.QualifiedLink.Name.ToDisplayStringLink(member.Name) + ":");
 					AddGroupComments(exceptionSection, comment, member);
 				}
 			}
@@ -1112,41 +1112,44 @@ namespace EarlyDocs
 		}
 
 		/// <summary>
-		/// Returns true if each comment boils down to just one text comment, or no comments at all.
+		/// Returns true if each comment boils down to just inline comments, or no comments at all.
 		/// </summary>
-		private static bool EachCommentIsOneTextComment(List<DotNetCommentParameter> comments)
+		private static bool EachCommentIsAllInlineComments(List<DotNetCommentParameter> comments)
 		{
 			foreach(DotNetCommentParameter comment in comments)
 			{
-				if(!CommentIsOneTextComment(comment as DotNetCommentGroup))
+				if(!CommentIsAllInlineComments(comment as DotNetCommentGroup))
 					return false;
 			}
 			return true;
 		}
 
 		/// <summary>
-		/// Returns true if each comment boils down to just one text comment, or no comments at all.
+		/// Returns true if each comment boils down to just inline comments, or no comments at all.
 		/// </summary>
-		private static bool EachCommentIsOneTextComment(List<DotNetCommentQualifiedLinkedGroup> comments)
+		private static bool EachCommentIsAllInlineComments(List<DotNetCommentQualifiedLinkedGroup> comments)
 		{
 			foreach(DotNetCommentQualifiedLinkedGroup comment in comments)
 			{
-				if(!CommentIsOneTextComment(comment as DotNetCommentGroup))
+				if(!CommentIsAllInlineComments(comment as DotNetCommentGroup))
 					return false;
 			}
 			return true;
 		}
 
 		/// <summary>
-		/// Returns true if this whole comment boils down to just one text comment, or no comments at all.
+		/// Returns true if this whole comment boils down to just inline comments, or no comments at all.
 		/// </summary>
-		private static bool CommentIsOneTextComment(DotNetCommentGroup group)
+		private static bool CommentIsAllInlineComments(DotNetCommentGroup group)
 		{
 			if(group.IsEmpty)
 				return true;
-			if(group.Count > 1)
-				return false;
-			return (group[0] is DotNetCommentText);
+			return group.Comments.All(c =>
+				(c is DotNetCommentText || c is DotNetCommentCode || c is DotNetCommentParameterLink ||
+				c is DotNetCommentTypeParameterLink) 
+				&& 
+				!(c is DotNetCommentCodeBlock)
+			);
 		}
 	}
 }

@@ -98,9 +98,7 @@ namespace EarlyDocs
 			}
 			else if(comment is DotNetCommentParameterLink) //paramref and typeparamref
 			{
-				if(String.IsNullOrEmpty((comment as DotNetCommentParameterLink).Name))
-					return;
-				paragraph.Add(MarkdownText.Italic((comment as DotNetCommentParameterLink).Name));
+				paragraph.Add(ToMDText(comment as DotNetCommentParameterLink));
 			}
 		}
 
@@ -119,18 +117,29 @@ namespace EarlyDocs
 			{
 				line.Add(ToMDLink(comment as DotNetCommentQualifiedLinkedGroup, parent));
 			}
-			else if(comment is DotNetCommentCode)
-			{
-				line.Add(new MarkdownCode((comment as DotNetCommentCode).Text));
-			}
 			else if(comment is DotNetCommentText)
 			{
-				string text = (comment as DotNetCommentText).Text;
-				line.Add(new MarkdownText(text));
+				if(comment is DotNetCommentCodeBlock)
+				{
+					//no action
+				}
+				else if(comment is DotNetCommentCode)
+				{
+					line.Add(new MarkdownCode((comment as DotNetCommentCode).Text));
+				}
+				else
+				{
+					string text = (comment as DotNetCommentText).Text;
+					line.Add(new MarkdownText(text));
+				}
 			}
 			else if(comment is DotNetCommentQualifiedLink)
 			{
 				line.Add(ToMDLink(comment as DotNetCommentQualifiedLink, parent));
+			}
+			else if(comment is DotNetCommentParameterLink) //paramref or typeparamref
+			{
+				line.Add(ToMDText(comment as DotNetCommentParameterLink));
 			}
 
 			return line;
@@ -230,6 +239,13 @@ namespace EarlyDocs
 				return new MarkdownInlineLink(text, (plainLink as MarkdownInlineLink).Url);
 			}
 			return new MarkdownText(text);
+		}
+
+		internal static MarkdownText ToMDText(DotNetCommentParameterLink comment)
+		{
+			if(comment == null)
+				return new MarkdownText("");
+			return MarkdownText.Italic(comment.Name);
 		}
 	}
 }

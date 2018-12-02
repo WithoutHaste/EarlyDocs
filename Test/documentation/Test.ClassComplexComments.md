@@ -89,7 +89,7 @@ for (int i = 0; i < lines.Length; i++)
 
 ### Exceptions
 
-#### [IndexOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/system.indexoutofrangeexception)
+#### [IndexOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/system.indexoutofrangeexception):
 
 [1st Exception Tag] [Has Example] Cras ante risus, sodales quis massa vel, pulvinar auctor ipsum.  
 
@@ -97,7 +97,7 @@ for (int i = 0; i < lines.Length; i++)
 Fusce ligula ipsum, porttitor at velit ut, commodo auctor ligula. Nunc imperdiet, justo sed bibendum laoreet, nibh purus laoreet dolor,   
 vitae consectetur sem erat quis ipsum. Nam tincidunt non magna in mattis. Curabitur nec efficitur sapien, vel rutrum odio.  
 
-#### [System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)
+#### [System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception):
 
 [2nd Exception Tag] [Has ParamRef] Nulla facilisi. Donec fermentum nisl felis,  
 
@@ -109,7 +109,7 @@ _y_
 
  venenatis tellus tincidunt ultrices.  
 
-#### [ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)
+#### [ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception):
 
 [3rd Exception Tag] [Has TypeParamRef] Vestibulum ante ipsum primis in faucibus orci  
 
