@@ -6,7 +6,9 @@ Tests events and delegates.
 
 # Fields
 
-## [Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) ActionInClass
+## ActionInClass
+
+**[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1)**  
 
 [Summary Tag] [Short] [One Line] Suspendisse mattis lacinia orci, eu cursus lacus ultricies ac.  
 
@@ -22,7 +24,9 @@ Tests events and delegates.
 **Permission: current member**  
 [Permission Tag] [References Action] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
 
-## [Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FuncInClass
+## FuncInClass
+
+**[Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2)**  
 
 [Summary Tag] [Short] [One Line] Maecenas et turpis eget mi dapibus sodales.  
 
@@ -40,7 +44,9 @@ Tests events and delegates.
 
 # Events
 
-## [EventHandlerGlobal](Test.EventHandlerGlobal.md) EventA
+## EventA
+
+**[EventHandlerGlobal](Test.EventHandlerGlobal.md)**  
 
 [Summary Tag] [Short] [One Line] Mauris sit amet vestibulum justo.  
 
@@ -56,7 +62,9 @@ Tests events and delegates.
 **Permission: current member**  
 [Permission Tag] [References Event] [Short] [One Line] Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
 
-## [EventHandlerInClass](Test.ClassEventsDelegates.EventHandlerInClass.md) EventB
+## EventB
+
+**[EventHandlerInClass](Test.ClassEventsDelegates.EventHandlerInClass.md)**  
 
 [Summary Tag] [Short] [One Line] Suspendisse non enim semper sapien volutpat rhoncus.  
 
@@ -72,7 +80,9 @@ Tests events and delegates.
 **Permission: current member**  
 [Permission Tag] [References Event] [Short] [One Line] Quisque egestas ante nec feugiat lacinia.  
 
-## [EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler) EventC
+## EventC
+
+**[EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler)**  
 
 [Summary Tag] [Private Member] [Should Ignore] Duis justo dolor, dapibus eu pulvinar vitae, iaculis non neque.  
 

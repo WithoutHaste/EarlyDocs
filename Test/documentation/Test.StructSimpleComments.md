@@ -24,7 +24,9 @@
 
 # Fields
 
-## int IntegerField
+## IntegerField
+
+**int**  
 
 [Summary Tag] [Short] [One Line] Sed at molestie metus.  
 
@@ -45,7 +47,9 @@
 
 # Properties
 
-## string StringProperty { get; set; }
+## StringProperty
+
+**string { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Aliquam scelerisque vestibulum nulla, a aliquam dui mollis ac.  
 

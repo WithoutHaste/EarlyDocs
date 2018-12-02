@@ -6,7 +6,9 @@ Tests a class in a nested namespace.
 
 # Fields
 
-## int FieldA
+## FieldA
+
+**int**  
 
 # Constructors
 

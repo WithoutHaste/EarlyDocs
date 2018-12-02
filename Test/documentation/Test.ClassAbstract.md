@@ -7,7 +7,9 @@ Tests abstract classes and members.
 
 # Fields
 
-## int FieldNotAbstract
+## FieldNotAbstract
+
+**int**  
 
 [Summary Tag] [Short] [One Line] Proin non lectus in ante egestas porta.  
 
@@ -25,7 +27,9 @@ Tests abstract classes and members.
 
 # Properties
 
-## int this[int key] { get; set; }
+## this[int key]
+
+**abstract int { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Suspendisse et ultricies justo, et sagittis nibh.  
 
@@ -41,7 +45,9 @@ Tests abstract classes and members.
 **Permission: current member**  
 [Permission Tag] [References Indexer] [Short] [One Line] Etiam convallis non elit ac dictum.  
 
-## string this[string key] { get; }
+## this[string key]
+
+**string { public get; }**  
 
 [Summary Tag] [Short] [One Line] Suspendisse libero ex, pretium vel quam eget, convallis faucibus tortor.  
 
@@ -57,7 +63,9 @@ Tests abstract classes and members.
 **Permission: current member**  
 [Permission Tag] [References Indexer] [Short] [One Line] Fusce eu auctor arcu, ut interdum neque.  
 
-## abstract int PropertyAbstract { get; set; }
+## PropertyAbstract
+
+**abstract int { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Sed pharetra elit eget felis iaculis, nec mattis urna malesuada.  
 
@@ -73,7 +81,9 @@ Tests abstract classes and members.
 **Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Integer metus lacus, faucibus eget neque nec, congue sodales mauris.  
 
-## int PropertyNotAbstract { get; set; }
+## PropertyNotAbstract
+
+**int { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Ut quam purus, laoreet ac tortor eget, lobortis finibus velit.  
 
@@ -91,7 +101,9 @@ Tests abstract classes and members.
 
 # Events
 
-## [EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler) EventA
+## EventA
+
+**[EventHandler](https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler)**  
 
 [Summary Tag] [Short] [One Line] Donec non commodo ante, at commodo nulla.  
 

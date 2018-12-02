@@ -6,35 +6,49 @@ Tests fields/properties with (1) a single summary tag (2) a single value tag (3)
 
 # Fields
 
-## string SummaryField
+## SummaryField
+
+**string**  
 
 Nulla facilisi.  
 
-## string SummaryValueField
+## SummaryValueField
+
+**string**  
 
 Fusce ac mi sit amet turpis facilisis venenatis maximus ac nunc.  
 
 **Value:**  
 Cras euismod vestibulum nunc nec feugiat.  
 
-## string ValueField
+## ValueField
 
+**string**  
+
+**Value:**  
 Morbi egestas dolor sapien, ut elementum odio placerat id.  
 
 # Properties
 
-## string SummaryProperty { get; set; }
+## SummaryProperty
+
+**string { public get; public set; }**  
 
 Nullam nec lorem vitae nunc pellentesque gravida.  
 
-## string SummaryValueProperty { get; set; }
+## SummaryValueProperty
+
+**string { public get; public set; }**  
 
 Donec turpis augue, feugiat ut sapien at, sagittis tristique enim.  
 
 **Value:**  
 Proin mauris eros, laoreet eu tellus a, pulvinar volutpat lorem.  
 
-## string ValueProperty { get; set; }
+## ValueProperty
 
+**string { public get; public set; }**  
+
+**Value:**  
 Vestibulum at nisi velit.  
 

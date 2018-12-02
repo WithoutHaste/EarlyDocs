@@ -7,7 +7,9 @@ Tests class inheritance.
 
 # Properties
 
-## int PropertyA { get; set; }
+## PropertyA
+
+**int { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.  
 
@@ -26,12 +28,16 @@ Tests class inheritance.
 **Permission: IInterfaceSimpleComments.PropertyA**  
 [Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.  
 
-## int [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).PropertyB { private get; private set; }
+## [IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).PropertyB
+
+**int { private get; private set; }**  
 
 **Permission: current member**  
 [Permission Tag] [Explcit Interface Implementation Property]  
 
-## int [Filler.IInterfaceB](Test.Filler.IInterfaceB.md).PropertyB { private get; private set; }
+## [Filler.IInterfaceB](Test.Filler.IInterfaceB.md).PropertyB
+
+**int { private get; private set; }**  
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 

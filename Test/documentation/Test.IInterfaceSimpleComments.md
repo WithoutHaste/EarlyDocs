@@ -24,7 +24,9 @@
 
 # Properties
 
-## abstract int PropertyA { get; set; }
+## PropertyA
+
+**abstract int { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Donec non interdum elit, a tincidunt massa.  
 
@@ -43,7 +45,9 @@
 **Permission: current member**  
 [Permission Tag] [References Property] [Short] [One Line] Cras id egestas justo, a dapibus enim.  
 
-## abstract int PropertyB { get; set; }
+## PropertyB
+
+**abstract int { public get; public set; }**  
 
 SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
 

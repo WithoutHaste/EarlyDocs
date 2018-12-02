@@ -32,7 +32,9 @@ MethodWithParameters(int, int) or Local method with parameters
 
 # Properties
 
-## int PropertyA { get; set; }
+## PropertyA
+
+**int { public get; public set; }**  
 
 # Constructors
 

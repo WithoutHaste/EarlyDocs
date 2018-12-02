@@ -33,7 +33,9 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 # Fields
 
-## int FieldRepeatedOnceOnlyTags
+## FieldRepeatedOnceOnlyTags
+
+**int**  
 
 [1st Summary Tag] Sed ut libero a ante commodo dictum vitae eget urna.  
 
@@ -57,7 +59,9 @@ Tests the use of multiple tags for tags where multiple are expected: example, ex
 
 # Properties
 
-## float PropertyMultipleExamples { get; set; }
+## PropertyMultipleExamples
+
+**float { public get; public set; }**  
 
 **Example A:**  
 [1st Example Tag] Ut tincidunt ipsum sit amet eros dictum, sed sollicitudin nisl interdum.  

@@ -6,7 +6,9 @@ Tests include code and xml in comments.
 
 # Fields
 
-## int CodeBlock
+## CodeBlock
+
+**int**  
 
 [Summary Tag]
 ```
@@ -21,7 +23,9 @@ string c = "c";
 string d = "d";
 ```  
 
-## int CodeBlockWithLanguage
+## CodeBlockWithLanguage
+
+**int**  
 
 [Summary Tag]
 ```php
@@ -42,7 +46,9 @@ function myTest() {
 }
 ```  
 
-## int InlineCode
+## InlineCode
+
+**int**  
 
 Word word `int a = 0;` word word word.  
 
@@ -52,7 +58,9 @@ Code including backtics: ```a`aa``a` ```
 **Misc:**  
 Misc misc misc `public static void Main(string[] args) { }` misc misc misc.  
 
-## int InlineXml
+## InlineXml
+
+**int**  
 
 Word word word `<html><body></body></html>` word word word.  
 

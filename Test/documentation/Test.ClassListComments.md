@@ -6,7 +6,9 @@ Tests lists and tables in comments.
 
 # Fields
 
-## int BulletList
+## BulletList
+
+**int**  
 
 Previous text:  
 * Header Term: Header Description  
@@ -29,7 +31,9 @@ Previous text:
 * Description B  
 * Description C  
 
-## int BulletListInNumberItem
+## BulletListInNumberItem
+
+**int**  
 
 Previous text:  
     
@@ -38,7 +42,9 @@ Previous text:
 3.   
 4. Term C: Description C  
 
-## int BulletListInNumberList
+## BulletListInNumberList
+
+**int**  
 
 Previous text:  
 1. Header Term: Header Description  
@@ -47,14 +53,18 @@ Previous text:
 4.   
 5. Term C: Description C  
 
-## int InlineTagsInList
+## InlineTagsInList
+
+**int**  
 
 Previous text:  
 1. Riccasus  
 2. Lorem [ClassSeeAlso](Test.ClassSeeAlso.md)  
 3. Finitini [ClassSeeAlso.MethodWithParameters(int, int)](Test.ClassSeeAlso.md)  
 
-## int NumberList
+## NumberList
+
+**int**  
 
 Previous text:  
 1. Header Term: Header Description  
@@ -77,7 +87,9 @@ Previous text:
 2. Description B  
 3. Description C  
 
-## int NumberListInBulletItem
+## NumberListInBulletItem
+
+**int**  
 
 Previous text:  
     
@@ -86,7 +98,9 @@ Previous text:
 *   
 * Term C: Description C  
 
-## int NumberListInBulletList
+## NumberListInBulletList
+
+**int**  
 
 Previous text:  
 * Header Term: Header Description  
@@ -95,7 +109,9 @@ Previous text:
 *   
 * Term C: Description C  
 
-## int Table
+## Table
+
+**int**  
 
 Previous text:  
   

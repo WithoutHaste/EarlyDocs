@@ -95,26 +95,7 @@ namespace EarlyDocs
 			if(parent.Category == TypeCategory.Enum)
 				return field.ConstantValue.ToString() + ": " + field.Name.LocalName;
 
-			string header = field.TypeName.ToDisplayStringLink(parent.Name) + " " + field.Name.LocalName;
-
-			switch(field.Category)
-			{
-				case FieldCategory.Constant: header = "const " + header; break;
-				case FieldCategory.ReadOnly: header = "readonly " + header; break;
-			}
-
-			switch(field.AccessModifier)
-			{
-				case AccessModifier.Protected: header = "protected " + header; break;
-				case AccessModifier.Internal: header = "internal " + header; break;
-				case AccessModifier.InternalProtected: header = "internal protected " + header; break;
-				case AccessModifier.Private: header = "private " + header; break;
-			}
-
-			if(field.IsStatic && field.Category != FieldCategory.Constant)
-				header = "static " + header;
-
-			return header;
+			return field.Name.LocalName;
 		}
 
 		internal static string ToHeader(this DotNetProperty property, DotNetType parent)
@@ -122,73 +103,15 @@ namespace EarlyDocs
 			if(property is DotNetIndexer)
 				return ToHeader(property as DotNetIndexer, parent);
 
-			string header = property.TypeName.ToDisplayStringLink(parent.Name) + " " + property.Name.LocalName;
-
 			if(property.Name.ExplicitInterface != null)
-				header = property.TypeName.ToDisplayStringLink(parent.Name) + " " + property.Name.ExplicitInterface.ToDisplayStringLink(parent.Name) + "." + property.Name.LocalName;
+				return property.Name.ExplicitInterface.ToDisplayStringLink(parent.Name) + "." + property.Name.LocalName;
 
-			if(property.Category == FieldCategory.Abstract)
-				header = "abstract " + header;
-
-			header += " { ";
-			if(property.HasGetterMethod)
-			{
-				switch(property.GetterMethod.AccessModifier)
-				{
-					case AccessModifier.Public: header += "get; "; break;
-					case AccessModifier.Protected: header += "protected get; "; break;
-					case AccessModifier.Internal: header += "internal get; "; break;
-					case AccessModifier.InternalProtected: header += "internal protected get; "; break;
-					case AccessModifier.Private: header += "private get; "; break;
-				}
-			}
-			if(property.HasSetterMethod)
-			{
-				switch(property.SetterMethod.AccessModifier)
-				{
-					case AccessModifier.Public: header += "set; "; break;
-					case AccessModifier.Protected: header += "protected set; "; break;
-					case AccessModifier.Internal: header += "internal set; "; break;
-					case AccessModifier.InternalProtected: header += "internal protected set; "; break;
-					case AccessModifier.Private: header += "private set; "; break;
-				}
-			}
-			header += "}";
-
-			return header;
+			return property.Name.LocalName;
 		}
 
 		internal static string ToHeader(this DotNetIndexer indexer, DotNetType parent)
 		{
-			string header = indexer.TypeName.ToDisplayStringLink(parent.Name) + " this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink(parent.Name) + " " + p.Name).ToArray()) + "]";
-
-			//todo: duplicated from Property.ToHeader()
-			header += " { ";
-			if(indexer.HasGetterMethod)
-			{
-				switch(indexer.GetterMethod.AccessModifier)
-				{
-					case AccessModifier.Public: header += "get; "; break;
-					case AccessModifier.Protected: header += "protected get; "; break;
-					case AccessModifier.Internal: header += "internal get; "; break;
-					case AccessModifier.InternalProtected: header += "internal protected get; "; break;
-					case AccessModifier.Private: header += "private get; "; break;
-				}
-			}
-			if(indexer.HasSetterMethod)
-			{
-				switch(indexer.SetterMethod.AccessModifier)
-				{
-					case AccessModifier.Public: header += "set; "; break;
-					case AccessModifier.Protected: header += "protected set; "; break;
-					case AccessModifier.Internal: header += "internal set; "; break;
-					case AccessModifier.InternalProtected: header += "internal protected set; "; break;
-					case AccessModifier.Private: header += "private set; "; break;
-				}
-			}
-			header += "}";
-
-			return header;
+			return "this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink(parent.Name) + " " + p.Name).ToArray()) + "]";
 		}
 
 		internal static string ToHeader(this DotNetParameter parameter, DotNetQualifiedName _namespace = null)
@@ -598,6 +521,10 @@ namespace EarlyDocs
 		{
 			MarkdownSection memberSection = new MarkdownSection(field.ToHeader(parent));
 
+			if(parent.Category != TypeCategory.Enum)
+			{
+				AddPreSummary(memberSection, field, parent);
+			}
 			AddSummary(memberSection, field as DotNetMember);
 			AddValue(memberSection, field as DotNetMember);
 			AddRemarks(memberSection, field as DotNetMember);
@@ -686,7 +613,7 @@ namespace EarlyDocs
 			return enumSection;
 		}
 
-		private static void AddPreSummary(MarkdownSection parent, DotNetType type)
+		private static void AddPreSummary(MarkdownSection section, DotNetType type)
 		{
 			MarkdownParagraph paragraph = new MarkdownParagraph();
 
@@ -725,7 +652,81 @@ namespace EarlyDocs
 			}
 
 			if(!paragraph.IsEmpty)
-				parent.Add(paragraph);
+				section.Add(paragraph);
+		}
+
+		private static void AddPreSummary(MarkdownSection section, DotNetField field, DotNetType parent)
+		{
+			if(field is DotNetProperty)
+			{
+				AddPreSummary(section, field as DotNetProperty, parent);
+				return;
+			}
+
+			string preSummary = "";
+
+			switch(field.AccessModifier)
+			{
+				case AccessModifier.Protected: preSummary += "protected "; break;
+				case AccessModifier.Internal: preSummary += "internal "; break;
+				case AccessModifier.InternalProtected: preSummary += "internal protected "; break;
+				case AccessModifier.Private: preSummary += "private "; break;
+			}
+
+			switch(field.Category)
+			{
+				case FieldCategory.Constant: preSummary += "const "; break;
+				case FieldCategory.ReadOnly: preSummary += "readonly "; break;
+			}
+
+			if(field.IsStatic && field.Category != FieldCategory.Constant)
+			{
+				preSummary += "static ";
+			}
+
+			preSummary += field.TypeName.ToDisplayStringLink(parent.Name);
+
+			MarkdownParagraph paragraph = new MarkdownParagraph(MarkdownText.Bold(preSummary));
+			section.Add(paragraph);
+		}
+
+		private static void AddPreSummary(MarkdownSection section, DotNetProperty property, DotNetType parent)
+		{
+			//same for DotNetProperty and DotNetIndexer
+			string preSummary = "";
+
+			if(property.Category == FieldCategory.Abstract)
+				preSummary += "abstract ";
+
+			preSummary += property.TypeName.ToDisplayStringLink(parent.Name);
+
+			preSummary += " { ";
+			if(property.HasGetterMethod)
+			{
+				switch(property.GetterMethod.AccessModifier)
+				{
+					case AccessModifier.Public: preSummary += "public get; "; break;
+					case AccessModifier.Protected: preSummary += "protected get; "; break;
+					case AccessModifier.Internal: preSummary += "internal get; "; break;
+					case AccessModifier.InternalProtected: preSummary += "internal protected get; "; break;
+					case AccessModifier.Private: preSummary += "private get; "; break;
+				}
+			}
+			if(property.HasSetterMethod)
+			{
+				switch(property.SetterMethod.AccessModifier)
+				{
+					case AccessModifier.Public: preSummary += "public set; "; break;
+					case AccessModifier.Protected: preSummary += "protected set; "; break;
+					case AccessModifier.Internal: preSummary += "internal set; "; break;
+					case AccessModifier.InternalProtected: preSummary += "internal protected set; "; break;
+					case AccessModifier.Private: preSummary += "private set; "; break;
+				}
+			}
+			preSummary += "}";
+
+			MarkdownParagraph paragraph = new MarkdownParagraph(MarkdownText.Bold(preSummary));
+			section.Add(paragraph);
 		}
 
 		private static MarkdownSection MethodsToMarkdown(string header, List<DotNetMethod> methods)

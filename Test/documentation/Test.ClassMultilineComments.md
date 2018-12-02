@@ -6,7 +6,9 @@ Tests different ways to format multiline comments.
 
 # Fields
 
-## int FieldA
+## FieldA
+
+**int**  
 
 [Summary Tag] [Multiline with Endline]  
 Etiam enim odio, imperdiet finibus fringilla   
@@ -18,7 +20,9 @@ purus. Phasellus elit nisl, posuere eu ullamcorper
 a, vestibulum a odio. Nulla id odio egestas,   
 volutpat ligula ut, laoreet sem.  
 
-## int FieldB
+## FieldB
+
+**int**  
 
 [Summary Tag] [Multiline with Paragraphs]  
 

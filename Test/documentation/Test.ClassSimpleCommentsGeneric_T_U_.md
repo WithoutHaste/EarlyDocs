@@ -33,7 +33,9 @@
 
 # Fields
 
-## T TField
+## TField
+
+**T**  
 
 [Summary Tag] [Short] [One Line] Sed feugiat, velit vel convallis accumsan, magna dui ultrices lorem, nec sollicitudin lorem nisl sit amet justo.  
 
@@ -54,7 +56,9 @@
 
 # Properties
 
-## T this[int key] { get; set; }
+## this[int key]
+
+**T { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Nulla non metus at dui condimentum semper.  
 
@@ -73,7 +77,9 @@
 **Permission: current member**  
 [Permission Tag] [References Indexer Property] [Short] [One Line] Sed in sapien pretium, eleifend metus eu, posuere leo.  
 
-## U UProperty { get; set; }
+## UProperty
+
+**U { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Phasellus tellus orci, maximus sed suscipit eu, sollicitudin ut ipsum.  
 

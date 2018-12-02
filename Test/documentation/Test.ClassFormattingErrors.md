@@ -6,12 +6,16 @@ Tests formatting errors in xml comments.
 
 # Fields
 
-## int CrefMissing
+## CrefMissing
+
+**int**  
 
 **Misc:**  
   
 
-## int NameMissing
+## NameMissing
+
+**int**  
 
 **Misc:**  
 __  

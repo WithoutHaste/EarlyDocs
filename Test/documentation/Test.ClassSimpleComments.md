@@ -38,7 +38,9 @@
 
 # Fields
 
-## int IntegerField
+## IntegerField
+
+**int**  
 
 [Summary Tag] [Short] [One Line] Nam ut feugiat urna, eu varius arcu.  
 
@@ -59,7 +61,9 @@
 
 # Properties
 
-## string this[int key] { get; set; }
+## this[int key]
+
+**string { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Integer condimentum gravida ante at blandit.  
 
@@ -84,7 +88,9 @@
 **Parameters:**  
 * **int key**: [Param Tag] Toroldi vissi.  
 
-## int IntegerProperty { get; set; }
+## IntegerProperty
+
+**int { public get; public set; }**  
 
 [Summary Tag] [Short] [One Line] Aliquam quis dignissim mi.  
 

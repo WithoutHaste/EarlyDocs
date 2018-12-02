@@ -6,17 +6,29 @@ Tests the automatic internal links between types in this library.
 
 # Fields
 
-## [ClassSimpleComments](Test.ClassSimpleComments.md) FieldType
+## FieldType
 
-## [ClassSimpleComments[]](Test.ClassSimpleComments.md) FieldTypeArray
+**[ClassSimpleComments](Test.ClassSimpleComments.md)**  
 
-## [List&lt;ClassSimpleComments&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) FieldTypeList
+## FieldTypeArray
+
+**[ClassSimpleComments[]](Test.ClassSimpleComments.md)**  
+
+## FieldTypeList
+
+**[List&lt;ClassSimpleComments&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)**  
 
 # Properties
 
-## [ClassSimpleComments](Test.ClassSimpleComments.md) PropertyType { get; set; }
+## PropertyType
 
-## [ClassSimpleComments[]](Test.ClassSimpleComments.md) PropertyTypeArray { get; set; }
+**[ClassSimpleComments](Test.ClassSimpleComments.md) { public get; public set; }**  
 
-## [List&lt;ClassSimpleComments&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) PropertyTypeList { get; set; }
+## PropertyTypeArray
+
+**[ClassSimpleComments[]](Test.ClassSimpleComments.md) { public get; public set; }**  
+
+## PropertyTypeList
+
+**[List&lt;ClassSimpleComments&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) { public get; public set; }**  
 

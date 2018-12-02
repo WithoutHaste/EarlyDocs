@@ -7,45 +7,85 @@ Also common data types that have long fully-qualified names.
 
 # Fields
 
-## [Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) FieldAction
+## FieldAction
 
-## bool FieldBoolean
+**[Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1)**  
 
-## byte FieldByte
+## FieldBoolean
 
-## char FieldChar
+**bool**  
 
-## decimal FieldDecimal
+## FieldByte
 
-## [Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) FieldDictionary
+**byte**  
 
-## double FieldDouble
+## FieldChar
 
-## [Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception) FieldException
+**char**  
 
-## float FieldFloat
+## FieldDecimal
 
-## [Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) FieldFunc
+**decimal**  
 
-## int FieldInt
+## FieldDictionary
 
-## [List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) FieldList
+**[Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)**  
 
-## long FieldLong
+## FieldDouble
 
-## object FieldObject
+**double**  
 
-## sbyte FieldSByte
+## FieldException
 
-## short FieldShort
+**[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**  
 
-## string FieldString
+## FieldFloat
 
-## uint FieldUInt
+**float**  
 
-## ulong FieldULong
+## FieldFunc
 
-## ushort FieldUShort
+**[Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2)**  
+
+## FieldInt
+
+**int**  
+
+## FieldList
+
+**[List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)**  
+
+## FieldLong
+
+**long**  
+
+## FieldObject
+
+**object**  
+
+## FieldSByte
+
+**sbyte**  
+
+## FieldShort
+
+**short**  
+
+## FieldString
+
+**string**  
+
+## FieldUInt
+
+**uint**  
+
+## FieldULong
+
+**ulong**  
+
+## FieldUShort
+
+**ushort**  
 
 # Methods
 

@@ -6,7 +6,9 @@ Enable tests inheriting from multiple interfaces.
 
 # Properties
 
-## abstract int PropertyB { get; set; }
+## PropertyB
+
+**abstract int { public get; public set; }**  
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 

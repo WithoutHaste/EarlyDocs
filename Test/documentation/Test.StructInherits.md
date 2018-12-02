@@ -7,11 +7,15 @@ Tests struct inheritance.
 
 # Properties
 
-## int PropertyA { get; set; }
+## PropertyA
+
+**int { public get; public set; }**  
 
 [Summary Tag] [Does Not Inherit]  
 
-## int PropertyB { get; set; }
+## PropertyB
+
+**int { public get; public set; }**  
 
 SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
 
