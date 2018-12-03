@@ -134,7 +134,11 @@ namespace EarlyDocs
 			{
 				return ToHeader(method as DotNetDelegate);
 			}
+			return ToBasicMethodHeader(method);
+		}
 
+		internal static string ToBasicMethodHeader(this DotNetMethod method)
+		{
 			string header = method.Name.LocalName;
 			if(method is DotNetMethodConstructor)
 			{
@@ -742,7 +746,7 @@ namespace EarlyDocs
 
 			if(method is DotNetDelegate)
 			{
-				preSummary += (method as DotNetMethod).ToHeader();
+				preSummary += method.ToBasicMethodHeader();
 			}
 
 			if(!String.IsNullOrEmpty(preSummary))
