@@ -38,68 +38,6 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">98</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">in DataFiles
-any namespace that requires a third-party library that the others do not
-must be separated into its own solution so it can have its own nuget package
-- will need to add these as dependency in EarlyDocs nuspec</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-27T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">85</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">remove dependency on Libraries</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Major</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">81</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">should each library have its own NuGet package?
-should the WithoutHaste.Libraries functionality be copied among the others so they don't all have that one extra dependency being dragged around?
----
-Libraries project has two functions: check a filename has the right extension, and return the version number of this assembly.
-The first is not very reusable.
-The second is made obsolete by putting each library into a NuGet package, which requires version information.
----
-So yeah, let's remove all dependencies to WithoutHaste.Libraries.
-And put each library into its own NuGet package.</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">46</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -523,6 +461,54 @@ a lot of that code duplication can be removed</Data>
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">81</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">should each library have its own NuGet package?
+should the WithoutHaste.Libraries functionality be copied among the others so they don't all have that one extra dependency being dragged around?
+---
+Libraries project has two functions: check a filename has the right extension, and return the version number of this assembly.
+The first is not very reusable.
+The second is made obsolete by putting each library into a NuGet package, which requires version information.
+---
+So yeah, let's remove all dependencies to WithoutHaste.Libraries.
+And put each library into its own NuGet package.</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-12-03T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">85</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">remove dependency on Libraries</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-12-03T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
