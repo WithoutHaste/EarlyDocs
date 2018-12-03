@@ -38,26 +38,6 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">108</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">try a change in layout
-- show member name first
-- list type and modifiers on first line after that, in normal sized text
-- for Methods, Fields, Properties, Events</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Minor</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-12-02T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
           <Data ss:Type="Number">98</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -389,6 +369,24 @@ about this custom functionality</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">109</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">v2: change "String[]" to "string[]" and don't link it
+- same for all basic aliases types</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-12-02T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">89</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -525,6 +523,29 @@ a lot of that code duplication can be removed</Data>
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">108</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">try a change in layout
+- show member name first
+- list type and modifiers on first line after that, in normal sized text
+- for Methods, Fields, Properties, Events</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-12-02T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-12-02T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -2039,7 +2060,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">108</Data>
+          <Data ss:Type="Number">109</Data>
         </Cell>
       </Row>
       <Row>
