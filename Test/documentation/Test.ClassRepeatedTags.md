@@ -91,7 +91,9 @@ vehicula facilisis ipsum, vel faucibus justo.
 
 # Methods
 
-## void MethodMultipleExceptions()
+## MethodMultipleExceptions()
+
+**void**  
 
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [1st Exception Tag] Nullam feugiat odio felis.  
@@ -100,7 +102,9 @@ vehicula facilisis ipsum, vel faucibus justo.
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [4th Exception Tag] Sed et mauris ut purus bibendum congue eu a quam.  
 * **[ClassException](Test.ClassException.md)**: [5th Exception Tag] Nullam fermentum libero placerat lacus tempor consequat.  
 
-## void MethodMultipleParams(int a, string b, int c, float d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, bool f)
+## MethodMultipleParams(int a, string b, int c, float d, [List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e, bool f)
+
+**void**  
 
 **Parameters:**  
 * **int a**: [1st Param Tag] Maecenas volutpat elit ut congue vulputate.  
@@ -110,7 +114,9 @@ vehicula facilisis ipsum, vel faucibus justo.
 * **[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
 * **bool f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
-## void MethodMultipleTypeParams<A,B,C,D,E,F>()
+## MethodMultipleTypeParams<A,B,C,D,E,F>()
+
+**void**  
 
 **Generic Type Parameters:**  
 
@@ -121,7 +127,9 @@ vehicula facilisis ipsum, vel faucibus justo.
 * **E**: [5th TypeParam Tag] Aliquam erat volutpat.  
 * **F**: [4th TypeParam Tag] Pellentesque ultricies porta nunc a tempus.  
 
-## void MethodRepeatedOnceOnlyTags()
+## MethodRepeatedOnceOnlyTags()
+
+**void**  
 
 [1st Summary Tag] Curabitur consequat nec risus vitae convallis.  
 

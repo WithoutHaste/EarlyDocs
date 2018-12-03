@@ -21,11 +21,15 @@ SimpleComments: Enable test inheriting from multiple interfaces with the same me
 
 # Methods
 
-## void MethodA()
+## MethodA()
+
+**void**  
 
 [Summary Tag] [Does Not Inherit]  
 
-## void MethodB()
+## MethodB()
+
+**void**  
 
 SimpleComments: Enable test inheriting from multiple interfaces with the same member names.  
 

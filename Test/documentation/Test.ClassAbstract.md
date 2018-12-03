@@ -121,7 +121,9 @@ Tests abstract classes and members.
 
 # Methods
 
-## abstract double MethodAbstract()
+## MethodAbstract()
+
+**abstract double**  
 
 [Summary Tag] [Short] [One Line] Donec facilisis, nibh eu faucibus rhoncus, diam ipsum scelerisque magna, imperdiet aliquet mi erat ut libero.  
 
@@ -143,7 +145,9 @@ Tests abstract classes and members.
 **Exceptions:**  
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [Exception Tag] [Short] [One Line] Cras sed diam ipsum.  
 
-## double MethodNotAbstract()
+## MethodNotAbstract()
+
+**double**  
 
 [Summary Tag] [Short] [One Line] Suspendisse luctus scelerisque ipsum vitae cursus.  
 
@@ -165,7 +169,9 @@ Tests abstract classes and members.
 **Exceptions:**  
 * **[System.IO.FileNotFoundException](https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception)**: [Exception Tag] [Short] [One Line] Donec elit turpis, semper faucibus ligula et, ullamcorper lacinia odio.  
 
-## protected void MethodProtected()
+## MethodProtected()
+
+**protected void**  
 
 Protected method in abstract class.  
 

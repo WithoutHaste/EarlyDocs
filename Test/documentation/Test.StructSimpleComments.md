@@ -70,7 +70,9 @@
 
 # Constructors
 
-## static StructSimpleComments()
+## StructSimpleComments()
+
+**static**  
 
 [Summary Tag] [Short] [One Line] Pellentesque quis ex eu odio pretium vehicula.  
 
@@ -110,7 +112,9 @@
 
 # Methods
 
-## float MethodWithParametersWithReturn(int a, string b)
+## MethodWithParametersWithReturn(int a, string b)
+
+**float**  
 
 [Summary Tag] [Short] [One Line] Donec sollicitudin sem et nisi laoreet, et gravida nulla scelerisque.  
 
@@ -138,7 +142,9 @@
 
 # Static Methods
 
-## static double StaticMethodWithParametersWithReturn(int a, string b)
+## StaticMethodWithParametersWithReturn(int a, string b)
+
+**static double**  
 
 [Summary Tag] [Short] [One Line] Sed quis iaculis turpis.  
 

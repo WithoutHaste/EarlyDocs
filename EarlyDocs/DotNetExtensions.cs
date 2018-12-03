@@ -130,32 +130,26 @@ namespace EarlyDocs
 			{
 				return ToHeader(method as DotNetMethodOperator);
 			}
+			if(method is DotNetDelegate)
+			{
+				return ToHeader(method as DotNetDelegate);
+			}
 
-			string header = method.MethodName.ReturnTypeName.ToDisplayStringLink(method.Name.FullNamespace) + " " + method.Name.LocalName;
+			string header = method.Name.LocalName;
 			if(method is DotNetMethodConstructor)
 			{
 				header = method.Name.FullNamespace.LocalName;
 			}
-			else if(method.Name.ExplicitInterface != null)
+
+			if(method.Name.ExplicitInterface != null)
 			{
-				header = method.MethodName.ReturnTypeName.ToDisplayString(method.Name.FullNamespace) + " " + method.Name.ExplicitInterface.ToDisplayStringLink() + "." + method.Name.LocalName;
+				header = method.Name.ExplicitInterface.ToDisplayStringLink() + "." + header;
 			}
 
 			if(method.MethodName.Parameters == null || method.MethodName.Parameters.Count == 0)
 				header += "()";
 			else
 				header += String.Format("({0})", String.Join(", ", method.MethodName.Parameters.Select(p => p.ToDisplayString(method.Name)).ToArray()));
-
-			if(method.Category == MethodCategory.Virtual)
-				header = "virtual " + header;
-			if(method.Category == MethodCategory.Static || method.Category == MethodCategory.Extension)
-				header = "static " + header;
-			if(method.Category == MethodCategory.Protected)
-				header = "protected " + header;
-			if(method.Category == MethodCategory.Abstract)
-				header = "abstract " + header;
-			if(method.Category == MethodCategory.Delegate)
-				header = "delegate " + header;
 
 			return header;
 		}
@@ -186,6 +180,14 @@ namespace EarlyDocs
 				return String.Format("{0} = {1}({2})", returnType, UnaryOperators[key], parameterA);
 			}
 			return "unknown operator";
+		}
+
+		internal static string ToHeader(this DotNetDelegate method)
+		{
+			if(InternalFullNames.Contains(method.Name.FullNamespace.FullName))
+				return String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, method.Name.FullNamespace + Ext.MD, method.Name.LocalName);
+			else
+				return String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(method.Name.FullNamespace), method.Name.LocalName);
 		}
 
 		internal static string ToDisplayString(this DotNetParameter parameter, DotNetQualifiedName _namespace = null)
@@ -523,7 +525,7 @@ namespace EarlyDocs
 
 			if(parent.Category != TypeCategory.Enum)
 			{
-				AddPreSummary(memberSection, field, parent);
+				AddPreSummary(memberSection, field);
 			}
 			AddSummary(memberSection, field as DotNetMember);
 			AddValue(memberSection, field as DotNetMember);
@@ -542,27 +544,9 @@ namespace EarlyDocs
 
 		internal static MarkdownSection ToMarkdownSection(this DotNetMethod method)
 		{
-			string header = method.ToHeader();
-			string fullHeader = header;
-			if(method is DotNetDelegate)
-			{
-				if(InternalFullNames.Contains(method.Name.FullNamespace.FullName))
-				{
-					header = String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, method.Name.FullNamespace + Ext.MD, method.Name.LocalName);
-				}
-				else
-				{
-					header = String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(method.Name.FullNamespace), method.Name.LocalName);
-				}
-			}
+			MarkdownSection memberSection = new MarkdownSection(method.ToHeader());
 
-			MarkdownSection memberSection = new MarkdownSection(header);
-
-			if(method is DotNetDelegate)
-			{
-				memberSection.AddInParagraph(MarkdownText.Bold(fullHeader));
-			}
-
+			AddPreSummary(memberSection, method);
 			AddSummary(memberSection, method as DotNetMember);
 			AddRemarks(memberSection, method as DotNetMember);
 			AddFloatingComments(memberSection, method as DotNetMember);
@@ -655,11 +639,11 @@ namespace EarlyDocs
 				section.Add(paragraph);
 		}
 
-		private static void AddPreSummary(MarkdownSection section, DotNetField field, DotNetType parent)
+		private static void AddPreSummary(MarkdownSection section, DotNetField field)
 		{
 			if(field is DotNetProperty)
 			{
-				AddPreSummary(section, field as DotNetProperty, parent);
+				AddPreSummary(section, field as DotNetProperty);
 				return;
 			}
 
@@ -684,13 +668,16 @@ namespace EarlyDocs
 				preSummary += "static ";
 			}
 
-			preSummary += field.TypeName.ToDisplayStringLink(parent.Name);
+			preSummary += field.TypeName.ToDisplayStringLink(field.Name.FullNamespace);
 
-			MarkdownParagraph paragraph = new MarkdownParagraph(MarkdownText.Bold(preSummary));
-			section.Add(paragraph);
+			if(!String.IsNullOrEmpty(preSummary))
+			{
+				MarkdownParagraph paragraph = new MarkdownParagraph(MarkdownText.Bold(preSummary));
+				section.Add(paragraph);
+			}
 		}
 
-		private static void AddPreSummary(MarkdownSection section, DotNetProperty property, DotNetType parent)
+		private static void AddPreSummary(MarkdownSection section, DotNetProperty property)
 		{
 			//same for DotNetProperty and DotNetIndexer
 			string preSummary = "";
@@ -698,7 +685,7 @@ namespace EarlyDocs
 			if(property.Category == FieldCategory.Abstract)
 				preSummary += "abstract ";
 
-			preSummary += property.TypeName.ToDisplayStringLink(parent.Name);
+			preSummary += property.TypeName.ToDisplayStringLink(property.Name.FullNamespace);
 
 			preSummary += " { ";
 			if(property.HasGetterMethod)
@@ -725,8 +712,44 @@ namespace EarlyDocs
 			}
 			preSummary += "}";
 
-			MarkdownParagraph paragraph = new MarkdownParagraph(MarkdownText.Bold(preSummary));
-			section.Add(paragraph);
+			if(!String.IsNullOrEmpty(preSummary))
+			{
+				MarkdownParagraph paragraph = new MarkdownParagraph(MarkdownText.Bold(preSummary));
+				section.Add(paragraph);
+			}
+		}
+
+		private static void AddPreSummary(MarkdownSection section, DotNetMethod method)
+		{
+			if(method is DotNetMethodOperator)
+			{
+				return;
+			}
+
+			string preSummary = "";
+
+			switch(method.Category)
+			{
+				case MethodCategory.Abstract: preSummary += "abstract "; break;
+				case MethodCategory.Delegate: preSummary += "delegate "; break;
+				case MethodCategory.Extension: preSummary += "static "; break;
+				case MethodCategory.Protected: preSummary += "protected "; break;
+				case MethodCategory.Static: preSummary += "static "; break;
+				case MethodCategory.Virtual: preSummary += "virtual "; break;
+			}
+
+			preSummary += method.MethodName.ReturnTypeName.ToDisplayStringLink(method.Name.FullNamespace);
+
+			if(method is DotNetDelegate)
+			{
+				preSummary += (method as DotNetMethod).ToHeader();
+			}
+
+			if(!String.IsNullOrEmpty(preSummary))
+			{
+				MarkdownParagraph paragraph = new MarkdownParagraph(MarkdownText.Bold(preSummary));
+				section.Add(paragraph);
+			}
 		}
 
 		private static MarkdownSection MethodsToMarkdown(string header, List<DotNetMethod> methods)

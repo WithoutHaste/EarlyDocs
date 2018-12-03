@@ -7,11 +7,15 @@ Tests static class.
 
 # Static Methods
 
-## static string MethodA()
+## MethodA()
+
+**static string**  
 
 Test return types on static methods.  
 
-## static void MethodExtension(this string a, string b)
+## MethodExtension(this string a, string b)
+
+**static void**  
 
 Test extension method parameters.  
 

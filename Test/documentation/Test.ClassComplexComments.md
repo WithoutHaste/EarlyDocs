@@ -85,7 +85,9 @@ for (int i = 0; i < lines.Length; i++)
 
 # Methods
 
-## void MethodComplexExceptions<A>(string x,  y, int z)
+## MethodComplexExceptions<A>(string x,  y, int z)
+
+**void**  
 
 ### Exceptions
 
@@ -117,7 +119,9 @@ _A_
 
  luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.  
 
-## void MethodComplexParamsAndTypeParams<A>(string x,  y, int z)
+## MethodComplexParamsAndTypeParams<A>(string x,  y, int z)
+
+**void**  
 
 ### Generic Type Parameters
 

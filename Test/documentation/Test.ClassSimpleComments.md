@@ -111,7 +111,9 @@
 
 # Constructors
 
-## static ClassSimpleComments()
+## ClassSimpleComments()
+
+**static**  
 
 [Summary Tag] [Short] [One Line] Fusce ac lorem nisi.  
 
@@ -174,7 +176,9 @@
 
 # Destructor
 
-## virtual void Finalize()
+## Finalize()
+
+**virtual void**  
 
 [Summary Tag] [Short] [One Line] Aenean quam urna, pharetra vel malesuada ut, gravida ac libero.  
 
@@ -195,7 +199,9 @@
 
 # Methods
 
-## virtual int MethodVirtual()
+## MethodVirtual()
+
+**virtual int**  
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
 
@@ -214,7 +220,9 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Vestibulum turpis leo, gravida convallis dapibus at, feugiat ac est.  
 
-## void MethodWithoutParameters()
+## MethodWithoutParameters()
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Maecenas ante nibh, maximus vel laoreet eu, vulputate quis justo.  
 
@@ -235,7 +243,9 @@
 
 # Static Methods
 
-## static string StaticMethodWithParametersWithReturn(int a, string b)
+## StaticMethodWithParametersWithReturn(int a, string b)
+
+**static string**  
 
 [Summary Tag] [Short] [One Line] Vivamus et ex convallis, egestas justo ut, faucibus arcu.  
 

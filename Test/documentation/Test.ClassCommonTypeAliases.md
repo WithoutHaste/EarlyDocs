@@ -89,43 +89,83 @@ Also common data types that have long fully-qualified names.
 
 # Methods
 
-## void MethodAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) a)
+## MethodAction([Action&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.action-1) a)
 
-## void MethodBoolean(bool a)
+**void**  
 
-## void MethodByte(byte a)
+## MethodBoolean(bool a)
 
-## void MethodChar(char a)
+**void**  
 
-## void MethodDecimal(decimal a)
+## MethodByte(byte a)
 
-## void MethodDictionary([Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) a)
+**void**  
 
-## void MethodDouble(double a)
+## MethodChar(char a)
 
-## void MethodException([Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception) a)
+**void**  
 
-## void MethodFloat(float a)
+## MethodDecimal(decimal a)
 
-## void MethodFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) a)
+**void**  
 
-## void MethodInt(int a)
+## MethodDictionary([Dictionary&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2) a)
 
-## void MethodList([List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) a)
+**void**  
 
-## void MethodLong(long a)
+## MethodDouble(double a)
 
-## void MethodObject(object a)
+**void**  
 
-## void MethodSByte(sbyte a)
+## MethodException([Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception) a)
 
-## void MethodShort(short a)
+**void**  
 
-## void MethodString(string a)
+## MethodFloat(float a)
 
-## void MethodUInt(uint a)
+**void**  
 
-## void MethodULong(ulong a)
+## MethodFunc([Func&lt;int,string&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) a)
 
-## void MethodUShort(ushort a)
+**void**  
+
+## MethodInt(int a)
+
+**void**  
+
+## MethodList([List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) a)
+
+**void**  
+
+## MethodLong(long a)
+
+**void**  
+
+## MethodObject(object a)
+
+**void**  
+
+## MethodSByte(sbyte a)
+
+**void**  
+
+## MethodShort(short a)
+
+**void**  
+
+## MethodString(string a)
+
+**void**  
+
+## MethodUInt(uint a)
+
+**void**  
+
+## MethodULong(ulong a)
+
+**void**  
+
+## MethodUShort(ushort a)
+
+**void**  
 

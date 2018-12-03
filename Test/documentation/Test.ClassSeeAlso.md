@@ -42,5 +42,7 @@ MethodWithParameters(int, int) or Local method with parameters
 
 # Methods
 
-## string MethodWithParameters(int a, int b)
+## MethodWithParameters(int a, int b)
+
+**string**  
 

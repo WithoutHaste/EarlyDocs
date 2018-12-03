@@ -6,7 +6,9 @@ Tests overloaded methods.
 
 # Methods
 
-## void MethodDuplicateOneLevel()
+## MethodDuplicateOneLevel()
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 
@@ -27,7 +29,9 @@ Tests overloaded methods.
 
 **Parameters:**  
 
-## void MethodDuplicateThreeLevels()
+## MethodDuplicateThreeLevels()
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 
@@ -48,7 +52,9 @@ Tests overloaded methods.
 
 **Parameters:**  
 
-## void MethodDuplicateTwoLevels()
+## MethodDuplicateTwoLevels()
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 
@@ -69,7 +75,9 @@ Tests overloaded methods.
 
 **Parameters:**  
 
-## void MethodOverload(int a, int b)
+## MethodOverload(int a, int b)
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 
@@ -92,7 +100,9 @@ Tests overloaded methods.
 * **int a**: [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.  
 * **int b**: [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.  
 
-## void MethodOverload(double a, double b)
+## MethodOverload(double a, double b)
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 
@@ -115,7 +125,9 @@ Tests overloaded methods.
 * **double a**: [Parameter Tag] [Short] [One Line] Phasellus bibendum eros vel lectus tempor, sit amet vehicula tortor mattis.  
 * **double b**: [Parameter Tag] [Short] [One Line] Donec commodo vestibulum turpis, ac imperdiet mi vestibulum nec.  
 
-## void MethodOverload(float a, float b)
+## MethodOverload(float a, float b)
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Ut nec diam blandit, porttitor nisi ut, eleifend nulla.  
 

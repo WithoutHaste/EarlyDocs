@@ -43,7 +43,9 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 
 # Methods
 
-## void MethodA()
+## MethodA()
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Pellentesque eros est, aliquet non nulla et, porttitor pharetra ligula.  
 
@@ -62,16 +64,22 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 **Exceptions:**  
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Donec bibendum mauris finibus magna venenatis rutrum.  
 
-## void [Test.IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).MethodB()
+## [Test.IInterfaceSimpleComments](Test.IInterfaceSimpleComments.md).MethodB()
+
+**void**  
 
 **Permission: current member**  
 [Permission Tag] [Explcit Interface Implementation Method]  
 
-## void [Test.Filler.IInterfaceB](Test.Filler.IInterfaceB.md).MethodB()
+## [Test.Filler.IInterfaceB](Test.Filler.IInterfaceB.md).MethodB()
+
+**void**  
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 
-## virtual int MethodVirtual()
+## MethodVirtual()
+
+**virtual int**  
 
 [Summary Tag] [Short] [One Line] Nunc eu egestas neque, a rutrum nunc.  
 

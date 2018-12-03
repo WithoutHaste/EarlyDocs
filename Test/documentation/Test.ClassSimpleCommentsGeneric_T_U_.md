@@ -100,7 +100,9 @@
 
 # Constructors
 
-## static ClassSimpleCommentsGeneric<T,U>()
+## ClassSimpleCommentsGeneric<T,U>()
+
+**static**  
 
 [Summary Tag] [Short] [One Line] Donec sit amet erat ac diam fermentum porttitor vitae et diam.  
 
@@ -163,7 +165,9 @@
 
 # Destructor
 
-## virtual void Finalize()
+## Finalize()
+
+**virtual void**  
 
 [Summary Tag] [Short] [One Line] Quisque scelerisque elit a massa semper luctus.  
 
@@ -184,7 +188,9 @@
 
 # Methods
 
-## void MethodWithTypeParameters<A,B>( a,  b,  u)
+## MethodWithTypeParameters<A,B>( a,  b,  u)
+
+**void**  
 
 [Summary Tag] [Short] [One Line] Maecenas molestie purus id fermentum dictum.  
 
@@ -215,7 +221,9 @@
 
 # Static Methods
 
-## static U StaticMethodWithParametersWithReturn( t, string b)
+## StaticMethodWithParametersWithReturn( t, string b)
+
+**static U**  
 
 [Summary Tag] [Short] [One Line] Mauris malesuada varius risus eu condimentum.  
 

@@ -6,7 +6,9 @@ Tests method parameter options.
 
 # Methods
 
-## void MethodOptional(int a, string b, double c = 0, object d = null)
+## MethodOptional(int a, string b, double c = 0, object d = null)
+
+**void**  
 
 [Summary Tag] Flobotum ignus veritay.  
 
@@ -16,7 +18,9 @@ Tests method parameter options.
 * **double c**: [Param Tag] Cloisen iplorum diggitallus.  
 * **object d**: [Param Tag] Pinget ob flouritis regus ergo sum.  
 
-## void MethodOut(int a, out string b)
+## MethodOut(int a, out string b)
+
+**void**  
 
 [Summary Tag] Spirius livid fii.  
 
@@ -24,7 +28,9 @@ Tests method parameter options.
 * **int a**: [Param Tag] Findus luo.  
 * **string b**: [Param Tag] Placto vindicto.  
 
-## void MethodRef(int a, ref string b)
+## MethodRef(int a, ref string b)
+
+**void**  
 
 [Summary Tag] Dimmus rasa ad en.  
 

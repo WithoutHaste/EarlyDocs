@@ -14,7 +14,9 @@ B: Enable test inheriting from multiple interfaces with the same member names.
 
 # Methods
 
-## abstract void MethodB()
+## MethodB()
+
+**abstract void**  
 
 B: Enable test inheriting from multiple interfaces with the same member names.  
 
