@@ -742,12 +742,14 @@ namespace EarlyDocs
 				case MethodCategory.Virtual: preSummary += "virtual "; break;
 			}
 
-			preSummary += method.MethodName.ReturnTypeName.ToDisplayStringLink(method.Name.FullNamespace);
+			preSummary += method.MethodName.ReturnTypeName.ToDisplayStringLink(method.Name.FullNamespace) + " ";
 
 			if(method is DotNetDelegate)
 			{
 				preSummary += method.ToBasicMethodHeader();
 			}
+
+			preSummary = preSummary.Trim();
 
 			if(!String.IsNullOrEmpty(preSummary))
 			{
