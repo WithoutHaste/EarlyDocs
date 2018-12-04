@@ -109,6 +109,17 @@ Previous text:
 *   
 * Term C: Description C  
 
+## NumberListWithWhitespaceInItem
+
+**int**  
+
+Previous text:  
+    
+1. Header Term: Header Description  
+2. Term A: Description A  
+3. Term B: Description B  
+4. Term C: Description C  
+
 ## Table
 
 **int**  

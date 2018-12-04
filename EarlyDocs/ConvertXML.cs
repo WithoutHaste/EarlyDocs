@@ -263,7 +263,7 @@ namespace EarlyDocs
 			MarkdownSection section = parent.AddSection(header);
 			foreach(DotNetType type in types.OrderBy(t => t.Name.LocalName))
 			{
-				section.AddInLine(new MarkdownInlineLink(MarkdownText.Bold(type.Name.LocalName), type.Name.FullName + Ext.MD));
+				section.AddInLine(new MarkdownInlineLink(MarkdownText.Bold(type.Name.LocalName), FormatFilename(type.Name.FullName + Ext.MD)));
 				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(type.SummaryComments, type));
 				section.Add(new MarkdownLine());
 			}
@@ -276,7 +276,7 @@ namespace EarlyDocs
 			MarkdownSection section = parent.AddSection(header);
 			foreach(DotNetDelegate _delegate in _delegates.OrderBy(t => t.Name.LocalName))
 			{
-				section.AddInLine(new MarkdownInlineLink(MarkdownText.Bold(_delegate.Name.LocalName), _delegate.Name.FullName + Ext.MD));
+				section.AddInLine(new MarkdownInlineLink(MarkdownText.Bold(_delegate.Name.LocalName), FormatFilename(_delegate.Name.FullName + Ext.MD)));
 				section.Add(ConvertDotNet.DotNetCommentGroupToMarkdown(_delegate.SummaryComments, _delegate));
 				section.Add(new MarkdownLine());
 			}

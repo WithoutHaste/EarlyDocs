@@ -186,5 +186,28 @@ namespace Test
 		/// </list>
 		/// </summary>
 		public int InlineTagsInList = 0;
+
+		/// <summary>
+		///   Previous text:
+		///   <list type="number">
+		///     <listheader>
+		///			<term>Header Term</term>
+		///			<description>Header Description</description>
+		///		</listheader>
+		///     <item>
+		///			<term>Term A</term>
+		///			<description>Description A</description>
+		///		</item>
+		///     <item>
+		///			<term>Term B</term>
+		///			<description>Description B</description>
+		///		</item>
+		///     <item>
+		///			<term>Term C</term>
+		///			<description>Description C</description>
+		///		</item>
+		///   </list>
+		/// </summary>
+		public int NumberListWithWhitespaceInItem = 0;
 	}
 }
