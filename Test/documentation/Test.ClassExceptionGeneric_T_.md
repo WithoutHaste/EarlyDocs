@@ -9,9 +9,13 @@ Tests generic exceptions.
 
 ## Value
 
-**T { public get; protected set; }**  
+**Apple { public get; protected set; }**  
 
 # Constructors
 
-## ClassExceptionGeneric&lt;T&gt;( value)
+## ClassExceptionGeneric&lt;T&gt;()
+
+# Methods
+
+## MethodA()
 

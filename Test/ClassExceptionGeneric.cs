@@ -9,15 +9,21 @@ namespace Test
 	/// <summary>
 	/// Tests generic exceptions.
 	/// </summary>
-	public class ClassExceptionGeneric<T> : Exception
+	public class ClassExceptionGeneric<Apple> : Exception
 	{
 		/// <summary></summary>
-		public T Value { get; protected set; }
+		public Apple Value { get; protected set; }
 
 		/// <summary></summary>
-		public ClassExceptionGeneric(T value)
+		public ClassExceptionGeneric(Apple value)
 		{
 			Value = value;
+		}
+
+		/// <summary></summary>
+		public Apple MethodA(Apple value)
+		{
+			return default(Apple);
 		}
 	}
 }
