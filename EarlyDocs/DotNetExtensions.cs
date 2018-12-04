@@ -92,10 +92,14 @@ namespace EarlyDocs
 		{
 			if(field is DotNetProperty)
 				return ToHeader(field as DotNetProperty, parent);
-			if(parent.Category == TypeCategory.Enum)
-				return field.ConstantValue.ToString() + ": " + field.Name.LocalName;
 
-			return field.Name.LocalName;
+			string header = "";
+			if(parent.Category == TypeCategory.Enum)
+				header = field.ConstantValue.ToString() + ": " + field.Name.LocalName;
+			else
+				header = field.Name.LocalName;
+
+			return MarkdownText.EscapeControlCharacters(header);
 		}
 
 		internal static string ToHeader(this DotNetProperty property, DotNetType parent)
@@ -103,25 +107,30 @@ namespace EarlyDocs
 			if(property is DotNetIndexer)
 				return ToHeader(property as DotNetIndexer, parent);
 
+			string header = "";
 			if(property.Name.ExplicitInterface != null)
-				return property.Name.ExplicitInterface.ToDisplayStringLink(parent.Name) + "." + property.Name.LocalName;
+				header = property.Name.ExplicitInterface.ToDisplayStringLink(parent.Name) + "." + property.Name.LocalName;
+			else
+				header = property.Name.LocalName;
 
-			return property.Name.LocalName;
+			return MarkdownText.EscapeControlCharacters(header);
 		}
 
 		internal static string ToHeader(this DotNetIndexer indexer, DotNetType parent)
 		{
-			return "this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink(parent.Name) + " " + p.Name).ToArray()) + "]";
+			string header = "this[" + String.Join(",", indexer.Parameters.Select(p => p.TypeName.ToDisplayStringLink(parent.Name) + " " + p.Name).ToArray()) + "]";
+			return MarkdownText.EscapeControlCharacters(header);
 		}
 
 		internal static string ToHeader(this DotNetParameter parameter, DotNetQualifiedName _namespace = null)
 		{
-			return parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
+			string header = parameter.TypeName.ToDisplayStringLink(_namespace) + " " + parameter.Name;
+			return MarkdownText.EscapeControlCharacters(header);
 		}
 
 		internal static string ToHeader(this DotNetCommentParameter commentParameter)
 		{
-			return commentParameter.ParameterLink.Name;
+			return MarkdownText.EscapeControlCharacters(commentParameter.ParameterLink.Name);
 		}
 
 		internal static string ToHeader(this DotNetMethod method)
@@ -155,7 +164,7 @@ namespace EarlyDocs
 			else
 				header += String.Format("({0})", String.Join(", ", method.MethodName.Parameters.Select(p => p.ToDisplayString(method.Name)).ToArray()));
 
-			return header;
+			return MarkdownText.EscapeControlCharacters(header);
 		}
 
 		internal static string ToHeader(this DotNetMethodOperator method)
@@ -188,10 +197,12 @@ namespace EarlyDocs
 
 		internal static string ToHeader(this DotNetDelegate method)
 		{
+			string header = "";
 			if(InternalFullNames.Contains(method.Name.FullNamespace.FullName))
-				return String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, method.Name.FullNamespace + Ext.MD, method.Name.LocalName);
+				header = String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, method.Name.FullNamespace + Ext.MD, method.Name.LocalName);
 			else
-				return String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(method.Name.FullNamespace), method.Name.LocalName);
+				header = String.Format("[{0}]({1}).{2}", method.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(method.Name.FullNamespace), method.Name.LocalName);
+			return MarkdownText.EscapeControlCharacters(header);
 		}
 
 		internal static string ToDisplayString(this DotNetParameter parameter, DotNetQualifiedName _namespace = null)
@@ -239,9 +250,7 @@ namespace EarlyDocs
 				displayString = (name as DotNetQualifiedTypeName).GetLocalized(_namespace).FullName;
 			}
 
-			displayString = displayString.Replace("<", "&lt;").Replace(">", "&gt;"); //markdown understands html tags
-
-			return displayString;
+			return MarkdownText.EscapeControlCharacters(displayString);
 		}
 
 		internal static string ToDisplayString(this DotNetQualifiedMethodName name, DotNetQualifiedName _namespace = null)
@@ -255,9 +264,7 @@ namespace EarlyDocs
 			displayString = displayString.Replace("#cctor", name.FullNamespace.LocalName);
 			displayString = displayString.Replace("#ctor", name.FullNamespace.LocalName);
 
-			displayString = displayString.Replace("<", "&lt;").Replace(">", "&gt;"); //markdown understands html tags
-
-			return displayString;
+			return MarkdownText.EscapeControlCharacters(displayString);
 		}
 
 		internal static string ToDisplayStringLink(this DotNetQualifiedName name, DotNetQualifiedName _namespace = null)
@@ -387,6 +394,7 @@ namespace EarlyDocs
 			string header = String.Format("[{0}]({1}).{2}", type.Name.FullNamespace.FullName, ConvertXML.TableOfContentsFilename(type.Name.FullNamespace), type.Name.LocalName);
 			if(InternalFullNames.Contains(type.Name.FullNamespace.FullName))
 				header = String.Format("[{0}]({1}).{2}", type.Name.FullNamespace.FullName, type.Name.FullNamespace.FullName + Ext.MD, type.Name.LocalName);
+			header = MarkdownText.EscapeControlCharacters(header);
 
 			MarkdownSection typeSection = new MarkdownSection(header);
 

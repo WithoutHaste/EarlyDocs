@@ -1,4 +1,4 @@
-# [Test](TableOfContents.Test.md).ClassSimpleCommentsGeneric<T,U>
+# [Test](TableOfContents.Test.md).ClassSimpleCommentsGeneric&lt;T,U&gt;
 
 **Inheritance:** object  
 
@@ -100,7 +100,7 @@
 
 # Constructors
 
-## ClassSimpleCommentsGeneric<T,U>()
+## ClassSimpleCommentsGeneric&lt;T,U&gt;()
 
 **static**  
 
@@ -121,7 +121,7 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Nunc ornare dignissim erat, id malesuada urna elementum et.  
 
-## ClassSimpleCommentsGeneric<T,U>()
+## ClassSimpleCommentsGeneric&lt;T,U&gt;()
 
 [Summary Tag] [Short] [One Line] Cras a arcu sem.  
 
@@ -140,7 +140,7 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
 
-## ClassSimpleCommentsGeneric<T,U>( t,  u)
+## ClassSimpleCommentsGeneric&lt;T,U&gt;( t,  u)
 
 [Summary Tag] [Short] [One Line] Phasellus interdum purus interdum dolor lacinia mollis.  
 
@@ -188,7 +188,7 @@
 
 # Methods
 
-## MethodWithTypeParameters<A,B>( a,  b,  u)
+## MethodWithTypeParameters&lt;A,B&gt;( a,  b,  u)
 
 **void**  
 

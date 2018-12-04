@@ -114,7 +114,7 @@ vehicula facilisis ipsum, vel faucibus justo.
 * **[List&lt;List&lt;int&gt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) e**: [5th Param Tag] Nullam ultrices eleifend risus a condimentum.  
 * **bool f**: [4th Param Tag] Aliquam nisl leo, condimentum id aliquam in, pretium at dolor.  
 
-## MethodMultipleTypeParams<A,B,C,D,E,F>()
+## MethodMultipleTypeParams&lt;A,B,C,D,E,F&gt;()
 
 **void**  
 

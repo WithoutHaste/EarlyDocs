@@ -52,6 +52,7 @@
     <Compile Include="ClassComplexComments.cs" />
     <Compile Include="ClassEventsDelegates.cs" />
     <Compile Include="ClassException.cs" />
+    <Compile Include="ClassExceptionGeneric.cs" />
     <Compile Include="ClassFieldPropertyModifiers.cs" />
     <Compile Include="ClassFieldPropertyValue.cs" />
     <Compile Include="ClassFormattingErrors.cs" />

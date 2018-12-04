@@ -9,6 +9,7 @@
 [Test.ClassComplexComments](Test.ClassComplexComments.md)  
 [Test.ClassEventsDelegates](Test.ClassEventsDelegates.md)  
 [Test.ClassException](Test.ClassException.md)  
+[Test.ClassExceptionGeneric&lt;T&gt;](Test.ClassExceptionGeneric_T_.md)  
 [Test.ClassFieldPropertyModifiers](Test.ClassFieldPropertyModifiers.md)  
 [Test.ClassFieldPropertyValue](Test.ClassFieldPropertyValue.md)  
 [Test.ClassFormattingErrors](Test.ClassFormattingErrors.md)  
