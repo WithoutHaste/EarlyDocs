@@ -5,17 +5,14 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EarlyDocs")]
-[assembly: AssemblyDescription("Generate Markdown documentation files for .Net libraries.")]
+[assembly: AssemblyTitle("EarlyDocsTest")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Without Haste, LLC")]
-[assembly: AssemblyProduct("EarlyDocs")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("EarlyDocsTest")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
-// Set test project access
-[assembly:InternalsVisibleTo("EarlyDocsTest")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -23,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4e8ebcbb-ea3b-402e-8d39-ea4c38c30ad3")]
+[assembly: Guid("02dd3bcd-50ff-43dd-9196-ddff58371001")]
 
 // Version information for an assembly consists of the following four values:
 //

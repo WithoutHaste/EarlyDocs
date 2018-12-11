@@ -19,8 +19,7 @@ namespace EarlyDocs
 	{
 		internal ConvertXML(string dllFilename, string xmlDocumentationFilename, string outputDirectory, string[] includeDlls, bool emptyOutputDirectoryFirst)
 		{
-			DotNetDocumentationFile xmlDocumentation = new DotNetDocumentationFile(xmlDocumentationFilename);
-			xmlDocumentation.AddAssemblyInfo(dllFilename, includeDlls);
+			DotNetDocumentationFile xmlDocumentation = LoadXmlAndAssembly(dllFilename, xmlDocumentationFilename, includeDlls);
 			DotNetExtensions.TurnQualifiedNameConverterOn();
 
 			PrepareOutputDirectory(outputDirectory, emptyOutputDirectoryFirst);
@@ -32,7 +31,14 @@ namespace EarlyDocs
 			GenerateDelegatePages(xmlDocumentation.Delegates, outputDirectory);
 			GenerateTableOfContents(xmlDocumentation, outputDirectory);
 		}
-		
+
+		internal static DotNetDocumentationFile LoadXmlAndAssembly(string dllFilename, string xmlDocumentationFilename, string[] includeDlls)
+		{
+			DotNetDocumentationFile xmlDocumentation = new DotNetDocumentationFile(xmlDocumentationFilename);
+			xmlDocumentation.AddAssemblyInfo(dllFilename, includeDlls);
+			return xmlDocumentation;
+		}
+
 		private void PrepareOutputDirectory(string outputDirectory, bool emptyOutputDirectoryFirst)
 		{
 			if(!Directory.Exists(outputDirectory))
@@ -163,7 +169,7 @@ namespace EarlyDocs
 			List<DotNetQualifiedClassName> _namespaces = new List<DotNetQualifiedClassName>();
 			foreach(DotNetType type in xmlDocumentation.Types)
 			{
-				_namespaces.Add(type.TypeName.FullClassNamespace);
+				_namespaces.Add(type.ClassName.FullClassNamespace);
 			}
 			foreach(DotNetDelegate _delegate in xmlDocumentation.Delegates)
 			{

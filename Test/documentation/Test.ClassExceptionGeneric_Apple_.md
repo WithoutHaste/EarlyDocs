@@ -1,4 +1,4 @@
-# [Test](TableOfContents.Test.md).ClassExceptionGeneric&lt;T&gt;
+# [Test](TableOfContents.Test.md).ClassExceptionGeneric&lt;Apple&gt;
 
 **Inheritance:** object → [Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)  
 **Implements:** [System.Runtime.Serialization.ISerializable](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable), [System.Runtime.InteropServices._Exception](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices._exception)  
@@ -13,9 +13,11 @@ Tests generic exceptions.
 
 # Constructors
 
-## ClassExceptionGeneric&lt;T&gt;()
+## ClassExceptionGeneric&lt;Apple&gt;(Apple value)
 
 # Methods
 
-## MethodA()
+## MethodA(Apple value)
+
+**Apple**  
 

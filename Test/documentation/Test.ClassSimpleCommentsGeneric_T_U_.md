@@ -140,7 +140,7 @@
 **Exceptions:**  
 * **[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)**: [Exception Tag] [Short] [One Line] Proin vel libero aliquam, gravida nisl id, ornare urna.  
 
-## ClassSimpleCommentsGeneric&lt;T,U&gt;( t,  u)
+## ClassSimpleCommentsGeneric&lt;T,U&gt;(T t, U u)
 
 [Summary Tag] [Short] [One Line] Phasellus interdum purus interdum dolor lacinia mollis.  
 
@@ -160,8 +160,8 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Cras gravida vulputate augue quis blandit.  
 
 **Parameters:**  
-* **t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
-* **u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
+* **T t**: [Parameter Tag] [Short] [One Line] Morbi dui risus, fringilla vitae felis non, lobortis fringilla dolor.  
+* **U u**: [Parameter Tag] [Short] [One Line] Proin ac eros a eros pretium tristique.  
 
 # Destructor
 
@@ -188,7 +188,7 @@
 
 # Methods
 
-## MethodWithTypeParameters&lt;A,B&gt;( a,  b,  u)
+## MethodWithTypeParameters&lt;A,B&gt;(A a, B b, U u)
 
 **void**  
 
@@ -215,13 +215,13 @@
 * **B**: [Type Parameter Tag] [Short] [One Line] Nunc faucibus sed elit ut pellentesque.  
 
 **Parameters:**  
-* **a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
-* **b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
-* **u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
+* **A a**: [Parameter Tag] [Short] [One Line] Proin pulvinar mattis faucibus.  
+* **B b**: [Parameter Tag] [Short] [One Line] Integer congue sem lorem, eu porttitor nisi consequat non.  
+* **U u**: [Parameter Tag] [Short] [One Line] Phasellus sit amet euismod lorem, non maximus sem.  
 
 # Static Methods
 
-## StaticMethodWithParametersWithReturn( t, string b)
+## StaticMethodWithParametersWithReturn(T t, string b)
 
 **static U**  
 
@@ -246,6 +246,6 @@
 * **[ArgumentException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception)**: [Exception Tag] [Short] [One Line] Duis et quam ac nunc posuere condimentum.  
 
 **Parameters:**  
-* **t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
+* **T t**: [Parameter Tag] [Short] [One Line] Donec tristique hendrerit ex, vel semper tellus facilisis eu.  
 * **string b**: [Parameter Tag] [Short] [One Line] Integer sit amet tempor massa.  
 

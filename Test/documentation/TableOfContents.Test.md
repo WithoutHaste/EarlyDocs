@@ -173,7 +173,7 @@ Tests struct inheritance.
 Supports test to link to custom exception.  
 
   
-[**ClassExceptionGeneric&lt;T&gt;**](Test.ClassExceptionGeneric_T_.md)  
+[**ClassExceptionGeneric&lt;Apple&gt;**](Test.ClassExceptionGeneric_Apple_.md)  
 Tests generic exceptions.  
 
   

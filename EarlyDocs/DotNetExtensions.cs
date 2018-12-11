@@ -249,6 +249,14 @@ namespace EarlyDocs
 			{
 				displayString = (name as DotNetQualifiedTypeName).GetLocalized(_namespace).FullName;
 			}
+			if(name is DotNetReferenceClassGeneric)
+			{
+				displayString = (name as DotNetReferenceClassGeneric).GetLocalized(_namespace).FullName;
+			}
+			if(name is DotNetReferenceMethodGeneric)
+			{
+				displayString = (name as DotNetReferenceMethodGeneric).GetLocalized(_namespace).FullName;
+			}
 
 			return MarkdownText.EscapeControlCharacters(displayString);
 		}

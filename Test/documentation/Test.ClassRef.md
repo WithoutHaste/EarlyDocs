@@ -17,7 +17,7 @@ The parameter names are: _a_, _b_, and _c_.
 * **string b**: words b  
 * **[List&lt;int&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1) c**: words c  
 
-## MethodB&lt;A,B,C&gt;( a,  b,  c)
+## MethodB&lt;A,B,C&gt;(A a, B b, C c)
 
 **void**  
 
@@ -31,7 +31,7 @@ The type-parameter names are: _A_, _B_, and _C_.
 * **C**: WORDS C  
 
 **Parameters:**  
-* **a**: words a  
-* **b**: words b  
-* **c**: words c  
+* **A a**: words a  
+* **B b**: words b  
+* **C c**: words c  
 

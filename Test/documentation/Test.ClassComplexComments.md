@@ -85,7 +85,7 @@ for (int i = 0; i < lines.Length; i++)
 
 # Methods
 
-## MethodComplexExceptions&lt;A&gt;(string x,  y, int z)
+## MethodComplexExceptions&lt;A&gt;(string x, A y, int z)
 
 **void**  
 
@@ -119,7 +119,7 @@ _A_
 
  luctus et ultrices posuere cubilia Curae; Suspendisse id auctor libero.  
 
-## MethodComplexParamsAndTypeParams&lt;A&gt;(string x,  y, int z)
+## MethodComplexParamsAndTypeParams&lt;A&gt;(string x, A y, int z)
 
 **void**  
 

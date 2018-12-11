@@ -1,0 +1,11 @@
+E:\GitHub\EarlyDocs\EarlyDocsTest\bin\Debug\EarlyDocsTest.dll
+E:\GitHub\EarlyDocs\EarlyDocsTest\bin\Debug\EarlyDocsTest.pdb
+E:\GitHub\EarlyDocs\EarlyDocsTest\bin\Debug\EarlyDocs.dll
+E:\GitHub\EarlyDocs\EarlyDocsTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\GitHub\EarlyDocs\EarlyDocsTest\bin\Debug\WithoutHaste.DataFiles.dll
+E:\GitHub\EarlyDocs\EarlyDocsTest\bin\Debug\EarlyDocs.pdb
+E:\GitHub\EarlyDocs\EarlyDocsTest\bin\Debug\WithoutHaste.DataFiles.pdb
+E:\GitHub\EarlyDocs\EarlyDocsTest\bin\Debug\WithoutHaste.DataFiles.xml
+E:\GitHub\EarlyDocs\EarlyDocsTest\obj\Debug\EarlyDocsTest.csprojResolveAssemblyReference.cache
+E:\GitHub\EarlyDocs\EarlyDocsTest\obj\Debug\EarlyDocsTest.dll
+E:\GitHub\EarlyDocs\EarlyDocsTest\obj\Debug\EarlyDocsTest.pdb
