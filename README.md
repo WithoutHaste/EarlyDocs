@@ -89,14 +89,14 @@ public class TypeA
 
 Projects with EarlyDocs-generated documentation.
 
-[WithoutHaste.Drawing.Colors](https://github.com/WithoutHaste/WithoutHaste.Drawing.Colors/blob/master/documentation/TableOfContents.md)
+[WithoutHaste.Drawing.Colors](https://github.com/WithoutHaste/WithoutHaste.Drawing.Colors/blob/master/documentation/TableOfContents.WithoutHaste.Drawing.Colors.md)
 
-[WithoutHaste.Drawing.Shapes](https://github.com/WithoutHaste/WithoutHaste.Drawing.Shapes/blob/master/documentation/TableOfContents.md)
+[WithoutHaste.Drawing.Shapes](https://github.com/WithoutHaste/WithoutHaste.Drawing.Shapes/blob/master/documentation/TableOfContents.WithoutHaste.Drawing.Shapes.md)
 
-[WithoutHaste.Windows.GUI](https://github.com/WithoutHaste/WithoutHaste.Windows.GUI/blob/master/documentation/TableOfContents.md)
+[WithoutHaste.Windows.GUI](https://github.com/WithoutHaste/WithoutHaste.Windows.GUI/blob/master/documentation/TableOfContents.WithoutHaste.Windows.GUI.md)
 
 The EarlyDocs test project includes examples of almost everything:
-[EarlyDocs test project documentation](https://github.com/WithoutHaste/EarlyDocs/blob/master/Test/documentation/TableOfContents.md)
+[EarlyDocs test project documentation](https://github.com/WithoutHaste/EarlyDocs/blob/master/Test/documentation/TableOfContents.Test.md)
 
 ## License
 
