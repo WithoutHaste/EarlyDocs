@@ -102,10 +102,12 @@ The EarlyDocs test project includes examples of almost everything:
 
 [MIT License](https://github.com/WithoutHaste/EarlyDocs/blob/master/LICENSE)
 
-## Support
+## Donate
 
 [Become a patron](https://www.patreon.com/withouthaste) of this and other Without Haste open source projects.
 
-## Versions
+## Version Notes
 
-Version 1 in development.
+Uses [Semantic Versioning 2.0.0](https://semver.org/).
+
+[Initial Release - v1.0.0](https://github.com/WithoutHaste/EarlyDocs/releases/tag/v1.0.0)
