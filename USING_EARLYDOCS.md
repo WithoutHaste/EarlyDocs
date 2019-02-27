@@ -2,8 +2,6 @@
 
 # Using EarlyDocs
 
-[Summary](README.md)
-
 EarlyDocs was tested on C# projects in Visual Studio. All instructions and examples are based on that setup.
 
 ## Installation
