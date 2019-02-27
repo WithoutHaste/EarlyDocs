@@ -1,3 +1,5 @@
+[EarlyDocs Home](README.md)
+
 # Using EarlyDocs
 
 [Summary](README.md)
@@ -7,6 +9,19 @@ EarlyDocs was tested on C# projects in Visual Studio. All instructions and examp
 ## Installation
 
 Use the NuGet Console or Manager to install EarlyDocs in your .Net project.
+
+Search for "EarlyDocs" in the NuGet Manager,  
+or run "Install-Package EarlyDocs" in the NuGet Console
+
+[NuGet project page](https://www.nuget.org/packages/EarlyDocs/)
+
+## Export XML Comments
+
+To have your XML comments included in the generated documentation:
+
+1. Open project properties > Build tab
+2. Select the right configuration (Debug and/or release)
+3. Check "XML documentation file" under the "Output" section
 
 ## Configuration
 

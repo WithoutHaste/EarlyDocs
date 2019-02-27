@@ -11,7 +11,7 @@ Summary:
 * All Markdown files are inter-linked.
 * Everything is saved to one "documentation" directory.
 
-[Using EarlyDocs](USING_EARLYDOCS.md)
+[Installing and Using EarlyDocs](USING_EARLYDOCS.md)
 
 EarlyDocs is build on top of 
 * [WithoutHaste.DataFiles.DotNet](https://github.com/WithoutHaste/WithoutHaste.DataFiles/tree/master/DataFiles/DotNet) which handles all the loading of information from the dll and xml files into an object model.
