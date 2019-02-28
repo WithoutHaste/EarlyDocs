@@ -2,24 +2,29 @@
 <package>
   <metadata minClientVersion="2.5"> <!--minClient because including *.target and *.props files-->
     <id>EarlyDocs</id>
-    <version>1.0.0</version>
+    <version>$version$</version>
     <title>EarlyDocs</title>
     <authors>WithoutHaste</authors>
     <owners>WithoutHaste</owners>
 	<licenseUrl>https://github.com/WithoutHaste/EarlyDocs/blob/master/LICENSE</licenseUrl>
 <!--	<license type="expression">MIT</license>--><!--wasn't allowed by "nuget pack"-->
     <projectUrl>https://github.com/WithoutHaste/EarlyDocs</projectUrl>
+	<repository type="git" url="https://github.com/WithoutHaste/EarlyDocs"/>
 <!--    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<developmentDependency>true</developmentDependency><!--will not be part of the client's compiled project-->
+	<minClientVersion>2.8</minClientVersion><!-- min NuGet version that supports "developmentDependency" nuspec tag -->
 	<summary>Generates Markdown documentation files for .Net library project.</summary>
-    <description>Loads documentation data from .Net project DLL and XML files and outputs Markdown documentation files. See full documentation at https://github.com/WithoutHaste/EarlyDocs.</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <description>Loads documentation data from .Net project DLL and XML files and outputs Markdown documentation files. See full documentation at https://github.com/WithoutHaste/EarlyDocs.
+	</description>
+    <releaseNotes>
+	Bug Fix: check if project's .Net version is compatible with EarlyDocs.
+	</releaseNotes>
     <tags>documentation .net c# markdown md open-source</tags>
   </metadata>
   <files>
-    <file src='.\bin\Release\EarlyDocs.dll' target='ref\net452\EarlyDocs.dll' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.dll' target='ref\net452\WithoutHaste.DataFiles.dll' />
+    <file src='.\bin\Release\EarlyDocs.dll' target='ref\net452\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.dll' target='ref\net452\' />
     <file src='.\EarlyDocs.targets' target='build\EarlyDocs.targets' />
     <!--<file src='.\nuget_readme.txt' target='content\earlydocs_readme.txt' />-->
   </files>

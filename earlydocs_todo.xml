@@ -38,13 +38,60 @@
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">122</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">test
+installing EarlyDocs on project with lower .Net version
+getting Warnings, but no Errors
+- works when installing from local test source
+- works when installing from NuGet published source
+
+and EarlyDocs.dll was installed in the solution directory "packages" folder
+
+tried installing "SlowCheetah" and it got an error during install, saying the versions were different so it could not install</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">123</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">looking at NUnit project for .nuspec example
+https://www.nuget.org/packages/NUnit/
+https://github.com/nunit/nunit/blob/master/nuget/nunitlite/nunitlite.nuspec
+but it doesn't use .targets file</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">117</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">in Task, check for client's .Net version
 if less than required, display warning instead of giving an error when "EarlyDocs.dll" isn't found
 
-because if user has lower version of .Net than my package uses, it does not install the dll</Data>
+because if user has lower version of .Net than my package uses, it does not install the dll
+
+update EarlyDocs version to 1.0.1 for this bug fix</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -2296,7 +2343,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">121</Data>
+          <Data ss:Type="Number">123</Data>
         </Cell>
       </Row>
       <Row>

@@ -1,6 +1,15 @@
 EarlyDocs/.vs/*
 EarlyDocs/bin/Debug/*
 EarlyDocs/obj/*
+
+EarlyDocsTest/.vs/*
+EarlyDocsTest/bin/*
+EarlyDocsTest/obj/*
+
 Test/.vs/*
 Test/bin/*
 Test/obj/*
+
+TestNet2/.vs/*
+TestNet2/TestNet2/bin/*
+TestNet2/TestNet2/obj/*
