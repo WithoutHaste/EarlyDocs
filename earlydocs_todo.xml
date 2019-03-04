@@ -38,6 +38,49 @@
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">124</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">can EarlyDocs, as is, use an earlier version of .Net?
+System.Linq - .Net 3.5 minimum
+System.Collections.Generic - .Net 2.0 ok
+Microsoft.Build.Utilities - .Net 2.0 ok
+Microsoft.Build.Framework - .Net 2.0 ok
+WithoutHaste.DataFiles - currently 4.5.2
+WithoutHaste.DataFiles.DotNet - ?
+- System.Reflection - .Net 2.0 maybe ok
+- System.Xml - .Net 2.0 maybe ok
+- System.Xml.Linq - .Net 3.5 minimum
+WithoutHaste.DataFiles.Markdown - ?
+
+possible implementation of LINQ in .Net 2.0:
+LINQlone
+https://github.com/SaroTasciyan/LINQlone
+https://www.nuget.org/packages/LINQlone/
+
+steps:
+1) create branch of WithoutHaste.DataFiles
+2) see if I can port the whole project back to 2.0
+3) create branch of EarlyDocs
+4) see if I can port the whole project back to 2.0
+5) test that the whole thing still works
+6) test that it still works with NuGet, at least locally
+7) publish WithoutHaste.DataFiles to NuGet
+8) update EarlyDocs to depend on the NuGet datafiles library
+9) publish version of EarlyDocs for .Net 2.0</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-04T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">122</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -49,7 +92,10 @@ getting Warnings, but no Errors
 
 and EarlyDocs.dll was installed in the solution directory "packages" folder
 
-tried installing "SlowCheetah" and it got an error during install, saying the versions were different so it could not install</Data>
+tried installing "SlowCheetah" and it got an error during install, saying the versions were different so it could not install
+
+can I create a test NuGet repository on my website?
+and install signed packages from it to local visual studio?</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -2343,7 +2389,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">123</Data>
+          <Data ss:Type="Number">124</Data>
         </Cell>
       </Row>
       <Row>
