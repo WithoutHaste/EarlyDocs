@@ -57,6 +57,8 @@ possible implementation of LINQ in .Net 2.0:
 LINQlone
 https://github.com/SaroTasciyan/LINQlone
 https://www.nuget.org/packages/LINQlone/
+Note: LINQlone does not implement Union
+Note: LINQlone does not implement List&lt;TypeA&gt; AddRange(List&lt;SubtypeOfA&gt;) - it can't handle the cast
 
 steps:
 1) create branch of WithoutHaste.DataFiles
