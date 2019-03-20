@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using WithoutHaste.DataFiles.DotNet;
 using WithoutHaste.DataFiles.Markdown;
 
@@ -232,7 +231,7 @@ namespace EarlyDocs
 
 		internal static IMarkdownInLine ToMDLink(DotNetCommentQualifiedLinkedGroup commentGroup, DotNetMember parent = null)
 		{
-			string text = String.Join("", DotNetCommentGroupToMarkdownLine(commentGroup, parent).Elements.Select(x => x.ToMarkdown(null)).ToArray());
+			string text = String.Join("", DotNetCommentGroupToMarkdownLine(commentGroup, parent).Elements.Select(x => x.ToMarkdownString(null)).ToArray());
 			IMarkdownInLine plainLink = ToMDLink(commentGroup.QualifiedLink, parent);
 			if(plainLink is MarkdownInlineLink)
 			{

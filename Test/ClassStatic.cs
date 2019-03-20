@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Test
 {
@@ -19,6 +17,7 @@ namespace Test
 			return "0";
 		}
 
+#if EXTENSION_METHODS
 		/// <summary>
 		/// Test extension method parameters.
 		/// </summary>
@@ -27,5 +26,6 @@ namespace Test
 		public static void MethodExtension(this string a, string b)
 		{
 		}
+#endif
 	}
 }

@@ -132,7 +132,7 @@ namespace EarlyDocs
 		{
 			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, filename)))
 			{
-				writer.Write(markdown.ToMarkdown());
+				writer.Write(markdown.ToMarkdownString());
 			}
 		}
 
@@ -147,7 +147,7 @@ namespace EarlyDocs
 		{
 			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, FormatFilename(filename))))
 			{
-				writer.Write(type.ToMarkdownFile().ToMarkdown());
+				writer.Write(type.ToMarkdownFile().ToMarkdownString());
 			}
 		}
 
@@ -155,7 +155,7 @@ namespace EarlyDocs
 		{
 			using(StreamWriter writer = new StreamWriter(Path.Combine(directory, FormatFilename(filename))))
 			{
-				writer.Write(_delegate.ToMarkdownFile().ToMarkdown());
+				writer.Write(_delegate.ToMarkdownFile().ToMarkdownString());
 			}
 		}
 
@@ -200,7 +200,7 @@ namespace EarlyDocs
 
 		private MarkdownSection BuildMasterSummary(DotNetDocumentationFile xmlDocumentation, DotNetQualifiedClassNameTreeNode node)
 		{
-			string header= (new MarkdownInlineLink(node.Value, TableOfContentsFilename(node.Value))).ToMarkdown(null);
+			string header= (new MarkdownInlineLink(node.Value, TableOfContentsFilename(node.Value))).ToMarkdownString(null);
 			MarkdownSection section = new MarkdownSection(header);
 			List<DotNetType> types = xmlDocumentation.Types.Where(t => t.Name.FullNamespace == node.Value).ToList();
 			foreach(DotNetType type in types.OrderBy(t => t.Name))

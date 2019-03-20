@@ -1,0 +1,13 @@
+msbuild EarlyDocsTest.net20.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net20.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net30.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net30.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net35.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net35.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net40.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net40.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net45.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net45.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net451.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net451.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net452.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net452.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net46.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net46.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net461.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net461.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net462.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net462.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net47.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net47.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net471.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net471.Debug.log;verbosity=normal
+msbuild EarlyDocsTest.net472.csproj /P:Configuration=Debug -fl -flp:logfile=logs\EarlyDocsTestOutput.net472.Debug.log;verbosity=normal

@@ -139,7 +139,7 @@
         <member name="M:WithoutHaste.DataFiles.DotNet.DotNetDelegate.#ctor(WithoutHaste.DataFiles.DotNet.DotNetQualifiedName)">
             <summary></summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetDelegate.AddAssemblyInfo(System.Reflection.TypeInfo)">
+        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetDelegate.AddAssemblyInfo(System.Type)">
             <summary>Add additional documentation information from the assembly itself.</summary>
         </member>
         <member name="T:WithoutHaste.DataFiles.DotNet.DotNetIndexer">
@@ -1007,7 +1007,7 @@
             </example>
             <param name="name">Name may or may not start with "T:"</param>
         </member>
-        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedClassName.AddAssemblyInfo(System.Reflection.TypeInfo)">
+        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedClassName.AddAssemblyInfo(System.Type)">
             <summary>
             Load additional documentation information from the assembly itself.
             </summary>
@@ -1117,6 +1117,10 @@
             Set to null to not use any converter.
             </summary>
             <remarks>
+            Setting always defaults to <see cref="M:WithoutHaste.DataFiles.DotNet.DotNetSettings.DefaultQualifiedNameConverter(System.String,System.Int32)"/>.
+            With target frameworks less than 3.5, you can turn this on or off with <see cref='M:WithoutHaste.DataFiles.DotNet.DotNetSettings.UseDefaultQualifiedNameConverter(System.Boolean)'/>.
+            With target frameworks 3.5 or higher, you can set this to a custom function.
+            
             See <see cref="M:WithoutHaste.DataFiles.DotNet.DotNetSettings.DefaultQualifiedNameConverter(System.String,System.Int32)"/> for usage examples.
             </remarks>
             <example>
@@ -1126,6 +1130,15 @@
             </code>	
             </example>
         </member>
+        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetSettings.UseDefaultQualifiedNameConverter(System.Boolean)">
+            <summary>
+            Toggle the <see cref="M:WithoutHaste.DataFiles.DotNet.DotNetSettings.DefaultQualifiedNameConverter(System.String,System.Int32)"/> on and off.
+            </summary>
+            <remarks>
+            Only available in target frameworks less than 3.5.
+            </remarks>
+            <param name="useDefault">True to use the default converter, false to not use a converter.</param>
+        </member>
         <member name="F:WithoutHaste.DataFiles.DotNet.DotNetSettings.AdditionalQualifiedNameConverter">
             <summary>
             A second level <see cref="F:WithoutHaste.DataFiles.DotNet.DotNetSettings.QualifiedNameConverter"/> to provide further processing.
@@ -1133,6 +1146,10 @@
             
             Set to null to not use any converter.
             </summary>
+            <remarks>
+            Setting always defaults to null.
+            With target frameworks 3.5 or higher, you can change this setting.
+            </remarks>
             <example>
             <code>
             	DotNetSettings.QualifiedNameConverter = DotNetSettings.DefaultQualifiedNameConverter;
@@ -2180,12 +2197,12 @@
             Add a member to this type or one of its nested type descendents.
             </summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetType.AddAssemblyInfo(System.Reflection.TypeInfo,WithoutHaste.DataFiles.DotNet.DotNetQualifiedName)">
+        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetType.AddAssemblyInfo(System.Type,WithoutHaste.DataFiles.DotNet.DotNetQualifiedName)">
             <summary>
             Load additional documentation information from the assembly itself for this type or one of its nested type descendents.
             </summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetType.AddAssemblyInfo(System.Reflection.TypeInfo)">
+        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetType.AddAssemblyInfo(System.Type)">
             <summary>
             Load additional information from the assembly for this type.
             </summary>
@@ -2310,7 +2327,7 @@
             </example>
             <param name="name">Name may or may not start with /[FPE]:/</param>
         </member>
-        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedName.FromAssemblyInfo(System.Reflection.TypeInfo)">
+        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedName.FromAssemblyInfo(System.Type)">
             <summary>
             Parses a System.Reflection.AssemblyInfo full name.
             </summary>
@@ -2321,11 +2338,8 @@
               <item>When a generic type is defined: System.Collections.Generic.List`1[U], where U is the type alias from the class declaration</item>
             </list>
         </member>
-        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedName.FromAssemblyInfo(System.Type)">
-            <summary>See <see cref="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedName.FromAssemblyInfo(System.Reflection.TypeInfo)"/></summary>
-        </member>
         <member name="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedName.FromAssemblyInfo(System.String)">
-            <summary>See <see cref="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedName.FromAssemblyInfo(System.Reflection.TypeInfo)"/></summary>
+            <summary>See <see cref="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedName.FromAssemblyInfo(System.Type)"/></summary>
         </member>
         <member name="M:WithoutHaste.DataFiles.DotNet.DotNetQualifiedName.GetFullListOfLocalNames">
             <summary>
@@ -2424,6 +2438,11 @@
             Convert a base-type DotNetQualifiedName to a DotNetQualifiedTypeName.
             </summary>
         </member>
+        <member name="M:WithoutHaste.DataFiles.DotNet.Utilities.GetAttributeValue(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            Returns the value of the attribute, or null if the attribute does not exist.
+            </summary>
+        </member>
         <member name="M:WithoutHaste.DataFiles.DotNet.Utilities.TrimAllowOneSpace(System.String)">
             <summary>
             Trims leading and trailing whitespaces. Will leave one leading and one trailing space, but won't add them.
@@ -2434,6 +2453,20 @@
             Clean the formatting of all inner xml of an XElement. Returns the cleaned element.
             </summary>
             <remarks>Does not preserve attributes of the root element.</remarks>
+        </member>
+        <member name="M:WithoutHaste.DataFiles.DotNet.Utilities.XNodeToString(System.Xml.Linq.XNode)">
+            <summary>
+            Override NuGet System.Xml.Linq XNode.ToString() which just throws a System.IO.FileNotFoundException.
+            </summary>
+            <returns>Should return the exact string representation of the node, including the surrounding tags if applicable.</returns>
+        </member>
+        <member name="M:WithoutHaste.DataFiles.DotNet.Utilities.XElementContentsToString(System.Xml.Linq.XElement)">
+            <summary>
+            .Net 2.0 compatibility:
+            NuGet System.Xml.Linq does not support XNode.ToString() - it just throws a System.IO.FileNotFoundException
+            so this is replacing it
+            </summary>
+            <returns>Should return the exact string contents of the element, with all inner elements converted to strings.</returns>
         </member>
         <member name="M:WithoutHaste.DataFiles.DotNet.Utilities.TrimFromStartAsBlock(System.String)">
             <summary>
@@ -2499,6 +2532,13 @@
             To document the return type of <c>public Company.SomeType MyMethod() {}</c>, the library for <c>Company.SomeType</c> must be loaded.
             </example>
             </param>
+            <exception cref="T:WithoutHaste.DataFiles.LoadException">Error loading an assembly.</exception>
+        </member>
+        <member name="M:WithoutHaste.DataFiles.DotNet.DotNetDocumentationFile.LoadAssembly(System.String)">
+            <summary>
+            Load assembly, with error handling.
+            </summary>
+            <exception cref="T:WithoutHaste.DataFiles.LoadException"></exception>
         </member>
         <member name="M:WithoutHaste.DataFiles.DotNet.DotNetDocumentationFile.GetFullListOfLocalNames">
             <summary>
@@ -2506,6 +2546,12 @@
             Includes namespaces, internal types, external types, and members.
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:WithoutHaste.DataFiles.LoadException">
+            <summary>Error loading a file.</summary>
+        </member>
+        <member name="M:WithoutHaste.DataFiles.LoadException.#ctor(System.String)">
+            <summary></summary>
         </member>
         <member name="T:WithoutHaste.DataFiles.StringFormatException">
             <summary>Badly formatted string.</summary>
@@ -2536,7 +2582,7 @@
             Represents a markdown element that can be included within a MarkdownSection.
             </summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.IMarkdownInSection.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.IMarkdownInSection.ToMarkdownString(System.String)">
             <summary>
             Return markdown-formatted text.
             </summary>
@@ -2559,7 +2605,7 @@
         <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownCode.#ctor(System.String)">
             <summary></summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownCode.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownCode.ToMarkdownString(System.String)">
             <inheritdoc />
         </member>
         <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownCode.GetLongestBacktics">
@@ -2588,7 +2634,7 @@
         <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownCodeBlock.#ctor(System.String,System.String)">
             <summary></summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownCodeBlock.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownCodeBlock.ToMarkdownString(System.String)">
             <inheritdoc />
         </member>
         <member name="T:WithoutHaste.DataFiles.Markdown.MarkdownFile">
@@ -2617,7 +2663,7 @@
             </summary>
             <param name="section">Existing section.</param>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownFile.ToMarkdown">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownFile.ToMarkdownString">
             <summary>
             Returns full markdown text for file, formatted for legibility.
             </summary>
@@ -2639,7 +2685,7 @@
         <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownInlineLink.#ctor(WithoutHaste.DataFiles.Markdown.MarkdownText,System.String)">
             <summary>Accepts formatted text.</summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownInlineLink.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownInlineLink.ToMarkdownString(System.String)">
             <inheritdoc />
         </member>
         <member name="T:WithoutHaste.DataFiles.Markdown.MarkdownLine">
@@ -2715,7 +2761,7 @@
             Add an element to the beginning of the line.
             </summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownLine.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownLine.ToMarkdownString(System.String)">
             <inheritdoc />
         </member>
         <member name="T:WithoutHaste.DataFiles.Markdown.MarkdownLink">
@@ -2739,7 +2785,7 @@
         <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownLink.#ctor(WithoutHaste.DataFiles.Markdown.MarkdownText,System.String)">
             <summary></summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownLink.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownLink.ToMarkdownString(System.String)">
             <summary>
             Outputs markdown-formatted text.
             </summary>
@@ -2795,7 +2841,7 @@
             Adds new MarkdownLine containing the <paramref name='element'/> to the end of the list.
             </summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownList.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownList.ToMarkdownString(System.String)">
             <inheritdoc />
         </member>
         <member name="T:WithoutHaste.DataFiles.Markdown.MarkdownParagraph">
@@ -2866,7 +2912,7 @@
             Add an element to the beginning of the paragraph.
             </summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownParagraph.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownParagraph.ToMarkdownString(System.String)">
             <summary>
             Convert the paragraph to markdown-formatted text.
             </summary>
@@ -2972,10 +3018,10 @@
             Returns true if the last element in the section has the specified type.
             </summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownSection.ToMarkdown">
-            <duplicate cref='M:WithoutHaste.DataFiles.Markdown.MarkdownSection.ToMarkdown(System.String)'/>
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownSection.ToMarkdownString">
+            <duplicate cref='M:WithoutHaste.DataFiles.Markdown.MarkdownSection.ToMarkdownString(System.String)'/>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownSection.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownSection.ToMarkdownString(System.String)">
             <summary>
             Return markdown-formatted text, taking the previous text of the file into account.
             </summary>
@@ -3003,7 +3049,7 @@
         <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownTable.Add(WithoutHaste.DataFiles.Markdown.MarkdownTableRow)">
             <summary>Add a row to the end of the table.</summary>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownTable.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownTable.ToMarkdownString(System.String)">
             <summary>
             Return markdown-formatted text.
             </summary>
@@ -3034,7 +3080,7 @@
             <summary>Add a cell to the end of the row.</summary>
             <param name="cell">Contents of cell.</param>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownTableRow.ToMarkdown(System.Collections.Generic.List{System.Int32})">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownTableRow.ToMarkdownString(System.Collections.Generic.List{System.Int32})">
             <summary>
             Return markdown-formatted text.
             </summary>
@@ -3089,7 +3135,7 @@
             <summary>Generate bold-italic text.</summary>
             <remarks><paramref name="text"/> is trimmed to conform to Markdown formatting requirements.</remarks>
         </member>
-        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownText.ToMarkdown(System.String)">
+        <member name="M:WithoutHaste.DataFiles.Markdown.MarkdownText.ToMarkdownString(System.String)">
             <inheritdoc />
             <remarks>Uses ** for bold and _ for italics.</remarks>
         </member>
@@ -3174,21 +3220,6 @@
         <member name="M:WithoutHaste.DataFiles.TextHelper.IsAllWhitespace(System.String)">
             <summary>
             Returns true if text is empty or contains only whitespace characters.
-            </summary>
-        </member>
-        <member name="T:WithoutHaste.DataFiles.XmlDocumentHelper">
-            <summary>
-            Generic System.Xml.XmlDocument utilities.
-            </summary>
-        </member>
-        <member name="M:WithoutHaste.DataFiles.XmlDocumentHelper.XmlToString(System.Xml.XmlDocument)">
-            <summary>
-            Returns a string containing the entire contents of the XmlDocument.
-            </summary>
-        </member>
-        <member name="M:WithoutHaste.DataFiles.XmlDocumentHelper.XmlToString(System.Xml.XmlNode)">
-            <summary>
-            Returns a string containing the entire contents of the XmlNode.
             </summary>
         </member>
     </members>

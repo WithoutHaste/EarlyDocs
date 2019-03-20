@@ -1,0 +1,13 @@
+msbuild Test.net20.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net20.Debug.log;verbosity=normal
+msbuild Test.net30.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net30.Debug.log;verbosity=normal
+msbuild Test.net35.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net35.Debug.log;verbosity=normal
+msbuild Test.net40.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net40.Debug.log;verbosity=normal
+msbuild Test.net45.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net45.Debug.log;verbosity=normal
+msbuild Test.net451.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net451.Debug.log;verbosity=normal
+msbuild Test.net452.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net452.Debug.log;verbosity=normal
+msbuild Test.net46.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net46.Debug.log;verbosity=normal
+msbuild Test.net461.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net461.Debug.log;verbosity=normal
+msbuild Test.net462.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net462.Debug.log;verbosity=normal
+msbuild Test.net47.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net47.Debug.log;verbosity=normal
+msbuild Test.net471.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net471.Debug.log;verbosity=normal
+msbuild Test.net472.csproj /P:Configuration=Debug -fl -flp:logfile=logs\TestOutput.net472.Debug.log;verbosity=normal

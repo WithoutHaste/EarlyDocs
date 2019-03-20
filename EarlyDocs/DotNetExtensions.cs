@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using WithoutHaste.DataFiles;
 using WithoutHaste.DataFiles.DotNet;
 using WithoutHaste.DataFiles.Markdown;
@@ -349,14 +348,18 @@ namespace EarlyDocs
 
 		internal static void TurnQualifiedNameConverterOn()
 		{
+#if FUNCS
 			DotNetSettings.QualifiedNameConverter = DotNetSettings.DefaultQualifiedNameConverter;
 			DotNetSettings.AdditionalQualifiedNameConverter = DotNetExtensions.QualifiedNameConverter;
+#endif
 		}
 
 		internal static void TurnQualifiedNameConverterOff()
 		{
+#if FUNC
 			DotNetSettings.QualifiedNameConverter = null;
 			DotNetSettings.AdditionalQualifiedNameConverter = null;
+#endif
 		}
 
 		internal static string QualifiedNameConverter(string fullName, int depth)

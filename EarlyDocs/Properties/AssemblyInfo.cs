@@ -16,6 +16,19 @@ using System.Runtime.InteropServices;
 
 // Set test project access
 [assembly:InternalsVisibleTo("EarlyDocsTest")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net20")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net30")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net35")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net40")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net45")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net451")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net452")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net46")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net461")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net462")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net47")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net471")]
+[assembly:InternalsVisibleTo("EarlyDocsTest.net472")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -35,5 +48,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyVersion("2.0.0.0")]
+[assembly: AssemblyFileVersion("2.0.0.0")]

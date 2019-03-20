@@ -1,0 +1,13 @@
+msbuild EarlyDocs.net20.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net20.Release.log;verbosity=normal
+msbuild EarlyDocs.net30.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net30.Release.log;verbosity=normal
+msbuild EarlyDocs.net35.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net35.Release.log;verbosity=normal
+msbuild EarlyDocs.net40.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net40.Release.log;verbosity=normal
+msbuild EarlyDocs.net45.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net45.Release.log;verbosity=normal
+msbuild EarlyDocs.net451.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net451.Release.log;verbosity=normal
+msbuild EarlyDocs.net452.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net452.Release.log;verbosity=normal
+msbuild EarlyDocs.net46.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net46.Release.log;verbosity=normal
+msbuild EarlyDocs.net461.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net461.Release.log;verbosity=normal
+msbuild EarlyDocs.net462.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net462.Release.log;verbosity=normal
+msbuild EarlyDocs.net47.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net47.Release.log;verbosity=normal
+msbuild EarlyDocs.net471.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net471.Release.log;verbosity=normal
+msbuild EarlyDocs.net472.csproj /P:Configuration=Release -fl -flp:logfile=logs\EarlyDocsOutput.net472.Release.log;verbosity=normal
