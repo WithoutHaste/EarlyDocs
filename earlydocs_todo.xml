@@ -38,38 +38,10 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">124</Data>
+          <Data ss:Type="Number">127</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">can EarlyDocs, as is, use an earlier version of .Net?
-System.Linq - .Net 3.5 minimum
-System.Collections.Generic - .Net 2.0 ok
-Microsoft.Build.Utilities - .Net 2.0 ok
-Microsoft.Build.Framework - .Net 2.0 ok
-WithoutHaste.DataFiles - currently 4.5.2
-WithoutHaste.DataFiles.DotNet - ?
-- System.Reflection - .Net 2.0 maybe ok
-- System.Xml - .Net 2.0 maybe ok
-- System.Xml.Linq - .Net 3.5 minimum
-WithoutHaste.DataFiles.Markdown - ?
-
-possible implementation of LINQ in .Net 2.0:
-LINQlone
-https://github.com/SaroTasciyan/LINQlone
-https://www.nuget.org/packages/LINQlone/
-Note: LINQlone does not implement Union
-Note: LINQlone does not implement List&lt;TypeA&gt; AddRange(List&lt;SubtypeOfA&gt;) - it can't handle the cast
-
-steps:
-1) create branch of WithoutHaste.DataFiles
-2) see if I can port the whole project back to 2.0
-3) create branch of EarlyDocs
-4) see if I can port the whole project back to 2.0
-5) test that the whole thing still works
-6) test that it still works with NuGet, at least locally
-7) publish WithoutHaste.DataFiles to NuGet
-8) update EarlyDocs to depend on the NuGet datafiles library
-9) publish version of EarlyDocs for .Net 2.0</Data>
+          <Data ss:Type="String">update default EarlyDocs project to target .Net 2.0</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -78,26 +50,16 @@ steps:
           <Data ss:Type="String">Task</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-03-04T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2019-03-20T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">122</Data>
+          <Data ss:Type="Number">128</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">test
-installing EarlyDocs on project with lower .Net version
-getting Warnings, but no Errors
-- works when installing from local test source
-- works when installing from NuGet published source
-
-and EarlyDocs.dll was installed in the solution directory "packages" folder
-
-tried installing "SlowCheetah" and it got an error during install, saying the versions were different so it could not install
-
-can I create a test NuGet repository on my website?
-and install signed packages from it to local visual studio?</Data>
+          <Data ss:Type="String">generate project versions for each target framework from 2.0 through 4.7.2
+also Test project versions</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -106,18 +68,15 @@ and install signed packages from it to local visual studio?</Data>
           <Data ss:Type="String">Task</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2019-03-20T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">123</Data>
+          <Data ss:Type="Number">129</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">looking at NUnit project for .nuspec example
-https://www.nuget.org/packages/NUnit/
-https://github.com/nunit/nunit/blob/master/nuget/nunitlite/nunitlite.nuspec
-but it doesn't use .targets file</Data>
+          <Data ss:Type="String">update Test project to handle all those different target frameworks</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -126,7 +85,26 @@ but it doesn't use .targets file</Data>
           <Data ss:Type="String">Task</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2019-03-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">126</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">DataFiles.net452
+v4.5.2
+The "RunEarlyDocs" task could not be loaded from the assembly E:\GitHub\WithoutHaste.DataFiles\DataFiles\packages\EarlyDocs.1.0.0\build\*Undefined*packages\EarlyDocs.1.0.0\ref\net452\EarlyDocs.dll.</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-15T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -166,6 +144,27 @@ update EarlyDocs version to 1.0.1 for this bug fix</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">125</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">once a working version of EarlyDocs is published
+and confirmed working
+
+announce EarlyDocs on HackerNews?
+announce EarlyDocs on Reddit?</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-13T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -603,6 +602,133 @@ a lot of that code duplication can be removed</Data>
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">130</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">save copy of current Test project documentation elsewhere
+- this will become the Oracle for testing all the different frameworks</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-20T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-20T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">123</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">looking at NUnit project for .nuspec example
+https://www.nuget.org/packages/NUnit/
+https://github.com/nunit/nunit/blob/master/nuget/nunitlite/nunitlite.nuspec
+but it doesn't use .targets file</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-13T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">122</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">test
+installing EarlyDocs on project with lower .Net version
+getting Warnings, but no Errors
+- works when installing from local test source
+- works when installing from NuGet published source
+
+and EarlyDocs.dll was installed in the solution directory "packages" folder
+
+tried installing "SlowCheetah" and it got an error during install, saying the versions were different so it could not install
+
+can I create a test NuGet repository on my website?
+and install signed packages from it to local visual studio?</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-13T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">124</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">can EarlyDocs, as is, use an earlier version of .Net?
+System.Linq - .Net 3.5 minimum
+System.Collections.Generic - .Net 2.0 ok
+Microsoft.Build.Utilities - .Net 2.0 ok
+Microsoft.Build.Framework - .Net 2.0 ok
+WithoutHaste.DataFiles - currently 4.5.2
+WithoutHaste.DataFiles.DotNet - ?
+- System.Reflection - .Net 2.0 maybe ok
+- System.Xml - .Net 2.0 maybe ok
+- System.Xml.Linq - .Net 3.5 minimum
+WithoutHaste.DataFiles.Markdown - ?
+
+possible implementation of LINQ in .Net 2.0:
+LINQlone
+https://github.com/SaroTasciyan/LINQlone
+https://www.nuget.org/packages/LINQlone/
+Note: LINQlone does not implement Union
+Note: LINQlone does not implement List&lt;TypeA&gt; AddRange(List&lt;SubtypeOfA&gt;) - it can't handle the cast
+
+https://www.nuget.org/packages/System.Xml.Linq/
+Note: does not support XNode.ToString() in any useful way
+Sent the owners a polite bug report through NuGet 3/5/2019
+
+steps:
+1) create branch of WithoutHaste.DataFiles
+2) see if I can port the whole project back to 2.0
+3) create branch of EarlyDocs
+4) see if I can port the whole project back to 2.0
+5) test that the whole thing still works
+6) test that it still works with NuGet, at least locally
+7) publish WithoutHaste.DataFiles to NuGet
+8) update EarlyDocs to depend on the NuGet datafiles library
+9) publish version of EarlyDocs for .Net 2.0</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-04T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-13T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -2391,7 +2517,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">124</Data>
+          <Data ss:Type="Number">130</Data>
         </Cell>
       </Row>
       <Row>
