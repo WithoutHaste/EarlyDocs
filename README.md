@@ -21,11 +21,9 @@ This library is under active development. Report bugs and request features on Gi
 
 ## Supported XML Tags
 
-Supports all standard Microsoft XML tags.
+Supports all standard Microsoft XML tags. See examples in [How to Use XML Comments in .Net](HowToUseXmlComments.md).
 
-See examples: [How to Use XML Comments in .Net](HowToUseXmlComments.md)
-
-### inheritdoc
+### inheritdoc Custom Tag
 
 Supports custom tag `<inheritdoc />` as a top-level tag.
 
@@ -59,7 +57,7 @@ public class TypeB : TypeA
 }
 ```
 
-### duplicate
+### duplicate Custom Tag
 
 Supports custom tag `<duplicate cref="" />` as a top-level tag.
 
@@ -84,6 +82,11 @@ public class TypeA
 ```
 
 [How to cref almost anything in your code.](HowToUseXmlComments.md#cref-attribute)
+
+## Documentation
+
+For programmers on this project:  
+[Design](DESIGN.md)
 
 ## Examples
 

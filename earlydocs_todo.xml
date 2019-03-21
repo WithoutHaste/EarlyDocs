@@ -38,6 +38,24 @@
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">136</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">create a totally separate sln for each full Test of a version
+so that their Packages folders won't affect each other</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-21T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">134</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -2560,7 +2578,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">135</Data>
+          <Data ss:Type="Number">136</Data>
         </Cell>
       </Row>
       <Row>
