@@ -36,20 +36,6 @@
     <DocumentationFile>bin\Release\Test.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Web.XmlTransform">
-      <HintPath>..\EarlyDocs\packages\Microsoft.Web.Xdt.1.0.0\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="ClassAbstract.cs" />
     <Compile Include="ClassCode.cs" />
     <Compile Include="ClassCommentsNestedWrong.cs" />
@@ -89,18 +75,17 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LINQlone, Version=1.1.0.0, Culture=neutral, PublicKeyToken=50a8fe7ae68cb959, processorArchitecture=MSIL">
+      <HintPath>..\EarlyDocs\packages\LINQlone.1.1.0\lib\LINQlone.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <EarlyDocsOutputDir>$(ProjectDir)documentation\</EarlyDocsOutputDir>
     <!--<EarlyDocsSkip>True</EarlyDocsSkip>-->
   </PropertyGroup>
-  <Import Project="..\EarlyDocs\packages\EarlyDocs.1.0.1\build\EarlyDocs.targets" Condition="Exists('..\EarlyDocs\packages\EarlyDocs.1.0.1\build\EarlyDocs.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\EarlyDocs\packages\EarlyDocs.1.0.1\build\EarlyDocs.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\EarlyDocs\packages\EarlyDocs.1.0.1\build\EarlyDocs.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -108,5 +93,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-    <Import Project="$(ProjectDir)\..\MultiTargetSymbols.targets" />
+  <Import Project="$(ProjectDir)\..\MultiTargetSymbols.targets" />
 </Project>
