@@ -14,18 +14,44 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<developmentDependency>true</developmentDependency><!--will not be part of the client's compiled project-->
 	<minClientVersion>2.8</minClientVersion><!-- min NuGet version that supports "developmentDependency" nuspec tag -->
-	<summary>Generates Markdown documentation files for .Net library project.</summary>
+	<summary>Generates Markdown documentation files for .Net library projects.</summary>
     <description>Loads documentation data from .Net project DLL and XML files and outputs Markdown documentation files. See full documentation at https://github.com/WithoutHaste/EarlyDocs.
 	</description>
     <releaseNotes>
-	Bug Fix: check if project's .Net version is compatible with EarlyDocs.
+	EarlyDocs is now multi-targeted for all .Net frameworks from 2.0 through 4.7.2.
+	
+	Bug fix: library installation path and Task lookup path mismatch.
 	</releaseNotes>
     <tags>documentation .net c# markdown md open-source</tags>
   </metadata>
   <files>
-    <file src='.\bin\Release\EarlyDocs.dll' target='ref\net452\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.dll' target='ref\net452\' />
-    <file src='.\EarlyDocs.targets' target='build\EarlyDocs.targets' />
     <!--<file src='.\nuget_readme.txt' target='content\earlydocs_readme.txt' />-->
+    <file src='.\EarlyDocs.targets' target='build\EarlyDocs.targets' />
+    <file src='.\bin\Release\EarlyDocs.net20.dll' target='ref\net20\' />
+    <file src='.\bin\Release\EarlyDocs.net30.dll' target='ref\net30\' />
+    <file src='.\bin\Release\EarlyDocs.net35.dll' target='ref\net35\' />
+    <file src='.\bin\Release\EarlyDocs.net40.dll' target='ref\net40\' />
+    <file src='.\bin\Release\EarlyDocs.net45.dll' target='ref\net45\' />
+    <file src='.\bin\Release\EarlyDocs.net451.dll' target='ref\net451\' />
+    <file src='.\bin\Release\EarlyDocs.net452.dll' target='ref\net452\' />
+    <file src='.\bin\Release\EarlyDocs.net46.dll' target='ref\net46\' />
+    <file src='.\bin\Release\EarlyDocs.net461.dll' target='ref\net461\' />
+    <file src='.\bin\Release\EarlyDocs.net462.dll' target='ref\net462\' />
+    <file src='.\bin\Release\EarlyDocs.net47.dll' target='ref\net47\' />
+    <file src='.\bin\Release\EarlyDocs.net471.dll' target='ref\net471\' />
+    <file src='.\bin\Release\EarlyDocs.net472.dll' target='ref\net472\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net20.dll' target='ref\net20\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net30.dll' target='ref\net30\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net35.dll' target='ref\net35\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net40.dll' target='ref\net40\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net45.dll' target='ref\net45\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net451.dll' target='ref\net451\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net452.dll' target='ref\net452\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net46.dll' target='ref\net46\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net461.dll' target='ref\net461\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net462.dll' target='ref\net462\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net47.dll' target='ref\net47\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net471.dll' target='ref\net471\' />
+    <file src='.\bin\Release\WithoutHaste.DataFiles.net472.dll' target='ref\net472\' />
   </files>
 </package>
