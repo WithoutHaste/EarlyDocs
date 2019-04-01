@@ -1,49 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<!-- Determine target framework folder name -->
-	<!--
-	<Target Name="CreateEarlyDocsNetFolder" BeforeTargets="BeforeBuild">
-		<CreateProperty Value="net20" Condition="'$(TargetFrameworkVersion)' == 'v2.0'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net30" Condition="'$(TargetFrameworkVersion)' == 'v3.0'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net40" Condition="'$(TargetFrameworkVersion)' == 'v4.0'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net45" Condition="'$(TargetFrameworkVersion)' == 'v4.5'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net451" Condition="'$(TargetFrameworkVersion)' == 'v4.5.1'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net452" Condition="'$(TargetFrameworkVersion)' == 'v4.5.2'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net46" Condition="'$(TargetFrameworkVersion)' == 'v4.6'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net461" Condition="'$(TargetFrameworkVersion)' == 'v4.6.1'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net462" Condition="'$(TargetFrameworkVersion)' == 'v4.6.2'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net47" Condition="'$(TargetFrameworkVersion)' == 'v4.7'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net471" Condition="'$(TargetFrameworkVersion)' == 'v4.7.1'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-		<CreateProperty Value="net472" Condition="'$(TargetFrameworkVersion)' == 'v4.7.2'">
-			<Output TaskParameter="Value" PropertyName="EarlyDocsNetFolder"/>
-		</CreateProperty>
-	</Target>-->
-	
-	<!-- Run task -->
 	<UsingTask TaskName="RunEarlyDocs" AssemblyFile="$(ProjectDir)$(OutDir)EarlyDocs.dll" /> <!-- all necessary dlls will be in the output folder -->
-<!--	<UsingTask TaskName="RunEarlyDocs" AssemblyFile="..\ref\$(EarlyDocsNetFolder)\EarlyDocs.dll" />--><!-- roots at location of this file -->
 	<Target Name="EarlyDocsTarget" AfterTargets="AfterBuild">  
 		<Message Importance="Normal" Text="Starting EarlyDocs..."/>
 
