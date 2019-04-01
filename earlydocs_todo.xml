@@ -43,8 +43,9 @@
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">create a totally separate sln for each full Test of a version
 so that their Packages folders won't affect each other
-- build EarlyDocs pack
+- build EarlyDocs pack - DONE
 - install to auto generated test from local source
+-- 2.0 - installed all dependencies
 - compare test output to oracle</Data>
         </Cell>
         <Cell>

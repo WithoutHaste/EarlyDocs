@@ -294,7 +294,7 @@ namespace EarlyDocs
 		internal static string ToStringLink(this DotNetQualifiedName name)
 		{
 			string linkString = name.FullName;
-			string parentLinkString = name.FullNamespace?.FullName;
+			string parentLinkString = (name.FullNamespace == null) ? null : name.FullNamespace.FullName;
 
 			if(BasicTypeNames.Contains(linkString))
 				return linkString;

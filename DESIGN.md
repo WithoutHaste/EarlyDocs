@@ -33,7 +33,7 @@ The AutomatedOracleTests are generated and built automatically, which causes the
 ## InstallationTests
 
 Steps to test:  
-1) run Setup `Setup\InstallationTestsSetup\bin\Release\InstallationTestsSetup.exe`  
+1) run Setup  
 2) manually install NuGet EarlyDocs package to each project  
 3) run Compare
 

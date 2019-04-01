@@ -12,7 +12,7 @@
 	<repository type="git" url="https://github.com/WithoutHaste/EarlyDocs"/>
 <!--    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<developmentDependency>true</developmentDependency><!--will not be part of the client's compiled project-->
+<!--	<developmentDependency>true</developmentDependency>--><!--will not be part of the client's compiled project-->
 	<summary>Generates Markdown documentation files for .Net library projects.</summary>
     <description>EarlyDocs generates Markdown documentation for your .Net library.  
 	  
@@ -36,25 +36,25 @@
     <tags>documentation .net c# markdown md open-source</tags>
     <dependencies>
 	  <group targetFramework='net20'><!-- net20 or higher -->
-        <dependency id='WithoutHaste.DataFiles' version='[1.0.0,2)' /> <!-- version 1 plus updates, but not version 2 -->
+        <dependency id='WithoutHaste.DataFiles' version='1.0.0-alpha3' /> <!-- [1.0.0,2) version 1 plus updates, but not version 2 -->
 	  </group>
     </dependencies>
   </metadata>
   <files>
     <!--<file src='.\nuget_readme.txt' target='content\earlydocs_readme.txt' />-->
     <file src='.\EarlyDocs.targets' target='build\EarlyDocs.targets' />
-    <file src='.\bin\Release\net20\EarlyDocs.dll' target='ref\net20\' />
-    <file src='.\bin\Release\net30\EarlyDocs.dll' target='ref\net30\' />
-    <file src='.\bin\Release\net35\EarlyDocs.dll' target='ref\net35\' />
-    <file src='.\bin\Release\net40\EarlyDocs.dll' target='ref\net40\' />
-    <file src='.\bin\Release\net45\EarlyDocs.dll' target='ref\net45\' />
-    <file src='.\bin\Release\net451\EarlyDocs.dll' target='ref\net451\' />
-    <file src='.\bin\Release\net452\EarlyDocs.dll' target='ref\net452\' />
-    <file src='.\bin\Release\net46\EarlyDocs.dll' target='ref\net46\' />
-    <file src='.\bin\Release\net461\EarlyDocs.dll' target='ref\net461\' />
-    <file src='.\bin\Release\net462\EarlyDocs.dll' target='ref\net462\' />
-    <file src='.\bin\Release\net47\EarlyDocs.dll' target='ref\net47\' />
-    <file src='.\bin\Release\net471\EarlyDocs.dll' target='ref\net471\' />
-    <file src='.\bin\Release\net472\EarlyDocs.dll' target='ref\net472\' />
+    <file src='.\bin\Release\net20\EarlyDocs.dll'  target='lib\net20\' />
+    <file src='.\bin\Release\net30\EarlyDocs.dll'  target='lib\net30\' />
+    <file src='.\bin\Release\net35\EarlyDocs.dll'  target='lib\net35\' />
+    <file src='.\bin\Release\net40\EarlyDocs.dll'  target='lib\net40\' />
+    <file src='.\bin\Release\net45\EarlyDocs.dll'  target='lib\net45\' />
+    <file src='.\bin\Release\net451\EarlyDocs.dll' target='lib\net451\' />
+    <file src='.\bin\Release\net452\EarlyDocs.dll' target='lib\net452\' />
+    <file src='.\bin\Release\net46\EarlyDocs.dll'  target='lib\net46\' />
+    <file src='.\bin\Release\net461\EarlyDocs.dll' target='lib\net461\' />
+    <file src='.\bin\Release\net462\EarlyDocs.dll' target='lib\net462\' />
+    <file src='.\bin\Release\net47\EarlyDocs.dll'  target='lib\net47\' />
+    <file src='.\bin\Release\net471\EarlyDocs.dll' target='lib\net471\' />
+    <file src='.\bin\Release\net472\EarlyDocs.dll' target='lib\net472\' />
   </files>
 </package>
