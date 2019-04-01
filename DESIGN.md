@@ -2,6 +2,30 @@
 
 # Design
 
+## Installation
+
+Ideally, I wanted the EarlyDocs project to install such that its dependencies would not end up in the users's output directory, since they are needed for the build process only. But that hasn't worked out.
+
+(1)
+
+The MSBuild UsingTask element has two ways to specify an assembly - by assembly name or by exact file path.
+
+Specifying by assembly name has not worked for me at all, even when the assembly is being referenced by the current project.
+
+Specifying by exact path does work, but since this is a multi-targeted project it is hard to say what the exact path should be. This could be worked through except for the next problem.
+
+(1b)
+
+Either way you specify the assembly, dependencies of that assembly are searched for within the same folder as the starting dll. Even if those assemblies are referenced in the current project, they won't be found unless they are in that one folder.
+
+So EarlyDocs.dll and all its dependencies must be in one folder. The simplest way to achieve this is letting everything end up in the output folder.
+
+(2)
+
+EarlyDocs and WithoutHaste.DataFiles are both multi-targeted because Reflection is very sensitive to the current target framework. So I have to let the project decide which version of each to use, based on the current target framework. The dlls that end up in the output directory are the ones selected by the project as compatible.
+
+I verified that Nuspec files don't let you specify included files by target framework - you can only put these conditions on project dependencies. So you'll always be installing the dlls for every target framework even though you only need one of them.
+
 ## EarlyDocs Solution
 
 ### EarlyDocs Project
