@@ -43,14 +43,14 @@ private void GenerateOutput(string version, string netVersion, string[] lines)
 		{
 			outputLine = outputLine.Replace("v2.0", version);
 		}
-		if(outputLine.Contains("<AssemblyName>"))
+		if(outputLine.Contains("<OutputPath>"))
 		{
-			outputLine = outputLine.Replace("EarlyDocs", "EarlyDocs." + netVersion);
+			outputLine = outputLine.Replace("</OutputPath>", netVersion + "\\</OutputPath>");
 		}
 
 		if(outputLine.Contains("<HintPath") && outputLine.Contains("DataFiles"))
 		{
-			outputLine = outputLine.Replace("DataFiles.dll", "DataFiles." + netVersion + ".dll");
+			outputLine = outputLine.Replace("net20", netVersion);
 		}
 
 		//no generated project should produce its own T4 generated projects

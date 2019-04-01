@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <metadata minClientVersion="2.5"> <!--minClient because including *.target and *.props files-->
+  <metadata minClientVersion="2.8"> <!--minClient because including *.target and *.props files, and developmentDependency tag-->
     <id>EarlyDocs</id>
-    <version>$version$</version>
+    <version>2.0.0-alpha</version>
     <title>EarlyDocs</title>
     <authors>WithoutHaste</authors>
     <owners>WithoutHaste</owners>
@@ -13,45 +13,48 @@
 <!--    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<developmentDependency>true</developmentDependency><!--will not be part of the client's compiled project-->
-	<minClientVersion>2.8</minClientVersion><!-- min NuGet version that supports "developmentDependency" nuspec tag -->
 	<summary>Generates Markdown documentation files for .Net library projects.</summary>
-    <description>Loads documentation data from .Net project DLL and XML files and outputs Markdown documentation files. See full documentation at https://github.com/WithoutHaste/EarlyDocs.
+    <description>EarlyDocs generates Markdown documentation for your .Net library.  
+	  
+	Install the NuGet package to insert EarlyDocs into your build process. It will run after your project build is complete. Errors in EarlyDocs will not affect your build.  
+	  
+	Summary:  
+    + Loads documentation from your Project.dll and Project.XML files.  
+    + Generates one Markdown documentation page for each Type in your project.  
+    + Generates one global Table of Contents per project and one detailed Table of Contents per namespace.  
+    + All Markdown files are inter-linked.  
+    + Everything is saved to one "documentation" directory.  
+  	  
+	See full documentation [on Github](https://github.com/WithoutHaste/EarlyDocs).  
 	</description>
     <releaseNotes>
-	EarlyDocs is now multi-targeted for all .Net frameworks from 2.0 through 4.7.2.
-	
-	Bug fix: library installation path and Task lookup path mismatch.
+	Version 2.0.0  
+	+ Fixing path error that caused process to fail.  
+	+ Project is now multi-targeted for all .Net frameworks from 2.0 through 4.7.2.  
 	</releaseNotes>
+	<language>en-US</language>
     <tags>documentation .net c# markdown md open-source</tags>
+    <dependencies>
+	  <group targetFramework='net20'><!-- net20 or higher -->
+        <dependency id='WithoutHaste.DataFiles' version='[1.0.0,2)' /> <!-- version 1 plus updates, but not version 2 -->
+	  </group>
+    </dependencies>
   </metadata>
   <files>
     <!--<file src='.\nuget_readme.txt' target='content\earlydocs_readme.txt' />-->
     <file src='.\EarlyDocs.targets' target='build\EarlyDocs.targets' />
-    <file src='.\bin\Release\EarlyDocs.net20.dll' target='ref\net20\' />
-    <file src='.\bin\Release\EarlyDocs.net30.dll' target='ref\net30\' />
-    <file src='.\bin\Release\EarlyDocs.net35.dll' target='ref\net35\' />
-    <file src='.\bin\Release\EarlyDocs.net40.dll' target='ref\net40\' />
-    <file src='.\bin\Release\EarlyDocs.net45.dll' target='ref\net45\' />
-    <file src='.\bin\Release\EarlyDocs.net451.dll' target='ref\net451\' />
-    <file src='.\bin\Release\EarlyDocs.net452.dll' target='ref\net452\' />
-    <file src='.\bin\Release\EarlyDocs.net46.dll' target='ref\net46\' />
-    <file src='.\bin\Release\EarlyDocs.net461.dll' target='ref\net461\' />
-    <file src='.\bin\Release\EarlyDocs.net462.dll' target='ref\net462\' />
-    <file src='.\bin\Release\EarlyDocs.net47.dll' target='ref\net47\' />
-    <file src='.\bin\Release\EarlyDocs.net471.dll' target='ref\net471\' />
-    <file src='.\bin\Release\EarlyDocs.net472.dll' target='ref\net472\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net20.dll' target='ref\net20\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net30.dll' target='ref\net30\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net35.dll' target='ref\net35\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net40.dll' target='ref\net40\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net45.dll' target='ref\net45\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net451.dll' target='ref\net451\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net452.dll' target='ref\net452\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net46.dll' target='ref\net46\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net461.dll' target='ref\net461\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net462.dll' target='ref\net462\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net47.dll' target='ref\net47\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net471.dll' target='ref\net471\' />
-    <file src='.\bin\Release\WithoutHaste.DataFiles.net472.dll' target='ref\net472\' />
+    <file src='.\bin\Release\net20\EarlyDocs.dll' target='ref\net20\' />
+    <file src='.\bin\Release\net30\EarlyDocs.dll' target='ref\net30\' />
+    <file src='.\bin\Release\net35\EarlyDocs.dll' target='ref\net35\' />
+    <file src='.\bin\Release\net40\EarlyDocs.dll' target='ref\net40\' />
+    <file src='.\bin\Release\net45\EarlyDocs.dll' target='ref\net45\' />
+    <file src='.\bin\Release\net451\EarlyDocs.dll' target='ref\net451\' />
+    <file src='.\bin\Release\net452\EarlyDocs.dll' target='ref\net452\' />
+    <file src='.\bin\Release\net46\EarlyDocs.dll' target='ref\net46\' />
+    <file src='.\bin\Release\net461\EarlyDocs.dll' target='ref\net461\' />
+    <file src='.\bin\Release\net462\EarlyDocs.dll' target='ref\net462\' />
+    <file src='.\bin\Release\net47\EarlyDocs.dll' target='ref\net47\' />
+    <file src='.\bin\Release\net471\EarlyDocs.dll' target='ref\net471\' />
+    <file src='.\bin\Release\net472\EarlyDocs.dll' target='ref\net472\' />
   </files>
 </package>
