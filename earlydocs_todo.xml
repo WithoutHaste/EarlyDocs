@@ -42,7 +42,10 @@
         </Cell>
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">create a totally separate sln for each full Test of a version
-so that their Packages folders won't affect each other</Data>
+so that their Packages folders won't affect each other
+- build EarlyDocs pack
+- install to auto generated test from local source
+- compare test output to oracle</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -60,23 +63,6 @@ so that their Packages folders won't affect each other</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
           <Data ss:Type="String">build each version of EarlyDocs</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-03-21T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">135</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">how to NuGet package all those versions?</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -122,28 +108,6 @@ The "RunEarlyDocs" task could not be loaded from the assembly E:\GitHub\WithoutH
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2019-03-15T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">117</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">in Task, check for client's .Net version
-if less than required, display warning instead of giving an error when "EarlyDocs.dll" isn't found
-
-because if user has lower version of .Net than my package uses, it does not install the dll
-
-update EarlyDocs version to 1.0.1 for this bug fix</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Bug - Major</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
