@@ -37,9 +37,13 @@ namespace Compare
 
 			string testDocs = Path.Combine(folder, "documentation");
 			string oracleDocs = Path.Combine(folder, "oracleDocumentation35");
-			if(netVersion == "net20" || netVersion == "net30")
+			if(netVersion == "net20")
 			{
 				oracleDocs = Path.Combine(folder, "oracleDocumentation20");
+			}
+			if(netVersion == "net30")
+			{
+				oracleDocs = Path.Combine(folder, "oracleDocumentation30");
 			}
 
 			List<string> oracleFileNames = new List<string>();

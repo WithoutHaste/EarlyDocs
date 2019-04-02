@@ -47,7 +47,11 @@ expected differences
 - no extension methods
 save off oracle docs for 2.0/3.0 projects
 
-...working through updating oracle for net20/30</Data>
+...working through updating oracle for net20/30
+still using local source EarlyDocs package
+- net20 comparison test - DONE
+- net30 comparison test - DONE
+- net35 - cannot find LINQLone error</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>

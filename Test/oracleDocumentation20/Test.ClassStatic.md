@@ -13,13 +13,3 @@ Tests static class.
 
 Test return types on static methods.  
 
-## MethodExtension(this string a, string b)
-
-**static void**  
-
-Test extension method parameters.  
-
-**Parameters:**  
-* **string a**: Words a  
-* **string b**: Words b  
-
