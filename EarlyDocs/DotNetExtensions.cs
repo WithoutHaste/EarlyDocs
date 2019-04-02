@@ -356,7 +356,7 @@ namespace EarlyDocs
 
 		internal static void TurnQualifiedNameConverterOff()
 		{
-#if FUNC
+#if FUNCS
 			DotNetSettings.QualifiedNameConverter = null;
 			DotNetSettings.AdditionalQualifiedNameConverter = null;
 #endif

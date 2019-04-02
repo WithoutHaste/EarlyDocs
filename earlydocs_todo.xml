@@ -51,7 +51,7 @@ save off oracle docs for 2.0/3.0 projects
 still using local source EarlyDocs package
 - net20 comparison test - DONE
 - net30 comparison test - DONE
-- net35 - cannot find LINQLone error</Data>
+- net35 - cannot find LINQLone error - I think because DataFiles is now compiling net35 to v2.0 instead of v4.0</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
