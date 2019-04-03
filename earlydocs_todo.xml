@@ -38,20 +38,12 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">137</Data>
+          <Data ss:Type="Number">138</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">manually visually compare 2.0 docs to 4.0 docs
-expected differences
-- no name shortening of System types
-- no extension methods
-save off oracle docs for 2.0/3.0 projects
-
-...working through updating oracle for net20/30
-still using local source EarlyDocs package
-- net20 comparison test - DONE
-- net30 comparison test - DONE
-- net35 - cannot find LINQLone error - I think because DataFiles is now compiling net35 to v2.0 instead of v4.0</Data>
+          <Data ss:Type="String">update to use non-alpha DataFiles
+publish full version 2.0.0
+run all installation tests again</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -60,20 +52,15 @@ still using local source EarlyDocs package
           <Data ss:Type="String">Task</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-04-01T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2019-04-03T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">136</Data>
+          <Data ss:Type="Number">139</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">create a totally separate sln for each full Test of a version
-so that their Packages folders won't affect each other
-- build EarlyDocs pack - DONE
-- install to auto generated test from local source
--- 2.0 - installed all dependencies
-- compare test output to oracle</Data>
+          <Data ss:Type="String">GitHub: same a release for 2.0.0</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -82,60 +69,7 @@ so that their Packages folders won't affect each other
           <Data ss:Type="String">Task</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-03-21T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">134</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">build each version of EarlyDocs</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-03-21T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">132</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">automate testing of different frameworks against Oracle</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-03-20T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">126</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">DataFiles.net452
-v4.5.2
-The "RunEarlyDocs" task could not be loaded from the assembly E:\GitHub\WithoutHaste.DataFiles\DataFiles\packages\EarlyDocs.1.0.0\build\*Undefined*packages\EarlyDocs.1.0.0\ref\net452\EarlyDocs.dll.</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Bug - Major</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-03-15T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2019-04-03T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -594,6 +528,134 @@ a lot of that code duplication can be removed</Data>
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">137</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">manually visually compare 2.0 docs to 4.0 docs
+expected differences
+- no name shortening of System types
+- no extension methods
+save off oracle docs for 2.0/3.0 projects
+
+...working through updating oracle for net20/30
+still using local source EarlyDocs package
+- net20 comparison test - DONE
+- net30 comparison test - DONE
+- net35 comparison test - DONE
+
+publishing EarlyDocs 2.0.0-alpha2 to test full install
+- net20 comparison test - DONE
+- net30 comparison test - DONE
+- net35 comparison test - DONE
+- net40 comparison test - DONE
+- net45 comparison test - DONE
+- net451 comparison test - DONE
+- net452 comparison test - DONE</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-01T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-03T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">126</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">DataFiles.net452
+v4.5.2
+The "RunEarlyDocs" task could not be loaded from the assembly E:\GitHub\WithoutHaste.DataFiles\DataFiles\packages\EarlyDocs.1.0.0\build\*Undefined*packages\EarlyDocs.1.0.0\ref\net452\EarlyDocs.dll.
+
+fixed this - the search path was just plain wrong - see notes in DESIGN.md</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-15T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-02T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">132</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">automate testing of different frameworks against Oracle</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-20T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-02T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">134</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">build each version of EarlyDocs</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-21T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-02T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">136</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">create a totally separate sln for each full Test of a version
+so that their Packages folders won't affect each other
+- build EarlyDocs pack - DONE
+- install to auto generated test from local source
+-- 2.0 - installed all dependencies
+- compare test output to oracle</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-03-21T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-02T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -2570,7 +2632,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">137</Data>
+          <Data ss:Type="Number">139</Data>
         </Cell>
       </Row>
       <Row>
