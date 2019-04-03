@@ -4,14 +4,13 @@
 
 EarlyDocs was tested on C# projects in Visual Studio. All instructions and examples are based on that setup.
 
-## Installation
+## Install EarlyDocs
 
-Use the NuGet Console or Manager to install EarlyDocs in your .Net project.
+[Available on Nuget](https://www.nuget.org/packages/EarlyDocs).
 
-Search for "EarlyDocs" in the NuGet Manager,  
-or run "Install-Package EarlyDocs" in the NuGet Console
+Package Manager: `Install-Package EarlyDocs -Version 2.0.0`
 
-[NuGet project page](https://www.nuget.org/packages/EarlyDocs/)
+.NET CLI: `dotnet add package EarlyDocs --version 2.0.0`
 
 ## Export XML Comments
 
@@ -20,6 +19,8 @@ To have your XML comments included in the generated documentation:
 1. Open project properties > Build tab
 2. Select the right configuration (Debug and/or release)
 3. Check "XML documentation file" under the "Output" section
+
+EarlyDocs documentation will only be generated for Types/etc that are commented.
 
 ## Configuration
 
@@ -84,6 +85,10 @@ Properties and Items in the *.csproj and EarlyDocs.target files.
     <EarlyDocsInclude Include="$(ProjectDir)$(OutDir)Markdown.dll" />
   </ItemGroup>
 ```
+
+## Run EarlyDocs
+
+To run EarlyDocs, simply build your project.
 
 ## Output
 
