@@ -100,6 +100,70 @@ Links:
 * All types link back to their namespace's table of contents.
 * All core .Net types link to the Microsoft documentation page for that type.
 
+## Supported XML Tags
+
+Supports all standard Microsoft XML tags. See examples in [How to Use XML Comments in .Net](HowToUseXmlComments.md).
+
+### inheritdoc Custom Tag
+
+Supports custom tag `<inheritdoc />` as a top-level tag.
+
+The entire comments of the member/type with `<inheritdoc />` on it will be replaced with the entire comments of the member/type it inherits from.
+
+Supported inheritance: 
+* Classes inheriting from classes
+* Classes and interfaces inheriting from interfaces
+* Members inheriting from explicit interfaces
+
+Example:  
+TypeB will have the same documentation as TypeA.  
+TypeB.MethodA will have the same documentation as TypeA.MethodA.  
+```
+/// <summary>
+/// Summary of TypeA
+/// </summary>
+public class TypeA
+{
+	/// <summary>
+	/// Summary of MethodA
+	/// </summary>
+	public virtual void MethodA() { }
+}
+
+/// <inheritdoc />
+public class TypeB : TypeA
+{
+	/// <inheritdoc />
+	public override void MethodA() { }
+}
+```
+
+### duplicate Custom Tag
+
+Supports custom tag `<duplicate cref="" />` as a top-level tag.
+
+The entire comments of the member/type with `<duplicate cref="" />` on it will be replaced with the entire comments of the member/type being referenced.
+
+Example:  
+All three overloaded methods will have the same documentation.  
+```
+public class TypeA
+{
+	/// <summary>
+	/// Summary of MethodA
+	/// </summary>
+	public void MethodA(int a) { }
+
+	/// <duplicate cref="MethodA(int)" />
+	public void MethodA(float a) { }
+	
+	/// <duplicate cref="MethodA(int)" />
+	public void MethodA(double a) { }
+}
+```
+
+[How to cref almost anything in your code.](HowToUseXmlComments.md#cref-attribute)
+
 ## Handling Errors
 
 Errors in EarlyDocs will not affect your build. If an error occurs, it will be displayed as a Warning and the build process will complete.

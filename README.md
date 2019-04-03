@@ -4,86 +4,25 @@ EarlyDocs generates Markdown documentation for your .Net library.
 
 Install the EarlyDocs NuGet package to insert EarlyDocs into your build process. It will run after your project build is complete. Errors in EarlyDocs will not affect your build.
 
-Summary:
-* Loads documentation from your Project.dll and Project.XML files.
-* Generates one Markdown documentation page for each Type in your project.
-* Generates one global Table of Contents per project and one detailed Table of Contents per namespace.
-* All Markdown files are inter-linked.
-* Everything is saved to one "documentation" directory.
-
-[Installing and Using EarlyDocs](USING_EARLYDOCS.md)
-
-EarlyDocs is build on top of 
-* [WithoutHaste.DataFiles.DotNet](https://github.com/WithoutHaste/WithoutHaste.DataFiles/tree/master/DataFiles/DotNet) which handles all the loading of information from the dll and xml files into an object model.
-* [WithoutHaste.DataFiles.Markdown](https://github.com/WithoutHaste/WithoutHaste.DataFiles/tree/master/DataFiles/Markdown) for building the Markdown files.
+EarlyDocs is build on top of WithoutHaste.DataFiles: [on NuGet](https://www.nuget.org/packages/WithoutHaste.DataFiles/) [on GitHub](https://github.com/WithoutHaste/WithoutHaste.DataFiles).
 
 This library is under active development. Report bugs and request features on Github, or to wohaste@gmail.com.
 
-## Supported XML Tags
+## Download
 
-Supports all standard Microsoft XML tags. See examples in [How to Use XML Comments in .Net](HowToUseXmlComments.md).
+[Available on Nuget](https://www.nuget.org/packages/EarlyDocs/2.0.0).
 
-### inheritdoc Custom Tag
+Package Manager: `Install-Package EarlyDocs -Version 2.0.0`
 
-Supports custom tag `<inheritdoc />` as a top-level tag.
-
-The entire comments of the member/type with `<inheritdoc />` on it will be replaced with the entire comments of the member/type it inherits from.
-
-Supported inheritance: 
-* Classes inheriting from classes
-* Classes and interfaces inheriting from interfaces
-* Members inheriting from explicit interfaces
-
-Example:  
-TypeB will have the same documentation as TypeA.  
-TypeB.MethodA will have the same documentation as TypeA.MethodA.  
-```
-/// <summary>
-/// Summary of TypeA
-/// </summary>
-public class TypeA
-{
-	/// <summary>
-	/// Summary of MethodA
-	/// </summary>
-	public virtual void MethodA() { }
-}
-
-/// <inheritdoc />
-public class TypeB : TypeA
-{
-	/// <inheritdoc />
-	public override void MethodA() { }
-}
-```
-
-### duplicate Custom Tag
-
-Supports custom tag `<duplicate cref="" />` as a top-level tag.
-
-The entire comments of the member/type with `<duplicate cref="" />` on it will be replaced with the entire comments of the member/type being referenced.
-
-Example:  
-All three overloaded methods will have the same documentation.  
-```
-public class TypeA
-{
-	/// <summary>
-	/// Summary of MethodA
-	/// </summary>
-	public void MethodA(int a) { }
-
-	/// <duplicate cref="MethodA(int)" />
-	public void MethodA(float a) { }
-	
-	/// <duplicate cref="MethodA(int)" />
-	public void MethodA(double a) { }
-}
-```
-
-[How to cref almost anything in your code.](HowToUseXmlComments.md#cref-attribute)
+.NET CLI: `dotnet add package EarlyDocs --version 2.0.0`
 
 ## Documentation
+
+To get started with EarlyDocs:
+[Installing and Using EarlyDocs](USING_EARLYDOCS.md)
+
+About using Xml Comments:
+[How to Use Xml Comments](HowToUseXmlComments.md)
 
 For programmers on this project:  
 [Design](DESIGN.md)
@@ -112,5 +51,9 @@ The EarlyDocs test project includes examples of almost everything:
 ## Version Notes
 
 Uses [Semantic Versioning 2.0.0](https://semver.org/).
+
+[v2.0.0]()  
++ Fixed path error that caused process to fail.  
++ Project is not multi-targeted for all .Net frameworks from 2.0 through 4.7.2.
 
 [Initial Release - v1.0.0](https://github.com/WithoutHaste/EarlyDocs/releases/tag/v1.0.0)
