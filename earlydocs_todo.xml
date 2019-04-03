@@ -76,6 +76,23 @@ announce EarlyDocs on Reddit?</Data>
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">141</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">a cref that cannot be resolved causes a NullReferenceException in DotNetExtensions.ToDisplayString</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Bug - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-03T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">114</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -2614,7 +2631,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">140</Data>
+          <Data ss:Type="Number">141</Data>
         </Cell>
       </Row>
       <Row>
