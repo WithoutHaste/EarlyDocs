@@ -51,7 +51,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="WithoutHaste.DataFiles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\WithoutHaste.DataFiles.1.0.0-alpha4\lib\net30\WithoutHaste.DataFiles.dll</HintPath>
+      <HintPath>packages\WithoutHaste.DataFiles.1.0.0\lib\net30\WithoutHaste.DataFiles.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WithoutHaste.DataFiles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\WithoutHaste.DataFiles.1.0.0-alpha4\lib\net46\WithoutHaste.DataFiles.dll</HintPath>
+      <HintPath>packages\WithoutHaste.DataFiles.1.0.0\lib\net46\WithoutHaste.DataFiles.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

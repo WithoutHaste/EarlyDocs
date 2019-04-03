@@ -38,12 +38,10 @@
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">138</Data>
+          <Data ss:Type="Number">140</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">update to use non-alpha DataFiles
-publish full version 2.0.0
-run all installation tests again</Data>
+          <Data ss:Type="String">mark Github bug as fixed</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -60,7 +58,9 @@ run all installation tests again</Data>
           <Data ss:Type="Number">139</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">GitHub: same a release for 2.0.0</Data>
+          <Data ss:Type="String">GitHub: 
+update installation instructions
+save a release for 2.0.0</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -91,105 +91,6 @@ announce EarlyDocs on Reddit?</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
           <Data ss:Type="DateTime">2019-03-13T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">120</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">Github documentation
-and NuGet documentation
-- add ".Net 4.5 or later" as a dependency</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">118</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">test loading package into different .Net version projects</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">119</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">on Mac, figure out how to use Mono 4.5
-if it works, put instructions for this setup in documentation</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2019-02-28T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">7</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">support custom tag: &lt;duplicate cref="..." /&gt;
-which will completely copy the documentation from the references Type/Method/etc to this one
-- use case: Overloaded methods that have duplicate xml documentation, just their parameter types are different
-
-this is still very human readable in the code itself
-
-Ex: DataFiles.ExcelPackageHelper.AppendRows
-
-When EarlyDocs is released, can add an Answer to
-https://stackoverflow.com/questions/41715976/dry-xml-comments
-about this custom functionality</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Feature - Minor</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-09-17T00:00:00.000</Data>
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <Data ss:Type="Number">3</Data>
-        </Cell>
-        <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">? announce finished project on AskHN ?
-? or somewhere on Reddit ?</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Todo</Data>
-        </Cell>
-        <Cell>
-          <Data ss:Type="String">Task</Data>
-        </Cell>
-        <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-09-06T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -528,6 +429,81 @@ a lot of that code duplication can be removed</Data>
         </Cell>
         <Cell ss:StyleID="header">
           <Data ss:Type="String">Done</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">138</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">update to use non-alpha DataFiles
+re-generate project files
+update EarlyDocs version number
+build package
+run installation tests from local source
+- net20 installed right files, compare good - DONE
+- net30 installed right files, compare good - DONE
+- net35 installed right files, compare good - DONE
+- net40 installed right files, compare good - DONE
+
+publish full 2.0.0 version to NuGet
+recreate installation test projects
+run all installation tests from NuGet
+- net20 installed right files, compare good - DONE
+- net30 installed right files, compare good - DONE
+- net35 installed right files, compare good - DONE
+- net40 installed right files, compare good - DONE
+- net45 installed right files, compare good - DONE
+- net451 installed right files, compare good - DONE
+- net452 installed right files, compare good - DONE
+- net46 installed right files, compare good - DONE
+- net461 installed right files, compare good - DONE
+- net462 installed right files, compare good - DONE
+- net47 installed right files, compare good - DONE
+- net471 installed right files, compare good - DONE
+- net472 installed right files, compare good - DONE</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-03T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-03T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">7</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">support custom tag: &lt;duplicate cref="..." /&gt;
+which will completely copy the documentation from the references Type/Method/etc to this one
+- use case: Overloaded methods that have duplicate xml documentation, just their parameter types are different
+
+this is still very human readable in the code itself
+
+Ex: DataFiles.ExcelPackageHelper.AppendRows
+
+When EarlyDocs is released, can add an Answer to
+https://stackoverflow.com/questions/41715976/dry-xml-comments
+about this custom functionality</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Done</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2018-09-17T00:00:00.000</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-03T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -2632,7 +2608,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">139</Data>
+          <Data ss:Type="Number">140</Data>
         </Cell>
       </Row>
       <Row>
