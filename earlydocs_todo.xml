@@ -38,10 +38,61 @@
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">143</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">2.1.0: do not require XML file, load all public/protected constructs regardless of comments</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-12T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">144</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">2.1.0: can I display a simple and direct warning message if the XML file is not found? instead of the full stack trace you get now?</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Minor</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-12T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">145</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Task</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-04-12T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">125</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">once a working version of EarlyDocs is published
+          <Data ss:Type="String">once a good working version of EarlyDocs is published
 and confirmed working
 
 announce EarlyDocs on HackerNews?
@@ -59,10 +110,10 @@ announce EarlyDocs on Reddit?</Data>
       </Row>
       <Row>
         <Cell>
-          <Data ss:Type="Number">88</Data>
+          <Data ss:Type="Number">146</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
-          <Data ss:Type="String">AFTER VERSION 1</Data>
+          <Data ss:Type="String">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</Data>
         </Cell>
         <Cell>
           <Data ss:Type="String">Todo</Data>
@@ -71,7 +122,7 @@ announce EarlyDocs on Reddit?</Data>
           <Data ss:Type="String">Task</Data>
         </Cell>
         <Cell ss:StyleID="cellShortDate">
-          <Data ss:Type="DateTime">2018-11-20T00:00:00.000</Data>
+          <Data ss:Type="DateTime">2019-04-12T00:00:00.000</Data>
         </Cell>
       </Row>
       <Row>
@@ -2648,7 +2699,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">142</Data>
+          <Data ss:Type="Number">146</Data>
         </Cell>
       </Row>
       <Row>
