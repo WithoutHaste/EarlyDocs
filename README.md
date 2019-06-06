@@ -54,6 +54,6 @@ Uses [Semantic Versioning 2.0.0](https://semver.org/).
 
 [v2.0.0](https://github.com/WithoutHaste/EarlyDocs/releases/tag/v2.0.0)  
 + Fixed path error that caused process to fail.  
-+ Project is not multi-targeted for all .Net frameworks from 2.0 through 4.7.2.
++ Project is now multi-targeted for all .Net frameworks from 2.0 through 4.7.2.
 
 [Initial Release - v1.0.0](https://github.com/WithoutHaste/EarlyDocs/releases/tag/v1.0.0)
