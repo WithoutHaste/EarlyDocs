@@ -4,7 +4,7 @@ EarlyDocs generates Markdown documentation for your .Net library.
 
 Install the EarlyDocs NuGet package to insert EarlyDocs into your build process. It will run after your project build is complete. Errors in EarlyDocs will not affect your build.
 
-EarlyDocs is built on top of (WithoutHaste.DataFiles)[https://github.com/WithoutHaste/WithoutHaste.DataFiles].  
+EarlyDocs is built on top of [WithoutHaste.DataFiles](https://github.com/WithoutHaste/WithoutHaste.DataFiles).  
 
 ## Download
 
