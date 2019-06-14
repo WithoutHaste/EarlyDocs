@@ -38,6 +38,33 @@
       </Row>
       <Row>
         <Cell>
+          <Data ss:Type="Number">147</Data>
+        </Cell>
+        <Cell ss:StyleID="paragraph">
+          <Data ss:Type="String">skip ahead to 3.0
+after lots of thought, I've decided that really don't like the footprint of EarlyDocs - copying two dll files into the output directory
+
+so
+v3 will have WithoutHaste.DataFiles be referenced as part of the EarlyDocs project and be compiled right into it
+
+verify that I can then have EarlyDocs dll NOT copied to the output directory and still run it properly
+
+WithoutHaste.DataFiles will still be available as its own NuGet package separately
+
+include the 2.1.0 tasks in this release</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Todo</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">Feature - Major</Data>
+        </Cell>
+        <Cell ss:StyleID="cellShortDate">
+          <Data ss:Type="DateTime">2019-06-14T00:00:00.000</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
           <Data ss:Type="Number">143</Data>
         </Cell>
         <Cell ss:StyleID="paragraph">
@@ -2699,7 +2726,7 @@ on save, create MarkDown object then save it to string</Data>
           </Data>
         </Cell>
         <Cell>
-          <Data ss:Type="Number">146</Data>
+          <Data ss:Type="Number">147</Data>
         </Cell>
       </Row>
       <Row>
